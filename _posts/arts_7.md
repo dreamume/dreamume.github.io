@@ -1,0 +1,329 @@
+# Algorithm
+
+Leetcode 85: <https://leetcode.com/problems/maximal-rectangle/>
+
+<https://medium.com/@dreamume/leetcode-85-maximal-rectangle-5107ddda3bb>
+
+
+<a id="orgc9d4878"></a>
+
+# Review
+
+<http://book.mixu.net/distsys/eventual.html>
+
+
+<a id="org1dccc47"></a>
+
+## 复制：弱一致性模型协议
+
+接下来我们讨论使单拷贝一致性支持异常的协议。
+
+强一致性的代价过于沉重，我们希望系统性能良好并且能得到好的结果。允许不同的副本持有不同的结果，但最终会收敛结果。
+
+有两种系统设计方式：
+
+-   有一定可靠保证的最终一致性
+-   强保证的最终一致性
+
+1.  协调不同的操作顺序
+
+    因分区或消息延迟原因，导致副本收到的操作顺序会不一致。
+    
+    1.  Amazon's Dynamo
+    
+        Amazon的Dynamo系统设计是有名的提供弱一致性保证并高可用的系统。
+        
+        Dynamo是最终一致性，高可用key-value store。考虑可用性高于一致性，即副本间存储结果不一定相同，当读操作时，会先发起读协调操作尝试解决不一致，然后才返回读结果。
+        
+        Dynamo使用一致性hash技术存储key到副本的映射，通过在客户端保存这些数据，使客户端免于调用RPC。
+        
+        Dynamo使用部分选举人方式指定读写副本，比如读需要R个副本，写需要W个副本，而不是像Paxos协议那样需要严格多数。
+        
+        当检测到数据冲突时，可以有以下几种办法：
+        
+        -   No metadata
+            
+            最后一次写成功
+        
+        -   Timestamps
+            
+            认为高timestamp值的有效
+        
+        -   版本号
+        
+        -   矢量时钟
+        
+        副本同步方式：
+        
+        -   gossip
+            
+            每t秒间隔，副本选择另一个副本通讯。提供一定的保障性。
+        
+        -   Merkle tree
+            
+            通过层层hash以树的形式存储数据在本地，通过本地访问使效率更高。
+    
+    2.  乱序编程
+    
+        考虑一个简单的会计系统，借款和贷款操作有两种不同的方式：
+        
+        -   注册读和写操作
+        -   使用integer值表示本地借款和贷款
+        
+        第二种方式尽管借款和贷款顺序不同，但结果相同:
+        
+            100 + credit(10) + credit(20) = 130 and
+            100 + credit(20) + credit(10) = 130
+        
+        但第一种顺序不同，则结果不同:
+        
+            100 + write(110) + write(130) = 130 but
+            100 + write(130) + write(110) = 110
+        
+        CRDTs(Convergent replicated data types): 使结果收敛而不依赖于操作顺序。
+        
+        CRDTs依赖于操作需要满足以下性质：
+        
+        -   结合律：a + (b + c) = (a + b) + c
+        -   交换律：a + b = b + a
+        -   幂等：a + a = a
+        
+        CALM理论：像MapReduce、SQL这类编程没有明确的顺序性，我们认为这样的程序为单调逻辑，对这类程序而言，我们认为它是最终一致性的。
+
+
+<a id="orgbfb964b"></a>
+
+# Tips
+
+-   遇到算法可以动态规划解决的，先理清可以有几种方式划分子问题，然后再考虑子问题之间的细节。怎么划分很重要。
+
+
+<a id="orgdf38a63"></a>
+
+# Share
+
+fererence: C++ Concurrency in action
+
+
+<a id="org868534f"></a>
+
+## 锁
+
+通常用mutex避免线程间同时读写共享资源。
+
+1.  一种死锁问题和解决方案
+
+    当需要同时持有多个锁时，可能导致死锁，比如不同线程都同时持有一种锁，而等待另一个线程释放另一个锁，则造成死锁。
+    
+    C++标准库提供了std::lock函数支持同时持有多个锁，避免死锁问题，如下是一个数据交换的例子：
+    
+        class some_big_object;
+        void swap(some_big_object& lhs,some_big_object& rhs);
+        
+        class X
+        {
+        private:
+          some_big_object some_detail;
+          std::mutex m;
+        public:
+          X(some_big_object const& sd): some_detail(sd) {}
+          friend void swap(X& lhs, X& rhs)
+          {
+                if (&lhs == &rhs) return;
+                std::lock(lhs.m,rhs.m);
+                std::lock_guard<std::mutex> lock_a(lhs.m, std::adopt_lock);
+                std::lock_guard<std::mutex> lock_b(rhs.m, std::adopt_lock);
+                swap(lhs.some_detail, rhs.some_detail);
+          } 
+        };
+    
+    两个std::lock_guard实例创建时分别带一个mutex参数，std::adopt_lock参数表示std::lock_guard对象对mutex已经是加锁状态。
+    
+    代码保证程序正常执行或异常发生，锁的状态都能确保正常。
+
+2.  避免死锁的技巧
+
+    1.  避免嵌套锁
+    2.  避免调用用户提供的代码，内部持有锁
+    3.  已一致的顺序持有锁
+    4.  使用锁层级
+        
+        定义锁层级，使高层级的锁加锁后能继续加锁低层级的锁，反之不行。例子如下：
+        
+            hierarchical_mutex high_level_mutex(10000);
+            hierarchical_mutex low_level_mutex(5000);
+            int do_low_level_stuff();
+            
+            int low_level_func() {
+              std::lock_guard<hierarchical_mutex> lk(low_level_mutex);
+              return do_low_level_stuff();
+            }
+            
+            void high_level_stuff(int some_param);
+            void high_level_func() {
+              std::lock_guard<hierarchical_mutex> lk(high_level_mutex);
+              high_level_stuff(low_level_func());
+            }
+            
+            void thread_a() {
+              high_level_func();
+            }
+            
+            hierarchical_mutex other_mutex(100);
+            void do_other_stuff();
+            void other_stuff() {
+              high_level_func();
+              do_other_stuff();
+            }
+            
+            void thread_b() {
+              std::lock_guard<hierarchical_mutex> lk(other_mutex);
+              other_stuff();
+            }
+        
+        thread_a()正常运行，而thread_b()不符合锁层级要求，运行会出现异常。
+        
+        hierarchical_mutex并不在标准库中，这里有一个简单实现：
+        
+            class hierarchical_mutex
+            {
+              std::mutex internal_mutex;
+              unsigned long const hierarchy_value;
+              unsigned long previous_hierarchy_value;
+              static thread_local unsigned long this_thread_hierarchy_value;
+            
+              void check_for_hierarchy_violation() {
+                    if (this_thread_hierarchy_value <= hierarchy_value) {
+                            throw std::logic_error(“mutex hierarchy violated”);
+                    }
+              }
+            
+              void update_hierarchy_value() {
+                    previous_hierarchy_value=this_thread_hierarchy_value;
+                    this_thread_hierarchy_value=hierarchy_value;
+              }
+            public:
+              explicit hierarchical_mutex(unsigned long value):
+                    hierarchy_value(value), previous_hierarchy_value(0) {}
+              void lock() {
+                check_for_hierarchy_violation();
+                internal_mutex.lock();
+                update_hierarchy_value();
+              }
+            
+              void unlock() {
+                    this_thread_hierarchy_value = previous_hierarchy_value;
+                    internal_mutex.unlock();
+              }
+            
+              bool try_lock() {
+                    check_for_hierarchy_violation();
+                    if (!internal_mutex.try_lock()) return false;
+                    update_hierarchy_value();
+                    return true;
+              } 
+            };
+            
+            thread_local unsigned long
+                hierarchical_mutex::this_thread_hierarchy_value(ULONG_MAX);
+
+3.  std::unique_lock
+
+    std::unique_lock在释放常量方面比std::lock_guard更灵活一点。std::unique_lock实例不总是持有mutex。
+    
+    构建std::unique_lock实例时传递std::defer_lock参数使mutex在unique_lock构建时仍是unlock状态。示例如下：
+    
+        class some_big_object;
+        void swap(some_big_object& lhs,some_big_object& rhs);
+        
+        class X {
+        private:
+          some_big_object some_detail;
+          std::mutex m;
+        public:
+          X(some_big_object const& sd):some_detail(sd){}
+          friend void swap(X& lhs, X& rhs) {
+                if (&lhs == &rhs) return;
+                std::unique_lock<std::mutex> lock_a(lhs.m, std::defer_lock); 
+                std::unique_lock<std::mutex> lock_b(rhs.m, std::defer_lock); 
+                std::lock(lock_a, lock_b); 
+                swap(lhs.some_detail, rhs.some_detail); 
+          };
+        }
+    
+    std::unique_lock对象比std::lock_guard对象要大，性能比std::lock_guard稍差，普通情况建议选择std::lock_guard。
+
+4.  传递ownership
+
+    可以通过std::unique_lock来传递锁的使用范围。示例如下：
+    
+        std::unique_lock<std::mutex> get_lock() {
+          extern std::mutex some_mutex;
+          std::unique_lock<std::mutex> lk(some_mutex);
+          prepare_data();
+          return lk;
+        }
+        
+        void process_data() {
+          std::unique_lock<std::mutex> lk(get_lock());
+          do_something();
+        }
+
+5.  合适的锁粒度
+
+    选择合适的锁粒度，提高程序并行性能。锁应该只持有在执行需要操作的最小可能时间下。
+
+6.  初始化的保护
+
+    一些场景下，对象构造比较费时，需要延迟初始化，在使用时才构造。这时需要在构造时提供保护。
+    
+    C++标准库提供了std::once_flag和std::once_call来处理这种情况。示例如下：
+    
+        std::shared_ptr<some_resource> resource_ptr;
+        std::once_flag resource_flag;
+        
+        void init_resource() {
+          resource_ptr.reset(new some_resource);
+        }
+        
+        void foo() {
+          std::call_once(resource_flag, init_resource);
+          resource_ptr->do_something();
+        }
+
+7.  保护不常更新的数据结构
+
+    考虑DNS缓存系统，一个DNS条目通常很长时间内不会改变，为此我们想提高读性能，可以使用读写锁。
+    
+    boost库提供了对应的boost::shared_mutex。代码示例如下：
+    
+        #include <map>
+        #include <string>
+        #include <mutex>
+        #include <boost/thread/shared_mutex.hpp>
+        
+        class dns_entry;
+        
+        class dns_cache {
+          std::map<std::string,dns_entry> entries;
+          mutable boost::shared_mutex entry_mutex;
+        public:
+          dns_entry find_entry(std::string const& domain) const {
+                boost::shared_lock<boost::shared_mutex> lk(entry_mutex);
+                std::map<std::string,dns_entry>::const_iterator const it = 
+                  entries.find(domain);
+                return (it == entries.end()) ? dns_entry() : it->second;
+          }
+          void update_or_add_entry(std::string const& domain,
+                                                           dns_entry const& dns_details) {
+                std::lock_guard<boost::shared_mutex> lk(entry_mutex);
+                entries[domain] = dns_details;
+          } 
+        };
+
+8.  递归锁
+
+    C++标准库提供了std::recursive_mutex，使同一个线程可以对该锁进行多次加锁操作。
+    
+    但不推荐用递归锁，因为它往往意味着代码设计上的低劣。当加锁后类的变量被破坏时，后续的函数调用会继续使用该变量。应当在代码设计上考虑数据的状态，确保不需要使用递归锁。
+
