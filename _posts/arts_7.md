@@ -102,7 +102,7 @@ Leetcode 85: <https://leetcode.com/problems/maximal-rectangle/>
 
 # Share
 
-fererence: C++ Concurrency in action
+reference: C++ Concurrency in action
 
 
 <a id="org868534f"></a>
