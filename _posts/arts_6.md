@@ -20,7 +20,7 @@ Leetcode 72: Edit Distance
 
 1.  同步复制
 
-    ![img](./resource/replication-sync.png)
+    ![img](../img/replication-sync.png)
     
     如图所示，客户端发出请求，收到请求的第一个服务器需要跟其他两个服务器都同步后才回复客户端。
     
@@ -28,7 +28,7 @@ Leetcode 72: Edit Distance
 
 2.  异步复制
 
-    ![img](./resource/replication-async.png)
+    ![img](../img/replication-async.png)
     
     同步复制则快速回复客户端请求。服务器节点间需要依赖一些算法解决数据更新问题。
     
@@ -69,7 +69,7 @@ Leetcode 72: Edit Distance
     4.  6n 消息（3阶段提交，重复领导者选举的Paxos）
     
     下图描述了这些算法的不同：
-    ![img](./resource/google-transact09_consensus.png)
+    ![img](../img/google-transact09_consensus.png)
     
     根据上图一致性、延迟、吞吐量、数据丢失和故障转移特性，又可以把复制分为：同步复制（比如等待然后响应）和异步复制。当处于等待时，性能会变差但得到更强的保证。2PC和quorum系统之间吞吐量的差异主要体现在分区容忍和延迟上的不同。
 
@@ -132,7 +132,7 @@ Leetcode 72: Edit Distance
     
         Epoch指一个时间段，每个Epoch里只有一个领导者节点。
         
-        ![img](./resource/epoch.png)
+        ![img](../img/epoch.png)
         
         领导者选举完成后，该领导者行使协调职责直到epoch结束。如果选举失败，当前epoch立即结束。
         
@@ -214,15 +214,15 @@ Leetcode 72: Edit Distance
 
 上一周多线程编程中讲了无锁编程，但没有细谈里面涉及到的内存顺序，这里将详细说明内存顺序。
 
-内存顺序选项有6种：memory<sub>order</sub><sub>relaxed</sub>, memory<sub>order</sub><sub>consume</sub>, memory<sub>order</sub><sub>acquire</sub>, memory<sub>order</sub><sub>release</sub>, memory<sub>order</sub><sub>acq</sub><sub>rel</sub>, memory<sub>order</sub><sub>seq</sub><sub>cst</sub>.
+内存顺序选项有6种：memory_order_relaxed, memory_order_consume, memory_order_acquire, memory_order_release, memory_order_acq_rel, memory_order_seq_cst.
 
-如果未指定，接口默认用最严格的memory<sub>order</sub><sub>seq</sub><sub>cst选项</sub>。该选项保证各线程看到的内存顺序是一致的。否则一个线程可能获取任一其他线程的内存顺序可能导致不同的结果。
+如果未指定，接口默认用最严格的memory_order_seq_cst选项。该选项保证各线程看到的内存顺序是一致的。否则一个线程可能获取任一其他线程的内存顺序可能导致不同的结果。
 
 为了获得更好的性能，需要选择更合适的内存顺序。下面我们一一来介绍。
 
 1.  relaxed
 
-    memory<sub>order</sub><sub>relaxed选项没有额外的同步设置</sub>，线程间只是共享变量的修改顺序。
+    memory_order_relaxed选项没有额外的同步设置，线程间只是共享变量的修改顺序。
     
         atomic<bool> x, y;
         atomic<int> z;
@@ -251,7 +251,7 @@ Leetcode 72: Edit Distance
     如例所示，最后的assert将被触发。因为x可能会读到false值，即使y读到true值并且x值的写入发生在y值写入之前。
     
     由于relaxed在不同的变量上的操作会被自由重排，则会出现如下图情况：
-    ![img](./resource/relaxed_memory_ordering_failed_example.png)
+    ![img](../img/relaxed_memory_ordering_failed_example.png)
 
 2.  acquire-release
 
@@ -297,7 +297,7 @@ Leetcode 72: Edit Distance
     
     如例所示，最后的assert将被触发。因为x和y可能都会读到false值。x和y值在不同的线程写入，release和acquire对其他线程的操作没起作用。
     
-    ![img](./resource/acquire_release_memory_ordering_failed_example.png)
+    ![img](../img/acquire_release_memory_ordering_failed_example.png)
 
 3.  consume
 
