@@ -1,0 +1,148 @@
+# Algorithm
+
+Leetcode 101: <https://leetcode.com/problems/symmetric-tree/>
+
+<https://medium.com/@dreamume/leetcode-101-symmetric-tree-3780b21bcfdb>
+
+
+<a id="org6d6d294"></a>
+
+# Review
+
+A Note on Distributed Computing
+
+<http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.41.7628>
+
+
+<a id="orgde3db63"></a>
+
+## 简介
+
+本文发表于1994年，比较早，主要以通俗易懂的语言介绍了本地和分布式编程的区别，主要围绕本地和分布式编程无法统一这一问题展开。当时本地和分布式编程统一的观点可能比较流行。
+
+
+<a id="org4e43693"></a>
+
+## 统一对象
+
+以前的架构如CORBA，不区分本地对象或远程对象，人们试图用统一的编程范式来编写本地和分布式代码。
+
+然而分布式本身的特点使得统一难以实现：
+
+1.  分布式异常跟本地异常大不相同
+2.  分布式编程的难点在容错和缺乏集中的资源管理
+
+
+<a id="orgc00498b"></a>
+
+## 本地和分布式计算
+
+本地和分布式计算主要的不同在于延迟、内存访问、容错和并行。
+
+延迟对分布式的影响很大。
+
+本地计算使用相同的地址空间，而分布式导致地址空间不同。
+
+分布式编程出现异常时情况远比本地编程复制。分布式需要考虑在部分节点异常时其他部分仍能正常工作。
+
+分布式并行也于本地并行方式差异很大，分布式并行没有集中的资源管理、同步、错误恢复机制。
+
+
+<a id="org05cd41f"></a>
+
+## 服务质量的神话
+
+分布式编程对于服务质量的要求更加苛刻。需要考虑延迟、容错、消息去重等众多因素。分布式系统的性能也是如此。
+
+
+<a id="org29aae44"></a>
+
+## 本地和分布式系统的不同
+
+统一本地和远程不太现实，接受本地和分布式编程的不同才是更合理的方案。
+
+分布式编程需要使用不同于本地编程的技术。
+
+
+<a id="org6f53276"></a>
+
+# Tips
+
+-   多利用stl提供的接口，比如fill_n，make_move_iterator等，非常适合在一些特殊场合使用。代码简洁高效不容易出错。
+
+
+<a id="orgd6d6dac"></a>
+
+# Share
+
+fererence: The C++ Programming Language
+
+
+<a id="orgab2b617"></a>
+
+## 右值引用
+
+右值引用一般指向一个临时对象，用户可能对其修改，最终会放弃使用。
+
+好处是便于使用move操作来替代代价高昂的copy操作。
+
+右值可以绑定到一个右值，但不能绑定左值。
+
+    string var {"Cambridge"}; 
+    string f();
+    
+    string& r1 {var};  // lvalue reference, bind r1 to var (an lvalue)
+    string& r2 {f()};  // lvalue reference, error: f() is an rvalue
+    string& r3 {"Princeton"};  // lvalue reference, error: cannot bind to temporary
+    
+    string&& rr1 {f()};  // rvalue reference, fine: bind rr1 to rvalue (a temporary) 
+    string&& rr2 {var};  // rvalue reference, error: var is an lvalue
+    string&& rr3 {"Oxford"};  // rr3 refers to a temporary holding "Oxford"
+    
+    const string cr1& {"Harvard"};// OK: make temporary and bind to cr1
+
+右值访问跟左值或普通变量相同：
+
+    string f(string&& s) {
+      if (s.size())
+            s[0] = toupper(s[0]);
+      return s; 
+    }
+
+一些情况下，程序员知道对象不会再使用，但编译器不知道。
+
+    template<class T> swap(T& a, T& b) { // "old-style swap" 
+      T tmp {a}; // now we have two copies of a
+      a = b; // now we have two copies of b
+      b = tmp; // now we have two copies of tmp (aka a)
+    }
+
+我们可以通过声明右值来告诉编译器避免高昂的copy对象操作。
+
+    template<class T> void swap(T& a, T& b) { // "perfect swap" (almost)
+      T tmp {static_cast<T&&>(a)};  // the initialization may write to a
+      a = static_cast<T&&>(b);  // the assignment may write to b
+      b = static_cast<T&&>(tmp);  // the assignment may write to tmp
+    }
+
+标志库提供了move函数替代static_cast，因此swap最终版本如下：
+
+    template<class T> void swap(T& a, T& b) {  // "perfect swap" (almost)
+      T tmp {move(a)}; // move from a
+      a = move(b);  // move from b
+      b = move(tmp);  // move from tmp
+    }
+
+1.  引用的引用
+
+    如果定义引用的引用类型，那结果是左值引用还是右值引用呢？
+    
+        using rr_i = int&&;
+        using lr_i = int&;
+        using rr_rr_i = rr_i&&;  // ‘‘int && &&’’ is an int&&
+        using lr_rr_i = rr_i&;  // ‘‘int && &’’ is an int&
+        using rr_lr_i = lr_i&&;  // ‘‘int & &&’’ is an int&
+        using lr_lr_i = lr_i&;  // ‘‘int & &’’ is an int&
+    
+    注意，左值引用总是胜出，即左值引用引用的对象类型总是左值。
+
