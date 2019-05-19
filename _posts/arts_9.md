@@ -64,7 +64,7 @@ Failure modes in distributed systems
             new_node._external_count = 1;
             new_node.ptr->_next = _head.load(std::memory_order_relaxed);
             while (!_head.compare_exchange_weak(new_node._ptr->_next, new_node, 
-                                                                                    std::memory_order_release, std::memory_order_relaxed));
+                                  std::memory_order_release, std::memory_order_relaxed));
       }
     };
 
