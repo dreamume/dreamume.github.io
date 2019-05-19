@@ -1,0 +1,74 @@
+
+# Table of Contents
+
+1.  [Algorithm](#org8b55d58)
+2.  [Review](#org6f120da)
+3.  [Tips](#orgadbe7a0)
+4.  [Share](#orgcc1fccc)
+
+<a id="org8b55d58"></a>
+
+# Algorithm
+
+Leetcode 552: <https://leetcode.com/problems/student-attendance-record-ii/>
+
+<https://medium.com/@dreamume/leetcode-552-student-attendance-record-ii-c0317c91f4b0>
+
+
+<a id="org6f120da"></a>
+
+# Review
+
+Failure modes in distributed systems
+
+<http://alvaro-videla.com/2013/12/failure-modes-in-distributed-systems.html>
+
+本篇文章内容较短，跟之前阅读的文章内容有些重复，大致了解一下内容即可，无太多可总结的东西。
+
+
+<a id="orgadbe7a0"></a>
+
+# Tips
+
+-   通过在leetcode提交对比，循环时for (const auto& item: array)比 for (auto& item: array)要快
+-   判断指针是否为空，通过在leetcode提交对比，if (!ptr) 比 if (ptr == nullptr)要快
+-   能划分成子问题的多往动态规划上想想
+
+
+<a id="orgcc1fccc"></a>
+
+# Share
+
+最近阅读了一些无锁编程的内容，主要是参考C++ Concurrency in Action和boost源码库。
+
+在看C++ Concurrency in Action里提供的lock free stack代码及boost里lock free stack代码时总是还有点疑惑，比如如下boost stack push部分代码：
+
+    template<typename T> class lock_free_stack {
+    private:
+      struct node;
+      struct counted_node_ptr {
+            int _external_count;
+            node* _ptr;
+      };
+      struct node {
+            std::shared_ptr<T> _data;
+            std::atomic<int> _internal_count;
+            counted_node_ptr _next;
+            node(T const& data): _data(std::make_shared<T>(data)), _internal_count(0) {}
+      };
+      std::atomic<counted_node_ptr> _head;
+    public:
+      void push(T const& data) {
+            counted_node_ptr new_node;
+            new_node._ptr = new node(data);
+            new_node._external_count = 1;
+            new_node.ptr->_next = _head.load(std::memory_order_relaxed);
+            while (!_head.compare_exchange_weak(new_node._ptr->_next, new_node, 
+                                                                                    std::memory_order_release, std::memory_order_relaxed));
+      }
+    };
+
+如果push函数在将要执行while语句时线程被切走，而另一个线程执行push或pop函数，操作改变了head，当线程再切换回来时执行while不是有无限循环的可能吗？
+
+boost文档里提到了lock free数据结构适合用于优化系统延迟及避免优先级反转，似乎更适合于实时的应用和系统。对于最大化应用程序吞吐量，应该考虑使用高性能并行数据结构，例如Intel's Thread Building Blocks library。
+
