@@ -41,7 +41,7 @@ Failure modes in distributed systems
 
 最近阅读了一些无锁编程的内容，主要是参考C++ Concurrency in Action和boost源码库。
 
-在看C++ Concurrency in Action里提供的lock free stack代码及boost里lock free stack代码时总是还有点疑惑，比如如下boost stack push部分代码：
+在看C++ Concurrency in Action里提供的lock free stack代码及boost里lock free stack代码时总是还有点疑惑，比如如下lock free stack push部分代码：
 
     template<typename T> class lock_free_stack {
     private:
