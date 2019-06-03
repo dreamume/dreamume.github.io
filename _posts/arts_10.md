@@ -60,7 +60,7 @@ Time, Clocks, and the Ordering of Events in a Distributed System
 
 该定义跟物理时间无关，而是基于事件发生的顺序。
 
-对于任意事件a, b：如果a -> b则C<a> < C<b>。
+对于任意事件a, b：如果a -> b则C&lt;a> < C&lt;b>。
 
 逻辑时钟要满足"->"关系，则对于连续成功发生的事件，进程P_i要使C_i的值增加。
 
