@@ -56,7 +56,7 @@ Time, Clocks, and the Ordering of Events in a Distributed System
 
 ### 逻辑时钟
 
-定义时钟C_i，对进程P_i中的任意事件a赋于一个数C_i<a>。函数C代表整个系统时钟，即C<b> = C_j<b>，事件b是进程P_j中的事件。
+定义时钟C_i，对进程P_i中的任意事件a赋于一个数C_i&lt;a>。函数C代表整个系统时钟，即C&lt;b> = C_j&lt;b>，事件b是进程P_j中的事件。
 
 该定义跟物理时间无关，而是基于事件发生的顺序。
 
@@ -66,7 +66,7 @@ Time, Clocks, and the Ordering of Events in a Distributed System
 
 对于"->"关系条件2，需要满足如下规则：
 
-进程P_i发生的事件a发送了一个消息m，则消息m带有一个时间戳T_m = C_i<a>，当进程P_j收到消息m后，C_j的值要求必须大于T_m。
+进程P_i发生的事件a发送了一个消息m，则消息m带有一个时间戳T_m = C_i&lt;a>，当进程P_j收到消息m后，C_j的值要求必须大于T_m。
 
 
 <a id="org6fcf7fa"></a>
@@ -75,8 +75,8 @@ Time, Clocks, and the Ordering of Events in a Distributed System
 
 定义关系"=>"：对于P_i进程中的事件a和进程P_j中的事件b，a => b当且仅当，
 
-1.  C_i<a> < C_j<b>，或
-2.  C_i<a> = C_j<b>且P_i < P_j（这里个人理解为条件是看作进程i的事件永远早于进程j的事件）
+1.  C_i&lt;a> < C_j&lt;b>，或
+2.  C_i&lt;a> = C_j&lt;b>且P_i < P_j（这里个人理解为条件是看作进程i的事件永远早于进程j的事件）
 
 以下利用全部有序关系解决一个互斥问题。
 
