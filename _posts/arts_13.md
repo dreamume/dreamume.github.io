@@ -1,0 +1,125 @@
+
+# Table of Contents
+
+1.  [Algorithm](#org5ddbcf9)
+2.  [Review](#orge79cd4e)
+    1.  [异步可靠模型](#org47c6c26)
+    2.  [异步非可靠模型](#org62f7548)
+    3.  [部分同步可靠模型](#org0116ff4)
+    4.  [部分同步不可靠模型](#org69ec451)
+        1.  [一些假设](#org782c7ae)
+        2.  [目标](#orgaa3d00e)
+        3.  [算法](#orgfb551d1)
+3.  [Tips](#orgd9593b7)
+4.  [Share](#org0d13bb3)
+
+
+<a id="org5ddbcf9"></a>
+
+# Algorithm
+
+这两周做了几道leetcode题，但没有特别有趣可以拿出来说的。
+
+
+<a id="orge79cd4e"></a>
+
+# Review
+
+An Overview of Clock synchronization
+
+<https://groups.csail.mit.edu/tds/papers/Lynch/lncs90-asilomar.pdf>
+
+本文主要讨论时钟同步算法。
+
+
+<a id="org47c6c26"></a>
+
+## 异步可靠模型
+
+我们假设消息能无限延迟，节点和消息转发系统不会出现故障。
+
+Lamport提供了一个简单的算法允许异步节点维护一个离散时钟，使通讯保持一致。当节点i发送一个消息给节点j,发送时的时间记作t_i, 节点j在时间t_j时收到这个消息。如果t_j < t_i，则节点j更新时间为t_i。
+
+该本地时钟同样可以扩展到异步系统中使用。
+
+
+<a id="org62f7548"></a>
+
+## 异步非可靠模型
+
+根据FLP理论，不存在能在异步非可靠模型下有效的算法。
+
+
+<a id="org0116ff4"></a>
+
+## 部分同步可靠模型
+
+一些研究员考虑在部分同步可靠环境下节点有相同速度的实时时钟作为实时时间参照，同时初始化时带一个随机的offset。也就是说消息延迟有上下界。
+
+设计了一种Lamport时钟算法，确定了时钟移动速度和消息不可靠性的范围。
+
+Marzullo做了一些重要工作，一个重要观点是对于每个节点维护一个错误时钟的上界，每个节点定时请求其他节点的时间，调整时间间隔。
+
+
+<a id="org69ec451"></a>
+
+## 部分同步不可靠模型
+
+
+<a id="org782c7ae"></a>
+
+### 一些假设
+
+假设节点总数为n，能够容忍的最大故障节点数为f。
+
+为克服拜占庭容错中的问题，确定节点真实发送的消息内容，算法需要使用认证。
+
+假设对于一个需要认证的算法，存在一个安全加密系统，确保如果节点A告诉节点B节点C说了消息X，则节点B能够验证节点C确实说了消息X。
+
+Dolev，Halpern，Strong证明在无认证的情况下，n需要大于3f来同步拜占庭时钟，如有认证，拜占庭算法能够容错任意节点故障。
+
+由于实际情况下，节点不可能更其他所有节点能够直连，一些算法假设网络需要f + 1个连接（有认证的情况下）。
+
+假设节点的实时时钟不能完全准确的对应时间，设时间偏移速度为p，C为硬件时钟，u、v为实时时钟，则有(v - u) / (1 + p) <= C(v) - C(u) <= (v - u)(1 + p)。
+
+
+<a id="orgaa3d00e"></a>
+
+### 目标
+
+时钟同步算法的主要目的是使非故障节点的时间都能在一个固定的时间范围内。
+
+另外，同步应该确保不干扰网络的其他活动，
+
+
+<a id="orgfb551d1"></a>
+
+### 算法
+
+所有处理拜占庭容错的算法一般要求n > 3f。节点需要同步初始化以确定消息延迟和时钟偏移的上限。最后，他们需要定期同步。
+
+文章中简要描述了几种不同算法的要点和不同。
+
+
+<a id="orgd9593b7"></a>
+
+# Tips
+
+-   这周发现在leetcode上提交，显示的runtime不靠谱，同样的代码多次提交，runtime分别显示8ms、4ms、0ms，对应提示faster than 10%的提交、74%的提交、100%的提交，无法理解，这样岂不是runtime的参考毫无价值？
+-   算法第四版(Sedgewick)阅读非常流畅，通俗易懂，特别是红黑树部分，极具功力，非常推崇这种简洁清晰、用语友好的写作风格。
+
+
+<a id="org0d13bb3"></a>
+
+# Share
+
+看书看到一段爱因斯坦的摘录，分享一下。
+
+It is not enough to teach man a speciality. Through it he may become a kind of useful machine but not a harmoniously developed personality. It is essential that the student acquire an understanding of and a lively feeling for values. He must acquire a vivid sense of the beautiful and of the morally good. Otherwise he &#x2013; with his specialized knowledge &#x2013; more closely resembles a well-trained dog than a harmoniously developed person. He must learn to understand the motives of human beings, their illusions, and their sufferings in order to acquire a proper relationship to individual fellow-men and to the community.
+
+These precious things are conveyed to the younger generation through personal contact with those who teach, not &#x2013; or at least not in the main &#x2013; through textbooks. It is this that primarily constitutes and preserves culture. This is what I have in mind when I recommend the "humanities" as important, not just dry specialized knowledge in the fields of history and philosophy.
+
+Overemphasis on the competitive system and premature specialization on the ground of immediate usefulness kill the spirit on which all cultural life depends, specialized knowledge included.
+
+It is also vital to a valuable education that independent critical thinking be developed in the young human being, a development that is greatly jeopardized by overburdening him with too much and with too varied subjects (point system). Overburdening necessarily leads to superficiality. Teaching should be such that what is offered is perceived as a valuable gift and not as a hard duty.
+
