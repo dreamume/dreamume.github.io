@@ -212,7 +212,7 @@ max flow push relabel algorithm
 
 <https://github.com/dreamume/introduction2algorithm/blob/master/chapter26/push_relabel.cc>
 
-算法时间复杂度为: O(V<sup>2E</sup>)
+算法时间复杂度为: O(V<sup>2</sup>E)
 
 如果有部分符号不理解，需要查看算法导论之前的几章图算法内容。
 
