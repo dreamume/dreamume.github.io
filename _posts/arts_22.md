@@ -1,32 +1,32 @@
 
 # Table of Contents
 
-1.  [Algorithm](#org4a0351e)
-2.  [Review](#orgfbd7229)
-3.  [Tips](#org4a9ab06)
-4.  [Share](#orgfdb6981)
-    1.  [一个政治问题的例子](#orga72f7a2)
-    2.  [简介](#orgd1257e9)
+1.  [Algorithm](#org0988480)
+2.  [Review](#orgcdcbf53)
+3.  [Tips](#orgb643a63)
+4.  [Share](#org6f04917)
+    1.  [一个政治问题的例子](#orgc5ea8b2)
+    2.  [简介](#org6e57764)
 
 
-<a id="org4a0351e"></a>
+<a id="org0988480"></a>
 
 # Algorithm
 
 
-<a id="orgfbd7229"></a>
+<a id="orgcdcbf53"></a>
 
 # Review
 
 
-<a id="org4a9ab06"></a>
+<a id="orgb643a63"></a>
 
 # Tips
 
 -   如果书上算法讲解内容比较长，不确定看懂了所有细节，可能写博客并写出算法实现是比较好的确定看明白的一种方法
 
 
-<a id="orgfdb6981"></a>
+<a id="org6f04917"></a>
 
 # Share
 
@@ -37,7 +37,7 @@ Linear programming
 线性规划是通过指定一些包含变量的等式或不等式作为限制条件，获取目标函数最大值、最小值的问题。
 
 
-<a id="orga72f7a2"></a>
+<a id="orgc5ea8b2"></a>
 
 ## 一个政治问题的例子
 
@@ -53,51 +53,51 @@ Linear programming
 
 我们引入4个变量：
 
--   x_1 为广告建造公路花费的金额（单位：千美金）
--   x_2 为广告枪支控制花费的金额（单位：千美金）
--   x_3 为广告投资农业花费的金额（单位：千美金）
--   x_4 为广告汽油税花费的金额（单位：千美金）
+-   x<sub>1</sub> 为广告建造公路花费的金额（单位：千美金）
+-   x<sub>2</sub> 为广告枪支控制花费的金额（单位：千美金）
+-   x<sub>3</sub> 为广告投资农业花费的金额（单位：千美金）
+-   x<sub>4</sub> 为广告汽油税花费的金额（单位：千美金）
 
 可以得出以下公式：
 
 为赢得至少50000城市居民投票：
 
--2x_1 + 8x_2 + 0x_3 + 10x_4 >= 50
+-2x<sub>1</sub> + 8x<sub>2</sub> + 0x<sub>3</sub> + 10x<sub>4</sub> >= 50
 
 赢得至少100000城乡结合部居民投票和25000农村居民投票：
 
-5x_1 + 2x_2 + 0x_3 + 0x_4 >= 100
+5x<sub>1</sub> + 2x<sub>2</sub> + 0x<sub>3</sub> + 0x<sub>4</sub> >= 100
 
-3x_1 - 5x_2 + 10x_3 - 2x_4 >= 25
+3x<sub>1</sub> - 5x<sub>2</sub> + 10x<sub>3</sub> - 2x<sub>4</sub> >= 25
 
 以及最小的花费表达式：
 
-x_1 + x_2 + x_3 + x_4
+x<sub>1</sub> + x<sub>2</sub> + x<sub>3</sub> + x<sub>4</sub>
 
 同时：
 
-x_1 >= 0, x_2 >= 0, x_3 >= 0, x_4 >= 0
+x<sub>1</sub> >= 0, x<sub>2</sub> >= 0, x<sub>3</sub> >= 0, x<sub>4</sub> >= 0
 
 根据以上不等式，我们构造一个线性规划问题，整理如下：
 
-最小化    x_1 + x_2 + x_3 + x_4
+最小化    x<sub>1</sub> + x<sub>2</sub> + x<sub>3</sub> + x<sub>4</sub>
 
 约束
 
--2x_1 + 8x_2 + 0x_3 + 10x_4 >= 50
+-2x<sub>1</sub> + 8x<sub>2</sub> + 0x<sub>3</sub> + 10x<sub>4</sub> >= 50
 
-5x_1 + 2x_2 + 0x_3 + 0x_4 >= 100
+5x<sub>1</sub> + 2x<sub>2</sub> + 0x<sub>3</sub> + 0x<sub>4</sub> >= 100
 
-3x_1 - 5x_2 + 10x_3 - 2x_4 >= 25
+3x<sub>1</sub> - 5x<sub>2</sub> + 10x<sub>3</sub> - 2x<sub>4</sub> >= 25
 
-x_1, x_2, x_3, x_4 >= 0
+x<sub>1</sub>, x<sub>2</sub>, x<sub>3</sub>, x<sub>4</sub> >= 0
 
 
-<a id="orgd1257e9"></a>
+<a id="org6e57764"></a>
 
 ## 简介
 
 我们看一个例子：
 
-最小化    x_1 + x_2
+最小化    x<sub>1</sub> + x<sub>2</sub>
 
