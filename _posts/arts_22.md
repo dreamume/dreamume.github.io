@@ -1,32 +1,34 @@
 
 # Table of Contents
 
-1.  [Algorithm](#org0988480)
-2.  [Review](#orgcdcbf53)
-3.  [Tips](#orgb643a63)
-4.  [Share](#org6f04917)
-    1.  [一个政治问题的例子](#orgc5ea8b2)
-    2.  [简介](#org6e57764)
+1.  [Algorithm](#orgedea58d)
+2.  [Review](#org2061e39)
+3.  [Tips](#orgc8a3646)
+4.  [Share](#orga378145)
+    1.  [一个选举投票问题的例子](#orga763a6d)
+    2.  [简介](#org504db4d)
+    3.  [标准形和松散形](#orgc8d015b)
+        1.  [转换线性规划为标准形](#org38e7994)
 
 
-<a id="org0988480"></a>
+<a id="orgedea58d"></a>
 
 # Algorithm
 
 
-<a id="orgcdcbf53"></a>
+<a id="org2061e39"></a>
 
 # Review
 
 
-<a id="orgb643a63"></a>
+<a id="orgc8a3646"></a>
 
 # Tips
 
 -   如果书上算法讲解内容比较长，不确定看懂了所有细节，可能写博客并写出算法实现是比较好的确定看明白的一种方法
 
 
-<a id="org6f04917"></a>
+<a id="orga378145"></a>
 
 # Share
 
@@ -37,9 +39,9 @@ Linear programming
 线性规划是通过指定一些包含变量的等式或不等式作为限制条件，获取目标函数最大值、最小值的问题。
 
 
-<a id="orgc5ea8b2"></a>
+<a id="orga763a6d"></a>
 
-## 一个政治问题的例子
+## 一个选举投票问题的例子
 
 假设你是一个政客想赢得选举。你的选区有三种类型区域&#x2013;城市、城乡结合部、农村。对应有100000，200000，50000注册选民。
 
@@ -93,11 +95,64 @@ x<sub>1</sub> >= 0, x<sub>2</sub> >= 0, x<sub>3</sub> >= 0, x<sub>4</sub> >= 0
 x<sub>1</sub>, x<sub>2</sub>, x<sub>3</sub>, x<sub>4</sub> >= 0
 
 
-<a id="org6e57764"></a>
+<a id="org504db4d"></a>
 
 ## 简介
 
 我们看一个例子：
 
 最小化    x<sub>1</sub> + x<sub>2</sub>
+
+约束
+
+4x<sub>1</sub> - x<sub>2</sub> <= 8
+
+2x<sub>1</sub> + x<sub>2</sub> <= 10
+
+5x<sub>1</sub> - 2x<sub>2</sub> >= -2
+
+x1, x2 >= 0
+
+满足所有约束的x<sub>1</sub>、x<sub>2我们称之为该线性规划问题的可行解</sub>，如下图：
+
+![img](../img/feasible_solution_of_linear_programming.png)
+
+我们称图中阴影部分为有解区域，目标函数在某一点的值为目标值。使目标值最大的点为最优解。
+
+可以看到线性规划的最优解在可解区域的顶点上。由于有解区域是凸的，最优解必须出现在顶点上。相似的，可以推广到N维空间，如果我们有n个变量，每条约束定义了n维空间里的一个半空间，由于任具有凸性，最优解依然在一个顶点上。
+
+
+<a id="orgc8d015b"></a>
+
+## 标准形和松散形
+
+线性规划中
+
+标准形：
+
+给定n个实数c<sub>1</sub>, c<sub>2</sub>, &#x2026;, c<sub>n</sub>，m个实数b<sub>1</sub>, b<sub>2</sub>, &#x2026;, b<sub>m</sub>，和mn个实数a<sub>ij</sub>，i = 1,2,&#x2026;,m，j = 1,2,&#x2026;,n
+
+![img](../img/standard_form_of_linear_programming.png)
+
+
+<a id="org38e7994"></a>
+
+### 转换线性规划为标准形
+
+考虑如下4种情况：
+
+1.  目标函数为求最小值而不是最大值
+2.  变量不是非负的
+3.  约束为等式
+4.  不等式约束为大于等于
+
+我们通过例子来说明：
+
+![img](../img/convert_standard_form_example.png)
+
+改变目标函数为最大值，求得最大值，取负即为原最小值。
+
+![img](../img/fit_objective_function_to_maximize_for_standard_form.png)
+
+如果x<sub>j缺少非负约束</sub>，我们将用x'<sub>j</sub> - x''<sub>j替代x</sub><sub>j</sub>，并添加约束x'<sub>j</sub>>=0和x''<sub>j</sub>>=0。
 
