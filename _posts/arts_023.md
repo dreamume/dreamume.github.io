@@ -148,7 +148,7 @@ B3(ℬ): ℬ集合中的每个投票活动，任何法定人数里的祭司在�
 
 我们通过手稿上的图1来帮助解释，图1显示5个投票活动，有5个祭司：A, B, Γ, ∆, 和 E，并显示了每次活动的法定祭司，方框括起来的表示该祭司已完成投票决定。例如，序号14的活动投票的法令是α，法定人数为3人，2人已做出投票决定。
 
-![img](./resource/paxon_manuscript_figure1.png)
+![img](../img/paxon_manuscript_figure1.png)
 
 5次活动的条件如下：
 
@@ -163,33 +163,33 @@ B3(ℬ): ℬ集合中的每个投票活动，任何法定人数里的祭司在�
 Paxos数学家对所有投票定义了一个总序，但部分手稿丢失了该定义。一些琐碎记录显示，对任意投票v和v'，如果v<sub>bal</sub> < v'<sub>bal</sub> 则v < v'。
 
 对任意投票活动集合ℬ，集合Votes(ℬ)定义为包含所有投票v，v<sub>pst</sub> ∈ B<sub>vot</sub>，v<sub>bal</sub> = B<sub>bal</sub>，v<sub>dec</sub> = B<sub>dec</sub>，B ∈ ℬ。如果祭司p和b为一个活动号或±∞，则MaxVote(b, p, ℬ)定义为p投票的最大的投票v，v ∈ Votes(ℬ)v<sub>bal</sub> < b或null<sub>p</sub>。公式如下：
-![img](./img/paxos_max_vote_formula.png)
+![img](../img/paxos_max_vote_formula.png)
 
 对任意非空祭司集合Q，MaxVote(b, Q, ℬ)定义为集合Q中的祭司p的MaxVote(b, p, ℬ)的最大值。
 
 条件B1(ℬ) - B3(ℬ)形式化描述如下：
-![img](./img/paxos_single_decree_formula.png)
+![img](../img/paxos_single_decree_formula.png)
 
 虽然MaxVote的定义依赖投票顺序，B1(ℬ)表明MaxVote(b, Q, ℬ)<sub>dec</sub>不依赖于相同活动序号的投票顺序。
 
 为表示这些条件能满足一致性，Paxos人首先表示B1(ℬ) - B3(ℬ)意味着，如果ℬ中的一个投票活动B成功，则任意后面的集合ℬ中的活动，其法令跟本次活动相同的都是活动B。
 
 引理：如果B1(ℬ)，B2(ℬ)，B3(ℬ)满足，则：
-![img](./img/paxos_single_decree_lemma.png)
+![img](../img/paxos_single_decree_lemma.png)
 
 引理的证明
 
 对ℬ集合中的任意投票活动B，定义Ψ(B,ℬ)为晚于B且法令不同于B中的法令的活动集合：
-![img](./img/paxos_single_decree_ballot_set_define.png)
+![img](../img/paxos_single_decree_ballot_set_define.png)
 
 为证明引理，需表明如果B<sub>qrm</sub> ⊆ B<sub>vot</sub>，则Ψ(B, ℬ)为空。
 
 Paxos人通过反证法，他们假设存在这样的活动B，B<sub>qrm</sub> ⊆ B<sub>vot</sub> 且 Ψ(B, ℬ) != ∅，则获得矛盾：
-![img](./img/paxos_single_decree_lemma_proof1.png)
-![img](./img/paxos_single_decree_lemma_proof2.png)
+![img](../img/paxos_single_decree_lemma_proof1.png)
+![img](../img/paxos_single_decree_lemma_proof2.png)
 
 通过这个引理，我们能够得到定理1：
-![img](./img/paxos_single_decree_theorem1.png)
+![img](../img/paxos_single_decree_theorem1.png)
 
 Paxos人然后证明了另一个定理，假设如果议院里有足够多的祭司，通过条件B1 - B3能够指导得到一个成功的投票活动。虽然这里没有保证进度，但它至少显示了这样的过程不会被死锁。
 
