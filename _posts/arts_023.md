@@ -148,7 +148,7 @@ B3(ℬ): ℬ集合中的每个投票活动，任何法定人数里的祭司在�
 
 我们通过手稿上的图1来帮助解释，图1显示5个投票活动，有5个祭司：A, B, Γ, ∆, 和 E，并显示了每次活动的法定祭司，方框括起来的表示该祭司已完成投票决定。例如，序号14的活动投票的法令是α，法定人数为3人，2人已做出投票决定。
 
-![img](https://github.com/dreamume/dreamume.github.io/raw/master/img/paxon_manuscript_figure1.png)
+![img](../img/paxon_manuscript_figure1.png)
 
 5次活动的条件如下：
 
