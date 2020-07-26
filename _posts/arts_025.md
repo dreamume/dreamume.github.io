@@ -282,7 +282,7 @@ Paxos假设基于选择领导，安全性在没有领导或多个领导时也要
 
 根执行两层的打散聚合如下图所示，合并搜索结果并统计。简单的API结果，它使客户端只链接一个单端。这种两层合并处理允许我们执行额外的优化，比如避免跟搜索查询无关的时间层的前向查询请求。
 
-![img](./img/building_a_completetweetindex98.thumb.1280.1280.png)
+![img](../img/building_a_completetweetindex98.thumb.1280.1280.png)
 
 
 <a id="org5eeea73"></a>
