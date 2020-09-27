@@ -1,22 +1,22 @@
 
 # Table of Contents
 
-1.  [Algorithm](#orgc30919f)
-2.  [Review](#org92366af)
-    1.  [抽象](#org3e251b6)
-    2.  [简介](#orgff18057)
-        1.  [目标](#org51f30e4)
-        2.  [假设](#orga5c2386)
-3.  [Tips](#org07a0c93)
-4.  [Share](#org9bb37d6)
-    1.  [最大公约数](#orgda17808)
-    2.  [模的算术](#orgf0eb08a)
-    3.  [解模的线性等式](#orgc506ca9)
-    4.  [中国余数定理](#org3254196)
-    5.  [元素的幂](#orgdabae70)
+1.  [Algorithm](#org2ffed71)
+2.  [Review](#orgb648148)
+    1.  [抽象](#org629335f)
+    2.  [简介](#org57d0bd8)
+        1.  [目标](#org6908a3a)
+        2.  [假设](#org25d0834)
+3.  [Tips](#orgc959812)
+4.  [Share](#orgf70079d)
+    1.  [最大公约数](#orgfa8080b)
+    2.  [模的算术](#org0ef6e3f)
+    3.  [解模的线性等式](#orgce2b739)
+    4.  [中国余数定理](#orgc17d9db)
+    5.  [元素的幂](#orgccc7796)
 
 
-<a id="orgc30919f"></a>
+<a id="org2ffed71"></a>
 
 # Algorithm
 
@@ -25,7 +25,7 @@ Leetcode 330: <https://leetcode.com/problems/patching-array/>
 <https://medium.com/@dreamume/leetcode-330-patching-array-2477a76f40a0>
 
 
-<a id="org92366af"></a>
+<a id="orgb648148"></a>
 
 # Review
 
@@ -34,7 +34,7 @@ Life beyond Distributed Transactions: an Apostate’s Opinion
 <http://www.ics.uci.edu/~cs223/papers/cidr07p15.pdf>
 
 
-<a id="org3e251b6"></a>
+<a id="org629335f"></a>
 
 ## 抽象
 
@@ -47,14 +47,14 @@ Life beyond Distributed Transactions: an Apostate’s Opinion
 开始这些讨论的两个原因是提高新模型的知晓度。首先，我相信这会使人们开发大规模可扩展应用程序更加容易；其次，通过观察模型，希望工业界可创建平台使构建大规模应用程序更加容易。
 
 
-<a id="orgff18057"></a>
+<a id="org57d0bd8"></a>
 
 ## 简介
 
 让我们检查本文的一些目标，为讨论我做的一些假设和从这些假设中推演的一些观点。因我对高可用性的痴迷，本文将忽略这样的问题并聚焦于可扩展性。特别地，我们将聚焦于假设我们不能有大规模可扩展分布式交易的争执。
 
 
-<a id="org51f30e4"></a>
+<a id="org6908a3a"></a>
 
 ### 目标
 
@@ -83,19 +83,19 @@ Life beyond Distributed Transactions: an Apostate’s Opinion
     更进一步地是，条目的使用意味着消息模型跟条目关联。这些使尝试构建可扩展解决方案的初级的应用程序开发者对状态机的创建必须考虑消息转发不一致的问题。
 
 
-<a id="orga5c2386"></a>
+<a id="org25d0834"></a>
 
 ### 假设
 
 
-<a id="org07a0c93"></a>
+<a id="orgc959812"></a>
 
 # Tips
 
 -   有些书中习题可能就是从本章知识中不容易解决，需要参考其他书籍，不能指望作者给出的习题刚好就是本章内容能解决，有可能有部分知识超纲
 
 
-<a id="org9bb37d6"></a>
+<a id="orgf70079d"></a>
 
 # Share
 
@@ -104,7 +104,7 @@ Life beyond Distributed Transactions: an Apostate’s Opinion
 跳过前面介绍基础部分，我们直接进入比较关键或有趣的内容。
 
 
-<a id="orgda17808"></a>
+<a id="orgfa8080b"></a>
 
 ## 最大公约数
 
@@ -130,7 +130,7 @@ Life beyond Distributed Transactions: an Apostate’s Opinion
 ![img](../img/extended_euclid.png)
 
 
-<a id="orgf0eb08a"></a>
+<a id="org0ef6e3f"></a>
 
 ## 模的算术
 
@@ -151,7 +151,7 @@ Life beyond Distributed Transactions: an Apostate’s Opinion
 
 这里集合Z<sub>n</sub><sup>\*</sup>的元素为
 
-    Z_n^* = {[a]_n ∈ Z_n : gcd(a, n) = 1}
+Z<sub>n</sub><sup>\*</sup> = {[a]<sub>n</sub> ∈ Z<sub>n</sub> : gcd(a, n) = 1}
 
 二元操作符为两元素相乘再对n取模。
 
@@ -218,7 +218,7 @@ S群中a的序，记为ord(a)，定义为最小的正整数t，a<sup>(t)</sup> =
 如果(S, ⊕)为有限群，单位元为e，则对任意a ∈ S，有a<sup>(|S|)</sup> = e
 
 
-<a id="orgc506ca9"></a>
+<a id="orgce2b739"></a>
 
 ## 解模的线性等式
 
@@ -240,7 +240,7 @@ S群中a的序，记为ord(a)，定义为最小的正整数t，a<sup>(t)</sup> =
 
 定理31.24
 
-假设等式ax ≡ b (mod n)可解，即d | b，d = gcd(a, n)，且x<sub>0</sub> 是该等式的解。则该等式有d个不同的解，x<sub>i</sub> = \_0 + i(n / d)，i = 0, 1, &#x2026;, d - 1
+假设等式ax ≡ b (mod n)可解，即d | b，d = gcd(a, n)，且x<sub>0</sub> 是该等式的解。则该等式有d个不同的解，x<sub>i</sub> = x<sub>0</sub> + i(n / d)，i = 0, 1, &#x2026;, d - 1
 
     MODULAR_LINEAR_EQUATION_SOLVER(a, b, n)
     1  (d, x', y') = EXTENDED_EUCLID(a, n)
@@ -259,7 +259,7 @@ S群中a的序，记为ord(a)，定义为最小的正整数t，a<sup>(t)</sup> =
 对任意n > 1，如果gcd(a, n) = 1，则等式ax ≡ 1 (mod n)有唯一解，否则无解。
 
 
-<a id="org3254196"></a>
+<a id="orgc17d9db"></a>
 
 ## 中国余数定理
 
@@ -276,7 +276,7 @@ S群中a的序，记为ord(a)，定义为最小的正整数t，a<sup>(t)</sup> =
 如果n<sub>1</sub> , n<sub>2</sub> , &#x2026;, n<sub>k</sub> 互质，n = n<sub>1</sub> n<sub>2</sub> &#x2026; n<sub>k</sub> ，则对所有整数x和a, x ≡ a(mod n<sub>i</sub> )，i = 1, 2, &#x2026;, k当且仅当x ≡ a (mod n)
 
 
-<a id="orgdabae70"></a>
+<a id="orgccc7796"></a>
 
 ## 元素的幂
 
