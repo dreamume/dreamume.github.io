@@ -1,3 +1,14 @@
+---
+layout:     post
+title:      "Weekly 006"
+subtitle:   ""
+thumbnail-img: ""
+date:       2020-09-22 10:00
+author:     "dreamume"
+tags: 		[IT]
+category:   it
+---
+
 # Algorithm
 
 Leetcode 72: Edit Distance
