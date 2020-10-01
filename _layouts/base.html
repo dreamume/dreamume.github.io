@@ -1,0 +1,93 @@
+---
+common-css:
+  - "/assets/css/bootstrap-social.css"
+  - "/assets/css/beautifuljekyll.css"
+common-ext-css:
+  - href: "https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    sri: "sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+  - "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+  - "https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic"
+  - "https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800"
+common-ext-js:
+  - href: "https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    sri: "sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="
+  - href: "https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    sri: "sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+  - href: "https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    sri: "sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+common-js:
+  - "/assets/js/beautifuljekyll.js"
+---
+
+<!DOCTYPE html>
+<html lang="{{ page.language | default: site.language | default: 'en' }}">
+<!-- Beautiful Jekyll 5.0.0 | Copyright Dean Attali 2020 -->
+{% include head.html %}
+
+<body>
+
+  {% include gtm_body.html %}
+
+  {% include nav.html %}
+
+  <div style="display:none">
+    $$
+      \newcommand{\R}{\mathbb{R}}
+      \newcommand{\SSS}{\mathbb{S}}
+      \newcommand{\E}{\mathbb{E}}
+      \newcommand{\C}{\mathbb{C}}
+      \newcommand{\N}{\mathbb{N}}
+      \newcommand{\Z}{\mathbb{Z}}
+      \newcommand{\dist}{\mathrm{dist}}
+      \newcommand{\span}{\mathrm{Span}}
+      \newcommand{\diag}[1]{\mathrm{diag}(#1)}
+      \newcommand{\dim}[1]{\mathrm{dim} \, #1}
+      \newcommand{\tr}[1]{\mathrm{tr}(#1)}
+      \newcommand{\partder}[2]{\frac{\partial #1}{\partial #2}}
+      \newcommand{\rank}[1]{\mathrm{rank} \, #1}
+      \newcommand{\inner}[1]{\langle #1 \rangle}
+      \newcommand{\innerbig}[1]{\left \langle #1 \right \rangle}
+      \newcommand{\abs}[1]{\lvert #1 \rvert}
+      \newcommand{\norm}[1]{\lVert #1 \rVert}
+      \newcommand{\ker}[1]{\text{ker}(#1)}
+      \newcommand{\supp}[1]{\text{supp}(#1)}
+      \newcommand{\calA}{\mathcal{A}}
+      \newcommand{\calB}{\mathcal{B}}
+      \newcommand{\calC}{\mathcal{C}}
+      \newcommand{\calD}{\mathcal{D}}
+      \newcommand{\calE}{\mathcal{E}}
+      \newcommand{\calF}{\mathcal{F}}
+      \newcommand{\calG}{\mathcal{G}}
+      \newcommand{\calH}{\mathcal{H}}
+      \newcommand{\calI}{\mathcal{I}}
+      \newcommand{\calJ}{\mathcal{J}}
+      \newcommand{\calK}{\mathcal{K}}
+      \newcommand{\calL}{\mathcal{L}}
+      \newcommand{\calM}{\mathcal{M}}
+      \newcommand{\calN}{\mathcal{N}}
+      \newcommand{\calO}{\mathcal{O}}
+      \newcommand{\calP}{\mathcal{P}}
+      \newcommand{\calQ}{\mathcal{Q}}
+      \newcommand{\calR}{\mathcal{R}}
+      \newcommand{\calS}{\mathcal{S}}
+      \newcommand{\calT}{\mathcal{T}}
+      \newcommand{\calU}{\mathcal{U}}
+      \newcommand{\calV}{\mathcal{V}}
+      \newcommand{\calW}{\mathcal{W}}
+      \newcommand{\calX}{\mathcal{X}}
+      \newcommand{\calY}{\mathcal{Y}}
+      \newcommand{\calZ}{\mathcal{Z}}
+      \newcommand{\bh}{{\bf h}}
+      \newcommand{\bf}{{\bf f}}
+      \newcommand{\Pker}{P_{\ker{L}^{\perp}}}
+    $$
+  </div>
+
+  {{ content }}
+
+  {% include footer.html %}
+
+  {% include footer-scripts.html %}
+
+</body>
+</html>
