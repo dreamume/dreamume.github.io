@@ -72,6 +72,15 @@ defaults:
     values:
       layout: "page"
 
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-relative-links
+
+relative_links:
+  enabled:     true
+  collections: true
+
 # 评论系统
 # Disqus（https://disqus.com/）
 # disqus_username: 
