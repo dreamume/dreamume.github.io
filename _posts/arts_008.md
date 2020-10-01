@@ -1,3 +1,14 @@
+---
+layout:     post
+title:      "Weekly 008"
+subtitle:   ""
+thumbnail-img: ""
+date:       2020-09-22 10:00
+author:     "dreamume"
+tags: 		[it]
+category:   it
+---
+
 # Algorithm
 
 Leetcode 101: <https://leetcode.com/problems/symmetric-tree/>

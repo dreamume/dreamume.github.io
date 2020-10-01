@@ -1,3 +1,14 @@
+---
+layout:     post
+title:      "Weekly 021"
+subtitle:   ""
+thumbnail-img: ""
+date:       2020-09-22 10:00
+author:     "dreamume"
+tags: 		[it]
+category:   it
+---
+
 # Table of Contents
 
 1.  [Algorithm](#orgc468217)

@@ -1,3 +1,14 @@
+---
+layout:     post
+title:      "Weekly 007"
+subtitle:   ""
+thumbnail-img: ""
+date:       2020-09-22 10:00
+author:     "dreamume"
+tags: 		[it]
+category:   it
+---
+
 # Algorithm
 
 Leetcode 85: <https://leetcode.com/problems/maximal-rectangle/>
