@@ -1,57 +1,159 @@
 # Site settings
 title: simple Blog
-SEOTitle: 随笔博客 | simple Blog
-header-img: img/post-bg-desk.jpg
-email: dreamume@gmail.com
+#SEOTitle: 随笔博客 | simple Blog
+#header-img: img/post-bg-desk.jpg
+#email: dreamume@gmail.com
 description: "Writing is thought."
-keyword: "Algorithm, iOS"
-url: "http://dreamume.github.io"          # your host, for absolute URL
-baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
-github_repo: "https://github.com/dreamume/dreamume.github.io.git" # you code repository
+#keyword: "Algorithm, iOS"
+#url: "http://dreamume.github.io"          # your host, for absolute URL
+#baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
+#github_repo: "https://github.com/dreamume/dreamume.github.io.git" # you code repository
 
 # Sidebar settings
-sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "Make everything as simple as possible, but not simpler."
-sidebar-avatar: /img/birds_of_paradise.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
+#sidebar: true                           # whether or not using Sidebar.
+#sidebar-about-description: "Make everything as simple as possible, but not simpler."
+#sidebar-avatar: /img/birds_of_paradise.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
+# List of links in the navigation bar
+navbar-links:
+  Home: "index"
 
+# --- Logo --- #
+# Image to show in the navigation bar - works best with a square image
+# Remove this parameter if you don't want an image in the navbar
+avatar: "/img/birds_of_paradise.jpg"
+show-avatar: false
+round-avatar: true
 
-# SNS settings
-RSS: false
-# weibo_username:     
-#zhihu_username:     
-github_username:    dreamume
-#facebook_username:  
-#jianshu_username:   
-#twitter_username:   
+# Select the social network links that you want to show in the footer.
+# Uncomment the links you want to show and add your information to each one.
+social-network-links:
+  email: "yx2516@uw.edu"
+  github: dreamume
 
+# --- General options --- #
+# Select which social network share links to show in posts
+share-links-active:
+  github: true
 
+# Excerpt word length - Truncate the excerpt of each post on the feed page to the specified number of words
+excerpt_length: 50
 
+# Whether or not to show an excerpt for every blog post in the feed page
+feed_show_excerpt: true
 
-# Build settings
-# from 2016, 'pygments' is unsupported on GitHub Pages. Use 'rouge' for highlighting instead.
-permalink: pretty
-paginate: 10
-exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
-anchorjs: true                          # if you want to customize anchor. check out line:181 of `post.html`
+# Whether or not to show a list of tags below each post preview in the feed page
+feed_show_tags: true
 
+# The keywords to associate with your website, for SEO purposes
+#keywords: "my,list,of,keywords"
 
+# --- Colours / background image --- #
+# Personalize the colors in your website. Colour values can be any valid CSS colour
 
-# Gems
-# from PR#40, to support local preview for Jekyll 3.0
-#gems: [jekyll-paginate]
+# Personalize the colours in your website. Colour values can be any valid CSS colour
+navbar-col: "#EAEAEA"
+navbar-text-col: "#404040"
+navbar-border-col: "#DDDDDD"
+page-col: "#FFFFFF"
+link-col: "#dd6514"
+hover-col: "#f98a2e"
+footer-col: "#F5F5F5"
+text-col: "#404040"
+footer-text-col: "#777777"
+footer-link-col: "#404040"
 
+# Alternatively, the navbar, footer, and page background can be set to an image
+# instead of colour
 
+#navbar-img: "/assets/img/bgimage.png"
+#footer-img: "/assets/img/bgimage.png"
+#page-img: "/assets/img/bgimage.png"
 
+# Suggest a colour for mobile browsers to use as the browser's theme. This is only supported by a few mobile browsers.
+#mobile-theme-col: "#0085A1"
 
-# Markdown settings
-# replace redcarpet to kramdown,
-# although redcarpet can auto highlight code, the lack of header-id make the catalog impossible, so I switch to kramdown
-# document: http://jekyllrb.com/docs/configuration/#kramdown
+# For any extra visual customization, you can include additional CSS files in every page on your site. List any custom CSS files here
+#site-css:
+#  - "/assets/css/custom-styles.css"
+
+# If you have common JavaScript files that should be included in every page, list them here
+#site-js:
+#  - "/assets/js/custom-script.js"
+
+# --- Web Analytics Section --- #
+
+# Fill in your Google Analytics gtag.js ID to track your website using gtag
+#gtag: ""
+
+# Fill in your Google Analytics ID to track your website using Google Analytics
+#google_analytics: ""
+
+# Google Tag Manager ID
+#gtm: ""
+
+# Matomo (aka Piwik) Web statistics
+# Uncomment the following section to enable Matomo. The opt-out parameter controls
+# whether or not you want to allow users to opt out of tracking.
+#matomo:
+#  site_id: "9"
+#  uri: "demo.wiki.pro"
+#  opt-out: true
+
+# --- Comments --- #
+
+# To use Disqus comments, sign up to https://disqus.com and fill in your Disqus shortname (NOT the userid)
+#disqus: ""
+
+# To use Facebook Comments, create a Facebook app and fill in the Facebook App ID
+#fb_comment_id: ""
+
+# To use Utterances comments: (0) uncomment the following section, (1) fill in
+# "repository" (make sure the repository is public), (2) Enable Issues in your repository,
+# (3) Install the Utterances app in your repository https://github.com/apps/utterances
+# See more details about the parameters below at https://utteranc.es/
+#utterances:
+#  repository: # GitHub username/repository eg. "daattali/beautiful-jekyll"
+#  issue-term: title   # Mapping between blog posts and GitHub issues
+#  theme: github-light # Utterances theme
+#  label: blog-comments # Label that will be assigned to GitHub Issues created by Utterances
+
+# To use Staticman comments, first invite `staticmanlab` as a collaborator to your repository and
+# accept the invitation by going to `https://staticman3.herokuapp.com/v3/connect/github/<username>/<repo-name>`.
+# Then uncomment the following section and fill in "repository" and "branch".
+# If you want to use reCaptcha for staticman (optional for spam protection), then fill
+# in the "siteKey" and "secret" parameters below and also in `staticman.yml`.
+# See more details at https://staticman.net/
+#staticman:
+#  repository : # GitHub username/repository eg. "daattali/beautiful-jekyll"
+#  branch     : master # If you're not using `master` branch, then you also need to update the `branch` parameter in `staticman.yml`
+#  endpoint   : # (optional) URL of your own deployment, with a trailing slash eg. https://<your-api>/v3/entry/github/ (will fallback to a public GitLab instance)
+#  reCaptcha:
+#    siteKey  : # Use your own site key, you need to apply for one on Google
+#    secret   : # ENCRYPT your password by going to https://staticman3.herokuapp.com/v3/encrypt/<your-site-secret>
+
+# --- Misc --- #
+
+# Ruby Date Format to show dates of posts
+date_format: "%B %-d, %Y"
+
+# Facebook App ID
+#fb_app_id: ""
+
+# --- You don't need to touch anything below here (but you can if you want) --- #
+
+# Output options (more information on Jekyll's site)
+# timezone: "America/Seattle"
 markdown: kramdown
 highlighter: rouge
+permalink: /:year-:month-:day-:title/
+paginate: 5
+
 kramdown:
-  input: GFM                            # use Github Flavored Markdown !important
+  input: GFM
+
+# math latex plugin
+# mathjax_url: "//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"
 
 # Default YAML values (more information on Jekyll's site)
 defaults:
@@ -72,6 +174,17 @@ defaults:
     values:
       layout: "page"
 
+# Exclude these files from production site
+exclude:
+  - CHANGELOG.md
+  - CNAME
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
+  - screenshot.png
+  - docs/
+
 plugins:
   - jekyll-paginate
   - jekyll-sitemap
@@ -80,52 +193,5 @@ plugins:
 relative_links:
   enabled:     true
   collections: true
-
-# 评论系统
-# Disqus（https://disqus.com/）
-# disqus_username: 
-
-# Gitalk
-gitalk:
-  enable: false    #是否开启Gitalk评论
-  clientID:                             #生成的clientID
-  clientSecret:     #生成的clientSecret
-  repo:     #仓库名称
-  owner:     #github用户名
-  admin: 
-  distractionFreeMode: true #是否启用类似FB的阴影遮罩
-
-
-# 统计
-
-# Analytics settings
-# Baidu Analytics
-#ba_track_id: 
-
-# Google Analytics
-#ga_track_id: ''            # Format: UA-xxxxxx-xx
-#ga_domain:                # 默认的是 auto, 这里我是自定义了的域名，你如果没有自己的域名，需要改成auto
-
-
-
-
-
-# Featured Tags
-featured-tags: true                     # 是否使用首页标签
-featured-condition-size: 1              # 相同标签数量大于这个数，才会出现在首页
-
-
-
-# Progressive Web Apps
-chrome-tab-theme-color: "#000000"
-service-worker: true
-
-
-
-# Friends
-friends: [
-    {
-        title: "Apple Developer",
-        href: "https://developer.apple.com/"
-    }
-]
+# Beautiful Jekyll / Dean Attali
+# 2fc73a3a967e97599c9763d05e564189
