@@ -17,6 +17,7 @@ description: "Writing is thought."
 # List of links in the navigation bar
 navbar-links:
   Home: "index"
+  Blog: "blog"
 
 # --- Logo --- #
 # Image to show in the navigation bar - works best with a square image
