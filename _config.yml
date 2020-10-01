@@ -53,7 +53,19 @@ highlighter: rouge
 kramdown:
   input: GFM                            # use Github Flavored Markdown !important
 
-
+# Defaults
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: true
+      share: true
+      related: true
 
 # 评论系统
 # Disqus（https://disqus.com/）
