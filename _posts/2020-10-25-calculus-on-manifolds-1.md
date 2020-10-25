@@ -6,7 +6,7 @@ thumbnail-img: ""
 date:       2020-10-25 09:00
 author:     "dreamume"
 tags: 		[calculus]
-category:   math
+category:   maths
 ---
 <head>
     <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
