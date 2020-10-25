@@ -17,7 +17,8 @@ description: Writing is thought.
 # List of links in the navigation bar
 navbar-links:
   Home: "index"
-  Blog: "blog"
+  IT: "it"
+  Maths: "maths"
   About Me: "about"
 
 # --- Logo --- #
