@@ -35,5 +35,5 @@ category:   maths
 
 ## NORM和INNER PRODUCT
 
-在向量空间定义向量x的长度，我们通常记为norm \\|x\\|，$ \\|x\\|=\\\sqrt{\\\left(x<sup>1</sup>\\\right)<sup>2</sup>+\\&ctdot;+\\\left(x<sup>n</sup>\\\right)<sup>2</sup>} $
+在向量空间定义向量x的长度，我们通常记为norm |x|，$ \|x\|=\\sqrt{\\left(x^{1}\\right)^{2}+\\cdots+\\left(x^{n}\\right)^{2}} $
 
