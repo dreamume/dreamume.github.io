@@ -47,3 +47,9 @@ category:   maths
 
 (i) 对任意 $ a, b \\in A, a + b = b + a $
 
+(ii) 对任意 $ a, b, c \\in A, (a + b) + c = a + (b + c) $
+
+(iii) 存在一个元素 $ 0 \\in A $ 使得对任意 $ a \\in A, a + 0 = a  $
+
+(iv) 对任意元素 $ a \\in A $ ，存在一个元素 $ -a \\in A $ ，使得 $ a + (-a) = 0 $
+
