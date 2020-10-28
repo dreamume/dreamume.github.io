@@ -53,3 +53,14 @@ category:   maths
 
 (iv) 对任意元素 $ a \\in A $ ，存在一个元素 $ -a \\in A $ ，使得 $ a + (-a) = 0 $
 
+定义乘法阿贝尔群为一个集合A及一个乘法有如下属性：
+
+(i) 对任意 $ a, b \\in A, ab = ba $
+
+(ii) 对任意 $ a, b, c \\in A, (ab)c = a(bc) $
+
+(iii) 存在一个元素 $ e \\in A $ 使得对任意 $ a \\in A, ae = a  $
+
+(iv) 对任意元素 $ a \\in A $ ，存在一个元素 $ a^{-1} \\in A $ ，使得 $ a a^{-1} = e $
+
+
