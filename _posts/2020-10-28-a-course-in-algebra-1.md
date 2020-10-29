@@ -25,6 +25,7 @@ category:   maths
 1.  [代数结构](#org2500f14)
     1.  [简介](#org210ef2c)
     2.  [阿贝尔群](#orgc31e4b3)
+    3.  [环和域](#orgc60734c)
 
 
 <a id="org2500f14"></a>
@@ -64,3 +65,12 @@ category:   maths
 (iv) 对任意元素 $ a \\in A $ ，存在一个元素 $ a^{-1} \\in A $ ，使得 $ a a^{-1} = e $
 
 
+<a id="orgc60734c"></a>
+
+## 环和域
+
+定义：环为一个集合K及一个加法和乘法有如下属性：
+
+(i) K为加法上的阿贝尔群
+
+(ii) 对任意 $ a, b, c \\in K \\text{有} a(b+c) = ab + ac \\text{和} (a + b)c = ac + bc $
