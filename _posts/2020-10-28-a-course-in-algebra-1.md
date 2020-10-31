@@ -26,6 +26,7 @@ category:   maths
     1.  [简介](#org210ef2c)
     2.  [阿贝尔群](#orgc31e4b3)
     3.  [环和域](#orgc60734c)
+    4.  [子群，子环和子域](#org19183fa)
 
 
 <a id="org2500f14"></a>
@@ -74,3 +75,11 @@ category:   maths
 (i) K为加法上的阿贝尔群
 
 (ii) 对任意 $ a, b, c \\in K \\text{有} a(b+c) = ab + ac \\text{和} (a + b)c = ac + bc $
+
+定义：域为可交换结合的环，对每一个非0元素都可逆。
+
+
+<a id="org19183fa"></a>
+
+## 子群，子环和子域
+
