@@ -83,3 +83,10 @@ category:   maths
 
 ## 子群，子环和子域
 
+定义：阿贝尔群A的一个子集合B被称为子群仅当：
+
+(i) B对于加法是闭的
+
+(ii) $ a \\in B \\Longrightarrow -a \\in B $
+
+(iii) $ 0 \\in B $
