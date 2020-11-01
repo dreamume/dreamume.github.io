@@ -90,3 +90,17 @@ category:   maths
 (ii) $ a \\in B \\Longrightarrow -a \\in B $
 
 (iii) $ 0 \\in B $
+
+定义：环K的一个子集合L被称为子环仅当：
+
+(i) L是环K的加法群的子群
+
+(ii) L对于乘法是闭的
+
+定义：域K的一个子集合L被称为子域仅当
+
+(i) L是K的一个子环
+
+(ii) $ a \\in L, a \\neq 0 \Longrightarrow a^{-1} \\in L $
+
+(iii) $ 1 \\in L $
