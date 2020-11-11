@@ -37,7 +37,7 @@ category:   maths
     1.  加法可交换， $ \\alpha + \\beta = \\beta + \\alpha $
     2.  加法可结合， $ \\alpha + ( \\beta + \\gamma ) = ( \\alpha + \\beta ) + \\gamma $
     3.  V中有一个向量0，称为零向量，对任意 $ \\alpha \\in V, \\alpha + 0 = \\alpha $
-    4.  对任意向量 $ \\alpha, text{存在唯一一个向量} - \\alpha \\in V, \\alpha + (-\\alpha) = 0 $
+    4.  对任意向量 $ \\alpha, \\text{存在唯一一个向量} - \\alpha \\in V, \\alpha + (-\\alpha) = 0 $
 4.  一个规则（或操作）称为标量乘法，对于每个标量c和向量 $ \\alpha \\in V $ ，称为c 和 $ \\alpha $ 的乘积：
     1.  对任意 $ \\alpha \\in V, 1 \\alpha = \\alpha $
     2.  $ ( c_{1} c_{2} ) \\alpha = c_{1} (c_{2} \\alpha) $
