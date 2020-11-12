@@ -27,6 +27,7 @@ category:   maths
     2.  [阿贝尔群](#orgc31e4b3)
     3.  [环和域](#orgc60734c)
     4.  [子群，子环和子域](#org19183fa)
+    5.  [余类的环](#org5160204)
 
 
 <a id="org2500f14"></a>
@@ -104,3 +105,31 @@ category:   maths
 (ii) $ a \\in L, a \\neq 0 \Longrightarrow a^{-1} \\in L $
 
 (iii) $ 1 \\in L $
+
+
+<a id="org5160204"></a>
+
+## 余类的环
+
+考虑一个集合M，任何子集 $ R \\subset M \\times M $ 被称为集合M上的一个关系。如果 $ (a, b) \\in R $ ，我们说a和b相关并记为aRb
+
+一个相等关系R为一个关系，有：
+
+(i) 自反性：aRa
+
+(ii) 对称性：$ a R b \\Longrightarrow b R a $
+
+(iii) 传递性：$ a R b \\text{且} b R c \\Longrightarrow a R c $
+
+相等关系通常记为 $ a \\stackrel{R}{\\sim} b $ 或 a ~ b
+
+设R为集合M上的一个相等关系，对任意 $ a \\in M $ ，有 $ \\begin{equation} R(a)=\\{b \\in M: a \\stackrel{R}{\\sim} b\\} \\end{equation} $
+
+相等关系的属性意味着 $ \\begin{equation} R(a) \\cap R(b) \\neq \\varnothing \\quad \\Longrightarrow \\quad R(a)=R(b) \\end{equation} $
+
+关系R下的相等类集合被称为关系R下的M的商集，并记为M / R。映射
+
+$ \\begin{equation} M \\rightarrow M / R, \\quad a \\mapsto R(a) \\end{equation} $
+
+被称为商映射
+
