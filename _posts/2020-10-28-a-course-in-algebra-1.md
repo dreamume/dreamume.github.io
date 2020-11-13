@@ -143,7 +143,7 @@ $ \\begin{equation} M \\rightarrow M / R, \\quad a \\mapsto R(a) \\end{equation}
 
 因此，我们定义集合Z<sub>n</sub> 上加法和乘法操作：
 
-$ \\begin{equation} [a]_{n}+[b]_{n}=[a+b]_{n}, \\quad[a]_{n}[b]_{n}=[a b]_{n} \\end{equation} $
+$ \\begin{equation} [a]_ {n} + [b]_ {n} = [a+b]_ {n}, \\quad[a]_ {n}[b]_ {n} = [a b]_ {n} \\end{equation} $
 
 这样Z<sub>n</sub> 变成带单位元的交换结合环，它被称为模n的余类的环（或余环）
 
