@@ -133,3 +133,18 @@ $ \\begin{equation} M \\rightarrow M / R, \\quad a \\mapsto R(a) \\end{equation}
 
 被称为商映射
 
+现在我们定义余类的环，考虑如下等价关系，在集合上称为模n：如果a - b能被n整除或如果a和b被n除后有相同的余数，记为 $ a \\equiv b(\\bmod n) $
+
+设 $ \\begin{equation} a \\equiv a^{\\prime}(\\bmod n), \\quad b \\equiv b^{\\prime}(\\bmod n) \\end{equation} $
+
+则 $ \\begin{equation} a+b \\equiv a^{\\prime}+b \\equiv a^{\\prime}+b^{\\prime}(\\bmod n) \\end{equation} $
+
+及 $ \\begin{equation} a b \\equiv a^{\\prime} b \\equiv a^{\\prime} b^{\\prime}(\\bmod n) \\end{equation} $
+
+因此，我们定义集合Z<sub>n</sub> 上加法和乘法操作：
+
+$ \\begin{equation} [a]_{n}+[b]_{n}=[a+b]_{n}, \\quad[a]_{n}[b]_{n}=[a b]_{n} \\end{equation} $
+
+这样Z<sub>n</sub> 变成带单位元的交换结合环，它被称为模n的余类的环（或余环）
+
+定理：环Z<sub>n</sub> 为域当且仅当n为一个质数
