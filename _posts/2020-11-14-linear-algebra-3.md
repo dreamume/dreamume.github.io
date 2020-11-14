@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "Linear  Algebra(Chapter 3) by Hoffman"
+title:      "Linear Algebra(Chapter 3) by Hoffman"
 subtitle:   "Linear Transformations"
 thumbnail-img: ""
 date:       2020-11-14 17:00
