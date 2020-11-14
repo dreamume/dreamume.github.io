@@ -24,7 +24,7 @@ category:   maths
 
 定义：设V和W为域F上的向量空间，一个从V到W的线性变换为一个从V到W的函数T，有
 
-$ \\\begin{equation} \\\mathrm{T}(\\\mathrm{c} \\&alpha;+\\&beta;)=\\\mathrm{c}(\\\mathrm{T} \\&alpha;)+\\\mathrm{T} \\&beta; \\\end{equation} $
+$ \\begin{equation} \\mathrm{T}(\\mathrm{c} \\alpha+\\beta)=\\mathrm{c}(\\mathrm{T} \\alpha)+\\mathrm{T} \\beta \\end{equation} $
 
 对V中所有α和β及F中所有标量c。
 
