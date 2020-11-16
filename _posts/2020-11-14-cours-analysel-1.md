@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "Cours Analysel(Chapter 1) by Paulin"
-subtitle:   "Vocqbulaire"
+subtitle:   "Vocabulaire"
 thumbnail-img: ""
 date:       2020-11-14 21:00
 author:     "dreamume"
