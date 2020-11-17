@@ -148,3 +148,11 @@ $ \\begin{equation} [a]_ {n} + [b]_ {n} = [a+b]_ {n}, \\quad[a]_ {n}[b]_ {n} = [
 这样Z<sub>n</sub> 变成带单位元的交换结合环，它被称为模n的余类的环（或余环）
 
 定理：环Z<sub>n</sub> 为域当且仅当n为一个质数
+
+Example 1.52. Let us solve the quadratic equation x<sup>2</sup> + x + 1 = 0 in the field Z<sub>11</sub> . The standard formules yields
+
+$ \\begin{equation} x_ {1,2}=\\frac{[-1] \\pm \\sqrt{[5]}}{[2]} \\end{equation} $
+
+Since [5] = [16] = [4]<sup>2</sup> , we can assume that $ \\sqrt{[5]}=[4] $ (one of the values of the square root). Hence,
+
+$ \\begin{equation} x_ {1}=\\frac{[-1]+[4]}{[2]}=\\frac{[3]}{[2]}=\\frac{[14]}{[2]}=[7], \\quad x_ {2}=\\frac{[-1]-[4]}{[2]}=\\frac{[-5]}{[2]}=\\frac{[6]}{[2]}=[3] \\end{equation} $
