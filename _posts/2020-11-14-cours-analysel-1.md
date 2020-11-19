@@ -71,7 +71,7 @@ Soit (X, d) un espace métrique.
 
 Soient $ x \\in X $ et r > 0. La boule ouverte de centre x et rayon r est
 
-$ \\begin{equation} B(x, r) = { y \\in X : d(x,y) < r} \\end{equation} $
+$ \\begin{equation} B(x, r) = \\{ y \\in X : d(x,y) < r\\} \\end{equation} $
 
 La boule fermée de centre x et de rayon r est
 
@@ -79,7 +79,7 @@ $ \\begin{equation} \\bar{B}(x, r)=\\{y \\in X: d(x, y) \\leq r\\} \\end{equatio
 
 La sphére de centre x et de rayon r est
 
-$ S(x, r) = {y \\in X : d(x, y) = r} $
+$ S(x, r) = \\{y \\in X : d(x, y) = r\\} $
 
 Lorsque l'on veut préciser la distance, on pourra la mettre en indice, et noter $ B_ {d}(x, r), \\bar{B}_ {d}(x,r), S_ {d}(x, r) $
 
