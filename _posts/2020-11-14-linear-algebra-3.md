@@ -41,4 +41,4 @@ $ \\begin{equation} T \\alpha_ {j}=\\sum_ {i=1}^{m} A_ {i j} \\beta_ {i} \\end{e
 
 m x n矩阵A被称为T对于基 $ \\mathbb{B} $ 和 $ \\mathbb{B}^{'} $ 的矩阵
 
-定义：设A和B为域F上的n x n 矩阵。我们说在域F上B跟A相似仅当有一个域F上的n x n可逆矩阵，使得 $ B = P^{-1}AP $
+定义：设A和B为域F上的n x n 矩阵。我们说在域F上B跟A相似仅当有一个域F上的n x n可逆矩阵P，使得 $ B = P^{-1}AP $
