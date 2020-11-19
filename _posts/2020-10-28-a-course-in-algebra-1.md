@@ -28,6 +28,7 @@ category:   maths
     3.  [环和域](#orgc60734c)
     4.  [子群，子环和子域](#org19183fa)
     5.  [余类的环](#org5160204)
+    6.  [Vector Spaces](#org97c8839)
 
 
 <a id="org2500f14"></a>
@@ -156,3 +157,21 @@ $ \\begin{equation} x_ {1,2}=\\frac{[-1] \\pm \\sqrt{[5]}}{[2]} \\end{equation} 
 Since [5] = [16] = [4]<sup>2</sup> , we can assume that $ \\sqrt{[5]}=[4] $ (one of the values of the square root). Hence,
 
 $ \\begin{equation} x_ {1}=\\frac{[-1]+[4]}{[2]}=\\frac{[3]}{[2]}=\\frac{[14]}{[2]}=[7], \\quad x_ {2}=\\frac{[-1]-[4]}{[2]}=\\frac{[-5]}{[2]}=\\frac{[6]}{[2]}=[3] \\end{equation} $
+
+
+<a id="org97c8839"></a>
+
+## Vector Spaces
+
+定义：域K上的向量（线性）空间为一个集合V及域上元素的加法和乘法操作，有如下属性：
+
+(i) V是一个加法上的阿贝尔群
+
+(ii) $ \\lambda(a+b)=\\lambda a+\\lambda b \\text { for any } \\lambda \\in K, a, b \\in V $
+
+(iii) $ (\\lambda+\\mu) a=\\lambda a+\\mu a \\text { for any } \\lambda, \\mu \\in K, a \\in V $
+
+(iv) $ (\\lambda \\mu) a=\\lambda(\\mu a) \\text { for any } \\lambda, \\mu \\in K, a \\in V $
+
+(v) $ 1 a=a \\text { for any } a \\in V $
+
