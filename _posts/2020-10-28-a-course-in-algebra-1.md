@@ -175,3 +175,21 @@ $ \\begin{equation} x_ {1}=\\frac{[-1]+[4]}{[2]}=\\frac{[3]}{[2]}=\\frac{[14]}{[
 
 (v) $ 1 a=a \\text { for any } a \\in V $
 
+定义：一个向量空间V的子集U称为子空间，如果
+
+(i) U为V加法群的一个子群
+
+(ii) $ a \\in U \\Longrightarrow \\lambda a \\in U \\text{for any } \\lambda \\in K $
+
+定义：域K上的向量空间V和U被称为同构如果存在一个双射
+
+$ \\begin{equation} \\varphi: V \\rightarrow U \\end{equation} $
+
+有
+
+(i) $ \\verphi(a + b) = \\varphi(a) + \\varphi(b) \\text{for any} a, b \\in V $
+
+(ii) $ \\varphi(\\lambda a) = \\lambda \\varphi(a) \\text(for any} \\lambda \\in K, a \\in V $
+
+映射 $ \\varphi $ 被称为V和U之间的同构关系
+
