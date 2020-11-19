@@ -187,9 +187,9 @@ $ \\begin{equation} \\varphi: V \\rightarrow U \\end{equation} $
 
 有
 
-(i) $ \\varphi(a + b) = \\varphi(a) + \\varphi(b) \\text{for any} \\quad a, b \\in V $
+(i) $ \\varphi(a + b) = \\varphi(a) + \\varphi(b) \\quad \\text{for any} \\quad a, b \\in V $
 
-(ii) $ \\varphi(\\lambda a) = \\lambda \\varphi(a) \\text(for any} \\quad \\lambda \\in K, a \\in V $
+(ii) $ \\varphi(\\lambda a) = \\lambda \\varphi(a) \\quad \\text{for any} \\quad \\lambda \\in K, a \\in V $
 
 映射 $ \\varphi $ 被称为V和U之间的同构关系
 
