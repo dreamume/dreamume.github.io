@@ -23,6 +23,7 @@ category:   maths
 # Table of Contents
 
 1.  [转换的矩阵表示](#orgd13b3aa)
+2.  [Linear Functionals](#org74ca3f4)
 
 定义：设V和W为域F上的向量空间，一个从V到W的线性变换为一个从V到W的函数T，有
 
@@ -42,3 +43,44 @@ $ \\begin{equation} T \\alpha_ {j}=\\sum_ {i=1}^{m} A_ {i j} \\beta_ {i} \\end{e
 m x n矩阵A被称为T对于基 $ \\mathbb{B} $ 和 $ \\mathbb{B}^{'} $ 的矩阵
 
 定义：设A和B为域F上的n x n 矩阵。我们说在域F上B跟A相似仅当有一个域F上的n x n可逆矩阵P，使得 $ B = P^{-1}AP $
+
+
+<a id="org74ca3f4"></a>
+
+# Linear Functionals
+
+如果V是域F上的向量空间，一个线性变换f从V到域F上的常量被称为V上的linear functional
+
+如果V是向量空间，则V上的所有linear functionals集合形成一个向量空间，我们记为空间 $ V^{*} $ ，并称它为V的dual space:
+
+$ \\begin{equation} V^{*} = L(V, F) \\end{equation} $
+
+如果V是有限维的，则有 $ dim V^{*} = dim V $
+
+设 $ \\mathbb{B} = \\left\\{\\alpha_ {1}, \\ldots, \\alpha_ {n} \\right\\} $ 为V的基，则在V上存在（对每个i）有一个唯一的linear functional $ f_ {i} $ ，有
+
+$ f_ {i}\\left(\\alpha_ {j}\\right)=\\delta_ {i j} $
+
+这样我们从 $ \\mathbb{B} $ 中获得V上n个不同linear functionals $ f_ {1}, \\ldots, f_ {n} $ 的集合。这些functionals也是线性无关的。假设
+
+$ \\begin{equation} f = \\sum_ {i = 1}^{n} c_ {i} f_ {i} \\end{equation} $
+
+则
+
+$ \\begin{equation} \\begin{aligned} f\\left(\\alpha_ {j}\\right) &=\\sum_ {i=1}^{n} c_ {i} f_ {i}\\left(\\alpha_ {j}\\right) \\\\ &=\\sum_ {i=1}^{n} c_ {i} \\delta_ {i j} \\\\ &=c_ {j} \\end{aligned} \\end{equation} $
+
+我们知道 $ V^{* } $ 也是n维的，则 $ \\mathbb{B}^{* } = \\left\\{ f_ {1}, \\ldots, f_ {n} \\right\\} $ 是 $ V^{* } $ 的一个基，被称为 $ \\mathbb{B} $ 的dual basis
+
+定理：设V为域F上的有限维向量空间，设 $ \\mathbb{B} = \\left\\{ \\alpha_ {1}, \\ldots, \\alpha_ {n} \\right\\} $ 为V的一个基，则存在唯一的一个dual basis $ \\mathbb{B}^{*} = \\left\\{ f_ {1}, \\ldots, f_ {n} \\right\\} $ ，使得 $ f_ {i}(\\alpha_ {j}) = \\delta_ {i j} $ 。对V上的每个linear functional f，我们有
+
+$ \\begin{equation} f = \\sum_ {i = 1}^{n} f(\\alpha_ {i}) f_ {i} \\end{equation} $
+
+且对V上的每个向量，我们有
+
+$ \\begin{equation} \\alpha = \\sum_ {i = 1}^{n} f_ {i}(\\alpha) \\alpha_ {i} \\end{equation} $
+
+一个n维向量空间，其n - 1维子空间被称为hyperspace
+
+定义：如果V是域F上的向量空间，S是V的一个子集，the annihilator of S被称为V上linear functionals f的集合 $ S^{0} $ ，使得 $ \\forall \\alpha \\in S, f(\\alpha) = 0 $
+
+定理：设V为域F上的有限维向量空间，W为V的子空间，则 $ dim W + dim W^{0} = dim V $
