@@ -93,7 +93,7 @@ $ \\begin{equation} H_ {n} > \\sum_ {k=1}^{\\lfloor \\log_ {2} n \\rfloor}\\frac
 
 ## 估计：阶乘函数
 
-为估计 $ n! $ 的大小，我们考虑，如果n为偶数，则 集合 $ \\{ 1, 2, \\ldots, n } $ 中 $ \\frac{n}{2} $ 个数最多为 $ \\frac{n}{2} $ ，且 $ \\frac{n}{2} $ 个数大于 $ \\frac{n}{2} $ 。因此，我们有
+为估计 $ n! $ 的大小，我们考虑，如果n为偶数，则 集合 $ \\{ 1, 2, \\ldots, n \\} $ 中 $ \\frac{n}{2} $ 个数最多为 $ \\frac{n}{2} $ ，且 $ \\frac{n}{2} $ 个数大于 $ \\frac{n}{2} $ 。因此，我们有
 
 $ \\begin{equation} n ! \\geq \\prod_ {i=n / 2+1}^{n} i>\\prod_ {i=n / 2+1}^{n} \\frac{n}{2}=\\left(\\frac{n}{2}\\right)^{n / 2}=\\left(\\sqrt{\\frac{n}{2}}\\right)^{n} \\end{equation} $
 
