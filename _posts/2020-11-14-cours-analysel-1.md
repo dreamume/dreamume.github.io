@@ -83,3 +83,11 @@ $ S(x, r) = \\{y \\in X : d(x, y) = r\\} $
 
 Lorsque l'on veut préciser la distance, on pourra la mettre en indice, et noter $ B_ {d}(x, r), \\bar{B}_ {d}(x,r), S_ {d}(x, r) $
 
+**Topologie induite par une distance** L'ensemble $ \\mathscr{O} $ des parties U de X telles aue
+
+$ \\begin{equation} \\forall x \\in U, \\exists \\epsilon > 0, \\quad B\\left( x, \\epsilon \\right) \\subset U \\end{equation} $
+
+est une topologie sur X, appelée topologie induite par la distance d. Sauf mention contraire, tout espace  métrique sera muni de la topologie induite par sa distance
+
+La preuve que $ \\mathscr{O} $ est bien une topologie est la même que celle pour les distances induites par des normes. En effet, soit $\\left( U_ {i} \\right)_ {i \\in I} $ une famille d'éléments de $ \\mathscr{O} $ . Si I est fini et  $ x \\in \\cap_ {i \\in I}U_ {i} $ , soit $ \\epsilon_ {i} > 0 $ tel que $ B \\left( x, \\epsilon_ {i} \\right) \\subset U_ {i} $ ; alors $ \\epsilon = inf_ {i \\in I} \\epsilon_ {i} > 0 $ et $ B \\left( x, \\epsilon \\right) \\subset \\cap_ {i \\in I}U_ {i} $ . Si $ x \\in \\cup_ {i \\in I}U_ {i} $ , soit $ i_ {0} \\in I $ tel que $ x \\in U_ {i_ {0}} $ , et $ \\epsilon > 0 $ tel que $ B \\left( x, \\epsilon \\right) \\subset U_ {i_ {0}} $ ; alors $ B \\left( x, \\epsilon \\right) \\subset \\cup_ {i \\in I}U_ {i} $
+
