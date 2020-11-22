@@ -93,7 +93,7 @@ $ \\begin{equation} \\alpha = \\sum_ {i = 1}^{n} f_ {i}(\\alpha) \\alpha_ {i} \\
 
 定理：设V为域F上的有限维向量空间，对任意向量 $ \\alpha \\in V $ ，定义
 
-$ \\begin{equation} L_ {\\alpha} \\left( f \\right) = f \\left( \\alpha \\right), \\quad \\quad f in V^{*} \\end{equation} $
+$ \\begin{equation} L_ {\\alpha} \\left( f \\right) = f \\left( \\alpha \\right), \\quad \\quad f \\quad in \\quad V^{*} \\end{equation} $
 
 映射 $ \\alpha \\longrightarrow L_ {\\alpha} $ 为V到 $ V^{**} $ 上的同构
 
