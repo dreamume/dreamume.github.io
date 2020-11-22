@@ -51,7 +51,7 @@ $ \\begin{equation} \\sum_ {i=0}^{n}\\left(\\begin{array}{c}n \\\\ i\\end{array}
 
 可理解为2n个物品分成两组，每组n个物品，则按前一组取i个，后一组取n - i个，然后遍历组合即为2n个物品里取n个。
 
-如果我们有m种物品，第i中物品有k<sub>i</sub> 个，$ k_ {1} + k_ {2} + \\ldots + k_ {m} = n $ ，则不同的组合有：
+如果我们有m种物品，第i种物品有k<sub>i</sub> 个，$ k_ {1} + k_ {2} + \\ldots + k_ {m} = n $ ，则不同的组合有：
 
 $ \\begin{equation} \\frac{n!}{k_ {1}! k_ {2}! \\ldots k_ {m}!} \\end{equation} $
 

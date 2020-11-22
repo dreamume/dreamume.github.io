@@ -24,6 +24,7 @@ category:   maths
 
 1.  [转换的矩阵表示](#orgd13b3aa)
 2.  [Linear Functionals](#org74ca3f4)
+3.  [The Double Dual](#orgcef566a)
 
 定义：设V和W为域F上的向量空间，一个从V到W的线性变换为一个从V到W的函数T，有
 
@@ -84,3 +85,19 @@ $ \\begin{equation} \\alpha = \\sum_ {i = 1}^{n} f_ {i}(\\alpha) \\alpha_ {i} \\
 定义：如果V是域F上的向量空间，S是V的一个子集，the annihilator of S被称为V上linear functionals f的集合 $ S^{0} $ ，使得 $ \\forall \\alpha \\in S, f(\\alpha) = 0 $
 
 定理：设V为域F上的有限维向量空间，W为V的子空间，则 $ dim W + dim W^{0} = dim V $
+
+
+<a id="orgcef566a"></a>
+
+# The Double Dual
+
+定理：设V为域F上的有限维向量空间，对任意向量 $ \\alpha \\in V $ ，定义
+
+$ \\begin{equation} L_ {\\alpha} \\left( f \\right) = f \\left( \\alpha \\right), \\quad \\quad f in V^{*} \\end{equation} $
+
+映射 $ \\alpha \\longrightarrow L_ {\\alpha} $ 为V到 $ V^{**} $ 上的同构
+
+这显示了映射 $ \\alpha \\longrightarrow L_ {\\alpha} $ 为V到 $ V^{**} $ 上到线性变换，该变换是non-singular的，$ L_ {\\alpha} = 0 $ 当且仅当 $ \\alpha = 0 $ ，且有
+
+$ \\begin{equation} dim V^{** } = dim V^{* } = dim V \\end{equation} $
+
