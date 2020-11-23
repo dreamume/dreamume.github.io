@@ -25,6 +25,7 @@ category:   maths
 1.  [转换的矩阵表示](#orgd13b3aa)
 2.  [Linear Functionals](#org74ca3f4)
 3.  [The Double Dual](#orgcef566a)
+4.  [线性变换的transpose](#orgb5ce838)
 
 定义：设V和W为域F上的向量空间，一个从V到W的线性变换为一个从V到W的函数T，有
 
@@ -101,3 +102,59 @@ $ \\begin{equation} L_ {\\alpha} \\left( f \\right) = f \\left( \\alpha \\right)
 
 $ \\begin{equation} dim V^{** } = dim V^{* } = dim V \\end{equation} $
 
+
+<a id="orgb5ce838"></a>
+
+# 线性变换的transpose
+
+假设我们有两个域F上的向量空间V和W，和一个从V到W的线性变换T。则T导入了一个从 $ W^{ * } $ 到 $ V^{ * } $ 的线性变换，假设g为W上的linear functional，设
+
+$ \\begin{equation} \\forall \\alpha \\in V, \\quad f \\left( \\alpha \\right) = g \\left( T \\alpha \\right) \\end{equation} $
+
+f为从V到F的函数，因为T和g都是线性的，则f也是线性的。这样T提供了一个规则 $ T^{t} $ 使得 $ f = T^{t} g $。$ T^{t} $  也是从 $ W^{ * } $ 到 $ V^{ * } $ 的一个线性变换。
+
+**定理** 设V和W为域F上的向量空间，对每个从V到W的线性变换T，有一个唯一的从 $ W^{ * } $ 到 $ V^{ * } $ 的线性变换 $ T^{t} $ ， 使得
+
+$ \\begin{equation} \\forall g \\quad in W^{ * } \\quad and \\quad \\alpha \\quad in \\quad V, \\quad \\left( T^{t} g \\right) \\left( \\alpha \\right) = g \\left( T \\alpha \\right) \\end{equation} $
+
+我们称 $ T^{t} $ 为T的transpose，也被称为the adjoint of T
+
+**定理** 设V和W为域F上的向量空间，设T为从V到W上的线性变换， $ T^{t} $ 的null space为T的范围的annihilator。如果V和W都是有限维的，则
+
+(i) $ rank \\left( T^{t} \\right) = rank \\left( T \\right) $
+
+(ii) $ T^{t} $ 的范围是T的null space的annihilator
+
+**定理** 设V和W为域F上的有限维向量空间，设 $ \\mathbb{B} $ 为V上有序基及 $ \\mathbb{B}^{ * } $ 为dual basis，设 $ \\mathbb{B}' $ 为W的有序基，及 $ \\mathbb{B}'^{*} $ 为dual basis，设T为从V到W上的线性变换，A是关于 $ \\mathbb{B}, \\mathbb{B}' $ 的T的矩阵，B为关于 $ \\mathbb{B}'^{ * }, \\mathbb{B}^{ * } $ 的 $ T^{t} $ 的矩阵，则 $ B_ {i j} = A_ {j i} $
+
+证明：设
+
+$ \\begin{equation} \\mathbb{B} = \\{ \\alpha_ {1}, \\ldots, \\alpha_ {n} \\}, \\qquad \\mathbb{B}' = \\{ \\beta_ {1}, \\ldots, \\beta_ {m} \\}, \\end{equation} $
+
+$ \\begin{equation} \\mathbb{B}^{ * } = \\{ f_ {1}, \\ldots, f_ {n} \\}, \\qquad \\mathbb{B}'^{ * } = \\{ g_ {1}, \\ldots, g_ {m} \\} \\end{equation} $
+
+根据定义，
+
+$ \\begin{equation} T \\alpha_ {j} = \\sum_ {i=1}^{m}A_ {i j}\\beta_ {i}, \\qquad j = 1, \\ldots, n \\end{equation} $
+
+$ \\begin{equation} T^{t}g_ {j} = \\sum_ {i=1}^{n}B_ {i j}f_ {i}, \\qquad j = 1, \\ldots, m \\end{equation} $
+
+另一方面，
+
+$ \\begin{eqnarray} \\left( T^{t} g_ {j} \\right) \\left( \\alpha_ {i} \\right) & = & g_ {j} \\left(T \\alpha_ {i} \\right) \\\\
+     & = & g_ {j} \\left( \\sum_ {k = i}^{m}A_ {k i}\\beta_ {k} \\right) \\\\
+     & = & \\sum_ {k=1}^{m}A_ {k i}g_ {j}\\left( \\beta_ {k} \\right) \\\\
+     & = & \\sum_ {k=1}^{m}A_ {k i}\\delta_ {j k} \\\\
+     & = & A_ {j i} \\end{eqnarray} $
+
+对任意V上的linear functional f 有
+
+$ \\begin{equation} f = \\sum_ {i=1}^{m}f\\left(\\alpha_ {i} \\right)f_ {i} \\end{equation} $
+
+如果我们应用该式到functional $ f = T^{t}g_ {j} $ 且 $ \\left(T^{t}g_ {j}\\right)\\left( \\alpha_ {i} \\right) = A_ {j i} $，我们有
+
+$ \\begin{equation} T^{t}g_ {j} = \\sum_ {i=1}^{n}A_ {j i}f_ {i} \\end{equation} $
+
+则可得到 $ B_ {i j} = A_ {j i} $
+
+**定义** 如果A为域F上的m x n矩阵，则transpose of A为n x m矩阵 $ A^{t} $ ，使得 $ A_ {i j}^{t) = A_ {j i} $
