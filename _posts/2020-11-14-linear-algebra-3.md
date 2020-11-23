@@ -115,7 +115,7 @@ f为从V到F的函数，因为T和g都是线性的，则f也是线性的。这�
 
 **定理** 设V和W为域F上的向量空间，对每个从V到W的线性变换T，有一个唯一的从 $ W^{ * } $ 到 $ V^{ * } $ 的线性变换 $ T^{t} $ ， 使得
 
-$ \\begin{equation} \\forall g \\quad in W^{ * } \\quad and \\quad \\alpha \\quad in \\quad V, \\quad \\left( T^{t} g \\right) \\left( \\alpha \\right) = g \\left( T \\alpha \\right) \\end{equation} $
+$ \\begin{equation} \\forall g \\, in \\, W^{ * } \\, and \\, \\alpha \\, in \\, V, \\quad \\left( T^{t} g \\right) \\left( \\alpha \\right) = g \\left( T \\alpha \\right) \\end{equation} $
 
 我们称 $ T^{t} $ 为T的transpose，也被称为the adjoint of T
 
@@ -142,10 +142,10 @@ $ \\begin{equation} T^{t}g_ {j} = \\sum_ {i=1}^{n}B_ {i j}f_ {i}, \\qquad j = 1,
 另一方面，
 
 $ \\begin{eqnarray} \\left( T^{t} g_ {j} \\right) \\left( \\alpha_ {i} \\right) & = & g_ {j} \\left(T \\alpha_ {i} \\right) \\\\
-     & = & g_ {j} \\left( \\sum_ {k = i}^{m}A_ {k i}\\beta_ {k} \\right) \\\\
-     & = & \\sum_ {k=1}^{m}A_ {k i}g_ {j}\\left( \\beta_ {k} \\right) \\\\
-     & = & \\sum_ {k=1}^{m}A_ {k i}\\delta_ {j k} \\\\
-     & = & A_ {j i} \\end{eqnarray} $
+& = & g_ {j} \\left( \\sum_ {k = i}^{m}A_ {k i}\\beta_ {k} \\right) \\\\
+& = & \\sum_ {k=1}^{m}A_ {k i}g_ {j}\\left( \\beta_ {k} \\right) \\\\
+& = & \\sum_ {k=1}^{m}A_ {k i}\\delta_ {j k} \\\\
+& = & A_ {j i} \\end{eqnarray} $
 
 对任意V上的linear functional f 有
 
@@ -157,4 +157,4 @@ $ \\begin{equation} T^{t}g_ {j} = \\sum_ {i=1}^{n}A_ {j i}f_ {i} \\end{equation}
 
 则可得到 $ B_ {i j} = A_ {j i} $
 
-**定义** 如果A为域F上的m x n矩阵，则transpose of A为n x m矩阵 $ A^{t} $ ，使得 $ A_ {i j}^{t) = A_ {j i} $
+**定义** 如果A为域F上的m x n矩阵，则transpose of A为n x m矩阵 $ A^{t} $ ，使得 $ A_ {i j}^{t} = A_ {j i} $
