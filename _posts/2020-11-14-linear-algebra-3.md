@@ -141,10 +141,10 @@ $ \\begin{equation} T^{t}g_ {j} = \\sum_ {i=1}^{n}B_ {i j}f_ {i}, \\qquad j = 1,
 
 另一方面，
 
-$ \\begin{eqnarray} \\left( T^{t} g_ {j} \\right) \\left( \\alpha_ {i} \\right) & = & g_ {j} \\left(T \\alpha_ {i} \\right) \\\\
-& = & g_ {j} \\left( \\sum_ {k = i}^{m}A_ {k i}\\beta_ {k} \\right) \\\\
-& = & \\sum_ {k=1}^{m}A_ {k i}g_ {j}\\left( \\beta_ {k} \\right) \\\\
-& = & \\sum_ {k=1}^{m}A_ {k i}\\delta_ {j k} \\\\
+$ \\begin{eqnarray} \\left( T^{t} g_ {j} \\right) \\left( \\alpha_ {i} \\right) & = & g_ {j} \\left(T \\alpha_ {i} \\right) \\nonumber \\\\
+& = & g_ {j} \\left( \\sum_ {k = i}^{m}A_ {k i}\\beta_ {k} \\right) \\nonumber \\\\
+& = & \\sum_ {k=1}^{m}A_ {k i}g_ {j}\\left( \\beta_ {k} \\right) \\nonumber \\\\
+& = & \\sum_ {k=1}^{m}A_ {k i}\\delta_ {j k} \\nonumber \\\\
 & = & A_ {j i} \\end{eqnarray} $
 
 对任意V上的linear functional f 有
