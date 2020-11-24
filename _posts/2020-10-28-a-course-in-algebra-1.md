@@ -29,6 +29,7 @@ category:   maths
     4.  [子群，子环和子域](#org19183fa)
     5.  [余类的环](#org5160204)
     6.  [向量空间](#org97c8839)
+    7.  [Algebras](#orgd2724c7)
 
 
 <a id="org2500f14"></a>
@@ -193,3 +194,15 @@ $ \\begin{equation} \\varphi: V \\rightarrow U \\end{equation} $
 
 映射 $ \\varphi $ 被称为V和U之间的同构关系
 
+
+<a id="orgd2724c7"></a>
+
+## Algebras
+
+**定义** 一个algebra是域K上的集合及加法、乘法操作，K上元素的乘法有如下属性：
+
+(i) A是一个向量空间及有域上元素的加法和乘法
+
+(ii) A是加法和乘法的环
+
+(iii) $ \\forall \\lambda \\in K, \\, a, b \\in A, \\quad \\left( \\lambda a \\right) b = a \\left( \\lambda b \\right) = \\lambda \\left(ab\\right) $
