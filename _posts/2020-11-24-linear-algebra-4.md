@@ -23,6 +23,7 @@ category:   maths
 # Table of Contents
 
 1.  [Algebras](#org42f2702)
+2.  [The algebra of Polynomials](#orgefd9580)
 
 
 <a id="org42f2702"></a>
@@ -39,3 +40,21 @@ category:   maths
 
 如果有一个 $ \\mathbb{Q} $ 上的元素1，使得 $ \\forall \\alpha \\in \\mathbb{Q} \\, , \\, 1 \\alpha = \\alpha 1 = \\alpha $，我们称 $ \\mathbb{Q} $ 为F上带单位值的线性代数，并称1为 $ \\mathbb{Q} $的单位值。如果 $ \\forall \\alpha, \\beta \\in \\mathbb{Q}, \\, \\alpha \\beta = \\beta \\alpha $，则称代数 $ \\mathbb{Q} $为可交换的。
 
+
+<a id="orgefd9580"></a>
+
+# The algebra of Polynomials
+
+**定义** 设F[x]为向量 $ 1, x, x^{2}, \\ldots $ 扩展的 $ F^{\\infty} $ 的子空间，F[x]的元素被称为F上的polynomial
+
+**定理** 设f和g为F上非零polynomials，则
+
+(i) fg是一个非零polynomial
+
+(ii) deg(fg) = deg f + deg g
+
+(iii) fg是一个monic polynomial当且仅当f和g都是nomic polynomials
+
+(iv) fg是一个常量polynomial当且仅当f和g都是常量polynomials
+
+(v) 如果 $ f + g \\neq 0, \\quad deg\\left(f + g\\right) \\leq max\\left( deg f, deg g \\right) $
