@@ -24,6 +24,7 @@ category:   maths
 
 1.  [Algebras](#org42f2702)
 2.  [The algebra of Polynomials](#orgefd9580)
+3.  [Lagrange Interpolation](#org002fa21)
 
 
 <a id="org42f2702"></a>
@@ -58,3 +59,52 @@ category:   maths
 (iv) fg是一个常量polynomial当且仅当f和g都是常量polynomials
 
 (v) 如果 $ f + g \\neq 0, \\quad deg\\left(f + g\\right) \\leq max\\left( deg f, deg g \\right) $
+
+
+<a id="org002fa21"></a>
+
+# Lagrange Interpolation
+
+本节我们将假设F为固定域且 $ t_ {0}, t_ {1}, \\ldots, t_ {n} $ 为n + 1个F上不同元素。设V为F[x]的子空间包含所有小于等于n的polynomials，且设 $ L_ {i} $为从V到F的函数，定义为：
+
+$ \\begin{equation} L_ {i}\\left(f \\right) = f \\left(t_ {i} \\right), \\qquad 0 \\leq i \\leq n\\end{equation} $
+
+每个 $ L_ {i} $ 为V上的linear functional，$ L_ {0}, L_ {1}, \\ldots, L_ {n} $的集合为V<sup>\*</sup> 的基。
+
+$ \\{ L_ {0}, L_ {1}, \\ldots, L_ {n} \\} $为以 $ \\{ P_ {0}, P_ {1}, \\ldots, P_ {n} \\} $ 为基的V的dual。则最多有一个这样的基，如果其存在则：
+
+$ \\begin{equation} L_ {j}\\left(P_ {i}\\right) = P_ {i}\\left(t_ {j}\\right) = \\delta_ {i j} \\end{equation} $
+
+则Polymonials
+
+$ \\begin{equation} \\begin{aligned} P_ {i} &= \\frac{\\left(x - t_ {0}\\right) \\cdots \\left(x - t_ {i-1}\\right)\\left(x - t_ {i+1}\\right) \\cdots \\left(x - t_ {n} \\right)}{\\left(t_ {i} - t_ {0}\\right) \\cdots \\left(t_ {i} - t_ {i-1}\\right)\\left(t_ {i} - t_ {i+1}\\right) \\cdots \\left(t_ {i} - t_ {n}\\right)} \\\\ &= \\prod_ {j \\neq i}\\left(\\frac{x - t_ {j}}{t_ {i} - t_ {j}}\\right) \\end{aligned} \\end{equation} $
+
+如果 $ f = \\sum_ {i}c_ {i}P_ {i} $，则对每个j，$ f\\left(t_ {j} \\right) = \\sum_ {i}c_ {i}P_ {i}\\left(t_ {j}\\right) = c_ {j} $
+
+这样对每个V中的f，有
+
+$ \\begin{equation} f = \\sum_ {i=0}^{n}f\\left(t_ {i}\\right)P_ {i} \\end{equation} $
+
+该表达式被称为拉格朗日插值公式。
+
+设 $ f = x^{i} $ 我们得到 $ x^{j} = \\sum_ {i=0}^{n}\\left(t_ {i}\\right)^{j}P_ {i} $
+
+如果f是F上的任意polymonial，记  $ f^{ ~ } $ 为从F到F的polynomial函数映射F中每个t到f(t)。但可能对两个polynomials f 和 g，$ f \\neq g $，有 $ f^{ ~ } = g^{ ~ } $。幸运地是，这种情况只发生在域F只有有限个不同元素上。为精确描述polynomials和polynomial函数之间的关系。我们需要定义两个polynomial函数乘积。如果f，g是F上的polynomials，$ f^{ ~ } $ 和 $ g^{ ~ } $的乘积是从F到F的函数 $ f^{ ~ } g^{ ~ } $：
+
+$ \\begin{equation} \\left(f^{ ~ }g^{ ~ }\\right)\\left(t\\right) = f^{ ~ }\\left(t\\right) g^{ ~ }\\left(t\\right), \\qquad t \\, in \\, F \\end{equation} $
+
+因 $ \\left(fg\\right)\\left(t\\right) = f\\left(t\\right) g\\left(t\\right) $，对F中每个t，有
+
+$ \\begin{equation} \\left(fg\\right)^{ ~ }\\left(t\\right) = f^{ ~ }\\left(t\\right) g^{ ~ }\\left(t\\right) \\end{equation} $
+
+这样 $ f^{ ~ }g^{ ~ } = \\left(fg\\right)^{ ~ } $，也是一个polynomial函数。
+
+**定义** 设F为一个域且设 $ \\mathbb{Q} $ 和 $ \\mathbb{Q}^{ ~ } $为F上的linear algebras。algebra $ \\mathbb{Q} $ 和 $ \\mathbb{Q}^{ ~ } $被称为同构的如果有一个 $ \\mathbb{Q} $ 到 $ \\mathbb{Q}^{ ~ } $ 的一对一映射 $ \\alpha \\to \\alpha^{ ~ } $，使得
+
+(a) $ \\begin{equation} \\left(c\\alpha + d\\beta\\right)^{ ~ } = c\\alpha^{ ~ } + d\\beta^{ ~ } \\end{equation} $
+
+(b) $ \\begin{equation} \\left(\\alpha \\beta\\right)^{ ~ } = \\alpha^{ ~ } \\beta^{ ~ } \\end{equation} $
+
+对所有 $ \\alpha, \\beta \\, in \\, \\mathbb{Q} $ 及F上所有常量c，d。映射 $ \\alpha \\to \\alpha^{ ~ } $ 被称为 $ \\mathbb{Q} $ 到 $ \\mathbb{Q}^{ ~ } $上的同构。
+
+**定理** 如果F是一个域包含无穷多个不同的元素，则映射 $ f \\to f^{ ~ } $是F上algebra of polynomials到F上algebra of polynomial函数的同构。
