@@ -89,22 +89,22 @@ $ \\begin{equation} f = \\sum_ {i=0}^{n}f\\left(t_ {i}\\right)P_ {i} \\end{equat
 
 设 $ f = x^{i} $ 我们得到 $ x^{j} = \\sum_ {i=0}^{n}\\left(t_ {i}\\right)^{j}P_ {i} $
 
-如果f是F上的任意polymonial，记  $ f^{ ~ } $ 为从F到F的polynomial函数映射F中每个t到f(t)。但可能对两个polynomials f 和 g，$ f \\neq g $，有 $ f^{ ~ } = g^{ ~ } $。幸运地是，这种情况只发生在域F只有有限个不同元素上。为精确描述polynomials和polynomial函数之间的关系。我们需要定义两个polynomial函数乘积。如果f，g是F上的polynomials，$ f^{ ~ } $ 和 $ g^{ ~ } $的乘积是从F到F的函数 $ f^{ ~ } g^{ ~ } $：
+如果f是F上的任意polymonial，记  $ f^{ \\backsim } $ 为从F到F的polynomial函数映射F中每个t到f(t)。但可能对两个polynomials f 和 g，$ f \\neq g $，有 $ f^{ \\backsim } = g^{ \\backsim } $。幸运地是，这种情况只发生在域F只有有限个不同元素上。为精确描述polynomials和polynomial函数之间的关系。我们需要定义两个polynomial函数乘积。如果f，g是F上的polynomials，$ f^{ \\backsim } $ 和 $ g^{ \\backsim } $的乘积是从F到F的函数 $ f^{ \\backsim } g^{ \\backsim } $：
 
-$ \\begin{equation} \\left(f^{ ~ }g^{ ~ }\\right)\\left(t\\right) = f^{ ~ }\\left(t\\right) g^{ ~ }\\left(t\\right), \\qquad t \\, in \\, F \\end{equation} $
+$ \\begin{equation} \\left(f^{ \\backsim }g^{ \\backsim }\\right)\\left(t\\right) = f^{ \\backsim }\\left(t\\right) g^{ \\backsim }\\left(t\\right), \\qquad t \\, in \\, F \\end{equation} $
 
 因 $ \\left(fg\\right)\\left(t\\right) = f\\left(t\\right) g\\left(t\\right) $，对F中每个t，有
 
-$ \\begin{equation} \\left(fg\\right)^{ ~ }\\left(t\\right) = f^{ ~ }\\left(t\\right) g^{ ~ }\\left(t\\right) \\end{equation} $
+$ \\begin{equation} \\left(fg\\right)^{ \\backsim }\\left(t\\right) = f^{ \\backsim }\\left(t\\right) g^{ \\backsim }\\left(t\\right) \\end{equation} $
 
-这样 $ f^{ ~ }g^{ ~ } = \\left(fg\\right)^{ ~ } $，也是一个polynomial函数。
+这样 $ f^{ \\backsim }g^{ \\backsim } = \\left(fg\\right)^{ \\backsim } $，也是一个polynomial函数。
 
-**定义** 设F为一个域且设 $ \\mathbb{Q} $ 和 $ \\mathbb{Q}^{ ~ } $为F上的linear algebras。algebra $ \\mathbb{Q} $ 和 $ \\mathbb{Q}^{ ~ } $被称为同构的如果有一个 $ \\mathbb{Q} $ 到 $ \\mathbb{Q}^{ ~ } $ 的一对一映射 $ \\alpha \\to \\alpha^{ ~ } $，使得
+**定义** 设F为一个域且设 $ \\mathbb{Q} $ 和 $ \\mathbb{Q}^{ \\backsim } $为F上的linear algebras。algebra $ \\mathbb{Q} $ 和 $ \\mathbb{Q}^{ \\backsim } $被称为同构的如果有一个 $ \\mathbb{Q} $ 到 $ \\mathbb{Q}^{ \\backsim } $ 的一对一映射 $ \\alpha \\to \\alpha^{ \\backsim } $，使得
 
-(a) $ \\begin{equation} \\left(c\\alpha + d\\beta\\right)^{ ~ } = c\\alpha^{ ~ } + d\\beta^{ ~ } \\end{equation} $
+(a) $ \\begin{equation} \\left(c\\alpha + d\\beta\\right)^{ \\backsim } = c\\alpha^{ \\backsim } + d\\beta^{ \\backsim } \\end{equation} $
 
-(b) $ \\begin{equation} \\left(\\alpha \\beta\\right)^{ ~ } = \\alpha^{ ~ } \\beta^{ ~ } \\end{equation} $
+(b) $ \\begin{equation} \\left(\\alpha \\beta\\right)^{ \\backsim } = \\alpha^{ \\backsim } \\beta^{ \\backsim } \\end{equation} $
 
-对所有 $ \\alpha, \\beta \\, in \\, \\mathbb{Q} $ 及F上所有常量c，d。映射 $ \\alpha \\to \\alpha^{ ~ } $ 被称为 $ \\mathbb{Q} $ 到 $ \\mathbb{Q}^{ ~ } $上的同构。
+对所有 $ \\alpha, \\beta \\, in \\, \\mathbb{Q} $ 及F上所有常量c，d。映射 $ \\alpha \\to \\alpha^{ \\backsim } $ 被称为 $ \\mathbb{Q} $ 到 $ \\mathbb{Q}^{ \\backsim } $上的同构。
 
-**定理** 如果F是一个域包含无穷多个不同的元素，则映射 $ f \\to f^{ ~ } $是F上algebra of polynomials到F上algebra of polynomial函数的同构。
+**定理** 如果F是一个域包含无穷多个不同的元素，则映射 $ f \\to f^{ \\backsim } $是F上algebra of polynomials到F上algebra of polynomial函数的同构。
