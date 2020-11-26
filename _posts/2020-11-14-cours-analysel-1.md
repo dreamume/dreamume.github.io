@@ -91,3 +91,10 @@ est une topologie sur X, appelée topologie induite par la distance d. Sauf ment
 
 La preuve que $ \\mathscr{O} $ est bien une topologie est la même que celle pour les distances induites par des normes. En effet, soit $\\left( U_ {i} \\right)_ {i \\in I} $ une famille d'éléments de $ \\mathscr{O} $ . Si I est fini et  $ x \\in \\cap_ {i \\in I}U_ {i} $ , soit $ \\epsilon_ {i} > 0 $ tel que $ B \\left( x, \\epsilon_ {i} \\right) \\subset U_ {i} $ ; alors $ \\epsilon = inf_ {i \\in I} \\epsilon_ {i} > 0 $ et $ B \\left( x, \\epsilon \\right) \\subset \\cap_ {i \\in I}U_ {i} $ . Si $ x \\in \\cup_ {i \\in I}U_ {i} $ , soit $ i_ {0} \\in I $ tel que $ x \\in U_ {i_ {0}} $ , et $ \\epsilon > 0 $ tel que $ B \\left( x, \\epsilon \\right) \\subset U_ {i_ {0}} $ ; alors $ B \\left( x, \\epsilon \\right) \\subset \\cup_ {i \\in I}U_ {i} $
 
+Ci-dessous, nous dessinons les boules unités, pour n = 2 et diverse valeurs de p dans  $ [1, +\\infty] $, des normes (équivalentes)
+
+$ \\begin{equation} \| \| \\left(x_ {1}, \\ldots, x_ {n}\\right) \| \|_ {p} = \\left( \\sum_ {i=1}^{n}\| x_ {i} \|^{p}\\right)^{\\frac{1}{p}} \\end{equation} $
+
+sur l'espace vectoriel $ \\mathbb{R}^{n} $, où par convention,
+
+$ \\begin{equation} \| \| \\left( x_ {1}, \\ldots, x_ {n}\\right) \| \|_ {\\infty} = max_ {1 \\leq i \\leq n} \| x_ {i} \| \\end{equation} $
