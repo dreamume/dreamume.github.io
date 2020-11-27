@@ -246,7 +246,7 @@ $ \\begin{equation} \\pi \\left(n\\right) \\sim \\frac{n}{\\ln n} \\end{equation
 
 对任意有限集合 $ A_ {1}, A_ {2}, \\ldots, A_ {n} $ ，我们有
 
-$ \\begin{equation} \| \\cup_ {i=1}^{n}A_ {i} \| = \\sum_ {k=1}^{n} \\left( -1 \\right)^{k-1} \\sum_ {I \\in { \\{ 1,2,\\ldots, n \\} \\choose k } \| \\cap_ {i \\in I}A_ {i} \| \\end{equation} $
+$ \\begin{equation} \| \\cup_ {i=1}^{n}A_ {i} \| = \\sum_ {k=1}^{n} \\left( -1 \\right)^{k-1} \\sum_ {I \\in { \\{ 1,2,\\ldots, n \\} \\choose k }} \| \\cap_ {i \\in I}A_ {i} \| \\end{equation} $
 
 
 <a id="org0413796"></a>
@@ -269,7 +269,7 @@ $ \\begin{equation} D\\left(n\\right) = n ! - \| A_ {1} \\cup \\cdots \\cup A_ {
 
 该式可改写为：
 
-$ \\beng{equation} D\\left(n\\right) = n ! \\left( 1 - \\frac{1}{1 !} + \\frac{1}{2 !} - \\cdots + \\left(-1\\right)^{n} \\frac{1}{n !} \\right) \\end{equation} $
+$ \\begin{equation} D\\left(n\\right) = n ! \\left( 1 - \\frac{1}{1 !} + \\frac{1}{2 !} - \\cdots + \\left(-1\\right)^{n} \\frac{1}{n !} \\right) \\end{equation} $
 
 利用微积分知识，括号中的系列收敛到 $ for \\, n \\to \\infty, \\quad e^{-1} $，且收敛速度非常快。所以我们有一个估计关系 $ D\\left(n\\right) \\sim \\frac{n !}{e} $，则我们想要的概率收敛到常数 $ e^{-1} = 0.36787 \\ldots $。这就是本问题为什么具有标志性，其答案不依赖于绅士的数量！
 
