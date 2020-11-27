@@ -28,6 +28,7 @@ category:   maths
     3.  [估计：阶乘函数](#org4911f9a)
     4.  [估计：二项式系数](#orgb7e13e8)
     5.  [Inclusion-exclusion principle](#org07e2e5c)
+    6.  [The hatcheck lady & co.](#org0413796)
 
 
 <a id="org7ccbb93"></a>
@@ -242,4 +243,33 @@ $ \\begin{equation} \\pi \\left(n\\right) \\sim \\frac{n}{\\ln n} \\end{equation
 <a id="org07e2e5c"></a>
 
 ## Inclusion-exclusion principle
+
+对任意有限集合 $ A_ {1}, A_ {2}, \\ldots, A_ {n} $ ，我们有
+
+$ \\begin{equation} \| \\cup_ {i=1}^{n}A_ {i} \| = \\sum_ {k=1}^{n} \\left( -1 \\right)^{k-1} \\sum_ {I \\in { \\{ 1,2,\\ldots, n \\} \\choose k } \| \\cap_ {i \\in I}A_ {i} \| \\end{equation} $
+
+
+<a id="org0413796"></a>
+
+## The hatcheck lady & co.
+
+n个绅士参加聚会，所有人都戴着帽子，他们把帽子存放在员工室中。当他们离开时，女员工可能那天有些心不在焉，可能在多年服务在昏暗的员工室视力变得很差，导致随机拿了帽子给每个绅士。那么没有绅士收到他自己的帽子的概率是多少？
+
+首先，我们使用排列来描述这个问题。如果我们用 $ 1, 2, \\ldots, n $ 标号绅士们和他们的帽子，然后女员工的拿帽结果作为 $ \\{ 1, 2, \\ldots, n \\} $ 的随机排列 $ \\pi, \\pi \\left( i \\right) $ 表示该号码的帽子给了第i个绅士。问题是， $ \\forall i \\in \\{ 1, 2, \\ldots, n \\}, \\pi \\left(i\\right) \\neq i $ 的概率是多少？我们把第i号的 $ \\pi \\left(i\\right) = i $ 的情况作为排列 $ \\pi $ 的一个固定点。这样我们问：随机选择一个排列没有固定点的概率是多少？每个 $ n ! $ 的排列的概率都是均等的，所以如果我们记D(n)为n个元素集合上没有固定点的排列个数，则我们需要的概率就是 $ \\frac{D\\left(n\\right)}{n !} $
+
+使用inlcusion-exclusion principle，我们得到一个D(n)的公式。我们将统计坏的排列，例如，那些至少有一个固定点的排列。设S<sub>n</sub> 为 $ \\{ 1, 2, \\ldots, \\n \\} $ 所有排列的集合，我们定义 $ A_ {i} = \\{ \\pi \\in S_ {n}: \\pi \\left(i\\right) = i \\} $。
+
+为了应用inclusion-exclusion principle，我们得表示出A<sub>i</sub> 集合的k个交集的大小。我们容易得到 $ \| A_ {i} \| = \\left(n - 1\\right) ! $，因为如果 $ \\pi\\left(i\\right) = i $ 固定，我们可以选择剩下n - 1个数的任意排列。$ A_ {1} \\cap A_ {2} $ 的排列是什么？是那些1和2固定的排列，则 $ \| A_ {1} \\cap A_ {2} \| = \\left(n-2\\right) ! $。更一般地，对任意 $ i_ {1} < i_ {2} < \\cdots < i_ {k} $我们有 $ \| A_ {i_ {1}} \\cap A_ {i_ {2}} \\cap \\cdots \\cap A_ {i_ {k}} \| = \\left(n-k\\right) !$，则带入inclusion-exclusion公式得：
+
+$ \\begin{equation} \| A_ {1} \\cup \\cdots \\cup A_ {n} \| = \\sum_ {k=1}^{n}\\left(-1\\right)^{k-1}{n \\choose k}\\left(n-k\\right) ! = \\sum_ {k=1}^{n}\\left(-1\\right)^{k-1} \\frac{n !}{k !} \\end{equation} $
+
+我们回忆我们已经计算出坏排列的数量，这样：
+
+$ \\begin{equation} D\\left(n\\right) = n ! - \| A_ {1} \\cup \\cdots \\cup A_ {n} \| = n ! - \\frac{n !}{1 !} + \\frac{n !}{2 !} - \\cdots + \\left(-1\\right)^{n} \\frac{n !}{n !} \\end{equation} $
+
+该式可改写为：
+
+$ \\beng{equation} D\\left(n\\right) = n ! \\left( 1 - \\frac{1}{1 !} + \\frac{1}{2 !} - \\cdots + \\left(-1\\right)^{n} \\frac{1}{n !} \\right) \\end{equation} $
+
+利用微积分知识，括号中的系列收敛到 $ for \\, n \\to \\infty, \\quad e^{-1} $，且收敛速度非常快。所以我们有一个估计关系 $ D\\left(n\\right) \\sim \\frac{n !}{e} $，则我们想要的概率收敛到常数 $ e^{-1} = 0.36787 \\ldots $。这就是本问题为什么具有标志性，其答案不依赖于绅士的数量！
 
