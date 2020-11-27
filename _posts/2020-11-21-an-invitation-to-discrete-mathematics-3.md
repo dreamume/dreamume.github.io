@@ -257,7 +257,7 @@ n个绅士参加聚会，所有人都戴着帽子，他们把帽子存放在员�
 
 首先，我们使用排列来描述这个问题。如果我们用 $ 1, 2, \\ldots, n $ 标号绅士们和他们的帽子，然后女员工的拿帽结果作为 $ \\{ 1, 2, \\ldots, n \\} $ 的随机排列 $ \\pi, \\pi \\left( i \\right) $ 表示该号码的帽子给了第i个绅士。问题是， $ \\forall i \\in \\{ 1, 2, \\ldots, n \\}, \\pi \\left(i\\right) \\neq i $ 的概率是多少？我们把第i号的 $ \\pi \\left(i\\right) = i $ 的情况作为排列 $ \\pi $ 的一个固定点。这样我们问：随机选择一个排列没有固定点的概率是多少？每个 $ n ! $ 的排列的概率都是均等的，所以如果我们记D(n)为n个元素集合上没有固定点的排列个数，则我们需要的概率就是 $ \\frac{D\\left(n\\right)}{n !} $
 
-使用inlcusion-exclusion principle，我们得到一个D(n)的公式。我们将统计坏的排列，例如，那些至少有一个固定点的排列。设S<sub>n</sub> 为 $ \\{ 1, 2, \\ldots, \\n \\} $ 所有排列的集合，我们定义 $ A_ {i} = \\{ \\pi \\in S_ {n}: \\pi \\left(i\\right) = i \\} $。
+使用inlcusion-exclusion principle，我们得到一个D(n)的公式。我们将统计坏的排列，例如，那些至少有一个固定点的排列。设S<sub>n</sub> 为 $ \\{ 1, 2, \\ldots, n \\} $ 所有排列的集合，我们定义 $ A_ {i} = \\{ \\pi \\in S_ {n}: \\pi \\left(i\\right) = i \\} $。
 
 为了应用inclusion-exclusion principle，我们得表示出A<sub>i</sub> 集合的k个交集的大小。我们容易得到 $ \| A_ {i} \| = \\left(n - 1\\right) ! $，因为如果 $ \\pi\\left(i\\right) = i $ 固定，我们可以选择剩下n - 1个数的任意排列。$ A_ {1} \\cap A_ {2} $ 的排列是什么？是那些1和2固定的排列，则 $ \| A_ {1} \\cap A_ {2} \| = \\left(n-2\\right) ! $。更一般地，对任意 $ i_ {1} < i_ {2} < \\cdots < i_ {k} $我们有 $ \| A_ {i_ {1}} \\cap A_ {i_ {2}} \\cap \\cdots \\cap A_ {i_ {k}} \| = \\left(n-k\\right) !$，则带入inclusion-exclusion公式得：
 
