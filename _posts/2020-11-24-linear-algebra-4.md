@@ -25,6 +25,7 @@ category:   maths
 1.  [Algebras](#org42f2702)
 2.  [The algebra of Polynomials](#orgefd9580)
 3.  [Lagrange Interpolation](#org002fa21)
+4.  [Polynomial Ideals](#org53cf227)
 
 
 <a id="org42f2702"></a>
@@ -108,3 +109,18 @@ $ \\begin{equation} \\left(fg\\right)^{ \\backsim }\\left(t\\right) = f^{ \\back
 对所有 $ \\alpha, \\beta \\, in \\, \\mathbb{Q} $ 及F上所有常量c，d。映射 $ \\alpha \\to \\alpha^{ \\backsim } $ 被称为 $ \\mathbb{Q} $ 到 $ \\mathbb{Q}^{ \\backsim } $上的同构。
 
 **定理** 如果F是一个域包含无穷多个不同的元素，则映射 $ f \\to f^{ \\backsim } $是F上algebra of polynomials到F上algebra of polynomial函数的同构。
+
+
+<a id="org53cf227"></a>
+
+# Polynomial Ideals
+
+如果c是polynomialf的一个根，则multiplicity of c为最大的正整数r使得 $ \\left( x - c \\right)^{r} $ 能被f整除。
+
+**定义** 设F为一个域，一个F[x]中的ideal是F[x]的子空间M，使得fg属于M，f在F[x]中，g在M中。
+
+例5，如果F是一个域且d是F上的一个polynomial，则集合M = dF[x]，对任意F[x]中的f，所有d的multiples df是一个ideal。因M为非空，M实际上包含d，如果f, g属于F[x]且c是一个常量，则
+
+$ \\begin{equation} c \\left(df\\right) - dg = d \\left( cf - g\\right) \\end{equation} $
+
+属于M，这样M是一个子空间。最后M也包含 $ \\left(df\\right)g = d\\left(fg\\right) $。ideal M被称为由d产生的principal ideal
