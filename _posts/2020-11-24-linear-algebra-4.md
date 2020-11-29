@@ -26,6 +26,7 @@ category:   maths
 2.  [The algebra of Polynomials](#orgefd9580)
 3.  [Lagrange Interpolation](#org002fa21)
 4.  [Polynomial Ideals](#org53cf227)
+5.  [Polynomial的质因素](#org82b7e7e)
 
 
 <a id="org42f2702"></a>
@@ -124,3 +125,10 @@ $ \\begin{equation} \\left(fg\\right)^{ \\backsim }\\left(t\\right) = f^{ \\back
 $ \\begin{equation} c \\left(df\\right) - dg = d \\left( cf - g\\right) \\end{equation} $
 
 属于M，这样M是一个子空间。最后M也包含 $ \\left(df\\right)g = d\\left(fg\\right) $。ideal M被称为由d产生的principal ideal
+
+
+<a id="org82b7e7e"></a>
+
+# Polynomial的质因素
+
+**定义** 设F为一个域，一个F[x]上的polynomial f被称为F上可约的如果F[x]上存在degree $ \\geq 1 $ 的polynomials g，h，使得f = gh，否则，f被称为在F上不可约的。一个F上非常数不可约polynomial被称为F上质polynomial，我们有时候称为F[x]上的一个质数。
