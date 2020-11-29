@@ -26,7 +26,7 @@ category:   maths
 2.  [The algebra of Polynomials](#orgefd9580)
 3.  [Lagrange Interpolation](#org002fa21)
 4.  [Polynomial Ideals](#org53cf227)
-5.  [Polynomial的质因素](#org82b7e7e)
+5.  [The Prime Factorization of a Polynomial](#org82b7e7e)
 
 
 <a id="org42f2702"></a>
@@ -129,6 +129,6 @@ $ \\begin{equation} c \\left(df\\right) - dg = d \\left( cf - g\\right) \\end{eq
 
 <a id="org82b7e7e"></a>
 
-# Polynomial的质因素
+# The Prime Factorization of a Polynomial
 
 **定义** 设F为一个域，一个F[x]上的polynomial f被称为F上可约的如果F[x]上存在degree $ \\geq 1 $ 的polynomials g，h，使得f = gh，否则，f被称为在F上不可约的。一个F上非常数不可约polynomial被称为F上质polynomial，我们有时候称为F[x]上的一个质数。
