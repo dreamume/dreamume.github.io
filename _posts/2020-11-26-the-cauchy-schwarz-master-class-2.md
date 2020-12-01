@@ -49,11 +49,11 @@ $ \\begin{equation} \\alpha_ {k} = \\frac{a_ {k}}{A} \\qquad where \\, A = p_ {1
 
 **Carleman's Inequality** 对每个正实数序列 $ a_ {1}, a_ {2}, \\ldots $，有
 
-$ \\begin(equation} \\sum_ {k=1}^{\\infty} \\left( a_ {1} a_ {2} \\cdots a_ {k} \\right)^{\\frac{1}{k}} \\leq e \\sum_ {k=1}^{\\infty}a_ {k} \\end{equation} $
+$ \\begin{equation} \\sum_ {k=1}^{\\infty} \\left( a_ {1} a_ {2} \\cdots a_ {k} \\right)^{\\frac{1}{k}} \\leq e \\sum_ {k=1}^{\\infty}a_ {k} \\end{equation} $
 
 证明：这里我们构造一序列因子c<sub>k</sub> ，有
 
-$ \\begin{equation} \\begin{aligned} \\sum_ {k=1}^{\\infty}\\left(a_ {1} a_ {2} \\cdots a_ {k}\\right)^{\\frac{1}{k}} &= \\sum_ {k=1}^{\\infty}\\frac{\\left(a_ {1}c_ {1}a_ {2}c_ {2} \\codts a_ {k}c_ {k}\\right)^{\\frac{1}{k}}}{\\left(c_ {1}c_ {2} \\cdots c_ {k}\\right)^{\\frac{1}{k}}} \\\\ &\\leq \\sum_ {k=1}^{\\infty} \\sum_ {k=1}{\\infty}\\frac{a_ {1}c_ {1} + a_ {2}c_ {2} + \\cdots + a_ {k}c_ {k}}{k\\left(c_ {1}c_ {2} \\cdots c_ {k}\\right)^{\\frac{1}{k}}} \\\\ &=\\sum_ {k=1}^{\\infty}a_ {k}c_ {k}\\sum_ {j=k}^{\\infty}\\frac{1}{j\\left(c_ {1}c_ {2} \\cdots c_ {j}\\right)^{\\frac{1}{j}}} \\end{aligned} \\end{equation} $
+$ \\begin{equation} \\begin{aligned} \\sum_ {k=1}^{\\infty}\\left(a_ {1} a_ {2} \\cdots a_ {k}\\right)^{\\frac{1}{k}} &= \\sum_ {k=1}^{\\infty}\\frac{\\left(a_ {1}c_ {1}a_ {2}c_ {2} \\cdots a_ {k}c_ {k}\\right)^{\\frac{1}{k}}}{\\left(c_ {1}c_ {2} \\cdots c_ {k}\\right)^{\\frac{1}{k}}} \\\\ &\\leq \\sum_ {k=1}^{\\infty} \\sum_ {k=1}{\\infty}\\frac{a_ {1}c_ {1} + a_ {2}c_ {2} + \\cdots + a_ {k}c_ {k}}{k\\left(c_ {1}c_ {2} \\cdots c_ {k}\\right)^{\\frac{1}{k}}} \\\\ &=\\sum_ {k=1}^{\\infty}a_ {k}c_ {k}\\sum_ {j=k}^{\\infty}\\frac{1}{j\\left(c_ {1}c_ {2} \\cdots c_ {j}\\right)^{\\frac{1}{j}}} \\end{aligned} \\end{equation} $
 
 我们可以精心选择这样的c<sub>k</sub> ，$ k = 1, 2, \\ldots $，使得其和有界
 
@@ -65,7 +65,7 @@ $ \\begin{equation} \\left( c_ {1} c_ {2} \\cdots c_ {j}\\right)^{\\frac{1}{j}} 
 
 这样我们有
 
-$ \\begin{equation} s_ {k} = c_ {k} \\sum_ {j=k}^{\\infty}\\frac{1}{j \\left(c_ {1}c_ {2} \\codts c_ {j}\\right)^{\\fac{1}{j}}} = c_ {k} \\sm_ {j=k}^{\\infty}\\frac{1}{j\\left(j + 1\\right)} = \\frac{c_ {k}}{k} \\end{equation} $
+$ \\begin{equation} s_ {k} = c_ {k} \\sum_ {j=k}^{\\infty}\\frac{1}{j \\left(c_ {1}c_ {2} \\cdots c_ {j}\\right)^{\\frac{1}{j}}} = c_ {k} \\sum_ {j=k}^{\\infty}\\frac{1}{j\\left(j + 1\\right)} = \\frac{c_ {k}}{k} \\end{equation} $
 
 通过如下等式：
 
