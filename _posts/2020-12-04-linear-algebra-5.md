@@ -33,10 +33,14 @@ category:   maths
 
 1.  V是一个交换群，V上有一个加法使得 $ \\left( \\alpha + \\beta \\right) \\to \\alpha + \\beta $
 2.  有一个乘法使得 $ \\alpha \\in V, c \\in K, \\left(c, \\alpha\\right) \\to c\\alpha $，有
+    
     $ \\begin{equation} \\left( c_ {1} + c_ {2}\\right) \\alpha = c_ {1}\\alpha + c_ {2}\\alpha \\end{equation} $
+    
     $ \\begin{equation} c\\left( \\alpha_ {1} + \\alpha_ {2}\\right) = c\\alpha_ {1} + c\\alpha_ {2} \\end{equation} $
+    
     $ \\begin{equation} \\left( c_ {1} c_ {2}\\right) \\alpha = c_ {1} \\left(c_ {2}\\alpha \\right) \\end{equation} $
-    $ \\begin{equation} 1 \\alpha = \\alpha $
+    
+    $ \\begin{equation} 1 \\alpha = \\alpha \\end{equation} $
 
 **定义** K-module V被称为一个free module，如果它有一个基。如果V有有限个基包含n个元素，则V被称为一个free K-module with n generators
 
