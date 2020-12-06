@@ -50,7 +50,7 @@ category:   maths
 
 # Multilinear Functions
 
-设K为带单位元的交换环，设V为K上的一个module。如果r是一个正整数，一个函数从 $ V^{r} = V x V x \\codts x V $ 到K被称为multilinear如果 $ L\\left(\\alpha_ {1}, \\ldots, \\alpha_ {r} \\right) $是线性的，当选择某个 $ \\alpha_ {i} $，固定其他的 $ \\alpha_ {j} $，对每个i，有
+设K为带单位元的交换环，设V为K上的一个module。如果r是一个正整数，一个函数从 $ V^{r} = V X V X \\cdots X V $ 到K被称为multilinear如果 $ L\\left(\\alpha_ {1}, \\ldots, \\alpha_ {r} \\right) $是线性的，当选择某个 $ \\alpha_ {i} $，固定其他的 $ \\alpha_ {j} $，对每个i，有
 
 $ \\begin{equation} L\\left(\\alpha_ {1}, \\ldots, c\\alpha_ {i} + \\beta_ {j}, \\ldots, \\alpha_ {r}\\right) = cL\\left(\\alpha_ {1}, \\ldots, \\alpha_ {i}, \\ldots, \\alpha_ {r}\\right) + L\\left(\\alpha_ {1}, \\ldots, \\beta_ {i}, \\ldots, \\alpha_ {r}\\right) \\end{equation} $
 
@@ -60,7 +60,7 @@ $ \\begin{equation} \\left(L + M\\right)\\left(\\alpha_ {1}, \\ldots, \\alpha_ {
 
 也是multilinear，且如果c是K中一个元素，乘积cL:
 
-$ \\begin{equation} \\left(cL\\right)\\left(\\alpha_ {1}, \\ldots, \\alpha_ {r}\\right) = cL\\left(\\alpha_ {1}, \\lodts, \\alpha_ {r}\\right) \\end{equation} $
+$ \\begin{equation} \\left(cL\\right)\\left(\\alpha_ {1}, \\ldots, \\alpha_ {r}\\right) = cL\\left(\\alpha_ {1}, \\ldots, \\alpha_ {r}\\right) \\end{equation} $
 
 也是multilinear。因此 $ M^{r}\\left(V\\right) $是一个K-module - 所有从 $ V^{r} $到K的函数的module的submodule。
 
