@@ -110,7 +110,7 @@ $ \\begin{equation} x^{\\alpha}y^{\\beta} \\leq \\frac{\\alpha}{\\alpha+\\beta}x
 
 2002年加拿大数学奥林匹克赛中参与者被要求证明如下公式边界
 
-$ \\begin{equation} a + b + c \\leq \\frac{a^{3}}{bc} + \\frac{b^{3}}{ac} \\frac{c^{3}}{ab} \\end{equation} $
+$ \\begin{equation} a + b + c \\leq \\frac{a^{3}}{bc} + \\frac{b^{3}}{ac} + \\frac{c^{3}}{ab} \\end{equation} $
 
 并确定等号什么时候成立。
 

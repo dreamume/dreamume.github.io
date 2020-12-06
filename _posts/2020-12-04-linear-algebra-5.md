@@ -81,6 +81,7 @@ $ \\begin{equation} \\left(L \\otimes M \\right)\\left(\\alpha, \\beta\\right) =
 **引理** 设L, $ L_ {1} $为V上的r-linear forms，设M, $ M_ {1} $为V上s-linear forms，c为K上一个元素，有
 
 (a) $ \\left(cL + L_ {1}\\right) \\otimes M = c\\left(L \\otimes M\\right) + L_ {1} \\otimes M $
+
 (b) $ L \\otimes \\left(cM + M_ {1}\\right) = c\\left(L \\otimes M\\right) + L \\otimes M_ {1} $
 
 **定理** 设K为带单位元的交换环，如果V是rank n的free K-module，则 $ M^{r}\\left(V\\right) $是rank $ n^{r} $的free K-module；事实上，如果 $ \\{ f_ {1}, \\ldots, f_ {n} \\} $是dual module $ V^{ * } $的一个基，则 $ n^{r} $ tensor products
@@ -95,7 +96,7 @@ $ \\begin{equation} f_ {j_ {1}} \\otimes \\cdots \\otimes f_ {j_ {r}}, \\qquad 1
 
 $ \\begin{equation} L\\left(\\alpha_ {1}, \\ldots, \\alpha_ {i}, \\ldots, \\alpha_ {j}, \\ldots, \\alpha_ {r}\\right) = -L\\left(\\alpha_ {1}, \\ldots, \\alpha_ {j}, \\ldots, \\alpha_ {i}, \\ldots, \\alpha_ {r}\\right) \\end{equation} $
 
-即如果我们置换r元组 $ \\left(\\alpha_ {1}, \\ldots, \\alpha_ {r}\\right) $的两个向量（下标不同）将使得L的值改变符号。因为每个排列 $ \\sigma $是置换的乘积，我们看到 $ L\\left(\\alpha_ {\\sigma 1}, \\ldots, \\alpha_ {\\sigma r}\\right) = \\left(sgn \\sigma\\right)L\\left(\\alpha_ {1}, \\ldots, \\alpha_ {r}\\right) $
+即如果我们置换r元组 $ \\left(\\alpha_ {1}, \\ldots, \\alpha_ {r}\\right) $的两个向量（下标不同）将使得L的值改变符号。因为每个排列 $ \\sigma $是置换的乘积，我们看到 $ L\\left(\\alpha_ {\\sigma 1}, \\ldots, \\alpha_ {\\sigma r}\\right) = \\left(sgn \\, \\sigma\\right)L\\left(\\alpha_ {1}, \\ldots, \\alpha_ {r}\\right) $
 
 我们记 $ \\Lambda^{r}\\left(V\\right) $为V上所有alternating r-linear forms的集合。明显，$ \\Lambda^{r}\\left(V\\right) $是 $ M^{r}\\left(V\\right) $的一个submodule。
 
@@ -103,27 +104,27 @@ $ \\begin{equation} L\\left(\\alpha_ {1}, \\ldots, \\alpha_ {i}, \\ldots, \\alph
 
 $ \\begin{equation} L_ {\\sigma}\\left(\\alpha_ {1}, \\ldots, \\alpha_ {r}\\right) = L \\left(\\alpha_ {\\sigma 1}, \\ldots, \\alpha_ {\\sigma r}\\right) \\end{equation} $
 
-如果L是alternating的，则 $ L_ {\\sigma} = \\left(sgn \\sigma\\right)L $，现在，对每个 $ M^{r}\\left(V\\right) $上的L我们定义 $ M^{r}\\left(V\\right) $上的函数 $ \\pi_ {r}L $:
+如果L是alternating的，则 $ L_ {\\sigma} = \\left(sgn \\, \\sigma\\right)L $，现在，对每个 $ M^{r}\\left(V\\right) $上的L我们定义 $ M^{r}\\left(V\\right) $上的函数 $ \\pi_ {r}L $:
 
-$ \\begin{equation} \\pi_ {r}L = \\sum_ {\\sigma}\\left(sgn \\sigma\\right)L_ {\\sigma} \\end{equation} $
+$ \\begin{equation} \\pi_ {r}L = \\sum_ {\\sigma}\\left(sgn \\, \\sigma\\right)L_ {\\sigma} \\end{equation} $
 
 即
 
-$ \\begin{equation} \\left(\\pi_ {r}L\\right)\\left(\\alpha_ {1}, \\ldots, \\alpha_ {r}\\right) = \\sum_ {\\sigma}\\left(sgn \\sigma\\right)L\\left(\\alpha_ {\\sigma 1}, \\ldots, \\alpha_ {\\sigma r}\\right) \\end{equation} $
+$ \\begin{equation} \\left(\\pi_ {r}L\\right)\\left(\\alpha_ {1}, \\ldots, \\alpha_ {r}\\right) = \\sum_ {\\sigma}\\left(sgn \\, \\sigma\\right)L\\left(\\alpha_ {\\sigma 1}, \\ldots, \\alpha_ {\\sigma r}\\right) \\end{equation} $
 
 **引理** $ \\pi_ {r} $是从 $ M^{r}\\left(V\\right) $到 $ \\Lambda^{r}\\left(V\\right) $上的一个linear transformation，如果L在 $ \\Lambda^{r}\\left( V \\right) $中则 $ \\pi_ {r}L = r ! L $
 
 证明：设r为 $ \\{1, \\ldots, r \\} $ 的任意排列，则
 
-$ \\begin{equation} \\begin{aligned} \\left(\\pi_ {r}L\\right)\\left(\\alpha_ {r1}, \\ldots, \\alpha_ {rr}\\right) &= \\sum_ {\\sigma}\\left(sgn \\sigma\\right)L\\left(\\alpha_ {r \\sigma 1}, \\ldots, \\alpha_ {r \\sigma r}\\right) \\\\ &= \\left(sgn r)\\sum_ {\\sigma}\\left(sgn r\\sigma\\right)L\\left(\\alpha_ {r \\sigma 1}, \\ldots, \\alpha_ {r \\sigma r}\\right) \\end{aligned} \\end{equation} $
+$ \\begin{equation} \\begin{aligned} \\left(\\pi_ {r}L\\right)\\left(\\alpha_ {r1}, \\ldots, \\alpha_ {rr}\\right) &= \\sum_ {\\sigma}\\left(sgn \\, \\sigma\\right)L\\left(\\alpha_ {r \\sigma 1}, \\ldots, \\alpha_ {r \\sigma r}\\right) \\\\ &= \\left(sgn \\, r\\right)\\sum_ {\\sigma}\\left(sgn \\, r\\sigma\\right)L\\left(\\alpha_ {r \\sigma 1}, \\ldots, \\alpha_ {r \\sigma r}\\right) \\end{aligned} \\end{equation} $
 
 因为 $ \\sigma $一次运行 $ \\{1, \\ldots, r\\} $的所有排列，所以 $ r\\sigma $也是。因此，
 
-$ \\begin{equation} \\left(\\pi_ {r}L\\right)\\left(\\alpha_ {r1}, \\ldots, \\alpha_ {rr}\\right) = \\left(sgn r\\right)\\left(\\pi_ {r}L\\right)\\left(\\alpha_ {1}, \\ldots, \\alpha_ {r}\\right) \\end{equation} $
+$ \\begin{equation} \\left(\\pi_ {r}L\\right)\\left(\\alpha_ {r1}, \\ldots, \\alpha_ {rr}\\right) = \\left(sgn \\, r\\right)\\left(\\pi_ {r}L\\right)\\left(\\alpha_ {1}, \\ldots, \\alpha_ {r}\\right) \\end{equation} $
 
 这样 $ \\pi_ {r}L $是一个alternating form。
 
-如果L在 $ \\Lambda^{r}\\left(V\\right) $中，则对每个 $ \\sigma, L\\left(\\alpha_ {\\sigma 1}, \\ldots, \\alpha_ {\\sigma r}\\right) = \\left(sgn \\sigma\\right)L\\left(\\alpha_ {1}, \\ldots, \\alpha_ {r}\\right) $；因此 $ \\pi_ {r}L = r ! L $
+如果L在 $ \\Lambda^{r}\\left(V\\right) $中，则对每个 $ \\sigma, L\\left(\\alpha_ {\\sigma 1}, \\ldots, \\alpha_ {\\sigma r}\\right) = \\left(sgn \\, \\sigma\\right)L\\left(\\alpha_ {1}, \\ldots, \\alpha_ {r}\\right) $；因此 $ \\pi_ {r}L = r ! L $
 
 **定理** 设K为带单位元的交换环，V是rank n的free K-module，如果r > n，则 $ \\Lambda^{r}\\left(V\\right) = \\{ 0 \\} $，如果 $ 1 \\leq r \\leq n $，则 $ \\Lambda^{r}\\left(V\\right) $是一个rank $ {n \\choose r} $的free K-module
 
