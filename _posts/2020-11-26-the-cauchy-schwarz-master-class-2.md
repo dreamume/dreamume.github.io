@@ -101,7 +101,7 @@ $ \\begin{equation} x^{\\alpha}y^{\\beta} \\leq \\frac{\\alpha}{\\alpha+\\beta}x
 
 证明：利用公式 $ a_ {1}^{p_ {1}}a_ {2}^{p_ {2}} \\leq p_ {1}a_ {1} + p_ {2}a_ {2} $，我们设 $p_ {1} = \\frac{\\alpha}{\\alpha+\\beta}, p_ {2} = \\frac{\\beta}{\\alpha+\\beta}, a_ {1} = x^{\\alpha+\\beta}, a_ {2} = y^{\\alpha + \\beta} $，然后利用该不等式即得证。
 
-然后利用求得的公式，令 $ \\alpha = 2004, \\beta = 1 \\, and \\alpha = 1, \\beta = 2004 $带入分别计算，然后加和可得后面不等式的证明。
+然后利用求得的公式，令 $ \\alpha = 2004, \\beta = 1 \\, and \\, \\alpha = 1, \\beta = 2004 $带入分别计算，然后加和可得后面不等式的证明。
 
 
 <a id="orgd10957a"></a>
@@ -114,7 +114,7 @@ $ \\begin{equation} a + b + c \\leq \\frac{a^{3}}{bc} + \\frac{b^{3}}{ac} \\frac
 
 并确定等号什么时候成立。
 
-证明：先把不等式两边乘以abc，得到 $ a^{2}bc + ab^{2}c + abc^{2} \\leq a^{4} + b^{4} + c^{4} $，再同样利用之前学过的不等式，我们有 $ a^{2}bc = \\left(a^{4}\\right)^{\\frac{1}{2}} + \\left(b^{4}\\right)^{\\frac{1}{4}} + \\left(c^{4}\\right)^{\\frac{1}{4}} $，$ ab^{2}c, abc^{2} $也同样处理，最后相加即得证
+证明：先把不等式两边乘以abc，得到 $ a^{2}bc + ab^{2}c + abc^{2} \\leq a^{4} + b^{4} + c^{4} $，再同样利用之前学过的不等式，我们有 $ a^{2}bc = \\left(a^{4}\\right)^{\\frac{1}{2}} + \\left(b^{4}\\right)^{\\frac{1}{4}} + \\left(c^{4}\\right)^{\\frac{1}{4}} \\leq \\frac{1}{2} a^{4} + \\frac{1}{4}b^{4} + \\frac{1}{4}c^{4} $，$ ab^{2}c, abc^{2} $也同样处理，最后相加即得证
 
 等式成立需要 $ a = b = c $
 
