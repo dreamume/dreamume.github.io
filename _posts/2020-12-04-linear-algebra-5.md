@@ -156,7 +156,7 @@ $ \\begin{equation} D_ {i j} = f_ {i} \\otimes f_ {j} - f_ {j} \\otimes f_ {i} \
 
 现在假设k是一个索引，不同于i和j，则
 
-$ \\bgin{equation} \\begin{aligned} D_ {i j} \\cdot f_ {k} &= \\pi_ {3} [\\left(f_ {i} \\otimes f_ {j} - f_ {j} \\otimes f_ {i}\\right) \\otimes f_ {k}] \\\\ &= \\pi_ {3}\\left(f_ {i} \\otimes f_ {j} \\otimes f_ {k}\\right) - \\pi_ {3}\\left(f_ {j} \\otimes f_ {i} \\otimes f_ {k}\\right) \\end{aligned} \\end{equation} $
+$ \\begin{equation} \\begin{aligned} D_ {i j} \\cdot f_ {k} &= \\pi_ {3} [\\left(f_ {i} \\otimes f_ {j} - f_ {j} \\otimes f_ {i}\\right) \\otimes f_ {k}] \\\\ &= \\pi_ {3}\\left(f_ {i} \\otimes f_ {j} \\otimes f_ {k}\\right) - \\pi_ {3}\\left(f_ {j} \\otimes f_ {i} \\otimes f_ {k}\\right) \\end{aligned} \\end{equation} $
 
 对任意 r-linear form L和 $ \\{ 1, \\ldots, r \\} $ 的任意排序
 
@@ -176,7 +176,7 @@ $ \\begin{equation} \\left( D_ {i j} \\cdot f_ {k} \\right) \\cdot f_ {l} = 6 \\
 
 这样，一般地
 
-$ \\begin{equation} \\left( f_ {i} \\cdot f_ {j}\\right) \\cdot \\left( f_ {k} \\codt f_ {l}\\right) \\neq [ \\left(f_ {i} \\cdot f_ {j}\\right) \\cdot f_ {k}] \\cdot f_ {l} \\end{equation} $
+$ \\begin{equation} \\left( f_ {i} \\cdot f_ {j}\\right) \\cdot \\left( f_ {k} \\cdot f_ {l}\\right) \\neq [ \\left(f_ {i} \\cdot f_ {j}\\right) \\cdot f_ {k}] \\cdot f_ {l} \\end{equation} $
 
 这样我们看到该乘法不是一个可结合的操作。
 
