@@ -24,6 +24,7 @@ category:   maths
 
 1.  [Modules](#orge434519)
 2.  [Multilinear Functions](#orge6b44cc)
+3.  [The Grassman Ring](#orgc4e09e6)
 
 
 <a id="orge434519"></a>
@@ -133,3 +134,64 @@ $ \\begin{equation} \\left(\\pi_ {r}L\\right)\\left(\\alpha_ {r1}, \\ldots, \\al
 $ \\begin{equation} L\\left(T\\alpha_ {1}, \\ldots, T\\alpha_ {n}\\right) = cL\\left(\\alpha_ {1}, \\ldots, \\alpha_ {n}\\right) \\end{equation} $
 
 对V上每一个alternating n-linear form L。
+
+
+<a id="orgc4e09e6"></a>
+
+# The Grassman Ring
+
+行列式和alternating multilinear forms的许多重要属性是以forms上的乘积操作描述的，称为外部乘积。如果L和M是module V上alternating r和s-linear forms，我们有一个L和M的可结合乘积，tensor product $ L \\otimes M $。它不是一个alernating form除非L = 0 或 M = 0；然而，我们有一个自然的方法投射到 $ \\Lambda^{r+s}\\left(V\\right) $，如下：
+
+$ \\begin{equation} L \\cdot M = \\pi_ {r+s}\\left(L \\otimes M \\right) \\end{equation} $
+
+应该是一个自然的alternating forms乘法。但，它是吗？
+
+让我们用一个特殊的例子。假设V是一个module $ K^{n} $及 $ f_ {1}, \\ldots, f_ {n} $是 $ K^{n} $上的标准坐标函数。如果 $ i \\neq j $，则
+
+$ \\begin{equation} f_ {i} \\cdot f_ {j} = \\pi_ {2}\\left(f_ {i} \\otimes f_ {j}\\right) \\end{equation} $
+
+是行列式函数：
+
+$ \\begin{equation} D_ {i j} = f_ {i} \\otimes f_ {j} - f_ {j} \\otimes f_ {i} \\end{equation} $
+
+现在假设k是一个索引，不同于i和j，则
+
+$ \\bgin{equation} \\begin{aligned} D_ {i j} \\cdot f_ {k} &= \\pi_ {3} [\\left(f_ {i} \\otimes f_ {j} - f_ {j} \\otimes f_ {i}\\right) \\otimes f_ {k}] \\\\ &= \\pi_ {3}\\left(f_ {i} \\otimes f_ {j} \\otimes f_ {k}\\right) - \\pi_ {3}\\left(f_ {j} \\otimes f_ {i} \\otimes f_ {k}\\right) \\end{aligned} \\end{equation} $
+
+对任意 r-linear form L和 $ \\{ 1, \\ldots, r \\} $ 的任意排序
+
+$ \\begin{equation} \\pi_ {r}\\left(L_ {\\sigma} \\right) = sng \\, \\sigma \\, \\pi_ {r}\\left(L\\right) \\end{equation} $
+
+因此，$ D_ {i j} \\cdot f_ {k} = 2 \\pi_ {3}\\left(f_ {i} \\otimes f_ {j} \\otimes f_ {k}\\right) $。通过相似的计算，$ f_ {i} \\cdot D_ {j k} = 2 \\pi_ {3}\\left(f_ {i} \\otimes f_ {j} \\otimes f_ {k}\\right) $。这样我们有
+
+$ \\begin{equation} \\left(f_ {i} \\cdot f_ {j}\\right) \\cdot f_ {k} = f_ {i} \\cdot \\left(f_ {j} \\cdot f_ {k} \\right) \\end{equation} $
+
+所有这些看起来非常好。但有个问题。尽管我们完成了计算，该计算是不可结合的。事实上，如果l是一个索引不同于i，j，k，则可计算
+
+$ \\begin{equation} D_ {i j} \\cdot D_ {k l} = 4 \\pi_ {4} \\left( f_ {i} \\otimes f_ {j} \\otimes f_ {k} \\otimes f_ {l} \\right) \\end{equation} $
+
+及
+
+$ \\begin{equation} \\left( D_ {i j} \\cdot f_ {k} \\right) \\cdot f_ {l} = 6 \\pi_ {4} \\left(f_ {i} \\otimes f_ {j} \\otimes f_ {k} \\otimes f_ {l}\\right) \\end{equation} $
+
+这样，一般地
+
+$ \\begin{equation} \\left( f_ {i} \\cdot f_ {j}\\right) \\cdot \\left( f_ {k} \\codt f_ {l}\\right) \\neq [ \\left(f_ {i} \\cdot f_ {j}\\right) \\cdot f_ {k}] \\cdot f_ {l} \\end{equation} $
+
+这样我们看到该乘法不是一个可结合的操作。
+
+假设在module V上L是一个r-linear form且M是一个s-linear form，则
+
+$ \\begin{equation} \\begin{aligned} \\pi_ {r+s}\\left(\\left(\\pi_ {r}L\\right) \\otimes \\left(\\pi_ {s}M\\right)\\right) &= \\pi_ {r+s}\\left(\\sum_ {\\sigma, r}\\left(sgn \\, \\sigma\\right) \\left(sgn \\, r\\right)L_ {\\sigma} \\otimes M_ {r}\\right) \\\\ &= \\sum_ {\\sigma, r}\\left(sgn \\, \\sigma\\right)\\left(sgn \\, r\\right) \\pi_ {r+s}\\left(L_ {\\sigma} \\otimes M_ {r}\\right) \\end{aligned} \\end{equation} $
+
+$ \\sigma $随着对称组 $ S_ {r} $的 $ \\{ 1, \\ldots, r \\} $的所有排列改变，r随着 $ S_ {s} $改变。每对 $ \\sigma $，r定义 $ S_ {r+s} $的一个 $ \\left(\\sigma, r\\right) $元素，根据 $ \\sigma $排列 $ \\{ 1, \\ldots, r + s \\} $的前r个元素，后s个元素根据r排列。则
+
+$ \\begin{equation} sng \\, \\left(\\sigma, r\\right) = \\left(sgn \\, \\sigma\\right)\\left(sgn \\, r\\right) \\end{equation} $
+
+及
+
+$ \\begin{equation} \\left( L \\otimes M \\right)_ {\\left(\\sigma, r\\right)} = L_ {\\sigma} \\otimes L_ {r} \\end{equation} $
+
+因此
+
+$ \\begin{equation} \\pi_ {r+s}[\\left(\\pi_ {r}L\\right) \\otimes \\left(\\pi_ {s}M\\right)] = \\sum_ {\\sigma, r} sgn\\left(\\sigma, r\\right) \\pi_ {r+s}[\\left(L \\otimes M\\right)_ {\\left(\\sigma, r\\right)}] \\end{equation} $
