@@ -195,3 +195,41 @@ $ \\begin{equation} \\left( L \\otimes M \\right)_ {\\left(\\sigma, r\\right)} =
 因此
 
 $ \\begin{equation} \\pi_ {r+s}[\\left(\\pi_ {r}L\\right) \\otimes \\left(\\pi_ {s}M\\right)] = \\sum_ {\\sigma, r} sgn\\left(\\sigma, r\\right) \\pi_ {r+s}[\\left(L \\otimes M\\right)_ {\\left(\\sigma, r\\right)}] \\end{equation} $
+
+现在我们观察到
+
+$ \\begin{equation} sgn \\, \\left(\\sigma, r\\right)\\pi_ {r+s}[\\left(L \\otimes M\\right)_ {\\left(\\sigma,r\\right)}] = \\pi_ {r+s}\\left(L \\otimes M\\right)\\end{equation} $
+
+这样的话
+
+$ \\begin{equation} \\pi_ {r+s}[\\left(\\pi_ {r}L\\right) \\otimes \\left(\\pi_ {s}M\\right)] = r ! s ! \\pi_ {r+s}\\left(L \\otimes M\\right) \\end{equation} $
+
+这个公式简化了计算。例如，假设我们有一个r-shuffle $ I = \\left(i_ {1}, \\ldots, i_ {r}\\right) $和s-suffle $ J = \\left(j_ {1}, \\ldots, j_ {s}\\right) $。为简单化，假设
+
+$ \\begin{equation} i_ {1} < \\cdots < i_ {r} < j_ {1} < \\cdots < j_ {s} \\end{equation} $
+
+则我们有相关行列式函数
+
+$ \\begin{equation} \\begin{aligned} D_ {I} = \\pi_ {r}\\left(E_ {I}\\right) \\\\ &D_ {J} = \\pi_ {s}\\left(E_ {J}\\right) \\end{aligned} \\end{equation} $
+
+这样我们有
+
+$ \\begin{equation} \\begin{aligned} D_ {I} \\cdot D_ {J} &= \\pi_ {r+s}[\\pi_ {r}\\left(E_ {I}\\right) \\otimes \\pi_ {s}\\left(E_ {J}\\right) ] \\\\ &= r ! s ! \\pi_ {r+s}\\left(E_ {I} \\otimes E_ {J}\\right) \\end{aligned} \\end{equation} $
+
+因为 $ E_ {I} \\otimes E_ {J} = E_ {I \\cup J} $，因此有
+
+$ \\begin{equation} D_ {I} \\cdot D_ {J} = r ! s ! D_ {I \\cup J}\\end{equation} $
+
+由于 $ D_ {I} \\cdot D_ {J} \\neq D_ {I \\cup J} $，表示该乘法没有结合律，为让该等式成立，我们应该定义一个新的乘积，一个alternating r-linear form L和alternating s-linear form M的外部乘积（或wedge product）：
+
+$ \\begin{equation} L \\land M = \\frac{1}{r ! s !}\\pi_ {r+s}\\left(L \\otimes M\\right) \\end{equation} $
+
+然后对K<sup>n</sup> 的行列式，我们有
+
+$ \\begin{equation} D_ {I} \\land D_ {J} = D_ {I \\cup J} \\end{equation} $
+
+不幸的是，上述式子在最一般的情况下无意义，因为我们可能在K环中不能被r!s!除。如果K是一个特征零的域，则该式子是有意义的，且很容易证明该乘积是可结合的。
+
+**定理** 设K为一个特征零的域且V是K上的一个向量空间。则V上alternating forms的外部乘积是可结合的。即如果L, M, N是V上的alternating multilinear forms，degree分别为r, s和t，则
+
+$ \\begin{equation} \\left( L \\land M\\right) \\land N = L \\land \\left( M \\land N \\right) \\end{equation} $
