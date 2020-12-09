@@ -233,3 +233,23 @@ $ \\begin{equation} D_ {I} \\land D_ {J} = D_ {I \\cup J} \\end{equation} $
 **定理** 设K为一个特征零的域且V是K上的一个向量空间。则V上alternating forms的外部乘积是可结合的。即如果L, M, N是V上的alternating multilinear forms，degree分别为r, s和t，则
 
 $ \\begin{equation} \\left( L \\land M\\right) \\land N = L \\land \\left( M \\land N \\right) \\end{equation} $
+
+现在我们回到一般情况，假设K是带单位元的交换环。我们的第一个问题是想用一般化的相当的定义。如果L和M是degree r和s的alternating multilinear forms，我们想要构建一个重要的degree r+s的alternating multilinear form $ L \\land M $使得
+
+$ \\begin{equation} r ! s ! \\left( L \\land M \\right) = \\pi_ {r+s}\\left(L \\otimes M \\right) \\end{equation} $
+
+让我们回忆如何定义 $ \\pi_ {r+s}\\left(L \\otimes M \\right) $。对 $ \\{ 1, \\ldots, r + s \\} $的每个排列 $ \\sigma $我们联系multilinear function：
+
+$ \\begin{equation} \\left(sgn \\, \\sigma\\right)\\left(L \\otimes M \\right)_ {\\sigma} \\end{equation} $
+
+及
+
+$ \\begin{equation} \\left(L \\otimes M\\right)_ {\\sigma}\\left(\\alpha_ {1}, \\ldots, \\alpha_ {r+s}\\right) = \\left(L \\otimes M\\right)\\left(\\alpha_ {\\sigma 1}, \\ldots, \\alpha_ {\\sigma\\left(r+s\\right)}\\right) \\end{equation} $
+
+我们对该函数所有的排列 $ \\sigma $求和。有 (r + s)! 个排列；然而，因为L和M是alternating的，许多函数相等。事实上，有最多
+
+$ \\begin{equation} \\frac{\\left(r+s\\rigth) !}{r ! s !} \\end{equation} $
+
+不同的函数。让我们看看为什么。设 $ S_ {r+s} $为 $ \\{ 1, \\ldots, r+s \\} $ 的排列集合，例如，$ S_ {r+s} $为degree r + s 的对称组。我们区分子集合G包含排列集合 $ \\{1, \\ldots, r \\} $ 和 $ \\{r + 1, \\ldots, r + s \\} $的排列 $ \\sigma $。即 $ \\sigma $在G中如果 $ 1 \\leq \\sigma i \\leq r $，i在1和r之间（j在r + 1和r + s之间，$ r + 1 \\leq \\sigma_ {j} \\leq r + s $）。现在G是 $ S_ {r+s} $的一个子群，如果 $ \\sigma $和r在G中则 $ \\sigma r^{-1} $也在G中。明显地，G有r!s!个成员。
+
+我们有一个映射 $ S_ {r+s} \\stackrel{\\Psi}{\\to} M^{r+s}\\left(V\\right) $
