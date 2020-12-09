@@ -248,7 +248,7 @@ $ \\begin{equation} \\left(L \\otimes M\\right)_ {\\sigma}\\left(\\alpha_ {1}, \
 
 我们对该函数所有的排列 $ \\sigma $求和。有 (r + s)! 个排列；然而，因为L和M是alternating的，许多函数相等。事实上，有最多
 
-$ \\begin{equation} \\frac{\\left(r+s\\rigth) !}{r ! s !} \\end{equation} $
+$ \\begin{equation} \\frac{\\left(r+s\\right) !}{r ! s !} \\end{equation} $
 
 不同的函数。让我们看看为什么。设 $ S_ {r+s} $为 $ \\{ 1, \\ldots, r+s \\} $ 的排列集合，例如，$ S_ {r+s} $为degree r + s 的对称组。我们区分子集合G包含排列集合 $ \\{1, \\ldots, r \\} $ 和 $ \\{r + 1, \\ldots, r + s \\} $的排列 $ \\sigma $。即 $ \\sigma $在G中如果 $ 1 \\leq \\sigma i \\leq r $，i在1和r之间（j在r + 1和r + s之间，$ r + 1 \\leq \\sigma_ {j} \\leq r + s $）。现在G是 $ S_ {r+s} $的一个子群，如果 $ \\sigma $和r在G中则 $ \\sigma r^{-1} $也在G中。明显地，G有r!s!个成员。
 
