@@ -27,6 +27,7 @@ category:   maths
     1.  [Bounds by Pure Powers](#org757c451)
     2.  [A Canadian Challenge](#orgd10957a)
     3.  [A Bound Between Differences](#orgec1fad0)
+    4.  [Akerberg's Refinement](#org9564073)
 
 对非负实数 $ a_ {1}, a_ {2}, \\ldots, a_ {n} $ 和每个正实数序列 $ p_ {1}, p_ {2}, \\ldots, p_ {n} $，该序列和为1，有
 
@@ -130,3 +131,20 @@ $ \\begin{equation} a + b + c \\leq \\frac{a^{3}}{bc} + \\frac{b^{3}}{ac} + \\fr
 $ \\begin{equation} n\\left(x+y\\right)^{\\frac{\\left(n-1\\right)}{2}} \\leq x^{n-1} + x^{n-2}y + \\cdots + xy^{n-2} + y^{n-1} = \\frac{x^{n} - y^{n}}{x-y} \\end{equation} $
 
 即得证
+
+
+<a id="org9564073"></a>
+
+## Akerberg's Refinement
+
+对任意非负实数 $ a_ {1}, a_ {2}, \\ldots, a_ {n} $ 且 $ n \\ge 2 $，有如下边界：
+
+$ \\begin{equation} a_ {n}\\{\\frac{a_ {1} + a_ {2} + \\cdots + a_ {n-1}}{n-1}\\}^{n-1} \\le \\{ \\frac{a_ {1} + a_ {2} + \\cdots + a_ {n}}{n}\\}^{n} \\end{equation} $
+
+该关系是AM-GM不等式的提炼因为AM-GM不等式符合该边界的迭代。为证明该式，首先必须证明
+
+$ \\begin{equation} y\\left(n - y^{n-1}\\right) = ny - y^{n} \\le n - 1 \\qquad \\forall y \\ge 0 \\end{equation} $
+
+其中的关键是选择一个巧妙的y
+
+证明：第二个不等式很容易证明，这里不详细展开了。设 $ S_ {n} = a_ {1} + a_ {2} + \\cdots + a_ {n} $，然后我们选择y使得 $ y^{n-1} = \\frac{n a_ {n}}{S_ {n}} $，则我们有 $ n - y^{n-1} = \\frac{n S_ {n-1}}{S_ {n}} $，然后带入第二个不等式，有 $ \\left(\\frac{n a_ {n}}{S_ {n}}\\right)^{\\frac{1}{n-1}} \\frac{n S_ {n-1}}{S_ {n}} \\le n - 1 $，调整相关项得 $ \\left(\\frac{n a_ {n}}{S_ {n}}\\right)^{\\frac{1}{n-1}} \\frac{S_ {n-1}}{n-1} \\le \\frac{S_ {n}}{n} $，然后两边同取n - 1次方得 $ \\frac{n a_ {n}}{S_ {n}} \\left(\\frac{S_ {n-1}}{n-1}\\right)^{n-1} \\leq \\left(\\frac{S_ {n}}{n}\\right)^{n-1} $，然后整理一下即得证
