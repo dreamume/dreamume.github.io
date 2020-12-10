@@ -253,3 +253,39 @@ $ \\begin{equation} \\frac{\\left(r+s\\right) !}{r ! s !} \\end{equation} $
 不同的函数。让我们看看为什么。设 $ S_ {r+s} $为 $ \\{ 1, \\ldots, r+s \\} $ 的排列集合，例如，$ S_ {r+s} $为degree r + s 的对称组。我们区分子集合G包含排列集合 $ \\{1, \\ldots, r \\} $ 和 $ \\{r + 1, \\ldots, r + s \\} $的排列 $ \\sigma $。即 $ \\sigma $在G中如果 $ 1 \\leq \\sigma i \\leq r $，i在1和r之间（j在r + 1和r + s之间，$ r + 1 \\leq \\sigma_ {j} \\leq r + s $）。现在G是 $ S_ {r+s} $的一个子群，如果 $ \\sigma $和r在G中则 $ \\sigma r^{-1} $也在G中。明显地，G有r!s!个成员。
 
 我们有一个映射 $ S_ {r+s} \\stackrel{\\Psi}{\\to} M^{r+s}\\left(V\\right) $
+
+定义 $ \\Psi\\left(\\sigma\\right) = \\left(sgn \\, \\sigma\\right)\\left(L \\otimes M \\rigth)_ {\\sigma} $
+
+因为L和M是alternating的， $ \\forall \\gamma \\in G, \\Psi\\left(\\gamma\\right) = L \\otimes M $
+
+因此，因为对V上任意(r+s)-linear form N， $ \\left(N\\sigma\\right)_ {\\tau} = N_ {\\tau \\sigma} $，我们有
+
+$ \\begin{equation} \\Psi\\left(\\tau \\gamma\\right) = \\Psi\\left(\\tau\\right), r \\, in \\, S_ {r+s}, r \\, in \\, G \\end{equation} $
+
+这表示映射 $ \\Psi $在每个子群G的（左）coset rG是个常数。如果 $ \\tau_ {1} $ 和 $ \\tau_ {2} $在 $ S_ {r+s} $中，则cosets $ \\tau_ {1}G $和 $ \\tau_ {2}G $要么相等要么不相交，根据 $ \\tau_ {2}^{-1}\\tau_ {1} $是不是在G中。每个coset包含r!s!个元素；因此，有
+
+$ \\begin{equation} \\frac{\\left(r + s\\right) !}{r ! s !} \\end{equation} $
+
+个不同的coset。如果 $ S_ {r+s} / G $记为coset集合则 $ \\Psi $ 定义了一个在 $ S_ {r+s} / G $上的函数，例如，通过我们所展示的，有一个函数 $ \\bar{\\Psi} $在集合上，这样
+
+$ \\begin{equation} \\forall \\tau \\in S_ {r+s}, \\Psi\\left(\\tau\\right) = \\widetilde{\\Psi}\\left(\\tau G\\right) \\end{equation} $
+
+如果H是G的一个左coset，则 $ \\forall \\tau \\in H, \\bar{\\Psi} \\left(H\\right) = \\Psi\\left(\\tau\\right) $
+
+我们现在定义degree为r和s的alternating multilinear forms L和M的外积为
+
+$ \\begin{equation} L \\land M = \\sum_ {H}\\widetilde{\\Psi}\\left(H\\right) \\end{equation} $
+
+H在 $ S_ {r+s} / G $上遍历。另一种表达 $ L \\land M $定义的方法如下。设S为排列 $ \\{1, \\ldots, r + s \\} $的任意集合包含G的每个left coset中的一个元素。则
+
+$ \\begin{equation} L \\land M = \\sum_ {\\sigma}\\left(sng \\, \\sigma\\right)\\left(L \\otimes M \\right)_ {\\sigma} \\end{equation} $
+
+$ \\sigma $在S上遍历。明显地
+
+$ \\begin{equation} r ! s ! L \\land M = \\pi_ {r + s}\\left(L \\otimes M \\right) \\end{equation} $
+
+**定理** 设K为带单位元的交换环，V为K上的一个module，则外积是一个在V上的alternating multilinear forms的可结合操作。即如果K，M和N是对应degree r、s和t的alternating multilinear forms，则
+
+$ \\begin{equation} \\left( L \\land M \\right) \\land N = L \\land \\left( M \\land N \\right) \\end{equation} $
+
+证明：
