@@ -170,7 +170,7 @@ $ \\begin{equation} \\left(cos \\psi\\right) \| z_ {1} z_ {2} \\cdots z_ {n} \|^
 
 证明：因 $ \| w \| \\ge \| \\Re(w) \| $且 $ \\Re(z_ {j}) = \\rho_ {j} \\cos(\\theta_ {j}) $，我们有
 
-$ \\begin{equation} \\begin{aligned} \| z_ {1} + z_ {2} + \\cdots + z_ {n} \| &\\ge \| \\Re(z_ {1} + z_ {2} + \\cdots + z_ {n}) \| \\\\ &= \| z_ {1} \| \\cos(\\theta_ {1}) + \| z_ {2} \|\\cos(\\theta_ {2}) + \\cdots + \| z_ {n} \|\\cos(\\theta_ {n}) \\\\ &\\ge \\left(\| z_ {1} \| + \| z_ {2} \| + \\cdots + \| z_ {n} \|\\right)\\cos(\\psi) \\\\ &ge n\\left(\|z_ {1} \| \| z_ {2} \| \\codts \| z_ {n} \|\\right)^{\\frac{1}{n}} \\cos(\\psi) \\end{aligned} \\end{equation} $
+$ \\begin{equation} \\begin{aligned} \| z_ {1} + z_ {2} + \\cdots + z_ {n} \| &\\ge \| \\Re(z_ {1} + z_ {2} + \\cdots + z_ {n}) \| \\\\ &= \| z_ {1} \| \\cos(\\theta_ {1}) + \| z_ {2} \|\\cos(\\theta_ {2}) + \\cdots + \| z_ {n} \|\\cos(\\theta_ {n}) \\\\ &\\ge \\left(\| z_ {1} \| + \| z_ {2} \| + \\cdots + \| z_ {n} \|\\right)\\cos(\\psi) \\\\ &\\ge n\\left(\|z_ {1} \| \| z_ {2} \| \\cdots \| z_ {n} \|\\right)^{\\frac{1}{n}} \\cos(\\psi) \\end{aligned} \\end{equation} $
 
 
 <a id="org90de841"></a>
