@@ -254,7 +254,7 @@ $ \\begin{equation} \\frac{\\left(r+s\\right) !}{r ! s !} \\end{equation} $
 
 我们有一个映射 $ S_ {r+s} \\stackrel{\\Psi}{\\to} M^{r+s}\\left(V\\right) $
 
-定义 $ \\Psi\\left(\\sigma\\right) = \\left(sgn \\, \\sigma\\right)\\left(L \\otimes M \\rigth)_ {\\sigma} $
+定义 $ \\Psi\\left(\\sigma\\right) = \\left(sgn \\, \\sigma\\right)\\left(L \\otimes M \\right)_ {\\sigma} $
 
 因为L和M是alternating的， $ \\forall \\gamma \\in G, \\Psi\\left(\\gamma\\right) = L \\otimes M $
 
