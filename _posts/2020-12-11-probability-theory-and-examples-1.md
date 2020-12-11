@@ -54,3 +54,13 @@ $ \\begin{equation} \\mu\\left(\\cup_ {i}A_ {i}\\right) = \\sum_ {i}\\mu\\left(A
 如果 $ \\mu\\left(\\Omega\\right) = 1 $，我们称 $ \\mu $ 为一个概率测度。本书中，概率测度通常记为P
 
 下面的结果给了我们后面需要的度量定义的一些结论。在所有的例子中，我们假设我们提到的集合在 $ \\mathcal{F} $中
+
+**定理 1.1.1** 设 $ \\mu $为 $ \\left(\\Omega, \\mathcal{F}\\right) $上的一个测度
+
+(i) 单调性，如果 $ A \\subset B 则 \\mu\\left(A\\right) \\le \\mu\\left(B\\right) $
+
+(ii) 子加和，如果 $ A \\subset \\cup_ {m=1}^{\\infty} A_ {m} 则 \\mu\\left(A\\right) \\le \\sum_ {m=1}^{\\infty}\\mu\\left(A_ {m}\\right) $
+
+(iii) 连续向下，如果 $ A_ {i} \\uparrow A $（例如，$ A_ {1} \\subset A_ {2} \\subset \\ldots $ 且 $ \\cup_ {i}A_ {i} = A $）则 $ \\mu\\left(A_ {i}\\right) \\uparrow \\mu\\left(A\\right) $
+
+(iv) 连续向上，如果 $ A_ {i} \\downarrow A $（例如，$ A_ {1} \\supset A_ {2} \\supset \\ldots $ 且 $ \\cap_ {i}A_ {i} = A, \\mu\\left(A_ {1}\\right) < \\infty $）则 $ \\mu\\left(A_ {i}\\right) \\downarrow \\mu\\left(A\\right) $
