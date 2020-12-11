@@ -288,4 +288,44 @@ $ \\begin{equation} r ! s ! L \\land M = \\pi_ {r + s}\\left(L \\otimes M \\righ
 
 $ \\begin{equation} \\left( L \\land M \\right) \\land N = L \\land \\left( M \\land N \\right) \\end{equation} $
 
-证明：
+证明：设G(r, s, t)为 $ S_ {r+s+t} $的子群包含排列 $ \\{1, \\ldots, r \\}, \\{r + 1, \\ldots, r + s \\}, \\{ r + s + 1, \\ldots, r + s + t \\} $ 集合里的排列。则 $ \\left(sgn \\, \\mu\\right)\\left(L \\otimes M \\otimes N\\right)_ {\\mu} $是在给定G(r, s, t)的左coset中的所有 $ \\mu $的相同multilinear函数。从每个G(r, s, t)的左coset中选择一个元素，设E为对应 $ \\left(sng \\, \\mu\\right)\\left(L \\otimes M \\otimes N\\right)_ {\\mu} $的和。则E是代表 $ \\mu $被选择的独立方法，且
+
+$ \\begin{equation} r ! s ! t ! E = \\pi_ {r+s+t}\\left(L \\otimes M \\otimes N\\right) \\end{equation} $
+
+我们将显示 $ \\left(L \\land M\\right) \\land N $和 $ L \\land \\left( M \\land N\\right) $都是和E相等的。
+
+设G(r + s, t)为 $ S_ {r+s+t} $的子群排列 $ \\{1, \\ldots, r + s \\}, \\{r + s + 1, \\ldots, r + s + t\\} $的集合。设T为排列 $ \\{1, \\ldots, r + s + t \\} $的任意集合包含G(r + s, t)每个左coset的一个元素，通过
+
+$ \\begin{equation} \\left(L \\land M\\right) \\land N = \\sum_ {\\tau} \\left(sgn \\, \\tau\\right)[\\left(L \\land M\\right) \\otimes N]_ {\\tau} \\end{equation} $
+
+其和扩展了T上 $ \\tau $的排列。现在设G(r, s)为 $ S_ {r+s} $的子群排列集合 $ \\{1, \\ldots, r\\}, \\{r + 1, \\ldots, r + s \\} $。设S为排列 $ \\{1, \\ldots, r + s \\} $的任意集合包含G(r, s)的每个左coset的一个元素。则
+
+$ \\begin{equation} \\left(L \\land M\\right) \\land N = \\sum_ {\\sigma, \\tau}\\left(sgn \\, \\sigma\\right) \\left(sgn \\, \\tau\\right)[\\left(L \\otimes M\\right)_ {\\sigma} \\otimes N]_ {\\tau} \\end{equation} $
+
+其和扩展了S X T上所有 $ \\sigma, \\tau $对。如果我们同意每个 $ S_ {r+s} $上的 $ \\sigma $对应 $ S_ {r+s+t} $上的元素 $ \\{ 1, \\ldots, r + s\\} $上的 $ \\sigma $，及 $ \\{ r + s + 1, \\ldots, r + s + t \\} $，则我们可写为：
+
+$ \\begin{equation} \\left(L \\land M\\right) \\land N = \\sum_ {\\sigma, \\tau}sgn\\left(\\sigma \\tau\\right)[\\left(L \\otimes M \\otimes N\\right)_ {\\sigma}]_ {\\tau} \\end{equation} $
+
+但
+
+$ \\begin{equation} [\\left(L \\otimes M \\otimes N\\right)_ {\\sigma}]_ {\\tau} = \\left(L \\otimes M \\otimes N\\right)_ {\\tau \\sigma} \\end{equation} $
+
+因此
+
+$ \\begin{equation} \\left(L \\land M\\right) \\land N = \\sum_ {\\sigma, \\tau}sgn\\left(\\tau \\sigma\\right)\\left(L \\otimes M \\otimes N\\right)_ {\\tau \\sigma} \\end{equation} $
+
+现在假设我们有
+
+$ \\begin{equation} \\tau_ {1} \\sigma_ {1} = \\tau_ {2} \\sigma_ {2} \\gamma \\end{equation} $
+
+$ \\sigma_ {i} \\in S, \\tau_ {i} \\in T, \\gamma \\in G\\left(r, s, t\\right) $。则 $ \\tau_ {2}^{-1} \\tau_ {1} = \\sigma_ {2} \\gamma \\sigma_ {1}^{-1} $，因为 $ \\sigma_ {2} \\gamma \\sigma_ {1}^{-1} $在G(r+s, t)中，则 $ \\tau_ {1} $ 和 $ \\tau_ {2} $是在G(r + s, t)中相同的左coset里。因此，$ \\tau_ {1} = \\tau_ {2} $ 且 $ \\sigma_ {1} = \\sigma_ {2} \\gamma $。但这意味着 $ \\sigma_ {1} $ 和 $ \\sigma_ {2} $在G(r, s)的相同coset中；因此，$ \\sigma_ {1} = \\sigma_ {2} $。因此，乘积 $ \\tau \\sigma $ 对应
+
+$ \\begin{equation} \\frac{\\left(r + s + t\\right) !}{\\left(r + s\\right) ! t !} \\frac{\\left(r + s \\right) ! }{r ! s !} \\end{equation} $
+
+$ \\left(\\tau, \\sigma\\right) $对在T X S中是都不同的且在G(r, s, t)不同的coset中。
+
+因为在 $ S_ {r+s+t} $中有
+
+$ \\begin{equation} \\frac{\\left(r + s + t\\right) !}{r ! s ! t !} \\end{equation} $
+
+个G(r, s, t)的左coset，则 $ \\left(L \\land M\\right) \\land N = E $。通过相似的计算，也有$ L \\land \\left( M \\land N\\right) = E$ 
