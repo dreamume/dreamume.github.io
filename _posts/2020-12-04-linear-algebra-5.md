@@ -329,3 +329,41 @@ $ \\left(\\tau, \\sigma\\right) $对在T X S中是都不同的且在G(r, s, t)�
 $ \\begin{equation} \\frac{\\left(r + s + t\\right) !}{r ! s ! t !} \\end{equation} $
 
 个G(r, s, t)的左coset，则 $ \\left(L \\land M\\right) \\land N = E $。通过相似的计算，也有$ L \\land \\left( M \\land N\\right) = E$ 
+
+例子13 外积跟计算行列式的相关公式紧密相关叫Laplace expansions。设K为带单位元的交换环及n是一个正整数。假设 $ 1 \\le r < n $，设L为 $ K^{n} $上的alternating r-linear form定义为：
+
+$ \\begin{equation} L\\left(\\alpha_ {1}, \\ldots, \\alpha_ {r}\\right) = \\operatorname{det}\\left[\\begin{array}{ccc}A_ {11} & \\cdots & A_ {1 r} \\\\ \\vdots & & \\vdots \\\\ A_ {r 1} & \\cdots & A_ {r r} \\end{array} \\right] \\end{equation} $
+
+如果s = n - r且M是alternating s-linear form
+
+$ \\begin{equation} M\\left(\\alpha_ {1}, \\ldots, \\alpha_ {s}\\right) = \\operatorname{det}\\left[\\begin{array}{ccc}A_ {1\\left(r+1\\right)} & \\cdots & A_ {1n} \\\\ \\vdots & & \\vdots \\\\ A_ {s\\left(r+s\\right)} & \\cdots & A_ {sn} \\end{array} \\right] \\end{equation} $
+
+则 $ L \\land M = D, K^{n}$上的行列式函数。因为 $ L \\land M $是一个alternating n-linear form且
+
+$ \\begin{equation} \\left(L \\land M\\right)\\left(\\epsilon_ {1}, \\ldots, \\epsilon_ {n}\\right) = 1 \\end{equation} $
+
+如果我们现在用正确的方法描述 $ L \\land M $，我们获得一个K的n x n矩阵行列式的Laplace expansion。
+
+在排列群 $ S_ {n} $中，设G为排列集合 $ \\{1, \\ldots, r \\} $和 $ \\{ r+1, \\ldots, n \\} $的子群。G的每个左coset包含一个排列 $ \\sigma $使得 $ \\sigma 1 < \\sigma 2 < \\ldots < \\sigma r $ 和 $ \\sigma \\left(r + 1\\right) < \\ldots < \\signma n $。排列的符号被给定为：
+
+$ \\begin{equation} sng \\, \\sigma = \\left(-1\\right)^{\\sigma 1 + \\cdots + \\sigma r + \\left(\\frac{r\\left(r-1\\right)}{2}\\right) } \\end{equation} $
+
+wedge product $ L \\land M $被给定为：
+
+$ \\begin{equation} \\left(L \\land M \\right)\\left(\\alpha_ {1}, \\ldots, \\alpha_ {n}\\right) = \\sum \\left(sgn \\, \\alpha)L\\left(\\alpha_ {\\sigma_ {1}}, \\ldots, \\alpha_ {\\sigma r}\\right) M\\left(\\alpha_ {\\sigma \\left(r+1\\right)}, \\ldots, \\alpha_ {\\sigma n}\\right) \\end{equation} $
+
+其和为 $ \\sigma $的集合，每个G中coset一个。因此，
+
+$ \\begin{equation} \\left(L \\land M \\right)\\left(\\alpha_ {1}, \\ldots, \\alpha_ {n}\\right) = \\sum_ {j_ {1} < \\cdots < j_ {r}}e_ {J} L\\left(\\alpha_ {j_ {1}}, \\ldots, \\alpha_ {j_ {r}}\\right)M\\left(\\alpha_ {k_ {1}}, \\ldots, \\alpha_ {k_ {s}}\\right) \\end{equation} $
+
+其中
+
+$ \\begin{equation} e_ {J} = \\left(-1\\right)^{j_ {1} + \\cdots + j_ {r} + \\left(\\frac{r\\left(r - 1\\right)}{2}\\right) \\end{equation} $
+
+$ \\begin{equation} k_ {i} = \\sigma\\left(r + i\\right) \\end{equation} $
+
+即
+
+$ \\begin{equation} \\operatorname{det} A = \\sum_ {j_ {1} < \\cdots < j_ {r}} e_ {J} \\left\| \\begin{array}{ccc}A_ {j_ {1}, 1} & \\cdots & A_ {j_ {1}, r} \\\\ \\vdots & & \\vdots \\\\ A_ {j_ {r}, 1} & \\cdots & A_ {j_ {r}, r} \\end{array} \\right\| \\left\| \\begin{array}{ccc} A_ {k_ {1}, r+1} & \\cdots & A_ {k_ {1}, n} \\\\ \\vdots & & \\vdots \\\\ A_ {k_ {r}, r+1} & \\cdots & A_ {k_ {r}, n} \\end{array} \\right\| \\end{equation} $
+
+这是一个Laplace expansion。其他的可通过替换集合 $ \\{1, \\ldots, r \\} $和 $ \\{r+1, \\ldots, n \\} $为两个不同补集索引来获得。
