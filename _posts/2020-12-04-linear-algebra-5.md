@@ -344,13 +344,13 @@ $ \\begin{equation} \\left(L \\land M\\right)\\left(\\epsilon_ {1}, \\ldots, \\e
 
 如果我们现在用正确的方法描述 $ L \\land M $，我们获得一个K的n x n矩阵行列式的Laplace expansion。
 
-在排列群 $ S_ {n} $中，设G为排列集合 $ \\{1, \\ldots, r \\} $和 $ \\{ r+1, \\ldots, n \\} $的子群。G的每个左coset包含一个排列 $ \\sigma $使得 $ \\sigma 1 < \\sigma 2 < \\ldots < \\sigma r $ 和 $ \\sigma \\left(r + 1\\right) < \\ldots < \\signma n $。排列的符号被给定为：
+在排列群 $ S_ {n} $中，设G为排列集合 $ \\{1, \\ldots, r \\} $和 $ \\{ r+1, \\ldots, n \\} $的子群。G的每个左coset包含一个排列 $ \\sigma $使得 $ \\sigma 1 < \\sigma 2 < \\ldots < \\sigma r $ 和 $ \\sigma \\left(r + 1\\right) < \\ldots < \\sigma n $。排列的符号被给定为：
 
 $ \\begin{equation} sng \\, \\sigma = \\left(-1\\right)^{\\sigma 1 + \\cdots + \\sigma r + \\left(\\frac{r\\left(r-1\\right)}{2}\\right) } \\end{equation} $
 
 wedge product $ L \\land M $被给定为：
 
-$ \\begin{equation} \\left(L \\land M \\right)\\left(\\alpha_ {1}, \\ldots, \\alpha_ {n}\\right) = \\sum \\left(sgn \\, \\alpha)L\\left(\\alpha_ {\\sigma_ {1}}, \\ldots, \\alpha_ {\\sigma r}\\right) M\\left(\\alpha_ {\\sigma \\left(r+1\\right)}, \\ldots, \\alpha_ {\\sigma n}\\right) \\end{equation} $
+$ \\begin{equation} \\left(L \\land M \\right) \\left(\\alpha_ {1}, \\ldots, \\alpha_ {n}\\right) = \\sum \\left(sgn \\, \\alpha\\right) L\\left(\\alpha_ {\\sigma_ {1}}, \\ldots, \\alpha_ {\\sigma r}\\right) M\\left(\\alpha_ {\\sigma \\left(r+1\\right)}, \\ldots, \\alpha_ {\\sigma n}\\right) \\end{equation} $
 
 其和为 $ \\sigma $的集合，每个G中coset一个。因此，
 
@@ -358,7 +358,7 @@ $ \\begin{equation} \\left(L \\land M \\right)\\left(\\alpha_ {1}, \\ldots, \\al
 
 其中
 
-$ \\begin{equation} e_ {J} = \\left(-1\\right)^{j_ {1} + \\cdots + j_ {r} + \\left(\\frac{r\\left(r - 1\\right)}{2}\\right) \\end{equation} $
+$ \\begin{equation} e_ {J} = \\left(-1\\right)^{j_ {1} + \\cdots + j_ {r} + \\left(\\frac{r\\left(r - 1\\right)}{2}\\right)} \\end{equation} $
 
 $ \\begin{equation} k_ {i} = \\sigma\\left(r + i\\right) \\end{equation} $
 
