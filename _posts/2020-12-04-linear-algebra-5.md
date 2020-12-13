@@ -367,3 +367,19 @@ $ \\begin{equation} k_ {i} = \\sigma\\left(r + i\\right) \\end{equation} $
 $ \\begin{equation} \\operatorname{det} A = \\sum_ {j_ {1} < \\cdots < j_ {r}} e_ {J} \\left\| \\begin{array}{ccc}A_ {j_ {1}, 1} & \\cdots & A_ {j_ {1}, r} \\\\ \\vdots & & \\vdots \\\\ A_ {j_ {r}, 1} & \\cdots & A_ {j_ {r}, r} \\end{array} \\right\| \\left\| \\begin{array}{ccc} A_ {k_ {1}, r+1} & \\cdots & A_ {k_ {1}, n} \\\\ \\vdots & & \\vdots \\\\ A_ {k_ {r}, r+1} & \\cdots & A_ {k_ {r}, n} \\end{array} \\right\| \\end{equation} $
 
 这是一个Laplace expansion。其他的可通过替换集合 $ \\{1, \\ldots, r \\} $和 $ \\{r+1, \\ldots, n \\} $为两个不同补集索引来获得。
+
+如果V是一个K-module，我们可把各种form modules $ \\Lambda^{r}\\left(V\\right) $放一起并使用外积来定义一个环。为简化，我们将只针对这个rank n的free K-module。modules $ \\Lambda^{r}\\left(V\\right) $ 定义为
+
+$ \\Lambda\\left(V\\right) = \\Lambda^{0}\\left(V\\right) \\otimes \\Lambda^{1}\\left(V\\right) \\otimes \\cdots \\otimes A^{n}\\left(V\\right) $
+
+这是外部直接和 - 我们之前没有谈论过。$ \\Lambda\\left(V\\right) $的元素为 (n+1)元组 $ \\left(L_ {0}, \\ldots, L_ {n}\\right), L_ {r} \\in \\Lambda^{r}\\left(V\\right) $。K元素的加法和乘法定义为(n+1)元组的。 $ \\Lambda^{0}\\left(V\\right) = K $。如果我们认定 $ \\Lambda^{k}\\left(K\\right) $其 (n + 1)元组(0, ..., 0, L, 0, ..., 0)的L在 $ \\Lambda^{r}\\left(K\\right) $中。则 $ \\Lambda^{r}\\left(K\\right) $是 $ \\Lambda\\left(V\\right) $的一个submodule且其直和分解
+
+$ \\begin{equation} \\Lambda\\left(V\\right) = \\Lambda^{0}\\left(V\\right) \\otimes \\cdots \\otimes \\Lambda^{n}\\left(V\\right) \\end{equation} $
+
+因为 $ \\Lambda^{r}\\left(V\\right) $是rank $ {n \\choose r} $的free K-module，我们看到 $ \\Lambda\\left(V\\right) $是一个free K-module且
+
+$ \\begin{equation} \\operatorname{rank} \\Lambda\\left(V\\right) = \\sum_ {r=0}^{n} {n \\choose r} = 2^{n} \\end{equation} $
+
+外积定义了一个 $ \\Lambda\\left(V\\right) $上的乘法：在forms上使用外积且线性扩展它到 $ \\Lambda\\left(V\\right) $。它分布在 $ \\Lambda\\left(V\\right) $的加法上并给了 $ \\Lambda\\left(V\\right) $一个环结构。该环是 $ V^{ * } $上的Grassman ring。它不是一个交换环，例如，如果L, M对应在 $ \\Lambda^{r} $ 和 $ \\Lambda^{s} $上，则
+
+$ \\begin{equation} L \\land M = \\left(-1\\right)^{rs}M \\land L \\end{equation} $
