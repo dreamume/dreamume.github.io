@@ -64,3 +64,19 @@ $ \\begin{equation} \\mu\\left(\\cup_ {i}A_ {i}\\right) = \\sum_ {i}\\mu\\left(A
 (iii) 连续向下，如果 $ A_ {i} \\uparrow A $（例如，$ A_ {1} \\subset A_ {2} \\subset \\ldots $ 且 $ \\cup_ {i}A_ {i} = A $）则 $ \\mu\\left(A_ {i}\\right) \\uparrow \\mu\\left(A\\right) $
 
 (iv) 连续向上，如果 $ A_ {i} \\downarrow A $（例如，$ A_ {1} \\supset A_ {2} \\supset \\ldots $ 且 $ \\cap_ {i}A_ {i} = A, \\mu\\left(A_ {1}\\right) < \\infty $）则 $ \\mu\\left(A_ {i}\\right) \\downarrow \\mu\\left(A\\right) $
+
+例子 1.1.3 实数线上的度量。$ (\\mathbf{R}, \\mathcal{R}) $上的度量被定义为给定一个Stieltjes度量函数，有以下属性：
+
+(i) F是非递减的
+
+(ii) F是右连续的，例如 $ lim_ {y \\downarrow x} F\\left(y\\right) = F\\left(x\\right) $
+
+**定理 1.1.4** 对于每个Stieltjes度量函数，有一个在 $ (\\mathbf{R}, \\mathcal{R}) $上唯一的度量 $ \\mu, \\mu\\left( (a, b]\\right) = F\\left(b\\right) - F\\left(a\\right) $
+
+F(x) = x 该度量被称为Lebesgue度量
+
+集合的集 $ \\mathbf{S} $为称为是一个semialgebra如果 (i) 它在交集下是闭合的，例如，$ S, T \\in \\mathbf{S} $ 意味着 $ S \\cap T \\in \\mathbf{S} $，且 (ii) 如果 $ S \\in \\mathbf{S} $则 $ S^{c} $是 $ \\mathbf{S} $中有限不相关集合的并。一个重要的semialgebra例子是
+
+例子 1.1.5 $ \\mathbf{S}_ {d} = $ 空集加上如下形式的所有集合
+
+$ \\begin{equation} (a_ {1}, b_ {1}] \\times \\cdots \\times (a_ {d}, b_ {d}] \\subset \\mathbf{R}^{d} \\qquad - \\infty \\le a_ {i} < b_ {i} \\le \\infty \\end{equation} $

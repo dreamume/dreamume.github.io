@@ -63,11 +63,11 @@ $ \\begin{equation} \\left(\\sum_ {i=1}^{n}a_ {i}b_ {i}\\right)^{2} = \\sum_ {i=
 
 如果 $ \\left(b_ {1}, b_ {2}, \\ldots, b_ {n}\\right) \\ne 0 $，则存在某个 $ b_ {k} \\ne 0 $，如果柯西不等式等号成立，则Lagrange's identity右边所有项必须为0。如果我们考虑包含 $ b_ {k} $的项，有
 
-$ \\begin{equality} a_ {i}b_ {k} = a_ {k} b_ {i}, \\qquad 1 \\le i \\le n\\end{equality} $
+$ \\begin{equation} a_ {i}b_ {k} = a_ {k} b_ {i}, \\qquad 1 \\le i \\le n\\end{equation} $
 
 如果我们带入 $ \\lambda = \\frac{a_ {k}}{b_ {k}}，则有
 
-$ \\begin{equality} a_ {i} = \\lambda b_ {i} \\qquad 1 \\le i \\le n \\end{equality} $
+$ \\begin{equation} a_ {i} = \\lambda b_ {i} \\qquad 1 \\le i \\le n \\end{equation} $
 
 即Lagrange's identity告诉我们对非零序列使得柯西不等式的等号成立当且仅当两个序列是成比例的。
 
