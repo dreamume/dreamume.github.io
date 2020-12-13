@@ -65,7 +65,7 @@ $ \\begin{equation} \\left(\\sum_ {i=1}^{n}a_ {i}b_ {i}\\right)^{2} = \\sum_ {i=
 
 $ \\begin{equation} a_ {i}b_ {k} = a_ {k} b_ {i}, \\qquad 1 \\le i \\le n\\end{equation} $
 
-如果我们带入 $ \\lambda = \\frac{a_ {k}}{b_ {k}}，则有
+如果我们带入 $ \\lambda = \\frac{a_ {k}}{b_ {k}} $，则有
 
 $ \\begin{equation} a_ {i} = \\lambda b_ {i} \\qquad 1 \\le i \\le n \\end{equation} $
 
