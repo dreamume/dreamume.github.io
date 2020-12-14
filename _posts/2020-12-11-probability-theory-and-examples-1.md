@@ -80,3 +80,19 @@ F(x) = x 该度量被称为Lebesgue度量
 例子 1.1.5 $ \\mathbf{S}_ {d} = $ 空集加上如下形式的所有集合
 
 $ \\begin{equation} (a_ {1}, b_ {1}] \\times \\cdots \\times (a_ {d}, b_ {d}] \\subset \\mathbf{R}^{d} \\qquad - \\infty \\le a_ {i} < b_ {i} \\le \\infty \\end{equation} $
+
+**引理 1.1.7** 如果 $ \\mathcal{S} $ 是一个semialgebra则 $ \\bar{\\mathcal{S}} = \\{ \\mathcal{S}中有限不相交集合的并 \\} $是一个代数，称为由 $ \\mathcal{S} $产生的代数
+
+代数 $ \\mathcal{A} $上的度量，我们表示为一个集合函数 $ \\mu $，
+
+(i) $ \\forall A \\in \\mathcal{A}, \\mu\\left(A\\right) \\ge \\mu\\left(\\emptyset\\right) = 0 $，且
+
+(ii) 如果 $ A_ {i} \\in \\mathcal{A} $是不相交的且它们的并在 $ \\mathcal{A} $中，则
+
+$ \\begin{equation} \\mu\\left(\\cup_ {i=1}^{\\infty}A_ {i}\\right) = \\sum_ {i=1}^{\\infty}\\mu\\left(A_ {i}\\right) \\end{equation} $
+
+$ \\mu $被称为是 $ \\sigma-finite $如果有一个集合序列 $ A_ {n} \\in \\mathcal{A} $，使得 $ \\mu\\left( A_ {n} \\right) < \\infty $ 且 $ \\cup_ {n}A_ {n} = \\Theta $。设 $ A'_ {1} = A_ {1} $且对 $ n \\ge 2 $，
+
+$ \\begin{equation} A'_ {n} = \\cup_ {m=1}^{n}A_ {m} \\qquad 或 \\qquad A'_ {n} = A_ {n} \\cap \\left(\\cap_ {m=1}^{n-1}A_ {m}^{c}\\right) \\in \\mathcal{A} \\end{equation} $
+
+我们可不失一般性假设 $ A_ {n} \\uparrow \\Theta $ 或 $ A_ {n} $是不相交的。
