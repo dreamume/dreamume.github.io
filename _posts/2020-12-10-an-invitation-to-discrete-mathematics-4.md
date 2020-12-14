@@ -47,9 +47,9 @@ $ \\begin{equation} d'_ {i} = \\left\\{\\begin{array}{ll}d_ {i} & \\text{ for } 
 
 证明：假设D'是图G' = (V', E')的score，$ V' = \\{ v_ {1}, v_ {2}, \\ldots, v_ {n-1} \\} $且 $ deg_ {G}\\left(v_ {i}\\right) = d'_ {i}, i = 1, 2, \\ldots, n - 1 $。固定一个新的顶点 $ v_ {n} $，不同于 $ v_ {1}, \\ldots, v_ {n-1} $，且定义一个新的图G = (V, E)，有
 
-\\begin{equation} V = V' \\cup \\{ v_ {n} \\} \\end{equation} $
+$ \\begin{equation} V = V' \\cup \\{ v_ {n} \\} \\end{equation} $
 
-\\begin{equation} E = E' \\cup \\{ \\{v_ {i}, v_ {n} \\}: i = n - d_ {n}, n - d_ {n} + 1, \\ldots, n - 1 \\} \\end{equation} $
+$ \\begin{equation} E = E' \\cup \\{ \\{v_ {i}, v_ {n} \\}: i = n - d_ {n}, n - d_ {n} + 1, \\ldots, n - 1 \\} \\end{equation} $
 
 用不那么形式化的语言表达，新顶点 $ v_ {n} $连接到图G'中 $ d_ {n} $个最后的顶点。明显地G有score D。
 
