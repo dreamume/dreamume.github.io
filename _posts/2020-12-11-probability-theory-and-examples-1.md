@@ -91,8 +91,8 @@ $ \\begin{equation} (a_ {1}, b_ {1}] \\times \\cdots \\times (a_ {d}, b_ {d}] \\
 
 $ \\begin{equation} \\mu\\left(\\cup_ {i=1}^{\\infty}A_ {i}\\right) = \\sum_ {i=1}^{\\infty}\\mu\\left(A_ {i}\\right) \\end{equation} $
 
-$ \\mu $被称为是 $ \\sigma-finite $如果有一个集合序列 $ A_ {n} \\in \\mathcal{A} $，使得 $ \\mu\\left( A_ {n} \\right) < \\infty $ 且 $ \\cup_ {n}A_ {n} = \\Theta $。设 $ A'_ {1} = A_ {1} $且对 $ n \\ge 2 $，
+$ \\mu $被称为是 $ \\sigma-finite $如果有一个集合序列 $ A_ {n} \\in \\mathcal{A} $，使得 $ \\mu\\left( A_ {n} \\right) < \\infty $ 且 $ \\cup_ {n}A_ {n} = \\Omega $。设 $ A'_ {1} = A_ {1} $且对 $ n \\ge 2 $，
 
 $ \\begin{equation} A'_ {n} = \\cup_ {m=1}^{n}A_ {m} \\qquad 或 \\qquad A'_ {n} = A_ {n} \\cap \\left(\\cap_ {m=1}^{n-1}A_ {m}^{c}\\right) \\in \\mathcal{A} \\end{equation} $
 
-我们可不失一般性假设 $ A_ {n} \\uparrow \\Theta $ 或 $ A_ {n} $是不相交的。
+我们可不失一般性假设 $ A_ {n} \\uparrow \\Omega $ 或 $ A_ {n} $是不相交的。
