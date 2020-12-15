@@ -35,7 +35,7 @@ category:   maths
 
 (b) 所有使得 $ T\\alpha = c \\alpha $的 $ \\alpha $向量集合被称为c的特征空间
 
-如果T是任意线性算子且c是任意常数，使得 $ T \\alpha = c \\alpha $的向量 $ \\alpha $的集合是V的一个子空间。它是线性转换 $ \\left(T - cI\\right) $的null空间。我们称c是T的一个特征值如果该子空间不是零空间，例如，如果 $ \\left(T - cI\\rigtht) $不是1:1的。如果V是有限维的，$ \\left(T - cI\\right) $不是1:1的当它的行列式的值不为零。
+如果T是任意线性算子且c是任意常数，使得 $ T \\alpha = c \\alpha $的向量 $ \\alpha $的集合是V的一个子空间。它是线性转换 $ \\left(T - cI\\right) $的null空间。我们称c是T的一个特征值如果该子空间不是零空间，例如，如果 $ \\left(T - cI\\right) $不是1:1的。如果V是有限维的，$ \\left(T - cI\\right) $不是1:1的当它的行列式的值不为零。
 
 **定理 1** 设T为有限维空间V上的一个线性算子且设c为一个常数。如下描述等效：
 
