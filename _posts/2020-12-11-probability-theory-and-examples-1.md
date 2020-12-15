@@ -96,3 +96,13 @@ $ \\mu $被称为是 $ \\sigma-finite $如果有一个集合序列 $ A_ {n} \\in
 $ \\begin{equation} A'_ {n} = \\cup_ {m=1}^{n}A_ {m} \\qquad 或 \\qquad A'_ {n} = A_ {n} \\cap \\left(\\cap_ {m=1}^{n-1}A_ {m}^{c}\\right) \\in \\mathcal{A} \\end{equation} $
 
 我们可不失一般性假设 $ A_ {n} \\uparrow \\Omega $ 或 $ A_ {n} $是不相交的。
+
+**定理 1.1.9** 设 $ \\mathcal{S} $为semialgebra且设 $ \\mu $定义在 $ \\mathcal{S} $上有 $ \\mu\\left(\\emptyset\\right) = 0 $。假设 (i) 如果 $ S \\in \\mathcal{S} $是一个有限集合 $ S_ {i} \\in \\mathcal{S} $的不相交并则 $ \\mu\\left(S\\right) = \\sum_ {i}\\mu\\left(S_ {i}\\right) $，且 (ii) 如果 $ S_ {i}, S \\in \\mathcal{S}, S = +_ {i \\ge 1}S_ {i} 则 \\mu\\left(S\\right) \\le \\sum_ {i \\ge 1}\\mu\\left(S_ {i}\\right) $。则 $ \\mu $ 有一个唯一的扩展 $ \\bar{\\mu} $是由 $ \\mathcal{S} $产生的代数 $ \\bar{\\mathcal{S}} $的一个度量。如果 $ \\bar{\\mu} $是sigma-finite则由一个唯一的扩展v是 $ \\sigma\\left(\\mathcal{S}\\right) $上的一个度量
+
+在上面的(ii)中， $ i \\ge 1 $表示一个可数的并，普通下标i或j表示一个有限的并
+
+**引理 1.1.10** 假设只有 (i) 满足，则
+
+(a) 如果 $ A, B_ {i} \\in \\bar{\\mathcal{S}}, A = +_ {i=1}^{n}B_ {i},则 \\bar{\\mu}\\left(A\\right) = \\sum_ {i}\\bar{\\mu}\\left(B_ {i}\\right) $
+
+(b) 如果 $ A, B_ {i} \\in \\bar{\\mathcal{S}}, A \\subset \\cup_ {i=1}^{n}B_ {i},则 \\bar{\\mu}\\left(A\\right) \\le \\sum_ {i}\\bar{\\mu}\\left(B_ {i}\\right) $
