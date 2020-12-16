@@ -106,3 +106,43 @@ $ \\begin{equation} A'_ {n} = \\cup_ {m=1}^{n}A_ {m} \\qquad 或 \\qquad A'_ {n}
 (a) 如果 $ A, B_ {i} \\in \\bar{\\mathcal{S}}, A = +_ {i=1}^{n}B_ {i},则 \\bar{\\mu}\\left(A\\right) = \\sum_ {i}\\bar{\\mu}\\left(B_ {i}\\right) $
 
 (b) 如果 $ A, B_ {i} \\in \\bar{\\mathcal{S}}, A \\subset \\cup_ {i=1}^{n}B_ {i},则 \\bar{\\mu}\\left(A\\right) \\le \\sum_ {i}\\bar{\\mu}\\left(B_ {i}\\right) $
+
+**$ R^{d} $上的度量** 我们下一个目标是证明定理 1.1.4对 $ R^{d} $上的版本。首先是在定义函数F上引入假设。同d = 1时相似，假设：
+
+(i) 它是非递减的，例如，如果 $ x \\le y $（意思是 $ \\forall i, x_ {i} \\le y_ {i} $）则 $ F\\left(x\\right) \\le F\\left(y\\right) $
+
+(ii) F是右连续的，例如，$ lim_ {y \\downarrow x} F\\left(y\\right) = F \\left(x\\right) $（这里 $ y \\downarrow x $表示每个 $ y_ {i} \\downarrow x_ {i} $）
+
+(iii) 如果 $ x_ {n} \\downarrow - \\infty $，例如，每个坐标有 $ F\\left(x_ {n}\\right) \\downarrow 0 $，如果 $ x_ {n} \\uparrow - \\infty $，例如，每个坐标有 $ F\\left(x_ {n}\\right)  \\uparrow 1 $
+
+考虑如下的F
+
+\\begin{equation} F\\left(x_ {1}, x_ {2}\\right) = \\left{ \\begin{array}{ll} 1 & \\text{ if } x_ {1}, x_ {2} \\ge 1 \\\\ \\frac{2}{3} & \\text{ if } x_ {1} \\ge 1 \\text{ and } 0 \\le x_ {2} < 1 \\\\ \\frac{2}{3} & \\text{ if } x_ {2} \\ge 1 \\text{ and } 0 \\le x_ {1} < 1 \\\\ 0 & otherwise \\end{array} \\right. \\end{equation} $
+
+一点思考显示如下
+
+$ \\begin{equation} \\begin{aligned} \\mu\\left(\\left(a_ {1}, b_ {1}] \\times \\left(a_ {2}, b_ {2}]\\right) &= \\mu\\left(\\left(- \\infty, b_ {1}] \\times \\left(- \\infty, b_ {2}]\\right) - \\mu \\left(\\left(- \\infty, a_ {1}] \\times \\left(- \\infty, b_ {2}]\\right) \\\\ &- \\mu \\left(\\left(- \\infty, b_ {1}] \\times \\left(- \\infty, a_ {2}]\\right) + \\mu\\left(\\left(- \\infty, a_ {1}] \\times \\left(- \\infty, a_ {2}]\\right) \\\\ &= F\\left(b_ {1}, b_ {2}\\right) - F\\left(a_ {1}, b_ {2}\\right) - F\\left(b_ {1}, a_ {2}\\right) + F\\left(a_ {1}, a_ {2}\\right) \\end{aligned} \\end{equation} $
+
+使 $ a_ {1} = a_ {2} = 1 - \\epsilon且 b_ {1} = b_ {2} = 1 且设 \\epsilon \\to 0 $我们看到
+
+$ \\begin{equation} \\mu\\left(\\{1, 1\\}\\right) = 1 - \\frac{2}{3} - \\frac{2}{3} + 0 = - \\frac{1}{3} \\end{equation} $
+
+相似的推理显示 $ \\mu\\left(\\{1, 0\\}\\right) = \\mu\\left(\\{0, 1\\}\\right) = \\frac{2}{3} $
+
+为定义度量，创造F的第三个即最后的条件，设
+
+$ \\begin{equation} A = \\left(a_ {1}, b_ {1}] \\times \\cdots \\times \\left(a_ {d}, b_ {d}] \\end{equation} $
+
+$ \\begin{equation} V = \\{a_ {1}, b_ {1}\\} \\times \\cdots \\times \\{a_ {d}, b_ {d}\\} \\end{equation} $   
+
+$ - \\infty < a_ {i} < b_ {i} < \\infty $。为强调 $ \\infty $是不允许的，我们称A为一个有限方块。则V = 方块A中的向量。如果 $ v \\in V $，设
+
+$ \\begin{equation} \\operatorname{sgn}\\left(v\\right) = \\left(-1\\right)^{# \\text{ of a's in v}}\\end{equation} $
+
+$ \\begin{equation} \\bigtriangleup_ {A}F = \\sum_ { v \\in V} \\operatorname{sgn}\\left(v\\right)F\\left(v\\right) \\end{equation} $
+
+我们将设 $ \\mu\\left(A\\right) = \\bigtriangleup_ {A}F $，所以我们必须假设
+
+(iv) $ \\bigtriangleup_ {A}F \\ge 0 $ 对所有方块A
+
+**定理 1.1.11** 假设 $ F: \\mathbf{R}^{d} \\to [0, 1] $满足上述的(i) - (iv)。则有一个 $ \\left(\\mathbf{R}^{d}, \\mathcal{R}^{d} \\right) $上的唯一概率度量 $ \\mu $使得对所有方块 $ \\mu\\left(A\\right) = \\bigtriangleup_ {A}F $

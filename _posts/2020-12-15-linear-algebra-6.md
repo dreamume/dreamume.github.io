@@ -77,7 +77,7 @@ $ \\begin{equation} f = \\left( x - c_ {1}\\right)^{d_ {1}} \\cdots \\left( x - 
 
 # Annihilating Polynomials
 
-**定义** 设T为域F上有限维向量空间V上的一个线性算子。T的minimal polynomial是（唯一的）域F上消除T的polynomials的ideal的monnic生成器
+**定义** 设T为域F上有限维向量空间V上的一个线性算子。T的minimal polynomial是（唯一的）域F上消除T的polynomials的ideal的monic生成器
 
 如果A是一个域F上 $ n \\times n $的矩阵，我们以类似的方法定义A的minimal polynomial
 
