@@ -23,6 +23,7 @@ category:   maths
 # Table of Contents
 
 1.  [Characteristic Values](#org8285248)
+2.  [Annihilating Polynomials](#org1d19076)
 
 
 <a id="org8285248"></a>
@@ -70,3 +71,16 @@ $ \\begin{equation} f = \\left( x - c_ {1}\\right)^{d_ {1}} \\cdots \\left( x - 
 且 $ \\operatorname{dim} W_ {i} = d_ {i}, i = 1, \\ldots, k $
 
 (iii) $ \\operatorname{dim} W_ {1} + \\cdots + \\operatorname{dim} W_ {k} = \\operatorname{dim} V $
+
+
+<a id="org1d19076"></a>
+
+# Annihilating Polynomials
+
+**定义** 设T为域F上有限维向量空间V上的一个线性算子。T的minimal polynomial是（唯一的）域F上消除T的polynomials的ideal的monnic生成器
+
+如果A是一个域F上 $ n \\times n $的矩阵，我们以类似的方法定义A的minimal polynomial
+
+**定理 3** 设T为n维向量空间V上的一个线性算子[或，设A为 $ n \\times n $矩阵]。T [或A]的特征和minimal polynomials有相同的根，除了重复的根
+
+**定理 4(Cayley-Hamilton)** 设T为有限维向量空间V上的一个线性算子，如果f是T的characteristic polynomial，则f(T) = 0；即minimal polynomial能被T的characteristic polynomial整除
