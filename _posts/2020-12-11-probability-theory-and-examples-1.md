@@ -117,7 +117,7 @@ $ \\begin{equation} A'_ {n} = \\cup_ {m=1}^{n}A_ {m} \\qquad 或 \\qquad A'_ {n}
 
 考虑如下的F
 
-$ \\begin{equation} F\\left(x_ {1}, x_ {2}\\right) = \\{ \\begin{array}{ll} 1 & \\text{ if } x_ {1}, x_ {2} \\ge 1 \\\\ \\frac{2}{3} & \\text{ if } x_ {1} \\ge 1 \\text{ and } 0 \\le x_ {2} < 1 \\\\ \\frac{2}{3} & \\text{ if } x_ {2} \\ge 1 \\text{ and } 0 \\le x_ {1} < 1 \\\\ 0 & otherwise \\end{array} \\right. \\end{equation} $
+$ \\begin{equation} F\\left(x_ {1}, x_ {2}\\right) = \\left\\{ \\begin{array}{ll} 1 & \\text{ if } x_ {1}, x_ {2} \\ge 1 \\\\ \\frac{2}{3} & \\text{ if } x_ {1} \\ge 1 \\text{ and } 0 \\le x_ {2} < 1 \\\\ \\frac{2}{3} & \\text{ if } x_ {2} \\ge 1 \\text{ and } 0 \\le x_ {1} < 1 \\\\ 0 & \\text{ otherwise } \\end{array} \\right. \\end{equation} $
 
 一点思考显示如下
 
