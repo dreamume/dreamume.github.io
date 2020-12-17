@@ -146,3 +146,41 @@ $ \\begin{equation} \\triangle_ {A}F = \\sum_ { v \\in V} \\operatorname{sgn}\\l
 (iv) $ \\triangle_ {A}F \\ge 0 $ 对所有方块A
 
 **定理 1.1.11** 假设 $ F: \\mathbf{R}^{d} \\to [0, 1] $满足上述的(i) - (iv)。则有一个 $ \\left(\\mathbf{R}^{d}, \\mathcal{R}^{d} \\right) $上的唯一概率度量 $ \\mu $使得对所有方块 $ \\mu\\left(A\\right) = \\triangle_ {A}F $
+
+**例子 1.1.12** 假设 $ F\\left(x\\right) = \\prod_ {i=1}^{d}F_ {i}\\left(x\\right), F_ {i} $满足定理1.1.4的(i)和(ii)。在这个情况下
+
+$ \\begin{equation} \\triangle_ {A}F = \\prod_ {i=1}^{d} \\left(F_ {i}\\left(b_ {i}\\right) - F_ {i}\\left(a_ {i}\\right)\\right) \\end{equation} $
+
+当 $ \\forall i, F_ {i}\\left(x\\right) = x $，这个度量被称为 $ R^{d} $上的Lebesgue度量
+
+证明：对所有有限方块我们设 $ \\mu\\left(A\\right) = \\triangle_ {A}F $且使用单调性扩展定义 $ \\mathcal{S}_ {d} $。为检查定理1.1.9的(i)，称 $ A = +_ {k}B_ {k} $是A的一个规则子分割如果有一个序列 $ a_ {i} = \\alpha_ {i, 0} < \\alpha_ {i, 1} < \\cdots < \\alpha_ {i, n_ {i}} = b_ {i} $使得每个方块 $ B_ {k} $有形式
+
+$ \\begin{equation} (\\alpha_ {1, j_ {1} - 1}, \\alpha_ {1, j_ {1}}] \\times \\cdots \\times (\\alpha_ {d, j_ {d} - 1}, \\alpha_ {d, j_ {d}}], 1 \\le j_ {i} \\le n_ {i} \\end{equation} $
+
+容易看出对方块分割 $ \\lambda \\left(A\\right) = \\sum_ {k}\\lambda\\left(B_ {k}\\right) $。（首先考虑例子所有的终点是有限的且利用限制来获得一般例子）扩展这个结果到一般化的有限子分割 $ A = +_ {j}A_ {j} $，进一步分割得到一个规则的分割形式。
+
+(ii)的证明根定理1.1.4里的基本一样。为简化我们设
+
+$ \\begin{equation} \\left(x, y\\right) = \\left(x_ {1}, y_ {1}\\right) \\times \\cdots \\times \\left(x_ {d}, y_ {d}\\right) \\end{equation} $
+
+$ \\begin{equation} (x, y] = (x_ {1}, y_ {1}] \\times \\cdots \\times (x_ {d}, y_ {d}] \\end{equation} $
+
+$ \\begin{equation} [x, y] = [x_ {1}, y_ {1}] \\times \\cdots \\times [x_ {d}, y_ {d}] \\end{equation} $
+
+$ x, y \\in R^{d} $。假设首先 $ - \\infty < a < b < \\infty $，不等式意味着每个部分是有限的，假设 $ (a, b] \\subset \\cup_ {i \\ge 1}(a^{i}, b^{i}], - \\infty < a^{i} < b^{i} < \\infty $。设 $ \\bar{1} = (1, \\ldots, 1}, \\delta > 0 $使得
+
+$ \\begin{equation} \\mu\\left((a + \\delta \\bar{1}, b]\\right) < \\mu\\left((a, b]\\right) + \\epsilon \\end{equation} $
+
+带入 $ eta_ {i} $使得
+
+$ \\begin{equation} \\mu\\left((a, b^{i} + \\eta_ {i} \\bar{1}]\\right) < \\mu\\left((a^{i}, b^{i}]\\right) + \\epsilon 2^{-i} \\end{equation} $
+
+开发方块 $ \\left(a^{i}, b^{i} + \\eta_ {i} \\bar{1}\\right) $覆盖 $ [a + \\delta \\bar{1}, b] $，这样有一个有限子覆盖 $ \\left(\\alpha^{j}, \\beta^{j} \\right), 1 \\le j \\le J $。因为 $ (a + \\delta \\bar{1}, b] \\subset \\cup_ {i=1}^{J} (\\alpha^{j}, \\beta^{j}] $，(b)在引理1.1.10中意味着
+
+$ \\begin{equation} \\mu\\left([a + \\delta \\bar{1}, b]\\right) \\le \\sum_ {j=1}^{J}\\mu\\left((\\alpha^{j}, \\beta^{j}]\\right) \\le \\sum_ {i=1}^{\\infty}\\mu\\left((a^{i}, b^{i} + \\eta_ {i}\\bar{1}]\\right) \\end{equation} $
+
+这样，选择好 $ \\delta 和 \\eta_ {i} $，有
+
+$ \\begin{equation} \\mu\\left((a, b]\\right) \\le 2 \\epsilon + \\sum_ {i=1}^{\\infty} \\mu\\left((a^{i}, b^{i}]\\right) \\end{equation} $
+
+因为 $ \\epsilon $是任意的，我们已证明 $ - \\infty < a < b < \\infty $的结果。
