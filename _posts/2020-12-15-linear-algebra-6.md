@@ -24,6 +24,7 @@ category:   maths
 
 1.  [Characteristic Values](#org8285248)
 2.  [Annihilating Polynomials](#org1d19076)
+3.  [Invariant Subspaces](#orga4421ab)
 
 
 <a id="org8285248"></a>
@@ -84,3 +85,28 @@ $ \\begin{equation} f = \\left( x - c_ {1}\\right)^{d_ {1}} \\cdots \\left( x - 
 **定理 3** 设T为n维向量空间V上的一个线性算子[或，设A为 $ n \\times n $矩阵]。T [或A]的特征和minimal polynomials有相同的根，除了重复的根
 
 **定理 4(Cayley-Hamilton)** 设T为有限维向量空间V上的一个线性算子，如果f是T的characteristic polynomial，则f(T) = 0；即minimal polynomial能被T的characteristic polynomial整除
+
+
+<a id="orga4421ab"></a>
+
+# Invariant Subspaces
+
+**定义** 设V是一个向量空间且T是V上的一个线性算子。如果W是V的一个子空间，我们说W在T下不变如果对W中每个向量 $ \\alpha, T \\alpha \\in W $ ，例如，如果T(W)包含在W中
+
+**定义** 设W是T的invariant subspace且设 $ \\alpha $为V上的一个向量。T-conductor of $ \\alpha $ into W是集合 $ S_ {T}\\left( \\alpha, W\\right) $，包含所有的polynomials g使得 $ g\\left(T\\right) \\alpha $在W中
+
+**引理** 设V是域F上的一个有限维向量空间，设T为V上的线性算子使得T的minimal polynomial是线性因子的乘积
+
+$ \\begin{equation} p = \\left(x - c_ {1}\\right)^{r_ {1}} \\cdots \\left(x - c_ {k}\\right)^{r_ {k}}, \\qquad c_ {i} \\text{ in } F \\end{equation} $
+
+设W是V的子空间（ $ W \\ne V $），invariant under T。存在V中一个向量 $ \\alpha $使得
+
+(a) $ \\alpha $不在W中
+
+(b) $ \\left(T - cI\\right) \\alpha $在W中，c为算子T的某个特质值
+
+**定理 6** 设V为域F上的有限维向量空间，设T为V上的线性算子，则T是可对角化的当且仅当T的minimal polynomial有如下形式
+
+$ \\begin{equation} p = \\left(x - c_ {1}\\right) \\cdots \\left(x - c_ {k}\\right) \\end{equation} $
+
+$ c_ {1}, \\ldots, c_ {k} $是F上不同的元素
