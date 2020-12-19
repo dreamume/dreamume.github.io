@@ -24,6 +24,8 @@ category:   maths
 
 1.  [PASSAGE TO A MORE GENERAL IDENTITY](#orgd139ef4)
 2.  [EQUALITY AND A GAUGE OF PROPORTIONALITY](#org170d964)
+3.  [exercises](#orgbe0825f)
+    1.  [Milne and Gauges of Proportionality](#org2e31f77)
 
 对于等式 $ \\left(a_ {1}^{2} + a_ {2}^{2}\\right) \\left(b_ {1}^{2} + b_ {2}^{2}\\right) = \\left(a_ {1}b_ {1} + a_ {2}b_ {2}\\right)^{2} + \\left(a_ {1}b_ {2} - a_ {2}b_ {1}\\right)^{2} $，当
 
@@ -76,3 +78,29 @@ $ \\begin{equation} a_ {i} = \\lambda b_ {i} \\qquad 1 \\le i \\le n \\end{equat
 $ \\begin{equation} Q_ {n} = \\frac{1}{2} \\sum_ {i=1}^{n} \\sum_ {j=1}^{n} \\left(a_ {i}b_ {j} - a_ {j}b_ {i}\\right)^{2} \\end{equation} $
 
 有两个有用的解释。我们引入它本来是测量柯西不等式两边的差异，现在我们看到它也能测量两个向量 $ \\left(a_ {1}, a_ {2}, \\ldots, a_ {n}\\right)和\\left(b_ {1}, b_ {2}, \\ldots, b_ {n}\\right) $是成比例的。
+
+
+<a id="orgbe0825f"></a>
+
+# exercises
+
+
+<a id="org2e31f77"></a>
+
+## Milne and Gauges of Proportionality
+
+如果我们限制向量中的元素为正，则可使用如下和
+
+$ \\begin{equation} R == \\frac{1}{2} \\sum_ {i=1}^{n} \\sum_ {j=1}^{n} \\frac{\\left(a_ {i}b_ {j} - a_ {j}b_ {i}\\right)^{2}}{\\left(a_ {i} +b_ {i}\\right)\\left(a_ {j} + b_ {j}\\right)} \\end{equation} $
+
+利用这个等式证明E.A. Milne的不等式：
+
+$ \\begin{equation} \\left\\{ \\sum_ {j=1}^{n} \\left(a_ {j} + b_ {j}\\right) \\right\\} \\left\\{ \\sum_ {j=1}^{n} \\frac{a_ {j}b_ {j}}{\\left(a_ {j} + b_ {j}\\right)} \\right\\} \\le \\left\\{ \\sum_ {j=1}^{n} a_ {j} \\right\\} \\left\\{ \\sum_ {j=1}^{n} b_ {j} \\right\\} \\end{equation} $
+
+并确定当且仅当向量 $ \\left(a_ {1}, a_ {2}, \\ldots, a_ {n} \\right) 和 \\left(b_ {1}, b_ {2}, \\ldots, b_ {n} \\right) $成比例时等号成立
+
+证明：利用如下等式改写等式两边的形式：
+
+$ \\begin{equation} \\left\\{ \\sum_ {j=1}^{n} a_ {j} \\right\\} \\left\\{ \\sum_ {j=1}^{n} b_ {j} \\right\\} = \\sum_ {1 \\le i < j \\le n} \\left(a_ {i}b_ {j} + a_ {j} b_ {i} \\right) \\end{equation} $
+
+然后左边减去右边即可得到R形式的式子，则得证
