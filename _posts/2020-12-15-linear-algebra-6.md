@@ -25,6 +25,7 @@ category:   maths
 1.  [Characteristic Values](#org8285248)
 2.  [Annihilating Polynomials](#org1d19076)
 3.  [Invariant Subspaces](#orga4421ab)
+4.  [Direct-Sum Decompositions](#orgc543fdc)
 
 
 <a id="org8285248"></a>
@@ -110,3 +111,30 @@ $ \\begin{equation} p = \\left(x - c_ {1}\\right)^{r_ {1}} \\cdots \\left(x - c_
 $ \\begin{equation} p = \\left(x - c_ {1}\\right) \\cdots \\left(x - c_ {k}\\right) \\end{equation} $
 
 $ c_ {1}, \\ldots, c_ {k} $是F上不同的元素
+
+
+<a id="orgc543fdc"></a>
+
+# Direct-Sum Decompositions
+
+**定义** 如果V是一个向量空间，V的projection E是V上的一个线性算子使得 $ E^{2} = E $
+
+假设E是一个projection，设R为E的range，设N为E的null space
+
+1. 向量 $ \\beta $在range R中当且仅当 $ E \\beta = \\beta $。如果 $ \\beta = E \\alpha $，则 $ E \\beta = E^{2} \\alpha = E \\alpha = \\beta $。相反地，如果 $ \\beta == E \\beta $，则 $ \\beta $在E的range中
+2. $ V = R \\oplus N $
+3. $ \\alpha $作为R和N中向量和的唯一表达为 $ \\alpha = E \\alpha + \\left(\\alpha - E \\alpha\\right) $
+
+任意projection E是可对角化的。如果 $ \\{\\alpha_ {1}, \\ldots, \\alpha_ {r} \\} $是R的一个基且 $ \\{ \\alpha_ {r+1}, \\ldots, \\alpha_ {n} \\} $是N的一个基，则基 $ \\mathcal{B} = \\{\\alpha_ {1}, \\ldots, \\alpha_ {n} \\} $对角化E:
+
+$ \\begin{equation} [E]_ {\\mathcal{B}} = \\left[ \\begin{array}{ccc} I & 0 \\\\ 0 & 0 \\end{array} \\right] \\end{equation} $
+
+I为 $ r \\times r $单位矩阵。projections可被用来描述空间V的直和分解。设 $ V = W_ {1} \\oplus \\cdots \\oplus W_ {k} $，对每个j我们定义一个V上的算子 $ E_ {j} $。设 $ \\alpha $在V中，$ \\alpha = \\alpha_ {1} + \\cdots + \\alpha_ {k}, \\alpha_ {i} \\in W_ {i} $。定义 $ E_ {j} \\alpha = \\alpha_ {j} $，则 $ E_ {j} $的range是 $ W_ {j} $且 $ E_ {j}^{2} = E_ {j} $。$ E_ {j} $的null space是子空间
+
+$ \\begin{equation} \\left( W_ {1} + \\cdots + W_ {j-1} + W_ {j+1} + \\cdots + W_ {k} \\right) \\end{equation} $
+
+我们有
+
+$ \\begin{equation} \\alpha = E_ {1} \\alpha + \\cdots + E_ {k} \\alpha, \\forall \\alpha \\in V \\end{equation} $
+
+即 $ I = E_ {1} + \\cdots + E_ {k} $
