@@ -26,6 +26,7 @@ category:   maths
 2.  [Annihilating Polynomials](#org1d19076)
 3.  [Invariant Subspaces](#orga4421ab)
 4.  [Direct-Sum Decompositions](#orgc543fdc)
+5.  [Invariant Direct Sums](#org9525b87)
 
 
 <a id="org8285248"></a>
@@ -138,3 +139,40 @@ $ \\begin{equation} \\left( W_ {1} + \\cdots + W_ {j-1} + W_ {j+1} + \\cdots + W
 $ \\begin{equation} \\alpha = E_ {1} \\alpha + \\cdots + E_ {k} \\alpha, \\forall \\alpha \\in V \\end{equation} $
 
 即 $ I = E_ {1} + \\cdots + E_ {k} $
+
+
+<a id="org9525b87"></a>
+
+# Invariant Direct Sums
+
+给定一个V的decomposition，T在每个 $ W_ {i} $的限制上引入一个线性算子 $ T_ {i} $。如果 $ \\alpha $是V中一个向量，我们有唯一的向量 $ \\alpha_ {1}, \\ldots, \\alpha_ {k}, \\alpha_ {i} \\in W_ {i} $，使得
+
+$ \\begin{equation} \\alpha = \\alpha_ {1} + \\cdots + \\alpha_ {k} \\end{equation} $
+
+且 $ \\begin{equation} T \\alpha = T_ {1} \\alpha_ {1} + \\cdots + T_ {k}\\alpha_ {k} \\end{equation} $
+
+我们描述这个形势称T是算子 $ T_ {1}, \\ldots, T_ {k} $的直和。必须记住使用这个术语时 $ T_ {i} $不是V上的线性算子，而是在各自的子空间 $ W_ {i} $上的。
+
+我们注意到矩阵也有类似的情况。假设我们对每个 $ W_ {i} $选择一个有序基 $ \\mathcal{B}_ {i} $且设 $ \\mathcal{B} $为V的有序基包含 $ \\mathcal{B}_ {i} $的联合，按 $ \\mathcal{B}_ {1}, \\ldots, \\mathcal{B}_ {k} $的顺序排列，使得 $ \\mathcal{B} $为V的一个基。容易看到如果 $ A = [T]_ {\\mathcal{B}}且 A_ {i} = [T_ {i}]_ {\\mathcal{B_ {i}}} $则A有如下形式
+
+$ \\begin{equation} A = \\left[ \\begin{array}{ccc} A_ {1} & 0 \\cdots 0 \\\\ 0 & A_ {2} & \\cdots & 0 \\\\ \\vdots & \\vdots & & \\vdots \\\\ 0 & 0 & \\cdots \\ A_ {k} \\end{array} \\right] \\end{equation} $
+
+$ A_ {i} 是一个 d_ {i} \\times d_ {i} $的矩阵（ $ d_ {i} = \\operatorname{dim}W_ {i} \\right) $ ），这可被称为A是矩阵 $ A_ {1}, \\ldots, A_ {k} $的直和
+
+**定理 10** 设T为V空间的线性算子，且设 $ W_ {1}, \\ldots, W_ {k}和E_ {1}, \\ldots, E_ {k} $为上节所提。则一个充分必要条件是每个子空间 $ W_ {i} $在T下是invariant的指T在每个projections $ E_ {i} $上可交换，例如
+
+$ \\begin{equation} TE_ {i} = E_ {i}T, \\qquad i = 1, \\ldots, k \\end{equation} $
+
+**定理 11** 设T为有限维空间v上的一个线性算子，如果T是可对角化的且如果 $ c_ {1}, \\ldots, c_ {k} $为T的不同的特征值，则存在V上的线性算子 $ E_ {1}, \\ldots, E_ {k} $使得
+
+(i) $ T = c_ {1}E_ {1} + \\cdots + c_ {k} E_ {k} $
+
+(ii) $ I = E_ {1} + \\cdots + E_ {k} $
+
+(iii) $ E_ {i} E_ {j} = 0, i \\ne j $
+
+(iv) $ E_ {i}^{2} = E_ {i}（E_ {i} $ 是一个projection
+
+(v) $ E_ {i} $的range是T带特征值 $ c_ {i} $ 的特征空间
+
+相反地，如果存在k个不同的常量 $ c_ {1}, \\ldots, \\c_ {k} $和k个非零的线性算子 $ E_ {1}, \\ldots, E_ {k} $满足条件(i), (ii)和(iii)，则T是可对角化的，$ c_ {1}, \\ldots, c_ {k} $为T的不同的特征值，且条件(iv)和(v)也会满足

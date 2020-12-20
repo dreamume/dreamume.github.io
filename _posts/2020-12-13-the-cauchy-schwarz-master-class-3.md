@@ -91,7 +91,7 @@ $ \\begin{equation} Q_ {n} = \\frac{1}{2} \\sum_ {i=1}^{n} \\sum_ {j=1}^{n} \\le
 
 如果我们限制向量中的元素为正，则可使用如下和
 
-$ \\begin{equation} R == \\frac{1}{2} \\sum_ {i=1}^{n} \\sum_ {j=1}^{n} \\frac{\\left(a_ {i}b_ {j} - a_ {j}b_ {i}\\right)^{2}}{\\left(a_ {i} +b_ {i}\\right)\\left(a_ {j} + b_ {j}\\right)} \\end{equation} $
+$ \\begin{equation} R = \\frac{1}{2} \\sum_ {i=1}^{n} \\sum_ {j=1}^{n} \\frac{\\left(a_ {i}b_ {j} - a_ {j}b_ {i}\\right)^{2}}{\\left(a_ {i} +b_ {i}\\right)\\left(a_ {j} + b_ {j}\\right)} \\end{equation} $
 
 利用这个等式证明E.A. Milne的不等式：
 
