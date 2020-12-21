@@ -27,6 +27,7 @@ category:   maths
 3.  [Invariant Subspaces](#orga4421ab)
 4.  [Direct-Sum Decompositions](#orgc543fdc)
 5.  [Invariant Direct Sums](#org9525b87)
+6.  [THe Primary Decomposition Theorem](#org3f41311)
 
 
 <a id="org8285248"></a>
@@ -176,3 +177,54 @@ $ \\begin{equation} TE_ {i} = E_ {i}T, \\qquad i = 1, \\ldots, k \\end{equation}
 (v) $ E_ {i} $的range是T带特征值 $ c_ {i} $ 的特征空间
 
 相反地，如果存在k个不同的常量 $ c_ {1}, \\ldots, c_ {k} $和k个非零的线性算子 $ E_ {1}, \\ldots, E_ {k} $满足条件(i), (ii)和(iii)，则T是可对角化的，$ c_ {1}, \\ldots, c_ {k} $为T的不同的特征值，且条件(iv)和(v)也会满足
+
+
+<a id="org3f41311"></a>
+
+# THe Primary Decomposition Theorem
+
+**定理 12(Primary Decomposition Theorem)** 设T为域F上有限维向量空间V上的一个线性算子，设p为T的minimal polynomial，
+
+$ \\begin{equation} p = p_ {1}^{r_ {1}} \\cdots p_ {k}^{r_ {k}} \\end{equation} $
+
+$ p_ {i} $是域F上不同的不可约monic polynomials且 $ r_ {i} $是一个正整数。设 $ W_ {i}为 p_ {i}\\left(T\\right)^{r_ {i}} 的null space, i = 1, \\ldots, k $，则
+
+(i) $ V = W_ {1} \\oplus \\cdots \\oplus W_ {k} $
+
+(ii) 每个 $ W_ {i} $在T下是invariant的
+
+(iii) 如果 $ T_ {i} $是T在 $ W_ {i} $上导出的算子，则 $ T_ {i} 的 minimal polynomial是 p_ {i}^{r_ {i}} $
+
+**推论** 如果 $ E_ {1}, \\ldots, E_ {k} $是T的primary decomposition有关的projections，则每个 $ E_ {i} $是T上的一个polynomial，且如果一个线性算子U与T能交换则U交换每个 $ E_ {i} $，例如，每个子空间 $ W_ {i} $在U上是invariant的
+
+在定理12的记号证明中，让我们看一下T的minimal polynomials是degree为1的polynomials乘积的特殊例子，例如，该例子中每个 $ p_ {i} 是这个形式：p_ {i} = x - c_ {i} $。$ E_ {i} $的range是 $ \\left(T - c_ {i}I\\right)^{r_ {i}} $的null space $ W_ {i} $。设 $ D = c_ {1}E_ {1} + \\cdots + c_ {k}E_ {k} $。通过定理11，D是一个可对角化算子我们称为T的可对角化部分。让我们看一下算子N = T - D。现在
+
+$ \\begin{equation} T = TE_ {1} + \\cdots + TE_ {k} \\end{equation} $
+
+$ \\begin{equation} D = c_ {1}E_ {1} + \\cdots + c_ {k}E_ {k} \\end{equation} $
+
+所以
+
+$ \\begin{equation} N = \\left(T - c_ {1}I\\right)E_ {1} + \\cdots + \\left(T - c_ {k}I\\right)E_ {k} \\end{equation} $
+
+熟悉projection后，我们容易看到
+
+$ \\begin{equation} N^{2} = \\left(T - c_ {1}I\\right)^{2}E_ {1} + \\cdots + \\left(T - c_ {k}I\\right)^{2}E_ {k} \\end{equation} $
+
+一般的，有
+
+$ \\begin{equation} N^{r} = \\left(T - c_ {1}I\\right)^{r}E_ {1} + \\cdots + \\left(T - c_ {k}I\\right)^{r}E_ {k} \\end{equation} $
+
+当对每个i， $ r \\ge r_ {i} $时，我们有 $ N^{r} = 0 $，因为算子 $ \\left(T - c_ {i}I\\right)^{r} $在 $ E_ {i} $的range上为0
+
+**定义** 设N为向量空间V上的线性算子。我们说N是nilpotent的如果有一个正整数r使得 $ N^{r} = 0 $
+
+**定理 13** 设T为域F上有限维向量空间V上的一个线性算子，假设T的mininmal polynomial在F上分解为线性polynomial的乘积。则V上一个可对角化算子和V上一个nilpotent算子N使得
+
+(i) T = D + N
+
+(ii) DN = ND
+
+可对角化算子D和nilpotent算子N为(i)和(ii)唯一决定且它们都是T的polynomial
+
+**推论** 设V为一个代数闭合域F上的有限维向量空间，例如，复数域，则V上的每个线性算子T可被写为可交换的一个可对角化算子D和一个nilpotent算子N的和。这些算子D和N是唯一的且都是T的polynomial
