@@ -193,7 +193,7 @@ $ \\begin{equation} \\mu\\left((a, b]\\right) \\le 2 \\epsilon + \\sum_ {i=1}^{\
 
 当我们定义随机变量在其上之后概率空间变得更有趣了。一个定义在 $ \\Omega $上的实值函数X为称为随机变量如果对每个Borel集 $ B \\subset R $我们有 $ X^{-1}\\left(B\\right) = \\{ \\omega: X\\left(\\omega\\right) \\in B\\} \\in \\mathcal{F} $。当我们需要强调 $ \\sigma $ -field，我们说X是 $ \\mathcal{F} $-measurable 或写成 $ X \\in \\mathcal{F} $。如果 $ \\Omega $是一个离散概率空间，则任意函数 $ X : \\Omega \\to \\mathbf{R} $h是一个随机变量。一个有用的随机变量的例子为集合 $ A \\in \\mathcal{F} $的指导函数：
 
-$ \\begin{equation} 1_ {A}\\left(\\omega\\right) = \\{ \\begin{array}{ll} 1 & \\omega \\in A \\\\ 0 & \\omega \\notin A \\end{array} \\right. \\end{equation} $
+$ \\begin{equation} 1_ {A}\\left(\\omega\\right) = \\left\\{ \\begin{array}{ll} 1 & \\omega \\in A \\\\ 0 & \\omega \\notin A \\end{array} \\right. \\end{equation} $
 
 该记号假设提醒你这个函数是A上的1。分析人士称这个对象为A的特征函数。在概率上，该术语使用有些不同
 
