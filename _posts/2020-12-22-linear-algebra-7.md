@@ -3,7 +3,7 @@ layout:     post
 title:      "Linear Algebra(Chapter 7) by Hoffman"
 subtitle:   "The Rational and Jordan Forms"
 thumbnail-img: ""
-date:       2020-12-12 19:00
+date:       2020-12-22 19:00
 author:     "dreamume"
 tags: 		[linear algebra]
 category:   maths

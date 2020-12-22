@@ -24,6 +24,7 @@ category:   maths
 
 1.  [Measure Theory](#org5966362)
     1.  [Probability Spaces](#orga94cfd0)
+    2.  [Distributions](#orgc14a0ba)
 
 
 <a id="org5966362"></a>
@@ -184,3 +185,44 @@ $ \\begin{equation} \\mu\\left([a + \\delta \\bar{1}, b]\\right) \\le \\sum_ {j=
 $ \\begin{equation} \\mu\\left((a, b]\\right) \\le 2 \\epsilon + \\sum_ {i=1}^{\\infty} \\mu\\left((a^{i}, b^{i}]\\right) \\end{equation} $
 
 因为 $ \\epsilon $是任意的，我们已证明 $ - \\infty < a < b < \\infty $的结果。
+
+
+<a id="orgc14a0ba"></a>
+
+## Distributions
+
+当我们定义随机变量在其上之后概率空间变得更有趣了。一个定义在 $ \\Omega $上的实值函数X为称为随机变量如果对每个Borel集 $ B \\subset R $我们有 $ X^{-1}\\left(B\\right) = \\{ \\omega: X\\left(\\omega\\right) \\in B\\} \\in \\mathcal{F} $。当我们需要强调 $ \\sigma $ -field，我们说X是 $ \\mathcal{F} $-measurable 或写成 $ X \\in \\mathcal{F} $。如果 $ \\Omega $是一个离散概率空间，则任意函数 $ X : \\Omega \\to \\mathbf{R} $h是一个随机变量。一个有用的随机变量的例子为集合 $ A \\in \\mathcal{F} $的指导函数：
+
+$ \\begin{equation} 1_ {A}\\left(\\omega\\right) = \\{ \\begin{array}{ll} 1 & \\omega \\in A \\\\ 0 & \\omega \\notin A \\end{array} \\right. \\end{equation} $
+
+该记号假设提醒你这个函数是A上的1。分析人士称这个对象为A的特征函数。在概率上，该术语使用有些不同
+
+如果X是一个随机变量，则X引入R上一个概率测度称为它的分布，对Borel集合A设置 $ \\mu\\left(A\\right) = P\\left(X \\in A\\right) $。使用以上介绍的记号，右边可被写为 $ P\\left(X^{-1}\\left(A\\right)\\right) $。我们把 $ A \\in \\mathcal{R} $变为 $ X^{-1}\\left(A\\right) \\in \\mathcal{F} $且用P作用在该集合上。
+
+为检测 $ \\mu $是一个概率度量我们观察到如果 $ A_ {i} $是不相交的则使用 $ \\mu $的定义；X落于联合中的事实当且仅当它落于 $ A_ {i} $中的一个；事实如果集合 $ A_ {i} \\in \\mathcal{R} $为不相交的则事件 $ \\{ X \\in A_ {i} \\} $是不相交的；且 $ \\mu $重定义；我们有
+
+$ \\begin{equation} \\mu\\left(\\cup_ {i}A_ {i}\\right) = P\\left(X \\in \\cup_ {i}A_ {i}\\right) = P \\left(\\cup_ {i}\\{ X \\in A_ {i} \\}\\right) = \\sum_ {i}P\\left(X \\in A_ {i}\\right) = \\sum_ {i}\\mu\\left(A_ {i}\\right) \\end{equation} $
+
+一个随机变量X的分布通常被描述为给定它的分布函数，$ F\\left(x\\right) = P\\left(X \\le x\\right) $
+
+**定理 1.2.1** 任意分布函数F有如下属性：
+
+(i) F是非递减的
+
+(ii) $ \\lim_ {x \\to \\infty}F\\left(x\\right) = 1, \\lim_ {x \\to - \\infty}F\\left(x\\right) = 0 $
+
+(iii) F是右连续的，例如，$ \\lim_ {y \\downarrow x}F\\left(y\\right) = F\\left(x\\right) $
+
+(iv) 如果 $ F\\left(x-\\right) = \\lim_ {y \\uparrow x}F\\left(y\\right) 则 F\\left(x-\\right) = P\\left(X < x\\right) $
+
+(v) $ P\\left(X = x\\right) = F\\left(x\\right) - F\\left(x-\\right) $
+
+证明：为证明(i)，注意如果 $ x \\le y 则 \\{X \\le x\\} \\subset \\{X \\le y\\} $，且然后使用(i)在定理 1.1.1来得到 $ P\\left(X \\le x\\right) \\le P\\left(X \\le y\\right) $
+
+为证明(ii)，我们观察到如果 $ x \\uparrow \\infty 则 \\{ X \\le x \\} \\uparrow \\Omega $，而如果 $ x \\downarrow - \\infty 则 \\{X \\le x\\} \\downarrow \\emptyset $且使用定理1.1.1的(iii)和(iv)
+
+为证明(iii)，我们观察到如果 $ y \\downarrow x 则 \\{X \\le y\\} \\downarrow \\{ X \\le x \\} $
+
+为证明(iv)，我们观察到如果 $ y \\uparrow x 则\\{X \\le y\\} \\uparrow \\{ X < x \\} $
+
+对(v)，注意 $ P \\left(X = x\\right) = P\\left(X \\le x\\right) - P \\left(X < x\\right) $且使用(iii)和(iv)
