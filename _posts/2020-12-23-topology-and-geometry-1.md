@@ -43,6 +43,6 @@ $ \\begin{equation} dist: X \\times X \\to R \\end{equation} $
 
 在度量空间X中我们定义 $ \\epsilon $球， $ \\epsilon > 0 $，对于一个点 $ x \\in X $ 有
 
-$ \\begin{equation} B_ {\\epsilon}\\left(x\\right) = \\{ y \\in X | dist\\left(x, y\\right) < \\epsilon \\end{equation} $
+$ \\begin{equation} B_ {\\epsilon}\\left(x\\right) = \\{ y \\in X \\| dist\\left(x, y\\right) < \\epsilon \\end{equation} $
 
 一个子集 $ U \\subset X $被称为是开的，如果对每个点 $ x \\in U $，有一个 $ \\epsilon $球把x在U中完全包含。一个子集被称为闭的，如果它的补是开的。
