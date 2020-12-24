@@ -141,7 +141,7 @@ $ \\begin{equation} p \\tau = gf \\tau = g r_ {j} \\beta_ {j} + g \\beta_ {0} + 
 
 使用定义，$ p \\tau $在 $ W_ {j-1} $中，且右边最后两项也在 $ W_ {j-1} $中，因此，$ gr_ {j} \\beta_ {j} $在 $ W_ {j-1} $中，现在我们使用步骤1的条件(b)：
 
-$ \\begin{equation} \\begin{aligned} \\operatorname{deg}\\left(gr_ {j}\\right) & \\ge \\operatorname{deg} s\\left(\\beta_ {j}; W_ {j-1}\\right) \\\\ &= \\operatorname{deg} p_ {j} \\\\ \\ge \\operatorname{deg} s\\left(\\tau; W_ {j-1}\\right) \\\\ &= \\operatorname{deg} p \\\\ &= \\operatorname{deg}\\left(fg\\right) \\end{aligned} \\end{equation} $
+$ \\begin{equation} \\begin{aligned} \\operatorname{deg}\\left(gr_ {j}\\right) & \\ge \\operatorname{deg} s\\left(\\beta_ {j}; W_ {j-1}\\right) \\\\ &= \\operatorname{deg} p_ {j} \\\\ &\\ge \\operatorname{deg} s\\left(\\tau; W_ {j-1}\\right) \\\\ &= \\operatorname{deg} p \\\\ &= \\operatorname{deg}\\left(fg\\right) \\end{aligned} \\end{equation} $
 
 这样 $ \\operatorname{deg}r_ {j} \\ge \\operatorname{deg}f $，这跟j的选择矛盾。我们现在知道f整除每个 $ g_ {i} $且因此 $ \\beta_ {0} = f \\tau $。因为 $ W_ {0} $是T-admissible的，当 $ \\tau_ {0} $在 $ W_ {0} $中时 $ \\beta_ {0} = f \\tau_ {0} $。我们通过步骤2重新标识一个直接形式的断言即每个子空间 $ W_ {1}, W_ {2}, \\ldots, W_ {r} $是T-admissible的
 
