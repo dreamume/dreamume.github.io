@@ -77,7 +77,7 @@ $ \\begin{equation} \\left[ \\begin{array}{ccc} 0 & 0 & 0 & \\cdots & 0 & -c_ {0
 
 (i) $ V = W_ {0} \\oplus Z\\left(\\alpha_ {1}; T\\right) \\oplus \\cdots \\oplus Z\\left(\\alpha_ {r}; T\\right) $
 
-(ii) $ p_ {k} 整除 p_ {k-1}, k = 2, \\ldots, r $
+(ii) $ p_ {k-1} 整除 p_ {k}, k = 2, \\ldots, r $
 
 更进一步，整数r和annihilators $ p_ {1}, \\ldots, p_ {r} $被(i)和(ii)唯一决定且没有 $ \\alpha_ {k} $为0
 
@@ -93,13 +93,13 @@ $ \\begin{equation} W_ {k} = W_ {0} + Z\\left(\\beta_ {1};T\\right) + \\cdots + 
 
 则conductor $ p_ {k} = s\\left(\\beta_ {k}; W_ {k-1}\\right) $在所有T-conductors到子空间 $ W_ {k-1} $中有最大的degree，例如，对每个k
 
-$ \\begin{equation} \\operatorname{deg} p_ {k} = max_ {\\alpha \\in V} \\operatorname{deg} s\\left(\\alhpa; W_ {k-1}\\right) \\end{equation} $
+$ \\begin{equation} \\operatorname{deg} p_ {k} = max_ {\\alpha \\in V} \\operatorname{deg} s\\left(\\alpha; W_ {k-1}\\right) \\end{equation} $
 
 这一步只依赖 $ W_ {0} $是一个invariant子空间
 
 如果W是一个适当的T-invariant子空间，则
 
-$ \\begin{equation} 0 < max_ {\\alhpa} \\operatorname{deg} s\\left(\\alhpa; W\\right) \\le \\operatorname{dim} V \\end{equation} $
+$ \\begin{equation} 0 < max_ {\\alpha} \\operatorname{deg} s\\left(\\alpha; W\\right) \\le \\operatorname{dim} V \\end{equation} $
 
 我们可以选择一个向量 $ \\beta $使得 $ \\operatorname{deg} s\\left(\\beta; W\\right) $为最大。子空间 $ W + Z\\left(\\beta; T\\right) $是T-invariant且维数比 $ \\operatorname{dim} W $大。应用这个处理到 $ W = W_ {0} $来获得 $ \\beta_ {1} $。如果 $ W_ {1} = W_ {0} + Z\\left(\\beta_ {1}; T\\right) $依然是适当的，则应用该处理到 $ W_ {1} $来获得 $ \\beta_ {2} $。继续该过程。因为 $ \\operatorname{dim} W_ {k} > \\operatorname{dim} W_ {k-1} $我们必须达到 $ W_ {r} = V $在不超过 $ \\operatorname{dim} V $个步骤。
 
@@ -107,7 +107,7 @@ $ \\begin{equation} 0 < max_ {\\alhpa} \\operatorname{deg} s\\left(\\alhpa; W\\r
 
 $ \\begin{equation} f \\beta = \\beta_ {0} + \\sum_ {1 \\le i < k} g_ {i}\\beta_ {i}, \\qquad \\beta_ {i} \\in W_ {i} \\end{equation} $
 
-则f整除每个polynomial $ g_ {i} $且 $ \\beta_ {0} = f_ {\\tau_ {0}}, \\tau_ {0} \\in W_ {0} $
+则每个polynomial $ g_ {i} $整除f且 $ \\beta_ {0} = f_ {\\tau_ {0}}, \\tau_ {0} \\in W_ {0} $
 
 如果k = 1，这即是说 $ W_ {0} $是T-admissible的。为了证明k > 1的情形，应用如下除数算法；
 
@@ -167,7 +167,7 @@ $ \\begin{equation} W_ {k-1} \\cap Z\\left(\\alpha_ {k}; T\\right) = \\{ 0 \\} \
 
 $ \\begin{equation} W_ {k} = W_ {0} \\oplus Z\\left(\\alpha_ {1}; T\\right) \\oplus \\cdots \\oplus Z\\left(\\alpha_ {k}; T\\right) \\end{equation} $
 
-且 $ p_ {k} $是 $ \\alpha_ {k} $的T-annihilator。即向量 $ \\alpha_ {1}, \\ldots, \\alpha_ {r} $定义了如向量 $ \\beta_ {1}, \\ldots, \\beta_ {r} $一样顺序的子空间 $ W_ {1}, W_ {2}, \\ldots $且T-conductors $ p_ {k} = s\\left(\\alhpa_ {k}, W_ {k-1}\\right) $有相同的最大化属性（步骤1的条件(b)）。向量 $ \\alpha_ {1}, \\ldots, \\alpha_ {r} $有额外属性即子空间 $ W_ {0}, Z\\left(\\alpha_ {1}; T\\right), Z\\left(\\alpha_ {2}; T\\right), \\ldots $是独立的。因此容易验证定理3的条件(ii)。因为对每个i， $ p_ {i} \\alpha_ {i} = 0 $，我们有如下关系：
+且 $ p_ {k} $是 $ \\alpha_ {k} $的T-annihilator。即向量 $ \\alpha_ {1}, \\ldots, \\alpha_ {r} $定义了如向量 $ \\beta_ {1}, \\ldots, \\beta_ {r} $一样顺序的子空间 $ W_ {1}, W_ {2}, \\ldots $且T-conductors $ p_ {k} = s\\left(\\alpha_ {k}, W_ {k-1}\\right) $有相同的最大化属性（步骤1的条件(b)）。向量 $ \\alpha_ {1}, \\ldots, \\alpha_ {r} $有额外属性即子空间 $ W_ {0}, Z\\left(\\alpha_ {1}; T\\right), Z\\left(\\alpha_ {2}; T\\right), \\ldots $是独立的。因此容易验证定理3的条件(ii)。因为对每个i， $ p_ {i} \\alpha_ {i} = 0 $，我们有如下关系：
 
 $ \\begin{equation} p_ {k} \\alpha_ {k} = 0 + p_ {1} \\alpha_ {1} + \\cdots + p_ {k-1}\\alpha_ {k-1} \\end{equation} $
 
@@ -235,7 +235,7 @@ $ \\begin{equation} p = f_ {1}^{T_ {1}} \\cdots f_ {k}^{T_ {k}} \\end{equation} 
 
 $ \\begin{equation} f = f_ {1}^{d_ {1}} \\cdots f_ {k}^{d_ {k}} \\end{equation} $
 
-$ d_ {i} $是整除 $ f_ {i} $的 $ f_ {i}\\left(T\\right)^{r_ {i}} $的nullity
+$ d_ {i} $是$ f_ {i}\\left(T\\right)^{r_ {i}} $的nullity被 $ f_ {i} $的degree整除
 
 现在让我们看一下cyclic分解定理的矩阵形式。如果我们有算子T和定理3的直和分解，设 $ \\mathcal{B}_ {i} 为 Z\\left(\\alpha_ {i}; T\\right) $的cyclic有序基
 
