@@ -226,3 +226,33 @@ $ \\begin{equation} \\mu\\left(\\cup_ {i}A_ {i}\\right) = P\\left(X \\in \\cup_ 
 为证明(iv)，我们观察到如果 $ y \\uparrow x 则\\{X \\le y\\} \\uparrow \\{ X < x \\} $
 
 对(v)，注意 $ P \\left(X = x\\right) = P\\left(X \\le x\\right) - P \\left(X < x\\right) $且使用(iii)和(iv)
+
+**定理 1.2.2** 如果F满足定理1.2.1的(i)、(ii)和(iii)，则它是某个随机变量分布函数
+
+证明：设 $ \\Omega = \\left(0, 1\\right), \\mathcal{F} = $ Borel集合，且P = Lebesgue测度，如果 $ \\omega \\in \\left(0, 1\\right) $，设
+
+$ \\begin{equation} X\\left(\\omega\\right) = sup\\{y: F\\left(y\\right) < \\omega \\} \\end{equation} $
+
+一旦我们显示
+
+$ \\begin{equation} \\{ \\omega : X\\left(\\omega\\right) \\le x \\} = \\{ \\omega : \\omega \\le F\\left(x\\right) \\} \\end{equation} $
+
+如果上式成立则即得证，因为 $ P\\left(\\omega: \\omega \\le F\\left(x\\right)\\right) = F\\left(x\\right) $
+
+我们观察到如果 $ \\omega \\le F\\left(x\\right) 则 X\\left(\\omega\\right) \\le x $，因为 $ x \\notin \\{ y: F\\left(y\\right) < \\omega \\} $。如果 $ \\omega > F\\left(x\\right) $则因为F是右连续的，存在一个 $ \\epsilon > 0 使得 F\\left(x + \\epsilon\\right) < \\omega 且 X\\left(\\omega\\right) \\ge x + \\epsilon > x $
+
+即使F可能不是1-1且onto的，我们将把X称为F的反且记它为 $ F^{-1} $。
+
+如果X和Y在 $ \\left(\\mathbf{R}, \\mathcal{R} \\right) $上导入相同的分布 $ \\mu $，我们说X和Y在分布上相等。利用定理1.1.4，这个成立当且仅当X和Y有相同的分布函数，例如，$ \\forall x, P\\left(X \\le x\\right) = P\\left(Y \\le x \\right) $。这时我们会写成
+
+$ \\begin{equation} X \\stackrel{d}{=} Y \\end{equation} $
+
+但为了书写方便我们也使用 $ X =_ {d} Y $
+
+当分布函数 $ F\\left(x\\right) = P\\left(X \\le x \\right) $有形如：
+
+$ \\begin{equation} F\\left(x\\right) = \\int_ {- \\infty}^{x} f\\left(y\\right) dy \\end{equation} $
+
+我们说X有密度函数f。为方便记忆公式，它通常可以认为f(x)为P(X = x)
+
+$ \\begin{equation} P\\left(X = x\\right) = \\lim_ {\\epsilon \\to 0} \\int_ {x - \\epsilon}^{x + \\epsilon} f\\left(y\\right) dy = 0 \\end{equation} $
