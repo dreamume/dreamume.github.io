@@ -261,9 +261,9 @@ $ \\begin{equation} f = \\left(x - c_ {1}\\right)^{d_ {1}} \\cdots \\left(x - c_
 
 $ c_ {1}, \\ldots, c_ {k} $是F上不同的元素且 $ d_ {i} \\ge 1 $。则T的minimal polynomial为
 
-$ \\begin{equation} f = \\left(x - c_ {1}\\right)^{r {1}} \\cdots \\left(x - c_ {k}\\right)^{r_ {k}} \\end{equation} $
+$ \\begin{equation} f = \\left(x - c_ {1}\\right)^{r_ {1}} \\cdots \\left(x - c_ {k}\\right)^{r_ {k}} \\end{equation} $
 
-$ 1 \\le r_ {i} \\le d_ {i} $。如果 $ W_ {i} $是 $ \\left(T - c_ {i}I\\right)^{{r_ {i}} $的null space，则主分解定理告诉我们
+$ 1 \\le r_ {i} \\le d_ {i} $。如果 $ W_ {i} $是 $ \\left(T - c_ {i}I\\right)^{r_ {i}} $的null space，则主分解定理告诉我们
 
 $ \\begin{equation} V = W_ {1} \\oplus \\cdots \\oplus W_ {k} \\end{equation} $
 
