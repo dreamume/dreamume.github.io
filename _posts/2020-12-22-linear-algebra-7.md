@@ -24,6 +24,7 @@ category:   maths
 
 1.  [Cyclic Suubspaces and Annihilators](#orgcee1036)
 2.  [Cyclic Decompositions and the Rational Form](#orgdd97137)
+3.  [The Jordan Form](#org7efeaec)
 
 
 <a id="orgcee1036"></a>
@@ -248,3 +249,54 @@ $ \\begin{equation} A = \\left[ \\begin{array}{ccc} A_ {1} & 0 & \\cdots & 0 \\\
 $ A_ {i} 是 k_ {i} \\times k_ {i} 的p_ {i} $ 的伴随矩阵，这样的 $ n \\times n $矩阵A是非常量monic polynomials $ p_ {1}, \\ldots, p_ {r} $的伴随矩阵的直和使得 $ p_ {i} 整除 p_ {i+1}, i = 1, \\ldots, r - 1 $，我们说A为rational form。
 
 **定理 5** 设F为一个域且设B为F上一个 $ n \\times n $的矩阵。则B在域F上跟唯一一个rational form的矩阵相似
+
+
+<a id="org7efeaec"></a>
+
+# The Jordan Form
+
+假设T是V上的一个线性算子且F上的T的特征polynomial因子如下：
+
+$ \\begin{equation} f = \\left(x - c_ {1}\\right)^{d_ {1}} \\cdots \\left(x - c_ {k}\\right)^{d_ {k}} \\end{equation} $
+
+$ c_ {1}, \\ldots, c_ {k} $是F上不同的元素且 $ d_ {i} \\ge 1 $。则T的minimal polynomial为
+
+$ \\begin{equation} f = \\left(x - c_ {1}\\right)^{r {1}} \\cdots \\left(x - c_ {k}\\right)^{r_ {k}} \\end{equation} $
+
+$ 1 \\le r_ {i} \\le d_ {i} $。如果 $ W_ {i} $是 $ \\left(T - c_ {i}I\\right)^{{r_ {i}} $的null space，则主分解定理告诉我们
+
+$ \\begin{equation} V = W_ {1} \\oplus \\cdots \\oplus W_ {k} \\end{equation} $
+
+且由T在 $ W_ {i} $导入的算子 $ T_ {i} $有minimal polynomial $ \\left(x - c_ {i}\\right)^{r_ {i}} $。设 $ N_ {i} $为 $ W_ {i} $上的线性算子 $ N_ {i} = T_ {i} - c_ {i} I $。则 $ N_ {i} $是nilpotent且有minimal polynomial $ x^{r_ {i}} $。在 $ W_ {i} $上，T跟 $ N_ {i} $加上一个常量 $ c_ {i} $乘以单位算子相当。假设我们选择子空间 $ W_ {i} $的一个基对应nilpotent算子 $ N_ {i} $的cyclic分解。则 $ T_ {i} $的矩阵在这个有序基下为矩阵的直和
+
+$ \\begin{equation} \\left[ \\begin{array}{ccc} c & 0 & \\cdots & 0 & 0 \\\\ 1 & c & \\cdots & 0 & 0 \\\\ \\vdots & \\vdots &  & \\vdots & \\vdots \\\\ & & & c & \\\\ 0 & 0 & \\cdots & 1 & c \\end{array} \\right] \\end{equation} $
+
+$ c = c_ {i} $。更进一步，这些矩阵的大小将从左到右减少。上图矩阵被称为带特征值c的elementary Jordan矩阵。现在如果我们把所有的 $ W_ {i} $的基放一块，我们获得V的一个有序基。让我们描述这个有序基的T的矩阵A
+
+矩阵A为矩阵 $ A_ {1}, \\ldots, A_ {k} $的直和
+
+$ \\begin{equation} A = \\left[ \\begin{array}{ccc} A_ {1} & 0 & \\cdots & 0 \\\\ 0 & A_ {2} & \\cdots \\ 0 \\\\ \\vdots & \\vdots & & \\vdots \\\\ 0 & 0 & \\cdots & A_ {k} \\end{array} \\right] \\end{equation} $
+
+该form的每个 $ A_ {i} $为
+
+$ \\begin{equation} A_ {i} = \\left[ \\begin{array}{ccc} J_ {1}^{\\left(i\\right)} & 0 & \\cdots & 0 \\\\ 0 & J_ {2}^{\\left(i\\right)} & \\cdots & 0 \\\\ \\vdots & \\vdots & & \\vdots \\\\ 0 & 0 & \\cdots & J_ {n_ {i}}^{\\left(i\\right)} \\end{array} \\right] \\end{equation} $
+
+每个 $ J_ {j}^{\\left(i\\right)} $是一个带特征值 $ c_ {i} $的elementary Jordan矩阵，矩阵 $ J_ {j}^{\\left(i\\right)} $的大小随着j的增长而减少。一个 $ n \\times n $ 矩阵A满足本段内容（一些不同的常量 $ c_ {1}, \\ldots, c_ {k} $）提及的所有条件被称为Jordan form
+
+我们已指出如果T是一个线性算子其特征polynomial因子完全在常量域上，则有一个V的有序基使得T的表达矩阵为Jordan form。我们将显示这个矩阵对T是唯一的，即如果两个Jordan form形式的矩阵是相似的，则它们仅是常量 $ c_ {i} $的顺序不同
+
+假设有V的某个有序基，T表达为Jordan矩阵A，如果 $ A_ {i} $是一个 $ d_ {i} \\times d_ {i} $的矩阵，则 $ d_ {i} $是 $ c_ {i} $的次数作为A的特征polynomial的根，即T的特征polynomial是
+
+$ \\begin{equation} f = \\left(x - c_ {1}\\right)^{d_ {1}} \\cdots \\left(x - c_ {k}\\right)^{d_ {k}} \\end{equation} $
+
+这显示 $ c_ {1}, \\ldots, c_ {k} 和 d_ {1}, \\ldots, d_ {k} $是唯一的。A是矩阵 $ A_ {i} $的直和这个事实给我们一个在T上不变的直和分解 $ V = W_ {1} \\oplus \\cdots \\oplus W_ {k} $。现在注意 $ W_ {i} 为 \\left(T - c_ {i}I\\right)^{n} $的null space，$ n = dim V；\\quad A_ {i} - c_ {i} I $ 是nilpotent且 $ A_ {j} - c_ {i}I $是non-singular如果 $ j \\ne i $。这样我们看到子空间 $ W_ {i} $是唯一的。如果 $ T_ {i} $是T在 $ W_ {i} $上导出的算子，则矩阵 $ A_ {i} $是唯一确定的rational form $ \\left(T_ {i} - c_ {i}I\\right) $
+
+现在我们希望做一些更进一步的观察关于算子T和T在某个有序基下的表达式Jordan矩阵A。我们列出一些观察：
+
+(1) A的每个元素不在或主对角之下的都为0。在A的对角线上有T的k个不同的特征值 $ c_ {1}, \\ldots, c_ {k} $。$ c_ {i} $重复 $ d_ {i} $次，$ d_ {i} $是 $ c_ {i} $作为特征polynomial根的次数，例如，$ d_ {i} = \\operatorname{dim} W_ {i} $
+
+(2) 对每个i，矩阵 $ A_ {i} $是特征值 $ c_ {i} $的 $ n_ {i} $个elementary Jordan矩阵 $ J_ {j}^{\\left(i\\right)} $的直和。$ n_ {i} $是特征值 $ c_ {i} $的特征向量空间的维数。 $ n_ {i} $是rational form $ \\left(T_ {i} - c_ {i} I \\right) $的elementary nilpotent块的个数，且跟 $ \\left(T - c_ {i}I \\right) $的null space的维数相同。特别地注意到T是可对角化的当且仅当对每个i有 $ n_ {i} = d_ {i} $
+
+(3) 对每个i，矩阵A中第一个块 $ J_ {1}^{\\left(i\\right)} $是 $ r_ {i} \\times r_ {i} $矩阵，$ r_ {i} $是 $ c_ {i} $作为T的minimal polynomial根的次数，即nilpotent算子 $ \\left(T - c_ {i}I \\right) $的minimal polynomial为 $ x^{r_ {i}} $
+
+如果B是域F上 $ n \\times n $的矩阵且如果B在F下有完全的特征polynomial因子，则B在F上跟一个Jordan form的 $ n \\times n $矩阵A相似，且A重排列它的特征值顺序后是唯一的。我们称A是B的Jordan form
