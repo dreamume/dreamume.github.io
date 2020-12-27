@@ -256,3 +256,13 @@ $ \\begin{equation} F\\left(x\\right) = \\int_ {- \\infty}^{x} f\\left(y\\right)
 我们说X有密度函数f。为方便记忆公式，它通常可以认为f(x)为P(X = x)
 
 $ \\begin{equation} P\\left(X = x\\right) = \\lim_ {\\epsilon \\to 0} \\int_ {x - \\epsilon}^{x + \\epsilon} f\\left(y\\right) dy = 0 \\end{equation} $
+
+**例子 1.2.4** 速度 $ \\lambda $的指数分布。 $ f\\left(x\\right) = \\lambda e^{- \\lambda x}, x \\ge 0 $，否则为0。分布函数：
+
+$ \\begin{equation} F\\left(x\\right) = \\left\\{ \\begin{array}{ll} 0 & x \\le 0 \\\\ 1 - e^{- \\lambda x} & x \\ge 0 \\end{array} \\right. \\end{equation} $
+
+**例子 1.2.5** 标准正常分布
+
+$ \\begin{equation} f\\left(x\\right) = \\left(2 \\pi\\right)^{- \\frac{1}{2}} exp\\left(\\frac{- x^{2}}{2}\\right) \\end{equation} $
+
+在这个例子中，没有F(x)的闭合表达，但我们有如下边界对大x非常有用:
