@@ -25,6 +25,7 @@ category:   maths
 1.  [Cyclic Suubspaces and Annihilators](#orgcee1036)
 2.  [Cyclic Decompositions and the Rational Form](#orgdd97137)
 3.  [The Jordan Form](#org7efeaec)
+4.  [Computation of Invariant Factors](#org05d4a06)
 
 
 <a id="orgcee1036"></a>
@@ -300,3 +301,50 @@ $ \\begin{equation} f = \\left(x - c_ {1}\\right)^{d_ {1}} \\cdots \\left(x - c_
 (3) 对每个i，矩阵A中第一个块 $ J_ {1}^{\\left(i\\right)} $是 $ r_ {i} \\times r_ {i} $矩阵，$ r_ {i} $是 $ c_ {i} $作为T的minimal polynomial根的次数，即nilpotent算子 $ \\left(T - c_ {i}I \\right) $的minimal polynomial为 $ x^{r_ {i}} $
 
 如果B是域F上 $ n \\times n $的矩阵且如果B在F下有完全的特征polynomial因子，则B在F上跟一个Jordan form的 $ n \\times n $矩阵A相似，且A重排列它的特征值顺序后是唯一的。我们称A是B的Jordan form
+
+
+<a id="org05d4a06"></a>
+
+# Computation of Invariant Factors
+
+假设A时一个 $ n \\times n $的矩阵，其元素都在域F中，我们希望找到一个方法计算A的rational form定义的不变因子 $ p_ {1}, \\ldots, p_ {r} $。让我们用最简单的例子开始，A是monic polynomial的伴随矩阵
+
+$ \\begin{equation} p = x^{n} + c_ {n-1}x^{n-1} + \\cdots + c_ {1}x + c_ {0} \\end{equation} $
+
+我们知道p是伴随矩阵的monimal和特征polynomial，现在，我们想要给出一个直接的计算显示p是A的特征polynomial。在这个例子中，
+
+$ \\begin{equation} xI - A = \\left[ \\begin{array}{ccc} x & 0 & 0 & \\cdots & 0 & c_ {0} \\\\ -1 & x & 0 & \\cdots & 0 & c_ {1} \\\\ 0 & -1 & x & \\cdots & 0 & c_ {2} \\\\ \\vdots & \\vdots & \\vdots & & \\vdots & \\vdots \\\\ 0 & 0 & 0 & \\cdots & x & c_ {n-2} \\\\ 0 & 0 & 0 & \\cdots & -1 & x + c_ {n-1} \\end{array} \\right] \\end{equation} $
+
+添加x倍的n行到(n - 1)行，这将消除(n - 1, n - 1)处的x且不改变行列式。然后，添加x倍新的(n - 1)行到(n - 2)行，一直继续直到所有主对角线上的x都被移除。结果为
+
+$ \\begin{equation} \\left[ \\begin{array}{ccc} 0 & 0 & 0 & \\cdots & 0 & x^{n} + \\cdots + c_ {1}x + c_ {0} \\\\ -1 & 0 & 0 & \\cdots & 0 & x^{n-1} + \\cdots + c_ {2}x + c_ {1} \\\\ 0 & -1 & 0 & \\cdots & 0 & x^{n-2} + \\cdots + c_ {3} x + c_ {2} \\\\ \\vdots & \\vdots & \\vdots & & \\vdots & \\vdots \\\\ 0 & 0 & 0 & \\cdots & 0 & x^{2} + c_ {n-1} x + c_ {n-2} \\\\ 0 & 0 & 0 & \\cdots & -1 & x + c_ {n-1} \\end{array} \\right] \\end{equation} $
+
+然后我们得到 $ p = \\operatorname{det}\\left(xI - A\\right) $
+
+*定理 7* 设M和N为 $ m \\times n $矩阵，元素都在polynomial algebra F[x}中，则N跟M相当当且仅当
+
+$ \\begin{equation} N = PMQ \\end{equation} $
+
+P是一个在 $ F[x]^{m \\times m} $上的可逆矩阵，Q是一个在 $ F[x]^{n \\times n} $上的可逆矩阵
+
+*定理 8* 设A为 $ n \\times n $矩阵，元素都在域F上，且设 $ p_ {1}, \\ldots, p_ {r} $为A的不变因子。矩阵xI - A相当于 $ n \\times n $的对角矩阵，对角元素为 $ p_ {1}, \\ldots, p_ {r}, 1, 1, \\ldots, 1 $
+
+*定义* 设N为 $ F[x]^{m \\times n} $上的矩阵，我们说N是（Smith）normal form 如果
+
+(a) N主对角线下的每个元素都是0
+
+(b) N的主对角线上出现（顺序）的polynomials $ f_ {1}, \\ldots, f_ {l} 使得 f_ {k} 整除 f_ {k+1}, 1 \\le k \\le l - 1 $
+
+*定理 9* 设M为元素在polynomial algebra F[x]上的 $ m \\times n $矩阵，则M相当于normal form 矩阵N
+
+*定义* 设M为元素在F[x]上的一个 $ m \\times n $矩阵，如果 $ 1 \\le k \\le min\\left(m, n\\right) $，我们定义 $ \\delta_ {k}\\left(M\\right) $为M所有 $ k \\times k $子矩阵的行列式的最大公约数
+
+*定理 10* 如果M和N是元素在F[x]上相当的 $ m \\times n $矩阵，则
+
+$ \\begin{equation} \\delta_ {k}\\left(M\\right) = \\delta_ {k}\\left(N\\rigth), \\qquad \\qquad 1 \\le k \\le min\\left(m, n\\right) \\end{equation} $
+
+*推论* $ F[x]^{m \\times n} $上的每个矩阵相当于一个normal form 矩阵N，N主对角线上的polynomials $ f_ {1}, \\ldots, f_ {l} $为
+
+$ \\begin{equation} f_ {k} = \\frac{\\delta_ {k}\\left(M\\right)}{\\delta_ {k-1}\\left(M\\right)}, \\qquad \\qquad 1 \\le k \\le min\\left(m, n\\right) \\end{equation} $
+
+为方便起见，我们定义 $ \\delta_ {0}\\left(M\\right) = 1 $
