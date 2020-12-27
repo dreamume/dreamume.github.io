@@ -24,6 +24,7 @@ category:   maths
 
 1.  [General Topology](#org8fd57c5)
     1.  [Metric Spaces](#orgb8cdb49)
+    2.  [Topological Spaces](#orgc07d561)
 
 
 <a id="org8fd57c5"></a>
@@ -72,3 +73,22 @@ $ \\begin{equation} dist_ {1}\\left(x, y\\right) < \\delta \\Rightarrow dist_ {2
 $ \\begin{equation} dist_ {2}\\left(x, y\\right) < \\delta \\Rightarrow dist_ {1}\\left(x, y\\right) < \\epsilon \\end{equation} $
 
 则这些度量在X上定义了相同的开集
+
+
+<a id="orgc07d561"></a>
+
+## Topological Spaces
+
+**定义** 一个拓扑空间是一个集合X及X的子集合称为开集使得：
+
+(1) 两个开集的交集是开的
+
+(2) 任意开集的并是开的，且
+
+(3) 空集 $ \\varnothing $ 和整个空间X是开的
+
+拓扑空间比度量空间更一般化且它们和度量空间的不同的范围比度量空间和欧几里得空间的子空间要广。例如，可能谈到度量空间中序列点的收敛跟实数序列差别很小。函数的连续性在度量空集中可被描述为序列的收敛。也可以谈论序列的收敛在一般的拓扑空间但不再适合描述连续性。这样小心地练习一般拓扑空集理论是有必要的。
+
+拓扑空间比度量空间更一般化且它们和度量空间的不同的范围比度量空间和欧几里得空间的子空间要广。例如，可能谈到度量空间中序列点的收敛跟实数序列差别很小。函数的连续性在度量空集中可被描述为序列的收敛。也可以谈论序列的收敛在一般的拓扑空间但不再适合描述连续性。这样小心地练习一般拓扑空集理论是有必要的。
+
+假设X和Y是拓扑空间且 $ f: X \\to Y $是一个函数，则f被称为连续的如果 $ f^{-1}\\left(U\\right) $对每个开集 $ U \\subset Y $是开的
