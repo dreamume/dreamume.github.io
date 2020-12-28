@@ -26,6 +26,7 @@ category:   maths
 2.  [Cyclic Decompositions and the Rational Form](#orgdd97137)
 3.  [The Jordan Form](#org7efeaec)
 4.  [Computation of Invariant Factors](#org05d4a06)
+5.  [Summary; Semi-Simple Operators](#orgc97c1aa)
 
 
 <a id="orgcee1036"></a>
@@ -348,3 +349,44 @@ $ \\begin{equation} \\delta_ {k}\\left(M\\right) = \\delta_ {k}\\left(N\\right),
 $ \\begin{equation} f_ {k} = \\frac{\\delta_ {k}\\left(M\\right)}{\\delta_ {k-1}\\left(M\\right)}, \\qquad \\qquad 1 \\le k \\le min\\left(m, n\\right) \\end{equation} $
 
 为方便起见，我们定义 $ \\delta_ {0}\\left(M\\right) = 1 $
+
+
+<a id="orgc97c1aa"></a>
+
+# Summary; Semi-Simple Operators
+
+**定义** 设V为域F上的有限维向量空间，设T为V上的线性算子。我们说T是semi-simple的如果每个T-invariant子空间有一个补的T-invariant子空间
+
+我们将证明的是，在域F上的某些限制下，每个线性算子T唯一表达为形式T = S + N，S是semi-simple的，N是nilpotent的，且SN = NS。首先，我们通过它们的minimal polynomials来特征semi-simple算子，且这个特征将给我们展示，当F是代数闭合的，一个算子是semi-simple的当且仅当它是可对角化的
+
+**引理** 设T为有限维向量空间V上的一个线性算子，设 $ V = W_ {1} \\oplus \\cdots \\oplus W_ {k} $为T的主分解。即如果p是T的minimal polynomial且 $ p =p_ {1}^{r_ {1}} \\cdots p_ {k}^{r_ {k}} $是p的主因子，则 $ W_ {j} $是 $ p_ {j}\\left(T\\right)^{r_ {j}} $的null space。设W为V的任意在T下不变的子空间，则
+
+$ \\begin{equation} W = \\left(W \\cap W_ {1}\\right) \\oplus \\cdots \\oplus \\left(W \\cap W_ {k}\\right) \\end{equation} $
+
+**引理** 设T为V上的线性算子，设T的minimal polynomial在常量域F上是可约的，则T是semi-simple
+
+**定理 11** 设T为有限维向量空间V上的一个线性算子，T是semi-simple的充分必要条件是T的minimal polynomial p是 $ p = p_ {1} \\cdots p_ {k} $的形式，$ p_ {1}, \\ldots, p_ {k} $是在常量域F上不同的可约polynomials
+
+**推论** 如果T是代数闭合域上有限维向量空间中的一个线性算子，则T是semi-simple当且仅当T是可对角化的
+
+**引理 (Taylor's Formula)** 设F为一个特征零的域，且g和h是F上的polynomials，如果f是F上的任意polymonial，$ \\operatorname{deg} f \\le n $，则
+
+$ \\begin{equation} f(g) = f(h) + f^{(1)}(h)(g - h) + \\frac{f^{(2)}(h)}{2 !} (g - h)^{2} + \\cdots + \\frac{f^{(n)}(h)}{n !}(g - h)^{n} \\end{equation} $
+
+**引理** 设F为复数子域，设f为F上一个polynomial，且设f'为f的导数。如下描述等价：
+
+(a) f是F上不同不可约polynomials的乘积
+
+(b) f和f'是互质的
+
+(c) 作为复系数的polynomial，f没有重复的根
+
+**定理 12** 设F为复数子域，设V为F上的有限维向量空间，设T为V上的线性算子，设 $ \\mathcal{B} $为V的一个有序基且设A为T在 $ \\mathcal{B} $上的矩阵，则T是semi-simple当且仅当矩阵A在复数域上跟一个对角矩阵相似
+
+**定理 13** 设F为复数子域，设V为F上的有限维向量空间，设T为V上的线性算子，有一个V上semi-simple算子和V上一个nilpotent算子使得
+
+(i) T = S + N
+
+(ii) SN = NS
+
+满足(i)和(ii)的S和N是唯一的，且都是T的polynomial
