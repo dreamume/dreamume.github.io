@@ -266,3 +266,21 @@ $ \\begin{equation} F\\left(x\\right) = \\left\\{ \\begin{array}{ll} 0 & x \\le 
 $ \\begin{equation} f\\left(x\\right) = \\left(2 \\pi\\right)^{- \\frac{1}{2}} exp\\left(\\frac{- x^{2}}{2}\\right) \\end{equation} $
 
 在这个例子中，没有F(x)的闭合表达，但我们有如下边界对大x非常有用:
+
+**定理 1.2.6** 对x > 0，
+
+$ \\begin{equation} (x^{-1} - x^{-3})e^{\\frac{-x^{2}}{2}} \\le \\int_ {x}^{\\infty} e^{\\frac{-y^{2}}{2}}dy \\le x^{-1}e^{\\frac{-x^{2}}{2}} \\end{equation} $
+
+一个R上的分布函数被称为决定连续的如果它有一个密度且singular如果对应的度量是singular
+
+**例子 1.2.7 康托集上的统一分布** 康托集C被定义为从[0, 1]中移除( $ \\frac{1}{3}, \\frac{2}{3} $ )，然后移除剩下的每段的中间的 $ \\frac{1}{3} $部分。我们定义一个相关的分布函数，设置 F(x) = 0当 $ x \\le 0 $，F(x) = 1当 $ x \\ge 1 $， $ F(x) = \\frac{1}{2}当 x \\in [\\frac{1}{3}, \\frac{2}{3}]，F(x) = \\frac{1}{4}当 x \\in [\\frac{1}{9}, \\frac{2}{9}]，F(x) = \\frac{3}{4}当 x \\in [\\frac{7}{9}, \\frac{8}{9}], \\ldots $，则使用单调性扩展F到所有的[0, 1]。不存在满足定理1.2.1的f因为这样的f在测度1的集合中等于0。从定义，它对应测度有 $ \\mu(C^{c}) = 0 $
+
+一个概率度量P（或对应的分布函数）被称为是离散的如果有一个可数集S， $ P(S^{c}) = 0 $。最简单的离散分布例子是
+
+**例子 1.2.8 Point mass at 0** F(x) = 1当 $ x \\ge 0 $，F(x) = 0当x < 0
+
+**例子 1.2.9 稠密不连续性** 设 $ q_ {1}, q_ {2}, \\ldots $为有理数，设 $ \\alpha_ {i} > 0有 \\sum_ {i=1}^{\\infty} \\alpha_ {1} = 1 $且设
+
+$ \\begin{equation} F(x) = \\sum_ {i=1}^{\\infty} \\alpha_ {i} 1_ {[q_ {i}, \\infty) \\end{equation} $
+
+$ 如果x \\in [\\theta, \\infty)则 1_ {[\\theta, \\infty)}(x) = 1，否则 = 0 $
