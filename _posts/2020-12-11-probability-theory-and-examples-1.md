@@ -281,6 +281,6 @@ $ \\begin{equation} (x^{-1} - x^{-3})e^{\\frac{-x^{2}}{2}} \\le \\int_ {x}^{\\in
 
 **例子 1.2.9 稠密不连续性** 设 $ q_ {1}, q_ {2}, \\ldots $为有理数，设 $ \\alpha_ {i} > 0有 \\sum_ {i=1}^{\\infty} \\alpha_ {1} = 1 $且设
 
-$ \\begin{equation} F(x) = \\sum_ {i=1}^{\\infty} \\alpha_ {i} 1_ {[q_ {i}, \\infty) \\end{equation} $
+$ \\begin{equation} F(x) = \\sum_ {i=1}^{\\infty} \\alpha_ {i} 1_ {[q_ {i}, \\infty)} \\end{equation} $
 
 $ 如果x \\in [\\theta, \\infty)则 1_ {[\\theta, \\infty)}(x) = 1，否则 = 0 $
