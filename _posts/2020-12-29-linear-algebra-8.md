@@ -149,7 +149,7 @@ $ \\begin{equation} \\beta \\to \\beta - E \\beta \\end{equation} $
 
 是V到 $ W^{\\perp} $的正交映射
 
-**定理 5** 设W为内积空间V的一个有限维子空间且设E为V到W的正交映射，则E是V到W的幂等线性转换，$ W^{\\perp}是E的null space，且
+**定理 5** 设W为内积空间V的一个有限维子空间且设E为V到W的正交映射，则E是V到W的幂等线性转换，$ W^{\\perp} $是E的null space，且
 
 $ \\begin{equation} V = W \\oplus W^{\\perp} \\end{equation} $
 
