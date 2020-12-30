@@ -23,6 +23,7 @@ category:   maths
 # Table of Contents
 
 1.  [Inner Products](#orgf9c15e0)
+2.  [Inner Product Spaces](#org39befc0)
 
 
 <a id="orgf9c15e0"></a>
@@ -68,3 +69,96 @@ $ \\begin{equation} (X \| Y) = Y^{ * }Q^{ * }QX \\end{equation} $
 \\begin{equation} \\begin{aligned} (\\alpha \| \\beta) &= (\\sum_ {k}x_ {n}\\alpha_ {k} \| \\beta) \\\\ &= \\sum_ {k}x_ {k}(\\alpha_ {k} \| \\beta) \\\\ &= \\sum_ {k}x_ {k}\\sum_ {j}\\bar{y}_ {j} (\\alpha_ {k} \| \\alpha_ {j}) \\\\ &= \\sum_ {j, k}\\bar{y}_ {j} G_ {j k}x_ {k} \\\\ &= Y^{ * }GX \\end{aligned} \\end{equation} $
 
 我们称G为在有序基 $ \\mathcal{B} $下inner product的矩阵
+
+
+<a id="org39befc0"></a>
+
+# Inner Product Spaces
+
+**定义** 一个内积空间是一个实数或复数向量空间，及其上一个指定的内积
+
+一个有限维实数内积空间通常称为欧几里得空间。一个复数内积空间通常称为unitary空间
+
+**定理 1** 如果V是一个内积空间，则对V中任意向量 $ \\alpha, \\beta $和任意常数c
+
+(i) $ \|\|c \\alpha \| \| = \|c\| \|\|\\alpha \|\| $
+
+(ii) $ \| \| \\alpha \| \| > 0 \\text{ for } \\alpha \\ne 0 $
+
+(iii) $ \| (\\alpha \| \\beta) \| \\le \| \| \\alpha \| \| \| \| \\beta \| \| $
+
+(iv) $ \| \| \\alpha + \\beta \| \| \\le \| \| \\alpha \| \| + \| \| \\beta \| \| $
+
+例子7，应用Cauchy-Schwarz不等式到内积，我们有
+
+(a) $ \\begin{equation} \| \\sum x_ {k}\\bar{y}_ {k} \| \\le (\\sum \|x_ {k}\|^{2})^{\\frac{1}{2}} (\\sum \|y_ {k}\|^{2})^{\\frac{1}{2}} \\end{equation} $
+
+(b) $ \\begin{equation} \| x_ {1}y_ {1} - x_ {2}y_ {1} - x_ {1}y_ {2} + 4x_ {2}y_ {2} \| \\le ((x_ {1} - x_ {2})^{2} + 3x_ {2}^{2})^{\\frac{1}{2}} ((y_ {1} - y_ {2})^{2} + 3y_ {2}^{2})^{\\frac{1}{2}} \\end{equation} $
+
+(c) $ \\begin{equation} \| \\operatorname{tr} (AB^{ * }) \| \\le (\\operatorname{tr}(AA^{ * }))^{\\frac{1}{2}} (\\operatorname{tr}(BB^{ * }))^{\\frac{1}{2}} \\end{equation} $
+
+(d) $ \\begin{equation} \| \\int_ {0}^{1} f(x)\\overline{g(x)} dx \| \\le \\left(\\int_ {0}^{1} \| f(x) \|^{2} dx\\right)^{\\frac{1}{2}} \\left(\\int_ {0}^{1} \| g(x) \|^{2} dx\\right)^{\\frac{1}{2}} \\end{equation} $
+
+**定义** 设 $ \\alpha 和 \\beta $为内积空间上的向量，则 $ \\alpha $正交 $ \\beta 仅当 (\\alpha \| \\beta) = 0 $。如果S是V中向量集合，S被称为一个正交集提供所有不同正交向量对。一个标准正交集合是正交集合S中所有 $ \| \| \\alpha \| \| = 1 $的向量
+
+**定理 2** 正交集的非零向量是线性无关的
+
+**推论** 如果一个向量 $ \\beta $是正交非零向量序列 $ \\alpha_ {1}, \\ldots, \\alpha_ {m} $的线性组合，则 $ \\beta $是一个特别的线性组合
+
+$ \\begin{equation} \\beta = \\sum_ {k=1}^{m} \\frac{(\\beta \| \\alpha_ {k})}{\|\| \\alpha_ {k} \|\|^{2}} \\alpha_ {k} \\end{equation} $
+
+**定理 3** 设V为一个内积空间且设 $ \\beta_ {1}, \\ldots, \\bet_ {n} $为V上任意无关向量，则可构造V中正交向量 $ \\alpha_ {1}, \\ldots, \\alpha_ {n} $使得对每个 $ k = 1, 2, \\ldots, n $，集合 $ \\{ \\alpha_ {1}, \\ldots, \\alpha_ {k} $是由 $ \\beta_ {1}, \\ldots, \\beta_ {k} $扩展的子空间的一个基
+
+证明：向量 $ \\alpha_ {1}, \\ldots, \\alpha_ {n} $可通过Gram-Schmidt正交过程构建，首先设 $ \\alpha_ {1} = \\beta_ {1} $，假设 $ \\alpha_ {1}, \\ldots, \\alpha_ {m} (1 \\le m < n) $被选中使得对每个k， $ \\{ \\alpha_ {1}, \\ldots, \\alpha_ {k} \\}, 1 \\le k \\le m $是由 $ \\beta_ {1}, \\ldots, \\beta_ {k} $扩展的V的子空间的一个正交基，设
+
+$ \\begin{equation} \\alpha_ {m+1} = \\beta_ {m+1} - \\sum_ {k=1}^{m} \\frac{(\\beta_ {m+1} \| \\alpha_ {k})}{\|\| \\alpha_ {k} \|\|^{2}} \\alpha_ {k} \\end{equation} $
+
+如果 $ 1 \\le j \\le m $，则
+
+$ \\begin{equation} \\begin{aligned} (\\alpha_ {m+1} \| \\alhpa_ {j}) &= (\\beta_ {m+1} \| \\alpha_ {j}) - \\sum_ {k=1}^{m} \\frac{(\\beta_ {m+1} \| \\alhpa_ {k})}{\|\| \\alpha_ {k} \|\|^{2}} (\\alpha_ {k} \| \\alpha_ {j}) \\\\ &= (\\beta_ {m+1} \| \\alpha_ {j}) - (\\beta_ {m+1} \| \\alpha_ {j}) \\\\ &= 0 \\end{aligned} \\end{equation} $
+
+因此 $ \\{ \\alpha_ {1}, \\ldots, \\alpha_ {m+1} \\} $是一个正交集合
+
+**推论** 每个有限维内积空间有一个标准正交基
+
+在内积空间W中向量到 $ \\beta $的最好估计是W中一个向量 $ \\alpha $使得
+
+$ \\begin{equation} \| \| \\beta - \\alpha \| \| \\le \| \| \\beta - \\gamma \| \| \\end{equation} $
+
+对W中每个向量 $ \\gamma $
+
+**定理 4** 设W为内积空间V的一个子空间且设 $ \\beta $为V中一个向量
+
+(i) W中向量 $ \\alpha $是W中到 $ \\beta $的最好估计当且仅当 $ \\beta - \\alpha $正交W中每个向量
+
+(ii) 如果W中到 $ \\beta $的最好估计存在，它是唯一的
+
+(iii) 如果W是有限维的且 $ \\{ \\alpha_ {1}, \\ldots, \\alpha_ {n} \\} $是W的任意标准正交基，则向量
+
+$ \\begin{equation} \\alpha = \\sum_ {k} \\frac{(\\beta \| \\alpha_ {k})}{\|\| \\alpha_ {k} \|\|^{2}} \\alpha_ {k} \\end{equation} $
+
+是W中向量唯一到 $ \\beta $的最好估计
+
+**定义** 设V是一个内积空间且S是V中任意向量集合，S的正交补是V中集合 $ S^{\\perp} $中的所有向量，与S中的每个向量正交
+
+**定义** 如果定理4中的向量 $ \\alpha $存在则被称为在W上 $ \\beta $的正交映射。如果V中每个向量在W中有一个正交映射，对V中每个向量赋予映射到W上它的正交映射被称为在V在W上的正交映射
+
+**推论** 设V为一个内积空间，W为一个有限维子空间，且E是V在W上的正交映射，则映射
+
+$ \\begin{equation} \\beta \\to \\beta - E \\beta \\end{equation} $
+
+是V到 $ W^{\\perp} $的正交映射
+
+**定理 5** 设W为内积空间V的一个有限维子空间且设E为V到W的正交映射，则E是V到W的幂等线性转换，$ W^{\\perp}是E的null space，且
+
+$ \\begin{equation} V = W \\oplus W^{\\perp} \\end{equation} $
+
+**推论** 在理论条件下，I - E是V到 $ W^{\\perp} $上的正交映射，它是V到 $ W^{\\perp} $的幂等线性转换，其null space是W
+
+**推论** 设 $ \\{ \\alpha_ {1}, \\ldots, \\alpha_ {n} \\} $为内积空间V上的非零向量的正交集，则
+
+$ \\begin{equation} \\sum_ {k} \\frac{\|(\\beta \| \\alpha_ {k}) \|^{2}}{\|\| \\alpha_ {k} \|\|^{2}} \\le \|\| \\beta\|\|^{2} \\end{equation} $
+
+等式成立当且仅当
+
+$ \\begin{equation} \\beta = \\sum_ {k}\\frac{(\\beta \| \\alpha_ {k})}{\|\| \\alpha_ {k} \|\|^{2}} \\alpha_ {k} \\end{equation} $
