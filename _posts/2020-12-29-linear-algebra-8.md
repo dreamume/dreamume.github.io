@@ -107,7 +107,7 @@ $ \\begin{equation} (X \| Y) = Y^{ * }Q^{ * }QX \\end{equation} $
 
 $ \\begin{equation} \\beta = \\sum_ {k=1}^{m} \\frac{(\\beta \| \\alpha_ {k})}{\|\| \\alpha_ {k} \|\|^{2}} \\alpha_ {k} \\end{equation} $
 
-**定理 3** 设V为一个内积空间且设 $ \\beta_ {1}, \\ldots, \\bet_ {n} $为V上任意无关向量，则可构造V中正交向量 $ \\alpha_ {1}, \\ldots, \\alpha_ {n} $使得对每个 $ k = 1, 2, \\ldots, n $，集合 $ \\{ \\alpha_ {1}, \\ldots, \\alpha_ {k} $是由 $ \\beta_ {1}, \\ldots, \\beta_ {k} $扩展的子空间的一个基
+**定理 3** 设V为一个内积空间且设 $ \\beta_ {1}, \\ldots, \\beta_ {n} $为V上任意无关向量，则可构造V中正交向量 $ \\alpha_ {1}, \\ldots, \\alpha_ {n} $使得对每个 $ k = 1, 2, \\ldots, n $，集合 $ \\{ \\alpha_ {1}, \\ldots, \\alpha_ {k} $是由 $ \\beta_ {1}, \\ldots, \\beta_ {k} $扩展的子空间的一个基
 
 证明：向量 $ \\alpha_ {1}, \\ldots, \\alpha_ {n} $可通过Gram-Schmidt正交过程构建，首先设 $ \\alpha_ {1} = \\beta_ {1} $，假设 $ \\alpha_ {1}, \\ldots, \\alpha_ {m} (1 \\le m < n) $被选中使得对每个k， $ \\{ \\alpha_ {1}, \\ldots, \\alpha_ {k} \\}, 1 \\le k \\le m $是由 $ \\beta_ {1}, \\ldots, \\beta_ {k} $扩展的V的子空间的一个正交基，设
 
@@ -115,7 +115,7 @@ $ \\begin{equation} \\alpha_ {m+1} = \\beta_ {m+1} - \\sum_ {k=1}^{m} \\frac{(\\
 
 如果 $ 1 \\le j \\le m $，则
 
-$ \\begin{equation} \\begin{aligned} (\\alpha_ {m+1} \| \\alhpa_ {j}) &= (\\beta_ {m+1} \| \\alpha_ {j}) - \\sum_ {k=1}^{m} \\frac{(\\beta_ {m+1} \| \\alhpa_ {k})}{\|\| \\alpha_ {k} \|\|^{2}} (\\alpha_ {k} \| \\alpha_ {j}) \\\\ &= (\\beta_ {m+1} \| \\alpha_ {j}) - (\\beta_ {m+1} \| \\alpha_ {j}) \\\\ &= 0 \\end{aligned} \\end{equation} $
+$ \\begin{equation} \\begin{aligned} (\\alpha_ {m+1} \| \\alpha_ {j}) &= (\\beta_ {m+1} \| \\alpha_ {j}) - \\sum_ {k=1}^{m} \\frac{(\\beta_ {m+1} \| \\alpha_ {k})}{\|\| \\alpha_ {k} \|\|^{2}} (\\alpha_ {k} \| \\alpha_ {j}) \\\\ &= (\\beta_ {m+1} \| \\alpha_ {j}) - (\\beta_ {m+1} \| \\alpha_ {j}) \\\\ &= 0 \\end{aligned} \\end{equation} $
 
 因此 $ \\{ \\alpha_ {1}, \\ldots, \\alpha_ {m+1} \\} $是一个正交集合
 
