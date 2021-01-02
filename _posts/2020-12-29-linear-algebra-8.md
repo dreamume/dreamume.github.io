@@ -24,6 +24,7 @@ category:   maths
 
 1.  [Inner Products](#orgf9c15e0)
 2.  [Inner Product Spaces](#org39befc0)
+3.  [Linear Functionals and Adjoints](#org3d20f85)
 
 
 <a id="orgf9c15e0"></a>
@@ -162,3 +163,56 @@ $ \\begin{equation} \\sum_ {k} \\frac{\|(\\beta \| \\alpha_ {k}) \|^{2}}{\|\| \\
 等式成立当且仅当
 
 $ \\begin{equation} \\beta = \\sum_ {k}\\frac{(\\beta \| \\alpha_ {k})}{\|\| \\alpha_ {k} \|\|^{2}} \\alpha_ {k} \\end{equation} $
+
+
+<a id="org3d20f85"></a>
+
+# Linear Functionals and Adjoints
+
+本节的第一部分处理在内积空间上的线性functional和跟内积的关系。基本的结论是在有限维内积空间上的任意线性functional f是“跟空间内固定向量的内积”，例如，$ f(\\alpha) = (\\alpha\| \\beta) , \\beta$ 是V中固定向量。我们使用这个结果证明V中线性算子T的adjoint的存在，这为一个线性算子 $ T^{ * } $使得 $ (T\\alpha \| \\beta) = (\\alpha \| T^{ * }\\beta), \\alpha, \\beta $为V中任意向量。使用标准正交基，线性算子上的adjoint操作为矩阵的共轭转置。我们直接展示复数上的adjoint操作和共轭
+
+设V为任意内积空间，设 $ \\beta $为V中某个固定向量。我们定义一个从V到常量的函数 $ f_ {\\beta} $，
+
+$ \\begin{equation} f_ {\\beta} (\\alpha) = (\\alpha \| \\beta) \\end{equation} $
+
+这个函数 $ f_ {\\beta} $是V上的一个线性functional，因为，通过它的定义，$ (\\alpha \| \\beta) $是 $ \\alpha $的线性函数。如果V是有限维的，V上每个线性functional由某个 $ \\beta $引起
+
+**定理 6** 设V为一个有限维内积空间，且f为V上一个线性functional，则V中存在唯一一个向量 $ \\beta $使得对V中所有 $ \\alpha, f(\\alpha) = (\\alpha \| \\beta) $
+
+设W为f的null space，则 $ T = W + W^{\\perp} $，且f被它在 $ W^{\\perp} $上的值完全决定。事实上，如果P是V在 $ W^{\\perp} $的垂直映射，则
+
+$ \\begin{equation} f(\\alpha) = f(P \\alpha) \\end{equation} $
+
+对V中所有 $ \\alpha $，假设 $ f \\ne 0 $，则f是rank 1且 $ dim(W^{\\perp}) = 1 $。如果 $ \\tau $是 $ W^{\\perp} $上的任意非零向量，则
+
+$ \\begin{equation} P \\alpha = \\frac{(\\alpha \| \\tau)}{\|\| \\tau \|\|^{2}} \\tau \\end{equation} $
+
+对V中所有 $ \\alpha $，则
+
+$ \\begin{equation} f(\\alpha) = (\\alpha \| \\tau) \\cdot \\frac{f(\\tau)}{\|\| \\tau \|\|^{2}} \\end{equation} $
+
+对所有 $ \\alpha, 且 \\beta = [\\overline{f(\\tau)} / \|\| \\tau \|\|^{2}] \\tau $
+
+**定理 7** 对有限维内积空间V上的任意线性算子T，存在V上为唯一一个线性算子 $ T^{ * } $使得
+
+$ \\begin{equation} (T\\alpha \| \\beta) = (\\alpha \| T^{ * } \\beta ) \\end{equation} $
+
+对V上所有 $ \\alpha, \\beta $
+
+**定理 8** 设V为一个有限维内积空间且设 $ \\mathcal{B} = \\{ \\alpha_ {1}, \\ldots, \\alpha_ {n} \\} $为V的一个（有序）正交基。设T为V上的线性算子且设A为T在有序基 $ \\mathcal{B} $上的矩阵，则 $ A_ {k j} = (T\\alpha_ {j} \| \\alpha_ {k}) $
+
+**推论** 设V为一个有限维内积空间，且设T为V上一个线性算子，对V的任意标准正交基，$ T^{ * } $的矩阵是矩阵T的共轭转置
+
+**定义** 设T为有限维向量空间V上的一个线性算子，则我们说T在V上有一个adjoint如果存在V上一个线性算子 $ T^{ * } $使得 $ (T\\alpha \| \\beta) = (\\alpha \| T^{ * } \\beta) $，对V中所有 $ \\alpha, \\beta $
+
+**定理 9** 设V为一个有限维内积空间，如果T和U为V上线性算子且c为一个常量
+
+(i) $ (T + U)^{ * } = T^{ * } + U^{ * } $
+
+(ii) $ (cT)^{ * } = \\bar{c} T^{ * } $
+
+(iii) $ (TU)^{ * } = U^{ * } T^ { * } $
+
+(iv) $ (T^{ * })^{ * } = T $
+
+一个线性算子T有 $ T = T^{ * } $则称为self-ajdoint（或Hermitian）
