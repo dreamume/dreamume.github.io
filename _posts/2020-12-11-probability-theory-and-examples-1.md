@@ -293,7 +293,7 @@ $ 如果x \\in [\\theta, \\infty)则 1_ {[\\theta, \\infty)}(x) = 1，否则 = 0
 
 一个函数 $ X : \\Omega \\to S $被称为从 $ (\\Omega, \\mathcal{F})到 (S, \\mathcal{S}) $的一个可度量映射如果
 
-$ \\begin{equation} X^{-1}(B) \\equiv \{\\omega : X(\\omega) \\in B \\} \\in \\mathcal{F} \\qquad \\qquad \\text{for all } B \\in \\mathcal{S} \\end{equation} $
+$ \\begin{equation} X^{-1}(B) \\equiv \\{\\omega : X(\\omega) \\in B \\} \\in \\mathcal{F} \\qquad \\qquad \\text{for all } B \\in \\mathcal{S} \\end{equation} $
 
 如果 $ (S, \\mathcal{S}) = (\\mathbf{R}^{d}, \\mathcal{R}^{d}) $且d > 1则X被称为一个随机向量。当然，如果d = 1，X被称为随机变量，或r.v.
 
