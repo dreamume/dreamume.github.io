@@ -25,6 +25,7 @@ category:   maths
 1.  [Measure Theory](#org5966362)
     1.  [Probability Spaces](#orga94cfd0)
     2.  [Distributions](#orgc14a0ba)
+    3.  [Random Variables](#org793e18f)
 
 
 <a id="org5966362"></a>
@@ -284,3 +285,40 @@ $ \\begin{equation} (x^{-1} - x^{-3})e^{\\frac{-x^{2}}{2}} \\le \\int_ {x}^{\\in
 $ \\begin{equation} F(x) = \\sum_ {i=1}^{\\infty} \\alpha_ {i} 1_ {[q_ {i}, \\infty)} \\end{equation} $
 
 $ 如果x \\in [\\theta, \\infty)则 1_ {[\\theta, \\infty)}(x) = 1，否则 = 0 $
+
+
+<a id="org793e18f"></a>
+
+## Random Variables
+
+一个函数 $ X : \\Omega \\to S $被称为从 $ (\\Omega, \\mathcal{F})到 (S, \\mathcal{S}) $的一个可度量映射如果
+
+$ \\begin{equation} X^{-1}(B) \\equiv \{\\omega : X(\\omega) \\in B \\} \\in \\mathcal{F} \\qquad \\qquad \\text{for all } B \\in \\mathcal{S} \\end{equation} $
+
+如果 $ (S, \\mathcal{S}) = (\\mathbf{R}^{d}, \\mathcal{R}^{d}) $且d > 1则X被称为一个随机向量。当然，如果d = 1，X被称为随机变量，或r.v.
+
+**定理 1.3.1** 如果 $ \\forall A \\in \\mathcal{A}, \\{\\omega: X(\\omega) \\in A\\} \\in \\mathcal{F}且 \\mathcal{A}产生 \\mathcal{S} $（例如， $ \\mathcal{S} $是包含 $ \\mathcal{A}的最小的 \\sigma $ -域，则X是可度量的
+
+证明：为方便我们用 $ \\{ X \\in B \\} $代替 $ \\{\\omega : X(\\omega) \\in B \\} $，我们有
+
+$ \\begin{equation} \\{ X \\in \\cup_ {i}B_ {i} \\} = \\cup_ {i} \\{X \\in B_ {i} \\} \\end{equation} $
+
+$ \\begin{equation} \\{ X \\in B^{c} \\} = \\{ X \\in B \\}^{c} \\end{equation} $
+
+所以集合的类 $ \\mathbf{B} = \\{B: \\{ X \\in B\\} \\in \\mathcal{F} \\} $是一个 $ \\sigma $-域，因为 $ \\mathbf{B} \\supset \\mathcal{A}且 \\mathcal{A} 生成 \\mathcal{S}, \\mathbf{B} \\supset \\mathcal{S} $
+
+这个接着之前证明的两个等式如果 $ \\mathcal{S} 是一个 \\sigma $-域，则 $ \\{ \\{ X \\in B \\} : B \\in \\mathcal{S} \\}是一个 \\sigma $-域。它是 $ \\Omega上最小的 \\sigma $-域使得X是一个可度量映射。它被称为被X产生的 $ \\sigma $-域，记为 $ \\sigma(X) $
+
+$ \\begin{equation} \\sigma(X) = \\{\\{X \\in B\\} : B \\in \\mathcal{S} \\} \\end{equation} $
+
+**例子 1.3.2** 如果 $ (S, \\mathcal{S}) = (\\mathbf{R}, \\mathcal{R}) $则 $ \\mathcal{A} $在定理1.3.1上可能的选择为 $ \\{(- \\infty, x] : x \\in \\mathbf{R} \\} 或 \\{(- \\infty, x) : x \\in \\mathbf{Q} \\}, Q = $有理数
+
+**例子 1.3.3** 如果 $ (S, \\mathcal{S} = (\\mathbf{R}^{d}, \\mathcal{R}^{d}) $，一个 $ \\mathcal{A} $有用的选择是
+
+$ \\begin{equation} \\{(a_ {1}, b_ {1}) \\times \\cdots \\times (a_ {d}, b_ {d}): - \\infty < a_ {i} < b_ {i} < \\infty \\} \\end{equation} $
+
+或更大的开集集合
+
+**理论 1.3.4** 如果 $ X: (\\Omega, \\mathcal{F}) \\to (S, \\mathcal{S}) 且 f: (S, \\mathcal{S}) \\to (T, \\mathcal{T})为可度量映射，则f(X)是从 $ (\\Omega, \\mathcal{F})到(T, \\mathcal{T}) $的一个可度量映射
+
+证明：设 $ B \\in \\mathcal{T}, \\{ \\omega : f(X(\\omega)) \\in B\\} = \\{ \\omega: X(\\omega) \\in f^{-1}(B) \\} \\in \\mathcal{F} $，因为假设 $ f^{-1}(B) \\in \\mathcal{S} $
