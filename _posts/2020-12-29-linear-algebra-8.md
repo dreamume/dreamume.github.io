@@ -25,6 +25,7 @@ category:   maths
 1.  [Inner Products](#orgf9c15e0)
 2.  [Inner Product Spaces](#org39befc0)
 3.  [Linear Functionals and Adjoints](#org3d20f85)
+4.  [Unitary Operators](#orgaf51119)
 
 
 <a id="orgf9c15e0"></a>
@@ -216,3 +217,48 @@ $ \\begin{equation} (T\\alpha \| \\beta) = (\\alpha \| T^{ * } \\beta ) \\end{eq
 (iv) $ (T^{ * })^{ * } = T $
 
 一个线性算子T有 $ T = T^{ * } $则称为self-ajdoint（或Hermitian）
+
+
+<a id="orgaf51119"></a>
+
+# Unitary Operators
+
+**定义** 设V和W是某个域上的内积空间，且设T为从V到W的线性转换，我们说T保留内积如果 $ \\forall \\alpha, \\beta \\in V, (T\\alpha \| T \\beta) = (\\alpha \| \\beta) $。一个V到W的isomorphism是一个从V到W的向量空间isomorphism T保留内积
+
+**定理 10** 设V和W是某个域上的有限维内积空间，有相同的维数。如果T是从V到W的线性转换，如下描述等价
+
+(i) T保留内积
+
+(ii) T是一个（内积空间）isomorphism
+
+(iii) T把V的每个标准正交基映射到W的每个标准正交基
+
+(iv) T把V的某些标准正交基映射到W的一个标准正交基
+
+**推论** 设V和W是某个域上的有限维内积空间，则V和W是isomorphic当且仅当它们有相同的维数
+
+**定理 11** 设V和w是某个域上的内积空间，且设T为从V到W的线性转换，则T保留内积当且仅当在V中 $ \|\| T\\alpha \|\| = \|\| \\alpha \|\| $
+
+**定义** 在一个内积空间中的unitary算子是空间到它自身的isomorphism
+
+**定理 12** 设U为一个内积空间中的一个线性算子，则U是unitary的当且仅当U的adjoint $ U^{ * } $存在且 $ UU^{ * } = U^{ * }U = I $
+
+**定义** 一个 $ n \\times n $复数矩阵被称为unitary的如果 $ A^{ * } A  = I $
+
+**定理 13** 设V为一个有限维内积空间且设U为一个V上的线性算子，则U为unitary当且仅当U的矩阵在某些（或每个）有序标准正交基下是一个unitary矩阵
+
+**定义** 一个实数或复数 $ n \\times n $矩阵A被称为正交的，当 $ A^{ t }A = I $
+
+**定理 14** 对每个可逆复数 $ n \\times n $矩阵B存在一个唯一对角线上带正数的下三角矩阵M使得MB是unitary的
+
+设 $ T^{ + }(n) $记为所有复数 $ n \\times n $主对角线上为正数的下三角矩阵的集合
+
+设U(n)为所有 $ n \\times n $unitary矩阵的集合，其是一个群
+
+设GL(n)记为所有可逆复数 $ n \\times n $矩阵的集合，则GL(n)也是矩阵乘法的群，该群被称为一般线性群
+
+**推论** 对GL(n)中每个B存在唯一的矩阵N和U使得N在 $ T^{ + }(n) $中，U在U(n)中且
+
+$ \\begin{equation} B = N \\cdot U \\end{equation} $
+
+**定义** 设A和B为复数 $ n \\times n $矩阵，我们说B unitarily equivalent to A如果有一个 $ n \\times n $的unitary矩阵P使得 $ B = P^{-1}AP $，我们说B是与A正交相当的如果有一个 $ n \\times n $正交矩阵P使得 $ B = P^{-1}AP $
