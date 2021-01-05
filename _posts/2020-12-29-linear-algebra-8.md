@@ -26,6 +26,7 @@ category:   maths
 2.  [Inner Product Spaces](#org39befc0)
 3.  [Linear Functionals and Adjoints](#org3d20f85)
 4.  [Unitary Operators](#orgaf51119)
+5.  [Normal Operators](#orgacd288a)
 
 
 <a id="orgf9c15e0"></a>
@@ -262,3 +263,34 @@ $ \\begin{equation} (T\\alpha \| \\beta) = (\\alpha \| T^{ * } \\beta ) \\end{eq
 $ \\begin{equation} B = N \\cdot U \\end{equation} $
 
 **定义** 设A和B为复数 $ n \\times n $矩阵，我们说B unitarily equivalent to A如果有一个 $ n \\times n $的unitary矩阵P使得 $ B = P^{-1}AP $，我们说B是与A正交相当的如果有一个 $ n \\times n $正交矩阵P使得 $ B = P^{-1}AP $
+
+
+<a id="orgacd288a"></a>
+
+# Normal Operators
+
+**定义** 设V为一个有限维内积空间且T为V上一个线性算子。我们说T是normal的如果它可跟它的adjoint交换，例如，$ TT^{ * } = T^{ * } T $
+
+**定理 15** 设V为一个内积空间且T为V上一个self-adjoint线性算子，则T的每个特征值是实数的，且T的不同特征值的特征向量是正交的
+
+**定理 16** 在有限维内积空间的正维度上，每个self-adjoint算子有一个（非零）特征向量
+
+**定理 17** 设V为一个有限维内积空间且设T为V上任意线性算子，假设W为V的子空间在T下invariant，则W的正交补在 $ T^{ * } $下invariant
+
+**定理 18** 设V为一个有限维内积空间且T为V上一个self-adjoint线性算子，则有一个V的标准正交基，其每个向量是T的一个特征向量
+
+**推论** 设A为 $ n \\times n $Hermitian(self-adjoint)矩阵。则有一个unitary矩阵P使得 $ P^{-1}AP $是对角化的（A相当于一个对角矩阵）。如果A是一个实对称矩阵，有一个实正交矩阵P使得 $ P^{-1}AP $是对角化的
+
+**定理 19** 设V为一个有限维内积空间且T为V上一个normal算子，假设 $ \\alpha $是V中一个向量，则 $ \\alpha $是T特征值c的特征向量当且仅当 $ \\alpha $是 $ T^{ * } $的特征值 $ \\bar{c} $的特征向量
+
+**定义** 一个复数 $ n \\times n $矩阵A被称为normal的如果 $ AA^{ * } = A^{ * } A $
+
+**定理 20** 设V为一个有限维内积空间，T是V上的一个线性算子，且 $ \\mathcal{B} $是V的一个标准正交基。假设T在基 $ \\mathcal{B} $下的矩阵A是上三角的，则T是normal当且仅当A是一个对角矩阵
+
+**定理 21** 设V为一个复数有限维内积空间且设T为V上任意线性算子。则有一个V的标准正交基使得T的矩阵是一个上三角的
+
+**推论** 对每个复数 $ n \\times n $矩阵A有一个unitary矩阵U使得 $ U^{-1}AU $是上三角的
+
+**定理 22** 设V为一个复数有限维内积空间且设T为V上一个normal算子，则V有一个标准正交基包含T的特征向量
+
+**推论** 对每个normal矩阵A有一个unitary矩阵P使得 $ P^{-1}AP $是一个对角矩阵
