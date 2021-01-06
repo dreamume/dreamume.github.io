@@ -319,6 +319,46 @@ $ \\begin{equation} \\{(a_ {1}, b_ {1}) \\times \\cdots \\times (a_ {d}, b_ {d})
 
 或更大的开集集合
 
-**理论 1.3.4** 如果 $ X: (\\Omega, \\mathcal{F}) \\to (S, \\mathcal{S}) 且 f: (S, \\mathcal{S}) \\to (T, \\mathcal{T})为可度量映射，则f(X)是从 $ (\\Omega, \\mathcal{F})到(T, \\mathcal{T}) $的一个可度量映射
+**理论 1.3.4** 如果 $ X: (\\Omega, \\mathcal{F}) \\to (S, \\mathcal{S}) 且 f: (S, \\mathcal{S}) \\to (T, \\mathcal{T}) $为可度量映射，则f(X)是从 $ (\\Omega, \\mathcal{F})到(T, \\mathcal{T}) $的一个可度量映射
 
 证明：设 $ B \\in \\mathcal{T}, \\{ \\omega : f(X(\\omega)) \\in B\\} = \\{ \\omega: X(\\omega) \\in f^{-1}(B) \\} \\in \\mathcal{F} $，因为假设 $ f^{-1}(B) \\in \\mathcal{S} $
+
+**定理 1.3.5** 如果 $ X_ {1}, \\ldots, X_ {n} $是随机变量且 $ f: (\\mathbf{R}^{n}, \\mathcal{R}^{n}) \\to (\\mathbf{R}, \\mathcal{R}) $是可度量的，则 $ f(X_ {1}, \\ldots, X_ {n}) $是一个随机变量
+
+证明：通过定理1.3.4，它充分显示 $ (X_ {1}, \\ldots, X_ {n}) $是一个随机向量。我们观察到如果 $ A_ {1}, \\ldots, A_ {n} $是Borel集则
+
+$ \\begin{equation} \\{ (X_ {1}, \\ldots, X_ {n}) \\in A_ {1} \\times \\cdots \\times A_ {n} \\} = \\cap_ {i} \\{ X_ {i} \\in A_ {i} \\} \\in \\mathcal{F} \\end{equation} $
+
+因为形式 $ A_ {1} \\times \\cdots \\times A_ {n} $的集合产生 $ \\mathcal{R}^{n} $，则想要的结果可从定理1.3.1获得
+
+**定理 1.3.6** 如果$ (X_ {1}, \\ldots, X_ {n}) $是随机变量则 $ X_ {1} + \\ldots + X_ {n} $是一个随机变量
+
+证明：通过定理1.3.5，它充分显示 $ f(x_ {1}, \\ldots, x_ {n}) = x_ {1} + \\ldots + x_ {n} $是可度量的，我们使用例子1.3.2并注意到 $ \\{x: x_ {1} + \\ldots + x_ {n} < a \\} $是一个开集且因此在 $ \\mathcal{R}^{n} $中
+
+**定理 1.3.7** 如果 $ X_ {1}, X_ {2}, \\ldots $是随机变量则下面这些也是
+
+$ \\begin{equation} \\inf_ {n} X_ {n} \\qquad \\sup_ {n} X_ {n} \\qquad \\limsup_ {n} X_ {n} \\qquad \\liminf_ {n} X_ {n} \\end{equation} $
+
+证明：因为一个序列的最大下限< a当且仅当一些项 < a，我们有
+
+$ \\begin{equation} \\{ \\inf_ {n} X_ {n} < a \\} = \\cup_ {n} \\{ X_ {n} < a \\} \\in \\mathcal{F} \\end{equation} $
+
+相似的论证显示 $ \\{ \\sup_ {n} X_ {n} > a \\} = \\cup_ {n} \\{ X_ {n} > a \\} \\in \\mathcal{F} $，对最后两个，我们观察到
+
+$ \\begin{equation} \\liminf_ {n \\to \\infty} X_ {n} = \\sup_ {n}\\left(\\inf_ {m \\ge n} X_ {m} \\right) \\end{equation} $
+
+$ \\begin{equation} \\limsup_ {n \\to \\infty} X_ {n} = \\inf_ {n}\\left(\\sup_ {m \\ge n} X_ {m} \\right) \\end{equation} $
+
+为完成第一个例子的证明，注意 $ Y_ {n} = \\inf_ {m \\ge n} X_ {m} $对每个n是一个随机变量，这样 $ \\sup_ {n} Y_ {n} $也是
+
+从定理1.3.7，我们看到
+
+$ \\begin{equation} \\Omega_ {o} \\equiv \\{ \\omega: \\lim_ {n \\to \\infty} X_ {n} 存在 \\} = \\{ \\omega: \\limsup_ {n \\to \\infty} X_ {n} - \\liminf_ {n \\to \\infty} X_ {n} = 0 \\} \\end{equation} $
+
+是一个可度量集合（这里的 $ \\equiv $表示是一个定义）。如果 $ P(\\Omega_ {o}) = 1 $，我们说 $ X_ {n} $总是收敛，或简写为a.s.。这种收敛称为在测度理论中处处收敛。为有一个在整个空间中的极限定义，方便设
+
+$ \\begin{equation} X_ {\\infty} = \\limsup_ {n \\to \\infty} X_ {n} \\end{equation} $
+
+但这个随机变量可能是值 $ + \\infty 或 - \\infty $。我们一般化随机变量的定义
+
+一个定义域是 $ D \\in \\mathcal{F} $的集合的函数，其范围是 $ \\mathbf{R}^{ * } \\equiv [- \\infty, \\infty] $被称为一个随机变量如果对所有 $ B \\in \\mathcal{R}^{ * } $我们有 $ X^{-1}(B) = \\{\\omega: X(\\omega) \\in B \\} \\in \\mathcal{F} $。这里 $ \\mathcal{R}^{ * } = \\mathbf{R}^{ * } $的Borel子集，$ \\mathcal{R}^{ * } $给定通常的拓扑，例如，一个被形式 $ [- \\infty, a), (a, b)和(b, \\infty] $的间隔产生的，$ a, b \\in \\mathbf{R} $。读者应该注意到扩展实线 $ (\\mathbf{R}^{ * }, \\mathcal{R}^{ * } ) $是一个可度量空间，所以可立即产生上述结果
