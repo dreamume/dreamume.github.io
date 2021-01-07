@@ -23,6 +23,7 @@ category:   maths
 # Table of Contents
 
 1.  [Forms on Inner Product Spaces](#org33aee2c)
+2.  [Positive Forms](#orgf123329)
 
 
 <a id="org33aee2c"></a>
@@ -70,3 +71,54 @@ $ \\begin{equation} f(\\alpha, \\beta) = \\overline{f(\\beta, \\alpha)} \\end{eq
 **推论** 使用上述条件，有
 
 $ \\begin{equation} f(\\sum_ {j}x_ {j}\\alpha_ {j}, \\sum_ {k}y_ {k}\\alpha_ {k}) = \\sum_ {j}c_ {j}x_ {j}\\bar{y}_ {j} \\end{equation} $
+
+
+<a id="orgf123329"></a>
+
+# Positive Forms
+
+**定义** 一个在实数或复数向量空间V上的form f是非负的如果它是Hermitian且 $ f(\\alpha, \\alpha) \\ge 0 $对V中每个 $ \\alpha $。form f是正的如果f是Hermitian且 $ f(\\alpha, \\alpha) > 0 $对所有 $ \\alpha \\ne 0 $
+
+**定理 5** 设F为实数域或复数域，设A为F上 $ n \\times n $矩阵，函数g被定义为
+
+$ \\begin{equation} f(X, Y) = Y^{ * }AX \\end{equation} $
+
+是在空间 $ F^{ n \\times 1 } $上的正form当且仅当存在一个可逆 $ n \\times n $矩阵P，元素在F上，使得 $ A = P^{ * }P $
+
+**定义** 设A为域F上的 $ n \\times n $矩阵，A的principal minors为常量 $ \\Delta_ {k}(A) $定义为
+
+$ \\begin{equation} \\Delta_ {k}(A) = \\operatorname{det} \\left[ \\begin{array}{ccc} A_ {11} & \\cdots & A_ {1k} \\\\ \\vdots & & \\vdots \\\\ A_ {k1} & \\cdots & A_ {kk} \\end{array} \\right], \\qquad 1 \\le k \\le n \\end{equation} $
+
+**引理** 设A为域F上的可逆 $ n \\times n $矩阵，下面两个叙述等价
+
+(a) 有一个上三角矩阵P，$ P_ {k k} = 1 (1 \\le k \\le n) $使得矩阵B = AP是下三角的
+
+(b) A的principal minors都不为0
+
+**定理 6** 设f为有限维向量空间上的一个form且设A为有序基 $ \\mathcal{ B} $下f的矩阵，则f是一个正form当且仅当 $ A = A^{ * } $且A的principal minors都是正的
+
+如果A是带复数元素的 $ n \\times n $矩阵且如果A满足 $ \\forall 实数X \\ne 0, X^{t}AX > 0 $，我们称A为一个正矩阵
+
+**定义** 一个有限维内积空间V上的线性算子T是非负的如果 $ T = T^{ * } 且 (T\\alpha \| \\alpha) \\ge 0 $，对V中所有 $ \\alpha $。一个正的线性算子是使得 $ T = T^{ * } 且 (T\\alpha \| \\alpha) > 0 $，对所有 $ \\alpha \\ne 0 $
+
+如果A是复数域上的 $ n \\times n $矩阵，如下描述等价：
+
+(1) A是正的，例如，$ \\sum_ {j}\\sum_ {k}A_ {k j}x_ {j}\\bar{x}_ {k} > 0, x_ {1}, \\ldots, x_ {n} $是复数，不全为0
+
+(2) $ (X \| Y) = Y^{ * }AX $是 $ n \\times 1 $复数矩阵空间上的内积
+
+(3) 对于在 $ n \\times 1 $矩阵上的标准内积 $ (X \| Y) = Y^{ * } X $，线性算子 $ X \\to AX $是正的
+
+(4) 对C上某个可逆 $ n \\times n $矩阵P有 $ A = P^{ * }P $
+
+(5) $ A = A^{ * } $，且A的principal minors是正的
+
+如果A中每个元素都是实数，以下是等价的
+
+(6) $ A = A^{t} 且 \\sum_ {j}\\sum_ {k}A_ {k j}x_ {j}x_ {k} > 0, x_ {1}, \\ldots, x_ {n} $是实数且不全为0
+
+(7) $ (X \| Y) = Y^{t}AX $是 $ n \\times 1 $实数矩阵空间上的内积
+
+(8) 对于 $ n \\times 1 $实数矩阵上的标准内积 $ (X \| Y) = Y^{t}X $，线性算子 $ X \\to AX $是正的
+
+(9) 有一个实数元素的可逆 $ n \\times n $矩阵P，使得 $ A = P^{t}P $
