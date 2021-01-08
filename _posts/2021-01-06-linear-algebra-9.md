@@ -24,6 +24,7 @@ category:   maths
 
 1.  [Forms on Inner Product Spaces](#org33aee2c)
 2.  [Positive Forms](#orgf123329)
+3.  [More on Forms](#orgf41eb85)
 
 
 <a id="org33aee2c"></a>
@@ -46,7 +47,7 @@ $ \\begin{equation} f(\\alpha, \\beta) = (T\\alpha \| \\beta) \\end{equation} $
 
 对V中所有 $ \\alpha, \\beta $，且映射 $ f \\to T $是forms空间在L(V, V)上的同构
 
-**推论** 等式 $ (f \| g) = \\operatorname{tr}(T_ {f}T_ {g}^{ * } $定义了一个在forms空间上的内积有属性
+**推论** 等式 $ (f \| g) = \\operatorname{tr}(T_ {f}T_ {g}^{ * }) $定义了一个在forms空间上的内积有属性
 
 $ \\begin{equation} (f \| g) = \\sum_ {j,k}f(\\alpha_ {k}, \\alpha_ {j})\\overline{g(\\alpha_ {k}, \\alpha_ {j})} \\end{equation} $
 
@@ -122,3 +123,20 @@ $ \\begin{equation} \\Delta_ {k}(A) = \\operatorname{det} \\left[ \\begin{array}
 (8) 对于 $ n \\times 1 $实数矩阵上的标准内积 $ (X \| Y) = Y^{t}X $，线性算子 $ X \\to AX $是正的
 
 (9) 有一个实数元素的可逆 $ n \\times n $矩阵P，使得 $ A = P^{t}P $
+
+
+<a id="orgf41eb85"></a>
+
+# More on Forms
+
+**定理 7** 设f为实数或复数向量空间V上的一个form且 $ \\{ \\alpha_ {1}, \\ldots, \\alpha_ {r} \\} $是V的有限维子空间W上的一个基，设M为 $ r \\times r $矩阵，其元素为
+
+$ \\begin{equation} M_ {j k} = f(\\alpha_ {k}, \\alpha_ {j}) \\end{equation} $
+
+且W'为V中所有向量 $ \\beta $的集合使得 $ f(\\alpha, \\beta) = 0 $对W中所有 $ \\alpha $。则W'是V的一个子空间，且 $ W \\cap W' = \\{ 0 \\} $当且仅当M是可逆的，这种情况下，V = W + W'
+
+**定理 8** 设f为实数或复数向量空间V上的一个form且A为f在V的有序基 $ \\{ \\alpha_ {1}, \\ldots, \\alpha_ {n} \\} $下的矩阵。假设A的principal minors都不为0，则有唯一的一个上三角矩阵P，$ P_ {k k} = 1(1 \\le k \\le n) $使得
+
+$ \\begin{equation} P^{ * } AP \\end{equation} $
+
+是上三角的
