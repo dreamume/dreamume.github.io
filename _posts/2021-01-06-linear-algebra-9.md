@@ -26,6 +26,7 @@ category:   maths
 2.  [Positive Forms](#orgf123329)
 3.  [More on Forms](#orgf41eb85)
 4.  [Spectral Theory](#org50de053)
+5.  [Further Properties of Normal Operators](#org58ed36f)
 
 
 <a id="org33aee2c"></a>
@@ -226,3 +227,86 @@ $ \\begin{equation} T = \\sum_ {j=1}^{k} c_ {j}P_ {j} \\end{equation} $
 $ c_ {1}, \\ldots, c_ {k} $为任意常量
 
 **推论** 在上述定理假设下，在 $ \\mathcal{G} $中有一个算子T使得 $ \\mathcal{G} $中的每个成员是T的多项式
+
+
+<a id="org58ed36f"></a>
+
+# Further Properties of Normal Operators
+
+**定理 17** 设T为在有限维内积空间V中的一个normal算子，设p为T的minimal polynomial且 $ p_ {1}, \\cdots, p_ {k} $为它的不同的monic质因子，则每个 $ p_ {j} $在p中出现次数为1且degree为1或2，假设 $ W_ {j} $是 $ p_ {j}(T) $的null space，则
+
+(i) $ W_ {j} $正交 $ W_ {i}, i \\ne j $
+
+(ii) $ V = W_ {1} \\oplus \\cdots \\oplus W_ {k} $
+
+(iii) $ W_ {j} $在T下不变，且 $ p_ {j} $是T限制在 $ W_ {j} $下的minimal polynomial
+
+(iv) 对每个j，有一个系数为常量的polynomial $ e_ {j} $使得 $ e_ {j}(T) $是V到 $ W_ {j} $的正交映射
+
+**引理 1** 设N为内积空间W上的normal算子，则N的null space它的范围的正交补
+
+**引理 2** 如果N是一个normal算子且 $ \\alpha $是一个向量使得 $ N^{2}\\alpha = 0 $，则 $ N\\alpha = 0 $
+
+**引理 3** 设T为一个normal算子且f为系数为常量的任意polynomial，则f(T)也是normal的
+
+**引理 4** 设T为一个normal算子且f、g为系数为常数的互质polynomials，假设 $ \\alpha, \\beta $为向量使得 $ f(T)\\alpha = 0, g(T)\\beta = 0 $，则 $ (\\alpha \| \\beta) = 0 $
+
+**定义** 我们称子空间 $ W_ {j} (1 \\le j \\le k) $为V在T之下的主部分
+
+**推论** 设T为有限维复数内积空间V上的normal算子且 $ W_ {1}, \\ldots, W_ {k} $为V在T之下的主部分，假设W是V的一个子空间在T下不变，则
+
+$ \\begin{equation} W = \\sum_ {j} W \\cap W_ {j} \\end{equation} $
+
+**定理 18** 设T为有限维实数内积空间V上的一个normal算子且p是它的minimal polynomial，假设
+
+$ \\begin{equation} p = (x - a)^{2} + b^2 \\end{equation} $
+
+a、b为实数且 $ b \\ne 0 $，则有一个整数s > 0使得 $ p^{s} $是T的特征polynomial，且存在V的子空间 $ V_ {1}, \\ldots, V_ {s} $使得
+
+(i) $ V_ {j} $正交 $ V_ {i}, i \\ne j $
+
+(ii) $ V = V_ {1} \\oplus \\cdots \\oplus V_ {s} $
+
+(iii) 每个 $ V_ {j} $有一个标准正交基 $ \\{ \\alpha_ {j}, \\beta_ {j} \\} $及属性
+
+$ \\begin{equation} T \\alpha_ {j} = a \\alpha_ {j} + b \\beta_ {j} \\end{equation} $
+
+$ \\begin{equation} T \\beta_ {j} = -b \\alpha_ {j} + a \\beta_ {j} \\end{equation} $
+
+**引理** 设V为一个实数内积空间且S为V上一个normal算子使得 $ S^{2} + I = 0 $，设 $ \\alpha $为V中任意向量且 $ \\beta = S \\alpha $，则
+
+$ \\begin{equation} S^{ * } \\alpha = - \\beta \\end{equation} $
+
+$ \\begin{equation} S^{ * } \\beta = \\alpha \\end{equation} $
+
+$ (\\alpha \| \\beta) = 0 且 \|\| \\alpha \|\| = \|\| \\beta \|\| $
+
+**推论** 在上述定理条件下，T是可逆的，且
+
+$ \\begin{equation} T^{ * } = (a^{2} + b^{2})T^{-1} \\end{equation} $
+
+**定理 19** 设T为在有限维内积空间V中的一个normal算子，则任意可与T交换的线性算子也能与 $ T^{ * } $交换，更进一步，在T下不变的每个子空间也在$ T^{ * } $下不变
+
+**定理 20** 设T为有限维内积空间V上的一个normal线性算子（$ \\operatorname{dim} V \\ge 1 $），则V中存在r个非零向量 $ \\alpha_ {1}, \\ldots, \\alpha_ {r} $对应T-annihilators $ e_ {1}, \\ldots, e_ {r} $使得
+
+(i) $ V = Z(\\alpha_ {1}; T) \\oplus \\cdots \\oplus Z(\\alpha_ {r}; T) $
+
+(ii) 如果 $ 1 \\le k \\le r - 1 $，则 $ e_ {k+1} $整除 $ e_ {k} $
+
+(iii) $ Z(\\alpha_ {j}; T) $正交 $ Z(\\alpha_ {k}; T), j \\ne k $，更进一步，整数r和annihilators $ e_ {1}, \\ldots, e_ {r} $由条件(i)和(ii)唯一决定且没有 $ \\alpha_ {k} $为0
+
+**推论** 如果A是一个normal矩阵，其元素为实数（复数），则有一个实的正交（unitary）矩阵P使得 $ P^{-1}AP $是rational cononical form
+
+**定义** 设V和V'为相同域上的内积空间，一个线性转换
+
+$ \\begin{equation} U: V \\to V' \\end{equation} $
+
+被称为unitary转换如果它映射V onto V'且保留内积，如果T是V上的一个线性算子且T'是V'上的一个线性算子，则T unitarily equivelant to T'如果存在从V onto V'的unitary转换U使得
+
+$ \\begin{equation} UTU^{-1} = T' \\end{equation} $
+
+**引理** 设V和V'为相同域上的有限维内积空间，设T为V上的一个线性算子且T'为V'上的一个线性算子，则T unitarily equivalent to T'当且仅当有一个V的标准正交基 $ \\mathcal{B} $和V'的标准正交基 $ \\mathcal{B}' $使得
+
+$ \\begin{equation} [T]_ {\\mathcal{B}} = [T']_ {\\mathcal{B}'} \\end{equation} $
+
+**定理 21** 设V和V'为相同域上的有限维内积空间，假设T为V上的一个normal算子且T'为V'上的normal算子，则T unitarily equivalent to T'当且仅当T和T'有相同的特征polynomial
