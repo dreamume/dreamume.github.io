@@ -173,7 +173,7 @@ $ \\begin{equation} \\alpha_ {j}' = \\sum_ {i}P_ {i j}\\alpha_ {i} \\end{equatio
 
 **定理 11** 设A为normal矩阵且 $ c_ {1}, \\ldots, c_ {k} $为 $ \\operatorname{det}(xI - A) $不同的复数根，设
 
-$ \\begin{equation} e_ {i} = \\prod_ {j \\ne i)\\left(\\frac{x - c_ {j}}{c_ {i} - c_ {j}}\\right) \\end{equation} $
+$ \\begin{equation} e_ {i} = \\prod_ {j \\ne i}\\left(\\frac{x - c_ {j}}{c_ {i} - c_ {j}}\\right) \\end{equation} $
 
 且 $ E_ {i} = e_ {i}(A)(1 \\le k) $。则 $ E_ {i}E_ {j} = 0, i \\ne j, E_ {i}^{2} = E_ {i}, E_ {i}^{ * } = E_ {i} $，且
 
