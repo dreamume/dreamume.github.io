@@ -25,6 +25,7 @@ category:   maths
 1.  [Forms on Inner Product Spaces](#org33aee2c)
 2.  [Positive Forms](#orgf123329)
 3.  [More on Forms](#orgf41eb85)
+4.  [Spectral Theory](#org50de053)
 
 
 <a id="org33aee2c"></a>
@@ -140,3 +141,88 @@ $ \\begin{equation} M_ {j k} = f(\\alpha_ {k}, \\alpha_ {j}) \\end{equation} $
 $ \\begin{equation} P^{ * } AP \\end{equation} $
 
 是上三角的
+
+
+<a id="org50de053"></a>
+
+# Spectral Theory
+
+**定理 9(Spectral Theorem)** 设T为有限维复数内积空间V上的normal算子或有限维实数内积空间V上的self-adjoint算子，设 $ c_ {1}, \\ldots, c_ {k} $为T的不同的特征值，设 $ W_ {j} $为 $ c_ {j} $对应的特征空间且 $ E_ {j} $为V在 $ W_ {j} $上的正交映射，则 $ W_ {j} $正交 $ W_ {i} $当 $ i \\ne j $，V是 $ W_ {1}, \\ldots, W_ {k} $的直和，且
+
+$ \\begin{equation} T = c_ {1}E_ {1} + \\cdots + c_ {k}E_ {k} \\end{equation} $
+
+**推论** 如果 $ e_ {j} = \\prod_ {i \\ne j}\\left(\\frac{x - c_ {i}}{c_ {j} - c_ {i}} \\right), 则 E_ {j} = e_ {j}(T), 1 \\le j \\le k $
+
+**定义** 设T为有限维内积空间上的一个可对角化normal算子且
+
+$ \\begin{equation} T = \\sum_ {j = 1}^{k} c_ {j}E_ {j} \\end{equation} $
+
+是它的spectral resolution。假设f是一个函数定义域包含T的spectrum在常量域上有值，则线性算子f(T)被定义为如下等式
+
+$ \\begin{equation} f(T) = \\sum_ {j = 1}^{k} f(c_ {j})E_ {j} \\end{equation} $
+
+**定理 10** 设T为有限维内积空间上的一个可对角化normal算子，有Spectrum S，假设f是一个函数定义域包含S在常量域上有值，则f(T)是一个可对角化normal算子有spectrum f(S)。如果U是一个V到V'的unitary映射且 $ T' = UTU^{-1} $，则S是T'的spectrum且
+
+$ \\begin{equation} f(T') = Uf(T)U^{-1} \\end{equation} $
+
+**推论** 在定理10的假设下，假设在有序基 $ \\mathcal{B} = \\{\\alpha_ {1}, \\ldots, \\alpha_ {n} \\} $下T表达为对角矩阵D，元素为 $ d_ {1}, \\ldots, d_ {n} $，则在基 $ \\mathcal{B} $下，f(T)表达为对角矩阵f(D)，元素为 $ f(d_ {1}), \\ldots, f(d_ {n}) $。如果 $ \\mathcal{B}' = \\{\\alpha_ {1}', \\ldots, \\alpha_ {n}' \\} $是任意其他有序基且P矩阵使得
+
+$ \\begin{equation} \\alpha_ {j}' = \\sum_ {i}P_ {i j}\\alpha_ {i} \\end{equation} $
+
+则 $ P^{-1}f(D)P $是基 $ \\mathcal{B}' $下f(T)的矩阵
+
+**定理 11** 设A为normal矩阵且 $ c_ {1}, \\ldots, c_ {k} $为 $ \\operatorname{det}(xI - A) $不同的复数根，设
+
+$ \\begin{equation} e_ {i} = \\prod_ {j \\ne i)\\left(\\frac{x - c_ {j}}{c_ {i} - c_ {j}}\\right) \\end{equation} $
+
+且 $ E_ {i} = e_ {i}(A)(1 \\le k) $。则 $ E_ {i}E_ {j} = 0, i \\ne j, E_ {i}^{2} = E_ {i}, E_ {i}^{ * } = E_ {i} $，且
+
+$ \\begin{equation} I = E_ {1} + \\cdots + E_ {k} \\end{equation} $
+
+如果f是一个复数函数其定义域包含 $ c_ {1}, \\ldots, c_ {k} $，则
+
+$ \\begin{equation} f(A) = f(c_ {1})E_ {1} + \\cdots + f(c_ {k})E_ {k}; \\end{equation} $
+
+特别地， $ A = c_ {1}E_ {1} + \\cdots + c_ {k}E_ {k} $
+
+**定理 12** 设T为有限维内积空间V上的一个可对角化normal算子，则T是一个self-adjoint，非负或unitary对应T的每个特征值为实数的，非负的或绝对值为1
+
+**定理 13** 设V为一个有限维内积空间且T为V上一个非负算子，则T有一个唯一的非负平方根，在V上有唯一一个非负算子N使得 $ N^{2} = T $
+
+**定理 14** 设V为一个有限维内积空间且设T为V上任意线性算子，则存在V上一个unitary算子U和V上一个非负算子N使得T = UN，非负算子是唯一的，如果T可逆，算子U也是唯一的
+
+**定义** 设 $ \\mathcal{F} $为内积空间V上的一族算子，$ \\mathcal{F} $上的有域F上常量值的函数r被称为 $ \\mathcal{F} $的一个根如果在V中有一个非零 $ \\alpha $使得
+
+$ \\begin{equation} T \\alpha = r(T) \\alpha \\end{equation} $
+
+对 $ \\mathcal{F} $上所有T。对任意从 $ \\mathcal{F} $到F的函数，设V(r)为V中所有 $ \\alpha $的集合使得对 $ \\mathcal{F} $中每个T，有 $ T \\alpha = r(T)\\alpha $
+
+则V(r)是V的一个子空间，且r是 $ \\mathcal{F} $的一个根当且仅当 $ V(r) \\ne \\{0\\} $。V(r)中每个非零 $ \\alpha $同时也是 $ \\mathcal{F} $中每个T的一个特性向量
+
+**定理 15** 设 $ \\mathcal{F} $为在有限维内积空间V上的一族可交换可对角化normal算子，则 $ \\mathcal{F} $只有有限个根。如果 $ r_ {1}, \\ldots, r_ {k} $为 $ \\mathcal{F} $的不同根，则
+
+(i) $ V(r_ {i}) $正交 $ V(r_ {j}), i \\ne j $，且
+
+(ii) $ V = V(r_ {1}) \\oplus \\cdots \\oplus V(r_ {k}) $
+
+**推论** 在上面定理的假设下，设 $ P_ {j} $为V在 $ V(r_ {j}) $上的正交映射，$ (1 \\ne j \\ne k) $，则 $ P_ {i}P_ {j} = 0, i \\ne j $，
+
+$ \\begin{equation} I = P_ {1} + \\cdots + P_ {k} \\end{equation} $
+
+且 $ \\mathcal{F} $中每个T可写成如下形式
+
+$ \\begin{equation} T = \\sum_ {j}r_ {j} (T)P_ {j} \\end{equation} $
+
+**定义** 正交映射族 $ \\{P_ {1}, \\ldots, P_ {k} \\} $被称为由 $ \\mathcal{F} $决定的resolution of identity，且上式为在该族中T的spectral resolution
+
+**定义** 一个在内积空间V上的算子的self-adjoint代数是一个L(V, V)的线性子代数，其包含每个成员的adjoint
+
+**定义** 如果 $ \\mathcal{F} $是有限维内积空间上的一族线性算子，由 $ \\mathcal{F} $产生的self-adjoint代数是包含 $ \\mathcal{F} $的最小self-adjoint代数
+
+**定理 16** 设 $ \\mathcal{F} $是有限维内积空间V上的可对角化normal算子的交换族，且设 $ \\mathcal{G} $为由 $ \\mathcal{F} $产生的self-adjoint代数和identity算子，设 $ \\{P_ {1}, \\ldots, P_ {k} \\} $为由 $ \\mathcal{F} $定义的resolution of the identity，则 $ \\mathcal{G} $为V上所有算子的如下形式的集合
+
+$ \\begin{equation} T = \\sum_ {j=1}^{k} c_ {j}P_ {j} \\end{equation} $
+
+$ c_ {1}, \\ldots, c_ {k} $为任意常量
+
+**推论** 在上述定理假设下，在 $ \\mathcal{G} $中有一个算子T使得 $ \\mathcal{G} $中的每个成员是T的多项式
