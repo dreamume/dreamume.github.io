@@ -45,7 +45,7 @@ $ \\begin{equation} f_ {i j}(\\alpha, \\beta) = L_ {i}(\\alpha) L_ {j}(\\beta), 
 
 形成空间L(V, V, F)的一个基，特别地，L(V, V, F)的维数为 $ n^{2} $
 
-**定理 2** 设f为有限维向量空间V上的一个bilinear form，设 $ L_ {f} $和 $ R_ {f} $为从V到 $ V^{ * } $的线性转换定义为 $ (L_ {f}\\alpah)(\\beta) = f(\\alpha, \\beta) = (R_ {f}\\beta)(\\alpha) $，则 $ \\operatorname{rank}(L_ {f}) = \\operatorname{rank}(R_ {f}) $
+**定理 2** 设f为有限维向量空间V上的一个bilinear form，设 $ L_ {f} $和 $ R_ {f} $为从V到 $ V^{ * } $的线性转换定义为 $ (L_ {f}\\alpha)(\\beta) = f(\\alpha, \\beta) = (R_ {f}\\beta)(\\alpha) $，则 $ \\operatorname{rank}(L_ {f}) = \\operatorname{rank}(R_ {f}) $
 
 **定义** 如果f为有限维向量空间V上的一个bilinear form，f的rank是整数 $ r = \\operatorname{rank}(L_ {f}) = \\operatorname{rank}(R_ {f}) $
 
