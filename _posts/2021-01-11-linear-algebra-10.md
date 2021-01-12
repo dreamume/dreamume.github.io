@@ -110,7 +110,7 @@ Synmmetric Bilinear Forms
 
 (i) 在有序基 $ \\mathcal{B} $f的矩阵是对角的
 
-(ii) $ f(\\beta_ {j}, \\beta_ {j}) = \\begin{array}{ll} 1, & j = 1, \\ldots, r \\\\ 0, & j > r \\end{array} $
+(ii) $ f(\\beta_ {j}, \\beta_ {j}) = \\left{ \\begin{array}{ll} 1, & j = 1, \\ldots, r \\\\ 0, & j > r \\end{array} $
 
 **定理 5** 设V为实数域上的一个n维向量空间，且设f为V上一个对称bilinear form其rank为r，则有一个V上的有序基 $ \\{ \\beta_ {1}, \\beta_ {2}, \\ldots, \\beta_ {n} \\} $使得f的矩阵是对角的且
 
