@@ -128,4 +128,4 @@ $ \\begin{equation} f(\\beta_ {j}, \\beta_ {j}) = \\pm 1, \\qquad j = 1, \\ldots
 
 **定理 6** 设V为复数域的子域上的n维向量空间，且设f为V上一个skew-symmetric bilinear form，则f的rank r是偶数，且如果r = 2k有一个V上的有序基使得f的矩阵为 $ (n - r) \\times (n - r) $零矩阵和k个 $ 2 \\times 2 $矩阵的拷贝的直和
 
-$ \\begin{equation} \\left[ \\begin{array}[ll} 0 & 1 \\\\ -1 & 0 \\end{array} \\right] \\end{equation} $
+$ \\begin{equation} \\left[ \\begin{array}{ll} 0 & 1 \\\\ -1 & 0 \\end{array} \\right] \\end{equation} $
