@@ -24,6 +24,7 @@ category:   maths
 
 1.  [Bilinear Forms](#org43acb5f)
 2.  [Synmmetric Bilinear Forms](#orga7bd71e)
+3.  [Skew-Symmetric Bilinear Forms](#org33e6a85)
 
 
 <a id="org43acb5f"></a>
@@ -117,3 +118,14 @@ Synmmetric Bilinear Forms
 $ \\begin{equation} f(\\beta_ {j}, \\beta_ {j}) = \\pm 1, \\qquad j = 1, \\ldots, r \\end{equation} $
 
 更进一步，基向量 $ \\beta_ {j} $的数 $ f(\\beta_ {j}, \\beta_ {j}) = 1 $对基的选择是独立的
+
+
+<a id="org33e6a85"></a>
+
+# Skew-Symmetric Bilinear Forms
+
+本节V将作为复数域的子域F上的一个向量空间，一个V上的bilinear form被称为skew-symmetri如果对V中所有向量 $ \\alpha, \\beta, f(\\alpha, \\beta) = -f(\\beta, \\alpha) $
+
+**定理 6** 设V为复数域的子域上的n维向量空间，且设f为V上一个skew-symmetric bilinear form，则f的rank r是偶数，且如果r = 2k有一个V上的有序基使得f的矩阵为 $ (n - r) \\times (n - r) $零矩阵和k个 $ 2 \\times 2 $矩阵的拷贝的直和
+
+$ \\begin{equation} \\left[ \\begin{array}[ll} 0 & 1 \\\\ -1 & 0 \\end{array} \\right] \\end{equation} $
