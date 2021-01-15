@@ -25,6 +25,7 @@ category:   maths
 1.  [General Topology](#org8fd57c5)
     1.  [Metric Spaces](#orgb8cdb49)
     2.  [Topological Spaces](#orgc07d561)
+    3.  [Subspaces](#org0d82477)
 
 
 <a id="org8fd57c5"></a>
@@ -155,3 +156,30 @@ $ \\begin{equation} dist_ {2}\\left(x, y\\right) < \\delta \\Rightarrow dist_ {1
 例如，如果 $ f: X \\to Y $是一个函数且X是一个拓扑空间，则有一个Y上最大拓扑使f连续，该拓扑有开集 $ \\{ V \\subset Y \| f^{-1}(V)在X中是开的 \\} $。同样有一个最小的拓扑
 
 如果一个拓扑是满足某些给定条件的最大的拓扑则通常对给定拓扑有另外的条件是满足新条件最小的拓扑。例如，在Y上的拓扑，如前段例子中，是最小的拓扑满足条件“对所有空间Z和所有函数 $ g: Y \\to Z, g \\circ f 连续 \\Rightarrow g连续 $“，这样讨论是否一个给定拓扑是弱或强的意义不大，除非定义条件是指定的
+
+
+<a id="org0d82477"></a>
+
+## Subspaces
+
+**定义** 如果X是一个拓扑空间且 $ A \\subset X $则A上的相关拓扑或子空间拓扑是A和X的开集的交的集合，对这个拓扑，A被称为X的子空间
+
+**命题** 如果Y是X的一个子空间则 $ A \\subset Y $在Y中是闭的 $ \\leftrightarrow A = Y \\cap B $，B是X的某个闭子集
+
+**命题** 如果X是一个拓扑空间且 $ A \\subset X $则有一个最大的开集U使得 $ U \\subset A $，这个集合被称为X中A的内部且被记为int(A)
+
+**命题** 如果X是一个拓扑空间且 $ A \\subset X $则有一个最小的闭集F使得 $ A \\subset F \\subset X $，这个集合被称为X中A的闭且被记为 $ \\bar{A} $
+
+如果我们需要指明闭集所在的空间（X），我们将使用记号 $ \\bar{A}^{X} $
+
+**命题** 如果 $ A \\subset Y \\subset X $则 $ \\bar{A}^{Y} = \\bar{A}^{X} \\cap Y $，这样，如果Y是在X中闭的，则 $ \\bar{A}^{Y} = \\bar{A}^{X} $
+
+**定义** 如果X是一个拓扑空间且 $ A \\subset X $则A的边界或边沿被定义为 $ \\partial A = dbry(A) = \\bar{A} \\cap \\overline{X - A} $
+
+**命题** 如果 $ Y \\subset X $则Y与X的一个基的成员的交集集合是Y相关拓扑的一个基
+
+**命题** 如果X, Y, Z是拓扑空间且Y是X的子空间且Z是Y的子空间，则Z是X的子空间
+
+**命题** 如果X是一个度量空间且 $ A \\subset X $则 $ \\bar{A} $是A的点序列在X上的极限的集合
+
+**定义** 一个拓扑空间X的子集A被称为在X中稠密的如果 $ \\bar{A} = X $，一个子集A被称为在X中无处稠密如果 $ int(\\bar{A}) = \\emptyset $
