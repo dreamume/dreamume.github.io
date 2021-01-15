@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "JPEG2000 Image Compression Foundamentals, Standards and Practice"
+title:      "JPEG2000 Image Compression Foundamentals, Standards and Practice(Chapter 1)"
 subtitle:   "Image Compression OverView"
 thumbnail-img: ""
 date:       2021-01-16 02:38
