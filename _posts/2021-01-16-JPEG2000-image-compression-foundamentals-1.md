@@ -26,6 +26,7 @@ category:   it
     1.  [Elementary Concepts](#orgba908b6)
         1.  [Lossless and Lossy Compression](#orgd7eab88)
         2.  [Gamma Correction](#orgfb89b50)
+        3.  [Measures Of Compression](#org8b8fd5c)
 
 
 <a id="orgb938244"></a>
@@ -82,3 +83,24 @@ $ \\begin{equation} \\begin{aligned} dx_ {lin} &= \\gamma(x')^{\\gamma - 1} dx' 
 这样，场景光误差将在图像更明亮的部分变得更大。但很幸运地是（不是设计），该行为跟人可视系统（Weber's law）能很好匹配。根据Weber's law，场景光的改变 $ dx_ {lin} $，需要有效的明显改变在可察觉亮度到 $ x_ {lin} $自身的比例。对 $ \\gamma $的大值，上述等式显示 $ \\frac{dx_ {lin}}{x_ {lin}} $大约跟 $ dx' $成比例。这样，gamma校正值比线性场景光 $ x_ {lin} $能以更容易察觉的方式统一度量。这样，Weber's law的效果能跟简单的数字改动度量比如MSE自动协调，提供应用到gamma校正采样值
 
 相反地，MSE证明在没有gamma校正的图像采样上用处不大。对这样的图片有损压缩算法会导致更差的视觉性能。当处理非自然图片源时需要特别小心；医学X射线和SAR（合成口径雷达）图像，例如，通常是线性的
+
+
+<a id="org8b8fd5c"></a>
+
+### Measures Of Compression
+
+图片压缩的目的是用一串二进制数字表达图像，称为压缩字节流，记为c。目标是是使其长度||c||尽可能小。定义压缩比为
+
+$ \\begin{equation} \\text{压缩比} \\stackrel{\\Delta}{=} \\frac{N_ {1}N_ {2}B}{\|\|c\|\|} \\end{equation} $
+
+最终，我们定义压缩比率，表达为bps(bits per sample)
+
+$ \\begin{equation} \\text{比率 }(bps) \\stackrel{\\Delta}{=} \\frac{\|\| c \|\|}{N_ {1}N_ {2}} \\end{equation} $
+
+对有损压缩，比率对图像压缩系统更是一个性能度量，因为高字节深度图像的最少有效位通常被丢弃而不导致重度失真。这样，每图像采样花费的平均字节数通常是更重要的压缩性能度量，而不是采样跟原始相比的精确度
+
+如果图像显示为常量物理大小而不是像素维度，一个相似的参数给出建议字节流本身的大小相比比率是更重要的性能度量。在这样的应用程序中，许多原始的图像解决方案在呈现时会丢失这样压缩算法被应用到图像的不会出现重要失真的化略解决方案版本。总结来说，比率是有损压缩性能重要度量仅当 $ N_ {1} 和 N_ {2} $跟物理维度成比例的图像上
+
+![img](../img/typical_compressed_bit_rates.png)
+
+上图提供了一个粗略显示的压缩自然图像的压缩比率，虽然其严重依赖图像的内容。假设有损重构图像被计算机显示器以典型的90像素/英尺（22像素/mm）解决方案呈现，如果图像被打印为更紧密的点位则可达成更高的压缩比
