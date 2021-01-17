@@ -89,7 +89,7 @@ $ \\begin{equation} \\begin{aligned} dx_ {lin} &= \\gamma(x')^{\\gamma - 1} dx' 
 
 ### Measures Of Compression
 
-图片压缩的目的是用一串二进制数字表达图像，称为压缩字节流，记为c。目标是是使其长度||c||尽可能小。定义压缩比为
+图片压缩的目的是用一串二进制数字表达图像，称为压缩字节流，记为c。目标是是使其长度\|\|c\|\|尽可能小。定义压缩比为
 
 $ \\begin{equation} \\text{压缩比} \\stackrel{\\Delta}{=} \\frac{N_ {1}N_ {2}B}{\|\|c\|\|} \\end{equation} $
 
