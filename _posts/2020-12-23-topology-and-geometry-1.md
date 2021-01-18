@@ -26,6 +26,7 @@ category:   maths
     1.  [Metric Spaces](#orgb8cdb49)
     2.  [Topological Spaces](#orgc07d561)
     3.  [Subspaces](#org0d82477)
+    4.  [Connectivity and Components](#org5da5401)
 
 
 <a id="org8fd57c5"></a>
@@ -183,3 +184,22 @@ $ \\begin{equation} dist_ {2}\\left(x, y\\right) < \\delta \\Rightarrow dist_ {1
 **命题** 如果X是一个度量空间且 $ A \\subset X $则 $ \\bar{A} $是A的点序列在X上的极限的集合
 
 **定义** 一个拓扑空间X的子集A被称为在X中稠密的如果 $ \\bar{A} = X $，一个子集A被称为在X中无处稠密如果 $ int(\\bar{A}) = \\emptyset $
+
+
+<a id="org5da5401"></a>
+
+## Connectivity and Components
+
+**定义** 一个拓扑空间X被称为连通的如果它不是两个非空开集的不可交并
+
+**定义** 一个拓扑空间X的一个子集A被称为clopen如果它在X中即是开也是闭的
+
+**命题** 一个拓扑空间X是连通的 $ \\Leftrightarrow $它的clopen子集只有X和 $ \\varnothing $
+
+**定义** 一个离散值映射是一个映射（连续的）从拓扑空间X到一个离散空间D
+
+**命题** 一个拓扑空间X是连通的 $ \\Leftrightarrow $X上每个离散值映射是一个常量
+
+证明：如果X是连通的且 $ d: X \\to D $是一个离散值映射且如果 $ y \\in D $在d的范围中，则 $ d^{-1}(y) $是clopen且非空的，且必须等于X，这样d是只有值y的常数
+
+相反地，如果X不是连通的则 $ X = U \\cup V $，对某个不相交clopen集U和V，则映射 $ d: X \\to {0, 1} $，0在U上，1在V上是一个非常量离散值映射
