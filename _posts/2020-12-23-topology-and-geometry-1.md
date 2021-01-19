@@ -228,7 +228,7 @@ $ \\begin{equation} dist_ {2}\\left(x, y\\right) < \\delta \\Rightarrow dist_ {1
 
 证明：如果 $ p \\in X $则quasi-component包含
 
-$ \\begin{equation} \\{ q \\in X \| d(q) = d(p) \\text{ 对所有离散值映射d} \\end{equation} $
+$ \\begin{equation} \\{ q \\in X \| d(q) = d(p) \\text{ 对所有离散值映射d} \\} \\end{equation} $
 
 但
 
