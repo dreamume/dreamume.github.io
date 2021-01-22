@@ -27,6 +27,8 @@ category:   it
         1.  [Lossless and Lossy Compression](#orgd7eab88)
         2.  [Gamma Correction](#orgfb89b50)
         3.  [Measures Of Compression](#org8b8fd5c)
+    2.  [EXPLOITING REDUNDANCY](#org821e426)
+        1.  [STATISTICAL REDUNDANCY](#org8d9f45b)
 
 
 <a id="orgb938244"></a>
@@ -104,3 +106,19 @@ $ \\begin{equation} \\text{比率 }(bps) \\stackrel{\\Delta}{=} \\frac{\|\| c \|
 ![img](../img/typical_compressed_bit_rates.png)
 
 上图提供了一个粗略显示的压缩自然图像的压缩比率，虽然其严重依赖图像的内容。假设有损重构图像被计算机显示器以典型的90像素/英尺（22像素/mm）解决方案呈现，如果图像被打印为更紧密的点位则可达成更高的压缩比
+
+
+<a id="org821e426"></a>
+
+## EXPLOITING REDUNDANCY
+
+没有任何压缩时，图像采样值表现为 $ N_ {1}N_ {2}B $比特。本节我们简单讨论冗余这样激发1.3节引入的操作，其在多数图像压缩系统中很常见
+
+
+<a id="org8d9f45b"></a>
+
+### STATISTICAL REDUNDANCY
+
+考虑两个B-bit整数，$ x_ {1}, x_ {2} \\in [0, 1, \\ldots, 2^{B} - 1] $。作为例子，这些整数可能对应两个相邻的图像采样值。无压缩时，两个整数使用2B比特。假设，解压者知道一个规律值最终为0和1；例如，图像可能已知为bi-level。它必要使用一个比特来表示 $ x_ {1}, x_ {2} $，压缩比为 $ B : 1 $。假设进一步解压者知道两个值总是相等的。则，一个比特可有效表达一对数字，压缩比为 $ 2B : 1 $
+
+当然，上述描述的情况实际中不常见。通常解压者可能知道一些可能的值集合比其他值更可能出现，如果解压者知道 $ x_ {1} \\in {0, 1} $有非常高的概率则我们希望可能扩展1比特多一点的比特来表达 $ x_ {1} $的真实值。在第2章我们期望一个可能花费的平均 $ H(X_ {1}) $比特，$ X_ {1} $是一个随机变量，其总结解压者的关于 $ x_ {1} $值的认知，且 $ H(X_ {1}) $是一个 $ X_ {1} $的统计分布函数，记为它的熵
