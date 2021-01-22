@@ -27,6 +27,7 @@ category:   maths
     2.  [Topological Spaces](#orgc07d561)
     3.  [Subspaces](#org0d82477)
     4.  [Connectivity and Components](#org5da5401)
+    5.  [Spparation Axioms](#orgf392415)
 
 
 <a id="org8fd57c5"></a>
@@ -235,3 +236,36 @@ $ \\begin{equation} \\{ q \\in X \| d(q) = d(p) \\text{ 对所有离散值映射
 $ \\begin{equation} \\cap \\{ d^{-1}(d(p)) \| d 一个离散值映射 \\} \\end{equation} $
 
 其是一个闭集的交集且因此是闭的
+
+
+<a id="orgf392415"></a>
+
+## Spparation Axioms
+
+**定义** 分割公理：
+
+( $ T_ {0} $) 一个拓扑空间X被称为一个 $ T_ {0}- $空间如果对任意两个点 $ x \\ne y $有一个开集包含其中一个但另一个不包含
+
+( $ T_ {1} $) 一个拓扑空间X被称为一个 $ T_ {1}- $空间如果对任意两个点 $ x \\ne y $有一个开集包含x但不包含y，另一个开集包含y但不包含x
+
+( $ T_ {2} $) 一个拓扑空间X被称为一个 $ T_ {2}- $空间或hausdorff如果对任意两个点 $ x \\ne y $有不相交开集U和V有 $ x \\in U, y \\in V $
+
+( $ T_ {3} $) 一个 $ T_ {1}- $空间X被称为一个 $ T_ {3}- $空间或regular如果对任意点x和不包含x的闭集F有一个不相交开集U和V有 $ x \\in U, F \\in V $
+
+( $ T_ {4} $) 一个 $ T_ {1}- $空间X被称为一个 $ T_ {4}- $空间或正常的如果对任意两个不相交闭集F和G有不相交开集U和V有 $ F \\subset U, G \\subset V $
+
+公理 $ T_ {0} $简单描述点可被它们所在的开集区分
+
+公理 $ T_ {1} $同样描述单点集合是闭集，因为如果我们对一个点x，对每个不同的点y我们使 $ U_ {y} $为一个开集包含y但不包含x，则 $ X - \\{x\\} = \\cup U_ {y} $是开集的并且是开的。相反地，如果 $ \\{ x \\} $是闭的则开集 $ X - \\{ x \\} $为开集包含任意其他点
+
+公理 $ T_ {2} $是这些公理里最重要的
+
+**命题** 一个Hausdorff空间是规范的 $ \\Leftrightarrow $任意点的闭邻居关系形成该点的一个邻居关系基
+
+证明：假设X是规范的，设 $ x \\in V $，V是开的，且让C = X - V。通过规则性有一个开集U、W，有 $ x \\in U, C \\subset W，且 U \\cap W = \\varnothing $。则 X - W是闭的，且我们有 $ X - W \\subset X - C = V $，这样任意x的邻居关系V包含一个x的闭邻居关系 X - W
+
+相反地，假设每个点有一个闭邻居关系基。设 $ x \\notin C $，C是闭的，且让V = X - C。通过假设，有一个开集U有 $ \\bar{U} \\subset V = X - C 且 x \\in U $，则 $ C \\subset X - \\bar{U}且 U \\cap (X - \\bar{U}) = \\varnothing $。这样X是规范的
+
+**推论** 一个规范空间的子空间是规范的
+
+证明：如果 $ A \\subset X $是一个子空间，在X中交一个点 $ a \\in A $的一个闭邻居关系基为A且你得到在A中a的一个闭邻居关系
