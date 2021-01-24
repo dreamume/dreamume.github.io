@@ -28,6 +28,7 @@ category:   maths
     3.  [Subspaces](#org0d82477)
     4.  [Connectivity and Components](#org5da5401)
     5.  [Spparation Axioms](#orgf392415)
+    6.  [Nets (Moore-Smith Convergence)](#orgbf02f66)
 
 
 <a id="org8fd57c5"></a>
@@ -269,3 +270,16 @@ $ \\begin{equation} \\cap \\{ d^{-1}(d(p)) \| d 一个离散值映射 \\} \\end{
 **推论** 一个规范空间的子空间是规范的
 
 证明：如果 $ A \\subset X $是一个子空间，在X中交一个点 $ a \\in A $的一个闭邻居关系基为A且你得到在A中a的一个闭邻居关系
+
+
+<a id="orgbf02f66"></a>
+
+## Nets (Moore-Smith Convergence)
+
+在度量空间中函数的连续性可被表达为序列的收敛。这在一般的拓扑空间中不行。然而，有一个序列的一般化方法可以起作用且允许证明跟度量空间中使用序列的证明相似。这对直观有很大帮助。序列的一般化被称为一个net，虽然我们将使用这个概念证明一些重要的结论，但这些结果将不会用在本书的主要部分中
+
+**定义** 一个直接的集合D是一个偏序集合使得对任意两个元素 $ \\alpha, \\beta $，有一个 $ \\tau \\in D, \\tau \\ge \\alpha, \\tau \\ge \\beta $
+
+**定义** 一个拓扑空间X中的net是一个直接的集合D，有一个函数 $ \\Phi : D \\to X $
+
+注意一个序列是一个简单的net基于自然数作为索引集

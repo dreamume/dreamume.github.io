@@ -147,10 +147,10 @@ $ \\begin{equation} \\text{比率 }(bps) \\stackrel{\\Delta}{=} \\frac{\|\| c \|
 
     注意第一个chrominance部分，$ x_ {C_ {b}} $是原始蓝频道和新luminance(intensity)频道之间不同的扩展版本，特别地
 
-    $ \\begin{equation} x_ {C_ {b}} = 0.564 (X_ {B} - x_ {Y}) \\end{equation} $
+    $ \\begin{equation} x_ {C_ {b}} = 0.564 (x_ {B} - x_ {Y}) \\end{equation} $
 
     相似地，$ x_ {C_ {r}} $是红-luminance颜色不同，
 
-    $ \\begin{equation} x_ {C_ {r}} = 0.713 (X_ {R} - x_ {Y}) \\end{equation} $
+    $ \\begin{equation} x_ {C_ {r}} = 0.713 (x_ {R} - x_ {Y}) \\end{equation} $
 
     通过化略chrominance频道解决方案来建模化略可视敏感度为快速颜色改变是很常见的。特别地，通常用YCbCr表示chrominance部件为子采样2个在水平和垂直方向
