@@ -27,7 +27,7 @@ category:   maths
     2.  [Topological Spaces](#orgc07d561)
     3.  [Subspaces](#org0d82477)
     4.  [Connectivity and Components](#org5da5401)
-    5.  [Spparation Axioms](#orgf392415)
+    5.  [Separation Axioms](#orgf392415)
     6.  [Nets (Moore-Smith Convergence)](#orgbf02f66)
 
 
@@ -241,7 +241,7 @@ $ \\begin{equation} \\cap \\{ d^{-1}(d(p)) \| d 一个离散值映射 \\} \\end{
 
 <a id="orgf392415"></a>
 
-## Spparation Axioms
+## Separation Axioms
 
 **定义** 分割公理：
 
