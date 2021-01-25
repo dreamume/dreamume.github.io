@@ -283,3 +283,27 @@ $ \\begin{equation} \\cap \\{ d^{-1}(d(p)) \| d 一个离散值映射 \\} \\end{
 **定义** 一个拓扑空间X中的net是一个直接的集合D，有一个函数 $ \\Phi : D \\to X $
 
 注意一个序列是一个简单的net基于自然数作为索引集
+
+**定义** 如果 $ \\Phi: D \\to X $是拓扑空间X上的一个net且 $ A \\subset X $则我们说 $ \\Phi $在A上是频繁的如果对任意 $ \\alpha \\in D $有一个 $ \\beta \\ge \\alpha $使得 $ \\Phi(\\beta) \\in A $，这被称为最终在A中如果有一个 $ \\alpha \\in D $使得 $ \\Phi(\\beta) \\in A, \\forall \\beta \\ge \\alpha $
+
+**定义** 一个net $ \\Phi: D \\to X $在一个拓扑空间中被称为收敛到 $ x \\in X $如果对x的每个邻居关系 $ U \\subset X $，$ \\Phi $最终在U中
+
+注意如果一个net $ \\Phi $最终在两个集合U和V中则它最终在 $ U \\cap V $中。同样，如果 $ U \\cap V = \\varnothing $是不可能的。这证明半个如下事实。剩下的证明构建一个net，该net是典型的net在一般化拓扑空间中
+
+**命题** 一个拓扑空间X是Hausdorff的 $ \\Leftrightarrow $任意收敛的net的任意两个限制是相等的（这可以说是在这样一个空间的一个net的限制）
+
+证明：$ \\Rightarrow $可由之前的讨论得到。这样假设X不是Hausdorff的，$ x, y \\in X $为两个点不能被开集分割，考虑直集其元素为开集的偏序对 $ \\alpha = < U, V >, x \\in U, y \\in V $，顺序 $ < U, V > \\ge < A, B > \\Leftrightarrow (U \\subset A且V \\subset B) $。对任意 $ \\alpha = < U, V > $，设 $ \\Phi(\\alpha) $为某些在 $ U \\cap V $中的点。这定义了一个net $ \\Phi $我们声称其收敛到x和y
+
+为说明这个，设W为x的任意邻居关系。我们声称 $ \\Phi $最终在W。事实上，对任意包含y的开集V和一个开集U，$ x \\in U \\subset W $且设 $ \\alpha = <U, V> $。如果 $ \\beta = <A, B> \\ge \\alpha $则 $ A \\subset U且B \\subset V $这样 $ \\Phi(\\beta) \\in A \\cap B \\subset U \\subset W $，这样 $ \\Phi $收敛到x。相似的，它也收敛到y
+
+接下来我们显示net是描述连续性的充分条件
+
+**命题** 一个函数 $ f: X \\to Y $在两个拓扑空间上是连续的 $ \\Leftrightarrow $对X中每个net $ \\Phi $收敛到 $ x \\in X $，Y中net $ f \\circ \\Phi $收敛到f(x)
+
+证明：首先假设f是连续的且设 $ \\Phi $为X中的一个net收敛到x。设V为Y中任意开集包含f(x)且设 $ U = f^{-1}(V) $，其是x的一个邻居关系。通过收敛的定义，$ \\Phi $最终在U中，这样 $ f \\circ \\Phi $最终在V中，且收敛到f(x)
+
+相反地，假设f不连续，则有一个开集 $ V \\in Y $使得 $ K = f^{-1}(V) $不是开的。设 $ x \\in K - int(K) $，考虑直集包含x的开邻居关系，例如，$ A \\le B $表示 $ A \\supset B $。对任意这样的x的邻居关系，A不能完全在K中，这样我们可选择一个点 $ w_ {A} \\in A - K $。定义net $ \\Phi $设 $ \\Phi(A) = w_ {A} $。如果N是x的任意邻居关系且如果 $ B \\ge N $（例如，$ B \\subset U $）则 $ \\Phi(B) = w_ {B} \\in B - K \\subset U $，则 $ \\Phi $最终在N中。这样 $ \\Phi $收敛到x。然而 $ (f \\circ \\Phi)(A) \\notin V, \\forall A $，这样 $ f \\circ \\Phi $最终不在V中，这样不收敛到f(x)
+
+给定一个特殊的net $ \\Phi: D \\to X $设 $ x_ {\\alpha} = \\Phi(\\alpha), \\alpha \\in D $，则通常说 $ \\{ x_ {\\alpha} \\} $为问题中的net。这个记号使net的讨论跟序列的相似，例如，上面命题的条件可描述为
+
+$ \\begin{equation} f(\\lim x_ {\\alpha}) = \\lim (f(x_ {\\alpha})) \\end{equation} $
