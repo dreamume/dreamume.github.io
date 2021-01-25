@@ -30,6 +30,7 @@ category:   it
     2.  [EXPLOITING REDUNDANCY](#org821e426)
         1.  [STATISTICAL REDUNDANCY](#org8d9f45b)
         2.  [IRRELEVANCE](#org8b50179)
+        3.  [ELEMENTS OF A COMPRESSION SYSTEM](#org853b446)
 
 
 <a id="orgb938244"></a>
@@ -154,3 +155,26 @@ $ \\begin{equation} \\text{比率 }(bps) \\stackrel{\\Delta}{=} \\frac{\|\| c \|
     $ \\begin{equation} x_ {C_ {r}} = 0.713 (x_ {R} - x_ {Y}) \\end{equation} $
 
     通过化略chrominance频道解决方案来建模化略可视敏感度为快速颜色改变是很常见的。特别地，通常用YCbCr表示chrominance部件为子采样2个在水平和垂直方向
+
+2.  IRRELEVANCE AND DISTORTION
+
+    对于有损压缩，$ D(x, \\hat{x}) = 0 $表示图像 $ x \\equiv x[n_ {1}, n_ {2}] $和 $ \\hat{x} \\equiv \\hat{x}[x_ {1}, x_ {2}] $只是在某些不相关方面不同
+    
+    假设，例如，$ \\hat{x} $通过对原始图像x的子采样版本获得，因为 $ \\hat{x} $为更少的采样，它更容易压缩。这样，$ D(x, \\hat{x}) = 0 $，一个好的有损压缩算法应该选择编码子采样呈现
+    
+    需要指出颜色图像压缩不需要子采样YCbCr呈现的chrominance部分，提供的变动度量能够正确地对相关解决方案建模
+
+
+<a id="org853b446"></a>
+
+### ELEMENTS OF A COMPRESSION SYSTEM
+
+![img](../img/image_compression_as_mapping_operation.png)
+
+上图描述了压缩和解压系统对应两个映射，M和 $ \\overline{M^{-1}} $。对无损压缩，我们需要 $ \\overline{M^{-1}} = M^{-1} $。对有损压缩，M是不可逆的，所以我们使用记号 $ \\overline{M^{-1}} $表示是一个粗略地反操作。我们可认为压缩器为大量地查找 $ 2^{N_ {1}N_ {2}B} $条目表
+
+压缩系统可被分类为“固定长度”或“变长“。对前者，压缩的比特流有固定长度，$ \|\| c \|\| $，且重构图像变动，$ D(x, \\hat{x}) $将随着图像到图像而变动，对应的解压器可认为是大量地查找 $ 2^{\|\| c \|\|} $条目表操作。该压缩器M：
+
+$ \\begin{equation} c = M(x) = \\operatorname{argmin}_ {c'} D(x, \\overline{M^{-1}}(c')) \\end{equation} $
+
+它是充分的维持在压缩器和解压器上最小的表查找对应 $ \\overline{M^{-1}} $
