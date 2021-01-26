@@ -307,3 +307,19 @@ $ \\begin{equation} \\cap \\{ d^{-1}(d(p)) \| d 一个离散值映射 \\} \\end{
 给定一个特殊的net $ \\Phi: D \\to X $设 $ x_ {\\alpha} = \\Phi(\\alpha), \\alpha \\in D $，则通常说 $ \\{ x_ {\\alpha} \\} $为问题中的net。这个记号使net的讨论跟序列的相似，例如，上面命题的条件可描述为
 
 $ \\begin{equation} f(\\lim x_ {\\alpha}) = \\lim (f(x_ {\\alpha})) \\end{equation} $
+
+**命题** 如果 $ A \\subset X $则 $ \\bar{A} $邻接A中net极限集合，其在X中收敛
+
+证明：如果 $ x \\in \\bar{A} $则x的任意开邻居关系必须与A相交。这样我们可基于一个net在这个邻居关系集合上，顺序为包含且有这样的点 $ x_ {U} \\in U \\cap A $。这很明显收敛到x。相反地，如果 $ \\{ x_ {\\alpha} \\} $是A中任意net的点，其收敛到一个点 $ x \\in X $，则，通过定义，这个net最终在任意给定的x的邻居关系中。这样x的任意邻居关系包含A中一个点且 $ x \\in \\bar{A} $
+
+在普通的序列中，子序列可被认为由两种不同的方式形成：(1)通过丢弃序列中的元素并重排列，或(2)组成序列，通过函数 $ Z^{+} \\to X $，用一个函数 $ h: Z^{+} \\to Z^{+} $，使得 $ i > j \\Rightarrow h(i) > h(j) $。第一种不适合一般空间中的net，对第二种，最后的h单调性条件比通常使用的子序列要强。修改它导致更一般的记号“subnet“
+
+**定义** 如果D和$ D' $为直集且 $ h: D' \\to D $是一个函数，则h被称为final如果 $ \\forall \\delta \\in D, \\exists \\delta' \\in D' \\in (\\alpha' \\ge \\delta' \\Rightarrow h(\\alpha') \\ge \\delta) $
+
+**定义** 一个net的子net $ \\mu: D \\to X $，是 $ \\mu $的组合 $ \\mu \\circ h $及一个final函数 $ h: D' \\to D $
+
+**命题** 一个net $ \\{ x_ {\\alpha} \\} $在一个给定点 $ x \\in X $上的每个邻居关系中是频繁的 $ Leftrightarrow $它是一个收敛到x的子net
+
+证明：考虑直集 $ D' $包含有序对 $ (\\alpha, U), \\alpha \\in D $，U是x的一个邻居关系，且 $ x_ {\\alpha} \\in U $，通过D顺序顺序化且包括。如果 $ (\\alpha, U) $和 $ (\\beta, V) $在 $ D' $中，则因为 $ \\{ x_ {\\alpha} \\} $在 $ U \\cap V $是频繁的，有一个 $ \\gamma \\ge \\alpha, \\beta, x_ {\\gamma} \\in U \\cap V $。这样 $ (\\gamma, U \\cap V) \\in D' $且 $ (\\gamma, U \\cap V) \\ge (\\alpha, U), (\\beta, V) $，显示 $ D' $是直的。通过 $ (\\alpha, U) \\mapsto \\alpha $映射 $ D' \\to D $。对任意 $ \\delta \\in D $，我们有 $ (\\delta, X) \\in D' $。现在 $ (\\alpha, U) \\ge (\\delta, X) $意味着 $ \\alpha \\ge \\delta $，意味着 $ D' \\to D $是final的，且这样 $ \\{ x_ {(\\alpha, U)} \\} $是 $ \\{ x_ {\\alpha} \\} $的子net。我们称它收敛到x。设N为x的任意邻居关系，通过假设，有某个 $ x_ {\\beta} \\in N $。如果 $ (\\alpha, U) \\ge (\\beta, N) $则 $ x_ {(\\alpha, U)} = x_ {\\alpha} \\in U \\subset N $。相反地，$ \\{ x_ {(\\alpha, U)} \\} $最终在N中
+
+接下来我们处理没有序列信息的net的强大概念
