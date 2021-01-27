@@ -318,8 +318,42 @@ $ \\begin{equation} f(\\lim x_ {\\alpha}) = \\lim (f(x_ {\\alpha})) \\end{equati
 
 **定义** 一个net的子net $ \\mu: D \\to X $，是 $ \\mu $的组合 $ \\mu \\circ h $及一个final函数 $ h: D' \\to D $
 
-**命题** 一个net $ \\{ x_ {\\alpha} \\} $在一个给定点 $ x \\in X $上的每个邻居关系中是频繁的 $ Leftrightarrow $它是一个收敛到x的子net
+**命题** 一个net $ \\{ x_ {\\alpha} \\} $在一个给定点 $ x \\in X $上的每个邻居关系中是频繁的 $ \\Leftrightarrow $它是一个收敛到x的子net
 
 证明：考虑直集 $ D' $包含有序对 $ (\\alpha, U), \\alpha \\in D $，U是x的一个邻居关系，且 $ x_ {\\alpha} \\in U $，通过D顺序顺序化且包括。如果 $ (\\alpha, U) $和 $ (\\beta, V) $在 $ D' $中，则因为 $ \\{ x_ {\\alpha} \\} $在 $ U \\cap V $是频繁的，有一个 $ \\gamma \\ge \\alpha, \\beta, x_ {\\gamma} \\in U \\cap V $。这样 $ (\\gamma, U \\cap V) \\in D' $且 $ (\\gamma, U \\cap V) \\ge (\\alpha, U), (\\beta, V) $，显示 $ D' $是直的。通过 $ (\\alpha, U) \\mapsto \\alpha $映射 $ D' \\to D $。对任意 $ \\delta \\in D $，我们有 $ (\\delta, X) \\in D' $。现在 $ (\\alpha, U) \\ge (\\delta, X) $意味着 $ \\alpha \\ge \\delta $，意味着 $ D' \\to D $是final的，且这样 $ \\{ x_ {(\\alpha, U)} \\} $是 $ \\{ x_ {\\alpha} \\} $的子net。我们称它收敛到x。设N为x的任意邻居关系，通过假设，有某个 $ x_ {\\beta} \\in N $。如果 $ (\\alpha, U) \\ge (\\beta, N) $则 $ x_ {(\\alpha, U)} = x_ {\\alpha} \\in U \\subset N $。相反地，$ \\{ x_ {(\\alpha, U)} \\} $最终在N中
 
 接下来我们处理没有序列信息的net的强大概念
+
+**定义** 一个在集合X上的net被称为universal如果对任意 $ A \\subset X $，net要么最终在A中或最终在X - A中
+
+**命题** 在X中的一个universal net的组合有一个函数 $ f: X \\to Y $是Y中一个universal net
+
+证明：由定义如果 $ A \\subset Y $则net最终要么在 $ f^{-1}(A) 或 X - f^{-1}(A) $中，但 $ X - f^{-1}(A) = f^{-1}(Y - A) $且它跟随组合net最终要么在A或Y - A中
+
+除了一些无趣的例子，unniverse net的定义可能看起来很强以至于读者可能怀疑universal net的存在，然而
+
+**定理** 每个net有一个universe 子net
+
+证明：设 $ \\{ x_ {\\alpha} \| \\alpha \\in P \\} $为X中一个net，考虑X中所有子集的收集C使得:
+
+(1) $ A \\in C \\Rightarrow \\{ x_ {\\alpha} \\} $在A中是频繁的，且
+
+(2) $ A, B \\in C \\Rightarrow A \\cap B \\in C $
+
+例如，$ C = \\{ X \\} $是这样一个收集。顺序化包含所有这样收集C的族。任意简单这样收集的顺序化集合的并是一个收集，例如，满足(1)和(2)。通过最大化原理，有一个最大的这样的收集 $ C_ {0} $
+
+设 $ P_ {0} = \\{ (A, \\alpha) \\in C_ {0} \\times P \| x_ {\\alpha} \\in A \\} $且顺序化 $ P_ {0} $通过
+
+$ \\begin{equation} (B, \\beta) \\ge (A, \\alpha) \\Leftrightarrow B \\subset A且 \\beta \\ge \\alpha \\end{equation} $
+
+这给定了$ P_ {0} $上的一个偏序使 $ P_ {0} $为一个直集。映射 $ P_ {0} \\to P $通过使 $ (A, \\alpha) $ 到 $ \\alpha $。这明显是final的且这样定义一个子net我们记为 $ \\{ x_ {(A, \\alpha)} \\} $。我们声称这个子net是universal的
+
+假设S是X的任意子集使得 $ \\{ x_ {(A, \\alpha)} \\} $在S中是频繁的，则对任意 $ (A, \\alpha) \\in P_ {0} $，有一个 $ P_ {0} 中(B, \\beta) \\ge (A, \\alpha) $有 $ x_ {\\beta} = x_ {(B, \\beta)} \\in S $。则 $ B \\subset A, \\beta \\ge \\alpha $，且 $ x_ {\\beta} \\in B $。这样 $ x_ {\\beta} \\in S \\cap B \\subset S \\cap A $。对任意 $ A \\in C_ {0} $我们有 $ \\{ x_ {\\alpha} \\} $在 $ S \\cap A $中是频繁的。对 $ A \\in C_ {0} $我们可把S和所有 $ S \\cap A $的集合扔到 $ C_ {0} $中且条件(1)和(2)将仍然保持。通过最大化，我们必须有 $ S \\in C_ {0} $。如果 $ \\{ x_ {(A, \\alpha)} \\} 也频繁在X - S中则X - S也在 $ C_ {0} $中，且这样 $ \\varnothing = S \\cap (X - S) $也在 $ C_ {0} $中，通过(2)，这与(1)不符。这样我们知道 $ \\{ x_ {(A, \\alpha)} \\} $在X - S中不是频繁的，这样最终是在S中
+
+我们已显示如果 $ \\{ x_ {(A, \\alpha)} \\} $在集合S中是频繁的，则，事实上，它最终在S中。这意味着 $ \\{ x_ {(A, \\alpha)} \\} $是universal的
+
+注意这个证明在最大化原理的伪装下使用了选择公理。事实上，它可显示上面的定理与选择公理是相当的
+
+如下事实从定义中可直接得到
+
+**命题** 一个universal net的子net是universal的
