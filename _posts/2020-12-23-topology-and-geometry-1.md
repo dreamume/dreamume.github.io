@@ -369,3 +369,23 @@ $ \\begin{equation} (B, \\beta) \\ge (A, \\alpha) \\Leftrightarrow B \\subset A�
 如果 $ A \\subset X $，为方便起见，我们有时使用“覆盖A"来表示X的子集的收集，其并包含A
 
 **定义** 一个拓扑空间X被称为是紧的如果每个X的开覆盖有一个有限的子覆盖
+
+**定义** 一个集合的收集C有有限的交属性如果任意有限子收集的交非空
+
+**定理** 一个拓扑空间是紧的 $ //Leftrightarrow $对X的有有限交属性的每个闭子集的收集，整个收集的交非空
+
+**定理** 如果X是一个Hausdorff空间，则X的任意紧子集是闭的
+
+证明：设 $ A \\subset X $为紧的且假设 $ x \\in X - A $。对 $ a \\in A $设 $ a \\in U_ {a} $且 $ x \\in V_ {a} $为开集且 $ U_ {a} \\cap V_ {a} = \\varnothing $。现在 $ A = \\cup (U_ {a} \\cap A ) $，这意味着，由A的紧性，有 $ a_ {1}, a_ {2}, \\ldots, a_ {n} \\in A $，使得 $ A \\subset U_ {a1} \\cup \\cdots \\cup U_ {an} = U $。但 $ x \\in V_ {a1} \\cap \\cdots \\cap V_ {an} = V $，这是开的，且 $ U \\cap V = \\varnothing $。这样 $ x \\in V \\subset X - U \\subset X - A $且V是开的。因为对任意 $ x \\in X - A $这是真的，我们有X - A是开的，且这样A是闭的
+
+**定理** 如果X是紧的且 $ f: X \\to Y $是连续的，则f(X)是紧的
+
+证明：我们可以用f(X)取代Y且假设f是onto的。对任意Y的开覆盖查看它的集合的反像且应用X的紧性质
+
+**定理** 如果X是紧的，且 $ A \\subset X $是闭的，则A是紧的
+
+证明：在X中用开集覆盖A，通过开集X - A且应用X的紧性质
+
+**定理** 如果X是紧的且Y是Hausdorff的且 $ f: X \\to Y $是连续的，one-one,且onto，则f是homeomorphism
+
+证明：我们已可证 $ f^{-1} $是连续的，即f是一个闭映射。但如果 $ A \\subset X $是闭的，则A是紧的，这样f(A)是紧的，因此f(A)是闭的
