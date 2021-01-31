@@ -372,7 +372,7 @@ $ \\begin{equation} (B, \\beta) \\ge (A, \\alpha) \\Leftrightarrow B \\subset A�
 
 **定义** 一个集合的收集C有有限的交属性如果任意有限子收集的交非空
 
-**定理** 一个拓扑空间是紧的 $ //Leftrightarrow $对X的有有限交属性的每个闭子集的收集，整个收集的交非空
+**定理** 一个拓扑空间是紧的 $ \\Leftrightarrow $对X的有有限交属性的每个闭子集的收集，整个收集的交非空
 
 **定理** 如果X是一个Hausdorff空间，则X的任意紧子集是闭的
 
