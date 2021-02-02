@@ -412,7 +412,7 @@ $ \\begin{equation} S = \\{ s \\in I \| [0, s]被 \\mathcal{U} 的一个有限�
 
 证明：设 $ C \\subset Y $为紧的且设 $ \\{ U_ {\\alpha} \| \\alpha \\in A \\} $为一个开集的收集其并包含 $ f^{-1}(C) $。对任意 $ y \\in C $有一个有限子集 $ A_ {y} \\in A $使得
 
-$ \\begin{equation} f^{-1}(y) \\subset \\cup \\{ U_ {\\alpha} |\ \\alpha \\in A_ {y} \\} \\end{equation} $
+$ \\begin{equation} f^{-1}(y) \\subset \\cup \\{ U_ {\\alpha} \| \\alpha \\in A_ {y} \\} \\end{equation} $
 
 设
 
