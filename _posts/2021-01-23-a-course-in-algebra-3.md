@@ -23,6 +23,7 @@ category:   maths
 # Table of Contents
 
 1.  [Fundamental Theorem of Algebra of Complex Numbers](#org9669ceb)
+2.  [Factorization in Euclidean Domains](#org8222f14)
 
 polynomial的和和乘积及polynomial和数的乘积依然是polynomial，这意味着polynomials在一个实变量的所有函数上的代数形成了一个子代数。该子代数被称为polynomial在R上的代数并记为R[x]
 
@@ -58,3 +59,20 @@ $ \\begin{equation} \| \\varphi(t) \| \\le A = (n - p)C \\end{equation} $
 $ \\begin{equation} \| \\frac{f(z)}{f(z_ {0})} \| \\le 1 - t^{p} + At^{p+1} = 1 - t^{p}(1 - At) < 1 \\end{equation} $
 
 对 $ t < \\frac{1}{A} $
+
+
+<a id="org8222f14"></a>
+
+# Factorization in Euclidean Domains
+
+**定义** 一个带单位元的交换结合环和非零除数被称为一个integral domain
+
+**定义** 设A为一个integral domain而不是一个域，我们称A为Euclidean如果存在一个函数
+
+$ \\begin{equation} N: A \\ \\{ 0 \\} \\to Z_ {+} \\end{equation} $
+
+（称为一个norm）满足如下条件：
+
+(i) $ N(ab) \\ge N(a) $且等式成立当且仅当b可逆
+
+(ii) 对任意 $ a, b \\in A, b \\ne 0 $，存在 $ q,r \\in A $使得a = qb + r且要么r = 0要么N(r) < N(b)
