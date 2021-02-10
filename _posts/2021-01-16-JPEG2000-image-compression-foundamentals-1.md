@@ -202,3 +202,17 @@ $ \\begin{equation} c = M(x) = \\operatorname{argmin}_ {c'} D(x, \\overline{M^{-
     每个采样平均使用的比特数为
 
     $ \\begin{equation} \\frac{1}{2} \\cdot 1 + \\frac{1}{4} \\cdot 2 + \\frac{1}{8} \\cdot 3 + \\frac{1}{8} \\cdot 3 = 1 \\frac{3}{4} 比特 \\end{equation} $
+
+3.  QUANTIZATION
+
+    ![img](../img/scalar_quantization_with_four_output_symbols.png)
+    
+    Quantization会引入失真，对无损压缩不会有quantization。在最简单的例子中我们会映射每个转换采样，$ y[k_ {1}, y_ {2}] $，独立地对应quantization索引，$ q[k_ {1}, k_ {2}] $。这被称为纯量quantization，它是最简单和最普通的quantization形式。纯量quantization关联每个quantization索引在实数线上一个间隔
+
+    $ \\begin{equation} q[k_ {1}, k_ {2}] = i 如果 y[k_ {1}, k_ {2}] \\in \\mathcal{I}_ {i} \\end{equation} $
+
+    $ \\mathcal{I}_ {i} $为不相交且覆盖实数线。作为一个例子，上图的纯量quantizater映射每个转换采样到4个不同的索引中的一个
+
+    预估反quantization操作，$ \\overline{Q^{-1}} $，映射每个索引，$ q[k_ {1}, k_ {2}] $，到对应间隔的某些呈现水平上， $ \\hat{y}[k_ {1}, k_ {2}] $。在最简单的例子中，我们选择 $ \\hat{y}[k_ {1}, k_ {2}] $作为间隔的中间点，$ \\mathcal{I}_ {q[k_ {1}, k_ {2}]} $。从这个基本讨论中，它应该明显 $ \\overline{Q^{-1}} $是Q的右反，例如，
+
+    $ \\begin{equation} Q \\left(\\overline{Q^{-1}}(\\hat{y}) \\right) = \\hat{y} \\end{equation} $
