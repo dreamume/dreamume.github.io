@@ -427,3 +427,19 @@ $ \\begin{equation} V_ {y} = Y - f(X - W_ {y}) \\end{equation} $
 $ \\begin{equation} \\begin{aligned} f^{-1}(C) \\subset & f^{-1}(V_ {y_ {1}}) \\cup \\cdots \\cup f^{-1}(V_ {y_ {n}}) \\subset W_ {y_ {1}} \\cup \\cdots \\cup W_ {y_ {n}} \\\\ = & \\cup \\{ U_ {\\alpha} \| \\alpha \\in A_ {y_ {i}}; i = 1, 2, \\ldots, n \\} \\end{aligned} \\end{equation} $
 
 是一个有限并
+
+**定理** 对一个拓扑空间X如下描述等效：
+
+(1) X是紧的
+
+(2) 带有限交属性的每个X的闭子集的收集有一个非空的交集
+
+(3) X中每个universal net是收敛的
+
+(4) X中每个net有一个收敛的subnet
+
+证明：我们已处理(1)和(2)的相等性，对(1) $ \\Rightarrow $ (3)假设 $ \\{ x_ {\\alpha} \\} $是一个universe net其不收敛，则给定 $ x \\in X $，有一个x的开邻居关系 $ U_ {x} $使得 $ x_ {\\alpha} $最终不在 $ U_ {x} $中，则由universe的定义 $ x_ {\\alpha} $最终在 $ X - U_ {\\alpha} $中。即有一个索引 $ \\beta_ {x} $使得 $ \\alpha \\ge \\beta_ {x} \\Rightarrow x_ {\\alpha} \\notin U_ {x} $。通过 $ U_ {x_ {1}} \\cup \\cdots \\cup U_ {x_ {n}} $，设 $ \\forall i, \\alpha \\ge \\beta_ {x_ {i}} $，则 $ \\forall i, x_ {\\alpha} \\notin U_ {x_ {i}} $，这意味着 $ x_ {\\alpha} \\notin X $，悖论
+
+(3) $ \\Rightarrow $ (4)是明显的因为每个net有一个universe子net
+
+(4) $ \\Rightarrow $ (2)，设 $ F = \\{ C \\} $为带有限交属性的闭集的收集，我们可抛出在所有有限交中且假设F在有限交下是闭的。则F，排序为 $ C \\ge C' \\Leftrightarrow C \\subset C' $，是直的。对每个 $ C \\in F $设 $ x_ {c} \\in C $，定义一个net。假设，有一个收敛子net，给定为一个final映射 $ f : D \\to F $。这样，对 $ \\alpha \\in D, f(\\alpha) \\in F且x_ {f(\\alpha)} \\in f(\\alpha) $。假设 $ x_ {f(\\alpha)} \\to x $。设 $ C \\in F $。则有一个 $ \\beta \\in D \\in \\alpha \\ge \\beta \\Rightarrow f(\\alpha) \\subset C $，且这样 $ x_ {f(\\alpha)} \\in f(\\alpha) \\subset C $。因为C是闭的则 $ x \\in C $。这样 $ x \\in \\cap\\{ C \\in F \\} $，得到(2)
