@@ -32,7 +32,7 @@ category:   maths
 
 $ \\begin{equation} a \\equiv 0 (mod m) \\end{equation} $
 
-这跟m | a等价
+这跟m \| a等价
 
 我们通常需要modulus为大于1的整数，但定义对所有整数都有效。负数可被忽略，因为congruence modulus m和modulus -m是相同的
 
