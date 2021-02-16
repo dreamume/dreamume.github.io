@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "Audio Signal Processing and Coding(Chapter 2) by Spanias"
+title:      "Audio Signal Processing and Coding(Chapter 1) by Spanias"
 subtitle:   "Introduction"
 thumbnail-img: ""
 date:       2021-02-17 02:48
