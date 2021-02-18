@@ -68,3 +68,17 @@ category:   maths
 绘制在其他表面。一个图形也能被绘制在非平面的其他表面上。让我们列出一些有趣表面的例子
 
 每个人都知道球形（例如，一个球的表面）。一个tire-tube的表面被称为环面
+
+![img](../img/example_mobius_band.png)
+
+如果我们把长纸条的一条边反转180度，再跟另一条边粘上，我们获得一个有趣的表面称为莫比乌斯环
+
+![img](../img/example_sphere_with_2handles.png)
+
+另一个例子是一个球形带两个柄
+
+![img](../img/example_klein_bottle.png)
+
+经过适当的变形，有这样的表面被称为Klein bottle
+
+每个这样的表面可通过planar多边形通过粘贴和适当的变形创建。上述这些例子中，除了带两个柄的球，我们总是可从一个planar矩形开始，用适当的方式粘某些边。
