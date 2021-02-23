@@ -25,6 +25,7 @@ category:   maths
 1.  [Drawing in the plane and on other surfaces](#org251e123)
     1.  [定义](#org88e35f4)
         1.  [图形绘制的面](#org6a8af02)
+2.  [Cycles in planar graphs](#orgf58d474)
 
 
 <a id="org251e123"></a>
@@ -108,3 +109,20 @@ planar图形的genus为0，这非常明显如果我们使用stereography映射�
 ![img](../img/stereographic_projection_to_plane.png)
 
 则stereographic映射映射球上每个 $ x \\neq o $的点到平面上的一个点 $ x'，x' $是ox线与平面 $ \\rho $的交点。（对点o，映射没有定义）这定义一个在平面和球的双射，o点除外。给定一个在球上图形G的没有交叉边的绘制，点o不在绘制的弧线上（我们可假设一个适合的o点的选择），stereographic映射做出一个planar的图形G的绘制。相反，通过反向的映射，从一个planar绘制我们得到一个球上的绘制
+
+
+<a id="orgf58d474"></a>
+
+# Cycles in planar graphs
+
+我们将调研planar图形的各种组合属性。planar图形的记号本身可跟纯组合意义相当，不使用平面的拓扑属性或图形绘制的意图
+
+planar图形的地理定义将被转换为一个组合定义，我们使用平面连接属性到组合。这样的一个属性被表达为下面的Jordan curve定理。首先，一个定义：一个Jordan curve是一个闭合的不自相交的curve。更形式化地，一个Jordan curve被定义为一个端点相接的弧线，例如，一个区间[0, 1]的连续图形在一个映射f下是一对一的，除了f(0) = f(1)
+
+**Jordan curve定理** 任意Jordan curve k分割平面为两个相连的部分，k的内部和外部，k是内部和外部的边界（内部和外部被称为k的regions）这意味着如果我们定义一个关系 $ \\approx $在 $ R^{2} \\ k $集合上通过设置 $ x \\approx y $当且仅当x和y可被跟k不相交的一个弧线连接，则 $ \\approx $是2个类型的一个相当，一个为有界集合另一个为无界集合
+
+![img](../img/example_jordan_curve.png)
+
+这个理论直观上是明显的，但它的证明不简单，虽然最近Thomassen找到了重要的简化。对平面的一些Jordan curve，描述非常明显，但对其他的它就不那么明显了（尝试找到一个弧线连接点 $ \\circ $到 $ \\bullet $且不与curve相交）：
+
+![img](../img/complex_example_of_jordan_curve.png)
