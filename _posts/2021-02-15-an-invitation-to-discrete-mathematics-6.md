@@ -126,3 +126,7 @@ planar图形的地理定义将被转换为一个组合定义，我们使用平�
 这个理论直观上是明显的，但它的证明不简单，虽然最近Thomassen找到了重要的简化。对平面的一些Jordan curve，描述非常明显，但对其他的它就不那么明显了（尝试找到一个弧线连接点 $ \\circ $到 $ \\bullet $且不与curve相交）：
 
 ![img](../img/complex_example_of_jordan_curve.png)
+
+为了阐明直观不总是依赖这样的明显的叙述，让我们提及一个相关的定理。一个Jordan curve的扩展，Jordan-Schonflies定理，告诉我们对任意Jordan curve，内部可被持续变形为圆的内部。更精确地说，存在一个连续映射其反向映射也是连续的，称为同胚，在被任何Jordan curve和普通的圆盘之间包裹的闭合区域。相似地，有人期望如果我们定义一个拓扑球形通过连续单射作为通常地理球形的像，这样的东西将范定一个区域其可连续变形到一个普通的球上。但这是不行的 - 有一个反例被称为Alexander's horned sphere
+
+让我们标记解决Jordan curve理论的困难主要源于弧线的一般化。我们承认一个任意的连续单射映射一个单元间隔的弧线。一个更简单的方法构建planar图形逻辑精确的理论是只允许弧线包含有限个直线段 - 让我们称它们为polygonal弧线。我们可这样称一个图形polygonally planar如果它能在没有使用polygonal弧线相交的情况下被绘制。用polygonal弧线证明Jordan curve定理是容易的。且它不难验证任意planar图形也是polygonal planar的。
