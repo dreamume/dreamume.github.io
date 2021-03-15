@@ -130,3 +130,21 @@ planar图形的地理定义将被转换为一个组合定义，我们使用平�
 为了阐明直观不总是依赖这样的明显的叙述，让我们提及一个相关的定理。一个Jordan curve的扩展，Jordan-Schonflies定理，告诉我们对任意Jordan curve，内部可被持续变形为圆的内部。更精确地说，存在一个连续映射其反向映射也是连续的，称为同胚，在被任何Jordan curve和普通的圆盘之间包裹的闭合区域。相似地，有人期望如果我们定义一个拓扑球形通过连续单射作为通常地理球形的像，这样的东西将范定一个区域其可连续变形到一个普通的球上。但这是不行的 - 有一个反例被称为Alexander's horned sphere
 
 让我们标记解决Jordan curve理论的困难主要源于弧线的一般化。我们承认一个任意的连续单射映射一个单元间隔的弧线。一个更简单的方法构建planar图形逻辑精确的理论是只允许弧线包含有限个直线段 - 让我们称它们为polygonal弧线。我们可这样称一个图形polygonally planar如果它能在没有使用polygonal弧线相交的情况下被绘制。用polygonal弧线证明Jordan curve定理是容易的。且它不难验证任意planar图形也是polygonal planar的。
+
+**命题** $ K_ {5} $不是planar的
+
+证明：设 $ b_ {1}, b_ {2}, b_ {3}, b_ {4}, b_ {5} $为在某些planar绘制中对应 $ K_ {5} $的边的点。连接点 $ b_ {i}, b_ {j} $的弧线记为 $ \\alpha(i, j) $
+
+因为 $ b_ {1}, b_ {2}, b_ {3} $为图 $ K_ {5} $中圆的边，弧线 $ \\alpha(1, 2), \\alpha(2, 3), \\alpha(3, 1) $形成Jordan curve k，且因此点 $ b_ {4}, b_ {5} $要么都在k内部要么都在k外部，否则 $ \\alpha(4, 5)将和k有交叉。首先假设 $ b_ {4} $在k内部，如下图所示：
+
+![img](../img/example_of_k5_planar.png)
+
+则 $ b_ {5} $在弧线 $ \\alpha(1, 4), \\alpha(2, 4), \\alpha(1, 2) $ 或 $ \\alpha(2, 3), \\alpha(3, 4), \\alpha(2, 4) $ 或 $ \\alpha(1, 3), \\alpha(3, 4), \\alpha(1, 4) $所在的Jordan curve中，如果 $ b_ {4}, b_ {5} $在k的外部，情况类似
+
+**2-connected图形上的面和环** 如果 $ e_ {1}, \\ldots, e_ {n} $为一个拓扑planar图形G上的环，则弧线 $ \\alpha(e_ {1}), \\ldots, \\alpha(e_ {n}) $形成一个Jordan curve。通过Jordan curve定理，我们知道G的每个面要么在Jordan curve的内部要么在外部。简单来说，让我们称该Jordan curve为G的一个环（这样G的一个环意味着要么是一个图形理论上的意义，例如，G的一个子图，或在某些G的绘制中的Jordan curve对应的G的一个图形理论上的环）
+
+对某些拓扑planar图形，每个面要么在G的环的内部要么在外部。但它不总是这样。例如，一个树的planar绘制只有一个面。另一个例子如下：
+
+![img](../img/counterexample_of_jordan_curve_cycle.png)
+
+它证明坏的例子为不是2-connected图形
