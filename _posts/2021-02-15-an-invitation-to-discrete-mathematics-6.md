@@ -29,6 +29,7 @@ category:   maths
     1.  [Kuratowski’s theorem](#orgd5e5cf6)
 3.  [Euler’s formula](#org1dcb9f7)
     1.  [命题（欧拉公式）](#org39eca50)
+    2.  [命题](#orge697396)
 
 
 <a id="org251e123"></a>
@@ -217,3 +218,103 @@ $ \\begin{equation} \| V \| - \| E \| + f = 2 \\end{equation} $
 使用欧拉公式，我们将显示除了5个柏拉图多面体没有其他规范多面体存在。该证明的第一步是转换一个凸多面体为一个planar图形。我们把考虑的多面体放在一个球面上，这样球的中心在多面体的里面。然后我们映射多面体到球面。这使得在球面上的图形绘制没有交叉边，这样的一个绘制可被变形为二维映射里的planar绘制。多面体的点、边和面变成planar绘制的点、边和面
 
 对规则多面体，拓扑planar绘制的结果使每个点有相同的度d（ $ d \\ge 3 $），且每个面有相同数量的点（ $ k \\ge 3 $）
+
+
+<a id="orge697396"></a>
+
+## 命题
+
+设G为一个拓扑planar图形，每个点有d度且每个面邻接k个点，$ d \\ge 3, k \\ge 3 $。则G跟上图中的一个同构
+
+证明：让我们记图形G = (V, E)的顶点数为n，边数为m，面数为f。首先我们使用等式 $ \\sum_ {v \\in V}deg_ {G}(v) = 2 \| E \| $，则
+
+$ \\begin{equation} dn = 2m \\end{equation} $
+
+相似地我们获得等式
+
+$ \\begin{equation} 2m = kf \\end{equation} $
+
+接下来，我们用m来表达n和f，并带入欧拉公式：
+
+$ \\begin{equation} 2 = n - m + f = \\frac{2m}{d} - m + \\frac{2m}{k} \\end{equation} $
+
+化简得：
+
+$ \\begin{equation} \\frac{1}{d} + \\frac{1}{k} = \\frac{1}{2} + \\frac{1}{m} \\end{equation} $
+
+因min(d, k) = 3，或 $ \\frac{1}{d} + \\frac{1}{k} \\le \\frac{1}{2} $，对d = 3我们有 $ \\frac{1}{k} - \\frac{1}{6} = \\frac{1}{m} > 0 $，且因此 $ k \\in \\{3, 4, 5\\} $。相似地，对k = 3我们有 $ d \\in \\{3, 4 , 5\\} $。因此如下的可能之一必须发生：
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-right">d</th>
+<th scope="col" class="org-right">k</th>
+<th scope="col" class="org-right">n</th>
+<th scope="col" class="org-right">m</th>
+<th scope="col" class="org-right">f</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td class="org-right">3</td>
+<td class="org-right">3</td>
+<td class="org-right">4</td>
+<td class="org-right">6</td>
+<td class="org-right">4</td>
+</tr>
+
+
+<tr>
+<td class="org-right">3</td>
+<td class="org-right">4</td>
+<td class="org-right">8</td>
+<td class="org-right">12</td>
+<td class="org-right">6</td>
+</tr>
+
+
+<tr>
+<td class="org-right">3</td>
+<td class="org-right">5</td>
+<td class="org-right">20</td>
+<td class="org-right">30</td>
+<td class="org-right">12</td>
+</tr>
+
+
+<tr>
+<td class="org-right">4</td>
+<td class="org-right">3</td>
+<td class="org-right">6</td>
+<td class="org-right">12</td>
+<td class="org-right">8</td>
+</tr>
+
+
+<tr>
+<td class="org-right">5</td>
+<td class="org-right">3</td>
+<td class="org-right">12</td>
+<td class="org-right">30</td>
+<td class="org-right">20</td>
+</tr>
+</tbody>
+</table>
+
+现在我们容易检查这些情况跟上图的对应性
+
+让我们标记planar图形和3维凸多面体之间的联系比想象中的跟紧密
