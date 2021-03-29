@@ -31,6 +31,7 @@ category:   maths
     1.  [命题（欧拉公式）](#org39eca50)
     2.  [命题](#orge697396)
     3.  [命题（Planar图形有O(n)条边）](#org013d7f8)
+    4.  [命题](#org11abb0c)
 
 
 <a id="org251e123"></a>
@@ -364,3 +365,32 @@ $ \\begin{equation} \| V \| - \| E \| + \\frac{2}{3} \| E \| = 2 \\end{equation}
 (i)有一个重要且经常应用的结论，每个planar图形有一些顶点度数最多为5。(ii)确保一个没有三角形的planar图形包含一个顶点度数不超过3
 
 (i)也显示了 $ K_ {5} $不是planar的，因为它有10条边，然而一个5个顶点的plannar图形最多有9条边。(ii)意味着 $ K_ {3, 3} $不是planar的，因为一个6个顶点的无三角形的图形最多有8条边
+
+
+<a id="org11abb0c"></a>
+
+## 命题
+
+设G = (V, E)为至少3个顶点的2连通planar图形。设 $ n_ {i} $为度数为i的顶点个数，设 $ f_ {i} $为i长度循环边界的面的个数。则我们有
+
+$ \\begin{equation} \\sum_ {i \\ge 1} (6 - i) n_ {i} = 12 + 2 \\sum_ {j \\ge 3} (j - 3) f_ {j} \\end{equation} $
+
+或
+
+$ \\begin{equation} 5n_ {1} + 4n_ {2} + 3n_ {3} + 2n_ {4} + n_ {5} - n_ {7} - 2n_ {8} - \\cdots = 12 + 2f_ {4} + 4f_ {5} + 6f_ {6} + cdots \\end{equation} $
+
+因此 $ 5n_ {1} + 4n_ {2} + 3n_ {3} + 2n_ {4} + n_ {5} \\ge 12 $，且至少3个顶点的每个planar图形包含至少3个度数不超过5的顶点
+
+证明：因 $ \| V \| = \\sum_ {i}n_ {i}, f = \\sum_ {i} f_ {i} $，通过带入欧拉公式，我们有
+
+$ \\begin{equation} 2 \| E \| = 2(\| V \| + f - 2) = \\sum_ {i}2n_ {i} + \\sum_ {j}2f_ {j} - 4 \\end{equation} $
+
+通过之前证明中的双重统计我们进一步获得：$ \\sum_ {i}in_ {i} = 2 \| E \| = \\sum_ {j}jf_ {j} $。带入上面的公式得：
+
+$ \\begin{equation} \\sum_ {j}(j - 2)f_ {j} + 4 = \\sum_ {i} 2n_ {i} \\qquad \\qquad \\qquad \\sum_ {j}2f_ {j} = \\sum_ {i}(i - 2)n_ {i} + 4 \\end{equation} $
+
+我们把第一个等式乘以2并减去第2个等式得
+
+$ \\begin{equation} \\sum_ {i} (6 - i) n_ {i} - 4 = 2 \\sum_ {j} (j - 3)f_ {j} + 8 \\end{equation} $
+
+即得证
