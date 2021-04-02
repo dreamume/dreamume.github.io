@@ -428,7 +428,7 @@ $ \\begin{equation} \\sum_ {i} (6 - i) n_ {i} - 4 = 2 \\sum_ {j} (j - 3)f_ {j} +
 
 ## 定义（双图）
 
-设G为一个拓扑planar图形，例如一个planar图形(V, E)及一个固定的planar绘制。设 $ \\mathcal{F} $记为G的面的集合。我们定义一个图形，可能有循环和多条边，为 $ (\\mathcal{F}, E, \\epsilon) $，$ \\epsilon $被定义为 $ \\epsilon(e) = \\{ F_ {i}, F_ {j} $，边e是面 $ F_ {i}, F_ {j} $的公共边界（我们也允许 $ F_ {i} = F_ {j} $，当相同的面在给定边的两边）。这个图形 $ (\\mathcal{F}, E, \\epsilon) $被称为（地理上）G的双，被记为 $ G^{ * } $
+设G为一个拓扑planar图形，例如一个planar图形(V, E)及一个固定的planar绘制。设 $ \\mathcal{F} $记为G的面的集合。我们定义一个图形，可能有循环和多条边，为 $ (\\mathcal{F}, E, \\epsilon) $，$ \\epsilon $被定义为 $ \\epsilon(e) = \\{ F_ {i}, F_ {j} \\} $，边e是面 $ F_ {i}, F_ {j} $的公共边界（我们也允许 $ F_ {i} = F_ {j} $，当相同的面在给定边的两边）。这个图形 $ (\\mathcal{F}, E, \\epsilon) $被称为（地理上）G的双，被记为 $ G^{ * } $
 
 一个例子：
 
