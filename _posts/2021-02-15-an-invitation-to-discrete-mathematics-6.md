@@ -494,3 +494,17 @@ $ \\chi(G) \\le 4 $对每个planar图形G成立吗？
     顶点z, t之一在该循环内部且另一个在外部，且因此任何从z到t的路径有环上的一些顶点。因此，没有从z到t的路径只使用集合 $ V_ {z, t} $的顶点，且这样我们可构建一个G的5颜色着色如case 1相似，只是用z和t替换x和y的角色
 
 这样就证明了5色定理
+
+**边收缩** 在开始第二个证明之前，让我们引入一个更重要的图形操作。设G = (V, E)为一个图形（这里不需要是planar）且设 $ e \\in E $为它的一条边。e收缩表示我们粘合e的两个顶点为一个新的顶点，且然后我们移除粘合引起的多条边。结果图形记为G.e，且形式化它的定义如下:
+
+$ \\begin{equation} G.e = (V', E') \\end{equation} $
+
+其中 $ e = \\{x, y\\} $且
+
+$ \\begin{equation} V' = (V \\ \\{x, y\\}) \\cup \\{z\\} \\end{equation} $
+
+$ \\begin{equation} E' = \\{ e \\in E: e \\cap \\{x, y\\} = \\emptyset \\} \\\\ \\cup \\{\\{z, t\\}: t \\in V \\ \\{x, y\\}, \\{t, x\\} \\in E \\text{ or } \\{t, y\\} \\in E \\} ; \\end{equation} $
+
+$ z \\in V $为一个新顶点
+
+**引理** 如果G是一个planar图形且 $ e \\in E(G) $是一条边则图形G.e也是一个planar图形
