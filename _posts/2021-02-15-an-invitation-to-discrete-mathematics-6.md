@@ -508,3 +508,13 @@ $ \\begin{equation} E' = \\{ e \\in E: e \\cap \\{x, y\\} = \\emptyset \\} \\\\ 
 $ z \\in V $为一个新顶点
 
 **引理** 如果G是一个planar图形且 $ e \\in E(G) $是一条边则图形G.e也是一个planar图形
+
+**命题的第二部分证明** 我们继续通过归纳法处理planar图形G = (V, E)。我们将如同第一部分证明一样开始。我们可假设G = (V, E)是至少6个顶点的planar图形，每个顶点度数至少为5。让我们选择一个度数为5的顶点。因为图形G是planar的，它不包含子图形 $ K_ {5} $，且因此存在v的一对邻居不被一条边连接。让我们记这样的顶点为x和y，设t, u和z为剩下的3个邻居顶点。我们观察通过缩减G的边 $ \\{x, v\\} $和 $ \\{y, v \\} $（例如，顶点三元组x, y, v被一个新顶点w替代；这通过缩减一条边的定义方法产生）产生的新图形 $ G' $。该图形是planar的且有比G更少的顶点。因此 $ G' $的一些着色 $ c' $通过归纳假设存在5颜色着色。这种情况下，我们定义图形G的一个着色c如下：
+
+$ \\begin{equation} c(s) = \\left\\{ \\begin{array}{ll} c'(s) & \\text{if } s \\notin {x, y, v} \\\\ c'(w) & \\text{if } x = x \\text{ or } x = y \\\\ i \\in \\{1, \\ldots, 5\\} \\ \\{ c'(w), c'(u), c'(t), c'(z) \\} & \\text{if } s = v \\end{array} \\right. \\end{equation} $
+
+下图显示了该定义：
+
+![img](../img/second_proof_of_five_color_theorem_with_two_situations_in_picture.png)
+
+不难验证c是一个有效的图形G的着色
