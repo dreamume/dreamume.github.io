@@ -229,6 +229,6 @@ $ \\begin{equation} c = M(x) = \\operatorname{argmin}_ {c'} D(x, \\overline{M^{-
 
     该转换如上图，反向转换为：
 
-    $ \\hat{x}[n, m] = \\left\\{ \\begin{array}{ll} 2\\hat{y}[m, n] - \\sum_ {i,j \\in \\{0, 1\\} \\hat{y}[m + i, n + j] & \\text{if m, n都为偶数} \\\\ \\hat{y}[m,n] + \\hat{y}[2\\lfloor \\frac{m}{2} \\rfloor, 2 \\lfloor \\frac{n}{2} \\rfloor ] & \\text{otherwise} \\end{array} \\right. $
+    $ \\hat{x}[n, m] = \\left\\{ \\begin{array}{ll} 2\\hat{y}[m, n] - \\sum_ {i,j \\in \\{0, 1\\}} \\hat{y}[m + i, n + j] & \\text{if m, n都为偶数} \\\\ \\hat{y}[m,n] + \\hat{y}[2\\lfloor \\frac{m}{2} \\rfloor, 2 \\lfloor \\frac{n}{2} \\rfloor ] & \\text{otherwise} \\end{array} \\right. $
 
     该转换采样，y[m, n]，m, n为奇数，包含高清晰度细节，如果原始图像清晰度超过视觉精度可被丢弃。这样，这种简单的转换暴露图像中潜在的不相关形式。因为多数图像包含平滑区域，我们也期望具体的采样，y[m, n]，m,n为奇数，多少情况下获得值接近0。这样，量化下标对于0可高概率发生，这样简单的在每个独立采样的编码操作应该能够利用一些统计的冗余
