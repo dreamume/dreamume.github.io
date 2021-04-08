@@ -216,3 +216,19 @@ $ \\begin{equation} c = M(x) = \\operatorname{argmin}_ {c'} D(x, \\overline{M^{-
     预估反quantization操作，$ \\overline{Q^{-1}} $，映射每个索引，$ q[k_ {1}, k_ {2}] $，到对应间隔的某些呈现水平上， $ \\hat{y}[k_ {1}, k_ {2}] $。在最简单的例子中，我们选择 $ \\hat{y}[k_ {1}, k_ {2}] $作为间隔的中间点，$ \\mathcal{I}_ {q[k_ {1}, k_ {2}]} $。从这个基本讨论中，它应该明显 $ \\overline{Q^{-1}} $是Q的右反，例如，
 
     $ \\begin{equation} Q \\left(\\overline{Q^{-1}}(\\hat{y}) \\right) = \\hat{y} \\end{equation} $
+
+4.  TRANSFORMS
+
+    转换指把原始图像采样转换为一种形式，使得可以比较简单的量化和编码操作。一方面，转换可捕获原始图像采样中必要的统计依赖这样转换采样，$ y[k_ {1}, k_ {2}] $，且因此量化下标，$ q[p_ {1}, p_ {2}] $，展示最多只是非常本地的依赖；理想情况下，它们应该是统计独立的。另一方面，转换应该从相关信息中独立出不相关信息这样不相关采样可被确定且量化更重或更多的丢失
+
+    幸运地是，它可能构建转换至少部分同时达到这两个目标。这样的转换在第4章和第6章将详细说明。现在，我们用一个简单的例子触发该概念。用图像2x2的块，我们可表示每个块有一个平均采样值且跟任意3个采样和平均值不同，例如：
+    
+    ![img](../img/example_of_image_transform.png)
+    
+    $ y[m, n] = \\left\\{ \\begin{array}{ll} \\frac{1}{4} \\sum_ {i,j \\in \\{0, 1\\}} x[m + i, n + j] & \\text{if m, n都是偶数} \\\\ x[m, n] - y[2 \\lfloor \\frac{m}{2} \\rfloor, 2 \\lfloor \\frac{n}{2} \\rfloor ] & \\text{oterwise} \\end{array} \\right. $
+
+    该转换如上图，反向转换为：
+
+    $ \\hat{x}[n, m] = \\left\\{ \\begin{array}{ll} 2\\hat{y}[m, n] - \\sum_ {i,j \\in \\{0, 1\\} \\hat{y}[m + i, n + j] & \\text{if m, n都为偶数} \\\\ \\hat{y}[m,n] + \\hat{y}[2\\lfloor \\frac{m}{2} \\rfloor, 2 \\lfloor \\frac{n}{2} \\rfloor ] & \\text{otherwise} \\end{array} \\right. $
+
+    该转换采样，y[m, n]，m, n为奇数，包含高清晰度细节，如果原始图像清晰度超过视觉精度可被丢弃。这样，这种简单的转换暴露图像中潜在的不相关形式。因为多数图像包含平滑区域，我们也期望具体的采样，y[m, n]，m,n为奇数，多少情况下获得值接近0。这样，量化下标对于0可高概率发生，这样简单的在每个独立采样的编码操作应该能够利用一些统计的冗余
