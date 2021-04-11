@@ -69,4 +69,4 @@ category:   maths
 
 ![img](../img/proof_of_fixed_point_theorem.png)
 
-一个函数 $ f: \\Delta \\to \\Delta $被称为连续的如果对 $ \\all a \\in \\Delta $且 $ \\all \\epsilon > 0 $存在 $ \\delta > 0 $使得如果 $ b \\in \\Delta $是从a开始距离最大为 $ \\delta $的一个点则f(a)和f(b)的距离最多为 $ \\epsilon $
+一个函数 $ f: \\Delta \\to \\Delta $被称为连续的如果对 $ \\forall a \\in \\Delta $且 $ \\forall \\epsilon > 0 $存在 $ \\delta > 0 $使得如果 $ b \\in \\Delta $是从a开始距离最大为 $ \\delta $的一个点则f(a)和f(b)的距离最多为 $ \\epsilon $
