@@ -25,6 +25,7 @@ category:   maths
 1.  [Parity arguments](#org5c64a74)
     1.  [命题（Sperner引理 - planar版本）](#org6779ace)
     2.  [命题（一维固定点定理）](#orgba6cb2d)
+    3.  [定理（Planar Brouwer的固定点定理）](#org9b963ed)
 
 
 <a id="org5c64a74"></a>
@@ -70,3 +71,46 @@ category:   maths
 ![img](../img/proof_of_fixed_point_theorem.png)
 
 一个函数 $ f: \\Delta \\to \\Delta $被称为连续的如果对 $ \\forall a \\in \\Delta $且 $ \\forall \\epsilon > 0 $存在 $ \\delta > 0 $使得如果 $ b \\in \\Delta $是从a开始距离最大为 $ \\delta $的一个点则f(a)和f(b)的距离最多为 $ \\epsilon $
+
+
+<a id="org9b963ed"></a>
+
+## 定理（Planar Brouwer的固定点定理）
+
+每个连续函数 $ f: \\Delta \\to \\Delta $有一个固定点
+
+证明：我们定义三个辅助实值函数 $ \\beta_ {1}, \\beta_ {2}, \\beta_ {3} $在三角形 $ \\Delta $上。对一个在坐标(x, y)上的点 $ a \\in \\Delta $，我们设置
+
+$ \\beta_ {1}(a) = x, \\quad \\beta_ {2}(a) = y, \\quad \\beta_ {3}(a) = 1 - x - y $
+
+地理上，$ \\beta_ {i} $如下显示：
+
+![img](../img/example_of_triangle_to_proof_fixed_point.png)
+
+我们定义集合 $ M_ {1}, M_ {2}, M_ {3} \\subseteq \\Delta $:
+
+$ M_ {i} = \\{ a \\in \\Delta: \\beta_ {i}(a) \\ge \\beta_ {i}(f(a)) \\} $
+
+i = 1, 2, 3。这样，$ M_ {i} $包含点通过函数f远离 $ A_ {i} $的相反面
+
+注意每个点 $ p \\in M_ {1} \\cap M_ {2} \\cap M_ {3} $是函数f的固定点，对如果p不是固定的则f必须移动离开某个面。更具体地，如果 $ p \\in M_ {1} \\cap M_ {2} \\cap M_ {3} $则我们有 $ \\forall i = 1, 2, 3, \\beta_ {i}(p) \\ge \\beta_ {i}(f(p)) $且因为 $ \\sum_ {i}\\beta_ {i}(p) = \\sum_ {i}\\beta_ {i}(f(p)) = 1 $我们得到 $ \\forall i, \\beta_ {i}(p) = \\beta_ {i}(f(p)) $，意味着p = f(p)。我们的目标现在是找到一个点在 $ M_ {1} \\cap M_ {2} \\cap M_ {3} $中
+
+考虑一个序列三角化三角形$ \\Delta $：
+
+![img](../img/triangulation_of_a_triangle.png)
+
+在每个这样的三角化中，我们标签三角形的所有顶点为1, 2和3。我们需要一个顶点标签i属于集合 $ M_ {i} $，且赋值满足Sperner引理规则。我们不得不确保这总是被排列的
+
+顶点 $ A_ {1} $有从它的对边最大可能的距离；因此该距离在f下不会增加。因此 $ A_ {1} \\in M_ {1} $且我们可标签 $ A_ {1} $为1；$ A_ {2}, A_ {3} $相似。一个点a在边 $ A_ {2}A_ {3} $上有 $ \\beta_ {1}(a) + \\beta_ {2}(a) = 1 $，意味着f(a)不能同时满足 $ \\beta_ {1}(f(a)) > \\beta_ {1}(a) $且 $ \\beta_ {2}(f(a)) > \\beta_ {2}(a) $。这样 $ a \\in M_ {1} \\cup M_ {2} $，且这样我们可在边 $ A_ {1}A_ {2} $上标签所有的顶点为1和2。其他边情况相似。最终，$ \\Delta $的每个点属于至少一个 $ M_ {i} $集合因为它从所有边上都不能移动更远
+
+Sperner引理意味着每个成功地提炼三角化有一个三角形标签为1，2，3。让我们记一些这样的三角形的顶点在第j次三角化中为 $ a_ {j,1}, a_ {j, 2}, a_ {j, 3}, a_ {j, i} \\in M_ {i}, i = 1, 2, 3 $
+
+考虑无穷序列点 $ (a_ {1,1}, a_ {2, 1}, a_ {3,1}, \\ldots ) $。我们需要选择一个无穷收敛子序列。这总是可能的，事实上，在三角形内点的任意无穷序列包含一个收敛的无穷子序列。（三角形的该属性，例如，对任意闭合且有界平面的子集，被称为紧性）这样假设我们已经选择一个收敛的子序列$ (a_ {j_ {1}, 1}, a_ {j_ {2}, 1}, a_ {j_ {3}, 1}, \ldots), j_ {1} < j_ {2} < j_ {3} < \\ldots $，且让我们记它的极限点为p
+
+我们声称 $ p \\in M_ {1} $。通过 $ M_ {1} $的定义，我们有 $ \\beta_ {1}(a_ {j_ {k}}, 1) \\ge \\beta_ {1}(f(a_ {j_ {k}}, 1)), \\forall j_ {k} $，且在两边使用一个极限有 $ \\beta_ {1}(p) \\ge \\beta_ {1}(f(p)) $，因为使用极限在连续函数中会保留非严格不等式
+
+因为三角形的直径在连续三角化中趋于0，其他顶点的序列，例如，$ (a_ {j_ {1}, 2}, a_ {j_ {2}, 2}, a_ {j_ {3}, 3}, \\ldots) $和 $ (a_ {j_ {1}, 3}, a_ {j_ {2}, 3}, a_ {j_ {3}, 3}, \\ldots) $，也收敛到点p。这意味着 $ p \\in M_ {2} $且 $ p \\in M_ {3} $。这样，p就是函数f想要的固定点
+
+![img](../img/a_game_use_handshake_lemma.png)
+
+让我们展示另一个例子使用握手引理。我们将分析一个游戏。如上图，每个选手每次标注一个未标注节点，例如，第一个选手（Alice）标注为灰色，第二个选手（Betty）标注为黑色。在开始时，Alice有a、c两个标注节点，Betty有b、d标注节点。如果Alice能够标注从a到c的一条路径上所有节点则她获胜，Betty标注一条从b到d的路径上所有节点则他胜。如果节点都已标记完则为平局
