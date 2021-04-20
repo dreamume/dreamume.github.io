@@ -153,9 +153,9 @@ Sperner引理意味着每个成功地提炼三角化有一个三角形标签为1
 
 一个关键的观察是在任意antichain中任意chain最多有一个共同元素。例如，如果我们成功证明问题中整个偏序集可被表达为最多r个chains的集合，则没有antichain有超过r个元素。我们的证明使用这个简单的观察在更复杂的情况中
 
-我们考虑 $ (2^{X}, \\sebseteq) $中的最大chains，最大chain是如果我们添加它到 $ 2^{X} $中的任意其他集合，结果都不是一个chain。它容易看到最大chain如下：它们包含X的每个可能大小的子集；即，他们有形如：
+我们考虑 $ (2^{X}, \\subseteq) $中的最大chains，最大chain是如果我们添加它到 $ 2^{X} $中的任意其他集合，结果都不是一个chain。它容易看到最大chain如下：它们包含X的每个可能大小的子集；即，他们有形如：
 
-$ \\begin{equation} \\emptyset \\subset \\{x_ {1}} \\subset \\{x_ {1}, x_ {2}} \\subset \\{x_ {1}, x_ {2}, x_ {3}} \\subset \\cdots \\subset \\{ x_ {1}, x_ {2}, \\ldots, x_ {n} \\} \\end{equation} $
+$ \\begin{equation} \\emptyset \\subset \\{x_ {1}} \\subset \\{x_ {1}, x_ {2}\\} \\subset \\{x_ {1}, x_ {2}, x_ {3}\\} \\subset \\cdots \\subset \\{ x_ {1}, x_ {2}, \\ldots, x_ {n} \\} \\end{equation} $
 
 $ x_ {1}, x_ {2}, \\ldots, x_ {n} $是X中以某个顺序排列的所有元素。每个最大chain因此导入X的一个线性有序元素，另一方面，每个线性有序会有一个最大chain。结果，最大chain的数目等于X的排列的数目，为n!
 
@@ -165,7 +165,7 @@ $ x_ {1}, x_ {2}, \\ldots, x_ {n} $是X中以某个顺序排列的所有元素�
 
 另一方面，我们可用一个集合 $ M \\in \\mathcal{M} $且问多少最大chain包含它。一个最大chain包含M当且仅当 $ \\{x_ {1}, x_ {2}, \\ldots, x_ {k} \\} = M, k = \| M \| $。因此我们问多少个X的线性有序使得前k个元素为M的元素。我们排序M的元素有k!种方法，这样确定前面k个chain的子集，且M外的元素可有 $ (n - k)! $种排序方法，这确定了chain剩下的元素。这样包含M的最大chain有 $ k! (n-k)! $个。这样有序对 $ (\\mathcal{R}, M) $的数量等于
 
-$ \\sum_ {M \\in \\mathcal{M}} \| M \| ! (n - \| M \|)!
+$ \\sum_ {M \\in \\mathcal{M}} \| M \| ! (n - \| M \|)! $
 
 根据第一种统计方法，有n!个，这样我们获得
 
