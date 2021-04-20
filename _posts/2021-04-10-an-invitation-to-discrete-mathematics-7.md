@@ -169,10 +169,10 @@ $ \\sum_ {M \\in \\mathcal{M}} \| M \| ! (n - \| M \|)!
 
 根据第一种统计方法，有n!个，这样我们获得
 
-$ \\begin{equation} \\sum_ {M \\in \\mathcal{M}} \\frac{\| M \| ! (n - \| M \|)!}{n!} = \\sum_ {M \\in \\mathcal{M}} \\frac{1}{{n \\choose \| M \| }} \\le 1 \\end{equation} $
+$ \\begin{equation} \\sum_ {M \\in \\mathcal{M}} \\frac{\| M \| ! (n - \| M \|)!}{n!} = \\sum_ {M \\in \\mathcal{M}} \\frac{1}{\\left( \\begin{array}{c} n \\\\ \| M \| \\end{array} \\right)} \\le 1 \\end{equation} $
 
-我们使用这个事实 $ { n \\choose \\lfloor \\frac{n}{2} \\rfloor } $是至少最大的形如 $ { n \\choose k } $的任意二项式系数，$ k = 0, 1, \\ldots, n $。因此
+我们使用这个事实 $ \\left(\\begin{array}{c} n \\\\ \\lfloor n / 2 \\rfloor \\end{array} \\right) $是至少最大的形如 $ { n \\choose k } $的任意二项式系数，$ k = 0, 1, \\ldots, n $。因此
 
-$ 1 \\ge \\sum_ {M \\in \\mathcal{M}} \\frac{1}{{n \\choose \| M \| }} \\ge \| \\mathcal{M} \| \\frac{1}{{n \\choose \\lfloor \\frac{n}{2} \\rfloor }} $
+$ 1 \\ge \\sum_ {M \\in \\mathcal{M}} \\frac{1}{ \\left(\\begin{array}{c}n \\\\ \\lfloor n / 2 \\rfloor \\end{array}\\right)} \\ge \| \\mathcal{M} \| \\frac{1}{\\left(\\begin{array}{c} n \\\\ \\lfloor n / 2 \\rfloor \\end{array}\\right)} $
 
-因此 $ \| \\mathcal{M} \| \\le {n \\choose \\lfloor \\frac{n}{2} \\rfloor } $
+因此 $ \| \\mathcal{M} \| \\leq \\left(\\begin{array}{c}n \\\\ \lfloor n / 2\\rfloor\\end{array}\\right) $
