@@ -155,7 +155,7 @@ Sperner引理意味着每个成功地提炼三角化有一个三角形标签为1
 
 我们考虑 $ (2^{X}, \\subseteq) $中的最大chains，最大chain是如果我们添加它到 $ 2^{X} $中的任意其他集合，结果都不是一个chain。它容易看到最大chain如下：它们包含X的每个可能大小的子集；即，他们有形如：
 
-$ \\begin{equation} \\emptyset \\subset \\{x_ {1}} \\subset \\{x_ {1}, x_ {2}\\} \\subset \\{x_ {1}, x_ {2}, x_ {3}\\} \\subset \\cdots \\subset \\{ x_ {1}, x_ {2}, \\ldots, x_ {n} \\} \\end{equation} $
+$ \\begin{equation} \\emptyset \\subset \\{x_ {1} \\} \\subset \\{x_ {1}, x_ {2}\\} \\subset \\{x_ {1}, x_ {2}, x_ {3}\\} \\subset \\cdots \\subset \\{ x_ {1}, x_ {2}, \\ldots, x_ {n} \\} \\end{equation} $
 
 $ x_ {1}, x_ {2}, \\ldots, x_ {n} $是X中以某个顺序排列的所有元素。每个最大chain因此导入X的一个线性有序元素，另一方面，每个线性有序会有一个最大chain。结果，最大chain的数目等于X的排列的数目，为n!
 
