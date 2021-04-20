@@ -27,6 +27,8 @@ category:   maths
     2.  [命题（一维固定点定理）](#orgba6cb2d)
     3.  [定理（Planar Brouwer的固定点定理）](#org9b963ed)
     4.  [命题](#org1863832)
+2.  [Sperner's theorem on independent systems](#orgd429ef0)
+    1.  [定理（Sperner定理）](#orgfa2e970)
 
 
 <a id="org5c64a74"></a>
@@ -130,3 +132,47 @@ Sperner引理意味着每个成功地提炼三角化有一个三角形标签为1
 我们将显示有一个内部三角面T标签为1，2，3。这导致一个矛盾，因为标签为3的T的节点（称为x）不能属于A或B。如果x属于A，我们考虑三角形T中节点y标签为1。通过标签的定义，存在一个从a到y的路径只使用A中节点，且这个路径可扩展到x，因为y邻接x。相似地我们可得出x不属于B，这是一个矛盾。原因如下图：
 
 ![img](../img/board_game_not_exist_a_draw.png)
+
+
+<a id="orgd429ef0"></a>
+
+# Sperner's theorem on independent systems
+
+
+<a id="orgfa2e970"></a>
+
+## 定理（Sperner定理）
+
+任意n个元素集合的独立系统的子集包含最多 $ {n \\choose \\lfloor \\frac{n}{2} \\rfloor} $个集合
+
+这事实上是一个偏序集的定理。考虑 $ 2^{X} $的集合系统包含集合X的所有子集。考虑集合系统 $ 2^{X} $包含所有X集合的子集合。关系 $ \\subseteq $，“子集“，是在$ 2^{X} $上的一个偏序（它甚至是偏序的一个最重要的例子）。集合的独立系统是偏序集 $ (2^{X}, \\subseteq) $ 中一对不可比较元素的集合。偏序集中不可比较元素对的集合被称为antichain，这样Sperner定理对任意 $ (2^{X}, \\subseteq) $里的antichain的大小给定了一个上界
+
+在我们开始证明Sperner定理之前，我们应该标记该理论的上限是最大可能性，因为大小为 $ \\lfloor \\frac{n}{2} \\rfloor $的X的所有子集组成大小为 $ {n \\choose \lfloor \\frac{n}{2} \\rfloor } $的一个独立系统
+
+*证明* 我们首先说X的子集的chain是X的子集的任意集合 $ \\{A_ {1}, A_ {2}, \\ldots, A_ {k} \\} $ 使得 $ A_ {1} \\subset A_ {2} \\subset \\cdots \\subset A_ {k} $。在有序集语言中，它是简单的偏序集 $ (2^{X}, \\subseteq) $的线性有序子集
+
+一个关键的观察是在任意antichain中任意chain最多有一个共同元素。例如，如果我们成功证明问题中整个偏序集可被表达为最多r个chains的集合，则没有antichain有超过r个元素。我们的证明使用这个简单的观察在更复杂的情况中
+
+我们考虑 $ (2^{X}, \\sebseteq) $中的最大chains，最大chain是如果我们添加它到 $ 2^{X} $中的任意其他集合，结果都不是一个chain。它容易看到最大chain如下：它们包含X的每个可能大小的子集；即，他们有形如：
+
+$ \\begin{equation} \\emptyset \\subset \\{x_ {1}} \\subset \\{x_ {1}, x_ {2}} \\subset \\{x_ {1}, x_ {2}, x_ {3}} \\subset \\cdots \\subset \\{ x_ {1}, x_ {2}, \\ldots, x_ {n} \\} \\end{equation} $
+
+$ x_ {1}, x_ {2}, \\ldots, x_ {n} $是X中以某个顺序排列的所有元素。每个最大chain因此导入X的一个线性有序元素，另一方面，每个线性有序会有一个最大chain。结果，最大chain的数目等于X的排列的数目，为n!
+
+设 $ \\mathcal{M} $为一个antichain（子集的独立系统），形成所有有序对 $ (\\mathcal{R}, M), M \\in \\mathcal{M} $是一个集合且 $ \\mathcal{R} $是包含M的最大chain。我们以两种方法统计该元组
+
+首先，通过上述观察到，每个chain包含最多一个 $ M \\in \\mathcal{M} $（因为 $ \\mathcal{M} $是一个antichain），这样元组 $ (\\mathcal{R}, M) $的数量小于等于最大chain的数量，为n!
+
+另一方面，我们可用一个集合 $ M \\in \\mathcal{M} $且问多少最大chain包含它。一个最大chain包含M当且仅当 $ \\{x_ {1}, x_ {2}, \\ldots, x_ {k} \\} = M, k = \| M \| $。因此我们问多少个X的线性有序使得前k个元素为M的元素。我们排序M的元素有k!种方法，这样确定前面k个chain的子集，且M外的元素可有 $ (n - k)! $种排序方法，这确定了chain剩下的元素。这样包含M的最大chain有 $ k! (n-k)! $个。这样有序对 $ (\\mathcal{R}, M) $的数量等于
+
+$ \\sum_ {M \\in \\mathcal{M}} \| M \| ! (n - \| M \|)!
+
+根据第一种统计方法，有n!个，这样我们获得
+
+$ \\begin{equation} \\sum_ {M \\in \\mathcal{M}} \\frac{\| M \| ! (n - \| M \|)!}{n!} = \\sum_ {M \\in \\mathcal{M}} \\frac{1}{{n \\choose \| M \| }} \\le 1 \\end{equation} $
+
+我们使用这个事实 $ { n \\choose \\lfloor \\frac{n}{2} \\rfloor } $是至少最大的形如 $ { n \\choose k } $的任意二项式系数，$ k = 0, 1, \\ldots, n $。因此
+
+$ 1 \\ge \\sum_ {M \\in \\mathcal{M}} \\frac{1}{{n \\choose \| M \| }} \\ge \| \\mathcal{M} \| \\frac{1}{{n \\choose \\lfloor \\frac{n}{2} \\rfloor }} $
+
+因此 $ \| \\mathcal{M} \| \\le {n \\choose \\lfloor \\frac{n}{2} \\rfloor } $
