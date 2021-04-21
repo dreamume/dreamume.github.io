@@ -179,7 +179,7 @@ $ 1 \\ge \\sum_ {M \\in \\mathcal{M}} \\frac{1}{ \\left(\\begin{array}{c}n \\\\ 
 
 **Sperner定理的其他证明** 和许多其他定理一样，Sperner定理可用不同的方法证明。我们将描述另两种证明方法。首先是用特殊的chain覆盖 $ 2^{X} $
 
-让我们考虑偏序集 $ (2^{X}, \\subseteq) $中的chain，例如，包含关系的集合序列：$ M_ {1} \\subset M_ {2} \\subset \\cdots \\subset M_ {t} $。称这样的一个chain是对称的如果它包含一个大小为k的集合，一个大小为k+1的集合，一个大小为k+2的集合，...，一个大小为n-k的集合，且没有其他集合。例如，对n = 3，chain包含集合{2} 和{2,3}是对称的，chain $ \\emptyset, \\{3\\}, \\{2,3\\}, \\{1,2,3\\} $也是对称的，但chain $ \\{ \\{ 1 \\} \\} $和 $ \\{ \\emptyset, \\{1,2,3\\} \\} $不是对称的。对称chain的一部分是表达 $ 2^{X} $作为几个不相交对称chain的联合
+让我们考虑偏序集 $ (2^{X}, \\subseteq) $中的chain，例如，包含关系的集合序列：$ M_ {1} \\subset M_ {2} \\subset \\cdots \\subset M_ {t} $。称这样的一个chain是对称的如果它包含一个大小为k的集合，一个大小为k+1的集合，一个大小为k+2的集合，...，一个大小为n-k的集合，且没有其他集合。例如，对n = 3，chain包含集合{2} 和{2,3}是对称的，chain $ \\{ \\emptyset, \\{3\\}, \\{2,3\\}, \\{1,2,3\\} \\} $也是对称的，但chain $ \\{ \\{ 1 \\} \\} $和 $ \\{ \\emptyset, \\{1,2,3\\} \\} $不是对称的。对称chain的一部分是表达 $ 2^{X} $作为几个不相交对称chain的联合
 
 任何部分称为对称chain（如果它存在）可以组成 $ \\left( \\begin{array}{c} n \\\\ \\lfloor n / 2 \\rfloor \\end{array} \\right) $个对称chain，因为每个对称chain包含一个大小为 $ \\lfloor n / 2 \\rfloor $的集合。每个chain有最多一个共同的任意独立集合系统的集合（这基于Sperner定理第一个证明的观察）。因此Sperner定理有如下结论：
 
