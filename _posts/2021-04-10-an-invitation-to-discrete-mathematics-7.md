@@ -184,3 +184,25 @@ $ 1 \\ge \\sum_ {M \\in \\mathcal{M}} \\frac{1}{ \\left(\\begin{array}{c}n \\\\ 
 任何部分称为对称chain（如果它存在）可以组成 $ \\left( \\begin{array}{c} n \\\\ \\lfloor n / 2 \\rfloor \\end{array} \\right) $个对称chain，因为每个对称chain包含一个大小为 $ \\lfloor n / 2 \\rfloor $的集合。每个chain有最多一个共同的任意独立集合系统的集合（这基于Sperner定理第一个证明的观察）。因此Sperner定理有如下结论：
 
 **声明** 对任意有限集合X，系统 $ 2^{X} $有一个部分为对称chain
+
+证明：我们可假设 $ X = \\{1,2,\\ldots,n \\} $。证明基于如下构建：
+
+对每个集合 $ M \\subseteq X $，我们赋值一个序列 "$ m_ {1}m_ {2} \\ldots m_ {n} $"包含左右括号
+
+$ m_{i}=\\left\\{\\begin{array}{ll}"(" & \\text { if } i \\in M \\\\ ") " & \\text { if } i \\notin M\\end{array}\\right. $
+
+例如，对n = 7和集合 $ M = \\{2,6\\} $，我们有序列 $ "m_ {1}m_ {2}\\ldots m_ {7}" = ")()))()" $。该序列左右括号不需要匹配上。首先，我们配对所有临近的括号，然后我们忽略已经配对的括号，且根据相同的规则配对剩下的括号。这里有两个例子：
+
+$ ) \\underbrace{()})) \\underbrace{()} $
+
+$ )))(\\underbrace{(\\underbrace{()}\\underbrace{()})} ( $
+
+在完成配对过程后，一些括号可能依然没有匹配上。我们说两个括号序列有相同的部分配对如果配对括号相同。如下面的例子：
+
+$ M_ {1} = \\{4,5,6,8,11\\} \\qquad \\ldots \\qquad )))((()())( $
+
+$ M_ {2} = \\{5,6,8,11\\} \\qquad \\ldots \\qquad ))))(()())( $
+
+$ M_ {3} = \\{5,6,8\\} \\qquad \\ldots \\qquad ))))(()())) $
+
+我们现在定义一个相等 $ \\sim $在集合 $ 2^{X} $上，$ M \\sim M^{\\prime} $当且仅当M和 $ M^{\\prime} $有相同的偏配对。我们声称这样序列的每个类是一个对称chain
