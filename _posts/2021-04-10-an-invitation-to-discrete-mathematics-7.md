@@ -222,3 +222,23 @@ $ f^{\\#\\#} : 2^{2^{X}} \\to 2^{2^{X}} $
 $ f^{\\#\\#}(\\mathcal{M}) = \\{ f^{\\#}(M): M \\in \\mathcal{M} \\} $
 
 映射 $ f^{\\#\\#} $也是一个双射
+
+我们引入一个关系 $ \\vartriangleleft $在X的所有集合系统的集合上（例如，在集合 $ 2^{2^{X}} $:
+
+$ \\mathcal{M} \\vartriangleleft \\mathcal{N} \\leftrightarrow \\text{for each } M \\in \\mathcal{M} 有一个N \\in \\mathcal{N}使得 M \\subseteq N $
+
+注意关系 $ \\vartriangleleft $是跟集合系统间的包含关系不同。它可能比包含（ $ \\mathcal{M} \\subseteq \\mathcal{N} $意味着 $ \\mathcal{M} \\vartriangleleft \\mathcal{N} $）更大的关系。读者被邀请来检查关系 $ \\vartriangleleft $是反射和转移的，但它不需要反对称
+
+设字母 $ \\Xi $代表在集合X上所有独立集合系统的集合（ $ \\Xi \\subset 2^{2^{X}} $）。我们声称关系 $ \\vartriangleleft $限制到 $ \\Xi $是已经非对称的，且它是在 $ \\Xi $的偏序。如果 $ \\mathcal{M} $和 $ \\mathcal{N} $为集合的独立系统使得 $ \\mathcal{M} \\vartriangleleft \\mathcal{N} $和 $ \\mathcal{N} \\vartriangleleft \\mathcal{M} $，我们考虑一个任意集合 $ M \\in \\mathcal{M} $。系统 $ \\mathcal{N} $不得不包含一些集合 $ M^{\\prime} \\supseteq M $，且然后 $ \\mathcal{M} $包含一些 $ M^{\\prime \\prime} \\supseteq M^{\\prime} $。这样我们获得 $ M, M^{\\prime \\prime} \\in \\mathcal{M}, M \\subseteq M^{\\prime \\prime} $，且通过 $ \\mathcal{M} $的独立有 $ M = M^{\\prime \\prime} = M^{\\prime} $，因此 $ M \\in \\mathcal{N} $。这显示 $ \\mathcal{M} \\subseteq \\mathcal{N} $，且对称的我们获得 $ \\mathcal{N} \\subseteq \\mathcal{M} $，因此$ \\mathcal{M} = \\mathcal{N} $。这样 $ (\\Xi, \\vartriangleleft) $是一个有序集
+
+进一步我们声称对任意排序f，映射 $ f^{\\# \\#} $是偏序集 $ (\\Xi, \\vartriangleleft) $的子同构
+
+Sperner定理的证明基于如下引理：
+
+**引理** 设 $ \\Xi_ {0} \\subseteq \\Xi $记为带最大可能集合数的独立集合系统的集合。集合 $ \\Xi_ {0} $有最大元素 $ \\mathcal{N}_ {0} $，对应 $ \\vartriangleleft $的顺序。这意味着 $ \\forall \\mathcal{M} \\in \\mathcal{M}, \\mathcal{M} \\vartriangleleft \\mathcal{N}_ {0} $
+
+引理的证明 因为X上只有有限的集合系统，它有效的证明对任意两个集合系统 $ \\mathcal{M}, \\mathcal{M}^{\\prime} \\in \\Xi_ {0} $，存在一个集合系统 $ \\mathcal{N} \\in \\Xi_ {0} $比 $ \\mathcal{M}, \\mathcal{M}^{\\prime} $要大，例如，$ \\mathcal{M} \\vartriangleleft \\mathcal{N}, \\mathcal{M}^{\\prime} \\vartriangleleft \\mathcal{N} $
+
+这样我们考虑某个 $ \\mathcal{M}, \\mathcal{M}^{\\prime} \\in \\Xi_ {0} $，且我们形成一个新的集合系统 $ \\bar{\\mathcal{M}} = \\mathcal{M} \\cup \\mathcal^{\\prime} $。因为 $ \\mathcal{M}, \\mathcal{M}^{\\prime} $是独立的，在 $ \\bar{\\mathcal{M}} $中的最长chain，包含 $ \\bar{\\mathcal{M}} $的顺序，有最多两个集合。接着，设 $ \\bar{\\mathcal{M}}_ {min} $为所有从 $ \\bar{\\mathcal{M}} $中的集合的系统，$ \\bar{\\mathcal{M}} $包含没有适合的子集合，或对于包含关系 $ \\bar{\\mathcal{M}} $最小的所有集合的系统。相似地我们引入系统 $ \\bar{\\mathcal{M}}_ {max} $作为所有包含最大集合 $ \\bar{\\mathcal{M}} $的系统。我们想要检查系统 $ \\mathcal{N} = \\bar{\\mathcal{M}}_ {max} $属于 $ \\Xi_ {0} $且满足 $ \\mathcal{M} \\vartriangleleft \\bar{\\mathcal{M}}_ {max}, \\mathcal{M}^{\\prime} \\vartriangleleft \\bar{\\mathcal{M}}_ {max} $
+
+系统 $ \\bar{\\mathcal{M}}_ {min}, \\bar{\\mathcal{M}}_ {max} $是独立的，且我们有 $ \\bar{\\mathcal{M}} = \\bar{\\mathcal{M}}_ {min} \\cup \\bar{\\mathcal{M}}_ {max} $。明显地 $ \\bar{\\mathcal{M}}_ {max} \\vartriangleleft \\mathcal{M}, \\bar{\\mathcal{M}}_ {max} \\vartriangleleft \\mathcal{M}^{\\prime} $。它仍然检测 $ \\bar{\\mathcal{M}}_ {max} $有集合最大可能数，例如，$ \| \\bar{\\mathcal{M}}_ {max} \| = \| \\mathcal{M} \| $。让我们注意通过 $ \\mathcal{M}, \\mathcal{M}^{\\prime} $的独立性，我们得到 $ \\mathcal{M} \\cap \\mathcal{M}^{\\prime} \\subseteq \\bar{\\mathcal{M}}_ {min} \\cap \\bar{\\mathcal{M}}_ {max} $。因此 $ \| \\bar{\\mathcal{M}}_ {min} \| + \| \\bar{\\mathcal{M}}_ {max} \| = \| \\bar{\\mathcal{M}}_ {min} \\cap \\bar{\\mathcal{M}}_ {max} \| + \| \\bar{\\mathcal{M}}_ {min} \\cap \\bar{\\mathcal{M}}_ {max} \|  \\ge \| \\mathcal{M} \\cup \\mathcal{M}^{\\prime} \| + \| \\mathcal{M} \\cap \\mathcal{M}^{\\prime} \| = \| \\mathcal{M} \| + \| \\mathcal{M}^{\\prime} \| $, 且这样如果我们有 $ \| \\bar{\\mathcal{M}}_ {max} \| < \| \\mathcal{M} \| = \| \\mathcal{M}^{\\prime} \| $则我们得到 $ \| \\mathcal{M}_ {min} \| > \| \\mathcal{M} \| $且系统 $ \\mathcal{M}, \\mathcal{M}^{\\prime} $没有最大可能大小。这证明了引理
