@@ -29,6 +29,8 @@ category:   maths
     4.  [命题](#org1863832)
 2.  [Sperner's theorem on independent systems](#orgd429ef0)
     1.  [定理（Sperner定理）](#orgfa2e970)
+3.  [一个额外的问题：禁止4循环](#org82dbd68)
+    1.  [定理](#orgc360778)
 
 
 <a id="org5c64a74"></a>
@@ -242,3 +244,33 @@ Sperner定理的证明基于如下引理：
 这样我们考虑某个 $ \\mathcal{M}, \\mathcal{M}^{\\prime} \\in \\Xi_ {0} $，且我们形成一个新的集合系统 $ \\bar{\\mathcal{M}} = \\mathcal{M} \\cup \\mathcal{M}^{\\prime} $。因为 $ \\mathcal{M}, \\mathcal{M}^{\\prime} $是独立的，在 $ \\bar{\\mathcal{M}} $中的最长chain，包含 $ \\bar{\\mathcal{M}} $的顺序，有最多两个集合。接着，设 $ \\bar{\\mathcal{M}}_ {min} $为所有从 $ \\bar{\\mathcal{M}} $中的集合的系统，$ \\bar{\\mathcal{M}} $包含没有适合的子集合，或对于包含关系 $ \\bar{\\mathcal{M}} $最小的所有集合的系统。相似地我们引入系统 $ \\bar{\\mathcal{M}}_ {max} $作为所有包含最大集合 $ \\bar{\\mathcal{M}} $的系统。我们想要检查系统 $ \\mathcal{N} = \\bar{\\mathcal{M}}_ {max} $属于 $ \\Xi_ {0} $且满足 $ \\mathcal{M} \\vartriangleleft \\bar{\\mathcal{M}}_ {max}, \\mathcal{M}^{\\prime} \\vartriangleleft \\bar{\\mathcal{M}}_ {max} $
 
 系统 $ \\bar{\\mathcal{M}}_ {min}, \\bar{\\mathcal{M}}_ {max} $是独立的，且我们有 $ \\bar{\\mathcal{M}} = \\bar{\\mathcal{M}}_ {min} \\cup \\bar{\\mathcal{M}}_ {max} $。明显地 $ \\bar{\\mathcal{M}}_ {max} \\vartriangleleft \\mathcal{M}, \\bar{\\mathcal{M}}_ {max} \\vartriangleleft \\mathcal{M}^{\\prime} $。它仍然检测 $ \\bar{\\mathcal{M}}_ {max} $有集合最大可能数，例如，$ \| \\bar{\\mathcal{M}}_ {max} \| = \| \\mathcal{M} \| $。让我们注意通过 $ \\mathcal{M}, \\mathcal{M}^{\\prime} $的独立性，我们得到 $ \\mathcal{M} \\cap \\mathcal{M}^{\\prime} \\subseteq \\bar{\\mathcal{M}}_ {min} \\cap \\bar{\\mathcal{M}}_ {max} $。因此 $ \| \\bar{\\mathcal{M}}_ {min} \| + \| \\bar{\\mathcal{M}}_ {max} \| = \| \\bar{\\mathcal{M}}_ {min} \\cap \\bar{\\mathcal{M}}_ {max} \| + \| \\bar{\\mathcal{M}}_ {min} \\cap \\bar{\\mathcal{M}}_ {max} \|  \\ge \| \\mathcal{M} \\cup \\mathcal{M}^{\\prime} \| + \| \\mathcal{M} \\cap \\mathcal{M}^{\\prime} \| = \| \\mathcal{M} \| + \| \\mathcal{M}^{\\prime} \| $, 且这样如果我们有 $ \| \\bar{\\mathcal{M}}_ {max} \| < \| \\mathcal{M} \| = \| \\mathcal{M}^{\\prime} \| $则我们得到 $ \| \\mathcal{M}_ {min} \| > \| \\mathcal{M} \| $且系统 $ \\mathcal{M}, \\mathcal{M}^{\\prime} $没有最大可能大小。这证明了引理
+
+
+<a id="org82dbd68"></a>
+
+# 一个额外的问题：禁止4循环
+
+在之前的章节我们调研n个顶点的图形最大可能的边数，且没有三角形的子图形。这里我们继续调研一个看着相似的问题：n个顶点图形的最大肯能边数，且不包含 $ K_ {2,2} $的同构子图形（即长度为4的循环）？一个子图形要考虑如下情况，例如，4个顶点的完全图 $ K_ {4} $包含一个 $ K_ {2,2} $
+
+可能会认为禁止 $ K_ {2,2} $会跟禁止 $ K_ {3} $相似，但奇怪的是，答案是不同的。一个不包含三角形的图形最多有 $ \\lfloor n^{2} / 4 \\rfloor $条边，大约 $ {n \\choose 2} $的一半，而禁止 $ K_ {2,2} $的最大变数更小，大约 $ n^{3 / 2} $
+
+
+<a id="orgc360778"></a>
+
+## 定理
+
+如果一个n个顶点的图形G不包含 $ k_ {2,2} $的同构，它最多有 $ \\frac{1}{2} (n^{3/2} + n) $个边
+
+证明 我们将统计所有 $ ( \\{ u, u^{\\prime} \\}, v) $对的集合M，$ v \\in V, \\{u, u^{\\prime} \\} \\im {V \\choose 2} $，且v跟u, $ u^{\\prime} $有一条边相连。即如下图形式
+
+[[../img/image_of_proof_forbidden_4_cycles.png]]
+
+对一个固定对 $ \\{u, u^{\\prime} \\} $，只有一个顶点 $ v \\in V $可能存在连接到u和 $ u^{\\prime} $。如果有两个这样的顶点，v和 $ v^{\\prime} $，它们将和u、$ u^{\\prime} $形成一个 $ K_ {2,2} $的子图形同构。因此 $ \| M \| \\le {n \\choose 2} $
+
+现在让我们看有多少形如 $ (\\{u, u^{\\prime}\\}, v) $的元素被固定顶点 $ v \\in V $贡献到集合M。对每对 $ \\{u, u^{\\prime} \\} $的邻居，v贡献M的一个元素，这样如果v有d度它贡献 $ {d \\choose 2} $个元素。因此，如果我们记 $ d_ {1}, d_ {2}, \\ldots, d_ {n} $为V的顶点的度数，我们获得 $ \| M \| = \\sum^{n}_ {i=1} {d_ {i} \\choose 2} $
+
+加上之前的估计，我们获得
+
+$ \\sum^{n}_ {i=1}{d_ {i} \\choose 2} \\le {n \\choose 2} $
+
+同时，图形边的数量为 $ \\frac{1}{2} \\sum^{n}_ {i=1} d_ {i} $。剩下的证明为一个不等式的乘积
