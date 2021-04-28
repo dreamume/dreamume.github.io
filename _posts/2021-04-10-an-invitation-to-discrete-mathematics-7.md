@@ -261,9 +261,9 @@ Sperner定理的证明基于如下引理：
 
 如果一个n个顶点的图形G不包含 $ k_ {2,2} $的同构，它最多有 $ \\frac{1}{2} (n^{3/2} + n) $个边
 
-证明 我们将统计所有 $ ( \\{ u, u^{\\prime} \\}, v) $对的集合M，$ v \\in V, \\{u, u^{\\prime} \\} \\im {V \\choose 2} $，且v跟u, $ u^{\\prime} $有一条边相连。即如下图形式
+证明 我们将统计所有 $ ( \\{ u, u^{\\prime} \\}, v) $对的集合M，$ v \\in V, \\{u, u^{\\prime} \\} \\in {V \\choose 2} $，且v跟u, $ u^{\\prime} $有一条边相连。即如下图形式
 
-[[../img/image_of_proof_forbidden_4_cycles.png]]
+![img](../img/image_of_proof_forbidden_4_cycles.png)
 
 对一个固定对 $ \\{u, u^{\\prime} \\} $，只有一个顶点 $ v \\in V $可能存在连接到u和 $ u^{\\prime} $。如果有两个这样的顶点，v和 $ v^{\\prime} $，它们将和u、$ u^{\\prime} $形成一个 $ K_ {2,2} $的子图形同构。因此 $ \| M \| \\le {n \\choose 2} $
 
