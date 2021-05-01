@@ -31,6 +31,7 @@ category:   maths
     1.  [定理（Sperner定理）](#orgfa2e970)
 3.  [一个额外的问题：禁止4循环](#org82dbd68)
     1.  [定理](#orgc360778)
+    2.  [命题（Cauchy-Schwarz不等式）](#org673f186)
 
 
 <a id="org5c64a74"></a>
@@ -274,3 +275,32 @@ Sperner定理的证明基于如下引理：
 $ \\sum^{n}_ {i=1}{d_ {i} \\choose 2} \\le {n \\choose 2} $
 
 同时，图形边的数量为 $ \\frac{1}{2} \\sum^{n}_ {i=1} d_ {i} $。剩下的证明为一个不等式的乘积
+
+
+<a id="org673f186"></a>
+
+## 命题（Cauchy-Schwarz不等式）
+
+对任意实数 $ x_ {1}, x_ {2}, \\ldots, x_ {n} $和 $ y_ {1}, y_ {2}, \\ldots, y_ {n} $我们有
+
+$ \\sum^{n}_ {i=1} x_ {i}y_ {i} \\le \\sqrt{\\sum^{n}_ {i=1}x^{2}_ {i}} \\sqrt{\\sum^{n}_ {i=1}y^{2}_ {i}} $
+
+Cauchy-Schwarz不等式有一个漂亮的几何意义。如果我们解释 $ x = (x_ {1}, \\ldots, x_ {n}) $ 和 $ y = (y_ {1}, \\ldots, y_ {n}) $为n维欧几里得空间中的向量，不等式的左边是x和y的向量乘积，右边是向量长度的乘积。一个著名的向量公式为两个向量夹角的余弦等于它们的向量乘积除以它们长度的乘积。
+
+**第一个证明：AG不等式** 让我们写 $ X = \\sum^{n}_ {i=1}x^{2}_ {i} $ 和 $ Y = \\sum^{n}_ {i=1}y^{2}_ {i} $。如果X = 0，则所有 $ x_ {i} $为0且不等式成立，Y = 0也类似。让我们现在假设X > 0 且 Y > 0，我们定义 $ a_ {i} = x^{2}_ {i} / X, b_ {i} = y^{2}_ {i} / Y $。算术和几何不等式告诉我们 $ \\sqrt{a_ {i}b_ {i}} \\le (a_ {i} + b_ {i}) / 2 $。通过不等式相加，我们获得左边为
+
+$ \\sum^{n}_ {i=1} \\sqrt{a_ {i}b_ {i}} = \\sum^{n}_ {i=1} \\frac{\| x_ {i} y_ {i} \|}{\\sqrt{XY}} $
+
+而右边为
+
+$ \\frac{1}{2} \\left(\\frac{1}{X} \\sum^{n}_ {i=1}x^{2}_ {i} + \\frac{1}{Y} \\sum^{n}_ {i=1}y^{2}_ {i} \\right) = \\frac{1}{2}(1 + 1) = 1 $
+
+因此 $ \\sum^{n}_ {i=1} \\frac{\| x_ {i}y_ {i} \|}{\\sqrt{XY}} \\le 1 $，调整该式即可得Cauchy-Schwarz不等式
+
+**第二个证明：magic with a discriminant** 我们固定数 $ x_ {i}, y_ {i} $，且我们定义一个新变量t的函数p：
+
+$ p(t) = \\sum^{n}_ {i=1}(x_ {i} + ty_{i})^{2} $
+
+我们看到p(t)是一个二次方函数形如 $ p(t) = at^{2} + bt + c, a = \\sum^{n}_ {i=1}y^{2}_ {i}, b = \\sum^{n}_ {i=1}2x_ {i} y_ {i}, c = \\sum^{n}_ {i=1}x^{2}_ {i} $，另一方面，p(t)是一个平方和，因此对所有实数t方程非负
+
+如果二次等式 $ a t^{2} + bt + c = 0 $有一个正discriminant，则它有两个实数解，且这样函数p(t)在实数轴的部分有负值。因此，discriminant是非正的，例如，$ b^{2} - 4ac \\le 0 $。因此可获得Cauchy-Schwarz不等式
