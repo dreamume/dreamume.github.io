@@ -202,7 +202,7 @@ $ 2 G^{\\prime} (x) = f^{\\prime}(x) - g(x) $
 
 $ F(x) = \\frac{1}{2} \\left[ f(x) + \\int^{x}_ {0}g(y)dy \\right] + C_ {1} $
 
-$ G(x) = \\frac{1}{2} \\left[ f(x) - \\int6{x}_ {0}g(y)dy \\right] + C_ {2} $
+$ G(x) = \\frac{1}{2} \\left[ f(x) - \\int^{x}_ {0}g(y)dy \\right] + C_ {2} $
 
 因为F(x) + G(x) = f(x)，我们有 $ C_ {1} + C_ {2} = 0 $。因此，我们波浪等式最终的解决方案有如下形式
 
