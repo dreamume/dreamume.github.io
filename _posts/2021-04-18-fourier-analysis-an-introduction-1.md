@@ -268,7 +268,7 @@ $ f(x) = \\sum^{\\infty}_ {m=1}A_ {m}\\sin{mx} $
 
 一个简单的观察允许我们猜测一个公式给定 $ A_ {m} $如果上述表达式成立。我们用 $ \\sin{nx} $乘以两边且集成在 $ [0, \\pi] $，我们获得
 
-$ \\begin{aligned} \\int^{\\pi}_ {0}f(x)\\sin{nx}dx &= \\int^{\\pi}_ {0}\\left(\\sum^{\\infty}_ {m=1}A_ {m}\\sin{mx} \\right) \\sin{nx} dx \\\\ &= \\sum^{\\infty}_ {m=1}A_ {m}\\int^{\\pi}_ {0}\\sin{mx}\\sin{nx}dx = A_ {n} \\dot \\frac{\\pi}{2} \\end{aligned} $
+$ \\begin{aligned} \\int^{\\pi}_ {0}f(x)\\sin{nx}dx &= \\int^{\\pi}_ {0}\\left(\\sum^{\\infty}_ {m=1}A_ {m}\\sin{mx} \\right) \\sin{nx} dx \\\\ &= \\sum^{\\infty}_ {m=1}A_ {m}\\int^{\\pi}_ {0}\\sin{mx}\\sin{nx}dx = A_ {n} \\cdot \\frac{\\pi}{2} \\end{aligned} $
 
 我们利用了如下事实
 
