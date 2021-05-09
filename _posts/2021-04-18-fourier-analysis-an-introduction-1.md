@@ -237,3 +237,13 @@ $ \\varphi(x) = \\tilde{A} \\cos{mx} + \\tilde{B} \\sin{mx} $
 现在我们考虑弹簧位于x = 0或 $ x = \\pi $时。$ \\varphi(0) = \\varphi(\\pi) = 0 $，得到 $ \\tilde{A} = 0 $，且如果 $ \\tilde{B} \\ne 0 $，则m必须为一个整数。如果m = 0，无解决方案，且如果 $ m \\le -1 $，我们可重命名常量且缩减情况 $ m \\ge 1 $，因为函数 $ \\sin{y} $为奇函数且 $ \\cos{y} $为偶函数。最后，我们猜测对 $ m \\ge 1 $，函数
 
 $ u_ {m}(x, t) = (A_ {m}\\cos{mt} + B_ {m} \\sin{mt}) \\sin{mx} $
+
+![img](../img/fundamental_tone_and_overtone_at_different_moments.png)
+
+在进一步波浪等式分析处理之前，我们暂停一下先讨论站立波浪的一些细节。术语来之对每个固定的t，查看 $ u_ {m}(x, t) $的图形。假设首先m = 1，且 $ u(x, t) = \\cos{t}\\sin{x} $，则上图(a)给出不同t值的图形u
+
+m = 1的情况对应基本调或摆动弹簧的第一个调和
+
+我们现在让m = 2且 $ u(x, t) = \\cos{2t}\\sin{2x} $。对应第一个overtone或第二个调和，且该运动描述在上图(b)中。注意 $ \\forall t, u(\\pi / 2, t) = 0 $。这样的点，时间上不动，被称为节点，有最大振幅的点称为反节点
+
+对更高的m值我们获得更多的overtone或更高的调和。注意当m增加，频率增加，且周期 $ 2 \\pi / m $减少。因此，基本调比其他overtone有更低的频率
