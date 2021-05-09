@@ -138,6 +138,6 @@ $ \\begin{aligned} T\\left(K_{n}\\right) &=\\sum_{d_{1}, d_{2}, \\ldots, d_{n} \
 
 我们现在回头来看整个脊椎动物W，如果我们移除连接线的边，它分裂成几部分（各部分也是树）。我们连接各部分的边使得它们指向该部分中包含连接线中的顶点。我们现在定义顶点集合V的直接图：它的边为各部分的所有直接边，加上图形P的边。我们绘制图形P的循环，然后我们绘制每个顶点（原始是从连接线来）树悬挂在连接线的顶点上，如上图(b)
 
-我们声称该直接图G是一个图的映射。使用该图G，我们可最终定义一个映射 $ f: \\{1, 2, \\ldots, n\\} \\to \\{1,2,\\ldots, n\\} $，对每个 $ i \\in V, f(i) = j $，在我们的例子中，我们获得映射 $ 1 \\to \\mapsto 7, 2 \\mapsto 15, 3 \\mapsto 8, 4 \\mapsto 4, 5 \\mapsto 2, 6 \\mapsto 5, 7 \\mapsto 14, 8 \\mapsto 9, 9 \\mapsto 3, 10 \\mapsto 4, 11 \\mapsto 10, 12 \\mapsto 4, 13 \\mapsto 12, 14 \\mapsto 7, 15 \\mapsto 15, 16 \\mapsto 7, 17 \\mapsto 16, 18 \\mapsto 1, 19 \\mapsto 8 $。这样， 每个脊椎动物W确定一个映射F(W)
+我们声称该直接图G是一个图的映射。使用该图G，我们可最终定义一个映射 $ f: \\{1, 2, \\ldots, n\\} \\to \\{1,2,\\ldots, n\\} $，对每个 $ i \\in V, f(i) = j $，在我们的例子中，我们获得映射 $ 1 \\mapsto 7, 2 \\mapsto 15, 3 \\mapsto 8, 4 \\mapsto 4, 5 \\mapsto 2, 6 \\mapsto 5, 7 \\mapsto 14, 8 \\mapsto 9, 9 \\mapsto 3, 10 \\mapsto 4, \\\\ 11 \\mapsto 10, 12 \\mapsto 4, 13 \\mapsto 12, 14 \\mapsto 7, 15 \\mapsto 15, 16 \\mapsto 7, 17 \\mapsto 16, 18 \\mapsto 1, 19 \\mapsto 8 $。这样， 每个脊椎动物W确定一个映射F(W)
 
 仍然要证明原始的脊椎动物W可用上述映射f重建，且每个映射可从某个脊椎动物获得
