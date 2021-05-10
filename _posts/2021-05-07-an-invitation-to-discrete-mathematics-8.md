@@ -27,7 +27,7 @@ category:   maths
     2.  [A proof via score](#org6c78265)
         1.  [命题](#org6275426)
     3.  [用脊椎动物证明](#orgaa4f3ff)
-    4.  [使用 $ Pr \\\ddot{u} fer $代码证明](#org33f6fcc)
+    4.  [使用 $ Pr \\ddot{u} fer $代码证明](#org33f6fcc)
 
 
 <a id="org4f39a9a"></a>
@@ -146,7 +146,7 @@ $ \\begin{aligned} T\\left(K_{n}\\right) &=\\sum_{d_{1}, d_{2}, \\ldots, d_{n} \
 
 <a id="org33f6fcc"></a>
 
-## 使用 $ Pr \\\ddot{u} fer $代码证明
+## 使用 $ Pr \\ddot{u} fer $代码证明
 
 ![img](../img/spanning_tree_with_code_and_reconstruction.png)
 
