@@ -28,6 +28,7 @@ category:   maths
         1.  [命题](#org6275426)
     3.  [用脊椎动物证明](#orgaa4f3ff)
     4.  [使用 $ Pr \\ddot{u} fer $代码证明](#org33f6fcc)
+    5.  [用行列式证明](#org2ca32ce)
 
 
 <a id="org4f39a9a"></a>
@@ -165,3 +166,26 @@ $ \\begin{aligned} T\\left(K_{n}\\right) &=\\sum_{d_{1}, d_{2}, \\ldots, d_{n} \
 设 $ G_ {i} = (\\{1, 2, \\ldots, n\\}, \\{e_ {i}, e_ {i+1}, \\ldots, e_ {n-1} \\}), e_ {1}, e_ {2}, \\ldots, e_ {n-1} $为G的边，顺序通过编码算法产生。可以检查边 $ e_ {i+1}, \\ldots, e_ {n-1} $不会连接顶点 $ \\mathcal{l}_ {i} $，因此 $ \\mathcal{l}_ {i} $在 $ G_ {i} $中是一个叶子。这样G是一颗树，且$ G_ {i} $是树加上i + 1个孤立顶点
 
 对(2)，可以检查 $ \\mathcal{l}_ {i} $是 $ G_ {i} $中最小的叶子，$ i \\le i \\le n - 2 $。通过 $ \\mathcal{l}_ {i} $的定义，一个更小的叶子只发生在 $ \\mathcal{l}_ {1}, \\ldots, \\mathcal{l}_ {i-1} $或 $ \\{p_ {i}, \\ldots, p_ {n-2} \\} $中。第一组在问题之外，因为 $ \\mathcal{l}_ {1}, \\ldots, \\mathcal{l}_ {i-1} $在 $ G_ {i} $中是孤立的。让我们考虑一个顶点 $ p_ {k}, i \\le k \\le n - 2 $，在图 $ G_ {k} $中，$ p_ {k} $是叶子 $ \\mathcal{l}_ {k} $的邻居，且它还有另一个邻居因为它在$ G_ {k+1} $的单个连接部分中至少有两个顶点
+
+
+<a id="org2ca32ce"></a>
+
+## 用行列式证明
+
+设G为为一个顶点为 $ 1, 2, \\ldots, n, n \\ge 2 $和边 $ e_ {1}, e_ {2}, \\ldots, e_ {m} $的任意图形。我们引入一个n x n的矩阵Q，称为图形G的Laplace矩阵，其元素 $ q_ {i j} $由以下公式决定：
+
+$ \\begin{aligned} q_ {i i} &= \\operatorname{deg}_ {G}(i) & i = 1, 2, \\ldots, n \\\\ q_ {i j} &= \\left\\{ \\begin{array}{ll} -1 & \\text{for } \\{i, j\\} \\in E(G) \\\\ 0 & \\text{otherwise} \\end{array} \\right. & i, j = 1, 2, \\ldots, n, i \\ne j \\end{aligned} $
+
+进一步，设 $ Q_ {i j} $记为 $ (n - 1) \\times (n - 1) $矩阵通过删除Q的第i行和第j列
+
+**定理** 对每个图形G，我们有 $ T(G) = \\operatorname{det} Q_ {11} $
+
+让我们标记 $ T(G) = \| \\operatorname{det} Q_ {i j} \|, i, j \\in \\{ 1, 2, \\ldots, n \\} $。我们
+
+在我们开始证明上面定理之前，我们计算一下完全图伸展树的个数。对 $ G = K_ {n} $，Laplace矩阵在对角线上有数字n - 1，其他则为-1。如果我们删除第一行和第一列，我们获得一个如下形式的 $ (n - 1) \\times (n - 1) $矩阵
+
+$ \\left( \\begin{array}{ccccc} n - 1 & -1 & -1 & \\ldots & -1 \\\\ -1 & n - 1 & -1 & \\ldots & -1 \\\\ \\vdots & \\vdots & \\vdots & \\ldots & \\vdots \\\\ -1 & -1 & -1 & \\ldots & n - 1 \\end{array} \\right) $
+
+我们通过适当的行和列操作计算行列式。我们从所有行中减去第一行，第一个不减，然后我们用所有列的和替代第一列。我们获得一个矩阵在主对角线上有数 $ 1, n, n, n, \\ldots, n $且在主对角线下的元素为0。行列式为所有对角线上元素的乘积，为，$ n^{n - 2} $
+
+我们以两种方法证明上述定理。第一个较短且更加图形理论，第二个更多使用线性代数且它更好地解释了为什么定理是对的
