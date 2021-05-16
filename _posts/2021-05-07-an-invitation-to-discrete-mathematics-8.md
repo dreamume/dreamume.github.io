@@ -172,4 +172,3 @@ $ \\begin{aligned} T\\left(K_{n}\\right) &=\\sum_{d_{1}, d_{2}, \\ldots, d_{n} \
 
 ## 用行列式证明
 
-设G为为一个顶点为 $ 1, 2, \\ldots, n, n \\ge 2 $和边 $ e_ {1}, e_ {2}, \\ldots, e_ {m} $的任意图形。我们引入一个n x n的矩阵Q，称为图形G的Laplace矩阵，其元素 $ q_ {i j} $由以下公式决定：
