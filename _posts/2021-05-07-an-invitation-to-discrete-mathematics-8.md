@@ -28,7 +28,6 @@ category:   maths
         1.  [命题](#org6275426)
     3.  [用脊椎动物证明](#orgaa4f3ff)
     4.  [使用Prufer代码证明](#org33f6fcc)
-    5.  [用行列式证明](#org895566a)
 
 
 <a id="org4f39a9a"></a>
@@ -166,10 +165,3 @@ $ \\begin{aligned} T\\left(K_{n}\\right) &=\\sum_{d_{1}, d_{2}, \\ldots, d_{n} \
 设 $ G_ {i} = (\\{1, 2, \\ldots, n\\}, \\{e_ {i}, e_ {i+1}, \\ldots, e_ {n-1} \\}), e_ {1}, e_ {2}, \\ldots, e_ {n-1} $为G的边，顺序通过编码算法产生。可以检查边 $ e_ {i+1}, \\ldots, e_ {n-1} $不会连接顶点 $ \\mathcal{l}_ {i} $，因此 $ \\mathcal{l}_ {i} $在 $ G_ {i} $中是一个叶子。这样G是一颗树，且$ G_ {i} $是树加上i + 1个孤立顶点
 
 对(2)，可以检查 $ \\mathcal{l}_ {i} $是 $ G_ {i} $中最小的叶子，$ i \\le i \\le n - 2 $。通过 $ \\mathcal{l}_ {i} $的定义，一个更小的叶子只发生在 $ \\mathcal{l}_ {1}, \\ldots, \\mathcal{l}_ {i-1} $或 $ \\{p_ {i}, \\ldots, p_ {n-2} \\} $中。第一组在问题之外，因为 $ \\mathcal{l}_ {1}, \\ldots, \\mathcal{l}_ {i-1} $在 $ G_ {i} $中是孤立的。让我们考虑一个顶点 $ p_ {k}, i \\le k \\le n - 2 $，在图 $ G_ {k} $中，$ p_ {k} $是叶子 $ \\mathcal{l}_ {k} $的邻居，且它还有另一个邻居因为它在$ G_ {k+1} $的单个连接部分中至少有两个顶点
-
-
-<a id="org895566a"></a>
-
-## 用行列式证明
-
-设G为一个
