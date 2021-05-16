@@ -147,7 +147,7 @@ $ \\begin{aligned} T\\left(K_{n}\\right) &=\\sum_{d_{1}, d_{2}, \\ldots, d_{n} \
 
 <a id="org33f6fcc"></a>
 
-## 使用 $ Pr \\ddot{u} fer $代码证明
+## 使用Prufer代码证明
 
 ![img](../img/spanning_tree_with_code_and_reconstruction.png)
 
