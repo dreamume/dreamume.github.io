@@ -204,3 +204,12 @@ e是图形G上一条任意边，G - e记为删除该边获得的图形，而G: e
 
 ![img](../img/example_of_constraction_multigraph.png)
 
+我们分割G的伸展树为两种类型。第一类伸展树不包含e。第二类包含e，它们跟G : e的伸展树有一对一的关系，如下图
+
+![img](../img/G_contract_e_spanning_tree.png)
+
+现在我们还将分析边删除和边缩减如何影响Laplacian。更精确地，假设边e有顶点1和2，让我们考虑矩阵 $ Q_ {1 1} $是如何变化的。对边删除，很简单：如果我们记G - e的Laplacian $ Q^{\\prime} $，则从 $ Q_ {11} $左上角元素减去1得到 $ Q^{\\prime}_ {11} $
+
+当缩减边e，顶点1和2消失，一个新顶点合并后出现。让我们记G : e的顶点为新顶点获得标签1，老顶点标签 $ i \\ge 3 $为标签i - 1，且让 $ Q^{\\prime \\prime} $记为G : e的Laplacian。容易看到 $ Q^{\\prime \\prime}_ {11} = Q_ {11, 22} $，为Q删除删除行和列，如下面例子：
+
+$ Q_ {11} = \\left( \\begin{array}{cccc} 5 & 0 & -1 & -1 \\\\ 0 & 2 & -1 & 0 \\\\ -1 & -1 & 3 & 0 \\\\ -1 & 0 & 0 & 1 \\end{array} \\right), \\quad Q^{\\prime \\prime}_ {11} = \\left( \\begin{array}{ccc} 2 & -1 & 0 \\\\ -1 & 3 & 0 \\\\ 0 & 0 & 1 \\end{array} \\right) $
