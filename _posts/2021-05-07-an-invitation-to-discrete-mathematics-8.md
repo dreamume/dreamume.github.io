@@ -213,3 +213,13 @@ e是图形G上一条任意边，G - e记为删除该边获得的图形，而G: e
 当缩减边e，顶点1和2消失，一个新顶点合并后出现。让我们记G : e的顶点为新顶点获得标签1，老顶点标签 $ i \\ge 3 $为标签i - 1，且让 $ Q^{\\prime \\prime} $记为G : e的Laplacian。容易看到 $ Q^{\\prime \\prime}_ {11} = Q_ {11, 22} $，为Q删除删除行和列，如下面例子：
 
 $ Q_ {11} = \\left( \\begin{array}{cccc} 5 & 0 & -1 & -1 \\\\ 0 & 2 & -1 & 0 \\\\ -1 & -1 & 3 & 0 \\\\ -1 & 0 & 0 & 1 \\end{array} \\right), \\quad Q^{\\prime \\prime}_ {11} = \\left( \\begin{array}{ccc} 2 & -1 & 0 \\\\ -1 & 3 & 0 \\\\ 0 & 0 & 1 \\end{array} \\right) $
+
+现在我们继续归纳证明。我们将通过归纳法显示对每个最多m条边的多边图G $ T(G) = \\operatorname{det}Q_ {11} $成立
+
+如果在一个多边图G中一个顶点不产生任意边，则我们有T(G) = 0。Laplacian矩阵的第一行只包含0，且因为一个Laplacian行和总是0，则$ Q_ {11} $行的和也是0。这样，$ \\operatorname{det} Q_ {11} = 0 $，这样等式成立
+
+第二种情况更有趣，如果顶点1邻接至少一条边，则我们固定一条这样的边，我们称它为e，且我们选择顶点使得e的另一个顶点标签为2。如果我们记 $ Q, Q^{\\prime}, Q^{\\prime \\prime} $是图形G, G - e和G: e的Laplacian矩阵，通过之前定理的归纳假设，我们有
+
+$ T(G) = T(G - e) + G(G: e) = \\operatorname{det}Q^{\\prime}_ {11} + \\operatorname{det}Q^{\\prime \\prime}_ {11} = \\operatorname{det}Q^{\\prime}_ {11} + \\operatorname{det}Q_ {11,22} $
+
+因矩阵的行列式是每行的一个线性函数，且从 $ Q^{\\prime}_ {11} $通过加入一个顶点 $ e_ {1} = (1, 0, 0, \\ldots, 0) $到第一行得到矩阵 $ Q_ {11} $。这样，$ \\operatorname{det}Q_ {11} = \\operatorname{det}Q^{\\prime}_ {11} + \\operatorname{det} R $，R有 $ e_ {1} $向量作为它第一行，$ Q_ {11} $为其他行。通过第一行行列式的扩展，我们看到 $ \\operatorname{det} R = \\operatorname{det}Q_ {11,22} $，且因此 $ \\operatorname{det}Q^{\\prime}_ {11} + \\operatorname{det}Q_ {11,22} = \\operatorname{det}Q^{\\prime}_ {11} + \\operatorname{det} R == \\operatorname{det} Q_ {11} $。这样证明了定理
