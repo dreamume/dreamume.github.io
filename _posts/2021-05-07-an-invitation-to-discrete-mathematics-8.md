@@ -223,3 +223,15 @@ $ Q_ {11} = \\left( \\begin{array}{cccc} 5 & 0 & -1 & -1 \\\\ 0 & 2 & -1 & 0 \\\
 $ T(G) = T(G - e) + G(G: e) = \\operatorname{det}Q^{\\prime}_ {11} + \\operatorname{det}Q^{\\prime \\prime}_ {11} = \\operatorname{det}Q^{\\prime}_ {11} + \\operatorname{det}Q_ {11,22} $
 
 因矩阵的行列式是每行的一个线性函数，且从 $ Q^{\\prime}_ {11} $通过加入一个顶点 $ e_ {1} = (1, 0, 0, \\ldots, 0) $到第一行得到矩阵 $ Q_ {11} $。这样，$ \\operatorname{det}Q_ {11} = \\operatorname{det}Q^{\\prime}_ {11} + \\operatorname{det} R $，R有 $ e_ {1} $向量作为它第一行，$ Q_ {11} $为其他行。通过第一行行列式的扩展，我们看到 $ \\operatorname{det} R = \\operatorname{det}Q_ {11,22} $，且因此 $ \\operatorname{det}Q^{\\prime}_ {11} + \\operatorname{det}Q_ {11,22} = \\operatorname{det}Q^{\\prime}_ {11} + \\operatorname{det} R = \\operatorname{det} Q_ {11} $。这样证明了定理
+
+**定理的第二个证明** 首先我们固定G的一些任意选择方向 $ \\vec{G} $，例如，对每条边 $ e_ {k} $，我们选择一个它的顶点作为头且另一个变为尾。这个方向的边被记为 $ \\vec{e}_ {k} $。我们需要一些朝向来证明，虽然结论是独立于特殊的朝向，且只依赖G。我们定义一个辅助矩阵 $ D = D_ {\\vec{G}} $，称为选择朝向 $ \\vec{G} $的发生矩阵。该矩阵有n行，对应 $ \\vec{G} $的向量，且m列，对应 $ \\vec{G} $的边，且它定义如下：
+
+$ d_ {i k} = \\left\\{ \\begin{array}{cc} -1 & \\text{if i is the tail of } \\vec{e}_ {k} \\\\ 1 & \\text{if i is the head of } \\vec{e}_ {k} \\\\ 0 & \\text{otherwise} \\end{array} $
+
+注意矩阵D在每列只有一个元素为1一个元素为-1，其他为0，且所有行的和为0向量
+
+让我们回忆一下如果A是一个矩阵，则符号 $ A^{T} $记为A的转置，即$ A^{T} $的元素 $ a_ {j i} $在(i, j)的位置。接着，让 $ \\bar{D} $记为D删除第一行
+
+**引理** 对图形G的任意朝向 $ \\vec{G} $，当 $ D = D_ {\\vec{G}} $时，等式 $ DD^{T} = Q, \\bar{D} \\bar{D}^{T} = Q_ {11} $成立
+
+**证明** 通过矩阵乘法的定义，$ DD^{T} $在(i, j)位置的元素为 $ \\sum^{m}_ {k=1} d_ {i k}d_ {j k} $。对i = j，乘积 $ d_ {i k}d_ {j k} = d^{2}_ {i k} $。为1如果i是$ \\vec{e}_ {k} $的头或尾，且其他为0，因此和为G中顶点i的度数。对 $ i \\ne j $，乘积 $ d_ {i k}d_ {j k} $非零只有当 $ \\vec{e}_ {k} = (i, j) $ 或 $ \\vec{e}_ {k} = (j, i) $时，且这种情况下其值为-1。跟Laplace矩阵定义比较，我们看到 $ DD^{T} = Q $。引理中的第二个等式是矩阵乘积定义的简单结论
