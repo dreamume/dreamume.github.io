@@ -226,7 +226,7 @@ $ T(G) = T(G - e) + G(G: e) = \\operatorname{det}Q^{\\prime}_ {11} + \\operatorn
 
 **定理的第二个证明** 首先我们固定G的一些任意选择方向 $ \\vec{G} $，例如，对每条边 $ e_ {k} $，我们选择一个它的顶点作为头且另一个变为尾。这个方向的边被记为 $ \\vec{e}_ {k} $。我们需要一些朝向来证明，虽然结论是独立于特殊的朝向，且只依赖G。我们定义一个辅助矩阵 $ D = D_ {\\vec{G}} $，称为选择朝向 $ \\vec{G} $的发生矩阵。该矩阵有n行，对应 $ \\vec{G} $的向量，且m列，对应 $ \\vec{G} $的边，且它定义如下：
 
-$ d_ {i k} = \\left\\{ \\begin{array}{ll} -1 & \\text{if i is the tail of } \\vec{e}_ {k} \\\\ 1 & \\text{if i is the head of } \\vec{e}_ {k} \\\\ 0 & \\text{otherwise} \\end{array} $
+$ d_ {i k} = \\left\\{ \\begin{array}{ll} -1 & \\text{if i is the tail of } \\vec{e}_ {k} \\\\ 1 & \\text{if i is the head of } \\vec{e}_ {k} \\\\ 0 & \\text{otherwise} \\end{array}\\right. $
 
 注意矩阵D在每列只有一个元素为1一个元素为-1，其他为0，且所有行的和为0向量
 
