@@ -29,6 +29,7 @@ category:   maths
     3.  [用脊椎动物证明](#orgaa4f3ff)
     4.  [使用 $ Pr \\ddot{u} fer $代码证明](#org33f6fcc)
     5.  [用行列式证明](#org895566a)
+    6.  [定理（Binet-Cauchy定理）](#orgbd27f2d)
 
 
 <a id="org4f39a9a"></a>
@@ -259,3 +260,26 @@ $ \\bar{C}_ {i j} $记为矩阵 $ \\bar{C} $删除第i行和第j列。因为第(
 因为一个孤立顶点，T是非连接的，且因此它不是一个伸展树。为完成证明我们需要展示 $ \\operatorname{det} \\bar{C} = 0 $。如果有一个孤立顶点，则它在矩阵 $ \\bar{C} $中对应一个零行。如果顶点1是孤立的则 $ \\bar{C} $中所有行的和是零向量因为发生矩阵 $ D_ {\\vec{T}} $有零行和。两种情况我们有 $ \\operatorname{\\bar{C}} = 0 $
 
 通过证明的引理，我们知道图形G的伸展树数量等于 $ (n-1) \\times (n-1) $子矩阵其非零的矩阵 $ \\bar{D} $的行列式值
+
+
+<a id="orgbd27f2d"></a>
+
+## 定理（Binet-Cauchy定理）
+
+设A为n行m列的一个任意矩阵，则
+
+$ \\operatorname{det}(AA^{T}) = \\sum_ {I}\\operatorname{det}(A_ {I})^{2} $
+
+和为所有n元素子集 $ I \\in \\left(\\begin{array}{c} \\{1, 2, \\ldots, m \\} \\\\ n \\end{array} \\right) $，且 $ A_ {i} $为矩阵A删除不在I的索引中的列
+
+我们给出该定理的完整证明，但首先我们先看Binet-Cauchy定理证明之前的定理。通过引理和本定理，我们得到
+
+$ \\operatorname{det}Q_ {11} = \\operatorname{det}(\\bar{D}\\bar{D}^{T}) = \\sum_ {I \\in \\left(\\begin{array}{c} \\{1, 2, \\ldots, m \\} \\\\ n - 1 \\end{array} \\right) \\operatorname{det}(\\bar{D}_ {I})^{2} $
+
+通过引理，我们看到最后的表达式为G的伸展树的数量
+
+*Binet-Cauchy定理的证明* 让我们记 $ M = AA^{T} $。我们扩展M的行列式根据行列式的定义，例如
+
+$ \\operatorname{det}M = \\sum_ {\\pi \\in S_ {n}} \\operatorname{sgn}(\\pi) \\prod^{n}_ {i=1}m_ {i, \\pi(i)} $
+
+和是集合 $ \\{1, 2, \\ldots, n \\} $的所有排列 $ \\pi $，且 $ \\operatorname{sgn}(\\pi) $代表排列 $ \\pi $的符号（对任意排列，符号为+1 或-1）
