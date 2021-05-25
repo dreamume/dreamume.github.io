@@ -274,7 +274,7 @@ $ \\operatorname{det}(AA^{T}) = \\sum_ {I}\\operatorname{det}(A_ {I})^{2} $
 
 我们给出该定理的完整证明，但首先我们先看Binet-Cauchy定理证明之前的定理。通过引理和本定理，我们得到
 
-$ \\operatorname{det}Q_ {11} = \\operatorname{det}(\\bar{D}\\bar{D}^{T}) = \\sum_ {I \\in \\left(\\begin{array}{c} \\{1, 2, \\ldots, m \\} \\\\ n - 1 \\end{array} \\right) \\operatorname{det}(\\bar{D}_ {I})^{2} $
+$ \\operatorname{det}Q_ {11} = \\operatorname{det}(\\bar{D}\\bar{D}^{T}) = \\sum_ {I \\in \\left(\\begin{array}{c} \\{1, 2, \\ldots, m \\} \\\\ n - 1 \\end{array} \\right)} \\operatorname{det}(\\bar{D}_ {I})^{2} $
 
 通过引理，我们看到最后的表达式为G的伸展树的数量
 
