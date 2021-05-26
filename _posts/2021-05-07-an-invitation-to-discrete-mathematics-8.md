@@ -254,7 +254,7 @@ $ \\operatorname{\\bar{C}} = \\sum^{n-1}_ {j=1}(-1)^{n-1+j} \\bar{c}_ {n-1, j} \
 
 $ \\bar{C}_ {i j} $记为矩阵 $ \\bar{C} $删除第i行和第j列。因为第(n-1)行只有一个非零元素，为 $ \\bar{c}_ {n-1, k} $，我们获得 $ \\operatorname{det}\\bar{C} = (-1)^{n-1+k}\\bar{c}_ {n-1,k} \\operatorname{det}\\bar{C}_ {n-1, k} $，且因此 $ \| \\operatorname{\\bar{C}} \| = \| \\operatorname{det}\\bar{C}_ {n-1, k} \| $
 
-设 $ \\bec{T}^{\\prime} $为 $ \\vec{T} $删除顶点n和边 $ \\vec{e}_ {k} $后的直接图。矩阵 $ \\bar{C}^{\\prime} $从 $ C^{\\prime} = D_ {\\vec{T}^{\\prime}} $删除第一行为 $ \\bar{C}_ {n-1, k} $。通过归纳假设，我们知道 $ \| \\operatorname{det} \\bar{C}^{\\prime} \| $是1或0取决于是否 $ T^{\\prime} $ （$ \\vec{T}^{\\prime} $的无方向版本）在它的顶点集合上是否是伸展树。因为我们从T移除了一个度数1顶点，T是伸展树当且仅当 $ T^{\\prime} $是一个伸展树
+设 $ \\vec{T}^{\\prime} $为 $ \\vec{T} $删除顶点n和边 $ \\vec{e}_ {k} $后的直接图。矩阵 $ \\bar{C}^{\\prime} $从 $ C^{\\prime} = D_ {\\vec{T}^{\\prime}} $删除第一行为 $ \\bar{C}_ {n-1, k} $。通过归纳假设，我们知道 $ \| \\operatorname{det} \\bar{C}^{\\prime} \| $是1或0取决于是否 $ T^{\\prime} $ （$ \\vec{T}^{\\prime} $的无方向版本）在它的顶点集合上是否是伸展树。因为我们从T移除了一个度数1顶点，T是伸展树当且仅当 $ T^{\\prime} $是一个伸展树
 
 让我们讨论第二种情况，当T中顶点 $ 2, 3, \\ldots, n $没有度数为1的顶点。首先我们观察在这种情况下T有一个孤立顶点（如果它没有，顶点1将有度数至少为1且其他顶点至少为2，且因此度数的和大于 $ 2 \| E(T) \| = 2(n - 1) $，矛盾）
 
@@ -290,7 +290,7 @@ $ \\operatorname{det}M = \\sum_ {\\pi \\in S_ {n}} \\operatorname{sgn}(\\pi) \\p
 
 ## 事实
 
-对集合 $ \\{1, 2, \\ldots, n \\} $的任意排列 $ \\pi $和对索引i, j, $ 1 \\le i < j \\le n $，设符号 $ \\pi_ {i \\leftrightarrow j} $记为排列索引i所在的值为 $ \\pi(j) $，索引j所在的值为 $ \\pi{i} $，且其他索引值不变。则我们有 $ \\operatorname{sgn}(\\pi} = - \\operatorname{sgn}(\\pi_ {i \\leftrightarrow j}) $
+对集合 $ \\{1, 2, \\ldots, n \\} $的任意排列 $ \\pi $和对索引i, j, $ 1 \\le i < j \\le n $，设符号 $ \\pi_ {i \\leftrightarrow j} $记为排列索引i所在的值为 $ \\pi(j) $，索引j所在的值为 $ \\pi{i} $，且其他索引值不变。则我们有 $ \\operatorname{sgn}(\\pi) = - \\operatorname{sgn}(\\pi_ {i \\leftrightarrow j}) $
 
 现在我们替代矩阵M中元素 $ m_ {i j} $的值，称为 $ m_ {i j} = \\sum^{m}_ {k = 1} a_ {i k}a_ {j k} $，为M行列式的扩展。则我们乘以每个乘积，有
 
