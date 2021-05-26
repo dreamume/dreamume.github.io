@@ -294,7 +294,7 @@ $ \\operatorname{det}M = \\sum_ {\\pi \\in S_ {n}} \\operatorname{sgn}(\\pi) \\p
 
 现在我们替代矩阵M中元素 $ m_ {i j} $的值，称为 $ m_ {i j} = \\sum^{m}_ {k = 1} a_ {i k}a_ {j k} $，为M行列式的扩展。则我们乘以每个乘积，有
 
-$ \\begin{aligned} \\operatorname{det} M &= \\sum_ {\\pi} \\operatorname{sgn}(\\pi) \\prod^{n}_ {i=1}\\left(\\sum^{m}_ {k=1}a_ {i k}a_ {\\pi(i)k} \\right) \\\\ &= \\sum_ {\\pi} \\operatorname{sgn}(\\pi) \\sum^{m}_ {k_ {1}, k_ {2}, \\ldots, k_ {n} = 1} \\pod^{n}_ {i=1}a_ {i, k_ {i}}a_ {\\pi(i), k_ {i}} \\end{aligned} $
+$ \\begin{aligned} \\operatorname{det} M &= \\sum_ {\\pi} \\operatorname{sgn}(\\pi) \\prod^{n}_ {i=1}\\left(\\sum^{m}_ {k=1}a_ {i k}a_ {\\pi(i)k} \\right) \\\\ &= \\sum_ {\\pi} \\operatorname{sgn}(\\pi) \\sum^{m}_ {k_ {1}, k_ {2}, \\ldots, k_ {n} = 1} \\prod^{n}_ {i=1}a_ {i, k_ {i}}a_ {\\pi(i), k_ {i}} \\end{aligned} $
 
 让我们改变上述公式里的记号变成更适合的方式。n元组 $ k_ {1}, \\ldots, k_ {n} $在内部和的索引选择可理解为映射f的选择，$ f: \\{1, 2, \\ldots, n \\} \\to \\{ 1, 2, \\ldots, m \\} $，定义为 $ f(i) = k_ {i} $。对这个记号，我们有
 
