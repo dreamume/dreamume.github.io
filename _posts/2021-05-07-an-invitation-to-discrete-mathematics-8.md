@@ -30,6 +30,7 @@ category:   maths
     4.  [使用 $ Pr \\ddot{u} fer $代码证明](#org33f6fcc)
     5.  [用行列式证明](#org895566a)
     6.  [定理（Binet-Cauchy定理）](#orgbd27f2d)
+    7.  [事实](#orgdd7e4b4)
 
 
 <a id="org4f39a9a"></a>
@@ -283,3 +284,28 @@ $ \\operatorname{det}Q_ {11} = \\operatorname{det}(\\bar{D}\\bar{D}^{T}) = \\sum
 $ \\operatorname{det}M = \\sum_ {\\pi \\in S_ {n}} \\operatorname{sgn}(\\pi) \\prod^{n}_ {i=1}m_ {i, \\pi(i)} $
 
 和是集合 $ \\{1, 2, \\ldots, n \\} $的所有排列 $ \\pi $，且 $ \\operatorname{sgn}(\\pi) $代表排列 $ \\pi $的符号（对任意排列，符号为+1 或-1）
+
+
+<a id="orgdd7e4b4"></a>
+
+## 事实
+
+对集合 $ \\{1, 2, \\ldots, n \\} $的任意排列 $ \\pi $和对索引i, j, $ 1 \\le i < j \\le n $，设符号 $ \\pi_ {i \\leftrightarrow j} $记为排列索引i所在的值为 $ \\pi(j) $，索引j所在的值为 $ \\pi{i} $，且其他索引值不变。则我们有 $ \\operatorname{sgn}(\\pi} = - \\operatorname{sgn}(\\pi_ {i \\leftrightarrow j}) $
+
+现在我们替代矩阵M中元素 $ m_ {i j} $的值，称为 $ m_ {i j} = \\sum^{m}_ {k = 1} a_ {i k}a_ {j k} $，为M行列式的扩展。则我们乘以每个乘积，有
+
+$ \\begin{aligned} \\operatorname{det} M &= \\sum_ {\\pi} \\operatorname{sgn}(\\pi) \\prod^{n}_ {i=1}\\left(\\sum^{m}_ {k=1}a_ {i k}a_ {\\pi(i)k} \\right) \\\\ &= \\sum_ {\\pi} \\operatorname{sgn}(\\pi) \\sum^{m}_ {k_ {1}, k_ {2}, \\ldots, k_ {n} = 1} \\pod^{n}_ {i=1}a_ {i, k_ {i}}a_ {\\pi(i), k_ {i}} \\end{aligned} $
+
+让我们改变上述公式里的记号变成更适合的方式。n元组 $ k_ {1}, \\ldots, k_ {n} $在内部和的索引选择可理解为映射f的选择，$ f: \\{1, 2, \\ldots, n \\} \\to \\{ 1, 2, \\ldots, m \\} $，定义为 $ f(i) = k_ {i} $。对这个记号，我们有
+
+$ \\operatorname{M} = \\sum_ {\\pi} \\operatorname{sgn}(\\pi) \\sum_ {f: \\{1, 2, \\ldots, n\\} \\to \\{1, 2, \\ldots, m \\}} \\prod^{n}_ {i=1}a_ {i, f(i)}a_ {\\pi(i), f(i)} $
+
+在这个和中，我们交换和的顺序：我们根据 $ \\pi $的排列和根据函数f进行加和。对一个更方便的记号，我们引入符号
+
+$ P(f, \\pi) = \\prod^{n}_ {i=1} a_ {i, f(i)}a _{\\pi(i), f(i)} $
+
+$ S(f) = \\sum_ {\\pi} \\operatorname{sgn}(\\pi) P(f, \\pi) $
+
+然后我们有
+
+$ \\operatorname{det}M = \\sum_ {f:\\{1,2,\\ldots, n\\} \\to \\{1,2, \\ldots, m\\} } S(f) $
