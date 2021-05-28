@@ -336,6 +336,6 @@ $ \\operatorname{det}(A_ {I}A^{T}_ {I}) = \\sum_ {f:\\{1,2,\\ldots,n\\} \\to I} 
 
 我们有
 
-$ \\begin{aligned} \\sum_ {I \\in \\left( \\begin{array}{ll} \\{1,2,\\ldots, m\\} \\\\ n \\end{array} \\right)} \\operatorname{det}(A_ {I})^{2} &= \\sum_ {I \\in \\left( \\begin{array}{ll} \\{1,2,\\ldots, m\\} \\\\ n\\end{array}\\right)} \\sum_ {f:\\{1,2,\\ldots, n\\} \\to I}S(f) \\\\ &= \\sum_ {f:\\{1,2,\\ldots, n\\} \\to \\{1,2,\\ldots,m\\}} S(f) = \\operatorname{det}(AA^{T}) \\end{aligned} $
+$ \\begin{aligned} \\sum_ {I \\in \\left( \\begin{array}{c} \\{1,2,\\ldots, m\\} \\\\ n \\end{array} \\right)} \\operatorname{det}(A_ {I})^{2} &= \\sum_ {I \\in \\left( \\begin{array}{c} \\{1,2,\\ldots, m\\} \\\\ n\\end{array}\\right)} \\sum_ {f:\\{1,2,\\ldots, n\\} \\to I}S(f) \\\\ &= \\sum_ {f:\\{1,2,\\ldots, n\\} \\to \\{1,2,\\ldots,m\\}} S(f) = \\operatorname{det}(AA^{T}) \\end{aligned} $
 
 第二个等式说明任意单射函数 $ f: \\{1,2,\\ldots,n\\} \\to \\{1,2,\\ldots, m\\} $唯一确定n元素集合I的值。这证明了定理
