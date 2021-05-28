@@ -309,3 +309,33 @@ $ S(f) = \\sum_ {\\pi} \\operatorname{sgn}(\\pi) P(f, \\pi) $
 然后我们有
 
 $ \\operatorname{det}M = \\sum_ {f:\\{1,2,\\ldots, n\\} \\to \\{1,2, \\ldots, m\\} } S(f) $
+
+整个证明需要用到如下一个关键的引理：
+
+**引理** 如果一个函数 $ f: \\{1, 2, \\ldots, n \\} \\to \\{ 1, 2, \\ldots, m \\} $不是单射，则我们有S(f) = 0（对矩阵A的任意选择）
+
+证明引理，设i, j为索引使得方f(i) = f(j)。则对任意排列 $ \\pi $，乘积 $ P(f, \\pi) $ 和 $ P(f, \\pi_ {i \\leftrightarrow j}) $相同，如果 $ \\pi $遍历所有排列，则 $ \\pi_ {i \\leftrightarrow j} $也遍历所有排列，因此我们有
+
+$ S(f) = \\sum_ {\\pi} \\operatorname{sgn}(\\pi_ {i \\leftrightarrow j}) P(f, \\pi_ {i \\leftrightarrow j}) = \\sum_ {\\pi} - \\operatorname{sgn}(\\pi) P(f, \\pi) = -S(f) $
+
+因此S(f) = 0
+
+通过引理，我们可写
+
+$ \\operatorname{det}(AA^{T}) = \\sum_ {f:\\{1,2,\\ldots,n\\} \\to \\{1,2,\\ldots, m\\}} S(f) $
+
+我们的目标现在是显示等式的右边等于 $ \\sum_ {I}\\operatorname{det}(A_ {I})^{2} $，其和遍历所有 $ I \\in \\left( \\begin{array}{ll} \\{1,2,\\ldots,m\\} \\\\ n \\end{array} \\right) $
+
+让我们选择某个 $ I \\in \\left( \\begin{array}{ll} \\{1,2, \\ldots, m\\} \\\\ n \\end{array} \\right) $，且计算
+
+$ \\operatorname{det}(A_ {I})^{2} = \\operatorname{det}(A_ {I}) \\operatorname{det}(A^{T}_ {I}) = \\operatorname{det}(A_ {I}A^{T}_ {I}) $
+
+这个行列式可如之前的方式扩展，我们得到
+
+$ \\operatorname{det}(A_ {I}A^{T}_ {I}) = \\sum_ {f:\\{1,2,\\ldots,n\\} \\to I} S(f) $
+
+我们有
+
+$ \\begin{aligned} \\sum_ {I \\in \\left( \\begin{array}{ll} \\{1,2,\\ldots, m\\} \\\\ n \\end{array} \\right) \\operatorname{det}(A_ {I})^{2} &= \\sum_ {I \\in \\left( \\begin{array}{ll} \\{1,2,\\ldots, m\\} \\\\ n\\end{array}\\right)} \\sum_ {f:\\{1,2,\\ldots, n\\} \\to I}S(f) \\\\ &= \\sum_ {f:\\{1,2,\\ldots, n\\} \\to \\{1,2,\\ldots,m\\}} S(f) = \\operatorname{det}(AA^{T}) \\end{aligned} $
+
+第二个等式说明任意单射函数 $ f: \\{1,2,\\ldots,n\\} \\to \\{1,2,\\ldots, m\\} $唯一确定n元素集合I的值。这证明了定理
