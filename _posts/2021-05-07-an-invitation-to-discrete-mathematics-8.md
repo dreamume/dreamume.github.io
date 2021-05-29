@@ -339,3 +339,7 @@ $ \\operatorname{det}(A_ {I}A^{T}_ {I}) = \\sum_ {f:\\{1,2,\\ldots,n\\} \\to I} 
 $ \\begin{aligned} \\sum_ {I \\in \\left( \\begin{array}{c} \\{1,2,\\ldots, m\\} \\\\ n \\end{array} \\right)} \\operatorname{det}(A_ {I})^{2} &= \\sum_ {I \\in \\left( \\begin{array}{c} \\{1,2,\\ldots, m\\} \\\\ n\\end{array}\\right)} \\sum_ {f:\\{1,2,\\ldots, n\\} \\to I}S(f) \\\\ &= \\sum_ {f:\\{1,2,\\ldots, n\\} \\to \\{1,2,\\ldots,m\\}} S(f) = \\operatorname{det}(AA^{T}) \\end{aligned} $
 
 第二个等式说明任意单射函数 $ f: \\{1,2,\\ldots,n\\} \\to \\{1,2,\\ldots, m\\} $唯一确定n元素集合I的值。这证明了定理
+
+![img](../img/geometric_meaning_of_the_binet_cauchy_theorem.png)
+
+让我们阐述Binet-Cauchy定理用体积的物理意义解释。我们忽略所有证明，让我们考虑一个 $ n \\times  m $ 的矩阵A，解释它的n行为m维空间 $ R^{m} $上的n个向量 $ a_ {1}, a_ {2}, \\ldots, a_ {n} $。这些n个向量伸展一个 $ R^{m} $空间中n维parallelotope。上图显示了m = 3和n = 2的情况。它可显示为 $ \| \\operatorname{det}(AA^{T}) \| $是P的n维体积的平方（在上图中，它是P的面积）。选择一个 $ n \\times n $的子矩阵B对应映射向量 $ a_ {1}, a_ {2}, \\ldots, a_ {n} $通过n个坐标扩展到一个n维 $ R^{m} $的子空间。在上图中，有3个可能的 $ 2 \\times 2 $子矩阵对应映射为3坐标平面。数量 $ \| \\operatorname{det}(BB^{T}) \| $是对应P映射的面积，且Binet-Cauchy定理断言P的面积等于P的n维映射的面积的和。事实上，对n = 1和m = 2，读者可检查这是Pythagoras定理
