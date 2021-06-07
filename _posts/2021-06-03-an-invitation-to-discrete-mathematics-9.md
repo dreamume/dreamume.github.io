@@ -67,7 +67,7 @@ Fano plane虽然小，但是一个有用的数学对象，且它也作为各种�
 
 **证明** 任意选择两条线 $ L, L^{\\prime} \\in \\mathcal{L} $，首先我们证明一个辅助声明：存在一个点 $ z \\in X $不在 $ L, L^{\\prime} $上
 
-证明辅助声明。选择一个集合 $ F \\subseteq X $作为公理(P0)，我们有 $ \| L \\cap F \| \\le 2 $且 $ L^{\\prime} \\cap F \| \\le 2 $。如果F不在 $ L \\cup L^{\\prime} $中则得证。唯一剩下的可能性是L交F于两点（称为a,b）且 $ L^{\\prime} $交F于两点（记为c,d）。则我们考虑线 $ L_ {1} = \\bar{ac} $和 $ L_ {2} = \\bar{bd} $，设z为 $ L_ {1} $和 $ L_ {2} $的交点
+证明辅助声明。选择一个集合 $ F \\subseteq X $作为公理(P0)，我们有 $ \| L \\cap F \| \\le 2 $且 $ \| L^{\\prime} \\cap F \| \\le 2 $。如果F不在 $ L \\cup L^{\\prime} $中则得证。唯一剩下的可能性是L交F于两点（称为a,b）且 $ L^{\\prime} $交F于两点（记为c,d）。则我们考虑线 $ L_ {1} = \\overline{ac} $和 $ L_ {2} = \\overline{bd} $，设z为 $ L_ {1} $和 $ L_ {2} $的交点
 
 如下几何图形显示了该情形：
 
@@ -77,7 +77,7 @@ Fano plane虽然小，但是一个有用的数学对象，且它也作为各种�
 
 我们断言 $ z \\notin L \\cup L^{\\prime} $。线L和 $ L_ {1} $交于一点，名为a，且这样如果 $ z \\in L $，我们得到z = a。但这是不可能的因为线 $ L_ {2} $会包含点z = a, b和d，F中的3个点。这被条件P0禁止。因此 $ z \\notin L $，且相似地我们可得到 $ z \\notin L^{\\prime} $。这完成了辅助声明的证明
 
-现在我们显示线L和 $ L^{\\prime} $有相同的大小。我们定义一个映射 $ \\verphi: L \\to L^{\\prime} $；它是一个双射。我们固定一个点 $ z \\notin L \\cup L^{\\prime} $且定义点 $ x \\in L $的象 $ \\varphi(x) $作为线 $ \\bar{zx} $和 $ L^{\\prime} $的交，如下图所示：
+现在我们显示线L和 $ L^{\\prime} $有相同的大小。我们定义一个映射 $ \\varphi: L \\to L^{\\prime} $；它是一个双射。我们固定一个点 $ z \\notin L \\cup L^{\\prime} $且定义点 $ x \\in L $的象 $ \\varphi(x) $作为线 $ \\overline{zx} $和 $ L^{\\prime} $的交，如下图所示：
 
 ![img](../img/proof_proposition_of_finite_projective_plane.png)
 
