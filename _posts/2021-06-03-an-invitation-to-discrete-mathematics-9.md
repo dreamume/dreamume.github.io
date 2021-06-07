@@ -62,3 +62,23 @@ finite projective plane是带某些属性的有限集合的子集的系统
 ![img](../img/weekly_schedule_for_location_plano_bar.png)
 
 Fano plane虽然小，但是一个有用的数学对象，且它也作为各种谜题或一些高级问题的解决方案出现，比如如下这个。7个警察被转换到第87区域的各个区，一个好的时机是让他们互相观察在西南C Drive的Plano Bar，这里是一个简单甚至乏味地值班因为酒吧的顾客通常是计算机罪犯，数字钱币伪造者或类似的人。需要一个3人移动小组，一周1天服务。如何安排每周调度使得7人中的每两人会值班一周？Fano plane提供了好的解决方案（点对应警察，移动对应线，以某种顺序排列）。每个人有相同编号的移动，没有人会超过连续两天，但另一方面，每个移动有一个人在前一天也在并知道发生了什么。我们不知道这样的调度在实际中会被警方使用，但例如，一些摩托循环赛会根据基于affine plane的order four来组织
+
+**命题** 设 $ (X, \\mathcal{L}) $为一个finite projective plane。则所有它的线有相同数量的点；即 $ \\forall L, L^{\\prime} \\in \\mathcal{L}, \| L \| = \| L^{\\prime} \| $
+
+**证明** 任意选择两条线 $ L, L^{\\prime} \\in \\mathcal{L} $，首先我们证明一个辅助声明：存在一个点 $ z \\in X $不在 $ L, L^{\\prime} $上
+
+证明辅助声明。选择一个集合 $ F \\subseteq X $作为公理(P0)，我们有 $ \| L \\cap F \| \\le 2 $且 $ L^{\\prime} \\cap F \| \\le 2 $。如果F不在 $ L \\cup L^{\\prime} $中则得证。唯一剩下的可能性是L交F于两点（称为a,b）且 $ L^{\\prime} $交F于两点（记为c,d）。则我们考虑线 $ L_ {1} = \\bar{ac} $和 $ L_ {2} = \\bar{bd} $，设z为 $ L_ {1} $和 $ L_ {2} $的交点
+
+如下几何图形显示了该情形：
+
+![img](../img/two_lines_in_a_finite_projective_plane.png)
+
+当然，我们不得不非常小心只使用(P0) - (P2)，而不是图形中的额外信息。在许多方面，finite projective plane跟几何（欧几里得）平面很不同
+
+我们断言 $ z \\notin L \\cup L^{\\prime} $。线L和 $ L_ {1} $交于一点，名为a，且这样如果 $ z \\in L $，我们得到z = a。但这是不可能的因为线 $ L_ {2} $会包含点z = a, b和d，F中的3个点。这被条件P0禁止。因此 $ z \\notin L $，且相似地我们可得到 $ z \\notin L^{\\prime} $。这完成了辅助声明的证明
+
+现在我们显示线L和 $ L^{\\prime} $有相同的大小。我们定义一个映射 $ \\verphi: L \\to L^{\\prime} $；它是一个双射。我们固定一个点 $ z \\notin L \\cup L^{\\prime} $且定义点 $ x \\in L $的象 $ \\varphi(x) $作为线 $ \\bar{zx} $和 $ L^{\\prime} $的交，如下图所示：
+
+![img](../img/proof_proposition_of_finite_projective_plane.png)
+
+通过公理(P1)和(P2)，点 $ \\varphi(x) $是定义的。接着，我们检查 $ \\varphi $是双射。如果 $ y \\in L^{\\prime} $是一个任意点，我们考虑线 $ \\bar{zy} $，且设x为和线L的交点，则线 $ \\bar{zy} $和 $ \\bar{zx} $共线，因此我们有 $ y = \\varphi(x) $，则映射 $ \\varphi $是一个双射且 $ \| L \| = \| L^{\\prime} \| $
