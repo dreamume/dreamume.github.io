@@ -82,3 +82,7 @@ Fano plane虽然小，但是一个有用的数学对象，且它也作为各种�
 ![img](../img/proof_proposition_of_finite_projective_plane.png)
 
 通过公理(P1)和(P2)，点 $ \\varphi(x) $是定义的。接着，我们检查 $ \\varphi $是双射。如果 $ y \\in L^{\\prime} $是一个任意点，我们考虑线 $ \\bar{zy} $，且设x为和线L的交点，则线 $ \\bar{zy} $和 $ \\bar{zx} $共线，因此我们有 $ y = \\varphi(x) $，则映射 $ \\varphi $是一个双射且 $ \| L \| = \| L^{\\prime} \| $
+
+**定义（projective plane的序）** finite projective plane $ (X, \\mathcal{L}) $的序是 $ \| L \| - 1 $。$ L \\in \\mathcal{L} $是一条线（根据证明过的命题，序不依赖线的选择）
+
+例如，Fano plane有序2（线有三个点），且它是唯一的序为2的projective plane
