@@ -86,3 +86,27 @@ Fano plane虽然小，但是一个有用的数学对象，且它也作为各种�
 **定义（projective plane的序）** finite projective plane $ (X, \\mathcal{L}) $的序是 $ \| L \| - 1 $。$ L \\in \\mathcal{L} $是一条线（根据证明过的命题，序不依赖线的选择）
 
 例如，Fano plane有序2（线有三个点），且它是唯一的序为2的projective plane
+
+**命题** 设$ (X, \\mathcal{L}) $为一个序为n的projective plane，则我们有
+
+(i) 只有n + 1条线穿过X中的每个点
+
+(ii) $ \| X \| = n^{2} + n + 1 $
+
+(iii) $ \| \\mathcal{L} \| = n^{2} + n + 1 $
+
+**证明(i)** 考虑一个任意点 $ x \\in X $。首先我们观察到存在一条线不包含x。即如果F是4点配置如(P0)，且 $ a,b,c \\in F $为不同于x的点，则至少线 $ \\overline{ab} $ 和 $ \\overline{ac} $有一条线不包含x
+
+固定这样的一条线L，$ x \\notin L $。对每个点 $ y \\in L $，我们考虑线 $ \\overline{xy} $；有n + 1条线通过x点。另一方面，任意包含x的线交L在某点 $ y \\in L $且因此它有n + 1条线穿过x
+
+**证明(ii)** 我们选择某条线 $ L = \\{ x_ {0}, x_ {1}, x_ {2}, \\ldots, x_ {n} \\} \\in \\mathcal{L} $且一个点 $ a \\notin L $，如下图所示：
+
+![img](../img/basic_property_in_finite_projective_plane.png)
+
+设 $ L_ {i} $记为线 $ \\overline{a x_ {i}}, i = 0, 1, \\ldots, n $。根据(P1)，任意两条线，$ L_ {i} $和 $ L_ {j} $，交于一个点，为点a。线 $ L_ {0}, L_ {1}, \\ldots, L_ {n} $每个除了a还有n个点，且因此它们一共包含 $ (n + 1)n + 1 = n^{2} + n + 1 $个不同的点。它也显示对任意点 $ x \\in X \\ \\{a\\} $位于某条线 $ L_ {i} $上。通过(P1)，线 $ \\overline{ax} $交线于点 $ x_ {i} $，且通过(P2)，线 $ \\overline{ax} $必须和L相交。这证明了(ii)
+
+我们现在忽略(iii)的证明。在续集中，我们将学习一个重要的原理，且从它我们看到(iii)立马得到证明
+
+![img](../img/fano_plane_and_its_incidence_graph.png)
+
+**Duality** duality的意思在projective planes中是“交换点和线的角色“。为了精确地公式化，我们先引入finite projective plane的发生图形。事实上，发生图形可被一个集合X的子集的任意系统 $ \\mathcal{S} $定义。发生图形是一个顶点集合 $ X \\cup \\mathcal{S} $的二分图，每个集合 $ S \\in \\mathcal{S} $被一条边连接到所有点 $ x \\in S $。结果每个点 $ x \\in X $连接到包含它的所有集合。简单地说，我们可说发生图形的每条边对应成员关系 $ \\in $。Fano plane的发生图形如上图；点被对应点和线的标签标签（结果的图形是漂亮且重要的图形，虽然在我们的绘制中比较丑陋，它甚至有个名字：the Heawood graph）
