@@ -110,3 +110,9 @@ Fano plane虽然小，但是一个有用的数学对象，且它也作为各种�
 ![img](../img/fano_plane_and_its_incidence_graph.png)
 
 **Duality** duality的意思在projective planes中是“交换点和线的角色“。为了精确地公式化，我们先引入finite projective plane的发生图形。事实上，发生图形可被一个集合X的子集的任意系统 $ \\mathcal{S} $定义。发生图形是一个顶点集合 $ X \\cup \\mathcal{S} $的二分图，每个集合 $ S \\in \\mathcal{S} $被一条边连接到所有点 $ x \\in S $。结果每个点 $ x \\in X $连接到包含它的所有集合。简单地说，我们可说发生图形的每条边对应成员关系 $ \\in $。Fano plane的发生图形如上图；点被对应点和线的标签标签（结果的图形是漂亮且重要的图形，虽然在我们的绘制中比较丑陋，它甚至有个名字：the Heawood graph）
+
+给定一个finite projective plane $ (X, \\mathcal{L}), (X, \\mathcal{L}) $的dual通过$ (X, \\mathcal{L}) $的发生图形获得且解释为线是点的顶点，顶点为点的集合。在上图中，我们可上下翻转该图形。因为 $ \\mathcal{L} $现在被认为是一个点集，对 $ \\forall x \\in X $，线的集合 $ \\{ L \\in \\mathcal{L}: x \\in L \\} $被解释为一条线。在上图例子中，dual的点为 $ \\{a, b, \\ldots, g\\} $，dual的线为 $ \\{a, c, e \\} $（对Fano plane中点1），$ \\{a, d, g\\} $（对点2），等等
+
+**命题** finite projective plane的dual也是一个finite projective plane
+
+**证明** 设 $ (X, \\mathcal{L}) $为一个finite projective plane。$ (X, \\mathcal{L}) $的dual是一对 $ (\\mathcal{L}, \\Lambda), \\Lambda $是一个 $ \\mathcal{L} $子集的系统，每个子集对应X中的某个点（注意不同的点为 $ \\mathcal{L} $不同的子集，因为两个点只共享一条线）
