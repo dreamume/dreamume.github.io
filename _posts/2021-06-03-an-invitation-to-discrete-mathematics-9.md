@@ -116,3 +116,11 @@ Fano plane虽然小，但是一个有用的数学对象，且它也作为各种�
 **命题** finite projective plane的dual也是一个finite projective plane
 
 **证明** 设 $ (X, \\mathcal{L}) $为一个finite projective plane。$ (X, \\mathcal{L}) $的dual是一对 $ (\\mathcal{L}, \\Lambda), \\Lambda $是一个 $ \\mathcal{L} $子集的系统，每个子集对应X中的某个点（注意不同的点为 $ \\mathcal{L} $不同的子集，因为两个点只共享一条线）
+
+我们需要验证 $ (\\mathcal{L}, \\Lambda) $的条件(P0) - (P2)。我们以P0开始。如果这个条件转换为原始集合系统 $ (X, \\mathcal{L}) $的语言，它意味着我们需要找到4条线 $ L_ {1}, L_ {2}, L_ {3}, L_ {4} \\in \\mathcal{L} $使得不会有3条线共一个点。让我们考虑一个4点配置 $ F = \\{a, b, c, d\\} \\subseteq X $作为条件(P0)，且定义 $ L_ {1} = \\overline{ab}, L_ {2} = \\overline{cd}, L_ {3} = \\overline{ad}, L_ {4} = \\overline{bc} $。如果我们看这4条线的任意3条，任意两条共享F中的一个点，且该点不包含在第3条上。因此$ L_ {1}, \\ldots, L_ {4} $中的任意3条线只有空的交集，这样我们确认了dual集合系统的条件(P0)的验证
+
+dual $ (\\mathcal{L}, \\Lambda) $的条件(P1)需要：如果 $ x, x^{\\prime} \\in X $为两个不同点，则存在只有一条线 $ L \\in \\mathcal{L} $包含x和 $ x^{\\prime} $。这就是$ (X, \\mathcal{L}) $需要的条件(P2)，我们发现dual的(P2)是原始projective plane $ (X, \\mathcal{L}) $的(P1)的结果
+
+现在我们称finite projective plane的dual为dual projective plane。dual projective plane有和projective plane相同的序
+
+一般地，如果我们有关于序为n的finite projective plane的一些有效的陈述，且如果我们交换点和线，我们也能获得一个有效地陈述。例如，如果原始陈述说“线 $ L_ {1}, L_ {2} $交于点x“，我们可在dual中说“点 $ x_ {1}, x_ {2} $被线L连接“
