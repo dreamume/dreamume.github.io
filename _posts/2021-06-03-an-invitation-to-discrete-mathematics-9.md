@@ -24,6 +24,7 @@ category:   maths
 
 1.  [定义和基本属性](#org26c438d)
     1.  [定义](#org00539b3)
+2.  [finite projective planes的存在](#org413b88f)
 
 
 <a id="org26c438d"></a>
@@ -124,3 +125,12 @@ dual $ (\\mathcal{L}, \\Lambda) $的条件(P1)需要：如果 $ x, x^{\\prime} \
 现在我们称finite projective plane的dual为dual projective plane。dual projective plane有和projective plane相同的序
 
 一般地，如果我们有关于序为n的finite projective plane的一些有效的陈述，且如果我们交换点和线，我们也能获得一个有效地陈述。例如，如果原始陈述说“线 $ L_ {1}, L_ {2} $交于点x“，我们可在dual中说“点 $ x_ {1}, x_ {2} $被线L连接“
+
+
+<a id="org413b88f"></a>
+
+# finite projective planes的存在
+
+序2、3、4和5的projective planes存在。但不存在序为6的projective planes。序为7、8、9的projective planes存在，但序为10的不存在。这有一般化规律吗？它得出一个序为n的projective plane存在当一个n个元素的域存在。这里一个域是代数上的概念；即它是一个带加法、减法、乘法和除法满足某个公理 - 如果你不熟悉定义看附录。代数教给我们，一个n元素的域存在当且仅当n是一个素数的次方
+
+对一个可被至少两个不同的素数整除的n，没有n个元素的域存在，但不知道是否有一个序为n的projective plane存在。有一些部分负的结果；例如，如果数n被4整除余1或2且它不能为两个整数平方的和则没有序为n的projective plane存在。这使得我们不用考虑序6、14和许多其他的projective planes的存在，但它不能覆盖所有的可能性。例如，它不能处理序10或12
