@@ -144,3 +144,19 @@ dual $ (\\mathcal{L}, \\Lambda) $的条件(P1)需要：如果 $ x, x^{\\prime} \
 构建用某些域K开始。对实数的projective plane（例如，使用欧几里得平面通过无穷远点做适当的扩展），我们使用所有实数域R作为K。如果我们选择K的n个元素域，构建结果为一个序n的finite projective plane。我们运行的例子是K的3元素域，例如，集合 $ \\{0, 1, 2\\} $及模3操作
 
 首先我们考虑集合 $ T = K^{3} \\ \\{(0, 0, 0) \\} $；即集合的所有有序三元组(x,y,t)，$ x, y, t \\in K $且x, y, t不同时为0。在这样的T中，我们定义一个相等关系 $ \\approx $如下：$ (x_ {1}, y_ {1}, t_ {1} ) \\approx (x_ {2}, y_ {2}, t_ {2}) $当且仅当一个非零的 $ \\lambda \\in K $存在使得 $ x_ {2} = \\lambda x_ {1}, y_ {2} = \\lambda y_ {1}, t_ {2} = \\lambda t_ {1} $。构建的projective plane的点用这种相等关系分类。porjective plane这样产生通常被记为 $ PK^{2} $，例如，实数的projective plane通常被记为 $ PR^{2} $
+
+为了获得projective plane一个更好的直观，我们从每个相等 $ \\approx $类中选择一个代表性的三元组。对这些代表，我们选择三元组其最后一个非零部分为1。因此，代表为(x, y, 1)，(x, 1, 0)和(1, 0, 0)的三元组。容易得出任意其他的三元组跟上述形式的一个三元组相等
+
+总是说相等类有些麻烦，这样我们说一个点(x, y,t)在续集中，表示整个相等类包含(x, y, t)
+
+如果K是一个n元素域，我们现在可统计我们获得多少个点。形如(x, y, 1)的点的个数为 $ n^{2} $个，形如(x, 1, 0)的点有n个，形如(1, 0, 0)的点只有一个 - 总共 $ n^{2} + n + 1 $个。对n = 3，这些标签的所有点绘制如下图表：
+
+![img](../img/example_of_algebraic_construction.png)
+
+现在我们定义线，对 $ \\forall (a, b, c) \\in K^{3} \\ \\{(0, 0, 0)\\} $，我们定义一条线L(a,b,c)作为所有满足如下等式的projective plane点(x, y, t)的集合：
+
+$ ax + by + ct = 0 $
+
+明显，两个相等的点(x,y,t)和$ (\\lambda x, \\lambda y, \\lambda t) $要么都满足该等式要么都不满足，且因此我们有定义projective plane点的某个集合。对 $ \\forall \\lambda \\in K, \\lambda \\ne 0 $，三元组 $ (\\lambda a, \\lambda b, \\lambda c) $定义和三元组(a, b, c)相同的线。因此，三元组上定义线我们有相同的相等关系。我们可选择相同的代表三元组，例如，最后一个非零元素为1的。如下图，我们已绘制所有的线通过点(0, 0, 1)。我们已忽略多数点的标签：
+
+![img](../img/example_of_algebraic_construction_of_lines.png)
