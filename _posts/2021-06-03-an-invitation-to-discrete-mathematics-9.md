@@ -26,6 +26,7 @@ category:   maths
     1.  [定义](#org00539b3)
 2.  [finite projective planes的存在](#org413b88f)
 3.  [垂直Latin方块](#orgc53c8f7)
+4.  [定理](#orgbbeddad)
 
 
 <a id="org26c438d"></a>
@@ -212,3 +213,34 @@ projective plane的线对应经过源点的三维空间的平面
 **证明** 我们开始如下观察。设A和B为序为n的垂直Latin方块，设 $ \\pi $为数字 $ 1, 2, \\ldots, n $的某些排列。让我们做一个新的Latin方块 $ A^{\\prime} $，其位置(i, j)上的条目为数字 $ \\pi(a_ {ij}) $，$ a_ {ij} $是方块A在位置(i, j)上的条目。通过垂直的定义，不难看到 $ A^{\\prime} $和B也是垂直Latin方块。该观察可被语法“Latin方块的垂直性不被其一重命名符号而改变“
 
 为证明定理，想象我们有Latin方块 $ A_ {1}, A_ {2}, \\ldots, A_ {t} $，每两个都是垂直的。对每个 $ A_ {i} $，用这样的方法排列符号（例如，数字 $ 1, 2, \\ldots, n $），结果Latin方块 $ A^{\\prime}_ {i} $的第一行为 $ (1, 2, \\ldots, n ) $。通过上述的观察，Latin方块 $ A^{\\prime}_ {1}, \\ldots, A^{\\prime}_ {t} $仍然是相互垂直的。让我们看在方块 $ A^{\\prime}_ {i} $的位置(2, 1)上会占据什么数字。首先，这个条目不可能为1，因为第1行第1列已经是1。进一步，没有两个方块 $ A^{\\prime}_ {i} $和$ A^{\\prime}_ {j} $在位置(2, 1)上有相同的数字；如果有，通过 $ A^{\\prime}_ {i} $盖住 $ A^{\\prime}_ {j} $，我们可得到一对确定的数字，为(k, k)在位置(2,1)上，但该对已出现在首行第k列条目上。因此数字 $ 2,3, \\ldots, n $每个只能出现在某个$ A^{\\prime}_ {i} $上的位置(2,1)上一次，因此 $ t \\le n - 1 $
+
+
+<a id="orgbbeddad"></a>
+
+# 定理
+
+对任意n > 2，一个序为n的projective plane存在当且仅当存在一个有n - 1个序为n的相互垂直的Latin方块的收集
+
+**证明** 我们将不描述细节。只是描述如何从Latin方块构建一个projective plane及相反。给定n - 1个序为n的垂直Latin方块 $ S_ {1}, \\ldots, S_ {n-1} $，我们将产生一个序为n的projective plane
+
+首先我们定义构建平面的点集X。它在无穷远有n + 1个点，记为r, c和 $ s_ {1}, s_ {2}, \\ldots, s_ {n-1} $和$ n^{2} $个点(i, j)，$ i, j = 1, 2, \\ldots, n $。接下来，我们用几个步骤引入线。一条线 $ B = \\{r, c, s_ {1}, \\ldots, s_ {n-1} \\} $包含无穷远点。则我们有n条线 $ R_ {1}, R_ {2}, \\ldots, R_ {n} $，使得
+
+$ R_ {i} = \\{ r, (i, 1), (i, 2), \\ldots, (i, n) \\} $
+
+且n条线
+
+$ C_ {j} = \\{c, (1,j), (2, j), \\ldots, (n, j)\\} $
+
+它们所有绘制如下图（n = 3）：
+
+![img](../img/construction_projective_plane_with_latin_squares.png)
+
+绘制的点和线及标签跟序为n的任意projective plane相同。现在方块指定projective plane的线穿过点 $ s_ {1}, s_ {2}, \\ldots, s_ {n-1} $（除了线B）。作为被选中的记号建议，Latin方块 $ S_ {k} $确定线穿过点 $ s_ {k} $。如果 $ (S_ {k})_ {ij} $记为 $ S_ {k} $在i行j列的条目，我们定义线：
+
+$ L_ {km} = \\{ s_ {k} \\} \\cup \\{(i, j): (S_ {k})_ {ij} = m \\} $
+
+$ m = 1, 2, \\ldots, n, k = 1, 2, \\ldots, n- 1$。例如，如果 $ S_ {1} $是上上图左边的Latin方块，则线 $ L_ {11} $对应方块的数字1有 $ L_ {11} = \\{ s_ {1}, (1, 1), (2, 3), (3, 2)\\} $
+
+这完成了有限的projective plane对应n - 1个垂直的Latin方块的收集的描述。它仍然验证了projective plane的公理。它容易计算线和点的总数量是 $ n^{2} + n + 1 $
+
+为证明定理相等，我们还要显示从序n的projective plane中构建n - 1个垂直的Latin方块。该构建跟上述构建相反方向相似。在projective plane中，我们任意选择两个不同的点r和c，且我们固定如以上构建中的记号。则第k个Latin方块 $ S_ {k} $根据线穿过点 $ s_ {k} $填充
