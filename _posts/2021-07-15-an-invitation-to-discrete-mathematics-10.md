@@ -27,6 +27,8 @@ category:   maths
     2.  [问题](#org7e2a47f)
     3.  [定理](#orge96eef9)
     4.  [定理 $ m(3) \\ge 7 $](#org9b71866)
+2.  [有限概率空间](#org6d44ad3)
+    1.  [定理（Turan's theorem）](#org7be12ef)
 
 
 <a id="org6e1a4a6"></a>
@@ -86,3 +88,27 @@ category:   maths
 **证明** 一个三元组 $ M \\in \\mathcal{M} $使得3对点连接。因此6个三元组使得最多 $ 3 \\cdot 6 = 18 $个点对连接。但点对的总数目在7元素集合中为 $ \\left(\\begin{array}{l} 7 \\\\ 2\\end{array}\\right) = 21 $，因此一些点对没有连接（至少3个）
 
 让我们标记m(4)未知（对更大的k也是）。它容易得出m(4)可通过有限多个配置（4元组系统）计算出。但配置的数量超出所有超级计算机的能力
+
+
+<a id="org6d44ad3"></a>
+
+# 有限概率空间
+
+
+<a id="org7be12ef"></a>
+
+## 定理（Turan's theorem）
+
+对任意n个顶点的图形G，我们有
+
+$ \\alpha(G) \\ge \\frac{n^{2}}{2 \| E(G) \| + n} $
+
+$ \\alpha(G) $记为图形G中顶点最大独立集合的大小
+
+该概率方法用来证明如下引理：
+
+**引理** 对任意图形G，我们有
+
+$ \\alpha(G) \\ge \\sum_ {v \\in V(G)} \\frac{1}{\\operatorname{deg}_ {G}(v) + 1} $
+
+（ $ \\operatorname{deg}_ {G}(v) $记为图形G中顶点v的度数）
