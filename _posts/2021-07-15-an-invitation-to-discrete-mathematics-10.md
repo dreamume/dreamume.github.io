@@ -117,7 +117,7 @@ $ \\alpha(G) \\ge \\sum_ {v \\in V(G)} \\frac{1}{\\operatorname{deg}_ {G}(v) + 1
 
 对一个顶点v，设 $ A_ {v} $为事件 $ v \\in M(\\pi) $。如果 $ N_ {v} $记为顶点v的所有邻居的集合，则集合 $ N_ {v} \\cup \\{v\\} $的所有顺序在排序 $ \\pi $下有相同的概率，且这样v为该集合最小元素的概率为 $ 1 / (\| N_ {v} \| + 1) = 1 / (\\operatorname{deg}_ {G}(v) + 1) $。因此 $ P(A_ {v}) = 1 / (\\operatorname{deg}_ {G}(v) + 1) $，且我们可计算：
 
-$ \\begin{aligned} \\alpha(G) &\\ge E[\|M\|] = \\sum_ {v\\inV(G)}E[I_ {A_ {v}}] \\\\ &= \\sum_ {v \\in V(G)}P(A_ {v}) = \\sum_ {v \\in V(G)}P(A_ {v}) = \\sum_ {v \\in V(G)}\\frac{1}{\\operatorname{deg}_ {G}(v) + 1} $
+$ \\begin{aligned} \\alpha(G) &\\ge E[\|M\|] = \\sum_ {v\\inV(G)}E[I_ {A_ {v}}] \\\\ &= \\sum_ {v \\in V(G)}P(A_ {v}) = \\sum_ {v \\in V(G)}P(A_ {v}) = \\sum_ {v \\in V(G)}\\frac{1}{\\operatorname{deg}_ {G}(v) + 1} \\end{aligned} $
 
 **定理的证明** 边 $ e = \| E(G) \| $的数量是顶点度数的一半。这样我们有如下情形：对非负实数 $ d_ {1}, d_ {2}, \\ldots, d_ {n} $，我们知道 $ \\sum_ {i=1}^{n} d_ {i} = 2e $，且我们问和的最小可能值是
 
