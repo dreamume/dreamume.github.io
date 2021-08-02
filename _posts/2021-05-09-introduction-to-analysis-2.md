@@ -169,7 +169,7 @@ $ \\arctan{0} = 0, \\qquad \\arctan{\\pm 1} = \\pm \\frac{\\pi}{4} \\\\ \\arctan
 
 从 $ y = \\tan{x}, \\frac{dy}{dx} = \\frac{1}{\\cos^{2}{x}} = 1 + y^{2} $，通过记号变换，有
 
-$ \\operatername{D}{\\arctan{x}} = \\frac{1}{1 + x^{2}} $
+$ \\operatorname{D}{\\arctan{x}} = \\frac{1}{1 + x^{2}} $
 
 例1，$ y = \\arcsin{\\sqrt{1 - x^{2}}} $意味着 $ \\sqrt{1 - x^{2}} = \\sin{y} $。从而 $ x^{2} = \\cos^{2}{y}, x = \\pm \\cos{y} $。$ \\arcsin $的主值在ABC如下图，y的主值微分为
 
@@ -177,4 +177,4 @@ $ \\operatername{D}{\\arctan{x}} = \\frac{1}{1 + x^{2}} $
 
 $ \\frac{dy}{dx} = \\frac{1}{\\sqrt{1 - (1 - x^{2})}} \\frac{-x}{\\sqrt{1 - x^{2}}} = \\frac{1}{\| x \|} \\frac{-x}{\\sqrt{1 - x^{2}}} = \\mp \\frac{1}{\\sqrt{1 - x^{2}}} \\qquad (x \\ge 0) $
 
-当x = 0时 $ \\operatername{D^{+}}{y} = -1, \\operatername{D^{-}}{y} = +1 $
+当x = 0时 $ \\operatorname{D^{+}}{y} = -1, \\operatorname{D^{-}}{y} = +1 $
