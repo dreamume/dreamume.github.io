@@ -26,6 +26,7 @@ category:   maths
     1.  [微分方法](#orgb8fc619)
     2.  [复合函数的微分](#org58e77c9)
     3.  [逆函数的微分法](#org795a647)
+    4.  [指数函数和对数函数](#orgfef7530)
 
 
 <a id="orgf3ab5b6"></a>
@@ -178,3 +179,34 @@ $ \\operatorname{D}{\\arctan{x}} = \\frac{1}{1 + x^{2}} $
 $ \\frac{dy}{dx} = \\frac{1}{\\sqrt{1 - (1 - x^{2})}} \\frac{-x}{\\sqrt{1 - x^{2}}} = \\frac{1}{\| x \|} \\frac{-x}{\\sqrt{1 - x^{2}}} = \\mp \\frac{1}{\\sqrt{1 - x^{2}}} \\qquad (x \\ge 0) $
 
 当x = 0时 $ \\operatorname{D^{+}}{y} = -1, \\operatorname{D^{-}}{y} = +1 $
+
+
+<a id="orgfef7530"></a>
+
+## 指数函数和对数函数
+
+当a > 0时，对 $ a^{x} $微分有
+
+$ \\frac{d(a^{x})}{dx} = \\lim_ {h \\to 0}{\\frac{a^{x+h} - a^{x}}{h}} = a^{x} \\lim_ {h \\to 0}\\frac{a^{h} - 1}{h} $
+
+因为h > 0，则 $ a^{h} > 1 $，则设 $ a^{h} = 1 + \\frac{1}{t}, t > 0 $。当 $ h \\to 0, a^{h} \\to 1, t \\to \\infty $
+
+从 $ h = \\log_ {a}{(1 + \\frac{1}{t})} $中得到
+
+$ \\frac{a^{h} - 1}{h} = \\frac{\\frac{1}{t}}{\\log_ {a}{(1 + \\frac{1}{t})}} = \\frac{1}{\\log_ {a}{(1 + \\frac{1}{t})^{t}} $
+
+当 $ h \\to 0, t \\to \\infty $有 $ (1 + \\frac{1}{t})^{t} \\to e $，因为 $ \\log_ {a} $是连续函数，$ h \\to 0 $时 $ \\log_ {a}{(1 + \\frac{1}{t})^{t}} \\to \\log_ {a}{e} $。则
+
+$ \\lim_ {h \\to 0}{\\frac{a^{h} - 1}{h}} = \\frac{1}{\\log_ {a}{e}} = \\log_ {e}{a} $
+
+当h < 0时，把h用-h带入，得：
+
+$ \\frac{a^{-h} - 1}{-h} = \\frac{a^{h}-1}{h} \\dot \\frac{1}{a^{h}}, \\qquad (h > 0) $
+
+当 $ h \\to 0 $时， $ a^{h} \\to 1 $，则有
+
+$ \\frac{a^{-h} - 1}{-h} \\to \\log_ {e}{a} $
+
+所以
+
+$ \\frac{d(a^{x})}{dx} = a^{x} \\log_ {e}{a} $
