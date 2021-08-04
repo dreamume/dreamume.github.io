@@ -277,3 +277,25 @@ $ \\int_{0}^{\\pi} \\sin m x \\sin n x d x=\\left\\{\\begin{array}{ll}0 & \\text
 因此，$ A_ {n} $的猜测，称为f的 $ n^{th} $傅立叶正弦系数，
 
 $ A_ {n} = \\frac{2}{\\pi} \\int^{\\pi}_ {0} f(x)\\sin{nx}dx $
+
+我们可转换傅立叶sine系列在 $ [0, \\pi] $上的问题到一个更一般化的 $ [-\\pi, \\pi] $区间上的问题。如果我们可表达 $ [0, \\pi] $上的f用一个sine系列，则该表达也能用区间 $ [-\\pi, \\pi] $表达如果我们通过使f为奇函数扩展f到该区间。相似地，我们可问如果一个区间 $ [-\\pi, \\pi] $上的偶函数可被表达为cosine系列，如
+
+$ g(x) = \\sum^{\\infty}_ {m = 0} A^{\\prime}_ {m} \\cos{mx} $
+
+更一般地，因为一个任意的函数F在区间 $ [-\\pi, \\pi] $上可被表达为f + g，f是奇函数，g是偶函数，我们可问如果F可被写为
+
+$ F(x) = \\sum^{\\infty}_ {m=1} A_ {m}\\sin{mx} + \\sum^{\\infty}_ {m=0}A^{\\prime}_ {m} \\cos{mx} $
+
+或通过应用欧拉公式 $ e^{ix} = \\cos{x} + i \\sin{x} $，我们希望F为形式：
+
+$ F(x) = \\sum^{\\infty}_ {m=- \\infty} a_ {m}e^{imx} $
+
+通过分析，我们可使用如下事实：
+
+$ \\frac{1}{2 \\pi} \\int_ {-\\pi}^{\\pi} e^{i m x} e^{-i n x} d x = \\left\\{\\begin{array}{ll} 0 & \\text { if } n \\neq m \\\\ 1 & \\text { if } n=m\\end{array}\\right. $
+
+则
+
+$ a_ {n} = \\frac{1}{2 \\pi} \\int^{\\pi}_ {- \\pi}F(x)e^{-inx} dx $
+
+$ a_ {n} $被称为F的 $ n^{th} $傅立叶系数
