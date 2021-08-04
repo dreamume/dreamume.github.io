@@ -210,3 +210,19 @@ $ \\frac{a^{-h} - 1}{-h} \\to \\log_ {e}{a} $
 所以
 
 $ \\frac{d(a^{x})}{dx} = a^{x} \\log_ {e}{a} $
+
+**对数微分法** u, v, w为x的函数，u, v, w在x = 0时，$ \\log{\| uvw \|} $微分为
+
+$ \\operatorname{D}\\log{ \| uvw \| } = \\operatorname{D}{(\\log{\| u \|} + \\log{\| v \|} + \\log{\| w \|})} = \\frac{u^{\\prime}}{u} + \\frac{v^{\\prime}}{v} + \\frac{w^{\\prime}}{w} $
+
+但是又
+
+$ \\operatorname{D}\\log{ \| uvw \| } = \\frac{(uvw}^{\\prime}}{uvw} $
+
+则
+
+$ \\frac{(uvw}^{\\prime}}{uvw} = \\frac{u^{\\prime}}{u} + \\frac{v^{\\prime}}{v} + \\frac{w^{\\prime}}{w}, \\qquad (u \\ne 0, v \\ne 0, w \\ne 0) $
+
+同样的
+
+$ (\\frac{u}{v})^{\\prime} / \\frac{u}{v} = \\frac{u^{\\prime}}{u} - \\frac{v^{\\prime}}{v} $
