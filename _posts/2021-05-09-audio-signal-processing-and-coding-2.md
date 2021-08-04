@@ -52,3 +52,11 @@ $ x(t) = \\frac{1}{2 \\pi} \\int^{\\infty}_ {-\\infty} X(\\omega)e^{j \\omega t}
 反向CFT也被称为综合公式因为它描述时间域信号，x(t)，以复数正弦函数的形式。在CFT理论中，x(t)和 $ X(\\omega) $被称为转换对，例如
 
 $ x(t) \\leftrightarrow X(\\omega) $
+
+上图pulse-sinc对在解释时间域谱截断上非常有用。例如，当一个正弦曲线被截断则有一些清晰度的损失和谱泄漏如上图所示
+
+在实际信号处理中，所有的信号有有限的长度，且因此时间域截断总是会发生。一个规律窗口的音频段的截断如下图所示。为平滑帧转换和控制谱泄漏效果，信号经常在截断之前用窗口函数做处理，比如Hamming, Bartlett和trapezoidal windows。一个缩窄窗口避免截断时间域帧的边缘的尖锐的不连续性。这会缩减截断信号的频谱的谱泄漏。谱泄漏的减少是缩窄窗口的sidelobes的缩减水平的属性。缩减sidelobe效果使得谱清晰度的适中损失有开销
+
+![img](../img/audio_signal_truncated.png)
+
+![img](../img/audio_signal_truncated_with_hamming_window.png)
