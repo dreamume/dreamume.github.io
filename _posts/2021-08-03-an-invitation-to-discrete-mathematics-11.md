@@ -24,6 +24,9 @@ category:   maths
 
 1.  [6个人的聚会](#org12b5603)
     1.  [定理](#org82b7db9)
+    2.  [定理（鸽笼定理）](#org2869597)
+2.  [对图形的Ramsey定理](#orgc162dbb)
+    1.  [定理（对图形的Ramsey定理）](#org36a1240)
 
 
 <a id="org12b5603"></a>
@@ -70,3 +73,27 @@ category:   maths
 如果我们在定理中用 $ k = \\ell = 3 $替代，我们获得每个有 $ {4 \\choose 2} = 6 $个顶点的图形G满足 $ \\omega(G) \\ge 3 $ 或 $ \\alpha(G) \\ge 3 $
 
 **证明** 我们继续在 $ k + \\ell $上进行归纳。对 k = 1 或 $ \\ell = 1 $容易看到该表述是满足的（对k = 2或 $ \\ell = 2 $也是）
+
+现在让我们假设 $ k, \\ell \\ge 2 $且表述对 $ k, \\ell - 1 $和 $ k - 1, \\ell $成立。我们把 $ n = {k + \\ell - 2 \\choose k - 1 }, n_ {1} = {k + \\ell - 3 \\choose k - 1} $和 $ n_ {2} = {k + \\ell - 3 \\choose k - 2} $。通过Pascal公式我们有 $ n = n_ {1} + n_ {2} $，且我们重写为形式 $ n = 1 + ((n_ {1} - 1) + (n_ {2} - 1) + 1) $，则通过鸽槽原理可得证
+
+设G = (V, E)为有n个顶点的任意图形。我们想要显示 $ \\omega(G) \\ge k $或 $ \\alpha(G) \\ge \\ell $。让我们选择任意一个顶点 $ u \\in V $。我们根据顶点是否连接到u分割剩下的顶点为两个集合A和B，如下图：
+
+![img](../img/divide_vertices_by_weather_connect_vertex_u.png)
+
+形式化为：
+
+$ A = \\{v \\in V \\ \\{u \\}: \\{u, v\\} \\notin E \\} $
+
+$ B = \\{v \\in V \\ \\{u \\}: \\{u, v\\} \\in E \\} $
+
+通过鸽盒原理我们有 $ \| A \| \\ge n_ {1} $ 或 $ \| B \| \\ge n_ {2} $。如果 $ \| A \| \\ge n_ {1} $，我们对$ (k, \\ell - 1) $使用归纳假设。我们通过集合A满足$ \\omega(G_ {A}) \\ge k $或 $ \\alpha(G_ {A}) \\ge \\ell - 1 $归纳得到图形 $ G_ {A} $。前一种情况我们有 $ \\omega(G) \\ge k $，后一种情况任意独立集合 $ I \\subset A $与顶点u一起组成一个独立集合 $ I \\cup \\{u \\} $，这样 $ \\alpha(G) \\ge \\alpha(G_ {A}) + 1 \\ge \\ell $
+
+在 $ \| B \| \\ge n_ {2} $的情况下，我们继续分析且我们也能获得 $ \\omega(G) \\ge k $ 或 $ \\alpha(G) \\ge \\ell $。这样归纳步骤结束
+
+定理证明允许我们引入如下定义。设 $ r(k, \\ell) $记为最小自然数使得有n个顶点的每个图形G满足 $ \\omega(G) \\ge k $或者 $ \\alpha(G) \\ge \\ell $。数 $ r(k, \\ell) $被称为ramsey数，Ramsey图形定理保证 $ r(k, \\ell) $对每个 $ k \\ge 1 $ 且 $ \\ell \\ge 1 $存在
+
+让我们总结Ramsey数的值：
+
+$ \\begin{aligned} r(1, \\ell) &= 1, \\quad r(k, 1)=1 \\\\ r(2, \\ell) &= \\ell, \\quad r(k, 2)=k \\\\ r(3,3) &=6 . \\end{aligned} $
+
+只有少数的一些Ramsey数已知。例如，r(4, 4) = 18，但r(5, 5)的值还未知
