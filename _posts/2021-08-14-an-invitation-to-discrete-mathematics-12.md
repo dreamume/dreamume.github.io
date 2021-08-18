@@ -24,6 +24,7 @@ category:   maths
 
 1.  [多项式的组合应用](#orga50c1a3)
     1.  [例子](#org87a1fc9)
+    2.  [命题](#org60a5acb)
 
 本章我们将呈现一个有用的计算技术。基本思想是考虑一个实数的无穷序列和它的某个连续函数，这被称为序列的生成函数。序列的问题可通过计算函数来解决
 
@@ -64,3 +65,14 @@ $ (1+x)^{n} (1+x)^{n} = (1+x)^{2n} $
 $ \\sum^{n}_ {i=0} {n \\choose i}{n \\choose n - i} = {2n \\choose n} $
 
 即得证
+
+
+<a id="org60a5acb"></a>
+
+## 命题
+
+对组合应用程序，需要注意到对r为负整数，二项式系数 $ {r \\choose k}$ 可表达为 $ {r \\choose k} = (-1)^{k}{-r+k-1 \\choose k} = (-1)^{k} {-r+k-1 \\choose -r-1} $。因此对1 - x的负整数次方，我们有
+
+$ \\frac{1}{(1-x)^{n}} = {n-1 \\choose n-1} + {n \\choose n - 1}x + {n + 1 \\choose n - 1}x^{2} + \\cdots + {n+k-1 \\choose n-1}x^{k} + \\cdots $
+
+注意等式 $ \\frac{1}{1-x} = 1 + x + x^{2} + \\cdots $是n = 1时的特殊形式
