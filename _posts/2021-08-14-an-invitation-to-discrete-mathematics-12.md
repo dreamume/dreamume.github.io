@@ -25,6 +25,7 @@ category:   maths
 1.  [多项式的组合应用](#orga50c1a3)
     1.  [例子](#org87a1fc9)
     2.  [命题](#org60a5acb)
+    3.  [命题](#org7d40c22)
 
 本章我们将呈现一个有用的计算技术。基本思想是考虑一个实数的无穷序列和它的某个连续函数，这被称为序列的生成函数。序列的问题可通过计算函数来解决
 
@@ -76,3 +77,14 @@ $ \\sum^{n}_ {i=0} {n \\choose i}{n \\choose n - i} = {2n \\choose n} $
 $ \\frac{1}{(1-x)^{n}} = {n-1 \\choose n-1} + {n \\choose n - 1}x + {n + 1 \\choose n - 1}x^{2} + \\cdots + {n+k-1 \\choose n-1}x^{k} + \\cdots $
 
 注意等式 $ \\frac{1}{1-x} = 1 + x + x^{2} + \\cdots $是n = 1时的特殊形式
+
+
+<a id="org7d40c22"></a>
+
+## 命题
+
+对任意实数r和任意非负整数k，我们定义二项式系数 $ {r \\choose k} $为公式：
+
+$ {r \\choose k} = \\frac{r(r-1)(r-2)\\cdots (r - k + 1)}{k!} $
+
+（特别地，我们设 $ {r \\choose 0} $为1）。则函数 $ (1+x)^{r} $的生成函数的序列为 $ ({r \\choose 0}, {r \\choose 1}, {r \\choose 2}, \\ldots) $。系列 $ {r \\choose 0} + {r \\choose 1} x + {r \\choose 2} x^{2} + \\cdots $对所有 $ \| x \| < 1 $总是收敛
