@@ -299,3 +299,17 @@ $ \\frac{1}{2 \\pi} \\int_ {-\\pi}^{\\pi} e^{i m x} e^{-i n x} d x = \\left\\{\\
 $ a_ {n} = \\frac{1}{2 \\pi} \\int^{\\pi}_ {- \\pi}F(x)e^{-inx} dx $
 
 $ a_ {n} $被称为F的 $ n^{th} $傅立叶系数
+
+我们现在重新形式化问题：
+
+**问题** 给定任意$ [-\\pi, \\pi] $上的函数，傅立叶系数如上定义，则
+
+$ F(x) = \\sum^{\\infty}_ {m=- \\infty} a_ {m}e^{imx} ? $
+
+我们回到波浪等式。为形式化问题，我们必须引入两个初始条件。赋值初始位置和弹簧的速度。即我们需要u满足微分等式和两个条件：
+
+$ u(x, 0) = f(x) \\text{   和   } \\frac{\\partial u}{\\partial t}(x, 0) = g(x) $
+
+f和g是预赋值的函数。注意这需要f和g被表达为
+
+$ f(x) = \\sum^{\\infty}_ {m=1} A_ {m} \\sin{mx} \\text{   和   } g(x) = \\sum^{\\infty}_ {m=1}mB_ {m} \\sin{mx} $
