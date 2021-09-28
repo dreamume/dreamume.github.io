@@ -240,3 +240,9 @@ $ b_ {i} = \\sum^{i-1}_ {j-1}a_ {j}a_ {i-j} $
 $ a(x) = x + xc(x) = x + xa(x)^{3} $
 
 ![img](../img/function_a_divide_aaa_plus_1.png)
+
+特别地，对 $ x = \\frac{1}{2} $，如下等式结果：
+
+$ P = \\frac{1}{2} + \\frac{1}{2} P^{3} $
+
+这有3个解：$ 1, \\frac{1}{2} (\\sqrt{5} - 1), - \\frac{1}{2} (\\sqrt{5} + 1) $。负根可被排除。第二个根 $ P = \\frac{1}{2} (\\sqrt{5} - 1) = 0.618033988 \\ldots $（黄金分割）
