@@ -270,3 +270,27 @@ $ i_ {1} \\in \\{0, 1, 2, 3, \\ldots\\}, \\quad i_ {2} \\in \\{0, 2, 4, 6, \\ldo
 下一步是标准。新的公式我们立即得到 $ p_ {n} $是 $ x^{n} $一下乘积的系数
 
 $ \\begin{aligned} P_ {n}(x) &= (1 + x + x^{2} + \\cdots) (1 + x^{2} + x^{4} + x^{6} + \\cdots) \\ldots (1 + x^{n} + x^{2n} + \\cdots ) \\\\ &= \\prod^{n}_ {k=1} \\frac{1}{1 - x^{k}} \\end{aligned} $
+
+对所有数 $ x \\in (0, 1) $，我们有
+
+$ p_ {n} \\le \\frac{1}{x_ {n}}P_ {n}(x) = \\frac{1}{x^{n}} \\prod^{n}_ {k=1} \\frac{1}{1 - x^{k}} $
+
+我们想要选择x使得右边尽量小。一个适当的估计 $ P_ {n}(x) $是证明的另一部分。首先，为处理乘积，通常建议考虑对数；在我们的例子中
+
+$ \\ln{p_ {n}} \\le \\ln{(\\frac{1}{x^{n}}P_ {n}(x))} = -n \\ln{x} - \\sum^{n}_ {k=1} \\ln{(1 - x^{k})} $
+
+因为有
+
+$ - \\ln{(1-y)} = \\frac{y}{1} + \\frac{y^{2}}{2} + \\frac{y^{3}}{3} + \\frac{y^{4}}{4} + \\cdots $
+
+对所有 $ y \\in (-1, 1) $。因此，我们得到
+
+$ \\begin{aligned} - \\sum^{n}_ {k=1}\\ln{(1-x^{k})} &= \\sum^{n}_ {k=1}\\sum^{\\infty}_ {j=1} \\frac{x^{kj}}{j} = \\sum^{\\infty}_ {j=1} \\frac{1}{j} \\sum^{n}_ {k=1} x^{jk} \\\\ &\\le \\sum^{\\infty}_ {j=1}\\frac{1}{j} \\sum^{\\infty}_ {k=1} x^{jk} = \\sum^{\\infty}_ {j=1} \\frac{1}{j} \\frac{x^{j}}{1-x^{j}} \\end{aligned} $
+
+又由于
+
+$ 1 - x^{j} = (1 - x)(1 + x + x^{2} + \\cdots + x^{j-1}) \\ge (1 - x)jx^{j-1} $
+
+0 < x < 1，且
+
+$ \\sum^{\\infty}_ {j=1} \\frac{1}{j} \\frac{x^{j}}{1 - x^{j}} \\le \\sum^{\\infty}_ {j=1}\\frac{1}{j} \\frac{x^{j}}{(1-x)jx^{j-1}} = \\frac{x}{1-x}\\sum^{\\infty}_ {j=1}\\frac{1}{j^{2}} $
