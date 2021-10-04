@@ -325,7 +325,7 @@ $ p_ {n} < e^{\\pi \\sqrt{\\frac{2}{3}n}} = e^{(2.5650\\ldots)\\sqrt{n}} $
 
 如练习1所示，n上有序分区为k个加数的数量是 $ {n - 1 \\choose k - 1} $。因为每个k加数有最多 $ k! $个有序分区，我们有
 
-$ p_ {n} \\ge \\frac{{n-1 \\choose k - 1}}{k!} \\ge \\frac{(n-1)(n-2)\\ldots (n - k + 1)}{(k!)^{2}} $
+$ p_{n} \\geq \\frac{\\left(\\begin{array}{c}n-1 \\\\ k-1\\end{array}\\right)}{k !} \\geq \\frac{(n-1)(n-2) \\ldots(n-k+1)}{(k !)^{2}} $
 
 对任意 $ k \\in \\{1, 2, \\ldots, n\\} $。k是多大能得到最好的下界？如果我们把k加1，分母乘以一个因式 $ (k+1)^{2} $，分子乘以n - k。因此如果 $ (k+1)^{2} < n - k $，则k + 1比k好，因此对最好的k，$ (k + 1)^{2} $应该大约等于n - k。为使表达式简单化，我们设 $ k = \\lfloor \\sqrt{n} \\rfloor $。则 $ (n-1)(n-2)\\ldots(n-k+1) $大约为 $ n^{\\sqrt{n}} $。我们有
 
