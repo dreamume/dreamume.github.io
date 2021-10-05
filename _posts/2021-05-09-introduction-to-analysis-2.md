@@ -27,6 +27,7 @@ category:   maths
     2.  [复合函数的微分](#org58e77c9)
     3.  [逆函数的微分法](#org795a647)
     4.  [指数函数和对数函数](#orgfef7530)
+    5.  [高阶微分法](#org2fd2501)
 
 
 <a id="orgf3ab5b6"></a>
@@ -226,3 +227,42 @@ $ \\frac{(uvw)^{\\prime}}{uvw} = \\frac{u^{\\prime}}{u} + \\frac{v^{\\prime}}{v}
 同样的
 
 $ (\\frac{u}{v})^{\\prime} / \\frac{u}{v} = \\frac{u^{\\prime}}{u} - \\frac{v^{\\prime}}{v} $
+
+
+<a id="org2fd2501"></a>
+
+## 高阶微分法
+
+y = f(x)的导数是 $ f^{\\prime}(x) $，$ f^{\\prime}(x) $的导数是 $ f^{\\prime \\prime}(x) $。第n阶导数是 $ f^{(n)}(x) $。$ f^{\\prime \\prime}(x) $可写为
+
+$ \\frac{d}{dx} (\\frac{dy}{dx}) \\text{ 或 } \\frac{d^{2} y}{dx^{2}} $
+
+同样的
+
+$ \\frac{d^{n}y}{dx^{n}} = f^{(n)}(x) $
+
+上述记号中，$ dx^{2} $是 $ (dx)^{2} $，$ d^{2}y $是 $ d(dy) $，微分记号可写为
+
+$ dy = y^{\\prime}_ {x} dx $
+
+两边微分，$ d(dy), d(dx) $表示 $ d^{2}y, d^{2} x $，得
+
+$ d^{2}y = y^{\\prime \\prime}_ {x}(dx)^{2} + y^{\\prime}_ {x}d^{2}x $
+
+这里x为独立变量，$ dx = \\delta x $，$ d^{2}x = d(\\delta x) = 0 $，则
+
+$ d^{2}y = y^{\\prime \\prime}_ {x}dx^{2} $
+
+则 $ \\frac{d^{2}y}{dx^{2}} = f^{\\prime \\prime}(x) $。而 $ x = \\varphi(t) $，有 $ d^{2}x = x^{\\prime \\prime}_ {t}dt^{2} $，则
+
+$ d^{2}y = y^{\\prime \\prime}_ {x}x^{\\prime 2}_ {t} dt^{2} + y^{\\prime}_ {x}x^{\\prime \\prime}_ {t}dt^{2} $
+
+则有
+
+$ \\frac{d^{2}}{dt^{2}} f(\\varphi(t)) = f^{\\prime \\prime}(\\varphi(t)) \\varphi^{\\prime}(t)^{2} + f^{\\prime}(\\varphi(t))\\varphi^{\\prime \\prime}(t) $
+
+u, v为x的函数，则根据Leibniz法则有
+
+$ \\frac{d^{n}(uv)}{dx^{n}} = u^{(n)}v + {n \\choose 1}u^{(n-1)}v^{\\prime} + \\cdots + {n \\choose k}u^{(n-k)}v^{(k)} + \\cdots + uv^{(n)} $
+
+而 $ u / v $的高阶导函数没有简单的函数表示
