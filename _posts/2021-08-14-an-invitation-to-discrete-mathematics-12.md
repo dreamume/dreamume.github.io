@@ -321,7 +321,7 @@ $ \\ln{p_ {n}} < n \\ln{(1 + \\frac{1}{u})} + \\frac{\\pi^{2}}{6} u \\le \\frac{
 
 $ p_ {n} < e^{\\pi \\sqrt{\\frac{2}{3}n}} = e^{(2.5650\\ldots)\\sqrt{n}} $
 
-*一个更小的边界* 该上界是否是个好的上界？哈代和拉马努金的结果是 $ p_ {n} \\sim \\frac{1}{4 \\sqrt{3} n}e^{\\pi \\sqrt{\\frac{2}{3}n}} $，且这样上界已经非常好了 - 它的指数上有好的常数。但我们如何知道该定理的边界是正确的呢？这里有一个快速的方法从一个更弱的边界比该边界差不太多
+**一个更小的边界** 该上界是否是个好的上界？哈代和拉马努金的结果是 $ p_ {n} \\sim \\frac{1}{4 \\sqrt{3} n}e^{\\pi \\sqrt{\\frac{2}{3}n}} $，且这样上界已经非常好了 - 它的指数上有好的常数。但我们如何知道该定理的边界是正确的呢？这里有一个快速的方法从一个更弱的边界比该边界差不太多
 
 如练习1所示，n上有序分区为k个加数的数量是 $ {n - 1 \\choose k - 1} $。因为每个k加数有最多 $ k! $个有序分区，我们有
 
@@ -330,3 +330,27 @@ $ p_{n} \\geq \\frac{\\left(\\begin{array}{c}n-1 \\\\ k-1\\end{array}\\right)}{k
 对任意 $ k \\in \\{1, 2, \\ldots, n\\} $。k是多大能得到最好的下界？如果我们把k加1，分母乘以一个因式 $ (k+1)^{2} $，分子乘以n - k。因此如果 $ (k+1)^{2} < n - k $，则k + 1比k好，因此对最好的k，$ (k + 1)^{2} $应该大约等于n - k。为使表达式简单化，我们设 $ k = \\lfloor \\sqrt{n} \\rfloor $。则 $ (n-1)(n-2)\\ldots(n-k+1) $大约为 $ n^{\\sqrt{n}} $。我们有
 
 $ (n-1)(n-2)\\ldots(n-k+1) \\ge (n-k)^{k-1} = n^{k-1}(1 - \\frac{k}{n})^{k-1} $
+
+且因为 $ \\frac{k}{n} = \\lfloor \\sqrt{n} \\rfloor / n \\le 1 / \\lfloor \\sqrt{n} \\rfloor = \\frac{1}{k} $且 $ (1 - \\frac{1}{k})^{k-1} > e^{-1} $，我们进一步得到
+
+$ n^{k-1}(1 - \\frac{k}{n})^{k-1} \\ge n^{k-1}(1 - \\frac{1}{k})^{k-1} \\ge \\frac{n^{k}}{en} $
+
+通过 $ k! \\le ek(k/e)^{k} $，我们有
+
+$ p_ {n} \\ge (\\frac{n}{k^{2}})^{k} \\frac{e^{2k-3}}{nk^{2}} \\ge \\frac{e^{2k-3}}{n^{2}} \\ge \\frac{1}{e^{5}n^{2}}e^{2\\sqrt{n}} $
+
+如果n足够大，则 $ n^{2} $远小于 $ e^{\\sqrt{n}} $，且因此 $ n^{-2}e^{2\\sqrt{n}} = \\Omega(e^{\\sqrt{n}}) $。这样对n足够大，$ p_ {n} $位于 $ e^{c_ {1}\\sqrt{n}} $和 $ e^{c_ {2}\\sqrt{n}} $之间，$ c_ {2} > c_ {1} > 0 $
+
+**证明之前的一个事实** 我们用de Moivre公式开始：$ (\\cos{\\alpha} + i \\sin{\\alpha})^{n} = \\cos{n\\alpha} + i \\sin{n \\alpha} $，i是虚数单位，$ i^{2} = -1 $。用二项式定理扩展左边，且只考虑虚数部分，我们得到
+
+$ {n \\choose 1} \\sin{\\alpha}\\cos{\\alpha}^{n-1} - {n \\choose 3}\\sin{\\alpha}^{3} \\cos{\\alpha}^{n-3} + {n \\choose 5} \\sin{\\alpha}^{5}\\cos{\\alpha}^{n-5} - \\cdots \\\\ = \\sin{n\\alpha} $
+
+使用函数 $ \\cot{\\alpha} = \\frac{\\cos{\\alpha}}{\\sin{\\alpha}} $，我们可把左边重写为
+
+$ \\sin{\\alpha}^{n} [{n \\choose 1} \\cot{\\alpha}^{n-1} - {n \\choose 3} \\cot{\\alpha}^{n-3} + {n \\choose 5}\\cot{\\alpha}^{n-5} - \\cdots] $
+
+设n = 2m + 1为奇数，则方括号里的表达式可被写为 $ P(\\cot{\\alpha}^{2}) $，P(x)为多项式 $ {n \\choose 1}x^{m} - {n \\choose 3}x^{m-1} + {n \\choose 5}x^{m-2} - \\cdots $
+
+我们称P(x)的根为m个数 $ r_ {1}, r_ {2}, \\ldots, r_ {m}, r_ {k} = \\cot^{\\frac{k\\pi}{n}}^{2} $。事实上，对 $ \\alpha = \\frac{k\\pi}{n}, \\sin{\\alpha} $非零当 $ \\sin{n \\alpha} = 0 $，且这样 $ P(\\cot{\\alpha}^{2}) $必须为0。因为 $ r_ {1}, \\ldots, r_ {m} $互不相同且P(x)有度数m，因此
+
+$ P(x) = n(x - r_ {1})(x - r_ {2}) \\ldots (x - r_ {m}) $
