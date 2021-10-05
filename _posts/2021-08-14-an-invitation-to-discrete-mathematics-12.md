@@ -343,14 +343,14 @@ $ p_ {n} \\ge (\\frac{n}{k^{2}})^{k} \\frac{e^{2k-3}}{nk^{2}} \\ge \\frac{e^{2k-
 
 **证明之前的一个事实** 我们用de Moivre公式开始：$ (\\cos{\\alpha} + i \\sin{\\alpha})^{n} = \\cos{n\\alpha} + i \\sin{n \\alpha} $，i是虚数单位，$ i^{2} = -1 $。用二项式定理扩展左边，且只考虑虚数部分，我们得到
 
-$ {n \\choose 1} \\sin{\\alpha}\\cos{\\alpha}^{n-1} - {n \\choose 3}\\sin{\\alpha}^{3} \\cos{\\alpha}^{n-3} + {n \\choose 5} \\sin{\\alpha}^{5}\\cos{\\alpha}^{n-5} - \\cdots \\\\ = \\sin{n\\alpha} $
+$ {n \\choose 1} \\sin{\\alpha}\\cos^{n-1}{\\alpha} - {n \\choose 3}\\sin^{3}{\\alpha} \\cos^{n-3}{\\alpha} + {n \\choose 5} \\sin^{5}{\\alpha}\\cos^{n-5}{\\alpha} - \\cdots \\\\ = \\sin{n\\alpha} $
 
 使用函数 $ \\cot{\\alpha} = \\frac{\\cos{\\alpha}}{\\sin{\\alpha}} $，我们可把左边重写为
 
-$ \\sin{\\alpha}^{n} [{n \\choose 1} \\cot{\\alpha}^{n-1} - {n \\choose 3} \\cot{\\alpha}^{n-3} + {n \\choose 5}\\cot{\\alpha}^{n-5} - \\cdots] $
+$ \\sin^{n}{\\alpha} [{n \\choose 1} \\cot^{n-1}{\\alpha} - {n \\choose 3} \\cot^{n-3}{\\alpha} + {n \\choose 5}\\cot^{n-5}{\\alpha} - \\cdots] $
 
-设n = 2m + 1为奇数，则方括号里的表达式可被写为 $ P(\\cot{\\alpha}^{2}) $，P(x)为多项式 $ {n \\choose 1}x^{m} - {n \\choose 3}x^{m-1} + {n \\choose 5}x^{m-2} - \\cdots $
+设n = 2m + 1为奇数，则方括号里的表达式可被写为 $ P(\\cot^{2}{\\alpha}) $，P(x)为多项式 $ {n \\choose 1}x^{m} - {n \\choose 3}x^{m-1} + {n \\choose 5}x^{m-2} - \\cdots $
 
-我们称P(x)的根为m个数 $ r_ {1}, r_ {2}, \\ldots, r_ {m}, r_ {k} = \\cot^{\\frac{k\\pi}{n}}^{2} $。事实上，对 $ \\alpha = \\frac{k\\pi}{n}, \\sin{\\alpha} $非零当 $ \\sin{n \\alpha} = 0 $，且这样 $ P(\\cot{\\alpha}^{2}) $必须为0。因为 $ r_ {1}, \\ldots, r_ {m} $互不相同且P(x)有度数m，因此
+我们称P(x)的根为m个数 $ r_ {1}, r_ {2}, \\ldots, r_ {m}, r_ {k} = \\cot^{2}{\\frac{k\\pi}{n}} $。事实上，对 $ \\alpha = \\frac{k\\pi}{n}, \\sin{\\alpha} $非零当 $ \\sin{n \\alpha} = 0 $，且这样 $ P(\\cot^{2}{\\alpha}) $必须为0。因为 $ r_ {1}, \\ldots, r_ {m} $互不相同且P(x)有度数m，因此
 
 $ P(x) = n(x - r_ {1})(x - r_ {2}) \\ldots (x - r_ {m}) $
