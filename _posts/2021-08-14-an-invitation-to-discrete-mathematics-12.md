@@ -369,6 +369,6 @@ $ \\sum^{m}_ {k=1} \\frac{1}{k^{2}} > \\frac{\\pi^{2}}{6} \\frac{2m(2m-1)}{(2m+1
 
 设 $ m \\to \\infty $得到 $ \\sum^{\\infty}_ {k=1} 1 / k^{2} \\ge \\pi^{2} / 6 $。使用等式 $ \\cot^{2}{\\alpha} = \\sin^{-2}{\\alpha} - 1 $且不等式 $ \\sin{\\alpha} < \\alpha, 0 < \\alpha < \\frac{\\pi}{2} $，得到
 
-$ \\frac{m(2m-1)}{3} - m = \\sum^{m}_ {k=1} \\frac{1}{\\sin^{2}{\\frac{k \\pi}{2m+1}} > \\sum^{m}_ {k=1}\\frac{(2m+1)^{2}}{\\pi^{2}k^{2}} $
+$ \\frac{m(2m-1)}{3} - m = \\sum^{m}_ {k=1} \\frac{1}{\\sin^{2}{\\frac{k \\pi}{2m+1}}} > \\sum^{m}_ {k=1}\\frac{(2m+1)^{2}}{\\pi^{2}k^{2}} $
 
 当 $ m \\to \\infty, \\sum^{\\infty}_ {k=1} 1 / k^{2} \\le \\pi^{2} / 6 $
