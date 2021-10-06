@@ -322,7 +322,7 @@ $ f(x) = \\sum^{\\infty}_ {m=1} A_ {m} \\sin{mx} \\text{   和   } g(x) = \\sum^
 
 我们现在应用我们的推理到拉弦这个特殊问题。为简化我们选择单位使得弦在 $ [0, \\pi] $间隔，且它满足波浪等式c = 1。弦假设被拉到点p高度为h，$ 0 < p < \\pi $；这是初始位置。我们把初始位置作为三角形给定为
 
-$ f(x) = \\left{ \\begin{array}{ll} \\frac{xh}{p} & \\text{ for } 0 \\le x \\le p \\\\ \\frac{h(\\pi - x)}{\\pi - p} & \\text{ for } p \\le x \\le \\pi $
+$ f(x) = \\left{ \\begin{array}{ll} \\frac{xh}{p} & \\text{ for } 0 \\le x \\le p \\\\ \\frac{h(\\pi - x)}{\\pi - p} & \\text{ for } p \\le x \\le \\pi \\end{array} \\right.$
 
 如下图描述
 
@@ -330,7 +330,7 @@ $ f(x) = \\left{ \\begin{array}{ll} \\frac{xh}{p} & \\text{ for } 0 \\le x \\le 
 
 我们也选择一个初始速度g(x)为0。然后，我们可计算f的傅立叶系数，且假设问题的答案为正，我们获得
 
-$ f(x) = \\sum^{\\infty}_ {m=1} A_ {m}\\sin{mx} \\qquad \\text{及} \\qquad A_ {m} = \\frac{2h}{m^{2}} \\frac{\\sin{mp}}{p(\\pi - p}} $
+$ f(x) = \\sum^{\\infty}_ {m=1} A_ {m}\\sin{mx} \\qquad \\text{及} \\qquad A_ {m} = \\frac{2h}{m^{2}} \\frac{\\sin{mp}}{p(\\pi - p)} $
 
 则
 
@@ -340,7 +340,7 @@ $ u(x, t) = \\sum^{\\infty}_ {m=1} A_ {m} \\cos{mt} \\sin{mx} $
 
 $ u(x, t) = \\frac{f(x+t) + f(x-t)}{2} $
 
-这里f(x)被定义为对所有x：首先，f通过使它为奇扩展到 $ [-\\pi, \\pi] $，且然后f被扩展到整个实线通过 $ 2 \\pi $的周期，即，$ f(x + 2\\pik) = f(x) $对所有整数k
+这里f(x)被定义为对所有x：首先，f通过使它为奇扩展到 $ [-\\pi, \\pi] $，且然后f被扩展到整个实线通过 $ 2 \\pi $的周期，即，$ f(x + 2\\pi k) = f(x) $对所有整数k
 
 观察上面两个式子用三角关系
 
