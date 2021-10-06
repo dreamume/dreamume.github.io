@@ -322,7 +322,7 @@ $ f(x) = \\sum^{\\infty}_ {m=1} A_ {m} \\sin{mx} \\text{   和   } g(x) = \\sum^
 
 我们现在应用我们的推理到拉弦这个特殊问题。为简化我们选择单位使得弦在 $ [0, \\pi] $间隔，且它满足波浪等式c = 1。弦假设被拉到点p高度为h，$ 0 < p < \\pi $；这是初始位置。我们把初始位置作为三角形给定为
 
-$ f(x) = \\left{ \\begin{array}{ll} \\frac{xh}{p} & \\text{ for } 0 \\le x \\le p \\\\ \\frac{h(\\pi - x)}{\\pi - p} & \\text{ for } p \\le x \\le \\pi \\end{array} \\right.$
+$ f(x) = \\left\\{ \\begin{array}{ll} \\frac{xh}{p} & \\text{ for } 0 \\le x \\le p \\\\ \\frac{h(\\pi - x)}{\\pi - p} & \\text{ for } p \\le x \\le \\pi \\end{array} \\right.$
 
 如下图描述
 
