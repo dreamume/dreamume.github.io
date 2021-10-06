@@ -33,7 +33,7 @@ category:   maths
 4.  [滚动骰子](#orgb0f2c34)
 5.  [随机行走](#org7d40cc4)
 6.  [Integer partitions](#orgbd7a200)
-    1.  [一个事实 $ \\sum^{\\infty}_ {j=1} = \\frac{\\pi^{2}}{6} $](#orgd1bdd78)
+    1.  [一个事实 $ \\sum^{\\infty}_ {j=1} \\frac{1}{j^{2}} = \\frac{\\pi^{2}}{6} $](#orgd1bdd78)
     2.  [定理](#orgcf0a8a4)
 
 本章我们将呈现一个有用的计算技术。基本思想是考虑一个实数的无穷序列和它的某个连续函数，这被称为序列的生成函数。序列的问题可通过计算函数来解决
@@ -300,7 +300,7 @@ $ \\sum^{\\infty}_ {j=1} \\frac{1}{j} \\frac{x^{j}}{1 - x^{j}} \\le \\sum^{\\inf
 
 <a id="orgd1bdd78"></a>
 
-## 一个事实 $ \\sum^{\\infty}_ {j=1} = \\frac{\\pi^{2}}{6} $
+## 一个事实 $ \\sum^{\\infty}_ {j=1} \\frac{1}{j^{2}} = \\frac{\\pi^{2}}{6} $
 
 继续我们对 $ \\ln{p_ {n}} $的估计，我们得到
 
@@ -354,3 +354,21 @@ $ \\sin^{n}{\\alpha} [{n \\choose 1} \\cot^{n-1}{\\alpha} - {n \\choose 3} \\cot
 我们称P(x)的根为m个数 $ r_ {1}, r_ {2}, \\ldots, r_ {m}, r_ {k} = \\cot^{2}{\\frac{k\\pi}{n}} $。事实上，对 $ \\alpha = \\frac{k\\pi}{n}, \\sin{\\alpha} $非零当 $ \\sin{n \\alpha} = 0 $，且这样 $ P(\\cot^{2}{\\alpha}) $必须为0。因为 $ r_ {1}, \\ldots, r_ {m} $互不相同且P(x)有度数m，因此
 
 $ P(x) = n(x - r_ {1})(x - r_ {2}) \\ldots (x - r_ {m}) $
+
+通过比较等式两边 $ x^{m-1} $的系数，我们得到 $ n(r_ {1} + r_ {2} + \\cdots + r_ {m}) = {n \\choose 3} $。这样，我们得到等式
+
+$ \\sum^{m}_ {k=1} \\cot^{2}{\\frac{k \\pi}{2m+1}} = \\frac{m(2m-1)}{3} $
+
+对 $ 0 < \\alpha < \\frac{\\pi}{2} $，我们有 $ \\cot{\\alpha} = 1 / \\tan{\\alpha} < 1 / \\alpha $，且这样有不等式
+
+$ \\sum^{m}_ {k=1} \\frac{(2m+1)^{2}}{\\pi^{2} k^{2}} > \\frac{m(2m-1)}{3} $
+
+或
+
+$ \\sum^{m}_ {k=1} \\frac{1}{k^{2}} > \\frac{\\pi^{2}}{6} \\frac{2m(2m-1)}{(2m+1)^{2}} $
+
+设 $ m \\to \\infty $得到 $ \\sum^{\\infty}_ {k=1} 1 / k^{2} \\ge \\pi^{2} / 6 $。使用等式 $ \\cot^{2}{\\alpha} = \\sin^{-2}{\\alpha} - 1 $且不等式 $ \\sin{\\alpha} < \\alpha, 0 < \\alpha < \\frac{\\pi}{2} $，得到
+
+$ \\frac{m(2m-1)}{3} - m = \\sum^{m}_ {k=1} \\frac{1}{\\sin^{2}{\\frac{k \\pi}{2m+1}} > \\sum^{m}_ {k=1}\\frac{(2m+1)^{2}}{\\pi^{2}k^{2}} $
+
+当 $ m \\to \\infty, \\sum^{\\infty}_ {k=1} 1 / k^{2} \\le \\pi^{2} / 6 $
