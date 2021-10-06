@@ -30,6 +30,7 @@ category:   maths
     5.  [Separation Axioms](#orgf392415)
     6.  [Nets (Moore-Smith Convergence)](#orgbf02f66)
     7.  [Compactness](#org838373f)
+    8.  [Products](#orgdbaaa36)
 
 
 <a id="org8fd57c5"></a>
@@ -443,3 +444,34 @@ $ \\begin{equation} \\begin{aligned} f^{-1}(C) \\subset & f^{-1}(V_ {y_ {1}}) \\
 (3) $ \\Rightarrow $ (4)是明显的因为每个net有一个universe子net
 
 (4) $ \\Rightarrow $ (2)，设 $ F = \\{ C \\} $为带有限交属性的闭集的收集，我们可抛出在所有有限交中且假设F在有限交下是闭的。则F，排序为 $ C \\ge C' \\Leftrightarrow C \\subset C' $，是直的。对每个 $ C \\in F $设 $ x_ {c} \\in C $，定义一个net。假设，有一个收敛子net，给定为一个final映射 $ f : D \\to F $。这样，对 $ \\alpha \\in D, f(\\alpha) \\in F且x_ {f(\\alpha)} \\in f(\\alpha) $。假设 $ x_ {f(\\alpha)} \\to x $。设 $ C \\in F $。则有一个 $ \\beta \\in D \\in \\alpha \\ge \\beta \\Rightarrow f(\\alpha) \\subset C $，且这样 $ x_ {f(\\alpha)} \\in f(\\alpha) \\subset C $。因为C是闭的则 $ x \\in C $。这样 $ x \\in \\cap\\{ C \\in F \\} $，得到(2)
+
+
+<a id="orgdbaaa36"></a>
+
+## Products
+
+设X和Y为拓扑空间。则我们可定义一个拓扑（称为乘积拓扑）在 $ X \\times Y $上，把 $ U \\times V $集合的收集作为子基，当 $ U \\subset X, V \\subset Y $为开集。因为
+
+$ U_ {1} \\times V_ {1} \\cap U_ {2} \\times V_ {2} = (U_ {1} \\cap U_ {2}) \\times (V_ {1} \\cap V_ {2}) $
+
+这事实上是一个基。因此开集精确地为这样的矩形的并
+
+相似地，我们可定义一个乘积拓扑在有限乘积 $ X_ {1} \\times X_ {2} \\times \\cdots \\times X_ {n} $拓扑空间
+
+对一个无限乘积 $ \\times \\{X_ {\\alpha} \| \\alpha \\in A \\} $，我们定义乘积拓扑为当 $ U_ {\\alpha} $为开集一个包含 $ \\times \\{U_ {\\alpha} \| \\alpha \\in A\\} $的基的集合上的拓扑且当我们需要对所有 $ U_ {\\alpha} = X_ {\\alpha} $，只有有限个 $ \\alpha $不同时。注意形如 $ U_ {\\alpha} \\times \\times \\{X_ {\\beta} \| \\beta \\neq \\alpha\\} $的集合的收集是乘积拓扑的一个子基。该拓扑也称为Tychonoff拓扑
+
+**命题** 映射 $ \\pi_ {X}: X \\times Y \\to X, \\pi_ {Y}: X \\times Y \\to Y $为连续，且乘积拓扑是对之成立的最小拓扑。对无穷乘积也类似
+
+证明：之前描述的子基包含这些集合必须是开集，对映射是连续的，且命题刚好做出了表达
+
+**命题** 如果X是紧的则映射 $ \\pi_ {Y}: X \\times Y \\to Y $是闭集
+
+证明：设 $ C \\subset X \\times Y $为闭集。我们显示 $ Y - \\pi_ {Y}(C) $是开集。设 $ y \\notin \\pi_ {Y}(C) $，例如，$ <x, y> \\notin C, \\forall x \\in X $。则对任意 $ x \\in X $，有开集 $ U_ {x} \\subset X, V_ {x} \\subset Y $使得 $ x \\in U_ {x}, (U_ {x} \\times V_ {x}) \\cap C = \\emptyset $
+
+因为X是紧的，有点 $ x_ {1}, \\ldots, x_ {n} \\in X $使得 $ U_ {x_ {1}} \\cup \\cdots U_ {x_ {n}} = X $。设 $ V = V_ {x_ {1}} \\cap \\cdots \\cap V_ {x_ {n}} $。则
+
+$ (X \\times V) \\cap C = (U_ {x_ {1}} \\cup \\cdots \\cup U_ {x_ {n}}) \\times (V_ {x_ {1}} \\cap \\cdots \\cap V_ {x_ {n}}) \\cap C = \\emptyset $
+
+这样，$ y \\in V \\subset Y - \\pi_ {Y}(C) $且V是开集。因为y是$ Y - \\pi_ {Y}(C) $上任意一点，它使得该集合是开集，且这样它的补集 $ \\pi_ {Y}(C) $是闭集
+
+**推论** 如果X是紧的则 $ \\pi_ {Y}: X \\times Y \\to Y $是适合的
