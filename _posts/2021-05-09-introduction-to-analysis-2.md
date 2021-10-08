@@ -29,6 +29,7 @@ category:   maths
     4.  [指数函数和对数函数](#orgfef7530)
     5.  [高阶微分法](#org2fd2501)
     6.  [偏微分](#org027031c)
+    7.  [微分可能性 全微分](#org6b41390)
 
 
 <a id="orgf3ab5b6"></a>
@@ -322,3 +323,72 @@ $ f_ {zz} = - \\frac{1}{r^{3}} + \\frac{3z^{2}}{r^{5}} $
 $ \\Delta f = \\frac{\\partial^{2} f}{\\partial x^{2}} + \\frac{\\partial^{2} f}{\\partial y^{2}} + \\frac{\\partial^{2} f}{\\partial z^{2}} = - \\frac{3}{r^{3}} + \\frac{3(x^{2} + y^{2} + z^{2})}{r^{5}} = - \\frac{3}{r^{3}} + \\frac{3r^{2}}{r^{5}} = 0 $
 
 $ f_ {xy} = -x(-3 \\frac{1}{r^{4}} \\cdot \\frac{\\partial r}{\\partial y}) = 3 \\frac{xy}{r^{5}} = f_ {yx} $
+
+
+<a id="org6b41390"></a>
+
+## 微分可能性 全微分
+
+函数z = f(x, y)的一点P = (x, y)。$ \\Delta z = f(x + \\Delta x, y + \\Delta y) - f(x, y) $，则
+
+$ \\Delta z = A \\Delta x + B \\Delta y + \\verepsilon \\rho $
+
+A, B是跟 $ \\Delta x, \\Delta y $无关的系数，点(x, y)的值有的话，$ \\rho $是定点(x,y)和动点 $ (x + \\Delta x, y + \\Delta y) $的距离 $ (\\rho = \\sqrt{(\\Delta x)^{2} + (\\Delta y)^{2}} ) $，$ \\varepsilon $跟 $ \\Delta x, \\Delta y $相关，$ \\rho \\to 0 $时，$ \\varepsilon \\to 0 $。用之前页的记号有 $ \\varepsilon \\rho = o \\rho $。这样函数z在点(x, y)微分是可能的
+
+上面的等式成立的话，$ \\Delta y = 0, \\rho = \| \\Delta x \| $时，
+
+$ \\frac{\\Delta z}{\\Delta x} = A \\pm \\varepsilon $
+
+这时，$ \\Delta x \\to 0, \\varepsilon \\to 0 $的话，(x, y)的 $ \\frac{\\partial z}{\\partial x} $存在，为A。同样的，$ \\frac{\\partial z}{\\partial y} $存在，为B。点 $(x + \\Delta x, y + \\Delta y) $从点(x, y)一定方向上收敛时，$ \\alpha $确定，$ \\Delta x = \\rho \\cos{\\alpha}, \\Delta y = \\rho \\sin{\\alpha} $时，
+
+$ \\frac{\\Delta z}{\\rho} = A \\cos{\\alpha} + B \\sin{\\alpha} + \\varepsilon $
+
+$ \\lim_ {\\rho \\to 0} \\frac{\\Delta z}{\\rho} = A \\cos{\\alpha} + B \\sin{\\alpha} = \\frac{\\partial z}{\\partial x} \\cos{\\alpha} + \\frac{\\partial z}{\\partial y} \\sin{\\alpha} $
+
+这种情况下，$ \\lim_ {\\rho \\to 0} \\frac{\\Delta z}{\\rho} $是 $ \\Delta x = \\rho \\cos{\\alpha}, \\Delta y = \\rho \\sin{\\alpha} $方向上的偏微分商
+
+之前的等式成立的话各方向上的偏微分商存在，即为上式
+
+z可微分的话，$ \\Delta z $的主要部分 $ \\Delta x, \\Delta y $的一次方程式 $ \\frac{\\partial z}{\\partial x} \\Delta x + \\frac{\\partial z}{\\partial y} \\Delta y $是z的全微分，用dz表示。特别地，z = x, z = y时 $ dx = \\Delta x, dy = \\Delta y $，这样全微分为
+
+$ dz = \\frac{\\partial z}{\\partial x} dx + \\frac{\\partial z}{\\partial y} dy $
+
+z可微分时 $ dz = \\frac{\\partial z}{\\partial x} \\Delta x + \\frac{\\partial z}{\\partial y} \\Delta y $为(x, y)关于曲面z = f(x, y)相接的平面。这样的平面上坐标为X, Y, Z的话，dx, dy, dz为 $ X - x, Y - y, Z - z $，接平面的方程式为
+
+$ Z - z = \\frac{\\partial z}{\\partial x}(X - x) + \\frac{\\partial z}{\\partial y}(Y - y) $
+
+这是接平面的定义
+
+z = f(x, y)有领域的各点可微分时，这样的领域可微分。这样的情况下f(x, y)的领域是连续的
+
+**定理** $ \\frac{\\partial z}{\\partial x}, \\frac{\\partial z}{\\partial y} $领域存在且连续的时候，z的领域可微分
+
+证明 $ \\Delta x, \\Delta y $用h, k带入得
+
+$ \\begin{aligned} \\Delta z &= f(x + h, y + k) - f(x, y) \\\\ &= \\{ f(x + h, y + k) - f(x, y + k)\\} + \\{ f(x, y + k) - f(x, y) \\} \\end{aligned} $
+
+使用x的平均值定理
+
+$ f(x + h, y + k) - f(x, y + k) = hf_ {x}(x + \\theta h, y + k), \\qquad 0 < \\theta < 1 $
+
+假设 $ f_ {x} $ 连续
+
+$ f_ {x}(x + \\theta h, y + k) = f_ {x}(x, y) + \\varepsilon $
+
+如果 $ h \\to 0, k \\to 0 $时 $ \\varepsilon \\to 0 $
+
+y的偏微分
+
+$ f(x, y + k) - f(x, y) = kf_ {y}(x, y) - \\varepsilon^{\\prime} k $
+
+$ k \\to 0 $时 $ \\varepsilon^{\\prime} \\to 0 $，则
+
+$ \\Delta z = hf_ {x}(x, y) + k f_ {y}(x, y) + h \\varepsilon + k \\varepsilon^{\\prime} $
+
+$ \| h \| \\le \\rho, \| k \| \\le \\rho, (\\rho = \\sqrt{h^{2} + k^{2}}) $，所以 $ \| h \\varepsilon + k \\varepsilon^{\\prime} \| \\le (\| \\varepsilon \| + \| \\varepsilon^{\\prime} \|) \\rho $ 
+
+$ \\Delta z = hf_ {x}(x, y) + kf_ {y}(x, y) + o \\rho $
+
+即z是可微分的
+
+**注意** 该定理的假设过大，上述证明用了 $ f_ {x} $的连续性。领域内 $ z_ {x}, z_ {y} $关于点(x, y)存在，这样如果连续的话，该点的z可微分
