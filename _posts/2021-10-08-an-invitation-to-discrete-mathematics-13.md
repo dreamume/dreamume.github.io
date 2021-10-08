@@ -19,7 +19,7 @@ category:   maths
         });
     </script>
 </head>
-`<
+
 # Table of Contents
 
 1.  [Block designs](#orge454f95)

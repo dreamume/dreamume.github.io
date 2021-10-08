@@ -331,7 +331,7 @@ $ f_ {xy} = -x(-3 \\frac{1}{r^{4}} \\cdot \\frac{\\partial r}{\\partial y}) = 3 
 
 函数z = f(x, y)的一点P = (x, y)。$ \\Delta z = f(x + \\Delta x, y + \\Delta y) - f(x, y) $，则
 
-$ \\Delta z = A \\Delta x + B \\Delta y + \\verepsilon \\rho $
+$ \\Delta z = A \\Delta x + B \\Delta y + \\varepsilon \\rho $
 
 A, B是跟 $ \\Delta x, \\Delta y $无关的系数，点(x, y)的值有的话，$ \\rho $是定点(x,y)和动点 $ (x + \\Delta x, y + \\Delta y) $的距离 $ (\\rho = \\sqrt{(\\Delta x)^{2} + (\\Delta y)^{2}} ) $，$ \\varepsilon $跟 $ \\Delta x, \\Delta y $相关，$ \\rho \\to 0 $时，$ \\varepsilon \\to 0 $。用之前页的记号有 $ \\varepsilon \\rho = o \\rho $。这样函数z在点(x, y)微分是可能的
 
