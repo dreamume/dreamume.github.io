@@ -427,7 +427,7 @@ $ \\varphi^{\\prime}(x) = f_ {x}(x, b + k) - f_ {x}(x, b) $
 
 这样x = a 和 x = a + h之间，用 $ \\varphi(x) $的平均值定理
 
-$ $\\varphi(a + h) - \\varphi(a) = h\\varphi^{\\prime}(a + \\theta h) \\qquad (0 < \\theta < 1) $
+$ \\varphi(a + h) - \\varphi(a) = h\\varphi^{\\prime}(a + \\theta h) \\qquad (0 < \\theta < 1) $
 
 综合得
 
