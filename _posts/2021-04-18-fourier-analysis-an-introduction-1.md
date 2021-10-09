@@ -27,6 +27,8 @@ category:   maths
         1.  [波浪等式的发展](#org051013c)
         2.  [波浪等式的解决方案](#orgf0a0406)
         3.  [例子：拉弦](#org0dffccd)
+    2.  [热力等式](#orgc068e57)
+        1.  [热力等式的派生](#orgdbe988c)
 
 
 <a id="org8842656"></a>
@@ -347,3 +349,47 @@ $ u(x, t) = \\frac{f(x+t) + f(x-t)}{2} $
 $ \\cos{v}\\sin{u} = \\frac{1}{2} [\\sin{(u+v)} + \\sin{(u-v)}] $
 
 作为最后的标志，我们应该注意该问题解决方案的一个不满足方面。因为初始化数据f(x)对拉弦不是两次连续可微，也不是函数u。因此u不是波浪等式的一个真解决方案：当u(x,t)表达拉弦的位置，它不满足我们设置解决的偏微分方程！该状态可被理解只在如果我们意识到u可解决等式，但在适合的情况。一个对该现象更好的理解需要相关想法学习弱解决方案和分布理论
+
+
+<a id="orgc068e57"></a>
+
+## 热力等式
+
+我们现在根据和波浪等式相同的框架讨论热扩散问题。首先，我们用时间依赖热力等式，然后学习稳定状态热力等式，其带我们回到基本的问题
+
+
+<a id="orgdbe988c"></a>
+
+### 热力等式的派生
+
+考虑一个无穷金属盘我们作为一个平面 $ \\mathbb{R}^{2} $的模型，且假设我们给出在时刻t = 0时的初始热力分布。让在时刻t点(x, y)处的温度记为记为u(x, y, t)
+
+考虑一个小平方中心为 $ (x_ {0}, y_ {0}) $，边与坐标轴平行且高为h，如下图所示。在时刻t的S上总的热量为
+
+![img](../img/heat_flow_through_a_small_square.png)
+
+$ H(t) = \\sigma \\int \\int_ {S} u(x, y, t)dxdy $
+
+$ \\sigma > 0 $是一个常量被称为材料的特殊热量。因此，流到S的热量是
+
+$ \\frac{\\partial H}{\\partial t} = \\sigma \\int \\int_ {S} \\frac{\\partial u}{\\partial t} dxdy $
+
+其大约等于
+
+$ \\sigma h^{2} \\frac{\\partial u}{\\partial t} (x_ {0}, y_ {0}, t) $
+
+S的面积是 $ h^{2} $。现在我们应用冷却的牛顿定律，描述从低温到高温的热流在一个比率下微分
+
+在垂直方向的右边热流穿过
+
+$ - \\kappa h \\frac{\\partial u}{\\partial x}(x_ {0} + h / 2, y_ {0}, t) $
+
+$ \\kappa > 0 $是材料的热导性。一个相似的讨论对其他边显示通过平面S的总热流是
+
+$ \\kappa h [\\frac{\\partial u}{\\partial x}(x_ {0} + h / 2, y_ {0}, t) - \\frac{\\partial u}{\\partial x}(x_ {0} - h / 2, y_ {0}, t \\\\ + \\frac{\\partial u}{\\partial y}(x_ {0}, y_ {0} + h / 2, t) - \\frac{\\partial u}{\\partial y}(x_ {0}, y_ {0} - h / 2, t)] $
+
+应用平均值定理和设h趋于0，我们有
+
+$ \\frac{\\sigma}{\\kappa} \\frac{\\partial u}{\\partial t} = \\frac{\\partial^{2} u}{\\partial x^{2}} + \\frac{\\partial^{2} u}{\\partial y^{2}} $
+
+这被称为时间依赖热力等式，通常简称为热力等式
