@@ -30,6 +30,7 @@ category:   maths
     5.  [高阶微分法](#org2fd2501)
     6.  [偏微分](#org027031c)
     7.  [微分可能性 全微分](#org6b41390)
+    8.  [微分的顺序](#orgb82b151)
 
 
 <a id="orgf3ab5b6"></a>
@@ -392,3 +393,58 @@ $ \\Delta z = hf_ {x}(x, y) + kf_ {y}(x, y) + o \\rho $
 即z是可微分的
 
 **注意** 该定理的假设过大，上述证明用了 $ f_ {x} $的连续性。领域内 $ z_ {x}, z_ {y} $关于点(x, y)存在，这样如果连续的话，该点的z可微分
+
+
+<a id="orgb82b151"></a>
+
+## 微分的顺序
+
+f(x, y)关于x微分得导函数$ f_ {x}(x, y) $，$ f_ {x}(x, y) $关于y微分的导函数为 $ f_ {xy} $。这样 $ f_ {xy}, f_ {yx} $指代不同的事物。然而在一定条件下，$ f_ {xy}, f_ {yx} $为同一函数。现在采用这些条件中最容易获得的条件：
+
+**定理** 在某个区域 $ f_ {xy}, f_ {yx} $连续的话这样的区域 $ f_ {xy} = f_ {yx} $
+
+证明 对区域的任意一点(a, b)的附近考察
+
+$ \\Delta = f(a + h, b + k) - f(a + h, b) - f(a, b + k) + f(a, b) $
+
+用图的记号有
+
+$ \\Delta = f(P_ {3}) - f(P_ {1}) - f(P_ {2}) + f(P) $
+
+![img](../img/example_differential_order_with_graph.png)
+
+写成
+
+$ \\varphi(x) = f(x, b + k) - f(x, b) $
+
+$ \\varphi(a) = f(P_ {2}) - f(P), \\varphi(a + h) = f(P_ {3}) - f(P_ {1}) $
+
+$ \\Delta = \\varphi(a + h) - \\varphi(a) $
+
+假设(a, b)附近 $ f_ {x} $存在，则
+
+$ \\varphi^{\\prime}(x) = f_ {x}(x, b + k) - f_ {x}(x, b) $
+
+这样x = a 和 x = a + h之间，用 $ \\varphi(x) $的平均值定理
+
+$ $\\varphi(a + h) - \\varphi(a) = h\\varphi^{\\prime}(a + \\theta h) \\qquad (0 < \\theta < 1) $
+
+综合得
+
+$ \\Delta = h\\{ f_ {x}(a + \\theta h, b + k) - f_ {x}(a + \\theta h, b) \\} $
+
+假设(a, b)附近 $ f_ {xy} $存在，则右边y = b和y = b + k间，用平均值定理得
+
+$ \\Delta = hkf_ {xy}(a + \\theta h, b + \\theta^{\\prime} k) \\qquad (0 < \\theta^{\\prime} < 1) $
+
+假设 $ f_ {xy} $在(a, b)点连续，则
+
+$ \\lim_ {(h, k) \\to (0, 0)} \\frac{\\Delta}{hk} = f_ {xy}(a, b) $
+
+x,h和y,k交换可得
+
+$ \\lim_ {h, k) \\to (0, 0)} \\frac{\\Delta}{hk} = f_ {yx}(a, b) $
+
+这样，区域内各点有
+
+$ f_ {xy} = f_ {yx} $
