@@ -29,6 +29,7 @@ category:   maths
         3.  [例子：拉弦](#org0dffccd)
     2.  [热力等式](#orgc068e57)
         1.  [热力等式的派生](#orgdbe988c)
+        2.  [圆盘的稳定状态热力等式](#orgdd95be3)
 
 
 <a id="org8842656"></a>
@@ -393,3 +394,30 @@ $ \\kappa h [\\frac{\\partial u}{\\partial x}(x_ {0} + h / 2, y_ {0}, t) - \\fra
 $ \\frac{\\sigma}{\\kappa} \\frac{\\partial u}{\\partial t} = \\frac{\\partial^{2} u}{\\partial x^{2}} + \\frac{\\partial^{2} u}{\\partial y^{2}} $
 
 这被称为时间依赖热力等式，通常简称为热力等式
+
+
+<a id="orgdd95be3"></a>
+
+### 圆盘的稳定状态热力等式
+
+在一个长周期时间，不再有热流交换，这样系统达到热力平衡且 $ \\partial u / \\partial t = 0 $。这样，时间依赖热力等式缩减到稳定状态热力等式
+
+$ \\frac{\\partial^{2} u}{\\partial x^{2}} + \\frac{\\partial^{2}u}{\\partial y^{2}} = 0 $
+
+操作 $ \\partial^{2} / \\partial x^{2} + \\partial^{2} / \\partial y^{2} $是在数学和物理上如此重要，它经常简记为 $ \\Delta $且给定名称：Laplace操作或Laplacian。这样稳定状态热力等式写为
+
+$ \\Delta u = 0 $
+
+且该等式的解决方案被称为调和函数
+
+考虑平面上圆盘单位
+
+$ D = \\{(x, y) \\in \\mathbb{R} : x^{2} + y^{2} < 1 \\} $
+
+其为单位圆C的边界。在极坐标 $ (r, \\theta), 0 \\le r, 0 \\le \\theta < 2 \\pi $，我们有
+
+$ D = \\{(r, \\theta): 0 \\le r < 1 \\} \\qquad \\text{且} \\qquad C = \\{(r, \\theta): r = 1\\} $
+
+该问题，通常称为Dirichlet问题（在单位圆盘上Laplacian），是解决单位圆盘上稳定状态热力等式，在C上边界条件u = f。这在圆圈上对应固定预先决定温度分布，等一个长时间，且然后查看在圆盘上温度分布
+
+![img](../img/the_dirichlet_problem_for_the_disc.png)
