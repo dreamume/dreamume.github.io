@@ -448,3 +448,47 @@ $ \\lim_ {h, k) \\to (0, 0)} \\frac{\\Delta}{hk} = f_ {yx}(a, b) $
 这样，区域内各点有
 
 $ f_ {xy} = f_ {yx} $
+
+在 $ f_ {x}, f_ {y}, f_ {xy} $存在的区域，该区域内一点 $ f_ {xy} $连续，这样的点 $ f_ {yx} $存在，且 $ f_ {xy} = f_ {yx} $(Schwarz定理)
+
+如果区域内 $ f_ {x}, f_ {y} $存在，区域内某点可微，则在该点 $ f_ {xy} = f_ {yx} $（Young定理）
+
+这里可用之前的式子证明，假定h = k且 $ f_ {x} $可微
+
+$ f_ {x}(a + \\theta h, b + h) = f_ {x}(a, b) + \\theta h f_ {xy}(a, b) + h f_ {xy}(a, b) + oh $
+
+$ f_ {x}(a + \\theta h, b) = f_ {x}(a, b) + \\theta h f_ {xx}(a, b) + oh $
+
+这样 $ \\Delta = h^{2} f_ {xy}(a, b) + oh^{2} $，有
+
+$ \\lim_ {h \\to 0} \\frac{\\Delta}{h^{2}} = f_ {xy}(a, b) $
+
+假设x, y对称，有$ f_ {xy}(a, b) = f_ {yx}(a, b) $
+
+不能无条件的认为 $ f_ {xy} = f_ {yx} $，这个很重要，现在举一个例子
+
+$ \\left\\{ \\begin{array}{ll} f(x,y) = xy \\frac{x^{2} - y^{2}}{x^{2} + y^{2}}, & (x, y) \\ne (0, 0), \\\\ f(0, 0) = 0 \\end{array} \\right. $
+
+$ (x, y) \\ne (0, 0) $时计算得
+
+$ f_ {x}(x, y) = \\frac{3x^{2} - y^{3}}{x^{2} + y^{2}} - \\frac{2x^{2}y(x^{2} - y^{2})}{(x^{2} + y^{2}x)^{2}} $
+
+x,y 交换得 $ f_ {y} $，然而
+
+$ f_ {xy}(x, y) = \\frac{x^{2} - y^{2}}{x^{2} + y^{2}} + \\frac{8x^{2}y^{2}(x^{2} - y^{2})}{(x^{2} + y^{2})^{3}} $
+
+$ (x, y) \\ne (0, 0) $时连续，$ f_ {yx} $相等，然而，$ f_ {xy}(0, y)= -1, (y \\ne 0), \\lim_ {y \\to 0} f_ {xy}(0, y) = -1 $。然而，$ f_ {x}(0, y) = -y, y \\ne 0 $，$ f_ {x}(0, 0) = 0 $时$ f_ {x}(0, y) $在y = 0时连续，这样 $ f_ {xy}(0, 0) = -1 $。同样的，$ f_ {yx}(x, 0) = 1 $时 $ f_ {yx}(0, 0) = 1 $
+
+三阶以上，导函数连续的话，可以改变微分顺序。例如 $ f_ {xxy} = (f_ {x})_ {xy} = (f_ {x})_ {yx} = f_ {xyx} $，相邻的顺序进行交换，这样
+
+$ f_ {xyz} = f_ {xzy} = f_ {zxy} = f_ {zyx} = f_ {yzx} = f_ {yxz} $
+
+$ f_ {xxyy} = f_ {xyxy} = f_ {xyyx} = f_ {yxxy} = f_ {yxyx} = f_ {yyxx} $
+
+这样二阶导函数
+
+$ f_ {x^{2}} = \\frac{\\partial^{2} f}{\\partial x^{2}}, \\qquad f_ {xy} = \\frac{\\partial^{2} f}{\\partial x \\partial y}, \\qquad f_ {y^{2}} = \\frac{\\partial^{2} f}{\\partial y^{2}} $
+
+第n阶为
+
+$ f_ {x^{r}y^{s}} = \\frac{\\partial^{n} f}{\\partial x^{r} \\partial y^{s}} \\qquad \\qquad (r + s = n, s = 0, 1, 2, \\ldots, n) $
