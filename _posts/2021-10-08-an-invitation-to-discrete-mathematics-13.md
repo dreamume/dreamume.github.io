@@ -24,6 +24,7 @@ category:   maths
 
 1.  [Block designs](#orge454f95)
     1.  [定理（集成条件）](#org6940849)
+    2.  [例子（Steiner triple系统）](#orgab112db)
 
 
 <a id="orge454f95"></a>
@@ -84,3 +85,26 @@ $ \\lambda \\frac{v(v-1)\\ldots (v-t+1)}{k(k-1) \\ldots (k-t+1)}, \\lambda \\fra
 ![img](../img/example_integrality_conditions.png)
 
 另一方面，T可被取为 $ {v -s \\choose t-s} $种方法，且每个T是一个 $ \\lambda $个块 $ B \\in \\mathcal{B} $的子集；因此 $ N = \\lambda {v-s \\choose t-s} $
+
+另一方面，设M为包含集合S的块数。因为每个包含S的块B包含 $ {k-s \\choose t-s} $个t元素集合T，$ S \\subseteq T $，我们也有 $ N = M {k-s \\choose t-s} $。因此
+
+$ M = \\lambda \\frac{{v-s \\choose t-s}}{{k-s \\choose t-s}} = \\lambda \\frac{(v-s) \\ldots (v-t+1)}{(k-s)\\ldots (k-t+1)} $
+
+这样右边的分式应该为一个整数
+
+
+<a id="orgab112db"></a>
+
+## 例子（Steiner triple系统）
+
+第一个非平凡的类型为 $ t-(v, k, \\lambda) $的块设计的例子是t = 2, $ \\lambda = 1 $, k = 3。这是一个三元系统每对点包含一个三元组。即，它是把完全图通过边不相连三角进行覆盖的方法
+
+在这样的例子中，集成条件需要
+
+$ \\frac{v(v-1)}{6} \\qquad \\frac{v-1}{2} $
+
+为整数。对此，容易得出要么 $ v \\equiv 1 \\, (mod \\, 6) $ 或 $ v \\equiv 3 \\, (mod \\, 6) $。因此v为3, 7 9, 13, 15, 19, 21, 25, 27, \\ldots $。对所有这样的v值，一个类型为 $ 2-(v, 3,1) $的块设计存在。对v = 7，一个Steiner triple系统是一个序为2的映射平面（Fano平面）。对v = 9，我们有如下的Steiner系统
+
+![img](../img/example_steiner_triple_system_for_v_7.png)
+
+这可视为一个affine平面，其是序为3的映射平面去掉一条线和所有它的点
