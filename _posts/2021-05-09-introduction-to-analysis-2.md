@@ -31,6 +31,7 @@ category:   maths
     6.  [偏微分](#org027031c)
     7.  [微分可能性 全微分](#org6b41390)
     8.  [微分的顺序](#orgb82b151)
+    9.  [高阶的全微分](#org76e122d)
 
 
 <a id="orgf3ab5b6"></a>
@@ -492,3 +493,98 @@ $ f_ {x^{2}} = \\frac{\\partial^{2} f}{\\partial x^{2}}, \\qquad f_ {xy} = \\fra
 第n阶为
 
 $ f_ {x^{r}y^{s}} = \\frac{\\partial^{n} f}{\\partial x^{r} \\partial y^{s}} \\qquad \\qquad (r + s = n, s = 0, 1, 2, \\ldots, n) $
+
+
+<a id="org76e122d"></a>
+
+## 高阶的全微分
+
+u = f(x, y)的第一阶全微分
+
+$ du = \\frac{\\partial u}{\\partial x}dx + \\frac{\\partial u}{\\partial y}dy $
+
+$ \\frac{\\partial u}{\\partial x} $可微分，x, y关于du的全微分为 $ d^{2} u $
+
+即x, y为独立变量(h = dx, k = dy)
+
+$ \\begin{aligned} d^{2}u = d(du) &= \\frac{\\partial}{\\partial x}(\\frac{\\partial u}{\\partial x} h + \\frac{\\partial u}{\\partial y} k)h + \\frac{\\partial}{\\partial y}(\\frac{\\partial u}{\\partial x} h + \\frac{\\partial u}{\\partial y}k)k \\\\ &= \\frac{\\partial^{2} u}{\\partial x^{2}}h^{2} + 2 \\frac{\\partial^{2}u}{\\partial x \\partial y} hk + \\frac{\\partial^{2} u}{\\partial y^{2}} k^{2} \\\\ &= \\frac{\\partial^{2} u}{\\partial x^{2}}d x^{2} + 2 \\frac{\\partial^{2} u}{\\partial x \\partial y}dxdy + \\frac{\\partial^{2} u}{\\partial y^{2}} dy^{2} \\end{aligned} $
+
+同样的
+
+$ d^{3}u = \\frac{\\partial^{3} u}{\\partial x^{3}} dx^{3} + 3 \\frac{\\partial^{3}u}{\\partial x^{2} \\partial y} dx^{2}dy + 3 \\frac{\\partial^{3} u}{\\partial x \\partial y^{2}}dxdy^{2} + \\frac{\\partial^{3} u}{\\partial y^{3}}dy^{3} $
+
+一般的
+
+$ d^{n}u = \\frac{\\partial^{n} u}{\\partial x^{n}}dx^{n} + \\cdots + {n \\choose k} \\frac{\\partial^{n} u}{\\partial x^{k} \\partial y^{n-k}} dx^{k}dy^{n-k} + \\cdots + \\frac{\\partial^{n} u}{\\partial y^{n}}dy^{n} $
+
+这样
+
+$ d^{n} u = (\\frac{\\partial}{\\partial x}dx + \\frac{\\partial}{\\partial y}dy)^{n} u $
+
+三个以上的变量的话，同样的
+
+$ \\begin{aligned} d^{2} u &= \\frac{\\partial^{2} u}{\\partial x^{2}} dx^{2} + \\frac{\\partial^{2} u}{\\partial y^{2}}dy^{2} + \\frac{\\partial^{2}u}{\\partial z^{2}}dz^{2} + \\cdots &+ 2 \\frac{\\partial^{2} u}{\\partial x \\partial y}dxdy + 2 \\frac{\\partial^{2} u}{\\partial x \\partial y} + 2 \\frac{\\partial^{2} u}{\\partial x \\partial z}dxdz + 2 \\frac{\\partial^{2} u}{\\partial y \\partial z}dydz + \\cdots , \\end{aligned} $
+
+一般的
+
+$ d^{n}u = (\\frac{\\partial}{\\partial x}dx + \\frac{\\partial}{\\partial y}dy + \\frac{\\partial}{\\partial z}dz + \\cdots)^{n} u $
+
+*合成函数* u为x, y的函数，x, y为t的函数，u为t的函数
+
+u跟x, y相关，x, y跟t相关连续（可微分）的话，u连续（可微分）
+
+可微分的时候 $ \\frac{du}{dt} $得
+
+$ \\Delta u = u_ {x} \\Delta x + u_ {y} \\Delta y + o(\\sqrt{\\Delta x^{2} + \\Delta y^{2}}) $
+
+$ \\Delta x, \\Delta y $使得 $ \\Delta t $对应变化
+
+$ \\Delta x = x^{\\prime} \\Delta t + o(\\Delta t), \\qquad \\Delta y = y^{\\prime} \\Delta t + o(\\Delta t) $
+
+综合得
+
+$ \\Delta u = (u_ {x}x^{\\prime} + u_ {y}y^{\\prime}) \\Delta t + o(\\Delta t) $
+
+$ \\lim_ {\\Delta t \\to 0} \\frac{\\Delta u}{\\Delta t} $存在，这样
+
+$ \\frac{du}{dt} = u_ {x}x^{\\prime} + u_ {y}y^{\\prime}. \\qquad (x^{\\prime} = \\frac{dx}{dt}, y^{\\prime} = \\frac{dy}{dt}) $
+
+第二阶以上可微分的话，有
+
+$ \\begin{aligned} \\frac{d^{2}u}{dt^{2}} &= \\frac{du_ {x}}{dt}x^{\\prime} + u_ {x}x^{\\prime \\prime} + \\frac{du_ {y}}{dt}y^{\\prime} + u_ {y}y^{\\prime \\prime} \\\\ &= (u_ {xx}x^{\\prime} +u_ {xy}y^{\\prime})x^{\\prime} + (u_ {xy}x^{\\prime} + u_ {yy}y^{\\prime})y^{\\prime} + u_ {x}x^{\\prime \\prime} + u_ {y}y^{\\prime \\prime} \\\\ &= u_ {xx}x^{\\prime 2} + 2u_ {xy}x^{\\prime}y^{\\prime} + u_ {yy}y^{\\prime 2} + u_ {x}x^{\\prime \\prime} + u_ {y}y^{\\prime \\prime} \\end{aligned} $
+
+x、y是两个变量 $ \\xi, \\eta $的函数，u也是 $ \\xi, \\eta $的函数。这样
+
+$ u_ {\\xi} = u_ {x} x_ {\\xi} + u_ {y}y_ {\\xi}, \\qquad u_ {\\eta} = u_ {x}u_ {\\eta} + u_ {y}y_ {\\eta} $
+
+同样的
+
+$ u_ {\\xi \\xi} = u_ {xx}x^{2}_ {\\xi} + 2u_ {xy}x_ {\\xi}y_ {\\xi} + u_ {yy}y^{2}_ {\\xi} + u_ {x}x_ {\\xi \\xi} + u_ {y}y_ {\\xi \\xi} $
+
+$ u_ {\\xi \\eta} = u_ {xx}x_ {\\xi}x_ {\\eta} + u_ {xy}(x_ {\\xi}y_ {\\eta} + x_ {\\eta}y_ {\\xi}) + u_ {yy}y_ {\\xi}y_ {\\eta} + u_ {x}x_ {\\xi \\eta} + u_ {y}y_ {\\xi \\eta} $
+
+$ u_ {\\eta \\eta} = u_ {xx}x^{2}_ {\\eta} + 2u_ {xy}x_ {\\eta}y_ {\\eta} + u_ {yy}y^{2}_ {\\eta} + u_ {x}x_ {\\eta \\eta} + u_ {y}y_ {\\eta \\eta} $
+
+例子 u = u(x, y)，x,y 相关偏微分商的极坐标变换
+
+$ x = r \\cos{\\theta}, \\qquad y = r \\sin{\\theta} $
+
+$ r = \\sqrt{x^{2} + y^{2}}, \\qquad \\theta = \\arctan{\\frac{y}{x}} $
+
+u是r, $ \\theta $的函数，$ r, \\theta $是x, y的函数，计算得
+
+$ r_ {x} = \\frac{x}{r} = \\cos{\\theta}, \\qquad r_ {y} = \\frac{y}{r} = \\sin{\\theta} $
+
+$ \\theta_ {x} = - \\frac{y}{r^{2}} = - \\frac{\\sin{\\theta}}{r}, \\qquad \\theta_ {y} = \\frac{x}{r^{2}} = \\frac{\\cos{\\theta}}{r} $
+
+$ u_ {x} = u_ {r}r_ {x} + u_ {\\theta}\\theta_ {x} = u_ {r}\\cos{\\theta} - \\frac{u_ {\\theta}}{r} \\sin{\\theta} $
+
+$ u_ {y} = u_ {r}r_ {y} + u_ {\\theta}\\theta_ {y} = u_ {r} \\sin{\\theta} + \\frac{u_ {\\theta}}{r} \\cos{\\theta} $
+
+$ u_ {xx} = u_ {rr}\\cos^{2}{\\theta} + \\frac{u_ {\\theta \\theta}}{r^{2}} \\sin^{2}{\\theta} - 2 \\frac{u_ {r\\theta}}{r} \\cos{\\theta} \\sin{\\theta} + \\frac{u_ {r}}{r} \\sin^{2}{\\theta} + 2 \\frac{u_ {\\theta}}{r^{2}} \\cos{\\theta} \\sin{\\theta} $
+
+$ u_ {yy} = u_ {rr}\\sin^{2}{\\theta} + \\frac{u_ {\\theta \\theta}}{r^{2}} \\cos^{2}{\\theta} + 2 \\frac{u_ {r\\theta}}{r} \\cos{\\theta} \\sin{\\theta} + \\frac{u_ {r}}{r} \\cos^{2}{\\theta} - 2 \\frac{u_ {\\theta}}{r^{2}} \\cos{\\theta} \\sin{\\theta} $
+
+这样
+
+$ \\frac{\\partial^{2}u}{\\partial x^{2}} + \\frac{\\partial^{2} u}{\\partial y^{2}} = \\frac{\\partial^{2} u}{\\partial r^{2}} + \\frac{1}{r^{2}} \\frac{\\partial^{2} u}{\\partial \\theta^{2}} + \\frac{1}{r} \\frac{\\partial u}{\\partial r} $
