@@ -25,6 +25,7 @@ category:   maths
 1.  [Block designs](#orge454f95)
     1.  [定理（集成条件）](#org6940849)
     2.  [例子（Steiner triple系统）](#orgab112db)
+    3.  [定理（Wilson定理）](#orgb40ff78)
 
 
 <a id="orge454f95"></a>
@@ -108,3 +109,22 @@ $ \\frac{v(v-1)}{6} \\qquad \\frac{v-1}{2} $
 ![img](../img/example_steiner_triple_system_for_v_7.png)
 
 这可视为一个affine平面，其是序为3的映射平面去掉一条线和所有它的点
+
+**平衡不完全块设计** 对t = 2（例如，如果我们需要从 $ \\mathcal{B} $中每对有 $ \\lambda $对），集成条件如下：
+
+$ \\lambda v(v - 1) \\equiv 0 \\qquad (mod \\, k(k-1)) $
+
+$ \\lambda (v-1) \\equiv 0 \\qquad (mod \\, k-1) $
+
+这些条件一般不再是充分的。但如下的困难和重要的结果保持：
+
+
+<a id="orgb40ff78"></a>
+
+## 定理（Wilson定理）
+
+对任意数 $ k \\ge 1, \\lambda \\ge 1 $的选择，存在一个数 $ v_ {0}(k, \\lambda) $使得对所有 $ v \\ge v_ {0}(k, \\lambda) $满足上面的集成条件，一个类型为$ 2-(v, k, \\lambda) $的块设计存在
+
+即集成条件对t = 2是充分的如果ground集合足够大。定理没有说小值的v：例如，类型 $ 2-(k^{2}+k+1, k+1, 1) $的块设计的存在，例如，有限映射平面
+
+我们已提及这个定理的完整性，且我们没有进一步在这里证明
