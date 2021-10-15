@@ -32,6 +32,7 @@ category:   maths
     7.  [微分可能性 全微分](#org6b41390)
     8.  [微分的顺序](#orgb82b151)
     9.  [高阶的全微分](#org76e122d)
+    10. [Taylor公式](#org18dfda1)
 
 
 <a id="orgf3ab5b6"></a>
@@ -588,3 +589,46 @@ $ u_ {yy} = u_ {rr}\\sin^{2}{\\theta} + \\frac{u_ {\\theta \\theta}}{r^{2}} \\co
 这样
 
 $ \\frac{\\partial^{2}u}{\\partial x^{2}} + \\frac{\\partial^{2} u}{\\partial y^{2}} = \\frac{\\partial^{2} u}{\\partial r^{2}} + \\frac{1}{r^{2}} \\frac{\\partial^{2} u}{\\partial \\theta^{2}} + \\frac{1}{r} \\frac{\\partial u}{\\partial r} $
+
+
+<a id="org18dfda1"></a>
+
+## Taylor公式
+
+**固定差异** 对于y = f(x)，x一定的增量 $ \\Delta x(\\Delta x \\ge 0) $，对于y的增量
+
+$ \\Delta y = \\Delta f(x) = f(x + \\Delta x) - f(x) $
+
+为y的定差的差分。$ \\Delta y $是x的函数，对应 $ \\Delta x $的增加，这样的固定差异为y的第二阶定差，记为 $ \\Delta^{2} y $
+
+$ \\begin{aligned} \\Delta^{2} y &= \\Delta f(x + \\Delta x) - \\Delta f(x) \\\\ &= \\{f(x + 2 \\Delta x) - f(x + \\Delta x)\\} - \\{f(x + \\Delta x) - f(x)\\} \\\\ &= f(x + 2 \\Delta x) - 2f(x + \\Delta x) + f(x) \\end{aligned} $
+
+同样的，第n阶的定差
+
+$ \\begin{aligned} \\Delta^{n} y &= \\Delta^{n-1}f(x + \\Delta x) - \\Delta^{n-1}f(x) \\\\ &= f(x + n \\Delta x) - {n \\choose 1} f(x + (n-1) \\Delta x) + {n \\choose 2}f(x + (n-2) \\Delta x) + \\cdots + (-1)^{n} f(x) \\end{aligned} $
+
+例如，$ g(x) = ax^{n} + \\cdots $为n的多项式，$ \\Delta x = h $
+
+$ \\Delta g(x) = nahx^{n-1} + \\cdots, \\qquad \\Delta^{2}g(x) = n(n-1)ah^{2}x^{n-2} + \\cdots $
+
+$ \\Delta^{n} g(x) = n! ah^{n} \\qquad \\Delta^{n+1} g(x) = 0 $
+
+则对十分小的 $ \\Delta x $
+
+$ f(x + k \\Delta x) = \\sum^{n}_ {\\nu = 0}(k \\Delta x)^{\\nu} \\frac{f^{(\\nu)}(x)}{\\nu !} + o(\\Delta x)^{n} $
+
+这样
+
+$ \\begin{aligned} \\Delta^{n} y &= \\sum^{n}_ {k, \\nu = 0}(-1)^{n-k} {n \\choose k} k^{\\nu} \\Delta x^{\\nu} \\frac{f^{(\\nu)}(x)}{\\nu !} + o(\\Delta x)^{n} \\\\ &= \\sum^{n}_ {\\nu = 0} \\Delta x^{\\nu} \\frac{f^{(\\nu)}(x)}{\\nu !} (\\sum^{n}_ {k=0} (-1)^{n-k} {n \\choose k}k^{\\nu}) + o(\\Delta x)^{n} \\end{aligned} $
+
+现在
+
+$ \\sum^{n}_ {k=0}(-1)^{k}{n \\choose k}k^{\\nu} = \\left\\{ \\begin{array}{ll} 0, & (\\nu = 0, 1, \\ldots, n-1) \\\\ (-1)^{n} n! & (\\nu = n) \\end{array} \\right. $
+
+这样 $ y = x^{n} $，从以上的式子及 $ \\Delta^{n} y = n! \\Delta x^{n} $有
+
+$ \\Delta^{n} y = (\\Delta x)^{n} f^{(n)}(x) + o(\\Delta x)^{n} $
+
+从而
+
+$ \\lim_ {\\Delta x \\to 0} \\frac{\\Delta^{n} y}{\\Delta x^{n}} = f^{(n)}(x) $
