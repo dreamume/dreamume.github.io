@@ -24,6 +24,7 @@ category:   maths
 
 1.  [Fundamental Theorem of Algebra of Complex Numbers](#org9669ceb)
 2.  [Factorization in Euclidean Domains](#org8222f14)
+3.  [对称多项式](#org250fd7e)
 
 polynomial的和和乘积及polynomial和数的乘积依然是polynomial，这意味着polynomials在一个实变量的所有函数上的代数形成了一个子代数。该子代数被称为polynomial在R上的代数并记为R[x]
 
@@ -76,3 +77,24 @@ $ \\begin{equation} N: A \\ \\{ 0 \\} \\to Z_ {+} \\end{equation} $
 (i) $ N(ab) \\ge N(a) $且等式成立当且仅当b可逆
 
 (ii) 对任意 $ a, b \\in A, b \\ne 0 $，存在 $ q,r \\in A $使得a = qb + r且要么r = 0要么N(r) < N(b)
+
+
+<a id="org250fd7e"></a>
+
+# 对称多项式
+
+**定义** 一个多项式 $ f \\in K[x_ {1}, x_ {2}, \\ldots, x_ {n}] $被称为对称的如果它对变量任意重排结果一致
+
+**例子** 如下对称多项式被称为基本对称多项式
+
+$ \\sigma_ {1} = x_ {1} + x_ {2} + \\cdots + x_ {n} $
+
+$ \\sigma_ {2} = x_ {1}x_ {2} + x_ {1}x_ {3} + \\cdots + x_ {n-1}x_ {n} $
+
+$ \\ldots \\ldots \\ldots \\ldots \\ldots \\ldots \\ldots \\ldots $
+
+$ \\sigma_ {k} = \\sum_ {i_ {1} < i_ {2} < \\cdots < i_ {k}}x_ {i_ {1}}x_ {i_ {2}} \\cdots x_ {i_ {k}} $
+
+$ \\ldots \\ldots \\ldots \\ldots \\ldots \\ldots \\ldots \\ldots $
+
+$ \\sigma_ {n} = x_ {1}x_ {2} \\cdots x_ {n} $
