@@ -421,3 +421,15 @@ $ D = \\{(r, \\theta): 0 \\le r < 1 \\} \\qquad \\text{且} \\qquad C = \\{(r, \
 该问题，通常称为Dirichlet问题（在单位圆盘上Laplacian），是解决单位圆盘上稳定状态热力等式，在C上边界条件u = f。这在圆圈上对应固定预先决定温度分布，等一个长时间，且然后查看在圆盘上温度分布
 
 ![img](../img/the_dirichlet_problem_for_the_disc.png)
+
+当变量独立方法将证明对等式非常有用，事实的一个困难是边界条件不容易用规则坐标表达。因为这个边界条件最好用坐标 $ (r, \\theta) $描述，$ u(1, \\theta) = f(\\theta) $，我们用极坐标重写Laplacian。一个应用程序的连锁规则如下：
+
+$ \\Delta u = \\frac{\\partial^{2} u}{\\partial r^{2}} + \\frac{1}{r} \\frac{\\partial u}{\\partial r} + \\frac{1}{r^{2}} \\frac{\\partial^{2} u}{\\partial \\theta^{2}} $
+
+我们现在两边都乘以 $ r^{2} $，因为 $ \\Delta u = 0 $，我们获得
+
+$ r^{2} \\frac{\\partial^{2} u}{\\partial r^{2}} + r \\frac{\\partial u}{\\partial r} = - \\frac{\\partial^{2} u}{\\partial \\theta^{2}} $
+
+分离这些变量，看形为 $ u(r, \\theta) = F(r)G(\\theta) $的一个解决方案，我们发现
+
+$ \\frac{r^{2} F^{\\prime \\prime}(r) + rF^{\\prime}(r)}{F(r)} = - \\frac{G^{\\prime \\prime}(\\theta)}{G(\\theta)} $
