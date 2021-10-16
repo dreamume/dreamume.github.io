@@ -156,3 +156,23 @@ $ a_ {ij} = \\left\\{ \\begin{array}{ll} 1 & \\text{ if } x_ {i} \\in B_ {j} \\\
 矩阵A被称为集合系统 $ (V, \\mathcal{B}) $的发生矩阵
 
 **Fisher不等式的证明** 对一个给定的块设计 $ (V, \\mathcal{B}) $，考虑它的发生矩阵 $ A = (a_ {ij}) $。矩阵A的转置 $ A^{T} $，有大小 $ b \\times v $，且因此矩阵乘积 $ AA^{T} $有大小 $ v \\times v $。我们显示矩阵 $ M = AA^{T} $有一个简单的形式
+
+让我们考虑M中的一个条目 $ m_ {ij} $。通过矩阵乘法的定义，我们有
+
+$ m_ {ij} = \\sum^{b}_ {k=1}a_ {ik}a_ {jk} $
+
+这样，条目 $ m_ {ij} $表达集合 $ B_ {k} $包含 $ x_ {i}, x_ {j} $的数目。通过块设计的定义，$ m_ {ij} $只能有两个可能值：
+
+$ \\m_ {ij} = \\left\\{ \\begin{array}{ll} \\lambda & \\text{for } i \\ne j \\\\ \\lambda \\frac{\\upsilon - 1}{k-1} & \\text{for } i = j \\end{array} \\right. $
+
+数 $ \\lambda \\cdot \\frac{\\upsilon - 1}{k - 1} $在之前的内容中记为r，且这样矩阵M是
+
+$ \\left( \\begin{array}{cccc} r & \\lambda & \\ldots & \\lambda \\\\ \\lambda & r \\ldots & \\lambda \\\\ \\vdots & \\vdots & \\ddots & \\vdots \\\\ \\lambda & \\lambda & \\ldots & r \\end{array} \\right) $
+
+我们想要显示该矩阵是nonsingular的，即他的行列式非零。元素行操作给出
+
+$ \\begin{aligned } \\operatorname{det} M &= \\operatorname {det} \\left( \\begin{array}{cccc} r + (\\upsilon - 1)\\lambda & r + (\\upsilon-1) \\lambda & \\ldots & r + (\\upsilon-1)\\lambda \\\\ \\lambda & r & \\ldots & \\lambda \\\\ \\vdots & \\vdots & \\ddots & \\vdots \\\\ \\lambda & \\lambda & \\ldots & r \\end{array} \\right) \\\\ &= (r + (\\upsilon - 1) \\lambda) \\operatorname{det} \\left( \\begin{array}{cccc} 1 & 1 & \\ldots & 1 \\\\ \\lambda & r & \\ldots & \\lambda \\\\ \\vdots & \\vdots & \\ddots & \\vdots \\\\ \\lambda & \\lambda & \\ldots & r \\end{array} \\right) \\\\ &= (r + (\\upsilon -1)\\lambda) \\operatorname{det} \\left( \\begin{array}{cccc} 1 & 1 & \\ldots & 1 \\\\ 0 & r - \\lambda & \\ldots & 0 \\\\ \\vdots & \\vdots & \\ddots & \\vdots \\\\ 0 & 0 & \\ldots & r - \\lambda \\end{array} \\right) \\\\ &= (r + (\\upsilon - 1) \\lambda) \\cdot (r - \\lambda)^{\\upsilon - 1} \\end{aligned} $
+
+我们现在回忆 $ r = \\lambda \\cdot \\frac{\\upsilon - 1}{k-1} $。明显地，$ r + (\\upsilon - 1) \\lambda \\ne 0 $，且因此 $ \\upsilon > k $，我们也有 $ r > \\lambda $，且这样 $ \\operatorname{det} M \\ne 0 $。因此，矩阵M有 $ rank^{2} \\upsilon $。但如果我们有 $ b < \\upsilon $则$ A, A^{T} $的rank必须严格小于 $ \\upsilon $，且因此矩阵 $ M = AA^{T} $有 $ rank < \\upsilon $。我们有 $ b \\ge \\upsilon $。这完成了Fisher不等式的证明
+
+这个矩阵rank的应用程序变成许多相似的组合数学的基础证明
