@@ -632,3 +632,51 @@ $ \\Delta^{n} y = (\\Delta x)^{n} f^{(n)}(x) + o(\\Delta x)^{n} $
 从而
 
 $ \\lim_ {\\Delta x \\to 0} \\frac{\\Delta^{n} y}{\\Delta x^{n}} = f^{(n)}(x) $
+
+**二元以上的Taylor公式** f(x, y) n次可微分时A = (x, y)区域内一点，取很小的 $ \| h \|, \| k \| $，点B = (x+h, y+k)的线分AB有
+
+$ F(t) = f(x + ht, y + kt) $
+
+$ 0 \\le t \\le 1 $区间里t的函数，有
+
+$ F^{\\prime}(t) = (h \\frac{\\partial}{\\partial x} + k \\frac{\\partial}{\\partial y}) f(x + ht, y + kt), \\ldots, $
+
+$ F^{n}(t) = (h \\frac{\\partial}{\\partial x} + k \\frac{\\partial}{\\partial y})^{n} f(x+ht, y+kt) $
+
+有
+
+$ F(t) = F(0) + tF^{\\prime}(0) + \\cdots + \\frac{t^{n-1}}{(n-1)!} F^{(n-1)}(0) + \\frac{t^{n}}{n!} F^{(n)}(\\theta t), \\qquad 0 < \\theta < 1 $
+
+t = 1时
+
+$ \\begin{aligned} f(x+h, y+k) &= f(x,y) + df(x, y) + \\frac{1}{2} d^{2} f(x, y) + \\cdots \\\\ &+ \\frac{1}{(n-1)!} d^{n-1} f(x, y) + \\frac{1}{n!} d^{n} f(x + \\theta h, y + \\theta k) \\end{aligned} $
+
+用 $ d^{\\nu} $简记为
+
+$ df(x, y) = hf_ {x}(x, y) + kf_ {y}(x, y) $
+
+$ d^{2} f(x, y) = h^{2} f_ {xx}(x,y) + 2hkf_ {xy}(x, y) + k^{2}f_ {yy}(x, y), \\ldots $
+
+最后的剩余项变量x, y用 $ x + \\theta h, y + \\theta k $带入
+
+当n = 1时
+
+$ f(x + h, y + k) - f(x, y) = hf_ {x}(x + \\theta h, y + \\theta k) + kf_ {y}(x + \\theta h, y + \\theta k) $
+
+$ (x + \\theta h, y + \\theta k) $为线分AB上的点。这是二元的平均值定理
+
+对点A = (x, y)第n阶微分，假定可能性
+
+$ f(x + h, y + k) = f(x, y) + df(x, y) + \\frac{d^{2} f(x, y)}{2!} + \\cdots + \\frac{d^{n} f(x, y)}{n!} + o \\rho^{n} $
+
+$ \\rho = \\sqrt{h^{2} + k^{2}} $
+
+这样证明
+
+$ F(t) = f(x + \\frac{h}{\\rho} t, y + \\frac{k}{\\rho} t) $
+
+则
+
+$ F(t) = F(0) + tF^{\\prime}(0) + \\cdots + \\frac{t^{n} F^{(n)}(0)}{n!} + ot^{n} $
+
+$ t = \\rho $，这样 $ ot^{n} / t^{n} $AB线分的方向无关收敛
