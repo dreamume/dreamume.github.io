@@ -28,6 +28,7 @@ category:   maths
     3.  [定理（Wilson定理）](#orgb40ff78)
 2.  [Fisher不等式](#org213207c)
     1.  [定理（Fisher不等式）](#org1cc5c46)
+3.  [覆盖完全二分图](#org8a1682e)
 
 
 <a id="orge454f95"></a>
@@ -176,3 +177,20 @@ $ \\begin{aligned} \\operatorname{det} M &= \\operatorname{det} \\left( \\begin{
 我们现在回忆 $ r = \\lambda \\cdot \\frac{\\upsilon - 1}{k-1} $。明显地，$ r + (\\upsilon - 1) \\lambda \\ne 0 $，且因此 $ \\upsilon > k $，我们也有 $ r > \\lambda $，且这样 $ \\operatorname{det} M \\ne 0 $。因此，矩阵M有 $ rank^{2} \\upsilon $。但如果我们有 $ b < \\upsilon $则$ A, A^{T} $的rank必须严格小于 $ \\upsilon $，且因此矩阵 $ M = AA^{T} $有 $ rank < \\upsilon $。我们有 $ b \\ge \\upsilon $。这完成了Fisher不等式的证明
 
 这个矩阵rank的应用程序变成许多相似的组合数学的基础证明
+
+
+<a id="org8a1682e"></a>
+
+# 覆盖完全二分图
+
+如下问题为通信问题作为动机
+
+**问题** 一个完全图 $ K_ {n} $的边的集合应该表达为m完全二分图的边集合的不想交并。m = m(n)的最小值的可能性是什么？
+
+一个可能的表达 $ E(K_ {n}) $作为n - 1的完全二分图的边的集合的不想交并使用类型 $ K_ {1, n_ {i}} $的图。这里是一个n = 5的不相交覆盖的例子：
+
+![img](../img/disjoint_covering_bipartite_graph_n_5.png)
+
+为产生对任意n的一个不相交覆盖，假设 $ E(K_ {n-1}) $已经被使用n-2星表达。在图形 $ K_ {n} $中，考虑一个顶点，且覆盖所有边包含一个星 $ K_ {1, n-1} $的边集合的顶点。然后它依然覆盖$ K_ {n-1} $的图形对称的所有边，且我们可这么做
+
+显然我们不能做得更好，比如通过使用一些颜色类别很大的完全二分图
