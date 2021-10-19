@@ -680,3 +680,35 @@ $ F(t) = f(x + \\frac{h}{\\rho} t, y + \\frac{k}{\\rho} t) $
 $ F(t) = F(0) + tF^{\\prime}(0) + \\cdots + \\frac{t^{n} F^{(n)}(0)}{n!} + ot^{n} $
 
 $ t = \\rho $，这样 $ ot^{n} / t^{n} $AB线分的方向无关收敛
+
+**Taylor级数** 如果f(x)各阶微分存在的话，区间内关于x
+
+$ lim_ {n \\to \\infty}R_ {n} = 0 $
+
+则
+
+$ f(x) = lim_ {n \\to \\infty} \\sum^{n}_ {\\nu = 0}(x - a)^{\\nu} \\frac{f^{(\\nu)}(a)}{\\nu !} $
+
+右边用无限级数写成为
+
+$ f(x) = f(a) + (x - a)\\frac{f^{\\prime}(a)}{1!} + (x - a)^{2} \\frac{f^{\\prime \\prime}(a)}{2!} + \\cdots + (x - a)^{n} \\frac{f^{(n)}(a)}{n!} + \\cdots $
+
+这样的形式是f(x)的Taylor级数。特别地a = 0时被称为Maclaurin级数
+
+例子 $ f(x) = e^{x} $
+
+a = 0且 $ f^{(n)} = 1 $则
+
+$ R_ {n} = \\frac{x^{n}}{n!} e^{\\theta x}, \\qquad 0 < \\theta < 1 $
+
+则
+
+$ \| R_ {n} \| < \\frac{\| x \|^{n}}{n!} e^{\| x \|} $
+
+固定x则 $ \\lim \\frac{\| x \|^{n}}{n!} = 0 $，则 $ - \\infty < x < \\infty $
+
+$ e^{x} = 1 + \\frac{x}{1!} + \\frac{x^{2}}{2!} + \\cdots + \\frac{x^{n}}{n!} + ... $
+
+特别当x = 1时，剩余项写入得
+
+$ e = 1 + \\frac{1}{1!} + \\frac{1}{2!} + \\cdots + \\frac{1}{n!} + R_ {n+1}, \\qquad R_ {n+1} = \\frac{e^{\\theta}}{(n+1)!} < \\frac{3}{(n+1)!} $
