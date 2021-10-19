@@ -29,6 +29,7 @@ category:   maths
 2.  [Fisher不等式](#org213207c)
     1.  [定理（Fisher不等式）](#org1cc5c46)
 3.  [覆盖完全二分图](#org8a1682e)
+    1.  [定理（Graham-Pollak定理）](#org5c7eb2d)
 
 
 <a id="orge454f95"></a>
@@ -194,3 +195,30 @@ $ \\begin{aligned} \\operatorname{det} M &= \\operatorname{det} \\left( \\begin{
 为产生对任意n的一个不相交覆盖，假设 $ E(K_ {n-1}) $已经被使用n-2星表达。在图形 $ K_ {n} $中，考虑一个顶点，且覆盖所有边包含一个星 $ K_ {1, n-1} $的边集合的顶点。然后它依然覆盖$ K_ {n-1} $的图形对称的所有边，且我们可这么做
 
 显然我们不能做得更好，比如通过使用一些颜色类别很大的完全二分图
+
+但Graham和Pollack发现一个巧妙的方法显示没有更好的不想交覆盖可存在
+
+
+<a id="org5c7eb2d"></a>
+
+## 定理（Graham-Pollak定理）
+
+我们有m(n) > n - 1
+
+**证明** 假设完全二分图 $ B_ {1}, B_ {2}, \\ldots, B_ {m} $不想交地覆盖$ K_ {n} $的所有边，例如，我们有 $ V(B_ {k}) \\subseteq V(K_ {n}) = \\{1, 2, \\ldots, n\\} $和 $ E(K_ {n}) = E(B_ {1}) \\dot{\\cup} E(B_ {2}) \\dot{\\cup} \\cdots \\dot{\\cup} E(B_ {m}) $。设 $ X_ {k} $和 $ Y_ {k} $为 $ B_ {k} $的颜色分类；这意味着 $ B_ {k} $的边都在 $ X_ {k} $和 $ Y_ {k} $之间
+
+对每个图 $ B_ {k} $，我们给出一个 $ n \\times n $的矩阵 $ A_ {k} $，其元素为
+
+$ a^{(k)}_ {ij} = \\left\\{ \\begin{array}{ll} 1 & \\text{if } i \\in X_ {k} \\text{ and } j \\in Y_ {k} \\\\ 0 & otherwise \\end{array} \\right. $
+
+$ A_ {k} $的定义像图形 $ B_ {k} $的邻接矩阵，除了 $ A_ {k} $是不对称的 - 图形 $ B_ {k} $的每条边只贡献一个1。例如，对子图
+
+![img](../img/example_of_bipartite_graph_for_graham_pollak_theory.png)
+
+矩阵 $ A_ {k} $为
+
+$ \\left\\{ \\begin{array}{cccccc} 0 & 0 & 0 & 1 & 1 & 1 \\\\ 0 & 0 & 0 & 1 & 1 & 1 \\\\ 0 & 0 & 0 & 0 & 0 & 0 \\\\ 0 & 0 & 0 & 0 & 0 & 0 \\\\ 0 & 0 & 0 & 0 & 0 & 0 \\\\ 0 & 0 & 0 & 0 & 0 & 0 \\end{array} \\right\\} $
+
+我们声称每个矩阵 $ A_ {k} $有rank 1。这是因为所有 $ A_ {k} $的非零行为相同的向量
+
+让我们现在考虑矩阵 $ A = A_ {1} + A_ {2} + \\cdots + A_ {m} $。每条边 $ \\{i, j\\} $只属于一个图形 $ B_ {k} $，且因此对每个 $ i \\ne j $，我们有要么 $ a_ {ij} = 1, a_ {ji} = 0 $或 $ a_ {ij} = 0, a_ {ji} = 1 $。$ a_ {ii} = 0 $。这样我们得到 $ A + A^{T} = J_ {n} - I_ {n}, J_ {n} $是 $ n \\times n $的矩阵，其元素都是1，$ I_ {n} $是 $ n \\times n $的单位矩阵。我们现在想要显示这样的矩阵rank至少为n - 1。一旦我们知道这个，我们获得 $ n - 1\\le r(A) \\le r(A_ {1}) + \\cdots + r(A_ {m}) = m $，因为对任意两个矩阵 $ M_ {1}, M_ {2} $（相同的形状），我们有 $ r(M_ {1} + M_ {1}) \\le r(M_ {1}) + r(M_ {2}) $
