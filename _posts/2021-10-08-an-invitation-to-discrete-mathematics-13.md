@@ -186,9 +186,9 @@ $ \\begin{aligned} \\operatorname{det} M &= \\operatorname{det} \\left( \\begin{
 
 如下问题为通信问题作为动机
 
-**问题** 一个完全图 $ K_ {n} $的边的集合应该表达为m完全二分图的边集合的不想交并。m = m(n)的最小值的可能性是什么？
+**问题** 一个完全图 $ K_ {n} $的边的集合应该表达为m完全二分图的边集合的不相交并。m = m(n)的最小值的可能性是什么？
 
-一个可能的表达 $ E(K_ {n}) $作为n - 1的完全二分图的边的集合的不想交并使用类型 $ K_ {1, n_ {i}} $的图。这里是一个n = 5的不相交覆盖的例子：
+一个可能的表达 $ E(K_ {n}) $作为n - 1的完全二分图的边的集合的不相交并使用类型 $ K_ {1, n_ {i}} $的图。这里是一个n = 5的不相交覆盖的例子：
 
 ![img](../img/disjoint_covering_bipartite_graph_n_5.png)
 
@@ -196,7 +196,7 @@ $ \\begin{aligned} \\operatorname{det} M &= \\operatorname{det} \\left( \\begin{
 
 显然我们不能做得更好，比如通过使用一些颜色类别很大的完全二分图
 
-但Graham和Pollack发现一个巧妙的方法显示没有更好的不想交覆盖可存在
+但Graham和Pollack发现一个巧妙的方法显示没有更好的不相交覆盖可存在
 
 
 <a id="org5c7eb2d"></a>
@@ -205,7 +205,7 @@ $ \\begin{aligned} \\operatorname{det} M &= \\operatorname{det} \\left( \\begin{
 
 我们有m(n) > n - 1
 
-**证明** 假设完全二分图 $ B_ {1}, B_ {2}, \\ldots, B_ {m} $不想交地覆盖$ K_ {n} $的所有边，例如，我们有 $ V(B_ {k}) \\subseteq V(K_ {n}) = \\{1, 2, \\ldots, n\\} $和 $ E(K_ {n}) = E(B_ {1}) \\dot{\\cup} E(B_ {2}) \\dot{\\cup} \\cdots \\dot{\\cup} E(B_ {m}) $。设 $ X_ {k} $和 $ Y_ {k} $为 $ B_ {k} $的颜色分类；这意味着 $ B_ {k} $的边都在 $ X_ {k} $和 $ Y_ {k} $之间
+**证明** 假设完全二分图 $ B_ {1}, B_ {2}, \\ldots, B_ {m} $不相交地覆盖$ K_ {n} $的所有边，例如，我们有 $ V(B_ {k}) \\subseteq V(K_ {n}) = \\{1, 2, \\ldots, n\\} $和 $ E(K_ {n}) = E(B_ {1}) \\dot{\\cup} E(B_ {2}) \\dot{\\cup} \\cdots \\dot{\\cup} E(B_ {m}) $。设 $ X_ {k} $和 $ Y_ {k} $为 $ B_ {k} $的颜色分类；这意味着 $ B_ {k} $的边都在 $ X_ {k} $和 $ Y_ {k} $之间
 
 对每个图 $ B_ {k} $，我们给出一个 $ n \\times n $的矩阵 $ A_ {k} $，其元素为
 
