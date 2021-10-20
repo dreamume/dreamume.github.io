@@ -98,3 +98,33 @@ $ \\sigma_ {k} = \\sum_ {i_ {1} < i_ {2} < \\cdots < i_ {k}}x_ {i_ {1}}x_ {i_ {2
 $ \\ldots \\ldots \\ldots \\ldots \\ldots \\ldots \\ldots \\ldots $
 
 $ \\sigma_ {n} = x_ {1}x_ {2} \\cdots x_ {n} $
+
+**问题** 多项式 $ s_ {2} = x^{2}_ {1} + x^{2}_ {2} + \\cdots + x^{2}_ {n} $是对称的，则
+
+$ s_ {2} = \\sigma^{2}_ {1} - 2 \\sigma_ {2} $
+
+这样，代数等式 $ x^{n} + a_ {1}x^{n-1} + a_ {2}x^{n-2} + \\cdots + a_ {n-1}x + a_ {n} = 0 $的根的平方的和为 $ a^{2}_ {1} - 2a_ {2} $
+
+明显地，对称多项式的和和乘积也是也是对称多项式。即对称多项式形成所有多项式代数的一个子代数
+
+因此，如果 $ F \\in K[X_ {1}, X_ {2}, \\cdots, X_ {m}] $是一个m个变量的多项式且 $ f_ {1}, f_ {2}, \\ldots, f_ {m} \\in K[x_ {1}, x_ {2}, \\ldots, x_ {m}] $为对称多项式，则 $ F(f_ {1}, f_ {2}, \\ldots, f_ {m}) $是变量 $ x_ {1}, x_ {2}, \\ldots, x_ {n} $的对称多项式。自然会问是否存在对错多项式 $ f_ {1}, f_ {2}, \\ldots, f_ {m} $使得任意对称多项式可通过上述表达。它们是存在的，基本对称多项式 $ \\sigma_ {1}, \\sigma_ {2}, \\ldots, \\sigma_ {n} $即是
+
+**定理** 任意对称多项式可唯一的表达为基本对称多项式的多项式
+
+**引理** 设 $ u = ax^{k_ {1}}_ {1} x^{k_ {2}}_ {2} \\cdots x^{k_ {n}}_ {n} $为一个对称多项式f的leading monomial，则
+
+$ k_ {1} \\ge k_ {2} \\ge \\cdots \\ge k_ {n} $
+
+**引理** 对任意mononmial $ u = x^{k_ {1}}_ {1} x^{k_ {2}}_ {2} \\cdots x^{k_ {n}}_ {n} $满足上式，则存在非负整数 $ l_ {1}, l_ {2}, \\ldots, l_ {n} $使得对称多项式乘积 $ \\sigma^{l_ {1}}_ {1} \\sigma^{l_ {2}}_ {2} \\cdots \\sigma^{l_ {n}}_ {n} $的leading monomial为u。该条件唯一决定数 $ l_ {1}, l_ {2}, \\ldots, l_ {n} $
+
+**证明** $ \\sigma_ {k} $的leading monomial为 $ x_ {1}x_ {2} \\cdots x_ {k} $，通过之前的命题，$ \\sigma^{l_ {1}}_ {1} \\sigma^{l_ {2}}_ {2} \\cdots \\sigma^{l_ {n}}_ {n} $的leading mononmial为
+
+$ x^{l_ {1}}_ {1} (x_ {1}x_ {2})^{l_ {2}} \\cdots (x_ {1}x_ {2}\\cdots x_ {n})^{l_ {n}} = x^{l_ {1} + l_ {2} + \\cdots + l_ {n}}_ {1} + x^{l_ {2} + \\cdots + l_ {n}}_ {2} \\cdots x^{l_ {n}}_ {n} $
+
+设它等于monomial u，我们获得如下线性等式系统
+
+$ \\left\\{\\begin{array}{r}l_{1}+l_{2}+\\cdots+l_{n}=k_{1} \\\\ l_{2}+\\cdots+l_{n}=k_{2} \\\\ \\cdots \\ldots \\ldots \\ldots \\\\ l_{n}=k_{n}\\end{array}\\right. $
+
+则该系统有唯一的解
+
+$ l_ {i} = k_ {i} - k_ {i+1}, \\qquad i = 1,2,\\ldots,n-1 \\qquad l_ {n} = k_ {n} $
