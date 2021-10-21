@@ -475,3 +475,29 @@ $ (X \\times V) \\cap C = (U_ {x_ {1}} \\cup \\cdots \\cup U_ {x_ {n}}) \\times 
 这样，$ y \\in V \\subset Y - \\pi_ {Y}(C) $且V是开集。因为y是$ Y - \\pi_ {Y}(C) $上任意一点，它使得该集合是开集，且这样它的补集 $ \\pi_ {Y}(C) $是闭集
 
 **推论** 如果X是紧的则 $ \\pi_ {Y}: X \\times Y \\to Y $是适合的
+
+**推论** 如果X和Y为紧的，则 $ X \\times Y $为紧的
+
+**推论（有限乘积的Tychonoff定理）** 如果$ X_ {i} $是紧的，则 $ X_ {1} \\times \\cdots \\times X_ {n} $是紧的
+
+**推论** 方块 $ I^{n} \\subset R^{n} $是紧的
+
+**推论** $ R^{n} $的子空间是紧的 $ \\Leftrightarrow $ 它是闭的且有界
+
+证明 设X为子空间
+
+（ $ \\Rightarrow $）因为X是紧的，它是闭的。用在原点半径为k, $ k = 1, 2, \\ldots $的开球覆盖X，因为有这样的，通过假设，一个有限的覆盖，X必须在这些开球中的一个，因此它是有界的
+
+（ $ \\Leftarrow $）如果X是闭且有边界的，则它在以原点半径为k的某些球里，该球包含 $ [-k, k] \\times \\cdots \\times [-k, k] $区域，因此是紧的。这样X是一个紧集的闭子集且因此是一个子空间
+
+**命题** 一个在乘积空间 $ X = \\times X_ {\\alpha} $的net覆盖点 $ (\\ldots, x_ {\\alpha}, \\ldots) \\Leftrightarrow $ 它是每个映射 $ \\pi_ {\\alpha}: X \\to X_ {\\alpha} $收敛到 $ x_ {\\alpha} $的组合
+
+**定理（Tychonoff）** 紧空间的一个任意收集的乘积是紧的
+
+证明 设 $ X = \\times X_ {\\alpha}, X_ {\\alpha} $是紧的。设 $ f: D \\to X $为X中的一个universal net。则组合 $ \\pi_ {\\alpha} \\circ f $也是一个universal net。因此它的组合覆盖，通过之前的定理证明。但这意味着原始的net覆盖点其第$ \\alpha $个坐标是 $ x_ {\\alpha} $且这样X是紧的
+
+如果X是一个空间且A是一个集合，A的乘积拷贝X通常被记为 $ X^{A} $且被认为是函数的空间：$ f: A \\to X $。这样，有如下形式
+
+**命题** 一个net $ \\{ f_ {\\alpha} \\} $在 $ X^{A} $中覆盖 $ f \\in X^{A} \\Leftrightarrow \\forall x \\in X, f_ {\\alpha}(x) \\to f(x) $，特别地，$ \\lim{(f_ {\\alpha}(x))} = (\\lim{f_ {\\alpha}})(x) $
+
+**定义** 如果X和Y是空间，则它们的拓扑和或不相交并X + Y是集合 $ X \\times \\{0\\} \\cup Y \\times \\{1\\} $，其拓扑使得 $ X \\times \\{0\\}, Y \\times \\{1\\} $闭的且包含 $ X \\to X + Y $的$ x \\mapsto (x, 0) $和 $ Y \\to X + Y $的 $ y \\mapsto (y, 1) $同构到它们的像。更一般地，如果 $ \\{X_ {\\alpha} \| \\alpha \\in A \\} $是空间的一个索引家族则它们的拓扑和 $ +_ {\\alpha} X_ {\\alpha} $是 $ \\cup \\{X_ {\\alpha} \\times \\{ \\alpha \\} \| \\alpha \\in A \\} $给出拓扑使得每个 $ X_ {\\alpha} \\times \\{\\alpha\\} $闭且每个包含 $ X_ {\\beta} \\to +_ {\\alpha}X_ {\\alpha} $的 $ x \\mapsto (x, \\beta) $是它的象 $ X_ {\\beta} \\times \\{\\beta\\} $的一个同构
