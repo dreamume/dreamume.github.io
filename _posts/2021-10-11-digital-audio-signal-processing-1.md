@@ -24,6 +24,8 @@ category:   it
 
 1.  [简介](#org2b3fb01)
     1.  [演奏室技术](#orga7d311f)
+    2.  [数字传送系统](#org02baf81)
+        1.  [地球数字化广播（DAB）](#orgc6d5b96)
 
 
 <a id="org2b3fb01"></a>
@@ -48,3 +50,24 @@ category:   it
 
 ![img](../img/signal_processing_for_recording_storage_transmission_and_reproduction.png)
 
+
+<a id="org02baf81"></a>
+
+## 数字传送系统
+
+本章节将简约解释数字传送。除了基于振幅和频率调制的模拟无线广播系统，$ DAB^{2} $（数字化音频广播）在一些国家已引入。另一方面，网络推动音视频分发，基于网络的因特网广播和视频
+
+
+<a id="orgc6d5b96"></a>
+
+### 地球数字化广播（DAB）
+
+地球数字化广播，压缩磁盘的质量标准将从移动和电报信号的接收站获得。因此，一个从一个传送工作室来的两频道AES/EBU信号被缩减来帮助源编码。在源编码（SC）之后，附加信息（AI）像一类程序（音乐/语音）且流量信息被添加。一个多携技术被用于数字化传送到站点和移动接收器。在传送机，几个广播程序组合在一个混合器中来形成混音信号。频道编码和调制被一个多携转送技术（编码垂直频率多分）使用
+
+![img](../img/digital_sound_studio.png)
+
+![img](../img/n_channel_sound_mixing_console.png)
+
+![img](../img/sound_channel.png)
+
+![img](../img/dab_transmitter.png)
