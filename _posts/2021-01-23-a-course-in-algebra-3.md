@@ -128,3 +128,41 @@ $ \\left\\{\\begin{array}{r}l_{1}+l_{2}+\\cdots+l_{n}=k_{1} \\\\ l_{2}+\\cdots+l
 则该系统有唯一的解
 
 $ l_ {i} = k_ {i} - k_ {i+1}, \\qquad i = 1,2,\\ldots,n-1 \\qquad l_ {n} = k_ {n} $
+
+**标注** 等式 $ l_ {1} + l_ {2} + \\cdots + l_ {n} = k_ {1} $显示monomial $ X^{l_ {1}}_ {1} X^{l_ {2}}_ {2} \\cdots X^{l_ {n}}_ {n} $的总度数为u在 $ x_ {1} $的度数
+
+**定理的证明** 设 $ f \\in K[x_ {1}, x_ {2}, \\ldots, x_ {n}] $ 为一个对称多项式。我们需要找到 $ F \\in K[X_ {1}, X_ {2}, \\ldots, X_ {n}] $使得
+
+$ F(\\sigma_ {1}, \\sigma_ {2}, \\ldots, \\sigma_ {n}) = f $
+
+如果f = 0，则我们可用F = 0。否则， 设 $ u_ {1} = ax^{k_ {1}}_ {1} x^{k_ {2}}_ {2} \\cdots x^{k_ {n}}_ {n} $为f的leading monomial。根据引理，存在一个monomial $ F_ {1} \\in K[X_ {1}, X_ {2}, \\ldots, X_ {n}] $使得多项式 $ F_ {1}(\\sigma_ {1}, \\sigma_ {2}, \\ldots, \\sigma_ {n}) $的leading monomial为 $ u_ {1} $。考虑对称多项式
+
+$ f_ {1} = f - F_ {1}(\\sigma_ {1}, \\sigma_ {2}, \\ldots, \\sigma_ {n}) $
+
+如果 $ f_ {1} = 0 $，我们可用 $ F = F_ {1} $。否则，设 $ u_ {2} $为 $ f_ {1} $的leading monomial。明显地，它小于 $ u_ {1} $。存在一个monomial $ F_ {2} \\in K[X_ {1}, X_ {2}, \\ldots, X_ {n}] $使得 $ F_ {2}(\\sigma_ {1}, \\sigma_ {2}, \\ldots, \\sigma_ {n}) $的leading monomial为 $ u_ {2} $。考虑对称多项式
+
+$ f_ {2} = f_ {1} - F_ {2}(\\sigma_ {1}, \\sigma_ {2}, \\ldots, \\sigma_ {n}) $
+
+如果 $ f_ {2} = 0 $，则我们可用 $ F = F_ {1} + F_ {2} $。否则，继续以上步骤，我们获得一系列对称多项式 $ f, f_ {1}, f_ {2}, \\ldots $，其leading monomial满足如下不等式
+
+$ u_ {1} \\succ u_ {2} \\succ \\cdots $
+
+根据引理，任意monomial $ u_ {m} $的任意变量的指数不超过这个monomial的 $ x_ {1} $的指数，即不超过 $ k_ {1} $。因此，只存在有限多个 $ u_ {m} $中可能的变量指数的收集，且这样我们描述的算法将在某个时候停止。这意味着对某个M，$ f_ {M} = 0 $。则我们可取 $ F = F_ {1} + F_ {2} + \\cdots + F_ {M} $
+
+剩下是证明多项式F是唯一的。假设F和G是多项式使得
+
+$ F(\\sigma_ {1}, \\sigma_ {2}, \\ldots, \\sigma_ {n}) = G(\\sigma_ {1}, \\sigma_ {2}, \\ldots, \\sigma_ {n}) $
+
+考虑H = F - G，则
+
+$ H(\\sigma_ {1}, \\sigma_ {2}, \\ldots, \\sigma_ {n}) = 0 $
+
+我们需要证明H = 0。假设不是这样，设 $ H_ {1}, H_ {2}, \\ldots, H_ {s} $为H的所有非零项。记 $ \\omega_ {i}, i = 1, 2, \\ldots, s $为多项式的leading monomial
+
+$ H_ {i}(\\sigma_ {1}, \\sigma_ {2}, \\ldots, \\sigma_ {n}) \\in K[x_ {1}, x_ {2}, \\ldots, x_ {n}] $
+
+通过引理，monomial $ \\omega_ {1}, \\omega_ {2}, \\ldots, \\omega_ {s} $不会互相成比例。考虑它们中最大的，假设是 $ \\omega_ {1} $。通过构建，$ \\omega_ {1} $ 比所有 $ H_ {1}(\\sigma_ {1}, \\sigma_ {2}, \\ldots, \\sigma_ {n}) $的其他monomial和多项式 $ H_ {i}(\\sigma_ {1}, \\sigma_ {2}, \\ldots, \\sigma_ {n}), i = 2, \\ldots, s $的所有monomial都大。这样
+
+$ H_ {1}(\\sigma_ {1}, \\sigma_ {2}, \\ldots, \\sigma_ {n}) + H_ {2}(\\sigma_ {1}, \\sigma_ {2}, \\ldots, \\sigma_ {n}) + \\cdots + H_ {s}(\\sigma_ {1}, \\sigma_ {2}, \\ldots, \\sigma_ {n}) \\\\ = H(\\sigma_ {1}, \\sigma_ {2}, \\ldots, \\sigma_ {n}) $
+
+monomial $ \\omega_ {1} $不会出现。因此，该和非零，这和我们的假设矛盾
