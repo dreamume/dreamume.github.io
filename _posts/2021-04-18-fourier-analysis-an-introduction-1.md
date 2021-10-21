@@ -433,3 +433,31 @@ $ r^{2} \\frac{\\partial^{2} u}{\\partial r^{2}} + r \\frac{\\partial u}{\\parti
 分离这些变量，看形为 $ u(r, \\theta) = F(r)G(\\theta) $的一个解决方案，我们发现
 
 $ \\frac{r^{2} F^{\\prime \\prime}(r) + rF^{\\prime}(r)}{F(r)} = - \\frac{G^{\\prime \\prime}(\\theta)}{G(\\theta)} $
+
+因为两边依赖不同的变量，它们必须都是常数，即等于 $ \\lambda $。我们因此获得如下等式
+
+$ \\left\\{ \\begin{array}{c} G^{\\prime \\prime}(\\theta) + \\lambda G(\\theta) = 0 \\\\ r^{2}F^{\\prime \\prime}(r) + rF^{\\prime}(r) - \\lambda F(r) = 0 \\end{array} \\right. $
+
+因为G必须为 $ 2 \\pi $的周期，这意味着 $ \\lambda \\ge 0 $且 $ \\lambda = m^{2} $m为一个整数，因此
+
+$ G(\\theta) = \\tilde{A} \\cos{m \\theta} + \\tilde{B} \\sin{m \\theta} $
+
+由欧拉等式 $ e^{ix} = \\cos{x} + i \\sin{x} $，允许我们重写G为复数指数
+
+$ G(\\theta) = Ae^{im \\theta} + Be^{-im \\theta} $
+
+$ \\lambda = m^{2}, m \\ne 0 $，F的两个简单解决方案为 $ F(r) = r^{m}, F(r) = r^{-m} $。如果m = 0，则F(r) = 1和 $ F(r) = \\log{r} $为其两个解决方案。如果m > 0，我们注意 $ r^{-m} $为无穷大当r趋于0时，这样 $ F(r)G(\\theta) $在原点是无边界的；这在m = 0和 $ F(r) = \\log{r} $时也一样。我们拒绝这些解决方案因为它们跟我们的直观相反。因此，我们剩下如下特殊的函数
+
+$ u_ {m}(r, \\theta) = r^{\| m \|}e^{im \\theta}, \\qquad m \\in \\mathbb{Z} $
+
+我们现在有重要的观察之前的Laplacian方程是线性的，且在摆线例子中，我们可叠放以上特殊的解决方案来获得推测的一般化解决方案
+
+$ u(r, \\theta) = \\sum^{\\infty}_ {m = - \\infty} a_ {m}r^{\| m \|}e^{im \\theta} $
+
+如果这个表达式给出了稳定状态下热力方程的所有解决方案，则一个合理的f为
+
+$ u(1, \\theta) = \\sum^{\\infty}_ {m=- \\infty}a_ {m}e^{im \\theta} = f(\\theta) $
+
+我们因此问：给定任意 $ [0, 2 \\pi] $上合理的函数f，$ f(0) = f(2 \\pi) $，我们能找到系数 $ a_ {m} $使得
+
+$ f(\\theta) = \\sum^{\\infty}_ {m = - \\infty}a_ {m}e^{im \\theta} \\qquad ? $
