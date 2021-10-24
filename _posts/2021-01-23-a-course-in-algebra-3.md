@@ -173,52 +173,7 @@ $ f = s_ {3} = x^{3}_ {1} + x^{3}_ {2} + \\cdot + x^{3}_ {n} $
 
 作为$ \\sigma_ {1}, \\sigma_ {2}, \\ldots, \\sigma_ {n} $的多项式。我们的计算收集在如下表格中
 
-<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
-
-
-<colgroup>
-<col  class="org-right" />
-
-<col  class="org-left" />
-
-<col  class="org-left" />
-
-<col  class="org-left" />
-</colgroup>
-<thead>
-<tr>
-<th scope="col" class="org-right">m</th>
-<th scope="col" class="org-left">$ u_ {m} $</th>
-<th scope="col" class="org-left">$ F_ {m}(\\sigma_ {1}, \\sigma_ {2}, \\ldots, \\sigma_ {n}) $</th>
-<th scope="col" class="org-left">$ f_ {m} $</th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-<td class="org-right">1</td>
-<td class="org-left">$ x^{3}_ {1} $</td>
-<td class="org-left">$ \\begin{aligned} \\sigma^{3}_ {1} &= \\sum_ {i}x^{3}_ {i} \\\\ &+ 3 \\sum_ {i \\ne j}x^{2}_ {i}x_ {j} + 6 \\sum_ {i < j < k}x_ {i}x_ {j}x_ {k} \\end{aligned} $</td>
-<td class="org-left">$ -3 \\sum_ {i \\ne j}x^{2}_ {i}x_ {j} - 6\\sum_ {i < j < k} x_ {i}x_ {j}x_ {k} $</td>
-</tr>
-
-
-<tr>
-<td class="org-right">2</td>
-<td class="org-left">$ -3 x^{2}_ {1}x_ {2} $</td>
-<td class="org-left">$ \\begin{aligned} -3 \\sigma_ {1} \\sigma_ {2} &= -3 \\sum_ {i \\ne j}x^{2}_ {i}x_ {j} \\\\ &- 9 \\sum_ {i<j<k}x_ {i}x_ {j}x_ {k} \\end{aligned} $</td>
-<td class="org-left">$ 3 \\sum_ {i<j<k}x_ {i}x_ {j}x_ {k} $</td>
-</tr>
-
-
-<tr>
-<td class="org-right">3</td>
-<td class="org-left">$ 3x_ {1}x_ {2}x_ {3} $</td>
-<td class="org-left">$ 3 \\sigma_ {3} = 3\\sum_ {i<j<k}x_ {i}x_ {j}x_ {k} $</td>
-<td class="org-left">0</td>
-</tr>
-</tbody>
-</table>
+$ \\begin{array}{|c|c|c|c|}\\hline m & u_ {m} & F_ {m}\\left(\\sigma_ {1}, \\sigma_ {2}, \\ldots, \\sigma_ {n}\\right) & f_ {m} \\\\ \\hline 1 & x_ {1}^{3} & \\sigma_ {1}^{3}=\\sum_ {i} x_ {i}^{3}+3 \\sum_ {i \\neq j} x_ {i}^{2} x_ {j} & -3 \\sum_ {i \\neq j} x_ {i}^{2} x_ {j} \\\\ & & +6 \\sum_ {i<j<k} x_ {i} x_ {j} x_ {k} & -6 \\sum_ {i<j<k} x_ {i} x_ {j} x_ {k} \\\\ \\hline 2 & -3 x_ {1}^{2} x_ {2} & -3 \\sigma_ {1} \\sigma_ {2}=-3 \\sum_ {i \\neq j} x_ {i}^{2} x_ {j} & 3 \\sum_ {i<j<k} x_ {i} x_ {j} x_ {k} \\\\ & & -9 \\sum_ {i<j<k} x_ {i} x_ {j} x_ {k} & \\\\ \\hline 3 & 3 x_ {1} x_ {2} x_ {3} & 3 \\sigma_ {3}=3 \\sum_ {i<j<k} x_ {i} x_ {j} x_ {k} & 0 \\\\ \\hline \\end{array} $
 
 因此
 
