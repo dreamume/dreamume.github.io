@@ -198,7 +198,7 @@ $ f = s_ {3} = x^{3}_ {1} + x^{3}_ {2} + \\cdot + x^{3}_ {n} $
 <tr>
 <td class="org-right">1</td>
 <td class="org-left">$ x^{3}_ {1} $</td>
-<td class="org-left">$ $ \\begin{aligned} \\sigma^{3}_ {1} &= \\sum_ {i}x^{3}_ {i} \\\\ &+ 3 \\sum_ {i \\ne j}x^{2}_ {i}x_ {j} + 6 \\sum_ {i < j < k}x_ {i}x_ {j}x_ {k} \\end{aligned} $</td>
+<td class="org-left">$ \\begin{aligned} \\sigma^{3}_ {1} &= \\sum_ {i}x^{3}_ {i} \\\\ &+ 3 \\sum_ {i \\ne j}x^{2}_ {i}x_ {j} + 6 \\sum_ {i < j < k}x_ {i}x_ {j}x_ {k} \\end{aligned} $</td>
 <td class="org-left">$ -3 \\sum_ {i \\ne j}x^{2}_ {i}x_ {j} - 6\\sum_ {i < j < k} x_ {i}x_ {j}x_ {k} $</td>
 </tr>
 
