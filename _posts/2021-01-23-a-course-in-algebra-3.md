@@ -189,7 +189,7 @@ $ f = s_ {3} = x^{3}_ {1} + x^{3}_ {2} + \\cdot + x^{3}_ {n} $
 <tr>
 <th scope="col" class="org-right">m</th>
 <th scope="col" class="org-left">$ u_ {m} $</th>
-<th scope="col" class="org-left">$ F_ {m}(\&sigma;_ {1}, \&sigma;_ {2}, \\ldots, \&sigma;_ {n})</th>
+<th scope="col" class="org-left">$ F_ {m}(\\sigma_ {1}, \\sigma_ {2}, \\ldots, \\sigma_ {n}) $</th>
 <th scope="col" class="org-left">$ f_ {m} $</th>
 </tr>
 </thead>
@@ -197,24 +197,24 @@ $ f = s_ {3} = x^{3}_ {1} + x^{3}_ {2} + \\cdot + x^{3}_ {n} $
 <tbody>
 <tr>
 <td class="org-right">1</td>
-<td class="org-left">$ x<sup>3</sup> _ {1} $</td>
-<td class="org-left">$ \&sigma;<sup>3</sup>_ {1} = \&sum;_ {i}x<sup>3</sup>_ {i} + 3 \&sum;_ {i \&ne; j}x<sup>2</sup>_ {i}x_ {j} + 6 \&sum;_ {i &lt; j &lt; k}x_ {i}x_ {j}x_ {k} $</td>
-<td class="org-left">$ -3 \&sum;_ {i \&ne; j}x<sup>2</sup>_ {i}x_ {j} - 6\&sum;_ {i &lt; j &lt; k} x_ {i}x_ {j}x_ {k} $</td>
+<td class="org-left">$ x^{3}_ {1} $</td>
+<td class="org-left">$ $ \\begin{aligned} \\sigma^{3}_ {1} &= \\sum_ {i}x^{3}_ {i} \\\\ &+ 3 \\sum_ {i \\ne j}x^{2}_ {i}x_ {j} + 6 \\sum_ {i < j < k}x_ {i}x_ {j}x_ {k} \\end{aligned} $</td>
+<td class="org-left">$ -3 \\sum_ {i \\ne j}x^{2}_ {i}x_ {j} - 6\\sum_ {i < j < k} x_ {i}x_ {j}x_ {k} $</td>
 </tr>
 
 
 <tr>
 <td class="org-right">2</td>
-<td class="org-left">$ -3 x<sup>2</sup>_ {1}x_ {2} $</td>
-<td class="org-left">$ -3 \&sigma;_ {1} \&sigma;_ {2} = -3 \&sum;_ {i \&ne; j}x<sup>2</sup>_ {i}x_ {j} -9 \&sum;_ {i&lt;j&lt;k}x_ {i}x_ {j}x_ {k} $</td>
-<td class="org-left">$ 3 \&sum;_ {i&lt;j&lt;k}x_ {i}x_ {j}x_ {k} $</td>
+<td class="org-left">$ -3 x^{2}_ {1}x_ {2} $</td>
+<td class="org-left">$ \\begin{aligned} -3 \\sigma_ {1} \\sigma_ {2} &= -3 \\sum_ {i \\ne j}x^{2}_ {i}x_ {j} \\\\ &- 9 \\sum_ {i<j<k}x_ {i}x_ {j}x_ {k} \\end{aligned} $</td>
+<td class="org-left">$ 3 \\sum_ {i<j<k}x_ {i}x_ {j}x_ {k} $</td>
 </tr>
 
 
 <tr>
 <td class="org-right">3</td>
 <td class="org-left">$ 3x_ {1}x_ {2}x_ {3} $</td>
-<td class="org-left">$ 3 \&sigma;_ {3} = 3\&sum;_ {i&lt;j&lt;k}x_ {i}x_ {j}x_ {k}</td>
+<td class="org-left">$ 3 \\sigma_ {3} = 3\\sum_ {i<j<k}x_ {i}x_ {j}x_ {k} $</td>
 <td class="org-left">0</td>
 </tr>
 </tbody>
