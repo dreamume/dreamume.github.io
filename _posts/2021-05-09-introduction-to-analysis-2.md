@@ -849,6 +849,6 @@ $ \\rho = \\sqrt{\\sum^{n}_ {i=1} \\xi^{2}_ {i}} $
 
 $ a_ {ij} $的行列式为
 
-$ D = \\left \| \\begin{array}{cccc} a_ {11} & a_ {12} & \\cdots & a_ {1n} \\\\ a_ {21} & a_ {22} & \\cdots & a_ {2n} \\\\ \\cdots \\cdots \\cdots \\cdots \\cdots \\\\ a_ {n1} & a_ {n2} & \\cdots & a_ {nn} \\end{array} \\right \| \\ne 0 \\qquad (a_ {ij} = a_ {ji}) $
+$ D = \\left \| \\begin{array}{cccc} a_ {11} & a_ {12} & \\cdots & a_ {1n} \\\\ a_ {21} & a_ {22} & \\cdots & a_ {2n} \\\\ \\cdots & \\cdots & \\cdots & \\cdots \\\\ a_ {n1} & a_ {n2} & \\cdots & a_ {nn} \\end{array} \\right \| \\ne 0 \\qquad (a_ {ij} = a_ {ji}) $
 
 这样我们可以对A是否有极值点做断言
