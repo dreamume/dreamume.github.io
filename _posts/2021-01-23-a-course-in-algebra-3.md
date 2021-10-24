@@ -166,3 +166,60 @@ $ H_ {i}(\\sigma_ {1}, \\sigma_ {2}, \\ldots, \\sigma_ {n}) \\in K[x_ {1}, x_ {2
 $ H_ {1}(\\sigma_ {1}, \\sigma_ {2}, \\ldots, \\sigma_ {n}) + H_ {2}(\\sigma_ {1}, \\sigma_ {2}, \\ldots, \\sigma_ {n}) + \\cdots + H_ {s}(\\sigma_ {1}, \\sigma_ {2}, \\ldots, \\sigma_ {n}) \\\\ = H(\\sigma_ {1}, \\sigma_ {2}, \\ldots, \\sigma_ {n}) $
 
 monomial $ \\omega_ {1} $不会出现。因此，该和非零，这和我们的假设矛盾
+
+**例子** 我们表达多项式
+
+$ f = s_ {3} = x^{3}_ {1} + x^{3}_ {2} + \\cdot + x^{3}_ {n} $
+
+作为$ \\sigma_ {1}, \\sigma_ {2}, \\ldots, \\sigma_ {n} $的多项式。我们的计算收集在如下表格中
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-right">m</th>
+<th scope="col" class="org-left">$ u_ {m} $</th>
+<th scope="col" class="org-left">$ F_ {m}(\&sigma;_ {1}, \&sigma;_ {2}, \\ldots, \&sigma;_ {n})</th>
+<th scope="col" class="org-left">$ f_ {m} $</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td class="org-right">1</td>
+<td class="org-left">$ x<sup>3</sup> _ {1} $</td>
+<td class="org-left">$ \&sigma;<sup>3</sup>_ {1} = \&sum;_ {i}x<sup>3</sup>_ {i} + 3 \&sum;_ {i \&ne; j}x<sup>2</sup>_ {i}x_ {j} + 6 \&sum;_ {i &lt; j &lt; k}x_ {i}x_ {j}x_ {k} $</td>
+<td class="org-left">$ -3 \&sum;_ {i \&ne; j}x<sup>2</sup>_ {i}x_ {j} - 6\&sum;_ {i &lt; j &lt; k} x_ {i}x_ {j}x_ {k} $</td>
+</tr>
+
+
+<tr>
+<td class="org-right">2</td>
+<td class="org-left">$ -3 x<sup>2</sup>_ {1}x_ {2} $</td>
+<td class="org-left">$ -3 \&sigma;_ {1} \&sigma;_ {2} = -3 \&sum;_ {i \&ne; j}x<sup>2</sup>_ {i}x_ {j} -9 \&sum;_ {i&lt;j&lt;k}x_ {i}x_ {j}x_ {k} $</td>
+<td class="org-left">$ 3 \&sum;_ {i&lt;j&lt;k}x_ {i}x_ {j}x_ {k} $</td>
+</tr>
+
+
+<tr>
+<td class="org-right">3</td>
+<td class="org-left">$ 3x_ {1}x_ {2}x_ {3} $</td>
+<td class="org-left">$ 3 \&sigma;_ {3} = 3\&sum;_ {i&lt;j&lt;k}x_ {i}x_ {j}x_ {k}</td>
+<td class="org-left">0</td>
+</tr>
+</tbody>
+</table>
+
+因此
+
+$ s_ {3} = \\sigma^{3}_ {1} - 3 \\sigma_ {1} \\sigma_ {2} + 3 \\sigma_ {3} $
