@@ -173,7 +173,7 @@ $ f = s_ {3} = x^{3}_ {1} + x^{3}_ {2} + \\cdot + x^{3}_ {n} $
 
 作为$ \\sigma_ {1}, \\sigma_ {2}, \\ldots, \\sigma_ {n} $的多项式。我们的计算收集在如下表格中
 
-$ \\begin{array}{|c|c|c|c|}\\hline m & u_ {m} & F_ {m}\\left(\\sigma_ {1}, \\sigma_ {2}, \\ldots, \\sigma_ {n}\\right) & f_ {m} \\\\ \\hline 1 & x_ {1}^{3} & \\sigma_ {1}^{3}=\\sum_ {i} x_ {i}^{3}+3 \\sum_ {i \\neq j} x_ {i}^{2} x_ {j} & -3 \\sum_ {i \\neq j} x_ {i}^{2} x_ {j} \\\\ & & +6 \\sum_ {i<j<k} x_ {i} x_ {j} x_ {k} & -6 \\sum_ {i<j<k} x_ {i} x_ {j} x_ {k} \\\\ \\hline 2 & -3 x_ {1}^{2} x_ {2} & -3 \\sigma_ {1} \\sigma_ {2}=-3 \\sum_ {i \\neq j} x_ {i}^{2} x_ {j} & 3 \\sum_ {i<j<k} x_ {i} x_ {j} x_ {k} \\\\ & & -9 \\sum_ {i<j<k} x_ {i} x_ {j} x_ {k} & \\\\ \\hline 3 & 3 x_ {1} x_ {2} x_ {3} & 3 \\sigma_ {3}=3 \\sum_ {i<j<k} x_ {i} x_ {j} x_ {k} & 0 \\\\ \\hline \\end{array} $
+$ \\begin{array}{\|c\|c\|c\|c\|}\\hline m & u_ {m} & F_ {m}\\left(\\sigma_ {1}, \\sigma_ {2}, \\ldots, \\sigma_ {n}\\right) & f_ {m} \\\\ \\hline 1 & x_ {1}^{3} & \\sigma_ {1}^{3}=\\sum_ {i} x_ {i}^{3}+3 \\sum_ {i \\neq j} x_ {i}^{2} x_ {j} & -3 \\sum_ {i \\neq j} x_ {i}^{2} x_ {j} \\\\ & & +6 \\sum_ {i<j<k} x_ {i} x_ {j} x_ {k} & -6 \\sum_ {i<j<k} x_ {i} x_ {j} x_ {k} \\\\ \\hline 2 & -3 x_ {1}^{2} x_ {2} & -3 \\sigma_ {1} \\sigma_ {2}=-3 \\sum_ {i \\neq j} x_ {i}^{2} x_ {j} & 3 \\sum_ {i<j<k} x_ {i} x_ {j} x_ {k} \\\\ & & -9 \\sum_ {i<j<k} x_ {i} x_ {j} x_ {k} & \\\\ \\hline 3 & 3 x_ {1} x_ {2} x_ {3} & 3 \\sigma_ {3}=3 \\sum_ {i<j<k} x_ {i} x_ {j} x_ {k} & 0 \\\\ \\hline \\end{array} $
 
 因此
 
