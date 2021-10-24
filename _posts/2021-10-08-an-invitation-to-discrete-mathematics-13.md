@@ -309,6 +309,6 @@ $ C = (A \\cup B) \\ (A \\cap B) $是集合A和B的对称差
 
 其次，让我们显示基本循环产生 $ \\mathcal{E} $。选择一个偶集合A和通过它的特征向量定义一个集合B
 
-$ \\mathcal{v}_ {B} = \\sum_ {e \\in A \\ E^{\\prime}} \\mathcal{v}_ {C_ {e}} $
+$ \\mathcal{v}_ {B} = \\sum_ {e \\in A \ E^{\\prime}} \\mathcal{v}_ {C_ {e}} $
 
 哪条边包含在B中？只有属于基本循环为奇数的边。B包含集合 $ A \\ E^{\\prime} $因为它的每条边在一个唯一的基本循环上。设C记为集合A和B的对称差。这是一个偶集合，且同时，它必须包含 $ E^{\\prime} $。因为 $ E^{\\prime} $没有循环，我们获得 $ C = \\emptyset $，意味着A = B。这样表示集合A为基本循环的线性组合
