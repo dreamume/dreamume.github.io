@@ -34,6 +34,7 @@ category:   maths
     1.  [定义（边的偶数集）](#orgd93f163)
     2.  [引理](#org9cca52d)
     3.  [定理（循环空间定理）](#org41d11cc)
+5.  [循环和剪切：循环空间再探讨](#orga3e02a7)
 
 
 <a id="orge454f95"></a>
@@ -332,3 +333,16 @@ $ C_ {f} = \\{c, f, h, e\\} $
 我们容易得出如下推论
 
 **推论** 带k个部分的图形G = (V, E)的偶集合的数量是 $ 2^{\| E \| - \| V \| + k} $
+
+
+<a id="orga3e02a7"></a>
+
+# 循环和剪切：循环空间再探讨
+
+**循环** 让我们回忆之前章节朝向的记号。一个图形G = (V, E)的一个朝向是一个有向图 $ \\vec{G} = (V, \\vec{E}) $，集合 $ \\vec{E} $包含，对每条边 $ \\{x, y\\} \\in E $，只有有向边(x, y)和(y, x)其中的一个。如下图显示了一个图形和它可能的一个朝向
+
+![img](../img/example_of_orientation_of_graph_in_cycle_space.png)
+
+我们假设一些朝向 $ \\vec{G} = (V, \\vec{E}) $被选中。一个实函数 $ f: \\vec{E} \\to R $被称为一个循环如果我们有，对图形G的每个点 $ \\upsilon $
+
+$ \\sum_ {x \\in V: (\\upsilon, x) \\in \\vec{E}} f(\\upsilon, x) = \\sum_ {x \\in V: (x, \\upsilon) \\in \\vec{E}} f(x, \\upsilon) $
