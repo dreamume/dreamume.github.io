@@ -31,6 +31,7 @@ category:   maths
     6.  [Nets (Moore-Smith Convergence)](#orgbf02f66)
     7.  [Compactness](#org838373f)
     8.  [Products](#orgdbaaa36)
+    9.  [再次Metric空间](#org8384420)
 
 
 <a id="org8fd57c5"></a>
@@ -501,3 +502,30 @@ $ (X \\times V) \\cap C = (U_ {x_ {1}} \\cup \\cdots \\cup U_ {x_ {n}}) \\times 
 **命题** 一个net $ \\{ f_ {\\alpha} \\} $在 $ X^{A} $中覆盖 $ f \\in X^{A} \\Leftrightarrow \\forall x \\in X, f_ {\\alpha}(x) \\to f(x) $，特别地，$ \\lim{(f_ {\\alpha}(x))} = (\\lim{f_ {\\alpha}})(x) $
 
 **定义** 如果X和Y是空间，则它们的拓扑和或不相交并X + Y是集合 $ X \\times \\{0\\} \\cup Y \\times \\{1\\} $，其拓扑使得 $ X \\times \\{0\\}, Y \\times \\{1\\} $闭的且包含 $ X \\to X + Y $的$ x \\mapsto (x, 0) $和 $ Y \\to X + Y $的 $ y \\mapsto (y, 1) $同构到它们的像。更一般地，如果 $ \\{X_ {\\alpha} \| \\alpha \\in A \\} $是空间的一个索引家族则它们的拓扑和 $ +_ {\\alpha} X_ {\\alpha} $是 $ \\cup \\{X_ {\\alpha} \\times \\{ \\alpha \\} \| \\alpha \\in A \\} $给出拓扑使得每个 $ X_ {\\alpha} \\times \\{\\alpha\\} $闭且每个包含 $ X_ {\\beta} \\to +_ {\\alpha}X_ {\\alpha} $的 $ x \\mapsto (x, \\beta) $是它的象 $ X_ {\\beta} \\times \\{\\beta\\} $的一个同构
+
+
+<a id="org8384420"></a>
+
+## 再次Metric空间
+
+在本节中，我们讨论一个metric空间完备的中心概念，直观地说，序列应该收敛。我们也显示在拓扑空间上，对给定的拓扑在空间上存在一个度量的某些拓扑条件
+
+**定义** 一个度量空间上的柯西序列是一个序列 $ x_ {1}, x_ {2}, x_ {3}, \\ldots $使得 $ \\forall \\epsilon > 0, \\exists N > 0 \\in n, m > N \\Rightarrow dist(x_ {n}, x_ {m}) < \\epsilon $
+
+**定义** 一个度量空间X被称为是完备的如果X中每个柯西序列在X中收敛
+
+**定义** 一个度量空间X是总边界的，如果对每个 $ \\epsilon > 0 $，X可被有限个 $ \\epsilon - $球覆盖
+
+**定理** 在一个度量空间X中如下条件相当
+
+(1) X是紧的
+
+(2) X中每个序列有一个收敛的子序列
+
+(3) X是完备的且有总边界
+
+证明。(1) $ \\Rightarrow $ (2)。设 $ \\{x_ {n}\\} $为一个序列。假设x不是一个子序列的极限。则有一个x的开的邻居关系 $ U_ {x} $包含 $ x_ {n} $，n为一个有限数。因为X可被有限个 $ U_ {x} $覆盖，这跟n是无穷大索引矛盾
+
+(2) $ \\Rightarrow $ (3)。设 $ \\{x _{n} \\} $为一个柯西序列。它从(2)有对某个 $ x \\in X $有某个子序列 $ x_ {n_ {j}} \\to x $。三角不等式意味着 $ x_ {n} \\to x $且因此X是完备的。现在假设X不被有限个 $ \\epsilon - $球覆盖。则可选择点 $ x_ {1}, x_ {2}, \\ldots $使得 $ dist(x_ {i}, x_ {j}) > \\epsilon $，对所有j < i。则任意这些点的两个之间的距离大于 $ \\epsilon $。这样的序列没有收敛的子序列，这跟(2)矛盾。这样，事实上，X必须为总有序的
+
+(3) $ \\Rightarrow $ (2)。设 $ \\{x_ {n} \\} $ 为X中任意一个序列。因为X被假设为总有界的，它可被有限个1球覆盖。这样这些1球中的一个，记为 $ B_ {1} $，对一个无限数n包含 $ x_ {n} $。接着，X，且因此 $ B_ {1} $，可被有限个 $ \\frac{1}{2} $球覆盖，这样记 $ B_ {2} $，必须使得 $ B_ {1} \\cap B_ {2} $包含 $ x_ {n} $，对无限数n。继续这样的操作我们可找到，对 $ n = 1, 2, 3 \\ldots $，一个 $ (1 / n) $球 $ B_ {n} $使得 $ B_ {1} \\cap B_ {2} \\cap \\cdots \\cap B_ {n} $包含 $ x_ {i} $，i为一个无限数。这样，我们可选择一个子序列 $ \\{ x_ {n_ {i}} \\} $使得 $ x_ {n_ {i}} \\in B_ {1} \\cap \\cdots \\cap B_ {i} $，对所有i。如果i < j，则它有 $ x_ {n_ {i}}, x_ {n_ {j}} $都在 $ B_ {1} $中，且因此 $ dist(x_ {n_ {i}}, x_ {n_ {j}}) < 1 / i $。这意味着该序列是柯西的且这样它必须收敛
