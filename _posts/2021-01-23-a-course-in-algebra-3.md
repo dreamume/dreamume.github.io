@@ -191,7 +191,7 @@ $ a_ {0}x^{n} + a_ {1}x^{n-1} + \\cdots + a_ {n-1}x + a_ {n} = 0, \\qquad a_ {0}
 
 $ f(c_ {1}, c_ {2}, \\ldots, c_ {n}) = F(-\\frac{a_ {1}}{a_ {0}}, \\frac{a_ {2}}{a_ {0}}, \\ldots, (-1)^{n} \\frac{a_ {n}}{a_ {0}}) $
 
-*标注* 设 $ \\operatername{deg}_ {x_ {1}} f = k $。则 $ \\operatername{deg} F = k $。用 $ a^{k}_ {0} $乘以上式，我们获得右边度数为k的 $ a_ {0}, a_ {1}, a_ {2}, \\ldots, a_ {n} $的同构多项式
+*标注* 设 $ \\operatorname{deg}_ {x_ {1}} f = k $。则 $ \\operatorname{deg} F = k $。用 $ a^{k}_ {0} $乘以上式，我们获得右边度数为k的 $ a_ {0}, a_ {1}, a_ {2}, \\ldots, a_ {n} $的同构多项式
 
 *例子* 设 $ c_ {1}, c_ {2}, c_ {3}, c_ {4} $为如下等式的根
 
