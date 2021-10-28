@@ -346,3 +346,28 @@ $ C_ {f} = \\{c, f, h, e\\} $
 我们假设一些朝向 $ \\vec{G} = (V, \\vec{E}) $被选中。一个实函数 $ f: \\vec{E} \\to R $被称为一个循环如果我们有，对图形G的每个点 $ \\upsilon $
 
 $ \\sum_ {x \\in V: (\\upsilon, x) \\in \\vec{E}} f(\\upsilon, x) = \\sum_ {x \\in V: (x, \\upsilon) \\in \\vec{E}} f(x, \\upsilon) $
+
+循环的记号有各种直观的解释。例如，如果 $ \\vec{G} $是一个电子电路的设计且如果f(e)表达为通过边e的电流，则上式解释为对每个点，总的电流流入和总的电流流出相同。这是Kirchhoff第一定律。这个电子解释是本节讨论该定理的第一个动机
+
+循环的一个例子可如下获得。设 $ C = (\\upsilon_ {1}, \\upsilon_ {2}, \\ldots, \\upsilon_ {k+1} = \\upsilon_ {1}) $为图形G中点的循环的序列。我们定义一个循环f在有向图朝向 $ \\vec{G} $
+
+$ f(\\upsilon_ {i}, \\upsilon_ {i+1}) = 1 \\qquad \\text{if } (\\upsilon_ {i}, \\upsilon_ {i+1}) \\in \\vec{E} $
+
+$ f(\\upsilon_ {i + 1}, \\upsilon_ {i}) = -1 \\qquad \\text{if } (\\upsilon_ {i+1}, \\upsilon_ {i}) \\in \\vec{E} $
+
+$ f(x,y) = 0 \\qquad \\text{if } \\{x, y\\} \\text{ is not an edge of C $
+
+我们说这个循环属于循环C。对下图的图形及点1, 2, 3, 4的循环，循环如下图
+
+
+![img](../img/example_of_circulation.png)
+
+容易看到如果 $ f_ {1}, f_ {2} $ 为循环，则函数 $ f_ {1} + f_ {2} $在 $ \\vec{G} $上也是循环。对一个实数c，函数 $ cf_ {1} $也是一个循环。因此所有循环的集合有一个向量空间结构。这里它是实数上的向量空间。让我们记这个向量空间为 $ \\mathcal{C} $且称它为G的循环空间
+
+它可显示对任意图形G，循环空间 $ \\mathcal{C} $在G中属于循环的循环产生
+
+**潜力和剪切** 设 $ p: V \\to \\mathbb{R} $为一个任意函数。我们定义一个函数 $ \\delta p $在 $ \\vec{G} $的有向边的集合上
+
+$ \\delta p(x, y) = p(x) - p(y) $
+
+对每条有向边 $ (x, y) \\in \\vec{E} $
