@@ -390,4 +390,4 @@ $ g(x, y) = 0 \\qquad \\text{otherwise} $
 
 我们现在使用发生矩阵描述整个形势。在最后，我们记点 $ V = \\{\\upsilon_ {1}, \\ldots, \\upsilon_ {n}\\} $和边 $ E = \\{e_ {1}, \\ldots, e_ {m}\\} $。符号 $ \\vec{e_ {i}} $记为有向边对应 $ \\vec{G} $中边 $ e_ {i} $。我们回忆 $ \\vec{G} $的发生矩阵，该矩阵，D，为 $ n \\times m $，且它的条目 $ d_ {ik} $有如下规则：
 
-$ d_ {ik} = \\left\\{ \\begin{array}{lll} -1 & \\text{if } \\upsilon_ {i} \\text{ is the tail of } $ \\vec{e_ {k}} \\\\ 1 & \\text{if } \\upsilon_ {i} \\text{ is the head of } \\vec{e_ {k}} \\\\ 0 & \\text{otherwise} \\end{array} \\right. $
+$ d_ {ik} = \\left\\{ \\begin{array}{cc} -1 & \\text{if } \\upsilon_ {i} \\text{ is the tail of } $ \\vec{e_ {k}} \\\\ 1 & \\text{if } \\upsilon_ {i} \\text{ is the head of } \\vec{e_ {k}} \\\\ 0 & \\text{otherwise} \\end{array} \\right. $
