@@ -888,3 +888,49 @@ $ 0 \\le x \\le p, \\qquad 0 \\le y \\le p \\qquad p \\le x + y $
 $ a = c = - \\frac{2}{3} p^{2}, \\qquad b = - \\frac{1}{3} p^{2}, \\qquad ac - b^{2} > 0 $
 
 则这是极大值点，但极大值不是最大值，所以这个不能解决问题
+
+例子 行列式的最大值（Hadamard定理）。例如，n阶行列式
+
+$ D = \\left\| \\begin{array}{cccc} a_ {1} & b_ {1} & \\cdots & l_ {1} \\\\ a_ {2} & b_ {2} & \\cdots & l_ {2} \\\\ \\cdots & \\cdots & \\cdots & \\cdots \\\\ a_ {n} & b_ {n} & \\cdots & l_ {n} \\end{array} \\right\| $
+
+的绝对值的最大值
+
+$ a^{2}_ {i} + b^{2}_ {i} + \\cdots + l^{2}_ {i} = s^{2}_ {i} \\qquad (i = 1, 2, \\cdots, n) $
+
+要求这个条件下。（但是 $ s_ {i} $是正数），目标有以下关系表达式
+
+$ \| D \| \\le s_ {1} s_ {2} \\cdots s_ {n} $
+
+D是 $ n^{2} $个变量 $ a_ {1}, \\cdots, l_ {n} $的多项式。这种条件下独立变量有n(n - 1)个。现在考察n次元球面上的点 $ P_ {i} $
+
+$ P = (P_ {1}, P_ {2}, \\cdots, P_ {n}) $
+
+的组合P的函数的行列式，D = D(P)是关于P连续，P变量变动的闭区间，这样这样的点都是内点。D的最大值、最小值存在，这样可从哪个D的极值中找到
+
+$ D = a_ {i}A_ {i} + b_ {i}B_ {i} + \\cdots + l_ {i}L_ {i} $
+
+$ A_ {i}, B_ {i}, \\cdots, L_ {i} $是 $ a_ {i}, b_ {i}, \\cdots, l_ {i} $的余因子，这样D的第i行以外的组成的多项式，D的极值的必要条件是
+
+$ \\frac{\\partial D}{\\partial a_ {i}} = A_ {i} + L_ {i} \\frac{\\partial l_ {i}}{\\partial a_ {i}} = A_ {i} - L_ {i}\\frac{a_ {i}}{l_ {i}} = 0 $
+
+$ b_ {i}, c_ {i}, \\cdots $相关也相同，则
+
+$ \\frac{A_ {i}}{a_ {i}} = \\frac{B_ {i}}{b_ {i}} = \\cdots = \\frac{L_ {i}}{l_ {i}} $
+
+$ i \\ne k $有
+
+$ a_ {k}A_ {i} + b_ {k}B_ {i} + \\cdots + l_ {k}L_ {i} = 0 $
+
+则有
+
+$ a_ {i}a_ {k} + b_ {i}b_ {k} + \\cdots + l_ {i}l_ {k} = 0 $
+
+由以上的式子的值，D的绝对值已确定。这样
+
+$ D^{2} = \\left\| \\begin{array}{cccc} s^{2}_ {1} & 0 & \\cdots & 0 \\\\ 0 & s^{2}_ {2} & \\cdots & 0 \\\\ \\cdots & \\cdots & \\cdots & \\cdots & 0 & 0 & \\cdots & s^{2}_ {n} \\end{array} \\right\| = (s_ {1}s_ {2} \\cdots s_ {n})^{2} $
+
+则
+
+$ D = \\pm s_ {1} s_ {2} \\cdots s_ {n} $
+
+这样D的最大值为 $ s_ {1}s_ {2} \\cdots s_ {n} $（最小值为 $ - s_ {1}s_ {2}\\cdots s_ {n} $ ），这是它的极大极小值
