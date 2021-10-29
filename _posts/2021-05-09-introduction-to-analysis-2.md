@@ -927,7 +927,7 @@ $ a_ {i}a_ {k} + b_ {i}b_ {k} + \\cdots + l_ {i}l_ {k} = 0 $
 
 由以上的式子的值，D的绝对值已确定。这样
 
-$ D^{2} = \\left\| \\begin{array}{cccc} s^{2}_ {1} & 0 & \\cdots & 0 \\\\ 0 & s^{2}_ {2} & \\cdots & 0 \\\\ \\cdots & \\cdots & \\cdots & \\cdots & 0 & 0 & \\cdots & s^{2}_ {n} \\end{array} \\right\| = (s_ {1}s_ {2} \\cdots s_ {n})^{2} $
+$ D^{2} = \\left\| \\begin{array}{cccc} s^{2}_ {1} & 0 & \\cdots & 0 \\\\ 0 & s^{2}_ {2} & \\cdots & 0 \\\\ \\cdots & \\cdots & \\cdots & \\cdots \\\\ 0 & 0 & \\cdots & s^{2}_ {n} \\end{array} \\right\| = (s_ {1}s_ {2} \\cdots s_ {n})^{2} $
 
 则
 
