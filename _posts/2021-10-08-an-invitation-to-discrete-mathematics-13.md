@@ -35,6 +35,8 @@ category:   maths
     2.  [引理](#org9cca52d)
     3.  [定理（循环空间定理）](#org41d11cc)
 5.  [循环和剪切：循环空间再探讨](#orga3e02a7)
+    1.  [定理](#org4631dde)
+    2.  [定理](#orgcc8d6f2)
 
 
 <a id="orge454f95"></a>
@@ -391,3 +393,45 @@ $ g(x, y) = 0 \\qquad \\text{otherwise} $
 我们现在使用发生矩阵描述整个形势。在最后，我们记点 $ V = \\{\\upsilon_ {1}, \\ldots, \\upsilon_ {n}\\} $和边 $ E = \\{e_ {1}, \\ldots, e_ {m}\\} $。符号 $ \\vec{e_ {i}} $记为有向边对应 $ \\vec{G} $中边 $ e_ {i} $。我们回忆 $ \\vec{G} $的发生矩阵，该矩阵，D，为 $ n \\times m $，且它的条目 $ d_ {ik} $有如下规则：
 
 $ d_ {ik} = \\left\\{ \\begin{array}{ll} -1 & \\text{if } \\upsilon_ {i} \\text{ is the tail of } \\vec{e_ {k}} \\\\ 1 & \\text{if } \\upsilon_ {i} \\text{ is the head of } \\vec{e_ {k}} \\\\ 0 & \\text{otherwise} \\end{array} \\right. $
+
+
+<a id="org4631dde"></a>
+
+## 定理
+
+对任意图形G，剪切空间 $ \\mathbb{R} $由发生矩阵D的行产生。循环空间 $ \\mathbb{C} $是剪切空间 $ \\mathbb{R} $的垂直补，例如，$ \\mathbb{C} = \\{x \\in \\mathbb{R}^{m}: x^{T}y = 0, \\forall y \\in \\mathbb{R} \\} $
+
+*证明* 设 $ D = (d_ {ij}) $为 $ n \\times m $的矩阵。它容易看到每一行是一个潜力区分。接着，考虑一个任意的潜力区分 $ g = \\delta p $。对一个有向边 $ \\vec{e}_ {j} = (\\upsilon_ {r}, \\upsilon_ {s}) $，我们有 $ g(\\vec{e}_ {j}) = p(\\upsilon_ {r}) - p(\\upsilon_ {s}) = \\sum^{n}_ {i=1}d_ {ij}p(\\upsilon_ {i}) $。因此，如果我们把函数g看作一个行向量，它是发生矩阵的行的线性组合。因此，行产生剪切空间 $ \\mathbb{R} $
+
+让我们现在重写之前使用发生矩阵的循环的条件，从等式
+
+$ \\sum_ {x \\in V: (x, \\upsilon) \\in \\vec{E}} f(x, \\upsilon) = \\sum_ {x \\in V: (\\upsilon, x) \\in \\vec{E}} f(\\upsilon, x) $
+
+我们获得
+
+$ \\sum_ {(x, \\upsilon) \\in \\vec{E}} f(x, \\upsilon) - \\sum_ {(\\upsilon, x) \\in \\vec{E}} f(\\upsilon, x) = 0 $
+
+对 $ \\upsilon = \\upsilon_ {i} $，这可重写为
+
+$ \\sum^{m}_ {j=1} f(\\vec{e_ {j}})d_ {ij} = 0 $
+
+函数f，视为一个m元素的向量，和矩阵D的第i行相乘为0。这样f是对D的每一行是垂直的；事实上，我们看到f对D的所有行的垂直性相当于f为一个循环。因此，向量空间 $ \\mathbb{C} $和 $ \\mathbb{R} $相互垂直
+
+剪切空间 $ \\mathbb{R} $的维度是多少？通过之前的定理，它是发生矩阵的行产生的空间的维度
+
+设 $ d_ {j} $记为D的第j行（对应有向边 $ \\vec{e_ {j}} $）
+
+让我们考虑一些列索引的集合 $ J \\subseteq \\{1, 2, \\ldots, m \\} $，且让我们问什么时候列 $ \\{d_ {j}: j \\in J \\} $的集合是线性相关的。线性相关意味着存在数 $ c_ {j}, j \\in J $，不是所有为零，使得 $ \\sum_ {j \\in J}c_ {j}d_ {j} $是n元素的零向量。让我们独立地写出每个部分。第i部分，对应点 $ \\upsilon_ {i} $，给出
+
+$ \\sum_ {j \\in J}c_ {j}d_ {ij} = 0 $
+
+如果我们定义 $ c_ {t} = 0, t \\notin J $，我们得到从循环的定义得到之前的条件，且这样 $ c = (c_ {1}, c_ {2}, \\ldots, c_ {m}) $是一个非零循环。因此c的携带包含一个循环
+
+另一方面，对每个循环 $ \\mathbb{C} $存在一个带C的非零循环。虽然我们得到列 $ \\{d_ {j}: j \\in J\\} $的集合是线性无关的当且仅当边集合 $ \\{e_ {j}: j \\in J \\} $不包含循环。因此矩阵D的rank是n - k，k是图形G的部分的数量。我们已经证明：
+
+
+<a id="orgcc8d6f2"></a>
+
+## 定理
+
+对一个n个顶点，m条边和k个部分的图形G，剪切空间 $ \\mathbb{R} $有维度n - k且循环空间 $ C $有维度m - n + k
