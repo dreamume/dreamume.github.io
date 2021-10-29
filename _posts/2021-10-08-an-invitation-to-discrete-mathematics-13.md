@@ -371,3 +371,23 @@ $ f(x,y) = 0 \\qquad \\text{if } \\{x, y\\} \\text{ is not an edge of C $
 $ \\delta p(x, y) = p(x) - p(y) $
 
 对每条有向边 $ (x, y) \\in \\vec{E} $
+
+函数 $ \\delta p: \\vec{E} \\to \\mathbb{R} $被称为一个潜力区分。每个函数 $ g: \\vec{E} \\to \\mathbb{R} $有一个潜力p存在使得 $ g = \\delta p $也称为一个潜力区分
+
+容易检查到两个潜力区分的和也是一个潜力区分，且相似地对乘以一个常数也是一个潜力区分。让我们记所有潜力区分的向量空间为 $ \\mathbb{R} $且称它为剪切空间
+
+为什么我们选择这个名字？让我们考虑如下情形：设一个潜力p只获得值0和1。让我们设 $ A = \\{\\upsilon \\in V: p(\\upsilon) = 1 \\}, B = V \\backslash A $。则潜力区分 $ g = \\delta p $是非空的如果对A中一个顶点的有向边且B中其他顶点
+
+$ g(x, y) = 1 \\qquad \\text{for } x \\in A, y \\in B $
+
+$ g(x, y) = -1 \\qquad \\text{for } x \\in B, y \\in A $
+
+$ g(x, y) = 0 \\qquad \\text{otherwise} $
+
+自然地称A和B之间的所有边的集合为一个剪切，因为它的删除会使部分的数目增加。在这个图中，我们显示了一个潜力p和它的潜力区分。剪切对应的边用粗线标注
+
+![img](../img/exaple_of_a_potiential_inn_circulation.png)
+
+我们现在使用发生矩阵描述整个形势。在最后，我们记点 $ V = \\{\\upsilon_ {1}, \\ldots, \\upsilon_ {n}\\} $和边 $ E = \\{e_ {1}, \\ldots, e_ {m}\\} $。符号 $ \\vec{e_ {i}} $记为有向边对应 $ \\vec{G} $中边 $ e_ {i} $。我们回忆 $ \\vec{G} $的发生矩阵，该矩阵，D，为 $ n \\times m $，且它的条目 $ d_ {ik} $有如下规则：
+
+$ d_ {ik} = \\left\\{ \\begin{array}{ll} -1 & \\text{if } \\upsilon_ {i} \\text{ is the tail of } $ \\vec{e_ {k}} \\\\ 1 & \\text{if } \\upsilon_ {i} \\text{ is the head of } \\vec{e_ {k}} \\\\ 0 & \\text{otherwise} \\end{array} \\right. $
