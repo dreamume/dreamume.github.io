@@ -968,3 +968,83 @@ $ u \\upsilon = 0 $
 及
 
 $ uu = x^{2}_ {1} + y^{2}_ {1} + z^{2}_ {1} = \| u \|^{2} $
+
+对于标量积，交换律和分配律成立
+
+$ u \\upsilon = \\upsilon u, \\qquad (u_ {1} + u_ {2}) \\upsilon = u_ {1} \\upsilon + u_ {2} \\upsilon $
+
+x,y,z为变量t的函数时，向量
+
+$ OP = u = (x, y, z) $
+
+这时，$ t + \\Delta t $对应的向量
+
+$ OP^{\\prime} = u + \\Delta u = (x + \\Delta x, y + \\Delta y, z + \\Delta z) $
+
+则 $ \\Delta u $是向量 $ PP^{\\prime} $
+
+$ \\Delta u = (\\Delta x, \\Delta y, \\Delta z) $
+
+![img](../img/example_tangent.png)
+
+x,y,z可微分的话，$ \\Delta t \\to 0 $时向量
+
+$ \\frac{\\Delta u}{\\Delta t} = (\\frac{\\Delta x}{\\Delta t}, \\frac{\\Delta y}{\\Delta t}, \\frac{\\Delta z}{\\Delta t}) $
+
+的极限值是一个常量。这样的极限值 $ \\dot{u} = \\frac{du}{dt} $写为
+
+$ \\dot{u} = (\\dot{x}, \\dot{y}, \\dot{z}) $
+
+由向量积的定义，有
+
+$ \\frac{d}{dt} (u \\upsilon) = \\dot{u} \\upsilon + u \\dot{\\upsilon} $
+
+特别地，u常常是单位向量（ $ \| u \| = 1 $），这样当只有方向改变时，uu = 1，$ u \\dot{u} = 0 $，这里 $ \\dot{u} \\ne 0 $时，u和 $ \\dot{u} $相互垂直
+
+(2) 向量积 $ u \\times \\upsilon $，两个向量
+
+$ u = (x_ {1}, y_ {1}, z_ {1}), \\upsilon = (x_ {2}, y_ {2}, z_ {2}) $
+
+坐标的行列
+
+$ \\left( \\begin{array}{ccc} x_ {1} & y_ {1} & z_ {1} \\\\ x_ {2} & y_ {2} & z_ {2} \\end{array} \\right) $
+
+坐标为三个行列式的向量
+
+$ \\omega = (y_ {1}z_ {2} - y_ {2}z_ {1}, z_ {1}x_ {2} - z_ {2}x_ {1}, x_ {1}y_ {2} - x_ {2}y_ {1}) $
+
+这个是 $ u, \\upsilon $的向量积，写为 $ u \\times \\upsilon $。其几何学的意义如下
+
+现在简单的 $ \\omega = (x, y, z) $写为
+
+$ xx_ {1} + yy_ {1} + zz_ {1} = 0, \\qquad xx_ {2} + yy_ {2} + zz_ {2} = 0 $
+
+即
+
+$ \\omega u = 0, \\qquad \\omega \\upsilon = 0 $
+
+则 $ \\omega $ 与u 和 $ \\upsilon $相互垂直
+
+$ \\left \| \\begin{array}{ccc} x & y & z \\\\ x_ {1} & y_ {1} & z_ {1} \\\\ x_ {2} & y_ {2} & z_ {2} \\end{array} \\right \| = x^{2} + y^{2} + z^{2} = \| \\omega \|^{2} $
+
+是一个平行六面体的体积，它的三条边为向量u, $ \\upsilon, \\omega $，因为它是正的，所以$ u, \\upsilon, \\omega $是一个与坐标轴一致的系统（右手螺旋），由于它的体积等于 $ \| \\omega \|^{2} $，$ \| \\omega \| $为 $ u, \\upsilon $为边的平行四边形的面积
+
+![img](../img/example_vector_product_related_geometry_meaning.png)
+
+特别地当 $ u, \\upsilon $方向一致时
+
+$ u \\times \\upsilon  = 0 $
+
+根据上面的定义，向量积的交换律不成立
+
+$ u \\times \\upsilon  = - \\upsilon \\times u $
+
+有分配律
+
+$ (u_ {1} + u_ {2}) \\times \\upsilon = u_ {1} \\times \\upsilon + u_ {2} \\times \\upsilon $
+
+$ \\upsilon \\times (u_ {1} + u_ {2}) = \\upsilon \\times u_ {1} + \\upsilon \\times u_ {2} $
+
+$ u, \\upsilon $为t的函数时
+
+$ \\frac{d}{dt} (u \\times \\upsilon) = \\dot{u} \\times \\upsilon + u \\times \\dot{\\upsilon} $
