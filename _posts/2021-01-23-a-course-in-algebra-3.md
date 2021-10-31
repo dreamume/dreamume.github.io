@@ -243,7 +243,7 @@ $ y^{3} - py^{2} - 4ry + (4pr - q^{2}) = 0 $
 
 在解决一个二次方等式时，discriminant扮演了一个主要的角色。
 
-让我们解释二次多项式$ D(\\verphi) $ discriminant的意义
+让我们解释二次多项式$ D(\\varphi) $ discriminant的意义
 
 $ \\varphi = a_ {0}x^{2} + a_ {1}x + a_ {2} \\in C[x] $
 
