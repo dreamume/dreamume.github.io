@@ -25,6 +25,7 @@ category:   maths
 1.  [Fundamental Theorem of Algebra of Complex Numbers](#org9669ceb)
 2.  [Factorization in Euclidean Domains](#org8222f14)
 3.  [对称多项式](#org250fd7e)
+4.  [Cubic Equations](#orgf02219b)
 
 polynomial的和和乘积及polynomial和数的乘积依然是polynomial，这意味着polynomials在一个实变量的所有函数上的代数形成了一个子代数。该子代数被称为polynomial在R上的代数并记为R[x]
 
@@ -234,3 +235,26 @@ $ a_ {1} = -p, \\qquad a_ {2} = -4r, \\qquad a_ {3} = 4pr - q^{2} $
 例如，我们的等式有形式
 
 $ y^{3} - py^{2} - 4ry + (4pr - q^{2}) = 0 $
+
+
+<a id="orgf02219b"></a>
+
+# Cubic Equations
+
+在解决一个二次方等式时，discriminant扮演了一个主要的角色。
+
+让我们解释二次多项式$ D(\\verphi) $ discriminant的意义
+
+$ \\varphi = a_ {0}x^{2} + a_ {1}x + a_ {2} \\in C[x] $
+
+设$ c_ {1}, c_ {2} $为它的根。则
+
+$ D(\\varphi) = a^{2}_ {1} - 4a_ {0}a_ {2} = a^{2}_ {0} [(\\frac{a_ {1}}{a_ {0}})^{2} - \\frac{4a_ {2}}{a_ {0}}] = a^{2}_ {0}[(c_ {1} + c_ {2})^{2} - 4c_ {1}c_ {2}] = a^{2}_ {0}(c_ {1} - c_ {2})^{2} $
+
+$ a_ {0}, a_ {1}, a_ {2} \\in \\mathbb{R} $，这个公式解释了discriminant和根的属性的连接。有3个可能性：
+
+(i) $ c_ {1}, c_ {2} \\in \\mathbb{R}, c_ {1} \\ne c_ {2} $；则 $ c_ {1} - c_ {2} $是非零实数且 $ D(\\varphi) > 0 $
+
+(ii) $ c_ {1} = c_ {2} \\in \\mathbb{R} $；则 $ c_ {1} - c_ {2} = 0, D(\\varphi) = 0 $
+
+(iii) $ c_ {1} = \\bar{c}_ {2} \\notin \\mathbb{R} $；则 $ c_ {1} - c_ {2} $是非零虚数且 $ D(\\varphi) < 0 $
