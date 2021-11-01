@@ -1048,3 +1048,51 @@ $ \\upsilon \\times (u_ {1} + u_ {2}) = \\upsilon \\times u_ {1} + \\upsilon \\t
 $ u, \\upsilon $为t的函数时
 
 $ \\frac{d}{dt} (u \\times \\upsilon) = \\dot{u} \\times \\upsilon + u \\times \\dot{\\upsilon} $
+
+(3) 此外，三个向量
+
+$ u = (x_ {1}, y_ {1}, z_ {1}), \\qquad \\upsilon = (x_ {2}, y_ {2}, z_ {2}), \\qquad \\omega = (x_ {3}, y_ {3}, z_ {3}) $
+
+平行六面体的体积由 $ (u, \\upsilon, \\omega) $来表示
+
+$ (u, \\upsilon, \\omega) = \\left \| \\begin{array}{ccc} x_ {1} & y_ {1} & z_ {1} \\\\ x_ {2} & y_ {2} & z_ {2} \\\\ x_ {3} & y_ {3} & z_ {3} \\end{array} \\right \| $
+
+如果三个单位向量i, j, k（两两互相垂直）是右旋螺旋，则它们构成一个单位系统，在这种情况下
+
+$ i^{2} = j^{2} = k^{2} = 1, \\qquad i \\times i = j \\times j = k \\times k = 0 $
+
+$ ij = ji = 0, \\qquad i \\times j = k = -j \\times i $
+
+$ jk = kj = 0, \\qquad j \\times k = i = -k \\times j $
+
+$ ki = ik = 0, \\qquad k \\times i = j = - i \\times k $
+
+$ (i, j, k) = 1 $
+
+现在曲线C用变量t来表示，C上的点P = (x, y, z)的坐标x, y, z是t的函数，向量OP用 $ \\upsilon $表示，现在曲线上 $ t + \\Delta t $对应的点 $ P^{\\prime} = (x + \\delta x, y + \\delta y, z + \\delta z) $，则向量 $ OP^{\\prime} $为 $ \\upsilon + \\delta \\upsilon $，则 $ \\delta \\up $为向量 $ PP^{\\prime} $
+
+$ \\delta \\upsilon = (\\delta x, \\delta y, \\delta z) $
+
+现在x, y, z三阶可微分的话，则泰勒公式
+
+$ \\delta x = \\dot{x} \\delta t + \\ddot{x} \\frac{\\delta t^{2}}{2} + \\dddot{x}\\frac{\\delta t^{3}}{6} + o \\delta t^{3} $
+
+$ \\delta y, \\delta z $也一样，这样可写为
+
+$ \\delta \\upsilon = \\dot{\\upsilon} \\delta t + \\ddot{\\upsilon} \\frac{\\delta t^{2}}{2} + \\dddot{\\upsilon} \\frac{\\delta t^{3}}{6} + o \\delta t^{3} $
+
+$ \\dot{\\upsilon} = (\\dot{x}, \\dot{y}, \\dot{z}) $，$ \\ddot{\\upsilon}, \\dddot{\\upsilon} $也一样，$ \\delta t \\to 0 $时 $ \| o \| \\to 0 $，$ \\dot{\\upsilon}, \\ddot{\\upsilon}, \\dddot{\\upsilon} $三个向量关于曲线上点P在几何学上有重要的性质
+
+对向量 $ \\dot{\\upsilon} = (\\dot{x}, \\dot{y}, \\dot{z}) $，
+
+$ \| \\dot{\\upsilon} \| = \\sqrt{\\dot{x}^{2} + \\dot{y}^{2} + \\dot{z}^{2}} $
+
+点P在曲线C的切线的方向余弦为
+
+$ \\frac{\\cos{\\alpha}}{\\dot{x}} = \\frac{\\cos{\\beta}}{\\dot{y}} = \\frac{\\cos{\\gamma}}{\\dot{z}} = \\frac{1}{\| \\dot{\\upsilon} \|} $
+
+但是 $ \\dot{\\upsilon} = 0 $时，要排除 $ \\dot{x}, \\dot{y}, \\dot{z} $同时为0的点（特异点）
+
+如果以曲线C的一个固定点计算的弧长s代替t作为参赛，则结果很简明
+
+$ \\delta \\upsilon = \\upsilon^{\\prime} \\delta s + \\upsilon^{\\prime \\prime} \\frac{\\delta s^{2}}{2} + \\upsilon^{\\prime \\prime \\prime} \\frac{\\delta s^{3}}{6} + o \\delta s^{3} $
