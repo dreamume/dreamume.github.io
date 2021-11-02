@@ -1096,3 +1096,45 @@ $ \\frac{\\cos{\\alpha}}{\\dot{x}} = \\frac{\\cos{\\beta}}{\\dot{y}} = \\frac{\\
 如果以曲线C的一个固定点计算的弧长s代替t作为参赛，则结果很简明
 
 $ \\delta \\upsilon = \\upsilon^{\\prime} \\delta s + \\upsilon^{\\prime \\prime} \\frac{\\delta s^{2}}{2} + \\upsilon^{\\prime \\prime \\prime} \\frac{\\delta s^{3}}{6} + o \\delta s^{3} $
+
+弧长理论将在后面介绍，这里弧 $ PP^{\\prime} $和弦 $ PP^{\\prime} $的比在距离 $ PP^{\\prime} \\to 0 $时收敛到1，即
+
+$ \\frac{\\delta x^{2} + \\delta y^{2} + \\delta z^{2}}{\\delta s^{2}} \\to 1 $
+
+则
+
+$ \\frac{dx}{ds} = \\cos{\\alpha}, \\qquad \\frac{dy}{ds} = \\cos{\\beta}, \\qquad \\frac{dz}{ds} = \\cos{\\gamma} $
+
+则有
+
+$ x^{\\prime 2} + y^{\\prime 2} + z^{\\prime 2} = 1 \\Rightarrow \| \\upsilon^{\\prime} \| = 1 $
+
+s为变量，$ \\upsilon^{\\prime} $切线上关于s的增加方向上取的单位向量。$ \| \\upsilon^{\\prime} \| = 1 $的话，假定$ \\upsilon^{\\prime \\prime} \\ne 0 $，则 $ \\upsilon^{\\prime \\prime} $和 $ \\upsilon^{\\prime} $垂直。P上关于 $ \\upsilon^{\\prime \\prime} $平行的直线是曲线C的主法线，含有$ \\upsilon^{\\prime}, \\upsilon^{\\prime \\prime} $的平面是接触平面
+
+通过P点的任意平面的方程式的标准形为
+
+$ l(X - x) + m(Y - y) + n(Z - z) = 0 \\qquad (l^{2} + m^{2} + n^{2} = 1) $
+
+p = (l, m, n)是平面的法线上的单位向量。曲线上的点 $ P^{\\prime} = (x + \\delta x, y + \\delta y, z + \\delta z) $到平面的距离为
+
+$ l\\delta x + m \\delta y + n \\delta z $
+
+等于 $ p \\cdot \\delta \\upsilon $的标量积。但 $ \\delta \\upsilon = (\\delta x, \\delta y, \\delta z) $，这样
+
+$ p \\upsilon^{\\prime} \\delta s + p \\upsilon^{\\prime \\prime} \\frac{\\delta s^{2}}{2} + o \\delta s^{2} $
+
+p和 $ \\upsilon^{\\prime}, \\upsilon^{\\prime \\prime} $垂直，即含有$ \\upsilon^{\\prime}, \\upsilon^{\\prime \\prime} $的平面时$ \\delta \\upsilon $为高位的小数。这就意味着是接触平面
+
+设P关于$ P^{\\prime} $切线间的夹角为 $ \\alpha $，$ \\delta \\alpha $为向量 $ \\upsilon^{\\prime}, \\upsilon^{\\prime} + \\delta \\upsilon^{\\prime} $间的夹角，$ \\upsilon^{\\prime} $的长为常量1时，$ \\delta s \\to 0 $
+
+$ \\frac{\\delta \\alpha}{\| \\delta \\upsilon^{\\prime} \|} \\to 1 $
+
+![img](../img/example_of_tangent_angle_and_arc.png)
+
+然而
+
+$ \\frac{\\delta \\upsilon^{\\prime}}{\\delta s} \\to \\upsilon^{\\prime \\prime}, \\qquad \\frac{\| \\delta \\upsilon^{\\prime} \|}{\\delta s} \\to \| \\upsilon^{\\prime \\prime} \| $
+
+则有
+
+$ \\frac{\\delta \\alpha}{\\delta s} \\to \| \\upsilon^{\\prime \\prime} \| \\Rightarrow \\frac{d \\alpha}{d s} = \| \\upsilon^{\\prime \\prime} \| $
