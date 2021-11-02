@@ -351,7 +351,7 @@ $ \\sigma_ {1} = 0, \\qquad \\sigma_ {2} = p, \\qquad \\sigma_ {3} = -q $
 
 为找到b和d，让我们从下表的左边列赋值给变量 $ x_ {1}, x_ {2}, x_ {3} $，最右边列包含结果等式
 
-$ \\begin{array}{\|ccc\|ccc\|c\|c\|} \\hline x_ {1} & x_ {2} & x_ {3} & \\sigma_ {1} & \\sigma_ {2} & \\sigma_ {3} & f & \\\\ \\hline 1 & -1 & 0 & 0 & -1 & 0 & 4 & -b = 4 \\\\ 2 & -1 & -1 & 0 & -3 & 2 & 0 & -27b + 4d = 0 \\\\ \\hline \\end $
+$ \\begin{array}{\|ccc\|ccc\|c\|c\|} \\hline x_ {1} & x_ {2} & x_ {3} & \\sigma_ {1} & \\sigma_ {2} & \\sigma_ {3} & f & \\\\ \\hline 1 & -1 & 0 & 0 & -1 & 0 & 4 & -b = 4 \\\\ 2 & -1 & -1 & 0 & -3 & 2 & 0 & -27b + 4d = 0 \\\\ \\hline \\end{array} $
 
 则，b = -4, d = -27，且
 
