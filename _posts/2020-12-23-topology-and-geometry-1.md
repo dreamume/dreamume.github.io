@@ -557,3 +557,25 @@ $ dist^{\\prime}(x, y) = \\left\\{ \\begin{array}{ll} 1 & \\text{if } dist(x, y)
 则dist和 $ dist^{\\prime} $在X上有相同的拓扑
 
 证明 明显拓扑只依赖在开 $ \\epsilon - $球，对小的 $ \\epsilon $，且它们在两个度量中相同
+
+**命题** 设 $ X_ {i}, i = 1,2,3, \\ldots $为一个度量空间，度量边界为1。定义一个度量在 $ \\times \\{X_ {i}\\} $上，$ dist(x, y) = \\sum_ {i}dist(x_ {i}, y_ {i}) / 2^{i} $，$ x_ {i} $是x的第i个坐标。然后这个度量给出乘积拓扑
+
+证明 设X记为乘积拓扑的乘积空间，且 $ X^{\\prime} $是度量拓扑的相同集合。通过之前的问题显示 $ X^{\\prime} \\to X $是连续的，它显示映射到每个 $ X_ {i} $的组成是连续的。但这个映射减少距离且然后乘以常量 $ 2^{i} $且意味着连续性。相反，它有效显示对任意点 $ x \\in X $，关于x的$ \\epsilon - $球包含一个x的邻居关系在乘积拓扑中。回忆
+
+$ B_ {\\epsilon}(x) = \\{y \| \\sum_ {i}(dist(x_ {i}, y_ {i}) / 2^{i}) < \\epsilon \\} $
+
+设n为很大使得 $ 2^{-n} < \\epsilon / 4 $且然后设 $ y_ {i} \\in X_ {i} $使得 $ dist(x_ {i}, y_ {i}) < \\epsilon / 2, i = 1,2,\\ldots, n-1 $且对任意 $ i \\ge n $。然后我们计算
+
+$ \\begin{aligned} dist(x, y) &= \\sum^{n-1}_ {i=1} dist(x_ {i}, y_ {i}) / 2^{i} + \\sum^{\\infty}_ {i=n} dist(x_ {i}, y_ {i}) / 2^{i} \\\\ &< \\sum^{n-1}_ {i=1} \\epsilon / 2^{i+1} + \\frac{1}{4} \\epsilon (1 + \\frac{1}{2} + \\frac{1}{2^{2}} + \\cdots ) \\\\ &< \\epsilon / 2 + \\epsilon / 2 = \\epsilon \\end{aligned} $
+
+这样
+
+$ x \\in B_ {\\epsilon / 2}(x_ {1}) \\times \\cdots \\times B_ {\\epsilon / 2}(x_ {n-1}) \\times X_ {n} \\times X_ {n+1} \\times \\cdots \\subset B_ {\\epsilon}(x) $
+
+中间的项为乘积拓扑中的基本开集
+
+**引理** 假设X是Hausdroff且 $ f_ {i}: X \\to [0, 1] $为映射$ i = 1,2,3,\\ldots) $使得，对任意点 $ x \\in X $且任意闭集合 $ C \\subset X, x \\notin C $，有一个索引i使得 $ f_ {i}(x) = 0 $且 $ f_ {i} \\equiv 1 $在C上。定义$ f: X \\to X \\{[0,1] \| i = 1,2,3,\\ldots \\} $通过 $ f(x) = \\times \\{f_ {i}(x) \| i = 1,2,3,\\ldots\\} $。则f是一个嵌入，例如，在它的像上的同构
+
+证明 f是连续的，它也清晰地说明f是1对1的（但不是onto的）。这样它显示 $ C \\subset X $ 紧的 $ \\Rightarrow f(C) $在f(X)上是紧的。假设我们有一个序列 $ c_ {i} \\in C $使得 $ f(c_ {i}) \\to f(x) $。它然后显示 $ x \\in C $。如果不是，则有一个索引i使得 $ f_ {i}(x) = 0 $且 $ f_ {i} \\equiv 1 $在C上。则 $ 1 = f_ {i}(c_ {n}) \\to f_ {i}(x) = 0 $且这个矛盾
+
+**引理** 假设X是第二可数可完全规则空间且设S为一个可数基对开集。对每个对 $ U, V \\in S, \\bar{U} \\subset V $，选择一个映射 $ f: X \\to [0, 1] $在U上为0且在X - V上为1，提供这样一个函数存在。称映射F的这个集合，可能为空，且注意F是可数的。然后对每个 $ x \\in X $，且每个闭集 $ C \\subset X, x \\notin C $，有一个 $ f \\in F, f \\equiv 0 $在一个x的邻居关系上且 $ f \\equiv 1 $在C上
