@@ -579,3 +579,15 @@ $ x \\in B_ {\\epsilon / 2}(x_ {1}) \\times \\cdots \\times B_ {\\epsilon / 2}(x
 证明 f是连续的，它也清晰地说明f是1对1的（但不是onto的）。这样它显示 $ C \\subset X $ 紧的 $ \\Rightarrow f(C) $在f(X)上是紧的。假设我们有一个序列 $ c_ {i} \\in C $使得 $ f(c_ {i}) \\to f(x) $。它然后显示 $ x \\in C $。如果不是，则有一个索引i使得 $ f_ {i}(x) = 0 $且 $ f_ {i} \\equiv 1 $在C上。则 $ 1 = f_ {i}(c_ {n}) \\to f_ {i}(x) = 0 $且这个矛盾
 
 **引理** 假设X是第二可数可完全规则空间且设S为一个可数基对开集。对每个对 $ U, V \\in S, \\bar{U} \\subset V $，选择一个映射 $ f: X \\to [0, 1] $在U上为0且在X - V上为1，提供这样一个函数存在。称映射F的这个集合，可能为空，且注意F是可数的。然后对每个 $ x \\in X $，且每个闭集 $ C \\subset X, x \\notin C $，有一个 $ f \\in F, f \\equiv 0 $在一个x的邻居关系上且 $ f \\equiv 1 $在C上
+
+证明 引理的整个点是映射f可从之前定义的可数收集F中选择。给定 $ x \\notin C $，我们可找到一个 $ V \\in S, x \\in V \\subset X - C $（基的定义）。因为X是完全规则的我们可找到一个映射 $ g: X \\to [0, 1] $，其0在x上1在X - V上。如之前的定义，这可假设为0在x的一个邻居关系上。这包含一个邻居关系 $ U \\in S $且这样我们提供一个三元组U, V, g满足引理的初始化需求。通过假设，g可被另一个映射 $ f \\in F $带有相同的属性进行替换，且f满足最终的需求
+
+**定理（Urysohn Metrization定理）** 如果一个空间X是第二可数且完全规矩的则它是metrizable的
+
+证明 找到一个可数家族F，其函数满足引理上面的引理。应用上上个引理获得一个X的嵌入进入一个可数乘积的单位间隔。最终，应用上面的命题看到这个可数内部乘积，且因此X是mertrizable
+
+如下引理将对我们有用，diameter，diam(A)，一个度量空间的一个子集A是 $ sup\\{ dist(p, q) \| p, q \\in A\\} $
+
+**引理（Lebesgue引理）** 设X为一个紧的度量空间且设 $ \\{U_ {\\alpha}\\} $为一个X的开覆盖。则有一个 $ \\delta > 0 $（一个覆盖的Lebesgue数）使得 $ (A \\subset X, diam(A) < \\delta) \\Rightarrow A \\subset U_ {\\alpha} $对某个 $ \\alpha $
+
+证明 对每个 $ x \\in X $有一个 $ \\epsilon(x) > 0 $使得 $ B_ {2 \\in (x)}(x) \\subset U_ {\\alpha} $对某个 $ \\alpha $，则X被有限多个 $ B_ {\\epsilon(x)}(x) $覆盖，对 $ x = x_ {1}, \\ldots, x_ {n} $。定义 $ \\delta = min\\{ \\epsilon(x_ {i}) \| i = 1, \\ldots, n\\} $。假设 $ diam(A) < \\delta $且取一个点 $ a_ {0} \\in A $。则有一个索引 $ 1 \\le i \\le n $使得 $ dist(a_ {0}, x_ {i}) < \\epsilon(x_ {i}) $。如果 $ a \\in A $，则 $ dist(a, a_ {0}) < \\delta \\le \\epsilon(x_ {i}) $。通过三角不等式，$ dist(a, x_ {i}) < 2 \\epsilon(x_ {i}) $。这样 $ A \\subset B_ {2 \\in (x_ {i})}(x_ {i}) \\subset U_ {\\alpha} $对某个 $ \\alpha $
