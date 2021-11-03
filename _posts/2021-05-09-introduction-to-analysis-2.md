@@ -1145,7 +1145,7 @@ $ \\frac{1}{\\rho} = \\frac{d \\alpha}{ds} = \| \\upsilon^{\\prime \\prime} \| =
 
 这是P上接触平面的垂线即陪法线。现在，切线、主法线、陪法线上单位用i,j,k，记为
 
-$ \\begin{array}{c} i = \\upsilon^{\\prime}, \\\\ j = \\rho \\upsilon^{\\prime \\prime}, \\\\ k = i \\times j. \\end{array} \\right\\} $
+$ \\left. \\begin{array}{l} i = \\upsilon^{\\prime}, \\\\ j = \\rho \\upsilon^{\\prime \\prime}, \\\\ k = i \\times j. \\end{array} \\right\\} $
 
 然而
 
