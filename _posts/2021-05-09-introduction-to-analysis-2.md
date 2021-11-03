@@ -1138,3 +1138,41 @@ $ \\frac{\\delta \\upsilon^{\\prime}}{\\delta s} \\to \\upsilon^{\\prime \\prime
 则有
 
 $ \\frac{\\delta \\alpha}{\\delta s} \\to \| \\upsilon^{\\prime \\prime} \| \\Rightarrow \\frac{d \\alpha}{d s} = \| \\upsilon^{\\prime \\prime} \| $
+
+这里 $ \\frac{d \\alpha}{ds} $为C的切线方向随弧长变动的改变率，这里点P上的曲率，它的倒数 $ \\rho $为曲率半径。即
+
+$ \\frac{1}{\\rho} = \\frac{d \\alpha}{ds} = \| \\upsilon^{\\prime \\prime} \| = \\sqrt{(\\frac{d^{2}x}{ds^{2}})^{2} + (\\frac{d^{2}y}{ds^{2}})^{2} + (\\frac{d^{2}z}{ds^{2}})^{2}} $
+
+这是P上接触平面的垂线即陪法线。现在，切线、主法线、陪法线上单位用i,j,k，记为
+
+$ \\begin{array}{l} i = \\upsilon^{\\prime}, \\\\ j = \\rho \\upsilon^{\\prime \\prime}, \\\\ k = i \\times j. \\end{array} \\right\\} $
+
+然而
+
+$ k^{\\prime} = i^{\\prime} \\times j + i \\times j^{\\prime} $
+
+有$ i^{\\prime} = \\upsilon^{\\prime \\prime} $与j平行，则 $ i^{\\prime} \\times j = 0 $，从而
+
+$ k^{\\prime} = i \\times j^{\\prime} $
+
+则 $ k^{\\prime} $与i垂直。而 $ \| k \| = 1 $得 $ k^{\\prime} $ 与k垂直，从而 $ k^{\\prime} $与j平行。（这里假定 $ k^{\\prime} \\ne 0 $）跟 $ \| \\upsilon^{\\prime \\prime} \| $一样，$ \| k^{\\prime} \| $是s随陪法线方向的变动率，即接触平面绕切线旋转的角度的变动率。由于将s的增加方向定为切线的正方向，因此这种回旋可以定正负。$ k^{\\prime} $与j平行，从$ \| j \| = 1 $得到 $ k^{\\prime} = \\pm \| k^{\\prime} \| j $，现在
+
+$ k^{\\prime} = - \\frac{1}{\\tau} j $
+
+$ \\frac{1}{\\tau} $为切线C的第二曲率即扭率，它的倒数为扭率半径
+
+点P在曲线C上移动时，单位系统(i,j,k)以右手还是左手变动取决于 $ \\tau $的正负
+
+任意向量用i,j,k组合表达为ai+bj+ck，现在 $ j^{\\prime} $考察
+
+$ j = k \\times i, j^{\\prime} = k^{\\prime} \\times i + k \\times i^{\\prime} $
+
+$ i^{\\prime} = \\upsilon^{\\prime \\prime} = \\frac{1}{\\rho} j, k^{\\prime} = - \\frac{1}{\\tau} j $，则 $ j \\times i = -k, k \\times j = -i $
+
+$ j^{\\prime} = - \\frac{1}{\\rho} i + \\frac{1}{\\tau} k $
+
+上述 $ i^{\\prime}, j^{\\prime}, k^{\\prime} $一起写为
+
+$ \\left\\{ \\begin{array}{ccccc} i^{\\prime} & = & & \\frac{1}{\\rho}j, & \\\\ j^{\\prime} & = & - \\frac{1}{\\rho}i & & + \\frac{1}{\\tau} k, \\\\ k^{\\prime} & = & & -\\frac{1}{\\tau} j & \\end{array} \\right. $
+
+这是Frenet公式
