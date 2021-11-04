@@ -89,7 +89,7 @@ $ f = a_ {0}(x - c_ {1})(x - c_ {2}) \\cdots (x - c_ {n}) $
 
 $ c_ {1}, c_ {2}, \\ldots, c_ {n} $为f的根。通过观察系数我们获得如下Viete公式
 
-$ \\left. \\begin{array}{l} c_ {1} + c_ {2} + \\cdots + c_ {n} = - \\frac{a_ {1}}{a_ {0}} \\\\ c_ {1}c_ {2} + c_ {1}c_ {3} + \\cdots + c_ {n-1 n} = \\frac{a_ {2}}{a_ {0}} \\\\ \\hline \\sum_ {i_ {1} < i_ {2} < \\cdots < i_ {k}}c_ {i_ {1}}c_ {i_ {2}} \\cdots c_ {ik} = (-1)^{k} \\frac{a_ {k}}{a_ {0}} \\hline c_ {1}c_ {2} \\cdots c_ {n} = (-1)^{n} \\frac{a_ {n}}{a_ {0}} \\end{array} \\right. $
+$ \\begin{array}{l} c_ {1}+c_ {2}+\\cdots+c_ {n}=-\\frac{a_ {1}}{a_ {0}} \\\\ c_ {1} c_ {2}+c_ {1} c_ {3}+\\cdots+c_ {n-1} c_ {n}=\\frac{a_ {2}}{a_ {0}} \\\\ \\ldots \\ldots \\ldots \\ldots \\ldots \\ldots \\ldots . . \\\\ \\sum_ {i_ {1}<i_ {2}<\\cdots<i_ {k}} c_ {i_ {1}} c_ {i_ {2}} \\cdots c_ {i_ {k}}=(-1)^{k} \\frac{a_ {k}}{a_ {0}} \\\\ \\ldots \\ldots \\ldots \\ldots \\ldots \\ldots \\ldots . \\\\ c_ {1} c_ {2} \\cdots c_ {n}=(-1)^{n} \\frac{a_ {n}}{a_ {0}}\\end{array} $
 
 
 <a id="org250fd7e"></a>
