@@ -1175,4 +1175,30 @@ $ j^{\\prime} = - \\frac{1}{\\rho} i + \\frac{1}{\\tau} k $
 
 $ \\left\\{ \\begin{array}{ccccc} i^{\\prime} & = & & \\frac{1}{\\rho}j, & \\\\ j^{\\prime} & = & - \\frac{1}{\\rho}i & & + \\frac{1}{\\tau} k, \\\\ k^{\\prime} & = & & -\\frac{1}{\\tau} j & \\end{array} \\right. $
 
-这是Frenet公式
+这是Frenet公式，i, j, k的常量部分是切线、主法线、陪法线的方向余弦，$ \\prime $是弧长s的微分表示，利用 $ \\upsilon^{\\prime \\prime} = \\frac{1}{\\rho} j $
+
+$ \\begin{aligned} \\upsilon^{\\prime \\prime \\prime} &= - \\frac{\\rho^{\\prime}}{\\rho^{2}} j + \\frac{1}{\\rho} j^{\\prime} \\\\ &= - \\frac{1}{\\rho^{2}} i - \\frac{\\rho^{\\prime}}{\\rho^{2}} j + \\frac{1}{\\rho \\tau} k \\end{aligned} $
+
+从而
+
+这样作为行列式
+
+$ \\begin{aligned} (\\upsilon^{\\prime}, \\upsilon^{\\prime \\prime}, \\upsilon^{\\prime \\prime \\prime}) &= (i, \\frac{1}{\\rho} j, - \\frac{1}{\\rho^{2}} i - \\frac{\\rho^{\\prime}}{\\rho^{2}}j + \\frac{1}{\\rho \\tau} k) \\\\ &= (i, \\frac{1}{\\rho} j, \\frac{1}{\\rho \\tau} k) \\\\ &= (i, \\frac{1}{\\rho}j, \\frac{1}{\\rho \\tau}k) = \\frac{1}{\\rho^{2} \\tau}(i, j, k) = \\frac{1}{\\rho^{2} \\tau} \\end{aligned} $
+
+从而
+
+$ \\frac{1}{\\tau} = \\rho^{2} (\\upsilon^{\\prime}, \\upsilon^{\\prime \\prime}, \\upsilon^{\\prime \\prime \\prime}) = \\frac{\\left\| \\begin{array}{ccc} x^{\\prime} & y^{\\prime} & z^{\\prime} \\\\ x^{\\prime \\prime} & y^{\\prime \\prime} & z^{\\prime \\prime} \\\\ x^{\\prime \\prime \\prime} & y^{\\prime \\prime \\prime} & z^{\\prime \\prime \\prime} \\end{array} \\right \|}{x^{\\prime \\prime 2} + y^{\\prime \\prime 2} + z^{\\prime \\prime 2}} $
+
+这是s作为变量的扭率
+
+任意变量t相关 $ \\rho, \\tau $计算，t的微分用 $ \\dot{} $表示
+
+$ \\dot{\\upsilon} = \\upsilon^{\\prime} \\frac{ds}{dt} $
+
+$ \\ddot{\\upsilon} = \\upsilon^{\\prime \\prime} (\\frac{ds}{dt})^{2} + \\upsilon^{\\prime} \\frac{d^{2}s}{dt^{2}} $
+
+$ \\dddot{\\upsilon} = \\upsilon^{\\prime \\prime \\prime} (\\frac{ds}{dt})^{3} + 3 \\upsilon^{\\prime \\prime} \\frac{ds}{dt} \\frac{d^{2}s}{dt^{2}} + \\upsilon^{\\prime} \\frac{d^{3}s}{dt^{3}} $
+
+$ \\upsilon^{\\prime}, \\upsilon{\\prime \\prime} $互相垂直，上面第二式 $ \\ddot{\\upsilon} $是两个互相垂直的向量的分解的和。$ \\upsilon^{\\prime} \\frac{d^{2}s}{dt^{2}} $这部分，和C的切线平行，它的大小为 $ \\frac{d^{2}s}{dt^{2}} $（ $ \| \\upsilon^{\\prime} \| = 1 $），另一部分 $ \\upsilon^{\\prime \\prime}(\\frac{ds}{dt})^{2} $，与C的主法线平行，大小为 $ \\frac{1}{\\rho} (\\frac{ds}{dt})^{2} $（$ \| \\upsilon^{\\prime \\prime} \| = \\frac{1}{\\rho} $）。t为时间，加速度 $ \\ddot{\\upsilon} $这样的两成分分解得
+
+$ \| \\ddot{\\upsilon} \|^{2} = \\ddot{x}^{2} + \\ddot{y}^{2} + \\ddot{z}^{2} = \\frac{1}{\\rho} (\\frac{ds}{dt})^{4} + (\\frac{d^{2}s}{dt^{2}})^{2} $
