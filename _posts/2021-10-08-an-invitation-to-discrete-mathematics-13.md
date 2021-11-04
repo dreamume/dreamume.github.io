@@ -515,7 +515,7 @@ $ (\\alpha_ {p}\\mathcal{v}_ {p} + \\alpha_ {q}\\mathcal{v}_ {q} + \\alpha_ {r}\
 
 则这个表达式是简单的可使用定义 $ \\mathcal{v}_ {a} \\circ \\mathcal{v}_ {b} = \\mathcal{v}_ {a \\circ b}, \\forall a, b \\in S $
 
-我们声称V上的操作 $ \\circ $是相关的当且仅当S上的 $ \\circ $是相关的。明显的，如果(a, b, c)是S中不相关的三元组，$ (a \\circ b) \\cir c = p \\ne q = a \\circ (b \\circ c) $，我们有 $ (\\mathcal{v}_ {a} \\circ \\mathcal{v}_ {b}) \\circ \\mathcal{v}_ {c} = \\mathcal{v}_ {p} \\ne \\mathcal{v}_ {q} = \\mathcal{v}_ {a} \\circ (\\mathcal{v}_ {b} \\circ \\mathcal{v}_ {c}) $
+我们声称V上的操作 $ \\circ $是相关的当且仅当S上的 $ \\circ $是相关的。明显的，如果(a, b, c)是S中不相关的三元组，$ (a \\circ b) \\circ c = p \\ne q = a \\circ (b \\circ c) $，我们有 $ (\\mathcal{v}_ {a} \\circ \\mathcal{v}_ {b}) \\circ \\mathcal{v}_ {c} = \\mathcal{v}_ {p} \\ne \\mathcal{v}_ {q} = \\mathcal{v}_ {a} \\circ (\\mathcal{v}_ {b} \\circ \\mathcal{v}_ {c}) $
 
 对相关检测算法，我们定义一个函数 $ g: V^{3} \\to V $通过设置
 
