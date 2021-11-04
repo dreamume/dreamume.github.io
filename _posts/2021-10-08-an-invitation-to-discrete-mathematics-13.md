@@ -496,3 +496,29 @@ $ \\begin{array}{c\|cccc} \\circ & A & B & \\Gamma & \\Delta \\\\ \\hline A & A 
 一个不正确回答的概率可为任意小通过重复算法足够的次数。如果我们对一个不相关操作重复算法k次，将获得答案不相关至少一次以至少 $ 1 - (\\frac{7}{8})^{k} $的概率
 
 一个相关测试明显的随机算法将重复测试一个随机 $ (a,b,c) \\in S^{3} $且测试它的相关性。但获取不相关不需要操作许多三元组。例如，指定在上表中的操作只有两个不相关三元组，$ (\\Delta, \\Delta, \\Gamma), (\\Delta, \\Gamma, \\Delta) $，而这里总共有 $ 4^{3} = 64 $个三元组。事实上，对任意 $ n \\ge 3 $有一个n元素集合的操作的例子只有一个不相关三元组。因此，即使我们测试 $ n^{2} $个随机三元组，检测到不相关的几率只有 $ \\frac{1}{n} $且对算法不是个常数
+    
+**定理的证明** 设S为给定的n元素的集合。首先，我们定义一个关于S在GF(2)上的向量空间
+
+设V记为所有0和1的三元组的集合，其部分用S的元素索引。对 $ a \\in S, \\upsilon \\in V $，我们设 $ (\\upsilon)_ {a} \\in \\{0, 1\\} $记为 $ \\upsilon $对于元素a的部分。更近一步，对一个元素 $ a \\in S $，设 $ \\mathcal{v}_ {a} $为集合的特征向量 $ \\{a\\} $；即向量的部分对应a为1及其他为0
+
+集合V可被视为2元素GF(2)域上的一个向量空间，其跟图形的循环空间相似
+
+因为我们将处理几种不同类型的对象，我们将区别它们如下：字母 $ u, v, w $代表V中的元素，例如，n元组的0和1，希腊字母 $ \\alpha, \\beta, \\gamma $记为GF(2)的元素，例如，0或1，且a, b, c, p, q, r是S的元素
+
+接着，基于S上的操作 $ \\circ $，我们定义一个二元操作，在V上也记为 $ \\circ $。对 $ u, v \\in S $，我们设
+
+$ u \\circ v = \\sum_ {a, b \\in S}(u)_ {a}(v)_ {b} \\mathcal{v}_ {a \\circ b} $
+
+另一方面，乘积 $ (u)_ {a}(v)_ {b} $在GF(2)中，结果乘以 $ \\mathcal{v}_ {a \\circ b} $作为一个向量，且和是V中向量相加。为使这个更直观，假设对一个记忆 $ S = \\{p, q, r\\} $，且写 $ u = \\alpha_ {p}\\mathcal{v}_ {p} + \\alpha_ {q}\\mathcal{v}_ {q} + \\alpha_ {r}\\mathcal{v}_ {r}, v = \\beta_ {p}\\mathcal{v}_ {p} + \\beta_ {q}\\mathcal{v}_ {q} + \\beta_ {r}\\mathcal{v}_ {r} $。当然，$ \\alpha_ {p}, \\alpha_ {q}, \\alpha_ {r} \\in \\{0, 1\\} $为u的部分，v也相似。为找到向量 $ u \\circ v $，我们首先如下乘法
+
+$ (\\alpha_ {p}\\mathcal{v}_ {p} + \\alpha_ {q}\\mathcal{v}_ {q} + \\alpha_ {r}\\mathcal{v}_ {r}) \\circ (\\beta_ {p}\\mathcal{v}_ {p} + \\beta_ {q}\\mathcal{v}_ {q} + \\beta_ {r}\\mathcal{v}_ {r}) \\\\ = \\alpha_ {p}\\beta_ {p}(\\mathcal{v}_ {p} \\circ \\mathcal{v}_ {p}) + \\alpha_ {p}\\beta_ {q}(\\mathcal{v}_ {p} \\circ \\mathcal{v}_ {q}) + \\cdots + \\alpha_ {r}\\beta_ {r}(\\mathcal{v}_ {r} \\circ \\mathcal{v}_ {r}) $
+
+则这个表达式是简单的可使用定义 $ \\mathcal{v}_ {a} \\circ \\mathcal{v}_ {b} = \\mathcal{v}_ {a \\circ b}, \\forall a, b \\in S $
+
+我们声称V上的操作 $ \\circ $是相关的当且仅当S上的 $ \\circ $是相关的。明显的，如果(a, b, c)是S中不相关的三元组，$ (a \\circ b) \\cir c = p \\ne q = a \\circ (b \\circ c) $，我们有 $ (\\mathcal{v}_ {a} \\circ \\mathcal{v}_ {b}) \\circ \\mathcal{v}_ {c} = \\mathcal{v}_ {p} \\ne \\mathcal{v}_ {q} = \\mathcal{v}_ {a} \\circ (\\mathcal{v}_ {b} \\circ \\mathcal{v}_ {c}) $
+
+对相关检测算法，我们定义一个函数 $ g: V^{3} \\to V $通过设置
+
+$ g(u, v, w) = [(u \\circ v) \\circ w] - [u \\circ (v \\circ w)] $
+
+通过上述讨论，g的所有值为0当且仅当是相关的（在V上也在S上）。注意如果向量 $ u, v \\in V $给定，$ u \\circ v $可 $ O(n^{2}) $次操作使用S上的 $ \\circ $计算出来。因此 $ g(u, v, w) $可被在 $ O(n^{2}) $时间复杂度内得出
