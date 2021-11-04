@@ -89,17 +89,7 @@ $ f = a_ {0}(x - c_ {1})(x - c_ {2}) \\cdots (x - c_ {n}) $
 
 $ c_ {1}, c_ {2}, \\ldots, c_ {n} $为f的根。通过观察系数我们获得如下Viete公式
 
-$ c_ {1} + c_ {2} + \\cdots + c_ {n} = - \\frac{a_ {1}}{a_ {0}} $
-
-$ c_ {1}c_ {2} + c_ {1}c_ {3} + \\cdots + c_ {n-1}{n} = \\frac{a_ {2}}{a_ {0}} $
-
-$ \\hline $
-
-$ \\sum_ {i_ {1} < i_ {2} < \\cdots < i_ {k}}c_ {i_ {1}}c_ {i_ {2}} \\cdots c_ {ik} = (-1)^{k} \\frac{a_ {k}}{a_ {0}} $
-
-$ \\hline $
-
-$ c_ {1}c_ {2} \\cdots c_ {n} = (-1)^{n} \\frac{a_ {n}}{a_ {0}} $
+$ \\left. \\begin{array}{l} c_ {1} + c_ {2} + \\cdots + c_ {n} = - \\frac{a_ {1}}{a_ {0}} \\\\ c_ {1}c_ {2} + c_ {1}c_ {3} + \\cdots + c_ {n-1}{n} = \\frac{a_ {2}}{a_ {0}} \\\\ \\hline \\sum_ {i_ {1} < i_ {2} < \\cdots < i_ {k}}c_ {i_ {1}}c_ {i_ {2}} \\cdots c_ {ik} = (-1)^{k} \\frac{a_ {k}}{a_ {0}} \\hline c_ {1}c_ {2} \\cdots c_ {n} = (-1)^{n} \\frac{a_ {n}}{a_ {0}} \\end{array} \\right. $
 
 
 <a id="org250fd7e"></a>
@@ -441,9 +431,9 @@ $ x^{2} + 27qx - 27p^{3} = 0 $
 
 通过解它，我们找到
 
-$ d^{3}_ {1} = 27(-\\frac{q}{2} + \\sqrt{\\frac{p^{3}}{27} + \\frac{q^{2}}{4}} $
+$ d^{3}_ {1} = 27(-\\frac{q}{2} + \\sqrt{\\frac{p^{3}}{27} + \\frac{q^{2}}{4}}) $
 
-$ d^{3}_ {2} = 27(-\\frac{q}{2} - \\sqrt{\\frac{p^{3}}{27} + \\frac{q^{2}}{4}} $
+$ d^{3}_ {2} = 27(-\\frac{q}{2} - \\sqrt{\\frac{p^{3}}{27} + \\frac{q^{2}}{4}}) $
 
 根据之前的等式discriminant求解，得到等式
 
@@ -463,6 +453,6 @@ $ d_ {1}d_ {2} = -3p $
 
 因此，我们得到如下公式
 
-$ c_ {1,2,3} = sqrt[3]{- \\frac{q}{2} + \\sqrt{\\frac{p^{3}}{27} + \\frac{q^{2}}{4}}} + \\sqrt[3]{- \\frac{q}{2} - \\sqrt{\\frac{p^{3}}{27} + \\frac{q^{2}}{4}}} $
+$ c_ {1,2,3} = \\sqrt[3]{- \\frac{q}{2} + \\sqrt{\\frac{p^{3}}{27} + \\frac{q^{2}}{4}}} + \\sqrt[3]{- \\frac{q}{2} - \\sqrt{\\frac{p^{3}}{27} + \\frac{q^{2}}{4}}} $
 
 称为Cardano公式
