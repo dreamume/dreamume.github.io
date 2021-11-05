@@ -465,7 +465,7 @@ $ \\frac{p^{3}}{27} + \\frac{q^{2}}{4} = - \\frac{1}{108} D(\\psi) \\approx -0.0
 
 这样Cardano公式的立方根的一个有如下数值：
 
-$ \\begin{aligned} - \\frac{q}{2} + \\sqrt{\\frac{p^{3}}{27} + \\frac{q^{2}}{4}} &\\approx -1.734 + 0.00347 \\\\ \\approx 1.73400[\\cos{(\\pi - 0.00200)} + i \\sin{(\\pi - 0.00200)}] \\end{aligned} $
+$ \\begin{aligned} - \\frac{q}{2} + \\sqrt{\\frac{p^{3}}{27} + \\frac{q^{2}}{4}} &\\approx -1.734 + 0.00347 \\\\ &\\approx 1.73400[\\cos{(\\pi - 0.00200)} + i \\sin{(\\pi - 0.00200)}] \\end{aligned} $
 
 其他的立方根是复数。因此
 
