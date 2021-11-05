@@ -1202,3 +1202,47 @@ $ \\dddot{\\upsilon} = \\upsilon^{\\prime \\prime \\prime} (\\frac{ds}{dt})^{3} 
 $ \\upsilon^{\\prime}, \\upsilon{\\prime \\prime} $互相垂直，上面第二式 $ \\ddot{\\upsilon} $是两个互相垂直的向量的分解的和。$ \\upsilon^{\\prime} \\frac{d^{2}s}{dt^{2}} $这部分，和C的切线平行，它的大小为 $ \\frac{d^{2}s}{dt^{2}} $（ $ \| \\upsilon^{\\prime} \| = 1 $），另一部分 $ \\upsilon^{\\prime \\prime}(\\frac{ds}{dt})^{2} $，与C的主法线平行，大小为 $ \\frac{1}{\\rho} (\\frac{ds}{dt})^{2} $（$ \| \\upsilon^{\\prime \\prime} \| = \\frac{1}{\\rho} $）。t为时间，加速度 $ \\ddot{\\upsilon} $这样的两成分分解得
 
 $ \| \\ddot{\\upsilon} \|^{2} = \\ddot{x}^{2} + \\ddot{y}^{2} + \\ddot{z}^{2} = \\frac{1}{\\rho} (\\frac{ds}{dt})^{4} + (\\frac{d^{2}s}{dt^{2}})^{2} $
+
+![img](../img/example_of_acceleration_in_tangent.png)
+
+$ (\\frac{ds}{dt})^{2} = \\dot{x}^{2} + \\dot{y}^{2} + \\dot{z}^{2} $微分得
+
+$ $ \\frac{ds}{dt} \\frac{d^{2}s}{dt^{2}} = \\dot{x}\\ddot{x} + \\dot{y}\\ddot{y} + \\dot{z}\\ddot{z} $
+
+从而
+
+$ \\begin{aligned} \\frac{1}{\\rho^{2}} (\\frac{ds}{dt})^{6} = \| \\ddot{\\upsilon} \|^{2} (\\frac{ds}{dt})^{2} - (\\frac{ds}{dt})^{2} (\\frac{d^{2}s}{dt^{2}})^{2} &= (\\dot{x}^{2} + \\dot{y}^{2} + \\dot{z}^{2})(\\ddot{x}^{2} + \\ddot{y}^{2} + \\ddot{z}^{2}) - (\\dot{x} \\ddot{x} + \\dot{y}\\ddot{y} + \\dot{z}\\ddot{z})^{2} \\\\ &= \\left \| \\begin{array}{cc} \\dot{y} & \\dot{z} \\\\ \\ddot{y} & \\ddot{z} \\end{array} \\right\|^{2} + \\left \| \\begin{array}{cc} \\dot{z} & \\dot{x} \\\\ \\ddot{z} & \\ddot{x} \\right \|^{2} + \\left \| \\begin{array}{cc} \\dot{x} & \\dot{y} \\\\ \\ddot{x} & \\ddot{y} \\end{array} \\right \|^{2} \\end{aligned} $
+
+则
+
+$ \\frac{1}{\\rho} = \\frac{\| \\dot{\\upsilon} \\times \\ddot{\\upsilon} \|}{\| \\dot{\\upsilon} \|^{3}} $
+
+由
+
+$ (\\dot{\\upsilon}, \\ddot{\\upsilon}, \\dddot{\\upsilon}) = (\\frac{ds}{dt})^{6}(\\upsilon^{\\prime}, \\upsilon^{\\prime \\prime}, \\upsilon^{\\prime \\prime \\prime}) $
+
+有
+
+$ \\frac{1}{\\tau} = \\frac{(\\dot{\\upsilon}, \\ddot{\\upsilon}, \\dddot{\\upsilon})}{\| \\dot{\\upsilon} \\times \\ddot{\\upsilon} \|^{2}} $
+
+例子 螺旋线
+
+$ x = a \\cos{t}, \\qquad y = a\\sin{t}, \\qquad z = ht \\qquad (a > 0) $
+
+$ \\dot{x} = -a \\sin{t}, \\qquad \\dot{y} = a \\cos{t}, \\qquad \\dot{z} = h $
+
+$ \\ddot{x} = -a \\cos{t}, \\qquad \\ddot{y} - -a \\sin{t}, \\qquad \\ddot{z} = 0 $
+
+$ \\dddot{x} = a \\sin{t}, \\qquad \\dddot{y} = -a \\cos{t}, \\qquad \\dddot{z} = 0 $
+
+$ \| \\dot{\\upsilon} \| = \\sqrt{\\dot{x}^{2} + \\dot{y}^{2} + \\dot{z}^{2}} = \\sqrt{a^{2} + h^{2}} $
+
+$ \| \\dot{\\upsilon} \\times \\ddot{\\upsilon} \| = \\sqrt{a^{2}h^{2} \\sin^{2}{t} + a^{2}h^{2} \\cos^{2}{t} + a^{4}} = a \\sqrt{a^{2} + h^{2}} $
+
+$ (\\dot{\\upsilon}, \\ddot{\\upsilon}, \\dddot{\\upsilon}) = a^{2}h $
+
+$ \\frac{1}{\\rho} = \\frac{a}{a^{2} + h^{2}}, \\qquad \\frac{1}{\\tau} = \\frac{h}{a^{2} + h^{2}} $
+
+即曲率和扭率是一定的，$ \\tau, h $同符号，正负号区分右旋螺纹和左旋螺纹
+
+![img](../img/example_of_helix_rotation_direction.png)
