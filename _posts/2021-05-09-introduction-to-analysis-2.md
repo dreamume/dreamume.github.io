@@ -1069,7 +1069,7 @@ $ ki = ik = 0, \\qquad k \\times i = j = - i \\times k $
 
 $ (i, j, k) = 1 $
 
-现在曲线C用变量t来表示，C上的点P = (x, y, z)的坐标x, y, z是t的函数，向量OP用 $ \\upsilon $表示，现在曲线上 $ t + \\Delta t $对应的点 $ P^{\\prime} = (x + \\delta x, y + \\delta y, z + \\delta z) $，则向量 $ OP^{\\prime} $为 $ \\upsilon + \\delta \\upsilon $，则 $ \\delta \\up $为向量 $ PP^{\\prime} $
+现在曲线C用变量t来表示，C上的点P = (x, y, z)的坐标x, y, z是t的函数，向量OP用 $ \\upsilon $表示，现在曲线上 $ t + \\Delta t $对应的点 $ P^{\\prime} = (x + \\delta x, y + \\delta y, z + \\delta z) $，则向量 $ OP^{\\prime} $为 $ \\upsilon + \\delta \\upsilon $，则 $ \\delta \\upsilon $为向量 $ PP^{\\prime} $
 
 $ \\delta \\upsilon = (\\delta x, \\delta y, \\delta z) $
 
@@ -1207,11 +1207,11 @@ $ \| \\ddot{\\upsilon} \|^{2} = \\ddot{x}^{2} + \\ddot{y}^{2} + \\ddot{z}^{2} = 
 
 $ (\\frac{ds}{dt})^{2} = \\dot{x}^{2} + \\dot{y}^{2} + \\dot{z}^{2} $微分得
 
-$ $ \\frac{ds}{dt} \\frac{d^{2}s}{dt^{2}} = \\dot{x}\\ddot{x} + \\dot{y}\\ddot{y} + \\dot{z}\\ddot{z} $
+$ \\frac{ds}{dt} \\frac{d^{2}s}{dt^{2}} = \\dot{x}\\ddot{x} + \\dot{y}\\ddot{y} + \\dot{z}\\ddot{z} $
 
 从而
 
-$ \\begin{aligned} \\frac{1}{\\rho^{2}} (\\frac{ds}{dt})^{6} = \| \\ddot{\\upsilon} \|^{2} (\\frac{ds}{dt})^{2} - (\\frac{ds}{dt})^{2} (\\frac{d^{2}s}{dt^{2}})^{2} &= (\\dot{x}^{2} + \\dot{y}^{2} + \\dot{z}^{2})(\\ddot{x}^{2} + \\ddot{y}^{2} + \\ddot{z}^{2}) - (\\dot{x} \\ddot{x} + \\dot{y}\\ddot{y} + \\dot{z}\\ddot{z})^{2} \\\\ &= \\left \| \\begin{array}{cc} \\dot{y} & \\dot{z} \\\\ \\ddot{y} & \\ddot{z} \\end{array} \\right\|^{2} + \\left \| \\begin{array}{cc} \\dot{z} & \\dot{x} \\\\ \\ddot{z} & \\ddot{x} \\right \|^{2} + \\left \| \\begin{array}{cc} \\dot{x} & \\dot{y} \\\\ \\ddot{x} & \\ddot{y} \\end{array} \\right \|^{2} \\end{aligned} $
+$ \\begin{aligned} \\frac{1}{\\rho^{2}} (\\frac{ds}{dt})^{6} = \| \\ddot{\\upsilon} \|^{2} (\\frac{ds}{dt})^{2} - (\\frac{ds}{dt})^{2} (\\frac{d^{2}s}{dt^{2}})^{2} &= (\\dot{x}^{2} + \\dot{y}^{2} + \\dot{z}^{2})(\\ddot{x}^{2} + \\ddot{y}^{2} + \\ddot{z}^{2}) - (\\dot{x} \\ddot{x} + \\dot{y}\\ddot{y} + \\dot{z}\\ddot{z})^{2} \\\\ &= \\left \| \\begin{array}{cc} \\dot{y} & \\dot{z} \\\\ \\ddot{y} & \\ddot{z} \\end{array} \\right \|^{2} + \\left \| \\begin{array}{cc} \\dot{z} & \\dot{x} \\\\ \\ddot{z} & \\ddot{x} \\end{array} \\right \|^{2} + \\left \| \\begin{array}{cc} \\dot{x} & \\dot{y} \\\\ \\ddot{x} & \\ddot{y} \\end{array} \\right \|^{2} \\end{aligned} $
 
 则
 
@@ -1269,7 +1269,7 @@ $ \\upsilon^{\\prime \\prime} = (x^{\\prime \\prime}, y^{\\prime, \\prime}) = (-
 
 从
 
-$ \\frac{1}{\\rho} = \\frac{- x^{\\prime \\prime}}{y^{\\prime}} = \\frac{y^{\\prime \\prime}{x^{\\prime}} $
+$ \\frac{1}{\\rho} = \\frac{- x^{\\prime \\prime}}{y^{\\prime}} = \\frac{y^{\\prime \\prime}}{x^{\\prime}} $
 
 用一般的变量t表示为
 
