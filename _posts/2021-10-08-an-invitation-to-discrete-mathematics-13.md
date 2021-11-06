@@ -40,6 +40,7 @@ category:   maths
 6.  [概率检查](#org99b0a37)
     1.  [定理（Freivalds的矩阵乘积检查）](#org2bb17d3)
     2.  [定理](#orge1464cc)
+    3.  [算法](#org0a330c3)
 
 <a id="orge454f95"></a>
 
@@ -522,3 +523,32 @@ $ (\\alpha_ {p}\\mathcal{v}_ {p} + \\alpha_ {q}\\mathcal{v}_ {q} + \\alpha_ {r}\
 $ g(u, v, w) = [(u \\circ v) \\circ w] - [u \\circ (v \\circ w)] $
 
 通过上述讨论，g的所有值为0当且仅当是相关的（在V上也在S上）。注意如果向量 $ u, v \\in V $给定，$ u \\circ v $可 $ O(n^{2}) $次操作使用S上的 $ \\circ $计算出来。因此 $ g(u, v, w) $可被在 $ O(n^{2}) $时间复杂度内得出
+
+
+<a id="org0a330c3"></a>
+
+## 算法
+
+随机选择向量 $ u, v, w \\&isin; V$且相互独立。计算g(u, v, w)且回答相关如果g(u, v, w) = 0否则不相关
+
+**引理** 设(a, b, c)为一个固定非相关三元组，对所有 $ u, v, w \\in V $，存在 $ \\alpha, \\beta, \\gamma \\in GF(2) $使得
+
+$ g(u + \\alpha \\mathcal{v}_ {\\alpha}, v + \\beta \\mathcal{v}_ {b}, w + \\gamma \\mathcal{v}_ {c}) \\ne 0 $
+
+**证明** 我们事实上显示和
+
+$ \\sigma = \\sum_ {\\alpha, \\beta, \\gamma \\in GF(2)} g(u + \\alpha \\mathcal{v}_ {a}, v + \\beta \\mathcal{v}_ {b}, w + \\gamma \\mathcal{v}_ {c}) $
+
+非零。通过在V上定义的操作 $ \\circ $，我们获得，对任意 $ u, v, w \\in V $
+
+$ g(u, v, w) = \\sum_ {p, q, r \\in S}(u)_ {p}(v)_ {q}(w)_ {r} \\mathcal{v}_ {g(p, q, r)} $
+
+在和 $ \\sigma } $中替换它且交换和顺序，我们获得
+
+$ \\sigma = \\sum_ {p,q,r \\in S}[ \\sum_ {\\alpha, \\beta, \\gamma \\in GF(2)} (u + \\alpha \\mathcal{v}_ {a})_ {p} (v + \\beta \\mathcal{v}_ {b})_ {q} (w + \\gamma \\mathcal{v}_ {c})] \\mathcal{v}_ {g(p,q,r)} $
+
+中括号部分可写为如下
+
+$ \\begin{aligned} \\sum_ {\\alpha, \\beta, \\gamma \\in GF(2)} (u + \\alpha \\mathcal{v}_ {a})_ {p} (v + \\beta \\mathcal{v}_ {b})_ {q} (w + \\gamma \\mathcal{v}_ {c}) \\\\ &= [(u)_ {p} + (u + \\mathcal{v}_ {a})_ {p}] [(v)_ {q} + (v + \\mathcal{v}_ {b})_ {q}] [(w)_ {r} + (w + \\mathcal{v}_ {c})_ {r}] \\\\ &= (2u + \\mathcal{v}_ {a})_ {p} (2v + \\mathcal{v}_ {b})_ {q} (2w + \\mathcal{v}_ {c})_ {r} = (\\mathcal{v}_ {a})_ {p} (\\mathcal{v}_ {b})_ {q} (\\mathcal{v}_ {c})_ {r} \\end{aligned} $
+
+因为在GF(2)中 2 = 1 + 1 = 0。因此，唯一可能非零的项是p = a, q = b, c = r且这样 $ \\sigma = \\mathcal{v}_ {g(a,b,c)} \\ne 0 $。这证明了引理也证明了定理
