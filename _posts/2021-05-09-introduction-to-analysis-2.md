@@ -1246,3 +1246,39 @@ $ \\frac{1}{\\rho} = \\frac{a}{a^{2} + h^{2}}, \\qquad \\frac{1}{\\tau} = \\frac
 即曲率和扭率是一定的，$ \\tau, h $同符号，正负号区分右旋螺纹和左旋螺纹
 
 ![img](../img/example_of_helix_rotation_direction.png)
+
+平面曲线z = 0时，泰勒展开取二次项
+
+$ \\delta \\upsilon = \\upsilon^{\\prime} \\delta s + \\upsilon^{\\prime \\prime} \\frac{\\delta s^{2}}{2} + o \\delta s^{2} $
+
+这时 $ \| \\upsilon^{\\prime} \| = 1 $，从而 $ \\theta $是x轴的正方向，切线的正方向的角
+
+$ \| \\upsilon^{\\prime \\prime} = \| \\frac{d \\theta}{ds} \| $
+
+弧长s对应切线方向的变动率，即曲率
+
+$ \\frac{1}{\\rho} = \\frac{d \\theta}{ds} $
+
+$ \\rho $为曲率半径，然而
+
+$ \\upsilon^{\\prime} = (x^{\\prime}, y^{\\prime}) = (\\cos{\\theta}, \\sin{\\theta}) $
+
+微分s得
+
+$ \\upsilon^{\\prime \\prime} = (x^{\\prime \\prime}, y^{\\prime, \\prime}) = (- \\sin{\\theta \\frac{d \\theta}{ds}}, \\cos{\\theta \\frac{d \\theta}{ds}}) = \\frac{1}{\\rho} (- \\sin{\\theta}, \\cos{\\theta}) = \\frac{1}{\\rho} (-y^{\\prime}, x^{\\prime}) $
+
+从
+
+$ \\frac{1}{\\rho} = \\frac{- x^{\\prime \\prime}}{y^{\\prime}} = \\frac{y^{\\prime \\prime}{x^{\\prime}} $
+
+用一般的变量t表示为
+
+$ \\left \| \\begin{array}{cc} \\dot{x} & \\dot{y} \\\\ \\ddot{x} & \\ddot{y} \\end{array} \\right \| = \\left \| \\begin{array}{cc} x^{\\prime} & y^{\\prime} \\\\ x^{\\prime \\prime} & y^{\\prime \\prime} \\end{array} \\right \| (\\frac{ds}{dt})^{3} = \\left \| \\begin{array}{cc} x^{\\prime} & y^{\\prime} \\\\ - \\frac{y^{\\prime}}{\\rho} & \\frac{x^{\\prime}}{\\rho} \\end{array} \\right \| (\\frac{ds}{dt})^{3} = \\frac{1}{\\rho} (\\frac{ds}{dt})^{3} $
+
+从而
+
+$ \\frac{1}{\\rho} = \\frac{\\dot{x}\\ddot{y} - \\ddot{x}\\dot{y}}{\\dot{s}^{3}} $
+
+用之前的记号
+
+$ \\frac{1}{\\rho} = \\frac{(\\dot{\\upsilon}, \\ddot{\\upsilon})}{\| \\dot{\\upsilon} \|^{3}} $
