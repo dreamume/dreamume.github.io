@@ -529,7 +529,7 @@ $ g(u, v, w) = [(u \\circ v) \\circ w] - [u \\circ (v \\circ w)] $
 
 ## 算法
 
-随机选择向量 $ u, v, w \\&isin; V$且相互独立。计算g(u, v, w)且回答相关如果g(u, v, w) = 0否则不相关
+随机选择向量 $ u, v, w \\in V $ 且相互独立。计算g(u, v, w)且回答相关如果g(u, v, w) = 0否则不相关
 
 **引理** 设(a, b, c)为一个固定非相关三元组，对所有 $ u, v, w \\in V $，存在 $ \\alpha, \\beta, \\gamma \\in GF(2) $使得
 
@@ -543,7 +543,7 @@ $ \\sigma = \\sum_ {\\alpha, \\beta, \\gamma \\in GF(2)} g(u + \\alpha \\mathcal
 
 $ g(u, v, w) = \\sum_ {p, q, r \\in S}(u)_ {p}(v)_ {q}(w)_ {r} \\mathcal{v}_ {g(p, q, r)} $
 
-在和 $ \\sigma } $中替换它且交换和顺序，我们获得
+在和 $ \\sigma $中替换它且交换和顺序，我们获得
 
 $ \\sigma = \\sum_ {p,q,r \\in S}[ \\sum_ {\\alpha, \\beta, \\gamma \\in GF(2)} (u + \\alpha \\mathcal{v}_ {a})_ {p} (v + \\beta \\mathcal{v}_ {b})_ {q} (w + \\gamma \\mathcal{v}_ {c})] \\mathcal{v}_ {g(p,q,r)} $
 
