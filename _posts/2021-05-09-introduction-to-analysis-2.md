@@ -1282,3 +1282,35 @@ $ \\frac{1}{\\rho} = \\frac{\\dot{x}\\ddot{y} - \\ddot{x}\\dot{y}}{\\dot{s}^{3}}
 用之前的记号
 
 $ \\frac{1}{\\rho} = \\frac{(\\dot{\\upsilon}, \\ddot{\\upsilon})}{\| \\dot{\\upsilon} \|^{3}} $
+
+总之，用独立变量无关的微分记号得
+
+$ \\frac{1}{\\rho} = \\frac{dxd^{2}y - d^{2}xdy}{(dx^{2}+dy^{2})^{\\frac{3}{2}}} $
+
+特别地曲线为y = f(x)，有
+
+$ \\frac{1}{\\rho} = \\frac{\\frac{d^{2}y}{dx^{2}}}{(1 + (\\frac{dy}{dx})^{2})^{\\frac{3}{2}}} $
+
+点P与曲线C相交，与C相对于切线在同一侧，半径等于 $ \| \\rho \| $的圆为曲率圆，其中心 $ (\\xi, \\eta) $为曲率的中心
+
+$ \\xi = x - \\rho \\sin{\\theta}, \\qquad \\eta = y + \\rho \\cos{\\theta} $
+
+如果$ \\rho $和 $ \\frac{d^{2}y}{dx^{2}} $同符号，下图右图曲率中心在曲线的凹侧
+
+![img](../img/example_of_center_of_curvature_and_tangent.png)
+
+曲线C的曲率中心 $ (\\xi, \\eta) $的轨迹是曲线E的话，特别地C的弧长s作为变量，E为
+
+$ \\xi = x - py^{\\prime}, \\qquad \\eta = y + px^{\\prime} $
+
+对s的微分的话
+
+$ \\xi^{\\prime} = x^{\\prime} - \\rho^{\\prime}y^{\\prime} - \\rho y^{\\prime \\prime} = - \\rho^{\\prime}y^{\\prime} $
+
+$ \\eta^{\\prime} = y^{\\prime} + \\rho^{\\prime}x^{\\prime} + \\rho x^{\\prime \\prime} = \\rho^{\\prime}x^{\\prime} $
+
+从而
+
+$ \\xi^{\\prime} x^{\\prime} + \\eta^{\\prime}y^{\\prime} = 0 $
+
+即源曲线C的切线，和对应的点的E的切线互相垂直。则C的法线与E的曲率中心相接，E为源曲线C的法线的包络线
