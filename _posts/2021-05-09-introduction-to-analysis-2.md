@@ -1265,7 +1265,7 @@ $ \\upsilon^{\\prime} = (x^{\\prime}, y^{\\prime}) = (\\cos{\\theta}, \\sin{\\th
 
 微分s得
 
-$ \\upsilon^{\\prime \\prime} = (x^{\\prime \\prime}, y^{\\prime, \\prime}) = (- \\sin{\\theta \\frac{d \\theta}{ds}}, \\cos{\\theta \\frac{d \\theta}{ds}}) = \\frac{1}{\\rho} (- \\sin{\\theta}, \\cos{\\theta}) = \\frac{1}{\\rho} (-y^{\\prime}, x^{\\prime}) $
+$ \\upsilon^{\\prime \\prime} = (x^{\\prime \\prime}, y^{\\prime \\prime}) = (- \\sin{\\theta \\frac{d \\theta}{ds}}, \\cos{\\theta \\frac{d \\theta}{ds}}) = \\frac{1}{\\rho} (- \\sin{\\theta}, \\cos{\\theta}) = \\frac{1}{\\rho} (-y^{\\prime}, x^{\\prime}) $
 
 从
 
@@ -1314,3 +1314,37 @@ $ \\eta^{\\prime} = y^{\\prime} + \\rho^{\\prime}x^{\\prime} + \\rho x^{\\prime 
 $ \\xi^{\\prime} x^{\\prime} + \\eta^{\\prime}y^{\\prime} = 0 $
 
 即源曲线C的切线，和对应的点的E的切线互相垂直。则C的法线与E的曲率中心相接，E为源曲线C的法线的包络线
+
+现在E的弧长为 $ \\sigma $的话
+
+$ (\\frac{d \\sigma}{ds})^{2} = (\\frac{d \\xi}{ds})^{2} + (\\frac{d \\eta}{ds})^{2} = \\rho^{\\prime 2} (x^{\\prime 2} + y^{\\prime 2}) = \\rho^{\\prime 2} $
+
+即 $ \\sigma^{\\prime} = \\pm \\rho^{\\prime} $。则在适当的方向上测量E的弧长，在 $ \\rho^{\\prime} \\ne 0 $的各范围内，$ \\sigma^{\\prime} = \\rho^{\\prime} $，$ \\sigma_ {0} $对应 $ \\rho_ {0} $，有 $ \\sigma - \\sigma_ {0} = \\rho - \\rho_ {0} $。这样的条件下，E的两点间弧长对应C的亮点曲率半径的差
+
+如果在E上缠绕一根线，在拉紧的同时松开P端，使线不下垂，P将画出C。因此，C是E的渐开线。反之，E是C的闭合线。C给定的时候，其渐开线E是固定的，但给定的渐开线E其C有无穷个
+
+![img](../img/example_of_involute_and_evolute.png)
+
+例子 当一个圆在另一个圆的圆周上或直线上滚动而不滑动，粘在运动圆上的一点的轨道是广义上称为摆线的曲线。最简单的应用是圆周上一点画的曲线为一个在恒定直线上滚动的圆，这是一条法线（狭义的）摆线（所谓的抓线）。如果半径为a，旋转角度为t，则直线为x轴，t = 0处圆圆周上的不动点P为坐标原点，抓线表示如下，以t作为变量
+
+$ x = a(t - \\sin{t}), \\qquad y = a(1 - \\cos{t}) $
+
+则
+
+$ dx = a(1 - \\cos{t})dt, \\qquad dy = a \\sin{t}dt $
+
+$ ds = \\sqrt{dx^{2} + dy^{2}} = \\sqrt{2a^{2}(1 - \\cos{t})}dt = 2a \| \\sin{\\frac{t}{2}} \| dt $
+
+$ d^{2}x = a \\sin{t}dt^{2}, \\qquad d^{2}y = a \\cos{t}dt^{2} $
+
+$ dxd^{2}y - dyd^{2}x = a^{2} \\left \| \\begin{array}{cc} 1 - \\cos{t} & \\sin{t} \\\\ \\sin{t} & \\cos{t} \\end{array} \\right \| dt^{3} = a^{2} (\\cos{t} - 1)dt^{3} = -2a^{2} \\sin^{2}{\\frac{t}{2}} dt^{3} $
+
+$ \\rho = \\frac{ds^{3}}{dxd^{2}y - dyd^{2}x} = -4a \| \\sin{\\frac{t}{2}} \| $
+
+$ \\xi = x - \\rho \\frac{dy}{ds} = a(t+ \\sin{t}) $
+
+$ \\eta = y + \\rho \\frac{dx}{ds} = a(-1 + \\cos{t}) $
+
+因此闭合线和原曲线全等，具体来说，闭合线的弧 $ AB^{\\prime}, B^{\\prime}C $和原曲线的弧BC, AB全等。$ t = 0, t = \\pi $对应 $ \\rho = 0, \\rho = -4a $，弧 $ AB^{\\prime} $ 长为4a，从而摆线ABC的全长为8a
+
+![img](../img/example_of_cycloid.png)
