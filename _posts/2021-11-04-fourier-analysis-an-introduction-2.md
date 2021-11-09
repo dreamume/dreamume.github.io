@@ -62,8 +62,8 @@ f是[0, L]的复数值，它将需要在f上放置一些积分条件。我们将
 
 这是我们将考虑的最一般化的函数类。这样的函数有界，但有无穷多个不连续点。我们回忆积分的定义。一个在[0, L]上的实值函数f是黎曼可积的如果它有界且如果对任意 $ \\epsilon > 0 $，有一个在[0, L]上小的分割 $ 0 = x_ {0} < x_ {1} < \\cdots < x_ {N-1} < x_ {N} = L $，使得如果 $ \\mathcal{U}, \\mathcal{L} $，为这个分割的上和和下和，即
 
-$ \\mathcal{U} = \\sum^{N}_ {j=1} [ sup_ {x_ {j-1} \\le x \\le x_ {j} f(x)](x_ {j} - x_ {j - 1}) $
+$ \\mathcal{U} = \\sum^{N}_ {j=1} [ \\operatorname{sup}_ {x_ {j-1} \\le x \\le x_ {j} f(x)](x_ {j} - x_ {j - 1}) $
 
-$ \\mathcal{L} = \\sum^{N}_ {j=1} [ inf_ {x_ {j-1} \\le x \\le x_ {j} f(x)](x_ {j} - x_ {j - 1}) $
+$ \\mathcal{L} = \\sum^{N}_ {j=1} [ \\operatorname{inf}_ {x_ {j-1} \\le x \\le x_ {j} f(x)](x_ {j} - x_ {j - 1}) $
 
 则我们有 $ \\mathcal{U} - \\mathcal{L} < \\epsilon $。最后，我们说一个复数值函数是可积的如果它的实部和虚部是可积的
