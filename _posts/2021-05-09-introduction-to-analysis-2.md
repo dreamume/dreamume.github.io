@@ -1355,7 +1355,7 @@ $ x = a \\cos{t}, \\qquad y = b \\sin{t} $
 
 其计算
 
-$ \\rho = \\frac{a^{2} \\sin^{2}{t} + b^{2} \\cos^{2}{t}}^{\\frac{3}{2}} $
+$ \\rho = \\frac{(a^{2} \\sin^{2}{t} + b^{2} \\cos^{2}{t})^{\\frac{3}{2}}}{ab} $
 
 $ \\xi = \\frac{a^{2} - b^{2}}{a} \\cos^{3}{t}, \\qquad \\eta = - \\frac{a^{2} - b^{2}}{b} \\sin^{3}{t} $
 
