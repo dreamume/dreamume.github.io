@@ -1301,7 +1301,7 @@ $ \\xi = x - \\rho \\sin{\\theta}, \\qquad \\eta = y + \\rho \\cos{\\theta} $
 
 曲线C的曲率中心 $ (\\xi, \\eta) $的轨迹是曲线E的话，特别地C的弧长s作为变量，E为
 
-$ \\xi = x - py^{\\prime}, \\qquad \\eta = y + px^{\\prime} $
+$ \\xi = x - \\rho y^{\\prime}, \\qquad \\eta = y + \\rho x^{\\prime} $
 
 对s的微分的话
 
@@ -1348,3 +1348,33 @@ $ \\eta = y + \\rho \\frac{dx}{ds} = a(-1 + \\cos{t}) $
 因此闭合线和原曲线全等，具体来说，闭合线的弧 $ AB^{\\prime}, B^{\\prime}C $和原曲线的弧BC, AB全等。$ t = 0, t = \\pi $对应 $ \\rho = 0, \\rho = -4a $，弧 $ AB^{\\prime} $ 长为4a，从而摆线ABC的全长为8a
 
 ![img](../img/example_of_cycloid.png)
+
+例子 椭圆的闭合线。椭圆
+
+$ x = a \\cos{t}, \\qquad y = b \\sin{t} $
+
+其计算
+
+$ \\rho = \\frac{a^{2} \\sin^{2}{t} + b^{2} \\cos^{2}{t}}^{\\frac{3}{2}} $
+
+$ \\xi = \\frac{a^{2} - b^{2}}{a} \\cos^{3}{t}, \\qquad \\eta = - \\frac{a^{2} - b^{2}}{b} \\sin^{3}{t} $
+
+消掉t的闭合线方程式为
+
+$ (a \\xi)^{\\frac{2}{3}} + (b \\eta)^{\\frac{2}{3}} = (a^{2} - b^{2})^{\\frac{2}{3}} $
+
+如下图中星形。原曲线曲率的极大极小点为闭合线的尖点
+
+椭圆的四个法线是从E里面的点画的，两条法线是从E外面的点画的
+
+![img](../img/example_of_oval_normal_lines.png)
+
+例子 圆的渐开线，半径为1
+
+![img](../img/example_of_circle_involute_line.png)
+
+$ \\xi = \\cos{t}, \\qquad \\eta = \\sin{t} $
+
+则渐开线为
+
+$ x = \\cos{t} + t \\sin{t}, \\qquad y = \\sin{t} - t \\cos{t} $
