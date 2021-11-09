@@ -32,6 +32,7 @@ category:   maths
     7.  [Compactness](#org838373f)
     8.  [Products](#orgdbaaa36)
     9.  [再次Metric空间](#org8384420)
+    10. [实值函数的存在](#org9e4a2af)
 
 
 <a id="org8fd57c5"></a>
@@ -591,3 +592,42 @@ $ x \\in B_ {\\epsilon / 2}(x_ {1}) \\times \\cdots \\times B_ {\\epsilon / 2}(x
 **引理（Lebesgue引理）** 设X为一个紧的度量空间且设 $ \\{U_ {\\alpha}\\} $为一个X的开覆盖。则有一个 $ \\delta > 0 $（一个覆盖的Lebesgue数）使得 $ (A \\subset X, diam(A) < \\delta) \\Rightarrow A \\subset U_ {\\alpha} $对某个 $ \\alpha $
 
 证明 对每个 $ x \\in X $有一个 $ \\epsilon(x) > 0 $使得 $ B_ {2 \\in (x)}(x) \\subset U_ {\\alpha} $对某个 $ \\alpha $，则X被有限多个 $ B_ {\\epsilon(x)}(x) $覆盖，对 $ x = x_ {1}, \\ldots, x_ {n} $。定义 $ \\delta = min\\{ \\epsilon(x_ {i}) \| i = 1, \\ldots, n\\} $。假设 $ diam(A) < \\delta $且取一个点 $ a_ {0} \\in A $。则有一个索引 $ 1 \\le i \\le n $使得 $ dist(a_ {0}, x_ {i}) < \\epsilon(x_ {i}) $。如果 $ a \\in A $，则 $ dist(a, a_ {0}) < \\delta \\le \\epsilon(x_ {i}) $。通过三角不等式，$ dist(a, x_ {i}) < 2 \\epsilon(x_ {i}) $。这样 $ A \\subset B_ {2 \\in (x_ {i})}(x_ {i}) \\subset U_ {\\alpha} $对某个 $ \\alpha $
+
+
+<a id="org9e4a2af"></a>
+
+## 实值函数的存在
+
+在度量理论的最后章节，我们给出条件包含空间完全规范的度量。这依赖知道足够多的存在，空间上的连续实值函数。它使找到纯拓扑问题假设将保证这样的函数，且那是我们在本章节要处理的
+
+**引理** 假设在一个拓扑空间X上，我们给定，对每个两分有理数 $ r = m / 2^{n} (0 \\le m \\le 2^{n}) $，一个开集 $ U_ {r} $使得 $ r < s \\Rightarrow \\bar{U_ {r}} \\subset U_ {s} $。则函数 $ f: X \\to R $定义为
+
+$ f(x) = \\left \\{ \\begin{array}{ll} inf \\{ r \| x \\in U_ {r} \\} & \\text{if } x \\in U_ {1} \\\\ 1 & \\text{if } x \\notin U_ {1} \\end{array} \\right. $
+
+是连续的
+
+证明 注意，对两分r:
+
+$ f(x) < r \\Rightarrow x \\in U_ {r} \\qquad \\text{因此 } f(x) \\ge r \\Leftarrow x \\notin U_ {r} $
+
+$ f(x) \\le r \\Leftarrow x \\in U_ {r} \\qquad \\text{因此 } f(x) > r \\Rightarrow x \\notin U_ {r} \\Rightarrow x \\in X - U_ {r} $
+
+因此，对 $ \\alpha $实数
+
+$ f^{-1}(- \\infty, \\alpha) = \\{x \| f(x) < \\alpha\\} = \\cup \\{ U_ {r} \| r < \\alpha \\} $
+
+其是开的，且
+
+$ f^{-1}(\\beta, \\infty) = \\{x \| f(x) > \\beta\\} = \\cup \\{X - U_ {r} \| r > \\beta \\} = \\cup \\{X - \\bar{U}_ {s} \| s > \\beta \\} $
+
+其也是开的。因为这些半无限间隔给了一个子基对R的拓扑，f是连续的
+
+**引理（Urysohn引理）**  如果X是normal且 $ F \\subset U $，F是闭的且U是开的，则有一个映射 $ f: X \\to [0, 1] $，在F上为0且X - U上为1
+
+证明 把 $ U_ {1} = U $且使用normality来找到 $ F \\subset U_ {0}, \\bar{U}_ {0} \\subset U_ {1} $
+
+$ \\bar{U}_ {0} \\subset U_ {1 / 2} \\qquad \\text{且} \\bar{U}_ {1 / 2} \\subset U_ {1} $
+
+$ \\bar{U}_ {0} \\subset U_ {1 / 4} \\qquad \\text{且} \\bar{U}_ {1 / 4} \\subset U_ {1 / 2} \\qquad \\text{且} \\bar{U}_ {1 / 2} \\subset U_ {3 / 4} \\qquad \\text{且} \\bar{U}_ {3 / 4} \\subset U_ {1} $
+
+等，应用之前的引理得证
