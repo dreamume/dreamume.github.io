@@ -652,7 +652,7 @@ $ g_ {2}(x) = \\left\\{ \\begin{array}{ll} 0 & \\text{if } x \\in F \\text{且} 
 
 对归纳步骤，假设我们已定义一个函数 $ f_ {n}, 0 \\le f_ {n}(x) \\le (\\frac{2}{3})^{n}, x \\in F $。则找到 $ g_ {n+1}: X \\to [0, (\\frac{1}{3}) (\\frac{2}{3})^{n}] $使得
 
-$ g_ {n+1}(x) = \\left \\{ \\begin{array}{ll} 0 & \\text{if } x \\in F \\text{且} f_ {n}(x) \\le (\\frac{1}{3}) (\\frac{2}{3})^{n} \\\\ ((\\frac{1}{3})(\\frac{2}{3})^{n} & \\text{if } x \\in F \\text{且} f_ {n}(x) \\ge (\\frac{2}{3})(\\frac{2}{3})^{n} $
+$ g_ {n+1}(x) = \\left \\{ \\begin{array}{ll} 0 & \\text{if } x \\in F \\text{且} f_ {n}(x) \\le (\\frac{1}{3}) (\\frac{2}{3})^{n} \\\\ ((\\frac{1}{3})(\\frac{2}{3})^{n}) & \\text{if } x \\in F \\text{且} f_ {n}(x) \\ge (\\frac{2}{3})(\\frac{2}{3})^{n} $
 
 设$ f_ {n+1} = f_ {n} - g_ {n+1} $
 
