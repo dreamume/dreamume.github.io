@@ -631,3 +631,71 @@ $ \\bar{U}_ {0} \\subset U_ {1 / 2} \\qquad \\text{且} \\bar{U}_ {1 / 2} \\subs
 $ \\bar{U}_ {0} \\subset U_ {1 / 4} \\qquad \\text{且} \\bar{U}_ {1 / 4} \\subset U_ {1 / 2} \\qquad \\text{且} \\bar{U}_ {1 / 2} \\subset U_ {3 / 4} \\qquad \\text{且} \\bar{U}_ {3 / 4} \\subset U_ {1} $
 
 等，应用之前的引理得证
+
+**推论** Normality $ \\Rightarrow $ 完全规范的
+
+**定理(Tietze Extension Theorem)** 设X为normal的且 $ F \\subset X $为闭的，设 $ f: F \\to R $连续。则有一个映射 $ g: X \\to R $使得g(x) = f(x)对所有 $ x \\in F $。更一般地，它可被排列为
+
+$ \\operatorname{sup}_ {x \\in F} f(x) = \\operatorname{sup}_ {x \\in X} g(x) \\qquad \\operatorname{inf}_ {x \\in F} f(x) = \\operatorname{inf}_ {x \\in X} g(x) $
+
+证明 首先让我们用事例f是有界的。不失一般性，我们可假设 $ 0 \\le f(x) \\le 1 $及最小为0最大为1。通过Urysohn引理，存在一个函数 $ g_ {1}: X \\to [0, \\frac{1}{3}] $使得
+
+$ g_ {1}(x) = \\left \\{ \\begin{array}{ll} 0 & \\text{if } x \\in F \\text{ and } f(x) \\le \\frac{1}{3} \\\\ \\frac{1}{3} & \\text{if } x \\in F \\text{ and } f(x) \\ge \\frac{2}{3} \\end{array} \\right. $
+
+设 $ f_ {1} = f - g_ {1} $且注意 $ 0 \\le f_ {1}(x) \\le \\frac{2}{3}, x \\in F $
+
+重复以上操作，找到 $ g_ {2}: X \\to [0, \\frac{1}{3} \\cdot \\frac{2}{3}] $使得
+
+$ g_ {2}(x) = \\left\\{ \\begin{array}{ll} 0 & \\text{if } x \\in F \\text{且} f_ {1}(x) \\le \\frac{1}{3} \\cdot \\frac{2}{3} \\\\ \\frac{1}{3} \\times \\frac{2}{3} & \\text{if } x \\in F \\text{且} f_ {1}(x) \\ge \\frac{2}{3} \\cdot \\frac{2}{3} \\end{array} \\right. $
+
+设 $ f_ {2} = f_ {1} - g_ {2} $且注意 $ 0 \\le f_ {2}(x) \\le (\\frac{2}{3})^{2}, x \\in F $
+
+对归纳步骤，假设我们已定义一个函数 $ f_ {n}, 0 \\le f_ {n}(x) \\le (\\frac{2}{3})^{n}, x \\in F $。则找到 $ g_ {n+1}: X \\to [0, (\\frac{1}{3}) (\\frac{2}{3})^{n}] $使得
+
+$ g_ {n+1}(x) = \\left \\{ \\begin{array}{ll} 0 & \\text{if } x \\in F \\text{且} f_ {n}(x) \\le (\\frac{1}{3}) (\\frac{2}{3})^{n} \\\\ ((\\frac{1}{3})(\\frac{2}{3})^{n} & \\text{if } x \\in F \\text{且} f_ {n}(x) \\ge (\\frac{2}{3})(\\frac{2}{3})^{n} $
+
+设$ f_ {n+1} = f_ {n} - g_ {n+1} $
+
+现在设 $ g(x) = \\sum g_ {n} (x) $。这个系列统一收敛因为 $ 0 \\le g_ {n}(x) \\le (\\frac{1}{3}) (\\frac{2}{3})^{n-1} $。这样g是连续的
+
+对 $ x \\in F $我们有
+
+$ f - g_ {1} = f_ {1} $
+
+$ f_ {1} - g_ {2} = f_ {2} $
+
+$ \\cdots $
+
+通过添加和消除我们获得
+
+$ f - (g_ {1} + g_ {2} + \\cdots + g_ {n}) = f_ {n} \\qquad 0 \\le f_ {n}(x) \\le (\\frac{2}{3})^{n} $
+
+且用限制在F上g(x) = f(x)。明显地边界也是正确的
+
+我们现在考虑无边界情况：
+
+情况I: f在两个方向上f是无边界的
+
+情况II: f的边界小于a
+
+情况III: f有界大于b
+
+设h为一个homeomorphism:
+
+$ (- \\infty, \\infty) \\to (0, 1) \\qquad \\text{在情况I} $
+
+$ [a, \\infty) \\to [0, 1) \\qquad \\text{在情况II} $
+
+$ (-\\infty, b] \\to (0, 1] \\qquad \\text{在情况III} $
+
+则 $ h \\circ f $边界为0、1且我们可扩展它到 $ g_ {1} $。如果我们排列 $ g_ {1}(x) $不为0，如果 $ h \\circ f $不为0则 $ g = h^{-1} \\circ g_ {1} $被定义且可扩展f
+
+则设
+
+$ C = \\{x \| g_ {1}(x) = 0 或1 \\} \\qquad \\text{在情况I} $
+
+$ C = \\{x \| g_ {1}(x) = 1\\} \\qquad \\text{在情况II} $
+
+$ C = \\{x \| g_ {1}(x) = 0\\} \\qquad \\text{在情况III} $
+
+则C是闭的且 $ C \\cap F = \\emptyset $，这样存在一个函数$ k: X \\to [0, 1] $使得 $ k \\equiv 0 $在C上且 $ k \\equiv 1 $在F上。设 $ g_ {2} = k \\cdot g_ {1} + (1 - k) \\cdot \\frac{1}{2} $。则 $ g_ {2} $也是在 $ g_ {1} $和 $ \\frac{1}{2}, g_ {2} \\ne g_ {1} $在C上。同样，$ g_ {2} = g_ {1} = h \\circ f $在F上。这样 $ g = h^{-1} \\circ g_ {2} $以预想的方式扩展了f
