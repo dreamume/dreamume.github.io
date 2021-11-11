@@ -67,3 +67,15 @@ $ \\mathcal{U} = \\sum^{N}_ {j=1} [ \\operatorname{sup}_ {x_ {j-1} \\le x \\le x
 $ \\mathcal{L} = \\sum^{N}_ {j=1} [ \\operatorname{inf}_ {x_ {j-1} \\le x \\le x_ {j}} f(x)] (x_ {j} - x_ {j - 1}) $
 
 则我们有 $ \\mathcal{U} - \\mathcal{L} < \\epsilon $。最后，我们说一个复数值函数是可积的如果它的实部和虚部是可积的
+
+一个简单的在[0, 1]上可积函数的例子，有无限多个不连续点
+
+$ f(x) = \\left \\{ \\begin{array}{ll} 1 & \\text{if } 1 / (n + 1) < x \\le 1 / n \\text{ 且n是奇数} \\\\ 0 & \\text{if } 1 / (n+1) < x \\le 1 / n \\text{且n是偶数} \\\\ 0 & \\text{if } x = 0 \\end{array} \\right. $
+
+这个例子展示如下图。注意f在 x = 1 / n和x = 0时是不连续的
+
+![img](../img/example_of_a_riemann_integrable_funnction.png)
+
+在[0, 1]上含不连续的稠密点的可积函数的更精巧的例子描述在问题1。一般地，当可积函数有无穷多个不连续点，这些函数事实上被事实特征，更精确地，它们的不连续点不是太多，即可忽略不计，即一个可积函数不连续点的集合有度量0
+
+从现在开始，我们将总是假设我们的函数是可积的，即使我们不直接陈述这个需求
