@@ -68,3 +68,15 @@ $ \\bullet $ 对于给定理论的每个断言（真或假），我们将联系�
 所以可以肯定（A或B）为真，但是我们不知道是要证明A还是B
 
 如果A和B是两个断言，则((非A) 或B)写为：$ A \\Rightarrow B $
+
+规则2立即表面，对任意断言A，断言 $ A \\Rightarrow A $为真
+
+规则3: 如果（非A）为真，则 $ A \\Rightarrow B $对所有B都为真
+
+规则4: 如果A为真且 $ A \\Rightarrow B $为真，则B是真
+
+重要的是不要将 $ A \\Rightarrow B $和B相混淆！规则4被称为三段式原则
+
+如果A和B是两个断言，断言(非 ((非A) 或 (非B)))被称为A和B的conjunction且记为(A and B)
+
+规则5: (A and B)为真当且仅当A和B都为真
