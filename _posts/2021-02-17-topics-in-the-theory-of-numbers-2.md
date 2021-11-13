@@ -129,3 +129,21 @@ $ (-1)^{\\frac{p-1}{2}} ((\\frac{p-1}{2})!)^{2} + 1 \\equiv 0 \\, (mod \\, p) $
 $ x^{k} - 1 \\equiv 0 \\quad (mod \\quad p) $
 
 有k个根
+
+**定理** 如果一个数c有序n modulo m，则数 $ 1, c, c^{2}, \\cdots, c^{n-1} $配对incongruent modulo m。如果
+
+$ c^{u} \\equiv c^{\\upsilon} \\quad (mod \\quad m), \\qquad \\text{则} u \\equiv \\upsilon \\quad (mod \\quad n) $
+
+特别地，当 $ \\upsilon = 0 $，例如，$ c^{u} \\equiv 1 \\quad (mod \\quad m), \\text{则} n \| u $
+
+根据定理，从欧拉 - 费马定理有 $ n \| \\varphi(m) $
+
+不失一般性，我们可假设 $ u \\ge \\upsilon $。则 $ c^{u - \\upsilon} \\equiv 1 \\quad (mod \\quad m) $。用n除以 $ u - \\upsilon $得
+
+$ u - \\upsilon = nq + s $
+
+q是一个整数，$ 0 \\le s < n $。基于此我们有
+
+$ c^{u - \\upsilon} = (c^{n})^{q}c^{s} \\equiv c^{s} \\equiv 1 \\quad (mod \\quad m) $
+
+在c的正积分指数上，第n个是第一个1 modulo m，则s = 0，因此 $ n \| u - \\upsilon $
