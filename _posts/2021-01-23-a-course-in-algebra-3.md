@@ -26,6 +26,7 @@ category:   maths
 2.  [Factorization in Euclidean Domains](#org8222f14)
 3.  [对称多项式](#org250fd7e)
 4.  [Cubic Equations](#orgf02219b)
+5.  [有理分数域](#org6600a85)
 
 polynomial的和和乘积及polynomial和数的乘积依然是polynomial，这意味着polynomials在一个实变量的所有函数上的代数形成了一个子代数。该子代数被称为polynomial在R上的代数并记为R[x]
 
@@ -474,3 +475,58 @@ $ c_ {1} \\approx 2 \\sqrt[3]{1.73400} \\cos{\\frac{\\pi - 0.002000}{3}} \\appro
 $ c_ {2} \\approx 2 \\sqrt[3]{1.73400} \\cos{\\frac{\\pi + 0.002000}{3}} \\approx 1.20278 $
 
 $ c_ {3} \\approx 2 \\sqrt[3]{1.73400} \\cos{\\frac{0.002000}{3}} \\approx -2.40277 $
+
+
+<a id="org6600a85"></a>
+
+# 有理分数域
+
+**例子** 设
+
+$ g = (x - c_ {1})(x - c_ {2}) \\cdots (x - c_ {n}) $
+
+$ c_ {1}, c_ {2}, \\ldots, c_ {n} $是不同的，则
+
+$ \\frac{f}{g} = \\frac{a_ {1}}{x - c_ {1}} + \\frac{a_ {2}}{x - c_ {2}} + \\cdots + \\frac{a_ {n}}{x - c_ {n}} $
+
+其 $ a_ {1}, a_ {2}, \\ldots, a_ {n} \\in K $。固定i，$ 1 \\le i \\le n $。为找到 $ a_ {i} $，两边乘以g且让 $ x = c_ {i} $，我们获得
+
+$ f(c_ {i}) = a(c_ {i} - c_ {1}) \\cdots a(c_ {i} - c_ {i - 1})a(c_ {i} - c_ {i+1}) \\cdots a(c_ {i} - c_ {n}) = a_ {i}g^{\\prod_}(c_ {i}) $
+
+则
+
+$ a_ {i} = \\frac{f(c_ {i})}{g^{\\prime}(c_ {i})} $
+
+因此
+
+$ \\frac{f}{g} = \\sum^{n}_ {i=1} \\frac{f(c_ {i})}{g^{\\prime}(c_ {i})(x - c_ {i}) $
+
+（假设 $ \\operatorname{deg}{f} < \\operatorname{deg}{g} $）。这是非常有趣的，通过这样我们获得了Laprange插值公式
+
+$ f = \\sum^{n}_ {i=1} b_ {i} \\frac{(x - c_ {1}) \\cdots (x - c_ {i-1})(x - c_ {i+1}) \\cdots (x - c_ {n})}{(c_ {i} - c_ {1}) \\cdots (c_ {i} - c_ {i-1})(c_ {i} - c_ {i+1}) \\cdots (c_ {1} - c_ {n})} $
+
+**例子** 在之前的例子中，我们使用了系数的方法，它可用于更一般化的解决方案。例如，让我们给一个有理分数
+
+$ \\frac{x}{(x+1)(x^{2}+1)^{2}} $
+
+作为 $ \\mathbb{R} $上原始分数的和
+
+$ \\frac{x}{(x+1)(x^{2}+1)^{2}} = \\frac{a}{x+1} = \\frac{bx+c}{x^{2}+1} + \\frac{dx + e}{(x^{2}+1)^{2}} $
+
+$ a, b, c, d, e $为某个实数。为此，我们两边乘以 $ (x+1)(x^{2}+1)^{2} $，
+
+$ x = a(x^{2} + 1)^{2} + (bx + c)(x + 1)(x^{2} + 1) + (dx + e)(x + 1) $
+
+通过赋值 $ x = -1, x = i $，我们获得
+
+$ -1 = 4a, i = (di + e)(i + 1) = (e -d) + (d + e)i $，这样
+
+$ a = - \\frac{1}{4}, \\qquad d = e = \\frac{1}{2} $
+
+同样，通过比较自由项和 $ x^{4} $的系数，我们获得0 = a + c + e和0 = a + b，意味着
+
+$ b = \\frac{1}{4}, \\qquad c = - \\frac{1}{4} $
+
+最后，我们有
+
+$ \\frac{x}{(x+1)(x^{2}+1)^{2}} = - \\frac{1}{4(x+1)} + \\frac{x-1}{4(x^{2}+1)} + \\frac{x+1}{2(x^{2} + 1)^{2}} $
