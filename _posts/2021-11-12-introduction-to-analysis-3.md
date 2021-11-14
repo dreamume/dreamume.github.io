@@ -23,6 +23,7 @@ category:   maths
 # Table of Contents
 
 1.  [古代的求积法](#org610e933)
+2.  [微分法之后的求积法](#orgb6d6c35)
 
 
 <a id="org610e933"></a>
@@ -80,3 +81,26 @@ $ \\epsilon < \\frac{a}{n}, \\text{ 从而} n \\epsilon < a $
 这与阿基米德原则矛盾，则 $ \\epsilon > 0 $的假设不成立，然而 $ \\epsilon \\ge 0 $，则 $ \\epsilon = 0 $
 
 阿基米德的原则包含在实数的连续性中，如果阿基米德原则不成立，则所有的自然数 $ n \\le \\frac{a}{\\epsilon} $。即所有的自然数的集合有界，从而这样的集合的上限为s，从而有自然数 $ s - 1 < n \\le s $，从而s < n + 1，n + 1也是自然数，这样矛盾，则不得不承认阿基米德原则
+
+
+<a id="orgb6d6c35"></a>
+
+# 微分法之后的求积法
+
+上面的求积法很巧妙，古代阿基米德开始使用，但是，它只能用于抛物线，在18世纪，这样的求积问题任何人都可以通过以下方法轻松地解决：
+
+![img](../img/example_of_parabola_integral.png)
+
+和之前一样，抛物线方程为
+
+$ y^{2} = cx $
+
+面积S为OM = x地函数S(x)，使用如下记号
+
+$ \\bigtriangleup S = \\text{面积}(ABB^{\\prime}A^{\\prime}) $
+
+这样的面积被 $ AB, A^{\\prime}B^{\\prime} $夹着，底为两个平行四边形面积 $ AB \\cdot \\bigtriangleup x \\cdot \\sin{\\omega} $和 $ A^{\\prime}B^{\\prime} \\cdot \\bigtriangleup x \\cdot \\sin{\\omega} $中间（AM = y）：
+
+$ 2y \\sin{\\omega} \\cdot \\bigtriangleup x < \\bigtriangleup S < 2(y+ \\bigtriangleup y) \\sin{\\omega} \\cdot \\bigtriangleup x $
+
+$ 2y \\sin{\\omega} < \\frac{\\bigtriangleup S}{\\bigtriangleup x} < 2y \\sin{\\omega} + 2 \\sin{\\omega} \\cdot \\bigtriangleup y $
