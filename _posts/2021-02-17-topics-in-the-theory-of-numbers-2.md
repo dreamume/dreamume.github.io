@@ -147,3 +147,11 @@ q是一个整数，$ 0 \\le s < n $。基于此我们有
 $ c^{u - \\upsilon} = (c^{n})^{q}c^{s} \\equiv c^{s} \\equiv 1 \\quad (mod \\quad m) $
 
 在c的正积分指数上，第n个是第一个1 modulo m，则s = 0，因此 $ n \| u - \\upsilon $
+
+某个g的序是 $ \\varphi(m) $，如果这样的g存在，它扮演了一个重要的角色。$ g, g^{2}, \\cdots, g^{\\varphi(m)} $，形成一个modulo m的缩减余数系统。这些有序 $ \\varphi(m) $的数被称为modulo m的congruence的原始根，或原始根。如果对一个给定的modulu m存在一个原始根g，则对每个与m互质的c，我们称最小的非负指数k
+
+$ c \\equiv g^{k} \\; (mod \\; m) $
+
+为modulo m的c的索引
+
+我们将显示对每个素数p，存在一个modulo p的原始根
