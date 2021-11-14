@@ -491,7 +491,7 @@ $ \\frac{f}{g} = \\frac{a_ {1}}{x - c_ {1}} + \\frac{a_ {2}}{x - c_ {2}} + \\cdo
 
 其 $ a_ {1}, a_ {2}, \\ldots, a_ {n} \\in K $。固定i，$ 1 \\le i \\le n $。为找到 $ a_ {i} $，两边乘以g且让 $ x = c_ {i} $，我们获得
 
-$ f(c_ {i}) = a(c_ {i} - c_ {1}) \\cdots a(c_ {i} - c_ {i - 1})a(c_ {i} - c_ {i+1}) \\cdots a(c_ {i} - c_ {n}) = a_ {i}g^{\\prod_}(c_ {i}) $
+$ f(c_ {i}) = a(c_ {i} - c_ {1}) \\cdots (c_ {i} - c_ {i - 1}) (c_ {i} - c_ {i+1}) \\cdots (c_ {i} - c_ {n}) = a_ {i}g^{\\prime}(c_ {i}) $
 
 则
 
@@ -499,7 +499,7 @@ $ a_ {i} = \\frac{f(c_ {i})}{g^{\\prime}(c_ {i})} $
 
 因此
 
-$ \\frac{f}{g} = \\sum^{n}_ {i=1} \\frac{f(c_ {i})}{g^{\\prime}(c_ {i})(x - c_ {i}) $
+$ \\frac{f}{g} = \\sum^{n}_ {i=1} \\frac{f(c_ {i})}{g^{\\prime}(c_ {i})(x - c_ {i})} $
 
 （假设 $ \\operatorname{deg}{f} < \\operatorname{deg}{g} $）。这是非常有趣的，通过这样我们获得了Laprange插值公式
 
