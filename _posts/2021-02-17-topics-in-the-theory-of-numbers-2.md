@@ -155,3 +155,7 @@ $ c \\equiv g^{k} \\; (mod \\; m) $
 为modulo m的c的索引
 
 我们将显示对每个素数p，存在一个modulo p的原始根
+
+**定理** 序为n modulo 一个素数p的元素个数是 $ \\varphi(n) $如果 $ n \| p - 1 $。否则，它是0。基于此，有 $ \\varphi(p - 1) $个modulo p的原始根
+
+如果modulus可被两个奇素数整除或者modulus被4和大于4的素数整除则没有原始根。这样有原始根只在modulus为2，4，一个奇素数平方，或一个奇素数平方的两倍时才有
