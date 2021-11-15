@@ -104,3 +104,51 @@ $ \\bigtriangleup S = \\text{面积}(ABB^{\\prime}A^{\\prime}) $
 $ 2y \\sin{\\omega} \\cdot \\bigtriangleup x < \\bigtriangleup S < 2(y+ \\bigtriangleup y) \\sin{\\omega} \\cdot \\bigtriangleup x $
 
 $ 2y \\sin{\\omega} < \\frac{\\bigtriangleup S}{\\bigtriangleup x} < 2y \\sin{\\omega} + 2 \\sin{\\omega} \\cdot \\bigtriangleup y $
+
+这样 $ \\triangle x > 0 $就完了，$ \\triangle x < 0 $也一样，只是不等号改变了方向。这样 $ \\triangle x \\to 0 $时 $ \\triangle y \\to 0 $，这样
+
+$ \\frac{dS}{dx} = 2y \\sin{\\omega} = 2 \\sin{\\omega} \\cdot \\sqrt{cx} $
+
+然而
+
+$ \\frac{dx^{\\frac{3}{2}}}{dx} = \\frac{3}{2} \\sqrt{x} $
+
+这样
+
+$ F(x) = \\frac{4}{3} \\sqrt{c} \\cdot \\sin{\\omega} \\cdot x^{\\frac{3}{2}} $
+
+如果你把
+
+$ \\frc{dF}{dx} = \\frac{dS}{dx}, \\qquad \\text{即} \\frac{d(F - S)}{dx} = 0 $
+
+这样F - S为定数，x = 0时F(0) = 0, S = 0，这样定数为0，S = F。即
+
+$ S(x) = \\frac{4}{3} \\sqrt{c} \\cdot \\sin{\\omega} \\cdot x^{\\frac{3}{2}} $
+
+这就是要求的面积。这样同阿基米德的计算结果一致，实际上
+
+$ \\begin{aligned} S(x) &= \\frac{4}{3} \\cdot \\sqrt{cx} \\cdot x \\sin{\\omega} = \\frac{4}{3} yx \\sin{\\omega} = \\frac{4}{3} AM \\cdot OM \\cdot \\sin{\\omega} \\\\ &= \\frac{4}{3} \\cdot \\frac{1}{2} AB \\cdot OM \\cdot \\sin{\\omega} = \\frac{4}{3} \\triangle OAB \\end{aligned} $
+
+用这样的方法，如下图所示的曲线y = f(x)与x轴之间的两条垂线夹着的面积S与上图相同，不限于抛物线
+
+![img](../img/curve_integral_get_area.png)
+
+即f(x)为连续函数的话，$ \\triangle x \\to 0 $时，$ \\triangle y \\to 0 $，则
+
+$ \\frac{dS}{dx} = f(x) $
+
+这样F(x)有
+
+$ F^{\\prime}(x) = f(x) $
+
+如果函数是
+
+$ \\frac{d(S - F)}{dx} = 0 $
+
+从而
+
+$ S(x) - F(x) = C $
+
+而x = a时S(a) = 0，则C = -F(a)。则
+
+$ S(x) = F(x) - F(a) $
