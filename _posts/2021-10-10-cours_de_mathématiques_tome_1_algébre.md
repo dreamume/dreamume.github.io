@@ -80,3 +80,21 @@ $ \\bullet $ 对于给定理论的每个断言（真或假），我们将联系�
 如果A和B是两个断言，断言(非 ((非A) 或 (非B)))被称为A和B的conjunction且记为(A and B)
 
 规则5: (A and B)为真当且仅当A和B都为真
+
+**定义** 两个断言A，B相当当且仅当这两个意味着 $ A \\Rightarrow B, B \\Rightarrow A $都为真，我们记为 $ A \\Leftrightarrow B $
+
+例1 $ A \\Leftrightarrow (非(非 A)) $
+
+例2 $ A \\Rightarrow B $ 相等于 $ (非B) \\Rightarrow (非A) $
+
+对例2，为了证明 $ A \\Rightarrow B $，我们选择 $ A \\Rightarrow B $和 $ (非B) \\Rightarrow (非A) $这两个断言中更容易的一个
+
+以上都可以发展成真正的“命题演算”，这里不做说明。让我们仅限于指出
+
+规则6: 如果 $ A \\Rightarrow B $ 和 $ B \\Rightarrow C $为真，则 $ A \\Rightarrow C $为真
+
+这暗示了传递性，其可写为
+
+$ ((A \\Rightarrow B) \\; and \\; (B \\Rightarrow C)) \\Rightarrow (A \\Rightarrow C) $
+
+规则7: $ A_ {1}, A_ {2}, \\ldots, A_ {n} $和B为断言；如果 $ (A_ {1} \\lor A_ {2} \\lor \\ldots \\lor A_ {n}), (A_ {1} \\Rightarrow B), (A_ {2} \\Rightarrow B), \\ldots, (A_ {n} \\Rightarrow B) $ 为真，则B为真
