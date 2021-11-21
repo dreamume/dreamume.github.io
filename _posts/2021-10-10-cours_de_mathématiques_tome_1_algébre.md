@@ -98,3 +98,7 @@ $ \\bullet $ 对于给定理论的每个断言（真或假），我们将联系�
 $ ((A \\Rightarrow B) \\; and \\; (B \\Rightarrow C)) \\Rightarrow (A \\Rightarrow C) $
 
 规则7: $ A_ {1}, A_ {2}, \\ldots, A_ {n} $和B为断言；如果 $ (A_ {1} \\lor A_ {2} \\lor \\ldots \\lor A_ {n}), (A_ {1} \\Rightarrow B), (A_ {2} \\Rightarrow B), \\ldots, (A_ {n} \\Rightarrow B) $ 为真，则B为真
+
+规则8: 设A是一个理论的断言；将公理(not A)添加到所考虑的理论中，并假设在该理论中找到断言B使得 $ (not A) \\Rightarrow B, (not A) \\Rightarrow (not B) $在这个新理论中为真；那么A在起始理论中为真
+
+这就是“荒诞推理”的原理。在实践中，我们说我们有，从（非A)，最终得到了一个矛盾
