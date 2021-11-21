@@ -159,3 +159,11 @@ $ c \\equiv g^{k} \\; (mod \\; m) $
 **定理** 序为n modulo 一个素数p的元素个数是 $ \\varphi(n) $如果 $ n \| p - 1 $。否则，它是0。基于此，有 $ \\varphi(p - 1) $个modulo p的原始根
 
 如果modulus可被两个奇素数整除或者modulus被4和大于4的素数整除则没有原始根。这样有原始根只在modulus为2，4，一个奇素数平方，或一个奇素数平方的两倍时才有
+
+**定理** 两个数的乘积是一个quadratic residue如果这两个都是quadratic residue或两个都是nonresidue；乘积是一个quadratic nonnresidue如果其中一个是quadrati residue另一个是nonresidue
+
+我们写 $ ( \\frac{c}{p} ) $称之为Legendre符号。如果c是一个quadratic residue modulo p则值为1，c是一个quadratic nonnresidue则为-1，如果c能被p整除则为0
+
+**定理（欧拉引理）** 如果p是一个奇素数，则对每个c
+
+$ ( \\frac{c}{p} ) \\equiv c^{(p-1) / 2} \\; (mod \\; p) $
