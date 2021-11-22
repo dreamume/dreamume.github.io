@@ -102,3 +102,7 @@ $ ((A \\Rightarrow B) \\; and \\; (B \\Rightarrow C)) \\Rightarrow (A \\Rightarr
 规则8: 设A是一个理论的断言；将公理(not A)添加到所考虑的理论中，并假设在该理论中找到断言B使得 $ (not A) \\Rightarrow B, (not A) \\Rightarrow (not B) $在这个新理论中为真；那么A在起始理论中为真
 
 这就是“荒诞推理”的原理。在实践中，我们说我们有，从（非A)，最终得到了一个矛盾
+
+**例4** 假设B是起始理论中的真断言，并且 $ (非A) \\Rightarrow (非B) $。所以 $ B \\Rightarrow A $为真，因此A为真因为B是真
+
+很多时候，荒谬的推理采用了例4中的描述形式。但并不总是如此简单，如这个例子所示
