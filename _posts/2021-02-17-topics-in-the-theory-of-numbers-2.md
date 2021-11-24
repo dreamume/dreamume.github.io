@@ -167,3 +167,35 @@ $ c \\equiv g^{k} \\; (mod \\; m) $
 **定理（欧拉引理）** 如果p是一个奇素数，则对每个c
 
 $ ( \\frac{c}{p} ) \\equiv c^{(p-1) / 2} \\; (mod \\; p) $
+
+$ c \\equiv 0 \\; (mod \\; p) $的情况可忽略。在其他情况中，定理说c要么是一个quadratic residue要么是一个nonresidue，取决于c的(p - 1) / 2次方模p是否为1或-1
+
+我们对两边去平方来利用费马定理
+
+我们呈现一个不使用Wilson定理或费马定理的证明，且我们也给出了这两个定理的新的证明。设c为不被p整除的任意数。记 $ x_ {i}, i = 1, 2, \\ldots, p - 1 $为最小的正整数使得
+
+$ ix_ {i} \\equiv c \\; (mod \\; p) $
+
+从之前的定理我们知道这些解在不同的residue class里，我们可看到如果 $ x_ {i} = j $，则 $ ij \\equiv c \\; (mod \\; p) $，则 $ x_ {j} = i $
+
+如果c是一个quadratic nonresidue，这样没有y满足
+
+$ y^{2} \\equiv c \\; (mod \\; p) $
+
+则每个congruence出现两次，如果我们每个只取一个且把它们相乘，左边我们获得(p - 1)!。这样，如果c是一个quadratic nonresidue，则
+
+$ (p - 1)! \\equiv c^{(p - 1) / 2} \\; (mod \\; p) $
+
+如果y是一个解决方案，则p - y也是一个解决方案。选择y从0到p，则p - y也是从0到p。则
+
+$ y(p - y) \\equiv -c \\; (mod \\; p) $
+
+因每个congruence出现两次，我们取一次并把它们相乘，如果c是一个quadratic residue，则
+
+$ (p - 1)! \\equiv -c^{(p-1) / 2} \\; (mod \\; p) $
+
+我们知道1对所有p都是quatratic residue，则
+
+$ (p - 1)! \\equiv -1 \\; (mod \\; p) $
+
+这是Wilson定理。同样也不难得出欧拉引理
