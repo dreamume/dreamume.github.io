@@ -106,3 +106,9 @@ $ ((A \\Rightarrow B) \\; and \\; (B \\Rightarrow C)) \\Rightarrow (A \\Rightarr
 **例4** 假设B是起始理论中的真断言，并且 $ (非A) \\Rightarrow (非B) $。所以 $ B \\Rightarrow A $为真，因此A为真因为B是真
 
 很多时候，荒谬的推理采用了例4中的描述形式。但并不总是如此简单，如这个例子所示
+
+**例5** 要证明断言A: 素数集 $ mathscr{P} $是无限的
+
+断言（非A）：集合 $ mathscr{P} $是有限的
+
+让我们把(非A)添加到作为算术基础的皮亚诺公理中。我们知道集合 $ \\mathscr{P} $非空（例如2是素数）。然后让N成为 $ \\mathscr{P} $中最大的元素（N存在因为(非A)为真，且我们在算术中证明任意非空有限集都有一个最大的元素）。数字 $ 2 \\times 3 \\times 4 \\times \\cdots \\times N + 1 $缩写成 $ N! + 1 $不能被任意 $ \\le N $的素数整除。令q为N！+1，则 $ q \\in \\mathscr{P}, q > N $。所以在新理论中，断言B: N是 $ \\mathscr{P} $中最大的元素既假又真。则根据规则8A为真
