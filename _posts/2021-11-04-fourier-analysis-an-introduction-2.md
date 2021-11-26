@@ -146,3 +146,33 @@ $ S_ {N}(f)(x) = \\sum^{N}_ {n=-N} \\hat{f}(n) e^{2 \\pi inx / L} $
 事实上，使用傅立叶级数的部分和，我们可重形成第一章基本问题
 
 问题：什么情况下当 $ N \\to \\infty, S_ {N}(f) $收敛？
+
+在继续这个问题之前，我们回到一些简单的傅立叶级数的例子
+
+例1 设 $ f(\\theta) = \\theta, -\\pi \\le \\theta \\le \\pi $。计算傅立叶系数需要部分简单的积分。首先，如果 $ n \\ne 0 $，则
+
+$ \\begin{aligned} \\hat{f}(n) &= \\frac{1}{2 \\pi} \\int^{\\pi}_ {- \\pi} \\theta e^{-in \\theta} d \\theta \\\\ &= \\frac{1}{2 \\pi} [- \\frac{\\theta}{in} e^{- in \\theta}]^{\\pi}_ {-\\pi} + \\frac{1}{2 \\pi in} \\int^{\\pi}_ {-\\pi} e^{-in \\theta} d \\theta \\\\ \\frac{(-1)^{n+1}}{in}, \\end{aligned} $
+
+且如果n = 0我们有
+
+$ \\hat{f}(0) = \\frac{1}{2 \\pi} \\int^{\\pi}_ {- \\pi} \\theta d \\theta = 0 $
+
+因此，f的傅立叶级数为
+
+$ f(\\theta) \\sim \\sum_ {n \\ne 0} \\frac{(-1)^{n+1}}{in} e^{in\\theta} = 2 \\sum^{\\infty}_ {n=1} (-1)^{n+1} \\frac{\\sin{n \\theta}}{n} $
+
+第一个和在所有非零整数上，且第二个和通过欧拉identities获得。可能通过对每个 $ \\theta $以上级数收敛的基本意义来证明，但它收敛到 $ f( \\theta ) $不明显
+
+例2 定义 $ f( \\theta ) = (\\pi - \\theta)^{2} / 4, 0 \\le \\theta \\le 2 \\pi $。则和分部积分相似
+
+$ f( \\theta ) \\sim \\frac{\\pi^{2}}{12} + \\sum^{\\infty}_ {n=1} \\frac{\\cos{n \\theta}}{n^{2}} $
+
+例3 函数的傅立叶级数
+
+$ f(\\theta) = \\frac{\\pi}{\\sin{\\pi \\alpha}} e^{i(\\pi - \\theta) \\alpha} $
+
+在 $ [0, 2 \\pi] $上是
+
+$ f(\\theta) \\sim \\sum^{\\infty}_ {n = - \\infty} \\frac{e^{in \\theta}}{n + \\alpha} $
+
+$ \\alpha $不是一个整数
