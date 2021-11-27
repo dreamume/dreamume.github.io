@@ -197,7 +197,7 @@ $ \\frac{1 - \\omega^{N+1}}{1 - \\omega} \\qquad \\text{and} \\qquad \\frac{\\om
 
 $ \\frac{\\omega^{-N} - \\omega^{N+1}}{1 - \\omega} = \\frac{\\omega^{-N - 1/2} - \\omega^{N+ 1/2}}{\\omega^{-1/2} - \\omega^{1/2}} = \\frac{\\sin{((N+ \\frac{1}{2})x)}}{\\sin{(x / 2)}} $
 
-*例5* 函数 $ P_ {r}(\\theta) $称为Poisson kernel，定义为对 $ \\theta \\in [- \\pi, \\pi] $且$ 0 \\le r < 1 $通过绝对统一收敛系列
+**例5** 函数 $ P_ {r}(\\theta) $称为Poisson kernel，定义为对 $ \\theta \\in [- \\pi, \\pi] $且$ 0 \\le r < 1 $通过绝对统一收敛系列
 
 $ P_ {r}(\\theta) = \\sum^{\\infty}_ {n = - \\infty} r^{\| n \|} e^{in \\theta} $
 
