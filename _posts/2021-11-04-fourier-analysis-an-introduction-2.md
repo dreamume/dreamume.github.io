@@ -176,3 +176,31 @@ $ f(\\theta) = \\frac{\\pi}{\\sin{\\pi \\alpha}} e^{i(\\pi - \\theta) \\alpha} $
 $ f(\\theta) \\sim \\sum^{\\infty}_ {n = - \\infty} \\frac{e^{in \\theta}}{n + \\alpha} $
 
 $ \\alpha $不是一个整数
+
+例4 三角多项式定义 $ x \\in [- \\pi, \\pi] $
+
+$ D_ {N}(x) = \\sum^{N}_ {n=-N} e^{inx} $
+
+称为第N个Dirichlet kernel且在理论中基本重要的。注意它的傅立叶系数 $ a_ {n} $有属性 $ a_ {n} = 1 $如果 $ \| n \| \\le N $，否则 $ a_ {n} = 0 $。一个Dirichlet kernel的闭合形式公式为
+
+$ D_ {N}(x) = \\frac{\\sin{((N + \\frac{1}{2})x)}}{\\sin{(x/2)}} $
+
+其和为
+
+$ \\sum^{N}_ {n=0} \\omega^{n} \\qquad \\text{and} \\qquad \\sum^{-1}_ {n=-N} \\omega^{n} $
+
+$ \\omega = e^{ix} $。这些和，对应的等于
+
+$ \\frac{1 - \\omega^{N+1}}{1 - \\omega} \\qquad \\text{and} \\qquad \\frac{\\omega^{-N} - 1}{1 - \\omega} $
+
+总和为
+
+$ \\frac{\\omega^{-N} - \\omega^{N+1}}{1 - \\omega} = \\frac{\\omega^{-N - 1/2} - \\omega^{N+ 1/2}}{\\omega^{-1/2} - \\omega^{1/2}} = \\frac{\\sin{((N+ \\frac{1}{2})x)}}{\\sin{(x / 2)}} $
+
+*例5* 函数 $ P_ {r}(\\theta) $称为Poisson kernel，定义为对 $ \\theta \\in [- \\pi, \\pi] $且$ 0 \\le r < 1 $通过绝对统一收敛系列
+
+$ P_ {r}(\\theta) = \\sum^{\\infty}_ {n = - \\infty} r^{\| n \|} e^{in \\theta} $
+
+这个函数为在第一章中讨论的单位盘稳定状态热力等式的解决方案。注意在计算 $ P_ {r}(\\theta) $的傅立叶系数中我们可交换积分的顺序和和因为对每个固定的r，和在 $ \\theta $上统一收敛，且获得第n项傅立叶系数等于 $ r^{\| n \|} $。我们也可统计 $ P_ {r}(\\theta) $系列且看到
+
+$ P_ {r}(\\theta) = \\frac{1 - r^{2}}{1 - 2r \\cos{\\theta} + r^{2}} $

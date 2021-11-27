@@ -129,6 +129,6 @@ $ N < p(q-1)! < N + \\frac{1}{q} \\le N + 1 \\qquad N \\in \\mathbb{N}^{*} $）
 
 **量词**
 
-令 $ \\mathscr{R}(x) $为一个依赖变量x的断言；我们写 $ \\exists x \| \\mathscr{R} $来表示存在至少一个对象x使得 $ \\mathscr{R}(x) $为真
+令 $ \\mathscr{R}(x) $为一个依赖变量x的断言；我们写 $ \\exists x \| \\mathscr{R}(x) $来表示存在至少一个对象x使得 $ \\mathscr{R}(x) $为真
 
 当 $ \\exists x \| \\mathscr{R}(x) $为真，我们不应该相信我们总是能够构造使 $ \\mathscr{R}(x) $为真的对象，通过算法的帮助，在所考虑的理论中构造
