@@ -41,3 +41,15 @@ $ M(n - p + 1, p) + (n - p + 1)(p - 2) + {p - 1 \\choose 2} $
 这个数等于M(n, p)
 
 **标注** 用于Mantel定理的讨论显示如果没有 $ K_ {p} $，则 $ \| E \| \\le \\frac{p - 2}{2(p-1)} n^{2} $
+
+**定理** 如果一个有n个顶点的图有超过 $ \\frac{1}{2}n \\sqrt{n-1} $条边，则G有 $ grith \\le 4 $。即G不是简单的或包含一个 $ P_ {3} $或一个 $ P _{4} $
+
+证明：假设G有 $ grith \\ge 5 $。设 $ y_ {1}, y_ {2}, \\ldots, y_ {d} $为x顶点的邻接顶点，$ d := \\operatorname{deg}(x) $。这些邻接顶点互相不邻接因为G没有三角形。更进一步，没有顶点（x之外的）可邻接超过一个的 $ y_ {1}, \\ldots, y_ {d} $因为在G中没有四边形。这样 $ (\\operatorname{deg}(y_ {1}) - 1) + \\cdots + (\\operatorname{deg}(y_ {d}) - 1) + (d + 1) $不能超过总顶点数n。即
+
+$ \\sum_ {邻接x的顶点y} \\operatorname{deg}(y) \\le n - 1 $
+
+则
+
+$ n(n-1) \\ge \\sum_ {x} \\sum_ {邻接x的顶点y} \\operatorname{deg}(y) = \\sum_ {y} \\operatorname{deg}(y)^{2} \\\\ \\ge \\frac{1}{n} \\left( \\sum_ {y} \\operatorname{deg}(y) \\right)^{2} = \\frac{1}{n} (2 \| E(G) \|)^{2} $
+
+$ \\frac{1}{2} n \\sqrt{n-1} $在定理中只是一个边界 - 它对所有的n不是一个精确的答案。这个问题（最大边数使得 $ grith \\ge 5 $）对所有n值的极值图的确定是非常困难的；确定一个图的等式成立是可能的
