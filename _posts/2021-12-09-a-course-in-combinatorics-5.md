@@ -59,3 +59,41 @@ $ \\frac{f_ {n}(a_ {0}, \\ldots, a_ {i-1}, a^{\\prime}_ {i}, a_ {i+1}, \\ldots, 
 且它 $ \\ge 1 $因为 $ a_ {i} \\le m_ {k+1}, a^{\\prime}_ {i} \\ge m_ {l}, m_ {j+1} \\ge m_ {j}, j = k+1, \\ldots, l-1 $
 
 我们现在有了Hall定理的第二个形式，我们记 $ N(A_ {0}, \\ldots, A_ {n-1}) $ 为 $ (A_ {0}, \\ldots, A_ {n-1}) $ SDR的个数
+
+**定理** 设 $ (A_ {0}, \\ldots, A_ {n-1}) $为集合S的一系列子集。设 $ m_ {i} := \| A_ {i} \| (i = 0, \\ldots, n-1) $且设 $ m_ {0} \\le m_ {1} \\le \\cdots \\le m_ {n-1} $
+
+如果序列有属性H，则
+
+$ N(A_ {0}, \\ldots, A_ {n-1}) \\ge F_ {n}(m_ {0}, \\ldots, m_ {n-1}) $
+
+证明：使用归纳法。当n = 1时明显是成立的，我们区分两种情况
+
+情况1，没有critical block。这种情况下，我们选择 $ A_ {0} $的任意元素a作为它的代表且然后从其他集合中删除a。这样的集合，我们称为 $ A_ {1}(a), \\ldots, A_ {n-1}(a) $，且对这些集合H属性依然成立。通过归纳假设和引理，我们发现
+
+$ \\begin{aligned} N(A_ {0}, \\ldots, A_ {n-1}) &\\ge \\sum_ {a \\in A_ {0}} f_ {n-1}(\| A_ {1}(a) \|, \\ldots, \| A_ {n-1}(a) \|) \\\\ &\\ge \\sum_ {a \\in A_ {0}} f_ {n-1}(m_ {1} - 1, \\ldots, m_ {n-1} - 1) \\\\ &= m_ {0}f_ {n-1}(m_ {1} - 1, \\ldots, m_ {n-1} - 1) \\\\ &= F_ {n}(m_ {0}, m_ {1}, \\ldots, m_ {n-1}) \\end{aligned} $
+
+情况2，有一个critical block $ (A_ {\\upsilon_ {0}}, \\ldots, A_ {\\upsilon_ {k-1}}), \\upsilon_ {0} < \\cdots < \\upsilon_ {k-1}, 0 < k < n $。在这种情况下，我们从所有其他集合 $ A_ {i} $中删除 $ A_ {\\upsilon_ {0}} \\cup \\cdots \\cup A_ {\\upsilon_ {k-1}} $的所有元素，生成 $ A^{\\prime}_ {\\mu_ {0}}, \\ldots, A^{\\prime}_ {\\mu_ {l-1}}, \\{\\upsilon_ {0}, \\ldots, \\upsilon_ {k-1}, \\mu_ {0}, \\ldots, \\mu_ {l-1} \\} = \\{0, 1, \\ldots, n-1\\}, k + l = n $
+
+现在 $ (A_ {\\upsilon_ {0}}, \\ldots, A_ {\\upsilon_ {k-1}}), (A^{\\prime}_ {\\mu_ {0}}, \\ldots, A^{\\prime}_ {\\mu_ {l-1}}) $满足属性H且两个序列的SDR不相交。因此通过归纳假设和引理，我们有
+
+$ \\begin{aligned} N(A_ {0}, \\ldots, A_ {n-1}) &= N(A_ {\\upsilon_ {0}}, \\ldots, A_ {\\upsilon_ {k-1}}) N(A^{\\prime}_ {\\mu_ {0}}, \\ldots, A^{\\prime}_ {\\mu_ {l-1}}) \\\\ \\ge f_ {k}(m_ {\\upsilon_ {0}}, \\ldots, m_ {\\upsilon_ {k-1}}) f_ {l}(\| A^{\\prime}_ {\\mu_ {0}} \|, \\ldots, \| A^{\\prime}_ {\\mu_ {l-1}}) \\\\ &\\ge f_ {k}(m_ {\\upsilon_ {0}}, \\ldots, m_ {\\mu_ {\\upsilon_ {k-1}}}) f_ {l}(\| A^{\\prime}_ {\\mu_ {0}} \|, \\ldots, \| A^{\\prime}_ {\\mu_ {l-1}} \|) \\\\ &\\ge f_ {k}(m_ {\\upsilon_ {0}}, \\ldots, m_ {\\upsilon_ {k-1}}) f_ {l}(m_ {\\mu_ {0}} - k, \\ldots, m_ {\\mu_ {l-1}} - k) \\\\ &\\ge f_ {k}(m_ {0}, \\ldots, m_ {k-1}) f_ {l}(m_ {\\mu_ {0}} - k, \\ldots, m_ {\\mu_ {l-1}} - k) \\end{aligned} $
+
+现在我们标注
+
+$ m_ {\\upsilon_ {k-1}} \\le \| A_ {\\upsilon_ {0}} \\cup \\cdots \\cup A_ {\\upsilon_ {k-1}} \| = k $
+
+且因此我们有
+
+$ (m_ {r} - r)_ {* } = 1 $ 如果 $ k \\le r \\le \\upsilon_ {k-1} $
+
+且
+
+$ (m_ {\\mu_ {i}} - k - i)_ {* } = 1 $ 如果 $ \\mu_ {i} \\le \\upsilon_ {k-1} $
+
+这意味着
+
+$ f_ {k}(m_ {0}, \\ldots, m_ {k-1}) = \\prod_ {0 \\le i \\le \\upsilon_ {k-1}} (m_ {i} - i)_ {* } $
+
+$ f_ {l}(m_ {\\mu_ {0}} - k, \\ldots, m_ {\\mu_ {l-1}} - k) = \\prod_ {\\upsilon_ {k-1} < j < n} (m_ {j} - j)_ {* } $
+
+这样得证
