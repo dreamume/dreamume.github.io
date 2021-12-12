@@ -345,3 +345,25 @@ $ \\left(\\frac{tr}{c}, 2 + \\frac{(2t-1)r}{2c} \\right) $
 其包含和之前相同的整数个数
 
 间隔和源是长度为2的间隔，且端点不是整数；因此间隔包含2个整数，且我们证明了欧拉的第二个观察
+
+**定理** 对一个正数c，模一个素数是否为quadratic residue只依赖4c模该素数的residue；更进一步，同residue r和4c - r的那些素数，或更简单地，同residue r和-r的那些素数
+
+我们现在使用该定理和Legendre符号的已知属性证明reciprocity定理。设p和q为两个奇素数，让我们先看一个素数为4k + 1，另一个为4k + 3的情况。我们可写p + q = 4c，c是一个正整数，且我们有
+
+$ (\\frac{p}{q}) = (\\frac{4c - q}{q}) = (\\frac{4c}{q}) = (\\frac{4}{q})(\\frac{c}{q}) = (\\frac{c}{q}) $
+
+因为Legendre符号是对更小的数周期的，是可乘的，当上面的数是一个平方时是1
+
+相同的方法我们可显示 $ (\\frac{q}{p}) = (\\frac{c}{p}) $。通过假设，4c模p和q的residue是相反的，通过上面定理的第二部分我们有
+
+$ (\\frac{p}{q}) = (\\frac{c}{q}) = (\\frac{c}{p}) = (\\frac{q}{p}) $
+
+如果p和q模4有相同的余数，则称更大的p为p - q = 4c，c是一个正整数。我们可然后写
+
+$ (\\frac{p}{q}) = (\\frac{4c + q}{q}) = (\\frac{4c}{q}) = (\\frac{4}{q}) (\\frac{c}{q}) = (\\frac{c}{q}) $
+
+且
+
+$ (\\frac{q}{p}) = (\\frac{p - 4c}{q}) = (\\frac{-4c}{p}) = (\\frac{-1}{p}) (\\frac{4}{p}) (\\frac{c}{p}) = (\\frac{-1}{p}) (\\frac{c}{p}) $
+
+通过以下定理的第二部分我们有 $ (\\frac{c}{p}) = (\\frac{c}{q}) $且 $ (\\frac{p}{q}) = (\\frac{-1}{p}) (\\frac{q}{p}) $。如果p和q模4有residue 1，则我们有 $ (\\frac{p}{q}) = (\\frac{q}{p}) $。否则，如果有residue 3，我们有 $ (\\frac{p}{q}) = - (\\frac{q}{p}) $。我们可用如下公式表达我们的结果

@@ -76,7 +76,7 @@ $ \\begin{aligned} N(A_ {0}, \\ldots, A_ {n-1}) &\\ge \\sum_ {a \\in A_ {0}} f_ 
 
 现在 $ (A_ {\\upsilon_ {0}}, \\ldots, A_ {\\upsilon_ {k-1}}), (A^{\\prime}_ {\\mu_ {0}}, \\ldots, A^{\\prime}_ {\\mu_ {l-1}}) $满足属性H且两个序列的SDR不相交。因此通过归纳假设和引理，我们有
 
-$ \\begin{aligned} N(A_ {0}, \\ldots, A_ {n-1}) &= N(A_ {\\upsilon_ {0}}, \\ldots, A_ {\\upsilon_ {k-1}}) N(A^{\\prime}_ {\\mu_ {0}}, \\ldots, A^{\\prime}_ {\\mu_ {l-1}}) \\\\ \\ge f_ {k}(m_ {\\upsilon_ {0}}, \\ldots, m_ {\\upsilon_ {k-1}}) f_ {l}(\| A^{\\prime}_ {\\mu_ {0}} \|, \\ldots, \| A^{\\prime}_ {\\mu_ {l-1}}) \\\\ &\\ge f_ {k}(m_ {\\upsilon_ {0}}, \\ldots, m_ {\\mu_ {\\upsilon_ {k-1}}}) f_ {l}(\| A^{\\prime}_ {\\mu_ {0}} \|, \\ldots, \| A^{\\prime}_ {\\mu_ {l-1}} \|) \\\\ &\\ge f_ {k}(m_ {\\upsilon_ {0}}, \\ldots, m_ {\\upsilon_ {k-1}}) f_ {l}(m_ {\\mu_ {0}} - k, \\ldots, m_ {\\mu_ {l-1}} - k) \\\\ &\\ge f_ {k}(m_ {0}, \\ldots, m_ {k-1}) f_ {l}(m_ {\\mu_ {0}} - k, \\ldots, m_ {\\mu_ {l-1}} - k) \\end{aligned} $
+$ \\begin{aligned} N(A_ {0}, \\ldots, A_ {n-1}) &= N(A_ {\\upsilon_ {0}}, \\ldots, A_ {\\upsilon_ {k-1}}) N(A^{\\prime}_ {\\mu_ {0}}, \\ldots, A^{\\prime}_ {\\mu_ {l-1}}) \\\\ &\\ge f_ {k}(m_ {\\upsilon_ {0}}, \\ldots, m_ {\\upsilon_ {k-1}}) f_ {l}(\| A^{\\prime}_ {\\mu_ {0}} \|, \\ldots, \| A^{\\prime}_ {\\mu_ {l-1}}) \\\\ &\\ge f_ {k}(m_ {\\upsilon_ {0}}, \\ldots, m_ {\\mu_ {\\upsilon_ {k-1}}}) f_ {l}(\| A^{\\prime}_ {\\mu_ {0}} \|, \\ldots, \| A^{\\prime}_ {\\mu_ {l-1}} \|) \\\\ &\\ge f_ {k}(m_ {\\upsilon_ {0}}, \\ldots, m_ {\\upsilon_ {k-1}}) f_ {l}(m_ {\\mu_ {0}} - k, \\ldots, m_ {\\mu_ {l-1}} - k) \\\\ &\\ge f_ {k}(m_ {0}, \\ldots, m_ {k-1}) f_ {l}(m_ {\\mu_ {0}} - k, \\ldots, m_ {\\mu_ {l-1}} - k) \\end{aligned} $
 
 现在我们标注
 
