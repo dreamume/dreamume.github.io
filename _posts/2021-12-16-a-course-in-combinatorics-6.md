@@ -34,7 +34,7 @@ category:   maths
 
 证明：对m = 1定理成立。设 $ m \\ge 2 $且假设m - 1时定理是真。设P为一个偏序集没有m + 1元素的chain。设M为P的最大元素的集合。M是一个antichain。假设 $ x_ {1} < x_ {2} < \\cdots < x_ {m} $是 $ P \\ M $中的一个chain。则这也是P中一个最大chain且因此我们有 $ x_ {m} \\in M $，矛盾。因此 $ P \\ M $中没有m个元素的chain。通过归纳假设，$ P \\ M $是m - 1个antichain的并，这证明了定理
 
-**定理** 如果 $ A_ {1}, A_ {2}, \\ldots, A_ {m} $是 $ N := \\{1, 2, \\ldots, n \\} $的子集使得 $ A_ {i} $不是 $ A_ {j} $的子集，如果 $ i \\ne j $，则 $ m \\le {n \\choose \\lfloor n / 2 \\rfloor} $
+**定理** 如果 $ A_ {1}, A_ {2}, \\ldots, A_ {m} $是 $ N := \\{1, 2, \\ldots, n \\} $的子集使得 $ A_ {i} $不是 $ A_ {j} $的子集，如果 $ i \\ne j $，则 $ m \\le {n \\choose {\\lfloor n / 2 \\rfloor} } $
 
 证明：考虑N的子集的集合。 $ \\mathcal{A} := \\{A_ {1}, \\ldots, A_ {m}\\} $是这个集合中的一个antichain
 
@@ -44,7 +44,7 @@ category:   maths
 
 $ \\sum^{n}_ {k=0} \\alpha_ {k}k!(n-k)! \\le n! $ 或 $ \\sum^{n}_ {k=0} \\frac{\\alpha_ {k}}{ {n \\choose k} } \\le 1 $
 
-因为 $ {n \\choose k} $在 $ k = \\lfloor n / 2 \\rfloor $时最大且 $ \\sum \\alhpa_ {k} = m $，则得证
+因为 $ {n \\choose k} $在 $ k = \\lfloor n / 2 \\rfloor $时最大且 $ \\sum \\alpha_ {k} = m $，则得证
 
 如果我们让所有N的 $ \\lfloor n / 2 \\rfloor $子集为antichain则等式成立
 
