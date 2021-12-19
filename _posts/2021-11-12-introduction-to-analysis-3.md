@@ -120,7 +120,7 @@ $ F(x) = \\frac{4}{3} \\sqrt{c} \\cdot \\sin{\\omega} \\cdot x^{\\frac{3}{2}} $
 
 如果你把
 
-$ \\frc{dF}{dx} = \\frac{dS}{dx}, \\qquad \\text{即} \\frac{d(F - S)}{dx} = 0 $
+$ \\frac{dF}{dx} = \\frac{dS}{dx}, \\qquad \\text{即} \\frac{d(F - S)}{dx} = 0 $
 
 这样F - S为定数，x = 0时F(0) = 0, S = 0，这样定数为0，S = F。即
 
