@@ -57,3 +57,11 @@ $ \\sum^{n}_ {k=0} \\alpha_ {k}k!(n-k)! \\le n! $ 或 $ \\sum^{n}_ {k=0} \\frac{
 一个漂亮直接的证明如下。假设不存在n + 1项的增长子序列。定义 $ b_ {i} $为从 $ a_ {i} $项开始最长增长子系列的长度为 $ b_ {i} $。则通过鸽巢原理，在 $ b_ {i} $子序列中有至少n + 1项有相同的值。因为j < j且 $ b_ {i} = b_ {j} $意味着 $ a_ {i} > a_ {j} $，我们有一个n+1项的递减子序列
 
 我们现在用本章的定理证明前一章的定理。我们考虑前一章定理中的二分图G。设 $ \| X \| = n, \| Y \| = n^{\\prime} \\ge n $。我们引入一个偏序集通过定义 $ x_ {i} < y_ {i} $当且仅当有一个从顶点 $ x_ {i} $到顶点 $ y_ {j} $的边。假设最大的antichain包含s个元素。设这个antichain为 $ \\{x_ {1}, \\ldots, x_ {h}, y_ {1}, \\ldots, y_ {k} \\}, h + k = s $。因为 $ \\Gamma(\\{x_ {1}, \\ldots, x_ {h} \\}) \\subseteq Y \\ \\{y_ {1}, \\ldots, y_ {k}\\} $，我们有 $ h \\le n^{\\prime} - k $。因此 $ s \\le n^{\\prime} $。偏序集是s个不相交chain的并。这将有一个大小为a的匹配，剩下X的n - a个元素和Y的 $ n^{\\prime - a} $个元素。因此 $ n + n^{\\prime} - a = s \\le n^{\\prime} $，例如，$ a \\ge n $，这意味着我们有一个完全的匹配
+
+**定理** 设 $ \\mathcal{A} = \\{A_ {1}, \\ldots, A_ {m}\\} $为m个不同 $ \\{1, 2, \\ldots, n\\} $ k子集的一个收集，$ k \\le n / 2 $，及任意两个子集有非空的交。则 $ m \\le {n-1 \\choose k-1} $
+
+证明：把整数1到n放到一个圆上且考虑圆上所有连续k元组的家族 $ \\mathcal{F} = \\{F_ {1}, \\ldots, F_ {n}\\} $，例如，$ F_ {i} $记为 $ \\{i, i+1, \\ldots, i + k - 1\\} $，其整数需要模n。我们观察 $ \| \\mathcal{A} \\cap \\mathcal{F} \| \\le k $因为如果某个 $ F_ {i} $等于 $ A_ {j} $，则最多集合 $ \\{l, l+1, \\ldots, l + k - 1\\}, \\{l - k, \\ldots, l - 1\\} (i < l < i + k) $之一在 $ \\mathcal{A} $中。相同的断言对从 $ \\mathcal{F} $通过应用一个排序 $ \\pi $到 $ \\{1, \\ldots, n\\} $中获得的 $ \\mathcal{F}^{\\pi} $成立。因此
+
+$ \\sum := \\sum_ {\\pi \\in S_ {n}} \| \\mathcal{A} \\cap \\mathcal{F}^{\\pi} \| \\le k \\cdot n! $
+
+我们现在统计该和通过固定 $ A_ {j} \\in \\mathcal{A}, F_ {i} \\in \\mathcal{F} $且观察有 $ k! (n-k)! $个排序 $ \\pi $使得 $ F^{\\pi}_ {i} = A_ {j} $。因此，$ \\sum = m \\cdot n \\cdot k!(n-k)! $。这证明了定理
