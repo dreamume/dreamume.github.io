@@ -25,6 +25,7 @@ category:   maths
 1.  [古代的求积法](#org610e933)
 2.  [微分法之后的求积法](#orgb6d6c35)
 3.  [定积分](#org216adc8)
+4.  [Legendre球函数](#orgf9ff74b)
 
 
 <a id="org610e933"></a>
@@ -180,3 +181,52 @@ $ \\int \\frac{dx}{\\sqrt{1 - x^{4}}}, \\qquad \\int \\frac{dx}{\\sqrt{\\cos{x}}
 解决上一节提到的问题是积分法的任务，我们想把考虑的范围放在连续函数中，但这在应用中产生了一个问题。例如，当有一些不连续点的时候，所以我们不能排除这种情况。因此，我们暂时稍微扩大考虑的范围，只假设函数的有界性
 
 $ \\left. \\begin{array}{c\|c} \\hline f(x) = F^{\\prime}(x) & F(x) \\\\ \\hline x^{\\alpha} \\qquad (\\alpha \\ne 1) & \\frac{x^{\\alpha+1}}{\\alpha + 1} \\\\ \\frac{1}{x} \\qquad (x \\ne 0) & \\log{ \| x \| } \\\\ \\frac{1}{1+x^{2}} & \\arctan{x} \\\\ \\frac{1}{1 - x^{2}} \\qquad (x \\ne \\pm 1) & \\frac{1}{2} \\log{\| \\frac{1+x}{1-x} \| } \\\\ \\frac{1}{x^{2}-1} \\qquad (x \\ne \\pm 1) & \\frac{1}{2} \\log{ \| \\frac{x-1}{x+1} \| } \\\\ \\frac{1}{\\sqrt{1-x^{2}}} \\qquad (\| x \| < 1) & \\arcsin{x} \\\\ \\frac{1}{\\sqrt{x^{2}-1}} \\qquad (\| x \| > 1) & \\log{ \| x + \\sqrt{x^{2} - 1} \|} \\\\ \\frac{1}{\\sqrt{x^{2}+1}} & \\log{(x + \\sqrt{x^{2}+1})} \\\\ \\sqrt{1-x^{2}} \\qquad (\| x \| \\le 1) & \\frac{1}{2} (x \\sqrt{1 - x^{2}} + \\arcsin{x}) \\\\ \\sqrt{x^{2} - 1} \\qquad (\| x \| \\ge 1) & \\frac{1}{2} (x \\sqrt{x^{2} - 1} - \\log{\| x + \\sqrt{x^{2} - 1} \|}) \\\\ \\sqrt{x^{2} + 1} & \\frac{1}{2} (x \\sqrt{x^{2}+1} + \\log{(x + \\sqrt{x^{2}+1})}) \\\\ e^{x} & e^{x} \\\\ a^{x} \\qquad (a > 0, a \\ne 1) & \\frac{a^{x}}{\\log{a}} \\\\ \\sin{x} & -\\cos{x} \\\\ \\cos{x} & \\sin{x} \\\\ \\frac{1}{\\sin^{2}{x}} & - \\cot{x} \\\\ \\frac{1}{\\cos^{2}{x}} & \\tan{x} \\\\ \\tan{x} & - \\log{ \| \\cos{x} \|} \\\\ \\cot{x} & \\log{ \| \\sin{x} \| } \\end{array} \\right. $
+
+
+<a id="orgf9ff74b"></a>
+
+# Legendre球函数
+
+应用分部积分法，考察下面的问题。关于n-1次以下的多项式Q(x)
+
+$ \\int^{b}_ {a} Q(x)P_ {n}(x) dx = 0 $
+
+求这样的n次多项式 $ P_ {n}(x) $
+
+顺便说一句，如果这样的多项式存在，忽略常数因子的差异，则只有一个。事实上，如果 $ \\varphi(x), \\psi(x) $为符合的多项式，$ \\varphi(x) - c \\psi(x) $为n-1次，c为常数，取$ Q(x) = \\varphi(x) - c \\psi(x) $，假定
+
+$ \\int^{b}_ {a} Q(x)\\varphi(x) dx = 0, \\qquad \\int^{b}_ {a} Q(x)\\psi(x) dx = 0 $
+
+从而
+
+$ \\int^{b}_ {a} (\\varphi(x) - c \\psi(x))Q(x)dx = 0 $ 即 $ \\int^{b}_ {a} (Q(x))^{2}dx = 0 $
+
+Q(x)连续，区间[a, b]中Q(x) = 0。因为Q(x)为多项式，则Q(x) = 0。这样 $ \\varphi(x) = c \\psi(x) $
+
+现在证明适合问题条件的多项式 $ P_ {n}(x) $实际存在如下
+
+多项式的原函数比多项式阶次高1，则n阶多项式 $ P_ {n}(x) $是2n次多项式F(x)的第n阶导数。即 $ F^{(n)}(x) = P_ {n}(x) $，这样
+
+$ \\int^{b}_ {a} QF^{(n)}dx = [QF^{(n-1)} - Q^{\\prime}F^{(n-2)} + \\cdots \\pm Q^{(n-1)}F]^{b}_ {a} = 0 $
+
+这样
+
+$ F(a) = F^{\\prime}(a) = \\cdots = F^{(n-1)}(a) = 0 $
+
+$ F(b) = F^{\\prime}(b) = \\cdots = F^{(n-1)}(b) = 0 $
+
+满足该条件，这样的2n次多项式
+
+$ F(x) = (x - a)^{n} (x - b)^{n} $
+
+适合条件，C为任意常数，有
+
+$ P_ {n}(x) = C \\frac{d^{n}}{dx^{n}} (x - a)^{n} (x - b)^{n} $
+
+区间为[-1, +1]时
+
+$ P_ {n}(x) = \\frac{1}{2^{n} \\cdot n!} \\frac{d^{n}}{dx^{n}} (x^{2} - 1)^{n} $
+
+为Lengendre球函数。$ (x^{2} - 1)^{n} $展开
+
+$ P_ {n}(x) = \\sum^{[\\frac{n}{2}]}_ {k=0} \\frac{(-1)^{k}}{2^{k}} \\frac{1 \\cdot 3 \\cdot 5 \\cdots (2n - 2k - 1)}{k! (n-2k)!} x^{n-2k} $
