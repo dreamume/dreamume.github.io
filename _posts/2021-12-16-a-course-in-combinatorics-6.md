@@ -65,3 +65,25 @@ $ \\sum^{n}_ {k=0} \\alpha_ {k}k!(n-k)! \\le n! $ 或 $ \\sum^{n}_ {k=0} \\frac{
 $ \\sum := \\sum_ {\\pi \\in S_ {n}} \| \\mathcal{A} \\cap \\mathcal{F}^{\\pi} \| \\le k \\cdot n! $
 
 我们现在统计该和通过固定 $ A_ {j} \\in \\mathcal{A}, F_ {i} \\in \\mathcal{F} $且观察有 $ k! (n-k)! $个排序 $ \\pi $使得 $ F^{\\pi}_ {i} = A_ {j} $。因此，$ \\sum = m \\cdot n \\cdot k!(n-k)! $。这证明了定理
+
+**定理** 设 $ \\mathcal{A} = \\{A_ {1}, \\ldots, A_ {m}\\} $为 $ N := \\{1,2,\\ldots, n\\} $的m子集的一个收集使得 $ A_ {i} \\not \\subseteq A_ {j}, A_ {i} \\cap A_ {j} \\ne \\emptyset, \\forall i, i \\ne j, \| A_ {i} \| \\le k \\le n / 2 $。则 $ m \\le {n-1 \\choose k-1} $
+
+证明：(i)如果所有的子集有大小k，则通过之前的定理可得证
+
+(ii) 设 $ A_ {1}, \\ldots, A_ {s} $ 为最小cardinality的子集，$ l \\le \\frac{n}{2} - 1 $。考虑所有N的(l+1)子集包含 $ A_ {i}, 1 \\le i \\le s $中的一个或多个。明显这些不会在 $ \\mathcal{A} $中。每个 $ A_ {i}, 1 \\le i \\le s $集合，在n - l个 $ B_ {j} $中且每个 $ B_ {j} $包含最多 $ l + 1 \\le n - l $个 $ A_ {i} $。这样通过之前的定理，我们可选择s个不同的集合，记为 $ B_ {1}, \\ldots, B_ {s} $，使得 $ A_ {i} \\subseteq B_ {i} $。如果我们用 $ B_ {1}, \\ldots, B_ {s} $替换 $ A_ {1}, \\ldots, A_ {s} $，则新的收集 $ \\mathcal{A}^{\\prime} $满足定理条件且最小的cardinality的子集现在都有大小> l。通过归纳，我们可缩减到(i)
+
+**定理** 设 $ \\mathcal{A} = \\{A_ {1}, \\ldots, A_ {m} \\} $是 $ \\{1,2,\\ldots,n\\} $的m个不同的子集的一个收集，$ \| A_ {i} \| \\le n / 2, i = 1, \\ldots, m $，其任意两个子集有非空的交，则
+
+$ \\sum^{m}_ {i=1} \\frac{1}{ {n-1 \\choose \|A_ {i} \| - 1} } \\le 1 $
+
+证明：设 $ \\pi $为 $ 1,2, \\ldots, n $的一个排序放在一个圆上且设 $ A_ {i} \\in \\pi $如果 $ A_ {i} $的元素在圆上连续。通过之前定理相同的讨论我们有如果 $ A_ {i} \\in \\pi $，则 $ A_ {j} \\in \\pi $对最多 $ \| A_ {i} \| $值个j
+
+现在定义
+
+$ f(\\pi, i) = \\left\\{ \\begin{array}{ll} \\frac{1}{\| A_ {i} \|}, & \\text{if } A_ {i} \\in \\pi \\\\ 0, & \\text{otherwise} \\end{array} \\right. $
+
+由于 $ \\sum_ {\\pi \\in S_ {n}} \\sum^{m}_ {i=1} f(\\pi, i) \\le n! $，改变和的顺序，对一个固定的 $ A_ {i} $，圆上 $ \\pi $使得 $ A_ {i} \\in \\pi $的数目为 $ n \\cdot \| A_ {i} \| ! (n- \| A_ {i} \|) ! $，这样我们有
+
+$ \\sum^{m}_ {i=1} \\frac{1}{\| A_ {i} \| } \\cdot n \\cdot \| A_ {i} \|! (n- \| A_ {i} \|)! \\le n! $
+
+这样得到证明
