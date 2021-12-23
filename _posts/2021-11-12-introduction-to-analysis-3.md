@@ -235,7 +235,7 @@ $ P_ {n}(x) = \\sum^{[\\frac{n}{2}]}_ {k=0} \\frac{(-1)^{k}}{2^{k}} \\frac{1 \\c
 
 $ P_ {0}(x) = 1, \\qquad P_ {1}(x) = x, \\qquad P_ {2}(x) = \\frac{1}{2} (3x^{2} - 1), \\qquad P_ {3}(x) = \\frac{1}{2} (5x^{3} - 3x) $
 
-$ P_ {4}(x) = \\frac{1}{8} (35x^{4 - 30x^{2} + 3), \\qquad P_ {5}(x) = \\frac{1}{8} (63x^{5} - 70x^{3} + 15x) $
+$ P_ {4}(x) = \\frac{1}{8} (35x^{4} - 30x^{2} + 3), \\qquad P_ {5}(x) = \\frac{1}{8} (63x^{5} - 70x^{3} + 15x) $
 
 以下 $ P_ {n}(x) $的二、三个性质叙述如下
 
@@ -245,7 +245,7 @@ $ P_ {4}(x) = \\frac{1}{8} (35x^{4 - 30x^{2} + 3), \\qquad P_ {5}(x) = \\frac{1}
 
 证明
 
-$ \\begin{aligned} P_ {n}(x) &= \\frac{1}{2^{n}n!} \\frac{d^{n}}{dx^{n}}(x-1)^{n}(x+1)^{n} \\\\ &= \\frac{1}{2^{n}n!} \\left\\{ \\frac{d^{n}(x - 1)^{n}}{dx^{n}} (x+1)^{n} + n \\frac{d^{n-1}(x-1)^{n}}{dx^{n-1}} \\frac{d(x+1)^{n}}{dx} + \\cdots + (x-1)^{n} \\frac{d^{n}(x+1)^{n}}{dx^{n}} \\} \\end{aligned} $
+$ \\begin{aligned} P_ {n}(x) &= \\frac{1}{2^{n}n!} \\frac{d^{n}}{dx^{n}}(x-1)^{n}(x+1)^{n} \\\\ &= \\frac{1}{2^{n}n!} \\left\\{ \\frac{d^{n}(x - 1)^{n}}{dx^{n}} (x+1)^{n} + n \\frac{d^{n-1}(x-1)^{n}}{dx^{n-1}} \\frac{d(x+1)^{n}}{dx} + \\cdots + (x-1)^{n} \\frac{d^{n}(x+1)^{n}}{dx^{n}} \\right\\} \\end{aligned} $
 
 最开始和最后的一项跟其他项用(x-1)(x+1)分割，有
 
