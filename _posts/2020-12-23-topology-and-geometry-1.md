@@ -35,6 +35,7 @@ category:   maths
     10. [实值函数的存在](#org9e4a2af)
     11. [本地紧空间](#org5807da4)
         1.  [定义](#org2a70fec)
+    12. [Paracompact空间](#org46a549d)
 
 
 <a id="org8fd57c5"></a>
@@ -795,3 +796,14 @@ $ \\lim (f(x_ {\\alpha})) = \\lim (\\Phi(x_ {\\alpha})(f)) = \\Phi(x)(f) = f(x) 
 $ \\lim (\\bar{f}(\\mu_ {\\alpha})) = \\lim (\\mu_ {\\alpha}(f)) = \\mu(f) = \\bar{f}(\\mu) $
 
 显示了 $ \\bar{f} $是连续的
+
+
+<a id="org46a549d"></a>
+
+## Paracompact空间
+
+$ \\newtheorem{Definition}{Definition} $
+
+$ \\begin{Definition} 如果U和V是一个空间的开覆盖则U被称为V的一个refinement如果U的每个元素是V的某个元素的子集 \\end{Definition} $
+
+$ \\begin{Definition} 一个拓扑空间X的子集的一个收集被称为本地有限的如果 x \\in X 中的每个点有一个邻居关系N，只是U的有限数目的成员 \\end{Definition} $
