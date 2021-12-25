@@ -26,6 +26,7 @@ category:   maths
 2.  [微分法之后的求积法](#orgb6d6c35)
 3.  [定积分](#org216adc8)
 4.  [Legendre球函数](#orgf9ff74b)
+5.  [不定积分的计算](#orgd174de0)
 
 
 <a id="org610e933"></a>
@@ -324,3 +325,36 @@ $ (x^{2} - 1)u^{(n+2)} + 2xu^{(n+1)} - n(n+1)u^{(n)} = 0 $
 由于$ u^{(n)} = CP_ {n}(x) $，$ P_ {n}(x) $的微分方程的解为
 
 $ (x^{2} - 1)y^{\\prime \\prime} + 2xy^{\\prime} - n(n+1)y = 0 $
+
+
+<a id="orgd174de0"></a>
+
+# 不定积分的计算
+
+(I) F作为有理函数
+
+$ \\int F(\\cos{x}, \\sin{x}) dx $
+
+进行考察，变量变换
+
+$ t = \\tan{\\frac{x}{2}} $
+
+有
+
+$ \\cos{x} = \\frac{1 - t^{2}}{1 + t^{2}}, \\qquad \\sin{x} = \\frac{2t}{1+t^{2}} $
+
+则
+
+$ t = \\frac{\\sin{x}}{1 + \\cos{x}} $
+
+x从 $ -\\pi $到 $ \\pi $变化，t则从 $ -\\infty $到 $ + \\infty $单调增大，这样
+
+$ x = 2 \\arctan{t}, dx = \\frac{2dt}{1+t^{2}} $
+
+从而
+
+$ \\int F(\\cos{x}, \\sin{x}) dx = \\int F( \\frac{1 - t^{2}}{1 + t^{2}}, \\frac{2t}{1+t^{2}}) \\frac{2dt}{1+t^{2}} $
+
+例1
+
+$ \\int \\frac{dx}{\\sin{x}} = \\int \\frac{1+t^{2}}{2t} \\cdot \\frac{2dt}{1+t^{2}} = \\int \\frac{dt}{t} = \\log{\| t \|} = \\log{\| \\tan{\\frac{x}{2}} \|}, \\qquad (x \\ne n\\pi, n = 0, \\pm 1, \\cdots) $
