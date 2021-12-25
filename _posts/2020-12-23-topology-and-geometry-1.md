@@ -802,8 +802,18 @@ $ \\lim (\\bar{f}(\\mu_ {\\alpha})) = \\lim (\\mu_ {\\alpha}(f)) = \\mu(f) = \\b
 
 ## Paracompact空间
 
-$ \\newtheorem{Definition}{Definition} $
+<div class="definition" id="orge08f247">
+<p>
 
-$ \\begin{Definition} 如果U和V是一个空间的开覆盖则U被称为V的一个refinement如果U的每个元素是V的某个元素的子集 \\end{Definition} $
+如果U和V是一个空间的开覆盖则U被称为V的一个refinement如果U的每个元素是V的某个元素的子集
+</p>
 
-$ \\begin{Definition} 一个拓扑空间X的子集的一个收集被称为本地有限的如果 x \\in X 中的每个点有一个邻居关系N，只是U的有限数目的成员 \\end{Definition} $
+</div>
+
+<div class="definition" id="orgcaec347">
+<p>
+
+一个拓扑空间X的子集的一个收集被称为本地有限的如果 x \&isin; X 中的每个点有一个邻居关系N，只是U的有限数目的成员
+</p>
+
+</div>
