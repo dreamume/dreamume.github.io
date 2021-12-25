@@ -244,3 +244,23 @@ $ \\frac{1}{2 \\pi} \\int^{\\pi}_ {- \\pi} \| S_ {N}(f)(\\theta) - f(\\theta) \|
 **定理** 假设f是在圆上一个可积分函数，$ \\hat{f}(n) = 0 $对所有 $ n \\in Z $。则 $ f(\\theta_ {0}) = 0 $当f在点 $ \\theta_ {0} $处连续
 
 证明 我们首先假设f是实值的，且我们创造一个矛盾。假设，不失一般性，f被定义在 $ [-\\pi, \\pi] $上，$ \\theta_ {0} = 0 $，且f(0) > 0。现在的想法是构建一个三角多项式 $ \\{p_ {k}\\} $的家族，峰值为0，且这样 $ \\int p_ {k}(\\theta) f(\\theta) d \\theta \\to \\infty, k \\to \\infty $。这将是我们想要的矛盾因为这些积分已假设为0
+
+因为f在0处连续，我们可选择 $ 0 < \\delta \\le \\pi / 2 $，这样 $ f(\\theta) > f(0) / 2 $对任何 $ \| \\theta \| < \\delta $。设
+
+$ p(\\theta) = \\epsilon + \\cos{\\theta} $
+
+选择足够小的$ \\epsilon > 0 $，使得 $ \| p(\\theta) \| < 1 - \\epsilon / 2, \\delta \\le \| \\theta \| \\le \\pi $。则，选择一个正 $ \\eta, \\eta < \\delta $，这样 $ p(\\theta) \\ge 1 + \\epsilon / 2, \| \\theta \| < \\eta $。最后，设
+
+$ p_ {k}(\\theta) = [p(\\theta)]^{k} $
+
+且选择B使得 $ \| f(\\theta) \| \\le B $，对所有 $ \\theta $。这是可能的因为f是可积的，因此有界。下图显示了家族 $ \\{ p_ {k} \\} $
+
+![img](../img/example_of_function_family_4identity_fourier_series.png)
+
+通过构建，每个 $ p_ {k} $是一个三角多项式，且因此 $ \\hat{f}(n) = 0 $对所有n，我们必须有
+
+$ \\int^{\\pi}_ {- \\pi} f(\\theta)p_ {k}(\\theta) d\\theta = 0 \\qquad \\forall k $
+
+然而，我们有估计
+
+$ \| \\int_ {\\delta \\le \| \\theta \|} f(\\theta)p_ {k}(\\theta) d\\theta \| \\le 2 \\pi B(1 - \\epsilon / 2)^{k} $
