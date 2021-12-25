@@ -136,3 +136,13 @@ $ N < p(q-1)! < N + \\frac{1}{q} \\le N + 1 \\qquad N \\in \\mathbb{N}^{*} $）
 **例7** 断言“存在一个实数族 $ (a_ {i})_ {i \\in I} $，它是$ \\mathbb{Q} $向量空间$ \\mathbb{R} $的基“是真的，但没有人知道这样一个族的有效构造
 
 在过去，我们不知道“解决方案”x的有效构造的类型 $ (\\exists x \| \\mathscr{R}(x)) $的真断言的价值引起了数学家之间的激烈争论。今天，这些争论已经模糊不清，数学家认为这些断言与其他断言一样真实
+
+**例9** $ (f_ {n})_ {n \\in N} $是一系列R到R的函数。写作
+
+$ \\forall \\epsilon > 0 \\; \\exists N \| \\forall n \\ge N \\; \\forall x \\in X \\; \| f_ {n}(x) - f(x) \| \\le \\epsilon $
+
+表达在X上系列 $ (f_ {n})_ {n \\in N} $统一收敛到函数f，而
+
+$ \\forall x \\in X \\; \\forall \\epsilon > 0 \\; \\exists N \| \\forall n \\ge N \\; \| f_ {n}(x) - f(x) \| \\le \\epsilon $
+
+表达了系列 $ (f_ {n})_ {n \\in N} $向f的简单收敛，分析过程表明这是两种截然不同的收敛模式
