@@ -813,7 +813,7 @@ $ \\lim (\\bar{f}(\\mu_ {\\alpha})) = \\lim (\\mu_ {\\alpha}(f)) = \\mu(f) = \\b
 <div class="definition" id="orgcaec347">
 <p>
 
-一个拓扑空间X的子集的一个收集被称为本地有限的如果 x \&isin; X 中的每个点有一个邻居关系N，只是U的有限数目的成员
+一个拓扑空间X的子集的一个收集被称为本地有限的如果 $ x \\in X $中的每个点有一个邻居关系N，只是U的有限数目的成员
 </p>
 
 </div>
