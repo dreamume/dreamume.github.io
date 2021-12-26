@@ -358,3 +358,49 @@ $ \\int F(\\cos{x}, \\sin{x}) dx = \\int F( \\frac{1 - t^{2}}{1 + t^{2}}, \\frac
 例1
 
 $ \\int \\frac{dx}{\\sin{x}} = \\int \\frac{1+t^{2}}{2t} \\cdot \\frac{2dt}{1+t^{2}} = \\int \\frac{dt}{t} = \\log{\| t \|} = \\log{\| \\tan{\\frac{x}{2}} \|}, \\qquad (x \\ne n\\pi, n = 0, \\pm 1, \\cdots) $
+
+例2
+
+$ \\int \\frac{dx}{a \\cos^{2}{x} + b \\sin^{2}{x}} = \\int \\frac{dt / (1+t^{2})}{(a+bt^{2})/(1+t^{2})} = \\int \\frac{dt}{a+bt^{2}}, \\qquad (t = \\tan{x}) $
+
+a > 0, b > 0的话 $ t = \\sqrt{ \\frac{a}{b}} \\tau $
+
+$ \\int \\frac{dt}{a+bt^{2}} = \\frac{1}{\\sqrt{ab}} \\int \\frac{d \\tau}{1 + \\tau^{2}} = \\frac{1}{\\sqrt{ab}} \\arctan{\\tau} $
+
+a > 0, b < 0的话，b用-b替换得
+
+$ \\int \\frac{dx}{a \\cos^{2}{x} - b \\sin^{2}{x}} = \\int \\frac{dt}{a - b t^{2}} = \\frac{1}{\\sqrt{ab}} \\int \\frac{d \\tau}{1 - \\tau^{2}} = \\frac{1}{2 \\sqrt{ab}} \\log{ \| \\frac{1 + \\tau}{1 - \\tau} \|}, $
+
+$ \\left( a > 0, b > 0; t = \\tan{x}, \\tau = \\sqrt{\\frac{b}{a}} t. \\right) $
+
+(II) F(x, y)作为有理式
+
+$ \\int F(x, \\sqrt{ax^{2} + bx + c}) dx $
+
+开考察，做变量变换，消去二次式里的一次项，根据a的正负有形如 $ \\sqrt{x^{2} \\pm p^{2}} $或 $ \\sqrt{p^{2} - x^{2}} $的平方根，这样 $ x = p \\tan{\\theta}, x = p \\sec{\\theta} $或 $ x = p \\sin{\\theta} $，这样回到(I)的情况，从而是有理化的
+
+不过也可以不经过三角函数，直接用代数变换有理化，现在上述平方根用y记，则
+
+$ y^{2} = ax^{2} + bx + c $
+
+这个是二次曲线，通过曲线上任意一点 $ (x_ {0}, y_ {0}) $的截线
+
+$ y - y_ {0} = t(x - x_ {0}) $
+
+在 $ (x_ {0}, y_ {0}) $外另一点(x, y)和曲线相交。从而交点(x, y)和t一一对应，计算坐标x,y的话，$ x = \\varphi(t), y = \\psi(t) $的有理式
+
+$ \\int F(x, \\sqrt{ax^{2} + bx + c}) dx = \\int F(\\varphi(t), \\psi(t)) \\varphi^{\\prime}(t) dt $
+
+即问题的积分变换有理化
+
+(1) 特别地二次式根有的情况下
+
+$ y^{2} = ax^{2} + bx + c = a(x - \\alpha)(x - \\beta) \\qquad (\\alpha \\ne \\beta) $
+
+时，上述的 $ (x_ {0}, y_ {0}) $作为 $ (\\alpha, 0) $，有
+
+$ y = t(x - \\alpha) $
+
+变换得
+
+$ t = \\sqrt{\\frac{a(x - \\beta)}{x - \\alpha}} $
