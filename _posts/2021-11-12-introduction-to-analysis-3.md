@@ -440,7 +440,7 @@ $ \\begin{aligned} \\int \\frac{dx}{\\sqrt{x^{2} - 1}} &= \\int \\frac{(1 - t^{-
 
 同样的
 
-$ $ t = -x + \\sqrt{x^{2} + 1} $
+$ t = -x + \\sqrt{x^{2} + 1} $
 
 和
 
