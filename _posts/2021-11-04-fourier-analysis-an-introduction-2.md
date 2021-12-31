@@ -264,3 +264,29 @@ $ \\int^{\\pi}_ {- \\pi} f(\\theta)p_ {k}(\\theta) d\\theta = 0 \\qquad \\forall
 然而，我们有估计
 
 $ \| \\int_ {\\delta \\le \| \\theta \|} f(\\theta)p_ {k}(\\theta) d\\theta \| \\le 2 \\pi B(1 - \\epsilon / 2)^{k} $
+
+我们选择的 $ \\delta $保证 $ p(\\theta) $和 $ f(\\theta) $是非负的，任意 $ \| \\theta \| < \\delta $，则
+
+$ \\int_ {\\eta \\le \| \\theta \| < \\delta} f(\\theta) p_ {k}(\\theta) d \\theta \\ge 0 $
+
+最后
+
+$ \\int_ {\| \\theta \| < \\eta} f(\\theta) p_ {k}(\\theta) d \\theta \\ge 2 \\eta \\frac{f(0)}{2} (1 + \\epsilon / 2)^{k} $
+
+因此当 $ k \\to \\infty, \\int p_ {k}(\\theta)f(\\theta)d \\theta \\to \\infty $，且这个包括了证明当f是实值时。一般来说，写 $ f(\\theta) = u(\\theta) + i \\upsilon(\\theta) $，u和 $ \\upsilon $是实值。如果我们定义 $ \\bar{f}(\\theta) = \\overline{f(\\theta)} $，则
+
+$ u(\\theta) = \\frac{f(\\theta) + \\bar{f}(\\theta)}{2} \\qquad \\upsilon(\\theta) = \\frac{f(\\theta) - \\bar{f}(\\theta)}{2i} $
+
+且因为 $ \\hat{\\bar{f}}(n) = \\overline{\\hat{f}(-n)} $，我们包含u和 $ \\upsilon $的傅立叶系数都消失，因此f = 0在它的连续点上。构建一族函数其峰值在原点的想法，及其他漂亮的属性，将在本书中扮演重要的角色
+
+*推论 2.2* 如果f在圆上连续且 $ \\hat{f}(n) = 0 $对所有 $ n \\in \\mathbb{Z} $，则 f = 0
+
+*推论 2.3* 假设f是圆上一个连续函数且f的傅立叶系数绝对收敛，$ \\sum^{\\infty}_ {n=- \\infty} \| \\hat{f}(n) \| < \\infty $。则傅立叶系数统一收敛到f，则
+
+$ \\lim_ {N \\to \\infty} S_ {N}(f)(\\theta) = f(\\theta) $在 $ \\theta $统一
+
+证明 回忆如果一个连续函数序列统一收敛，则极限也连续。现在观察假设 $ \\sum \| \\hat{f}(n) \| < \\infty $意味着f的傅立叶级数绝对统一收敛，且因此函数g定义为
+
+$ g(\\theta) = \\sum^{\\infty}_ {n = - \\infty} \\hat{f}(n) e^{in\\theta} = \\lim_ {N \\to \\infty} \\sum^{N}_ {n=-N} \\hat{f}(n)e^{in \\theta} $
+
+在圆上连续。更进一步，g的傅立叶系数是精确的 $ \\hat{f}(n) $因为我们可用积分交换无穷和。因此，之前的推论应用到函数f - g得到f = g。f的什么条件将保证它的傅立叶级数绝对收敛？f的光滑属性直接关系到傅立叶系数的退化，且一般来说，函数越光滑，退化越快。结果，我们可期望相关光滑函数等于它们的傅立叶级数
