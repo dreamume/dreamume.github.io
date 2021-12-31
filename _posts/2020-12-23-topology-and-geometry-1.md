@@ -817,3 +817,33 @@ $ \\lim (\\bar{f}(\\mu_ {\\alpha})) = \\lim (\\mu_ {\\alpha}(f)) = \\mu(f) = \\b
 </p>
 
 </div>
+
+**定义** 一个Hausdroff空间X被称为paracompact如果每个X的开覆盖有一个开的、本地有限的refinement
+
+**命题** 一个paracompact空间的闭子空间是paracompact
+
+证明 如果A是paracompact空间X的一个闭子空间，在X中一个系列的开覆盖A。丢掉X - A集合。用X的这个开覆盖的一个本地有限refinement，且和A交它。这给出了一个A的原始覆盖的一个本地有限refinement
+
+**定理** 一个paracompact空间是normal的
+
+证明 我们将首先显示paracompact空间X是规范的。这样假设 $ x \\in X $且 $ C \\subset X $是闭的且 $ x \\notin C $。对每个点 $ y \\in C $有不相交开集合 $ U_ {y}, V_ {y}, x \\in U_ {y}, y \\in V_ {y} $。用X - C和集合 $ V_ {y} $覆盖X。则有一个开的本地有限refinement，为集合 $ U_ {\\alpha} $。设 $ U = \\cup \\{U_ {\\alpha} \| U_ {\\alpha} \\subset 一些V_ {y} \\} $且注意这包含C。因为这是一个本地有限收集，它的闭 $ \\bar{U}_ {\\alpha} $是一些 $ U_ {\\alpha} $的闭的并。但x不在任意 $ \\bar{U}_ {\\alpha} $中这样 $ x \\notin \\bar{U} $。这样U 和 $ X - \\bar{U} $提供了需要的隔离
+
+同样的讨论，对C扮演x的角色且其他闭集合扮演C的角色，显示X是normal的
+
+这样paracompact空间是闭的为度量空间因为所有需要是第二统计的。同时，这个度量空间是paracompact的。然而，这些paracompact空间不可度量。也有paracompact空间的例子有非paracompact的子空间，当然，这在可度量空间中不会发生
+
+normality意味着一个paracompact空间有许多实值映射，我们将采用一个属性
+
+**定义** 如果f是一个实值映射则f的支持是
+
+$ support(f) = 闭 \\{x \| f(x) \\ne 0 \\} $
+
+**定义** 设 $ \\{U_ {\\alpha} \| \\alpha \\in A \\} $为空间X的一个开覆盖。则这个覆盖的单位subordinate的一个分区是映射的一个收集
+
+$ \\{f_ {\\beta}: X \\to [0, 1] \| \\beta \\in B \\}
+
+使得
+
+(1) 有一个本地开refinement $ \\{ V_ {\\beta} \| \\beta \\in B\\} $使得 $ support(f_ {\\beta}) \\subset V_ {\\beta} $对所有 $ \\beta \\in B $，且
+
+(2) $ \\sum_ {\\beta}f_ {\\beta}(x) = 1 $对每个 $ x \\in X $
