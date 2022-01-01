@@ -554,3 +554,43 @@ $ \\frac{\\pi}{4} = \\frac{0.1}{3} \\{ 1 + \\frac{1}{2} + 2(\\frac{1}{1.04} + \\
 用逆数表七位小数计算，得如下结果
 
 $ \\pi = 3.14159288 $
+
+**对球函数P(x)用Gauss方法** 首先通过变量的变换把积分区域变为[-1, 1]，$ f(x) = P_ {n}(x)Q(x) + \\varphi(x) $，商Q和余数 $ \\varphi(x) $有以下的等式
+
+$ \\int^{1}_ {-1} Q(x)P_ {n}(x) dx = 0 $
+
+从而
+
+$ \\int^{1}_ {-1}f(x)dx = \\int^{1}_ {-1}\\varphi(x)dx $
+
+现在 $ P_ {n}(x) $的根为 $ x_ {\\upsilon}(\\upsilon = 1,2,\\ldots, n) $，根据Lagrange补充公式
+
+$ \\varphi(x) = \\sum^{n}_ {\\upsilon=1} \\frac{\\varphi(x_ {\\upsilon})}{P^{\\prime}_ {n}(x_ {\\upsilon})} \\frac{P_ {n}(x)}{x - x_ {\\upsilon}} = \\sum^{n}_ {\\upsilon=1} \\frac{f(x_ {\\upsilon})}{P^{\\prime}_ {n}(x_ {\\upsilon})} \\frac{P_ {n}(x)}{x - x_ {\\upsilon}} $
+
+则
+
+$ \\int^{1}_ {-1}f(x)dx = \\sum^{n}_ {\\upsilon=1} \\frac{f(x_ {\\upsilon})}{P^{\\prime}_ {n}(x_ {\\upsilon})} \\frac{P_ {n}(x)}{x - x_ {\\upsilon}} = \\sum^{n}_ {\\upsilon=1} \\frac{f(x_ {\\upsilon})}{P^{\\prime}_ {n}(x_ {\\upsilon})} \\frac{P_ {n}(x)}{x - x_ {\\upsilon}} $
+
+由
+
+$ p_ {\\upsilon} = \\frac{1}{P^{\\prime}_ {n}(x_ {\\upsilon})} \\int^{1}_ {-1} \\frac{P_ {n}(x)}{x - x_ {\\upsilon}} dx $
+
+置换得
+
+$ \\int^{1}_ {-1}f(x)dx = \\sum^{n}_ {\\upsilon=1}p_ {\\upsilon}f(x_ {\\upsilon}) $
+
+这里 $ x_ {\\upsilon} $只与 $ p_ {\\upsilon}, P_ {n}(x) $有关，它们的值有一个表
+
+例如，$ n = 3, \\qquad x_ {1}, x_ {3} = \\mp \\frac{\\sqrt{15}}{5}, \\qquad p_ {1} = p_ {3} = \\frac{5}{9} $
+
+$ x_ {2} = 0, p_ {2} = \\frac{8}{9} $
+
+任意f(x)的五次式
+
+$ \\int^{1}_ {-1}f(x)dx = \\frac{5}{9} \\left\\{ f( - \\frac{\\sqrt{15}}{5}) + f(\\frac{\\sqrt{15}}{5}) \\right\\} + \\frac{8}{9} f(0) $
+
+当有任意的连续函数F(x)时，关于区间[-1,1] $ 有x_ {\\upsilon} $和其他n个点，一共2n个点跟F(x)值相等的2n-1次以下的多项式f(x)，这样把F(x)带入，$ \\int^{1}_ {-1}F(x) $的近似值为 $ \\int^{1}_ {-1}f(x)dx $，得
+
+$ \\int^{1}_ {-1}F(x)dx = \\sum^{n}_ {\\upsilon=1}p_ {\\upsilon} F(x_ {\\upsilon}) $
+
+使用n个 $ F(x_ {\\upsilon}) $值，这样的近似值计算为Gauss方法的特点
