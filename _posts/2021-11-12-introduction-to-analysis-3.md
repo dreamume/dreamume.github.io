@@ -28,6 +28,7 @@ category:   maths
 4.  [Legendre球函数](#orgf9ff74b)
 5.  [不定积分的计算](#orgd174de0)
 6.  [定积分的近似计算](#orgc3ad6ce)
+7.  [有界变动的函数](#orgd5501eb)
 
 
 <a id="org610e933"></a>
@@ -594,3 +595,32 @@ $ \\int^{1}_ {-1}f(x)dx = \\frac{5}{9} \\left\\{ f( - \\frac{\\sqrt{15}}{5}) + f
 $ \\int^{1}_ {-1}F(x)dx = \\sum^{n}_ {\\upsilon=1}p_ {\\upsilon} F(x_ {\\upsilon}) $
 
 使用n个 $ F(x_ {\\upsilon}) $值，这样的近似值计算为Gauss方法的特点
+
+
+<a id="orgd5501eb"></a>
+
+# 有界变动的函数
+
+之前介绍了曲线函数，这里给定区间[a, b]的函数f(x)，这个区间
+
+$ (\\Delta) \\qquad a = x_ {1} < x_ {2} < \\cdots < x_ {n} < x_ {n+1} = b $
+
+对于点 $ x_ {i} $的小区间进行分割
+
+$ \\upsilon_ {\\Delta} = \\sum^{n}_ {i=1} \| f(x_ {i+1}) - f(x_ {i}) \| $
+
+所有关于 $ \\upsilon_ {\\Delta} $的分割 $ \\Delta $有界的话，这样的上限设为V，这是[a, b]区间的f(x)总变动量，f(x)则称为[a, b]上有界变动的函数
+
+这时，区间内任一点x，从 $ \| f(x) - f(a) \| \\le V $有 $ \| f(x) - f(a) \| + \| f(b) - f(x) \| \\le V $
+
+对 $ f(x_ {i+1}) - f(x_ {i}) $，正的和负的总和记为$ p_ {\\Delta}, -n_ {\\Delta} $，这样
+
+$ \\upsilon_ {\\Delta} = p_ {\\Delta} _ n_ {\\Delta}, \\qquad f(b) - f(a) = p_ {\\Delta} - n_ {\\Delta} $
+
+这样有界变动的时候，$ p_ {\\Delta}, n_ {\\Delta} $也有界。这样的上限记为P, N
+
+V = P + N, f(b) - f(a) = P - N
+
+取[a, b]内一点x，区间[a, x]的f(x)也有界变动，[a, x]对应的V、P、N的x的函数存在，写为V(x)、P(x)、 N(x)
+
+V(x) = P(x) + N(x),    f(x) - f(a) = P(x) - N(x) 
