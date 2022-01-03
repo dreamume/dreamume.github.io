@@ -624,3 +624,31 @@ V = P + N, f(b) - f(a) = P - N
 取[a, b]内一点x，区间[a, x]的f(x)也有界变动，[a, x]对应的V、P、N的x的函数存在，写为V(x)、P(x)、 N(x)
 
 V(x) = P(x) + N(x),    f(x) - f(a) = P(x) - N(x) 
+
+**定理38** 有界变动函数等于两个有界递增函数之差
+
+![img](../img/bouned_change_function_is_difference_of_2add_functions.png)
+
+关于f(x) = f(a) + P(x) - N(x)，P(x), N(x)是特定的单调函数，一般地，$ \\varphi(x), \\psi(x) $是有界的增大函数的话，它的差 $ f(x) = \\varphi(x) - \\psi(x) $有界变动，f(x)的变动不超过 $ \\varphi, \\psi $变动之和：$ V(x) \\le (\\varphi(x) - \\varphi(a)) + (\\psi(x) - \\psi(a)) $
+
+$ \\varphi(x), \\psi(x) $的和和积是有界变动。商 $ \\varphi(x) / \\psi(x) $在[a, b]上 $ \| \\psi(x) \| > m > 0 $的话，也是有界变动。对积
+
+$ \\begin{aligned} \| \\varphi(x_ {1})\\psi(x_ {1}) - \\varphi(x_ {2})\\psi(x_ {2}) \| &= \| \\psi(x_ {1})(\\varphi(x_ {1}) - \\varphi(x_ {2})) + \\varphi(x_ {2})(\\psi(x_ {1}) - \\psi(x_ {2})) \| \\\\ &= \\le M(\| \\varphi(x_ {1}) - \\varphi(x_ {2}) \| + \| \\psi(x_ {1}) - \\psi(x_ {2}) \|) \\end{aligned} $
+
+$ (\| \\varphi(x) \| < M, \| \\psi(x) \| < M) $，商也一样
+
+从而，有界变动函数的和、差、积也是有界变动
+
+有界函数f(x)的全变动V(x)是关于区间的加法。总之，区间[a, b]关于c点分割成[a, c]和[c, b]时，区间的全变动可写为
+
+V(a, b) = V(a, c) + V(c, b) 
+
+同样对P, N
+
+P(a, b) = P(a, c) + P(c, b),    N(a, b) = N(a, c) + N(c, b)
+
+c作为区间左端的话
+
+N(c, x) = P(a, x) - P(a, c)
+
+N(c, x) = N(a, x) - N(a, c)
