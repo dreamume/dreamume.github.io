@@ -73,3 +73,37 @@ category:   maths
   对所有（连通的）图形G有 $ N(G) \\le \| V(G) \| - 1 $，这个已被P.Winkler在1983年证明。为了描述地址方案，我们需要一些准备，考虑下图
 
   ![img](../img/example_for_describing_addressing.png)
+
+  我们取一个顶点 $ x_ {0} $，则通过宽度优先搜索构建一个伸展树T，且通过一个深度优先搜索编号顶点。结果显示在上图右图，$ E(G) \\ E(T) $的边为点线
+
+  设 $ n := \| V(G) \| - 1 $。我们需要几个定义
+
+  对 $ i \\le n $，我们定义
+
+  $ P(i) := \\{j: x_ {j} $ 是T中在从 $ x_ {0} $到 $ x_ {i} $的路径中}
+
+  例如，P(6) = {0, 3, 4, 6}。设
+
+  $ i \\triangle j := max(P(i) \\cap P(j)) $
+
+  我们描述一般情形如下图
+
+  ![img](../img/example_of_cap_definition_in_addressing_problem.png)
+
+  注意在图中，我们有i < j 当且仅当k < l
+
+  对 $ i \\le n $，我们定义
+
+  $ i^{\\prime} := max(P(i) \\ \\{i\\}) $
+
+  例如在上上图中，$ 7^{\\prime} = 3 $，定义
+
+  $ i \\sim j \\Leftrightarrow P(i) \\subseteq P(j) \\, or \\, P(j) \\subseteq P(i) $
+
+  我们定义G中的距离，对应T，为 $ d_ {G} $及 $ d_ {T} $
+
+  差异函数c(i, j)现在定义为
+
+  $ c(i, j) := d_ {T}(x_ {i}, x_ {j}) - d_ {G}(x_ {i}, x_ {j}) $
+
+  例如，在上上图中，c(6, 9) = 4
