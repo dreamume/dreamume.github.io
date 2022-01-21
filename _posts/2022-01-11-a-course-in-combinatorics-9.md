@@ -107,3 +107,41 @@ category:   maths
   $ c(i, j) := d_ {T}(x_ {i}, x_ {j}) - d_ {G}(x_ {i}, x_ {j}) $
 
   例如，在上上图中，c(6, 9) = 4
+
+  **引理9.4**
+
+  (i) $ c(i, j) = c(j, i) \\ge 0 $
+
+  (ii) 如果 $ i \\sim j $，则 $ c(i, j) = 0 $
+
+  (iii) 如果 $ i \\not \\sim j $，则 $ c(i, j^{\\prime}) \\le c(i, j) \\le c(i, j^{\\prime}) + 2 $
+
+  证明：(i)是明显的；(ii)从T的定义因为
+
+  $ d_ {G}(x_ {i}, x_ {j}) \\ge \| d_ {G}(x_ {j}, x_ {0}) - d_ {G}(x_ {i}, x_ {0}) \| = d_ {T}(x_ {i}, x_ {j}) $
+
+  (iii) 由事实 $ \| d_ {G}(x_ {i}, x_ {j}) - d_ {G}(x_ {i},x_ {j^{\\prime}}) \| \\le 1 $且 $ d_ {T}(x_ {i}, x_ {j}) = 1 + d_ {T}(x_ {i}, x_ {j^{\\prime}}) $
+
+  现在我们可定义地址方案。对 $ 0 \\le i \\le n $顶点 $ x_ {i} $给定地址 $ \\mathbf{a}_ {i} \\in \\{0, 1, * \\}^{n} $，其
+
+  $ \\mathbf{a}_ {i} = (a_ {i}(1), a_ {i}(2), \\ldots, a_ {i}(n)) $
+
+  且
+
+  $ a_ {i}(j) := \\left \\{ \\begin{array}{cc} 1 & \\text{if } j \\in P(i) \\\\ * & \\text{if } \\left \\{ \\begin{array}{l} c(i,j) - c(i, j^{\\prime}) = 2, or \\\\ c(i,j) - c(i,j^{\\prime}) = 1, i < j, c(i,j) even, or \\\\ c(i,j) - c(i, j^{\\prime}) = 1, i > j, c(i,j) odd \\end{array} \\right. \\\\ 0 & otherwise \\end{array} \\right. $
+
+  **定理9.5** $ d(\\mathbf{a}_ {i}, \\mathbf{a}_ {k}) = d_ {G}(x_ {i}, x_ {k}) $
+
+  证明：我们可假设i < k
+
+  (i) 假设 $ i \\sim k $，则 $ d_ {G}(x_ {i}, x_ {k}) = \| P(k) \\ P(i) \| $。j的值使得 $ j \\in P(k) \\ P(i) $为位置其 $ a_ {k}(j) = 1, a_ {i}(j) \\ne 1 $。对这些j值我们看到c(i, j) = 0,因此 $ a_ {i}(j) = 0 $
+
+  (ii) 困难的情况是 $ i \\not \\sim k $。设 $ n_ {1} \\le n_ {2} \\le \\cdots \\le n_ {l} $为一个整数的非减序列使得 $ \| n_ {i+1} - n_ {i} \| \\le 2 $对所有i。如果m是 $ m_ {1} $到 $ n_ {l} $之间的一个偶整数且不出现在该序列中，则有一个i使得 $ n_ {i} = m - 1, n_ {i+1} = m + 1 $。现在考虑序列
+
+  $ c(i, k) \\ge c(i, k^{\\prime}) \\ge c(i, k^{\\prime \\prime}) \\ge \\cdots \\ge c(i, i \\triangle k) = 0 $
+
+  通过 $ a_ {i}(j) $的定义且如上观察，$ a_ {i}(j) = * $且 $ a_ {k}(j) = 0 $在 $ c(i, i \\triangle k) $和c(i, k)之间有偶数整数个。相似地，$ a_ {k}(j) = * $和$ a_ {i}(j) = 1 $在$ c(i, i \\triangle k) $和c(i, k)之间奇数整数个数相同。这样
+
+  $ \\begin{aligned} d(\\mathbf{a}_ {i}, \\mathbf{a}_ {k}) &= \| P(k) \\ P(i) \| + \| P(i) \\ P(k) \| - c(i,k) \\\\ &= d_ {T}(x_ {i}, x_ {k}) - c(i, k) = d_ {G}(x_ {i}, x_ {k}) \\end{aligned} $
+
+  因此我们已证明如下定理
