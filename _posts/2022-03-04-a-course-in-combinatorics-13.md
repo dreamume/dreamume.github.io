@@ -123,3 +123,15 @@ $ S(n, k) = \\frac{1}{k!} \\sum^{k}_ {i=0} (-1)^{i} {k \\choose i} (k-i)^{n} = \
 现在让x为一个整数，有 $ x^{n} $个映射从n个元素集合 $ N := \\{1,2,\\ldots, n\\} $到x元素集合 $ \\{1,2,\\ldots, x\\} $。对 $ \\{1,2,\\ldots, x\\} $的任意k元素集合Y，有 $ k! S(n, k) $个从N到Y的满射。这样我们找到
 
 $ x^{n} = \\sum^{n}_ {k=0} {x \\choose k} k! S(n, k) = \\sum^{n}_ {k=0} S(n, k) (x)_ {k} $
+
+**定理 13.6** $ \\sum_ {n \\ge k} S(n, k) \\frac{z^{n}}{n!} = \\frac{1}{k!} (\\log{(1+z)})^{k} $
+
+证明：因为
+
+$ (1+z)^{x} = e^{x \\log{(1+z)}} = \\sum^{\\infty}_ {k=0} \\frac{1}{k!} (\\log{(1+z)})^{k} x^{k} $
+
+断言右边是表达式 $ (1+z)^{x} $的 $ x^{k} $的系数，另一方面，我们有 $ \| z \| < 1 $
+
+$ \\begin{aligned} (1+z)^{x} &= \\sum^{\\infty}_ {n=0} {x \\choose n} z^{n} = \\sum^{\\infty}_ {n=0} \\frac{1}{n!} (x)_ {n}z^{n} \\\\ &= \\sum^{\\infty}_ {n=0} \\frac{z^{n}}{n!} \\sum^{n}_ {r=0}s(n, r)x^{r} = \\sum^{\\infty}_ {r=0} x^{r} \\sum^{\\infty}_ {n=r} s(n, r) \\frac{z^{n}}{n!} \\end{aligned} $
+
+得证
