@@ -124,7 +124,9 @@ $ S(n, k) = \\frac{1}{k!} \\sum^{k}_ {i=0} (-1)^{i} {k \\choose i} (k-i)^{n} = \
 
 $ x^{n} = \\sum^{n}_ {k=0} {x \\choose k} k! S(n, k) = \\sum^{n}_ {k=0} S(n, k) (x)_ {k} $
 
-**定理 13.6** $ \\sum_ {n \\ge k} S(n, k) \\frac{z^{n}}{n!} = \\frac{1}{k!} (\\log{(1+z)})^{k} $
+**定理 13.6** $ \\sum_ {n \\ge k} S(n, k) \\frac{x^{n}}{n!} = \\frac{1}{k!} (e^{x}-1)^{k} $
+
+**定理 13.7** $ \\sum^{\\infty}_ {n = k} S(n, k) \\frac{z^{n}}{n!} = \\frac{1}{k!} (\\log{(1+z)})^{k} $
 
 证明：因为
 
