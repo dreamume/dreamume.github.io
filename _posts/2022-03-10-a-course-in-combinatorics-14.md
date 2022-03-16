@@ -96,7 +96,7 @@ $ f(x, y) = \\frac{1 + xy}{1 - x - x^{2}y} = \\frac{1}{1 - x} + \\sum^{\\infty}_
 
 **例子 14.5** 考虑平面的配置，称为polyominoes，如下图。配置包含层，每层包含连续的方块。两个连续层在方块的边( $ \\ge 1 $)相遇（更精确地说，我们考虑水平凸polyominoes）
 
-[[../img/polyominoes.png]]
+![img](../img/polyominoes.png)
 
 设 $ a_ {n} $记为n方块的polyominoes数且定义 $ f(x) := \\sum^{\\infty}_ {n=1} a_ {n}x^{n} $。为找到f，我们对polyominoes数引入a(m, n)，其底层有m个方块（总共是n个）。我们定义a(m, n) := 0如果m > n。明显地
 
