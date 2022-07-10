@@ -290,3 +290,19 @@ $ \\lim_ {N \\to \\infty} S_ {N}(f)(\\theta) = f(\\theta) $在 $ \\theta $统一
 $ g(\\theta) = \\sum^{\\infty}_ {n = - \\infty} \\hat{f}(n) e^{in\\theta} = \\lim_ {N \\to \\infty} \\sum^{N}_ {n=-N} \\hat{f}(n)e^{in \\theta} $
 
 在圆上连续。更进一步，g的傅立叶系数是精确的 $ \\hat{f}(n) $因为我们可用积分交换无穷和。因此，之前的推论应用到函数f - g得到f = g。f的什么条件将保证它的傅立叶级数绝对收敛？f的光滑属性直接关系到傅立叶系数的退化，且一般来说，函数越光滑，退化越快。结果，我们可期望相关光滑函数等于它们的傅立叶级数
+
+*推论 2.4* 假设 f 是圆上一个两次可导函数。则
+
+$ \\hat{f}(n) = O(1 / \| n \|^{2}) \\qquad \\text{as } \|n \| \\to \\infty $
+
+这样 f 的傅立叶级数绝对统一收敛到 f
+
+证明：傅立叶系数的估计通过对 $ n \\ne 0 $ 两次分部积分证明。我们获得
+
+$ \\begin{aligned} 2 \\pi \\hat{f}(n) &= \\int^{2 \\pi}_ {0} f( \\theta ) e^{-in \\theta} d \\theta \\\\ &= \\left[ f(\\theta) \\cdot \\frac{-e^{-in \\theta}}{in} \\right]^{2 \\pi}_ {0} + \\frac{1}{in} \\int^{2 \\pi}_ {0} f^{\\prime} e^{-in \\theta} d \\theta \\\\ &= \\frac{1}{in} \\int^{2 \\pi}_ {0} f^{\\prime}(\\theta) e^{-in \\theta} d \\theta \\\\ &= \\frac{1}{in} \\left[f^{\\prime}(\\theta) \\cdot \\frac{-e^{-in \\theta}}{in} \\right]^{2 \\pi}_ {0} + \\frac{1}{(in)^{2}} \\int^{2 \\pi}_ {0} f^{\\prime \\prime} e^{-in \\theta} d \\theta \\\\ &= \\frac{-1}{n^{2}} \\int^{2 \\pi}_ {0} f^{\\prime \\prime}(\\theta) e^{-in \\theta} d \\theta \\end{aligned} $
+
+因此
+
+$ 2 \\pi \| n \|^{2} \| \\hat{f}(n) \| \\le \\left\| \\int^{2 \\pi}_ {0} f^{\\prime \\prime}(\\theta) e^{-in \\theta} d \\theta \\right\| \\le \\int^{2 \\pi}_ {0} \| f^{\\prime \\prime}(\\theta) \| d \\theta \\le C $
+
+常数 C 独立于 n（我们可让 $ C = 2 \\pi B $ 当 B 是 $ f^{\\prime \\prime} $ 的边界）。因为 $ \\sum 1 / n^{2} $ 收敛，推论的证明完成
