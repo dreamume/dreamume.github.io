@@ -311,7 +311,7 @@ $ 2 \\pi \| n \|^{2} \| \\hat{f}(n) \| \\le \\left\| \\int^{2 \\pi}_ {0} f^{\\pr
 
 $ \\hat{f^{\\prime}}(n) = in \\hat{f}(n), \\qquad \\forall n \\in \\mathbb{Z} $
 
-如果 $ n \\ne 0 $ 则证明如上已给出，且如果 n = 0 左边作为练习留给读者。这样如果 f 是可微分的且 $ f \\sim \\sum a_ {n}e^{in \\theta} $，则 $ f^{\\prime} \\sim \\sum a_ {n}in e^{in \\theta}。同样，如果 f 是两次可微，则 $ f^{\\prime \\prime} \\sim \\sum a_ {n}(in)^{2} e^{in \\theta} $，等等。f 更进一步的平滑条件意味着更好的傅立叶系数衰退
+如果 $ n \\ne 0 $ 则证明如上已给出，且如果 n = 0 左边作为练习留给读者。这样如果 f 是可微分的且 $ f \\sim \\sum a_ {n}e^{in \\theta} $，则 $ f^{\\prime} \\sim \\sum a_ {n}in e^{in \\theta} $ 。同样，如果 f 是两次可微，则 $ f^{\\prime \\prime} \\sim \\sum a_ {n}(in)^{2} e^{in \\theta} $，等等。f 更进一步的平滑条件意味着更好的傅立叶系数衰退
 
 有推论 2.4 的更强版本，例如，f 的傅立叶级数绝对收敛，假设只有 f 有一个连续导数。更一般地，f 的傅立叶级数绝对收敛（因此统一收敛到 f）如果 f 满足序 $ \\alpha $ 的 Holder 条件，$ \\alpha > 1 / 2 $，即
 
