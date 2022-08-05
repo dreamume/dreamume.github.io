@@ -346,3 +346,17 @@ $ D_ {N} $ 是 $ N^{th} $ Dirichlet 核：
 $ D_ {N}(x) = \\sum^{N}_ {n=-N} e^{inx} $
 
 所以我们观察到理解 $ S_ {N}(f) $ 缩减为理解卷积 $ f * D_ {N} $
+
+*命题 3.1* 假设 f, g 和 h 为 $ 2 \\pi $ 为周期的可积函数，则
+
+(i) f * (g + h) = (f * g) + (f * h)
+
+(ii) (cf) * g = c(f * g) = f * (cg) $ \\forall c \\in \\mathbb{C} $
+
+(iii) f * g = g * f
+
+(iv) (f * g) * h = f * (g * h)
+
+(v) f * g 是连续的
+
+(vi) $ \\hat{f * g}(n) = \\hat{f}(n) \\hat{g}(n) $
