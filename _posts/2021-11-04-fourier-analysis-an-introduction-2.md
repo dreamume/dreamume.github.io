@@ -360,3 +360,11 @@ $ D_ {N}(x) = \\sum^{N}_ {n=-N} e^{inx} $
 (v) f * g 是连续的
 
 (vi) $ \\widehat{f * g}(n) = \\hat{f}(n) \\hat{g}(n) $
+
+**引理 3.2** 假设 f 在圆上是可积的且以 B 为边界。则在圆上存在一个连续函数序列 $ \\{ f_ {k} \\}^{\\infty}_ {k=1} $ 使得
+
+$ sup_ {x \\in [-\\pi, \\pi]} \| f_ {k}(x) \| \\le B \\qquad \\forall k = 1, 2, \\ldots $
+
+且
+
+$ \\int^{\\pi}_ {-\\pi} \| f(x) - f_ {k}(x) \| dx \\to 0 \\qquad as \\quad k \\to \\infty $
