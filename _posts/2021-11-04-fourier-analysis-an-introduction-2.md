@@ -390,4 +390,4 @@ $ \\int_ {\\delta \\le \| x \| \\le \\pi} \| K_ {n}(x) \| dx \\to 0, \\qquad as 
 
 我们可解释核 $ K_ {n}(x) $ 为圆上的重量分布。属性（a）说 $ K_ {n} $ 对整个圆 $ [-\\pi, \\pi] $ 给出单位重量，且（c）这个重量当 n 变大时集中于圆心
 
-![img](../img//img/fourier_good_kernel_example.png)
+![img](../img/fourier_good_kernel_example.png)
