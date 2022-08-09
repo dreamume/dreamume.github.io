@@ -25,6 +25,7 @@ category:   maths
 1.  [主要定义和一些例子](#org4a21d8f)
 2.  [傅立叶级数的唯一性](#org85e47fb)
 3.  [卷积](#org03d2578)
+4.  [好核](#orgbe348d1)
 
 在本章中，我们开始我们傅立叶级数的严谨地学习。我们设置舞台引入主题的主要目标，且然后公式化我们之前接触到的一些基本问题
 
@@ -368,3 +369,25 @@ $ sup_ {x \\in [-\\pi, \\pi]} \| f_ {k}(x) \| \\le B \\qquad \\forall k = 1, 2, 
 且
 
 $ \\int^{\\pi}_ {-\\pi} \| f(x) - f_ {k}(x) \| dx \\to 0 \\qquad as \\quad k \\to \\infty $
+
+
+<a id="orgbe348d1"></a>
+
+# 好核
+
+圆上的一族核 $ \\{ K_ {n}(x) \\}^{\\infty}_ {n=1} $ 被称为一族好核如果它满足如下属性：
+(a) 对所有 $ n \\ge 1 $
+
+$ \\frac{1}{2 \\pi} \\int^{\\pi}_ {-\\pi} K_ {n}(x) dx = 1 $
+
+(b) 存在 M > 0使得对所有 $ n \\ge 1 $
+
+$ \\int^{\\pi}_ {-\\pi} \| K_ {n}(x) \| dx \\le M $
+
+(c) 对每个 $ \\delta > 0 $
+
+$ \\int_ {\\delta \\le \| x \| \\le \\pi} \| K_ {n}(x) \| dx \\to 0, \\qquad as \\quad n \\to \\infty $
+
+我们可解释核 $ K_ {n}(x) $ 为圆上的重量分布。属性（a）说 $ K_ {n} $ 对整个圆 $ [-\\pi, \\pi] $ 给出单位重量，且（c）这个重量当 n 变大时集中于圆心
+
+![img](../img//img/fourier_good_kernel_example.png)
