@@ -391,3 +391,23 @@ $ \\int_ {\\delta \\le \| x \| \\le \\pi} \| K_ {n}(x) \| dx \\to 0, \\qquad as 
 我们可解释核 $ K_ {n}(x) $ 为圆上的重量分布。属性（a）说 $ K_ {n} $ 对整个圆 $ [-\\pi, \\pi] $ 给出单位重量，且（c）这个重量当 n 变大时集中于圆心
 
 ![img](../img/fourier_good_kernel_example.png)
+
+**定理 4.1** 设 $ \\{K_ {n}\\}^{\\infty}_ {n=1} $ 为一族好核，且 f 一个圆上可积函数。则
+
+$ \\lim_ {n \\to \\infty}( f \\times K_ {n})(x) = f(x) $
+
+f 在 x 上连续。如果 f 处处连续，则上面的极限是统一的
+
+因为这个结果，族 $ \\{K_ {n}\\} $ 有时指定为一个固定的估计
+
+我们之前解释过卷积为重量的平均。在这个上下文中，卷积
+
+$ (f \\times K_ {n})(x) = \\frac{1}{2 \\pi} \\int^{\\pi}_ {-\\pi} f(x - y) K_ {n}(y) dy $
+
+是 f(x - y) 的平均，重量通过 $ K_ {n}(y) $ 给定。然而，重量分布 $ K_ {n} $ 的重量集中在 y = 0 当 $ n \\to \\infty $。如上图显示
+
+证明定理 4.1。如果 $ \\epsilon > 0 $ 且 f 在 x 上连续，选择 $ \\delta $ 使得 $ \| y \| < \\delta $ 意味着 $ \| f(x - y) - f(x) \| < \\epsilon $。则，通过好核的第一个属性我们可写成
+
+$ \\begin{aligned} (f \\times K_ {n})(x) - f(x) &= \\frac{1}{2 \\pi} \\int^{\\pi}_ {- \\pi} K_ {n}(y) f(x - y)dy - f(x) \\\\ &= \\frac{1}{2 \\pi} \\int^{\\pi}_ {- \\pi} K_ {n}(y)[f(x - y) - f(x)] dy \\end{aligned} $
+
+因此
