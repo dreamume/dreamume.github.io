@@ -432,7 +432,7 @@ $ \\int^{\\pi}_ {- \\pi} \| D_ {N}(x) \| dx \\ge c \\log{N}, \\qquad \\text{as }
 
 $ \\frac{1}{2 \\pi} \\int^{\\pi}_ {- \\pi} D_ {N}(x) dx = 1 $
 
-[[../img/the_direchlet_kernel_for_large_n.png]]
+![img](../img/the_direchlet_kernel_for_large_n.png)
 
 这样好核的第一个属性事实上验证了。事实上 $ D_ {N} $ 的平均值为 1，然而它绝对值的积分是很大的，是一个取消的结果。事实上，上图显示函数 $ D_ {N}(x) $ 拿一个正值和一个负值且当 N 变大时震荡非常快
 
