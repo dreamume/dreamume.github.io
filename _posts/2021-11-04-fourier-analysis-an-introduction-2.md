@@ -411,3 +411,29 @@ $ (f \\times K_ {n})(x) = \\frac{1}{2 \\pi} \\int^{\\pi}_ {-\\pi} f(x - y) K_ {n
 $ \\begin{aligned} (f \\times K_ {n})(x) - f(x) &= \\frac{1}{2 \\pi} \\int^{\\pi}_ {- \\pi} K_ {n}(y) f(x - y)dy - f(x) \\\\ &= \\frac{1}{2 \\pi} \\int^{\\pi}_ {- \\pi} K_ {n}(y)[f(x - y) - f(x)] dy \\end{aligned} $
 
 因此
+
+$ \\begin{aligned} \| (f * K_ {n})(x) - f(x) \| &= \| \\frac{1}{2 \\pi} \\int^{\\pi}_ {- \\pi} K_ {n}(y) [f(x - y) - f(x)]dy \| \\\\ &\\le \\frac{1}{2 \\pi} \\int_ {\| y \| < \\delta} \| K_ {n}(y) \| \| f(x - y) - f(x) \| dy \\\\ &+ \\frac{1}{2 \\pi} \\int_ {\\delta \\le \| y \| \\le \\pi} \| K_ {n}(y) \| \| f(x - y) - f(x) \| dy \\\\ &\\le \\frac{\\epsilon}{2 \\pi} \\int^{\\pi}_ {- \\pi} \| K_ {n}(y) \| dy + \\frac{2 B}{2 \\pi} \\int_ {\\delta \\le \| y \| \\le \\pi} \| K_ {n}(y) \| dy \\end{aligned} $
+
+B 是 f 的一个边界。第一项边界为 $ \\frac{\\epsilon M}{2 \\pi} $ 因为好核的第二个属性。通过第三个属性对所有大 n，第二项将小于 $ \\epsilon $。因此，对某个常量 C > 0 和所有大 n 我们有
+
+$ \| (f * K_ {n})(x) - f(x) \| \\le C \\epsilon $
+
+因此证明了定理的第一个断言。如果 f 是处处连续，则它统一连续，且 $ \\delta $ 可依赖 x 来选择。这提供想要的统一结论 $ f * K_ {n} \\to f $ 
+
+回忆第 3 节开头
+
+$ S_ {N}(f)(x) = (f * D_ {N})(x) $
+
+$ D_ {N}(x) = \\sum^{N}_ {n=-N} e^{inx} $ 是 Dirichlet 核。现在对我们是自然的来说是否 $ D_ {N} $ 是一个好核，因为如果这是真的，定理 4.1 意味着 f 的傅立叶系数收敛到 f(x)，f 在 x 连续。不幸地是，这是不成立的。一个估计显示 $ D_ {N} $ 违背了第二个属性；更精确地，其有
+
+$ \\int^{\\pi}_ {- \\pi} \| D_ {N}(x) \| dx \\ge c \\log{N}, \\qquad \\text{as } N \\to \\infty $
+
+然而，我们应该注意到 $ D_ {N} $ 公式作为指数的和给出了
+
+$ \\frac{1}{2 \\pi} \\int^{\\pi}_ {- \\pi} D_ {N}(x) dx = 1 $
+
+[[../img/the_direchlet_kernel_for_large_n.png]]
+
+这样好核的第一个属性事实上验证了。事实上 $ D_ {N} $ 的平均值为 1，然而它绝对值的积分是很大的，是一个取消的结果。事实上，上图显示函数 $ D_ {N}(x) $ 拿一个正值和一个负值且当 N 变大时震荡非常快
+
+这个观察建议傅立叶级数真的收敛是错综复杂的，且甚至在点的连续性上失败
