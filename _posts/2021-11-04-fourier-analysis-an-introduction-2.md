@@ -30,6 +30,7 @@ category:   maths
     1.  [Cesaro 中值和和值](#orgf6b42bf)
     2.  [Fejer 定理](#org2e37818)
     3.  [Abel 中值和和值](#orgf79d0a6)
+    4.  [单位盘上泊松核和 Dirichlet 问题](#org893d7e0)
 
 在本章中，我们开始我们傅立叶级数的严谨地学习。我们设置舞台引入主题的主要目标，且然后公式化我们之前接触到的一些基本问题
 
@@ -501,7 +502,7 @@ $ F_ {N}(x) = \\frac{1}{N} \\frac{\\sin^{2}{(Nx / 2)}}{\\sin^{2}{ x / 2 }} $
 
 且 Fijer 核是一个好核
 
-**定理 5。2** 如果 f 在圆上是可积的，则 f 的傅立叶级数是 f 在每个连续点的 Cesaro 可加和
+**定理 5.2** 如果 f 在圆上是可积的，则 f 的傅立叶级数是 f 在每个连续点的 Cesaro 可加和
 
 更近一步，如果 f 在圆上连续，则 f 的傅立叶级数是 f 的统一 Cesaro 可加和
 
@@ -535,3 +536,32 @@ $ 1 - 2 + 3 - 4 + 5 - \\cdots = \\sum^{\\infty}_ {k=0} (-1)^{k} (k + 1) $
 $ A(r) = \\sum^{\\infty}_ {k=0} (-1)^{k} (k+1)r^{k} = \\frac{1}{(1+r)^{2}} $
 
 但这个级数不是 Cesaro 和
+
+
+<a id="org893d7e0"></a>
+
+## 单位盘上泊松核和 Dirichlet 问题
+
+为适配 Abel 和到傅立叶级数内容，我们定义函数 $ f(\\theta) \\sim \\sum^{\\infty}_ {n=- \\infty} a_ {n} e^{in \\theta} $ 的 Abel 中值为
+
+$ A_ {r}(f)(\\theta) = \\sum^{\\infty}_ {n=- \\infty} r^{\| n \|} a_ {n} e^{in \\theta} $
+
+因为 n 可为正负整数，它自然地写 $ c_ {0} = a_ {0} $ 且 $ c_ {n} = a_ {n} e^{in \\theta} + a_ {-n} e^{-in \\theta} $ 对 n > 0，这样傅立叶级数的 Abel 中值对应定义给出了之前的级数
+
+我们注意到因为 f 是可积的，$ \| a_ {n} \| $ 是统一边界到 n，这样 $ A_ {r}(f) $ 绝对统一收敛对 $ 0 \\le r < 1 $。在 Cesaro 中值的例子中，关键事实是这些 Abel 中值可被写为卷积
+
+$ A_ {r}(f)(\\theta) = (f * P_ {r})(\\theta) $
+
+$ P_ {r}(\\theta) $ 是泊松核给定为
+
+$ P_ {r}(\\theta) = \\sum^{\\infty}_ {n=- \\infty} r^{\| n \|} e^{in \\theta} $
+
+事实上
+
+$ \\begin{aligned} A_ {r}(f)(\\theta) &= \\sum^{\\infty}_ {n=- \\infty} r^{\| n \|} a_ {n} e^{in \\theta} \\\\ &= \\sum^{\\infty}_ {n=- \\infty} r^{\| n \|} (\\frac{1}{2 \\pi} \\int^{\\pi}_ {- \\pi} f(\\varphi) e^{-in \\varphi} d \\varphi) e^{in \\theta} \\\\ &= \\frac{1}{2 \\pi} \\int^{\\pi}_ {- \\pi} f(\\varphi) (\\sum^{\\infty}_ {n=- \\infty} r^{\| n \|} e^{-in(\\varphi - \\theta)}) d \\varphi \\end{aligned} $
+
+**引理 5.5** 如果 $ 0 \\le r < 1 $，则
+
+$ P_ {r}(\\theta) = \\frac{1 - r^{2}}{1 - 2r \\cos{\\theta} + r^{2}} $
+
+泊松核是一个好核，当 r 趋于 1 时
