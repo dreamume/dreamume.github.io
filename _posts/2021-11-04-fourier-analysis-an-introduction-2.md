@@ -568,7 +568,7 @@ $ P_ {r}(\\theta) = \\frac{1 - r^{2}}{1 - 2r \\cos{\\theta} + r^{2}} $
 
 证明：$ P_ {r}(\\theta) = \\frac{1 - r^{2}}{1 - 2r \\cos{\\theta} + r^{2}} $，注意
 
-$ 1 - 2r \\cose{\\theta} + r^{2} = (1 - r)^{2} + 2r(1 - \\cos{\\theta}) $
+$ 1 - 2r \\cos{\\theta} + r^{2} = (1 - r)^{2} + 2r(1 - \\cos{\\theta}) $
 
 因此如果 $ \\frac{1}{2} \\le r \\le 1 $ 且 $ \\delta \\le \| \\theta \| \\le \\pi $，则
 
