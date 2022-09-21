@@ -565,3 +565,27 @@ $ \\begin{aligned} A_ {r}(f)(\\theta) &= \\sum^{\\infty}_ {n=- \\infty} r^{\| n 
 $ P_ {r}(\\theta) = \\frac{1 - r^{2}}{1 - 2r \\cos{\\theta} + r^{2}} $
 
 泊松核是一个好核，当 r 趋于 1 时
+
+证明：$ P_ {r}(\\theta) = \\frac{1 - r^{2}}{1 - 2r \\cos{\\theta} + r^{2}} $，注意
+
+$ 1 - 2r \\cose{\\theta} + r^{2} = (1 - r)^{2} + 2r(1 - \\cos{\\theta}) $
+
+因此如果 $ \\frac{1}{2} \\le r \\le 1 $ 且 $ \\delta \\le \| \\theta \| \\le \\pi $，则
+
+$ 1 - 2r \\cos{\\theta} + r^{2} \\ge c_ {\\delta} > 0 $
+
+则 $ P_ {r}(\\theta) \\le (1 - r^{2}) / c_ {\\delta}, \\delta \\le \| \\theta \| \\le \\pi $，且好核的第三个属性被验证。因 $ P_ {r}(\\theta) \\ge 0 $ 且有
+
+$ \\frac{1}{2 \\pi} \\int^{\\pi}_ {- \\pi} P_ {r}(\\theta) d \\theta = 1 $
+
+因此证明 $ P_ {r} $ 是一个好核
+
+**定理 5.6** 圆上可积函数的傅立叶级数对 f 每个连续点是 Abel 可加和的。更进一步，如果 f 在圆上是连续的，则 f 的傅立叶级数对 f 是统一的 Abel 可加和
+
+我们现在回到第一章讨论的问题，我们设计稳态加热等式在圆上对边界条件 u = f 的解决方案。我们表达 Laplacian 以极点坐标、分割变量且期望一个解决方案给定为
+
+$ u(r, \\theta) = \\sum^{\\infty}_ {m=- \\infty} a_ {m} r^{\| m \|} e^{in \\theta} $
+
+$ a_ {m} $ 是 f 的第 m 个傅立叶系数。另
+
+$ u(r, \\theta) = A_ {r}(f)(\\theta) = \\frac{1}{2 \\pi} \\int^{\\pi}_ {- \\pi} f(\\varphi) P_ {r}(\\theta - \\varphi) d \\varphi $
