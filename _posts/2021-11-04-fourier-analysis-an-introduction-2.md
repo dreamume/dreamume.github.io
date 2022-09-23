@@ -589,3 +589,35 @@ $ u(r, \\theta) = \\sum^{\\infty}_ {m=- \\infty} a_ {m} r^{\| m \|} e^{in \\thet
 $ a_ {m} $ 是 f 的第 m 个傅立叶系数。另
 
 $ u(r, \\theta) = A_ {r}(f)(\\theta) = \\frac{1}{2 \\pi} \\int^{\\pi}_ {- \\pi} f(\\varphi) P_ {r}(\\theta - \\varphi) d \\varphi $
+
+**定理 5.7** 设 f 为一个定义在单位圆上的可积函数，则函数 u 定义在单位圆盘上的泊松积分
+
+$ u(r, \\theta) = (f * P_ {r})(\\theta) $
+
+有如下属性：
+
+(1) u 在单位盘上有两个连续导数且满足 $ \\Delta u = 0 $
+
+(2) 如果 $ \\theta $ 是 f 的任何连续点，则 
+
+$ \\lim_ {r \\to 1} u(r, \\theta) = f(\\theta) $
+
+(3) 如果 f 是连续的，则 $ u(r, \\theta) $ 是在盘上满足上述两个条件的稳态热力等式的唯一解决方案
+
+证明：对（1），固定 $ \\rho < 1 $，以原点为中心每个半径 $ r < \\rho < 1 $ 的盘的内部，u 的级数可按项微分，且微分级数统一绝对收敛。这样 u 可微分两次（实际上可无穷次），且因为这对所有 $ \\rho < 1 $ 成立，我们得出在单位圆盘内 u 是可两次微分的。更进一步，对极坐标
+
+$ \\Delta u = \\frac{\\partial^{2} u}{\\partial r^{2}} + \\frac{1}{r} \\frac{\\partial u}{\\partial r} + \\frac{1}{r^{2}} \\frac{\\partial^{2} u}{\\partial \\theta^{2}} $
+
+这样 $ \\Delta u = 0 $
+
+证明 (2) 是之前定理的一个简单应用。为证明（3），假设 v 在盘中解决稳态热力等式且当 r 趋于 1 统一收敛到 f。对固定的 r，0 < r < 1，函数 $ v(r, \\theta) $ 有傅立叶级数
+
+$ \\sum^{\\infty}_ {n =- \\infty} a_ {n}(r) e^{in \\theta}, a_ {n}(r) = \\frac{1}{2 \\pi} \\int^{\\pi}_ {- \\pi} v(r, \\theta) e^{-in \\theta} d \\theta $
+
+$ v(r, \\theta) $ 解决等式
+
+$ \\frac{\\partial^{2} v}{\\partial r^{2}} + \\frac{1}{r} \\frac{\\partial v}{\\partial r} + \\frac{1}{r^{2}} \\frac{\\partial^{2} v}{\\partial \\theta^{2}} = 0 $
+
+我们发现
+
+$ a^{\\prime \\prime}_ {n} (r) + \\frac{1}{r} a^{\\prime}_ {n}(r) - \\frac{n^{2}}{r^{2}}a_ {n}(r) = 0 $
