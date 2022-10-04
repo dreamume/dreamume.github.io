@@ -159,7 +159,7 @@ $ S_ {N}(f)(x) = \\sum^{N}_ {n=-N} \\hat{f}(n) e^{2 \\pi inx / L} $
 
 例1 设 $ f(\\theta) = \\theta, -\\pi \\le \\theta \\le \\pi $。计算傅立叶系数需要部分简单的积分。首先，如果 $ n \\ne 0 $，则
 
-$ \\begin{aligned} \\hat{f}(n) &= \\frac{1}{2 \\pi} \\int^{\\pi}_ {- \\pi} \\theta e^{-in \\theta} d \\theta \\\\ &= \\frac{1}{2 \\pi} [- \\frac{\\theta}{in} e^{- in \\theta}]^{\\pi}_ {-\\pi} + \\frac{1}{2 \\pi in} \\int^{\\pi}_ {-\\pi} e^{-in \\theta} d \\theta \\\\ \\frac{(-1)^{n+1}}{in}, \\end{aligned} $
+$ \\begin{aligned} \\hat{f}(n) &= \\frac{1}{2 \\pi} \\int^{\\pi}_ {- \\pi} \\theta e^{-in \\theta} d \\theta \\\\ &= \\frac{1}{2 \\pi} [- \\frac{\\theta}{in} e^{- in \\theta}]^{\\pi}_ {-\\pi} + \\frac{1}{2 \\pi in} \\int^{\\pi}_ {-\\pi} e^{-in \\theta} d \\theta \\\\ &= \\frac{(-1)^{n+1}}{in}, \\end{aligned} $
 
 且如果n = 0我们有
 
