@@ -75,7 +75,7 @@ $ g = a \\times y_ {1} + b \\times \\left( x_ {1} - y_ {1} \\times \\lfloor \\fr
 
 这样我们找到 x 和 y 的值：
 
-$ \\left\\{\\begin{array}{l} x = y_ {1} \\ y = x_ {1} - y_ {1} \\times \\left\\lfloor\\frac{a}{b}\\right\\rfloor \\end{array}\\right. $
+$ \\left\\{\\begin{array}{l} x = y_ {1} \\\\ y = x_ {1} - y_ {1} \\times \\left\\lfloor\\frac{a}{b}\\right\\rfloor \\end{array}\\right. $
 
 
 <a id="orgd9f85b8"></a>
