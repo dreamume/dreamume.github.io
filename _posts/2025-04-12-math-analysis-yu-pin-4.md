@@ -5,7 +5,7 @@ subtitle:   "Limit, Series, Cauchy Sequence, Convergence in Distance Space"
 thumbnail-img: ""
 date:       2025-04-12 16:50
 author:     "dreamume"
-tags: 		[elementary]
+tags: 		[analysis]
 category:   maths
 ---
 <head>
