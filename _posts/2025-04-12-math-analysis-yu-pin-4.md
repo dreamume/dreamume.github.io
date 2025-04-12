@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "Math Analysis(Chapter 4) by Yu Pin"
-subtitle:   "极限，级数，Cauchy 列，距离空间中的收敛"
+subtitle:   "Limit, Series, Cauchy Sequence, Convergence in Distance Space"
 thumbnail-img: ""
 date:       2025-04-12 16:50
 author:     "dreamume"
@@ -23,8 +23,8 @@ category:   maths
 # Table of Contents
 
 1.  [计算级数的例题](#org1ce2a79)
-    1.  [求 $ \\sum^{n}_ {n=1} \\arctan\\frac{1}{n^{2} + n + 1} $](#org65c1ff7)
-    2.  [求 $ \\sum^{\\infty}_ {n=1}\\frac{n}{3^{n}} $](#orged8f069)
+    1.  [1](#org65c1ff7)
+    2.  [2](#orged8f069)
 
 
 <a id="org1ce2a79"></a>
