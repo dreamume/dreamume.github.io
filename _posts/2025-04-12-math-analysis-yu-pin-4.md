@@ -22,9 +22,11 @@ category:   maths
 
 # Table of Contents
 
-1.  [计算级数的例题](#org1ce2a79)
+1.  [compute series](#org1ce2a79)
     1.  [1](#org65c1ff7)
     2.  [2](#orged8f069)
+2.  [check convergence of series](#org87f2fb8)
+    1.  [1](#orgc328dc8)
 
 
 <a id="org1ce2a79"></a>
@@ -58,3 +60,29 @@ $ \sum^{\\infty}_ {n=1}nx^{n} = \\frac{x}{(1-x)^{2}}, \\| x \\| < 1 $
 这里，我们让 $ x = \\frac{1}{3} $，则有
 
 $ \\sum^{\\infty}_ {n=1}\\frac{n}{3^{n}} = \\sum^{\\infty}_ {n=1}n\\left(\\frac{1}{3}\\right)^{n} = \\frac{\\frac{1}{3}}{(1 - \\frac{1}{3})^{2}} = \\frac{3}{4} $
+
+
+<a id="org87f2fb8"></a>
+
+# 判断级数的收敛性
+
+
+<a id="orgc328dc8"></a>
+
+设 $ a_ {n} = (\\sqrt{n}{n} - 1)^{n} $，由于 $ \\lim_ {n \\to \\infty}n^{\\frac{1}{n}} = 1 $，对大的 n，有 $ n^{\\frac{1}{n}} \\approx 1 + \\frac{\\log{n}}{n} $，（使用 first-order expansion of the exponential function)
+
+则有：
+
+$ \\sqrt{n}{n} - 1 \\approx \\frac{\\log{n}}{n} $
+
+则
+
+$ a_ {n} = (\\sqrt{n}{n} - 1)^{n} \\approx \\left(\\frac{\\log{n}}{n}\\right)^{n} $
+
+由于 $ \\log{a_ {n}} \\approx n\\log{(\\frac{\\log{n}}{n})} = n(\\log{\\log{n}} - \\log{n}) $
+
+当 $ n \\to \\infty, \\log{\\log{n}} < \\log{n} $，则
+
+$ \\log{a_ {n}} \\to - \\infty \\Rightarrow a_ {n} \\to 0 $
+
+则可知 $ \\sum^{\\infty}_ {n=2}(\\sqrt{n}{n}-1)^{n} $ 是收敛的
