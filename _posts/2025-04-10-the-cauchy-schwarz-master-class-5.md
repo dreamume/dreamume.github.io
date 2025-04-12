@@ -37,7 +37,7 @@ $ \\left( \\sum^{n}_ {k=1} a^{2}_ {k} \\right)^{\\frac{1}{2}} \\left( \\sum^{n}_
 
 # Chebyshev's Order Inequality
 
-假设 $ f : \\mathbb{R} \\to \\mathbb{R}, g: \\mathbb{R} \\to \\mathbb{R} $ 为非递减且假设 $ p_ {j} \\ge 0, j = 1,2, \\ldots, n $，且满足 $ p_ {1} + p_ {2} + \\cdots + \\p_ {n} = 1 $。则对于任意非递减序列 $ x_ {1} \\le x_ {2} \\le \\cdots \\le x_ {n} $，有不等式
+假设 $ f : \\mathbb{R} \\to \\mathbb{R}, g: \\mathbb{R} \\to \\mathbb{R} $ 为非递减且假设 $ p_ {j} \\ge 0, j = 1,2, \\ldots, n $，且满足 $ p_ {1} + p_ {2} + \\cdots + p_ {n} = 1 $。则对于任意非递减序列 $ x_ {1} \\le x_ {2} \\le \\cdots \\le x_ {n} $，有不等式
 
 $ \\{ \\sum^{n}_ {k=1}f(x_ {k})p_ {k} \\}\\{ \\sum^{n}_ {k=1}g(x_ {k})p_ {k} \\} \\le \\sum^{n}_ {k=1}f(x_ {k})g(x_ {k})p_ {k} $
 
