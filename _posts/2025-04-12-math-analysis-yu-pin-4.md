@@ -24,9 +24,9 @@ category:   maths
 
 1.  [compute series](#org1ce2a79)
     1.  [$ \\sum^{\\infty}_ {n=1} \\arctan\\frac{1}{n^{2} + n + 1} $](#org65c1ff7)
-    2.  [2](#orged8f069)
+    2.  [$ \\sum^{\\infty}_ {n=1}\\frac{n}{3^{n}} $](#orged8f069)
 2.  [check convergence of series](#org87f2fb8)
-    1.  [1](#orgc328dc8)
+    1.  [$ \\sum^{\\infty}_ {n=2}(\\sqrt{n}{n}-1)^{n} $](#orgc328dc8)
 
 
 <a id="org1ce2a79"></a>
@@ -36,7 +36,7 @@ category:   maths
 
 <a id="org65c1ff7"></a>
 
-求 $ \\sum^{\\infty}_ {n=1} \\arctan\\frac{1}{n^{2} + n + 1} $
+1. 求 $ \\sum^{\\infty}_ {n=1} \\arctan\\frac{1}{n^{2} + n + 1} $
 
 我们需要利用等式：
 
@@ -53,7 +53,7 @@ $ \\sum^{\\infty}_ {n=1} \\arctan\\frac{1}{n^{2} + n + 1} = \\lim_ {n \\to \\inf
 
 <a id="orged8f069"></a>
 
-求 $ \\sum^{\\infty}_ {n=1}\\frac{n}{3^{n}} $
+2. 求 $ \\sum^{\\infty}_ {n=1}\\frac{n}{3^{n}} $
 
 这里我们利用 weighted geometric series，其一般形式为：
 
@@ -71,7 +71,7 @@ $ \\sum^{\\infty}_ {n=1}\\frac{n}{3^{n}} = \\sum^{\\infty}_ {n=1}n\\left(\\frac{
 
 <a id="orgc328dc8"></a>
 
-$ \\sum^{\\infty}_ {n=2}(\\sqrt{n}{n}-1)^{n} $
+1. $ \\sum^{\\infty}_ {n=2}(\\sqrt{n}{n}-1)^{n} $
 
 设 $ a_ {n} = (\\sqrt{n}{n} - 1)^{n} $，由于 $ \\lim_ {n \\to \\infty}n^{\\frac{1}{n}} = 1 $，对大的 n，有 $ n^{\\frac{1}{n}} \\approx 1 + \\frac{\\log{n}}{n} $，（使用 first-order expansion of the exponential function)
 
