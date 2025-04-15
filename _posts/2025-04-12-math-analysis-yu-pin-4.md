@@ -26,7 +26,7 @@ category:   maths
     1.  [$ \\sum^{\\infty}_ {n=1} \\arctan\\frac{1}{n^{2} + n + 1} $](#org65c1ff7)
     2.  [$ \\sum^{\\infty}_ {n=1}\\frac{n}{3^{n}} $](#orged8f069)
 2.  [check convergence of series](#org87f2fb8)
-    1.  [$ \\sum^{\\infty}_ {n=2}(\\sqrt{n}{n}-1)^{n} $](#orgc328dc8)
+    1.  [$ \\sum^{\\infty}_ {n=2}(\\sqrt[n]{n}-1)^{n} $](#orgc328dc8)
 
 
 <a id="org1ce2a79"></a>
@@ -71,17 +71,17 @@ $ \\sum^{\\infty}_ {n=1}\\frac{n}{3^{n}} = \\sum^{\\infty}_ {n=1}n\\left(\\frac{
 
 <a id="orgc328dc8"></a>
 
-1. $ \\sum^{\\infty}_ {n=2}(\\sqrt{n}{n}-1)^{n} $
+1. $ \\sum^{\\infty}_ {n=2}(\\sqrt[n]{n}-1)^{n} $
 
-设 $ a_ {n} = (\\sqrt{n}{n} - 1)^{n} $，由于 $ \\lim_ {n \\to \\infty}n^{\\frac{1}{n}} = 1 $，对大的 n，有 $ n^{\\frac{1}{n}} \\approx 1 + \\frac{\\log{n}}{n} $，（使用 first-order expansion of the exponential function)
+设 $ a_ {n} = (\\sqrt[n]{n} - 1)^{n} $，由于 $ \\lim_ {n \\to \\infty}n^{\\frac{1}{n}} = 1 $，对大的 n，有 $ n^{\\frac{1}{n}} \\approx 1 + \\frac{\\log{n}}{n} $，（使用 first-order expansion of the exponential function)
 
 则有：
 
-$ \\sqrt{n}{n} - 1 \\approx \\frac{\\log{n}}{n} $
+$ \\sqrt[n]{n} - 1 \\approx \\frac{\\log{n}}{n} $
 
 则
 
-$ a_ {n} = (\\sqrt{n}{n} - 1)^{n} \\approx \\left(\\frac{\\log{n}}{n}\\right)^{n} $
+$ a_ {n} = (\\sqrt[n]{n} - 1)^{n} \\approx \\left(\\frac{\\log{n}}{n}\\right)^{n} $
 
 由于 $ \\log{a_ {n}} \\approx n\\log{(\\frac{\\log{n}}{n})} = n(\\log{\\log{n}} - \\log{n}) $
 
@@ -89,4 +89,4 @@ $ a_ {n} = (\\sqrt{n}{n} - 1)^{n} \\approx \\left(\\frac{\\log{n}}{n}\\right)^{n
 
 $ \\log{a_ {n}} \\to - \\infty \\Rightarrow a_ {n} \\to 0 $
 
-则可知 $ \\sum^{\\infty}_ {n=2}(\\sqrt{n}{n}-1)^{n} $ 是收敛的
+则可知 $ \\sum^{\\infty}_ {n=2}(\\sqrt[n]{n}-1)^{n} $ 是收敛的
