@@ -45,4 +45,4 @@ $ I = \\int^{\\infty}_ {0} x^{\\alpha + \\beta} f(x) dx $
 
 满足如下边界
 
-$ I^{2} \\le \\left{ 1 - \\left( \\frac{\\alpha - \\beta}{\\alpha + \\beta + 1} \\right)^{2} \\right} \\int^{\\infty}_ {0}x^{2 \\alpha} f(x)dx \\int^{\\infty}_ {0} x^{2 \\beta} f(x)dx $
+$ I^{2} \\le \\{ 1 - \\left( \\frac{\\alpha - \\beta}{\\alpha + \\beta + 1} \\right)^{2} \\} \\int^{\\infty}_ {0}x^{2 \\alpha} f(x)dx \\int^{\\infty}_ {0} x^{2 \\beta} f(x)dx $
