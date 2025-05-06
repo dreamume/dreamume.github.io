@@ -24,6 +24,7 @@ category:   maths
 
 1.  [A Continuum of Compromise](#orgbbe10cf)
 2.  [Doing Better Than Schwarz](#orge2dd950)
+3.  [Jensen's Inequality: An Integral Version](#orgf45d7b4)
 
 
 <a id="orgbbe10cf"></a>
@@ -46,3 +47,14 @@ $ I = \\int^{\\infty}_ {0} x^{\\alpha + \\beta} f(x) dx $
 满足如下边界
 
 $ I^{2} \\le \\{ 1 - \\left( \\frac{\\alpha - \\beta}{\\alpha + \\beta + 1} \\right)^{2} \\} \\int^{\\infty}_ {0}x^{2 \\alpha} f(x)dx \\int^{\\infty}_ {0} x^{2 \\beta} f(x)dx $
+
+
+<a id="orgf45d7b4"></a>
+
+# Jensen's Inequality: An Integral Version
+
+对每个区间 $ I \\subset \\mathbb{R} $ 且每个凸函数 $ \\Phi : I \\to \\mathbb{R} $，有边界
+
+$ \\Phi \\left( \\int_ {D}h(x)w(x)dx \\right) \\le \\int_ {D}\\Phi(h(x))w(x)dx $
+
+对每个 $ h: D \\to I $ 且每个重量函数 $ w: D \\to [0, \\infty) $ 使得 $ \\int_ {D}w(x)dx = 1 $
