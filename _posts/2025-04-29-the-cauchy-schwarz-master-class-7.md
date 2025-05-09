@@ -25,6 +25,7 @@ category:   maths
 1.  [A Continuum of Compromise](#orgbbe10cf)
 2.  [Doing Better Than Schwarz](#orge2dd950)
 3.  [Jensen's Inequality: An Integral Version](#orgf45d7b4)
+4.  [A Centered Version of Schwarz's Inequality](#orgd29b684)
 
 
 <a id="orgbbe10cf"></a>
@@ -58,3 +59,16 @@ $ I^{2} \\le \\{ 1 - \\left( \\frac{\\alpha - \\beta}{\\alpha + \\beta + 1} \\ri
 $ \\Phi \\left( \\int_ {D}h(x)w(x)dx \\right) \\le \\int_ {D}\\Phi(h(x))w(x)dx $
 
 对每个 $ h: D \\to I $ 且每个重量函数 $ w: D \\to [0, \\infty) $ 使得 $ \\int_ {D}w(x)dx = 1 $
+
+
+<a id="orgd29b684"></a>
+
+# A Centered Version of Schwarz's Inequality
+
+如果 $ w(x) \\ge 0, \\forall x \\in \\mathbb{R} $ 且如果 w 在 $ \\mathbb{R} $ 上的积分为 1，则一个合适的可积分的重量平均函数 $ f: \\mathbb{R} \\to \\mathbb{R} $ 用公式定义如下
+
+$ A(f) = \\int^{\\infty}_ {- \\infty}f(x)w(x)dx $ 
+
+对函数 f 和 g，有如下边界：
+
+$ \\{ A(fg) - A(f)A(g) \\}^{2} \\le \\{ A(f^{2}) - A^{2}(f)\\}\\{A(g^{2}) - A^{2}(g)\\} $
