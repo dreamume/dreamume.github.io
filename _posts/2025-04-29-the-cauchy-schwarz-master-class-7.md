@@ -26,6 +26,7 @@ category:   maths
 2.  [Doing Better Than Schwarz](#orge2dd950)
 3.  [Jensen's Inequality: An Integral Version](#orgf45d7b4)
 4.  [A Centered Version of Schwarz's Inequality](#orgd29b684)
+5.  [Cauchy-Bunyakovsky-Schwarz Inequality](#org9c44f1e)
 
 
 <a id="orgbbe10cf"></a>
@@ -72,3 +73,12 @@ $ A(f) = \\int^{\\infty}_ {- \\infty}f(x)w(x)dx $
 对函数 f 和 g，有如下边界：
 
 $ \\{ A(fg) - A(f)A(g) \\}^{2} \\le \\{ A(f^{2}) - A^{2}(f)\\}\\{A(g^{2}) - A^{2}(g)\\} $
+
+
+<a id="org9c44f1e"></a>
+
+# Cauchy-Bunyakovsky-Schwarz Inequality
+
+设 f 和 g 为实函数且在闭区间 [a, b] 上连续，则
+
+$ \\left( \\int^{b}_ {a}f(t)g(t)dt \\right)^{2} \\le \\int^{b}_ {a}(f(t))^{2}dt \\int^{b}_ {a}(g(t))^{2}dt $
