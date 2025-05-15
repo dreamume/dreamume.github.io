@@ -3,7 +3,7 @@ layout:     post
 title:      "The Cauchy-Schwarz master class(Chapter 8) by Steele"
 subtitle:   "The Ladder of Power Means"
 thumbnail-img: ""
-date:       2025-05-14 29:00
+date:       2025-05-14 19:00
 author:     "dreamume"
 tags: 		[elementary]
 category:   maths
