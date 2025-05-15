@@ -41,4 +41,4 @@ $ \\lim_ {t \\to 0} \\{ \\sum^{n}_ {k=1}p_ {k}x^{t}_ {k} \\}^{\\frac{1}{t}} = \\
 
 对任意非负重量值 $ p_ {k}, k = 1, 2, \\ldots, n $ 且 $ p_ {1} + p_ {2} + \\cdots + p_ {n} = 1 $ 且对任意非负实数 $ x_ {k}, k = 1, 2, \\ldots, n $，有边界
 
-$ \\prod^{n}_ {k=1}x^{p_ {k}}_ {k} \\le \\{ \\sum^{n}_ {k=1}p_ {k}x^{t}_ {k}\\}^{\\frac{1}{t}|} \\quad \\forall t > 0 $
+$ \\prod^{n}_ {k=1}x^{p_ {k}}_ {k} \\le \\{ \\sum^{n}_ {k=1}p_ {k}x^{t}_ {k} \\}^{\\frac{1}{t}} \\quad \\forall t > 0 $
