@@ -23,6 +23,7 @@ category:   maths
 # Table of Contents
 
 1.  [The Geometric Mean as a Limit](#orgcc3bd4f)
+2.  [Power Mean Bound for the Geometric Mean](#org9538d8a)
 
 
 <a id="orgcc3bd4f"></a>
@@ -32,3 +33,12 @@ category:   maths
 对非负实数 $ x_ {k}, k = 1, 2, \\ldots, n $，和非负重量值 $ p_ {k}, k = 1, 2, \\ldots, n $ 且 $ p_ {1} + p_ {2} + \\cdots + p_ {n} = 1 $，其有极限
 
 $ \\lim_ {t \\to 0} \\{ \\sum^{n}_ {k=1}p_ {k}x^{t}_ {k} \\}^{\\frac{1}{t}} = \\prod^{n}_ {k=1}x^{p_ {k}}_ {k} $
+
+
+<a id="org9538d8a"></a>
+
+# Power Mean Bound for the Geometric Mean
+
+对任意非负重量值 $ p_ {k}, k = 1, 2, \\ldots, n $ 且 $ p_ {1} + p_ {2} + \\cdots + p_ {n} = 1 $ 且对任意非负实数 $ x_ {k}, k = 1, 2, \\ldots, n $，有边界
+
+$ \\prod^{n}_ {k=1}x^{p_ {k}}_ {k} \\le \\{ \\sum^{n}_ {k=1}p_ {k}x^{t}_ {k}\\}^{\\frac{1}{t}|} \\quad \\forall t > 0 $
