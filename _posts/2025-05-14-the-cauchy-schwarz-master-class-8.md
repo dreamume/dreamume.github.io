@@ -49,7 +49,7 @@ $ \\prod^{n}_ {k=1}x^{p_ {k}}_ {k} \\le \\{ \\sum^{n}_ {k=1}p_ {k}x^{t}_ {k} \\}
 
 # Power Mean Inequality
 
-正重量值 $ p_ {k}, k = 1, 2, \\ldots, n $ 有 $ p_ {1} + p_ {2} + \\cdots + p_ {n} = 1 $ 且对非负实数 $ x_ {k}, k = 1, 2, \\ldots, n $，映射 $ t \\mapsto M_ {t} $ 在 $ \\mathbb{R} $ 上是非减函数。则对 $ - \\infty < s < t < \\infty $ 有
+正重量值 $ p_ {k}, k = 1, 2, \\ldots, n $ 有 $ p_ {1} + p_ {2} + \\cdots + p_ {n} = 1 $ 且对非负实数 $ x_ {k}, k = 1, 2, \\ldots, n $，映射 $ t \\mapsto M_ {t}, M_ {t} = \\{ \\sum^{n}_ {k=1}p_ {k}x^{t}_ {k} \\}^{\\frac{1}{t}} $ 在 $ \\mathbb{R} $ 上是非减函数。则对 $ - \\infty < s < t < \\infty $ 有
 
 $ \\{ \\sum^{n}_ {k=1}p_ {k}x^{s}_ {k} \\}^{\\frac{1}{s}} \\le \\{ \\sum^{n}_ {k=1}p_ {k}x^{t}_ {k} \\}^{\\frac{1}{t}} $
 
