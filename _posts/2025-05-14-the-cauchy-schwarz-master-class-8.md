@@ -63,7 +63,7 @@ $ \\{ \\sum^{n}_ {k=1}p_ {k}x^{s}_ {k} \\}^{\\frac{1}{s}} \\le \\{ \\sum^{n}_ {k
 
 设 $ D \\subset \\mathbb{R} $ 且我们考虑一个重量值函数 $ w : D \\to [0, \\infty) $ 满足
 
-$ \\int_ {D} w(x)dx = 1 $ 且 $ w(x) > 0 \\forall x \\in D $
+$ \\int_ {D} w(x)dx = 1 $ 且 $ w(x) > 0 \\quad \\quad \\forall x \\in D $
 
 则对 $ f : D \\to [0, \\infty) $ 且 $ t \\in (- \\infty, 0) \\cup (0, \\infty) $ 我们用如下公式定义 f 的第 t 个中值
 
@@ -75,4 +75,4 @@ $ M_ {0}[f; w] \\equiv exp \\left( \\int_ {D} \\{ \\log{f(x)} \\} w(x)dx \\right
 
 则我们有
 
-$ M_ {s}[f; w] \\le M_ {t}[f; w] \\forall - \\infty < s < t < \\infty $
+$ M_ {s}[f; w] \\le M_ {t}[f; w] \\quad \\quad \\forall - \\infty < s < t < \\infty $
