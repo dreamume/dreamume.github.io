@@ -61,18 +61,18 @@ $ \\{ \\sum^{n}_ {k=1}p_ {k}x^{s}_ {k} \\}^{\\frac{1}{s}} \\le \\{ \\sum^{n}_ {k
 
 # The Integral Analogs
 
-设 $ \\mathnormal{D} \\subset \\mathbb{R} $ 且我们考虑一个重量值函数 $ \\mathnormal{w} : \\mathnormal{D} \\to [0, \\infty) $ 满足
+设 $ D \\subset \\mathbb{R} $ 且我们考虑一个重量值函数 $ w : D \\to [0, \\infty) $ 满足
 
-$ \\int_ {\\mathnormal{D}} \\mathnormal{w}(x)dx = 1 $ 且 $ \\mathnormal{w}(x) > 0 \\forall x \\in \\mathnormal{D} $
+$ \\int_ {D} w(x)dx = 1 $ 且 $ w(x) > 0 \\forall x \\in D $
 
-则对 $ f : \\mathnormal{D} \\to [0, \\infty) $ 且 $ t \\in (- \\infty, 0) \\cup (0, \\infty) $ 我们用如下公式定义 f 的第 t 个中值
+则对 $ f : D \\to [0, \\infty) $ 且 $ t \\in (- \\infty, 0) \\cup (0, \\infty) $ 我们用如下公式定义 f 的第 t 个中值
 
-$ M_ {t} = M_ {t}[f; \\mathnormal{w}] \\equiv \\{ \\int_ {\\mathnormal{D}} f^{t}(x) \\mathnormal{w}(x) dx\\}^{\\frac{1}{t}} $
+$ M_ {t} = M_ {t}[f; w] \\equiv \\{ \\int_ {D} f^{t}(x) w(x) dx\\}^{\\frac{1}{t}} $
 
 同时对 $ M_ {0} $ 的特殊情况，我们定义其为
 
-$ M_ {0}[f; \\mathnormal{w}] \\equiv exp \\left( \\int_ {\\mathnormal{D}} \\{ \\log{f(x)} \\} \\mathnormal{w}(x)dx \\right) $
+$ M_ {0}[f; w] \\equiv exp \\left( \\int_ {D} \\{ \\log{f(x)} \\} w(x)dx \\right) $
 
 则我们有
 
-$ M_ {s}[f; \\mathnormal{w}] \\le M_ {t}[f; \\mathnormal{w}] \\forall - \\infty < s < t < \\infty $
+$ M_ {s}[f; w] \\le M_ {t}[f; w] \\forall - \\infty < s < t < \\infty $
