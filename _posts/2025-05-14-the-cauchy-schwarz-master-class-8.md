@@ -25,6 +25,7 @@ category:   maths
 1.  [The Geometric Mean as a Limit](#orgcc3bd4f)
 2.  [Power Mean Bound for the Geometric Mean](#org9538d8a)
 3.  [Power Mean Inequality](#orgff37b2c)
+4.  [The Integral Analogs](#orgb05f110)
 
 
 <a id="orgcc3bd4f"></a>
@@ -54,3 +55,24 @@ $ \\prod^{n}_ {k=1}x^{p_ {k}}_ {k} \\le \\{ \\sum^{n}_ {k=1}p_ {k}x^{t}_ {k} \\}
 $ \\{ \\sum^{n}_ {k=1}p_ {k}x^{s}_ {k} \\}^{\\frac{1}{s}} \\le \\{ \\sum^{n}_ {k=1}p_ {k}x^{t}_ {k} \\}^{\\frac{1}{t}} $
 
 当且仅当 $ x_ {1} = x_ {2} = \\cdots = x_ {n} $ 时等式才成立
+
+
+<a id="orgb05f110"></a>
+
+# The Integral Analogs
+
+设 $ \\mathnormal{D} \\subset \\mathbb{R} $ 且我们考虑一个重量值函数 $ \\mathnormal{w} : \\mathnormal{D} \\to [0, \\infty) $ 满足
+
+$ \\int_ {\\mathnormal{D}} \\mathnormal{w}(x)dx = 1 $ 且 $ \\mathnormal{w}(x) > 0 \\forall x \\in \\mathnormal{D} $
+
+则对 $ f : \\mathnormal{D} \\to [0, \\infty) $ 且 $ t \\in (- \\infty, 0) \\cup (0, \\infty) $ 我们用如下公式定义 f 的第 t 个中值
+
+$ M_ {t} = M_ {t}[f; \\mathnormal{w}] \\equiv \\{ \\int_ {\\mathnormal{D}} f^{t}(x) \\mathnormal{w}(x) dx\\}^{\\frac{1}{t}} $
+
+同时对 $ M_ {0} $ 的特殊情况，我们定义其为
+
+$ M_ {0}[f; \\mathnormal{w}] \\equiv exp \\left( \\int_ {\\mathnormal{D}} \\{ \\log{f(x)} \\} \\mathnormal{w}(x)dx \\right) $
+
+则我们有
+
+$ M_ {s}[f; \\mathnormal{w}] \\le M_ {t}[f; \\mathnormal{w}] \\forall - \\infty < s < t < \\infty $
