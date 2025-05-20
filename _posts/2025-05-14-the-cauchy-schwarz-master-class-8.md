@@ -72,7 +72,7 @@ $ \\frac{1}{\\frac{p_ {1}}{x_ {1}} + \\frac{p_ {2}}{x_ {2}} + \\cdots + \\frac{p
 
 同时我们有调和平均算术平均不等式
 
-$ \\frac{1}{\\frac{p_ {1}}{x_ {1}} + \\frac{p_ {2}}{x_ {2}} + \\cdots + \\frac{p_ {n}}{x_ {n}}} \\le p_ {1}x_ {1} p_ {2}x_ {2} \\cdots p_ {n}x_ {n} $
+$ \\frac{1}{\\frac{p_ {1}}{x_ {1}} + \\frac{p_ {2}}{x_ {2}} + \\cdots + \\frac{p_ {n}}{x_ {n}}} \\le p_ {1}x_ {1} + p_ {2}x_ {2} + \\cdots + p_ {n}x_ {n} $
 
 
 <a id="orgb05f110"></a>
