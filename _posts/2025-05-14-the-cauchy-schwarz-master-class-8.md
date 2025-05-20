@@ -25,6 +25,7 @@ category:   maths
 1.  [The Geometric Mean as a Limit](#orgcc3bd4f)
 2.  [Power Mean Bound for the Geometric Mean](#org9538d8a)
 3.  [Power Mean Inequality](#orgff37b2c)
+    1.  [Some Special Means](#orgf40311f)
 4.  [The Integral Analogs](#orgb05f110)
 
 
@@ -55,6 +56,23 @@ $ \\prod^{n}_ {k=1}x^{p_ {k}}_ {k} \\le \\{ \\sum^{n}_ {k=1}p_ {k}x^{t}_ {k} \\}
 $ \\{ \\sum^{n}_ {k=1}p_ {k}x^{s}_ {k} \\}^{\\frac{1}{s}} \\le \\{ \\sum^{n}_ {k=1}p_ {k}x^{t}_ {k} \\}^{\\frac{1}{t}} $
 
 当且仅当 $ x_ {1} = x_ {2} = \\cdots = x_ {n} $ 时等式才成立
+
+
+<a id="orgf40311f"></a>
+
+## Some Special Means
+
+当 t = -1，均值 $ M_ {-1} $ 被称为调和均值
+
+$ M_ {-1} = M_ {-1}[x; p] = \\frac{1}{\\frac{p_ {1}}{x_ {1}} + \\frac{p_ {2}}{x_ {2}} + \\cdots + \\frac{p_ {n}}{x_ {n}}} $
+
+特别的，我们有调和平均几何平均不等式
+
+$ \\frac{1}{\\frac{p_ {1}}{x_ {1}} + \\frac{p_ {2}}{x_ {2}} + \\cdots + \\frac{p_ {n}}{x_ {n}}} \\le x^{p_ {1}}_ {1} x^{p_ {2}}_ {2} \\cdots x^{p_ {n}}_ {n} $
+
+同时我们有调和平均算术平均不等式
+
+$ \\frac{1}{\\frac{p_ {1}}{x_ {1}} + \\frac{p_ {2}}{x_ {2}} + \\cdots + \\frac{p_ {n}}{x_ {n}}} \\le p_ {1}x_ {1} p_ {2}x_ {2} \\cdots p_ {n}x_ {n} $
 
 
 <a id="orgb05f110"></a>
